@@ -2,7 +2,7 @@
   <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
   <ul>
     <li
-      ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
+      ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'pxValue'"
       style="font-size: {{ fontSize.value }}">
         {{ fontSize.property }}: {{ fontSize.value }}
     </li>

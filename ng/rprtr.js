@@ -11,7 +11,7 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
     $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
-    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
+    // $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
 
     //$routeProvider.when('/:params', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
@@ -20,7 +20,7 @@ var rprtr = angular.module('rprtr',[])
 rprtr.value('$anchorScroll', angular.noop);
 
 
-rprtr.factory('declarations', function() {
+rprtr.factory('declarations', function(anythingToPx) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
@@ -39,7 +39,11 @@ rprtr.factory('declarations', function() {
       for(var j in declarations){
         //console.log(declarations[j].property + ': ' + declarations[j].value);
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
-        if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j]);
+        if(declarations[j].property == 'font-size') {
+          // Adding absolute px values to sort by
+          declarations[j].pxValue = anythingToPx.convert(declarations[j].value);
+          $scope.fontSizes.push(declarations[j]);
+        };
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
         if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
         if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
@@ -51,6 +55,20 @@ rprtr.factory('declarations', function() {
         if(declarations[j].property == ('padding' || 'padding-top' || 'padding-right' || 'padding-bottom' || 'padding-left')) $scope.paddings.push(declarations[j]);
       };
     };
+  };
+});
+
+rprtr.service('anythingToPx', function(){
+  return {
+    convert: function(val){
+      var raw = parseFloat(val);
+      if(val.match(/px$/)) return raw;
+      if(val.match(/em$/)) return raw * 16;
+      else if(val.match(/%$/)) return raw * .16;
+      else if(val == 'inherit') return raw;
+      // Temporarily handling other values - small, medium, etc.
+      else return 1024;
+    }
   };
 });
 
