@@ -3998,19 +3998,19 @@ table {
 
    ========================================================================== */
 /* Padding */
-.pn {
+.pan {
   padding: 0; }
 
-.ps {
+.pas {
   padding: .5rem; }
 
-.pm {
+.pam {
   padding: 1rem; }
 
-.pl {
+.pal {
   padding: 2rem; }
 
-.px {
+.pax {
   padding: 4rem; }
 
 .pln {
@@ -4104,19 +4104,19 @@ table {
   padding: 0 4rem; }
 
 /* Margins */
-.mn {
+.man {
   margin: 0; }
 
-.ms {
+.mas {
   margin: .5rem; }
 
-.mm {
+.mam {
   margin: 1rem; }
 
-.ml {
+.mal {
   margin: 2rem; }
 
-.mx {
+.max {
   margin: 4rem; }
 
 .mln {
@@ -5257,7 +5257,7 @@ h6, .f6 {
 .b {
   font-weight: bold; }
 
-.fw1 {
+.fw1, .thin {
   font-weight: 100; }
 
 .fw2 {
@@ -5281,7 +5281,7 @@ h6, .f6 {
 .fw8 {
   font-weight: 800; }
 
-.fw9 {
+.fw9, .b {
   font-weight: 900; }
 
 /* Font Style */
@@ -5860,3 +5860,14 @@ More info: https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
 
   .wm-rl-bt-l {
     writing-mode: rl-bt; } }
+/* SITE STYLES */
+h1, h2, h3, h4, h5, h6, .sans-serif {
+  font-family: "futura-pt", helvetica, arial, sans-serif; }
+
+body, .serif {
+  font-family: "ff-meta-serif-web-pro", georgia, serif; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
