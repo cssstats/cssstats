@@ -1,0 +1,26 @@
+/* ==========================================================================
+   FLOATS
+   ========================================================================== */
+
+
+.fl { float: left; }
+.fr { float: right; }
+.fn { float: none; }
+
+@include break(not-small) {
+  .fl-ns { float: left; }
+  .fr-ns { float: right; }
+  .fn-ns { float: none; }
+}
+
+@include break(medium) {
+  .fl-m { float: left; }
+  .fr-m { float: right; }
+  .fn-m { float: none; }
+}
+
+@include break(large) {
+  .fl-l { float: left; }
+  .fr-l { float: right; }
+  .fn-l { float: none; }
+}

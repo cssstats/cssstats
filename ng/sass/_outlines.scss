@@ -1,0 +1,32 @@
+/* ==========================================================================
+   OUTLINES
+   ========================================================================== */
+
+/* Outline Offset */
+
+.oo-1 { outline-offset: 1px; }
+.oo-2 { outline-offset: 0.1rem; }
+.oo-i { outline-offset: inherit; }
+
+/* Outline Style */
+
+.os-none { outline-style: none; }
+.os-dots { outline-style: dotted; }
+.os-dash { outline-style: dashed; }
+.os-solid { outline-style: solid; }
+.os-double { outline-style: double; }
+.os-groove { outline-style: groove; }
+.os-ridge { outline-style: ridge; }
+.os-inset { outline-style: inset; }
+.os-outset { outline-style: outset; }
+.os-inherit { outline-style: inherit; }
+
+/* Outline Width */
+
+.ow-thin { outline-width: thin; }
+.ow-med { outline-width: medium; }
+.ow-thick { outline-width: thick; }
+.ow-1 { outline-width: 1px; }
+.ow-2 { outline-width: 0.1rem; }
+.ow-i { outline-width: inherit; }
+

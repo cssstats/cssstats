@@ -1,0 +1,27 @@
+/* ==========================================================================
+   WORD WRAP
+   ========================================================================== */
+
+
+.wwn  { word-wrap: normal; }
+.wwbw { word-wrap: break-word; }
+.wwi  { word-wrap: inherit; }
+
+@include break(not-small) {
+  .wwn-ns  { word-wrap: normal; }
+  .wwbw-ns { word-wrap: break-word; }
+  .wwi-ns  { word-wrap: inherit; }
+}
+
+@include break(medium) {
+  .wwn-m  { word-wrap: normal; }
+  .wwbw-m { word-wrap: break-word; }
+  .wwi-m  { word-wrap: inherit; }
+}
+
+@include break(large) {
+  .wwn-l  { word-wrap: normal; }
+  .wwbw-l { word-wrap: break-word; }
+  .wwi-l  { word-wrap: inherit; }
+}
+

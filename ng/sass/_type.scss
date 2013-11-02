@@ -1,0 +1,126 @@
+/* ==========================================================================
+   TEXT UTILITIES
+
+   - Text Transform
+   - Text Align
+   - Text Decoration
+   - Font Weights
+   - Font Style
+   - Font Family Groups
+   - Font Variant
+
+   ========================================================================== */
+
+/* Type Scale */
+
+body  { font-size: 1.2rem; }
+p     { line-height: 1.5; }
+small, .small { font-size: .85rem; }
+
+h1, .f1    { font-size: 2rem; }
+h2, .f2    { font-size: 1.5rem; }
+h3, .f3    { font-size: 1.2rem; }
+h4, .f4    { font-size: 1.2rem; }
+h5, .f5    { font-size: 1.2rem; }
+h6, .f6    { font-size: 1.2rem; }
+
+@include break(medium) {
+ h1, .f1-v2 { font-size: 2rem; }
+ h2, .f2-v2 { font-size: 1.5rem; }
+ h3, .f3-v2 { font-size: 1.2rem; }
+ h4, .f4-v2 { font-size: 1.2rem; }
+ h5, .f5-v2 { font-size: 1rem; }
+ h6, .f6-v2 { font-size: .85rem; }
+}
+
+@include break(large) {
+ h1, .f1 { font-size: 3rem; }
+ h2, .f2 { font-size: 2rem; }
+ h3, .f3 { font-size: 1.5rem; }
+ h4, .f4 { font-size: 1.2rem; }
+ h5, .f5 { font-size: 1rem; }
+ h6, .f6 { font-size: 1rem; }
+}
+
+
+/* Text Align */
+
+.tl  { text-align: left; }
+.tr  { text-align: right; }
+.tc  { text-align: center; }
+.tj  { text-align: justify; }
+.ts  { text-align: start; }
+.te  { text-align: end; }
+.tmp { text-align: match-parent; }
+.tse { text-align: start end; }
+.tp  { text-align: "."; }
+.tsp { text-align: start "."; }
+.tpe { text-align: "." end; }
+
+
+/* Text Decoration */
+
+.under  { text-decoration: underline; }
+.over   { text-decoration: overline; }
+.strike { text-decoration: line-through; }
+.blink  { text-decoration: blink; }
+.none   { text-decoration: none; }
+
+
+/* Font Weights */
+
+.fwn { font-weight: normal; }
+.b   { font-weight: bold; }
+
+.fw1 { font-weight: 100; }
+.fw2 { font-weight: 200; }
+.fw3 { font-weight: 300; }
+.fw4 { font-weight: 400; }
+.fw5 { font-weight: 500; }
+.fw6 { font-weight: 600; }
+.fw7 { font-weight: 700; }
+.fw8 { font-weight: 800; }
+.fw9 { font-weight: 900; }
+
+/* Font Style */
+
+.fsn      { font-style: normal; }
+.i        { font-style: italic; }
+.oblique  { font-style: oblique; }
+
+/* Font Family Groups */
+
+.serif       { font-family: georgia, serif; }
+.sans-serif  { font-family: helvetica, arial, sans-serif; }
+.font-fantasy { font-family: fantasy; }
+.font-cursive { font-family: cursive; }
+.font-mono    { font-family: monospace; }
+
+/* Font Variant */
+
+.small-caps { font-variant: small-caps; }
+
+/* Vertical Alignment */
+
+.v-base     { vertical-align: baseline; }
+.v-sub      { vertical-align: sub; }
+.v-sup      { vertical-align: super; }
+.v-txt-top  { vertical-align: text-top; }
+.v-txt-btm  { vertical-align: text-bottom; }
+.v-mid      { vertical-align: middle; }
+.v-top      { vertical-align: top; }
+.v-btm      { vertical-align: bottom; }
+
+
+/* Leading */
+
+.lh      { line-height: 1; }
+.lh-copy { line-height: 1.6; }
+.lh-2    { line-height: 2; }
+.lh-3    { line-height: 3; }
+
+/* Tracking */
+
+.tracked {      letter-spacing: 0.1em; }
+.mega-tracked { letter-spacing: 0.2em; }
+

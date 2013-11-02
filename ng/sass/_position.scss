@@ -1,0 +1,49 @@
+ /* ==========================================================================
+    POSITIONING
+
+    - Utilities
+    - Values
+    ========================================================================== */
+
+/* Utilities */
+
+.pos-stat { position: static; }
+.pos-rel  { position: relative; }
+.pos-abs  { position: absolute; }
+.pos-fix  { position: fixed; }
+
+
+/* Values */
+
+.top-0    { top: 0; }
+.left-0   { left: 0; }
+.right-0  { right: 0; }
+.bottom-0 { right: 0; }
+
+.top-1    { top: 1rem; }
+.left-1   { left: 1rem; }
+.right-1  { right: 1rem; }
+.bottom-1 { right: 1rem; }
+
+
+/* Top Percentage based scale */
+
+.top-10  { top: 10%; }
+.top-20  { top: 20%; }
+.top-30  { top: 30%; }
+.top-40  { top: 40%; }
+.top-50  { top: 50%; }
+.top-60  { top: 60%; }
+.top-70  { top: 70%; }
+.top-80  { top: 80%; }
+.top-90  { top: 90%; }
+.top-100 { top: 100%; }
+
+.top-auto { top: auto; }
+.top-i { top: inherit; ;}
+
+
+/* Put it in the middle */
+
+.center { margin: 0 auto; }
+

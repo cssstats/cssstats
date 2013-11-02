@@ -1,0 +1,108 @@
+/* ==========================================================================
+   DIMENSIONS
+   ========================================================================== */
+
+
+.wi-25  { width: 25%; }
+.wi-50  { width: 50%; }
+.wi-75  { width: 75%; }
+.wi-full { width: 100%; }
+
+/* ==========================================================================
+   GEOMETRY
+   ========================================================================== */
+
+/* Width Scale */
+
+.wi-1  { width: 1rem; }
+.wi-2  { width: 2rem; }
+.wi-3  { width: 4rem; }
+.wi-4  { width: 8rem; }
+
+/* Width Keywords */
+
+.wi-bb { width: border-box; }
+.wi-cb { width: content-box; }
+.wi-mx { width: max-content; }
+.wi-mn { width: min-content; }
+.wi-av { width: available; }
+.wi-fc { width: fit-content; }
+.wi-at { width: auto; }
+.wi-i { width: inherit; }
+
+/* Height Scale */
+
+.ht-1  { height: 1rem;}
+.ht-2  { height: 2rem;}
+.ht-3  { height: 4rem;}
+.ht-4  { height: 8rem;}
+
+/* Squares */
+
+.sq-1 { width: 1rem;  height: 1rem; }
+.sq-2 { width: 2rem;  height: 2rem; }
+.sq-3 { width: 4rem;  height: 4rem; }
+.sq-4 { width: 8rem;  height: 8rem; }
+.sq-5 { width: 16rem; height: 16rem; }
+
+/*
+
+Make an element shrink wrap its content.  Should be combined with a float class .fl or .fr
+*/
+
+.shrink {
+    display: block;
+    width: auto !important;
+}
+
+/*
+
+Make an element fill the remaining space.  N.B. This will hide overflow.
+*/
+
+.fill {
+    display: block;
+    overflow: hidden;
+    width: auto !important;
+}
+
+/*
+
+Make an element the width of its parent.
+*/
+
+.db-full {
+    display: block;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   MIN AND MAX HEIGHTS AND WIDTHS
+   ========================================================================== */
+
+.max-hi-100 {  max-height: 100%; }
+.max-hi-none { max-height: none; }
+.max-hi-max {  max-height: max-content; }
+.max-hi-min {  max-height: min-content; }
+.max-hi-fit {  max-height: fit-content; }
+.max-hi-fill { max-height: fill-available; }
+
+.max-wi { max-width: 100%; }
+.max-wi { max-width: none; }
+.max-wi { max-width: max-content; }
+.max-wi { max-width: min-content; }
+.max-wi { max-width: fit-content; }
+.max-wi { max-width: fill-available; }
+
+.min-hi { min-height: 50%; }
+.min-hi { min-height: max-content; }
+.min-hi { min-height: min-content; }
+.min-hi { min-height: fit-content; }
+.min-hi { min-height: fill-available; }
+
+.min-wi { min-width: 50%; }
+.min-wi { min-width: max-content; }
+.min-wi { min-width: min-content; }
+.min-wi { min-width: fit-content; }
+.min-wi { min-width: fill-available; }
