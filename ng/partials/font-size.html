@@ -1,0 +1,10 @@
+<h2>Font sizes ({{ fontSizes.length}})</h2>
+  <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
+  <ul>
+    <li
+      ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
+      style="font-size: {{ fontSize.value }}">
+        {{ fontSize.property }}: {{ fontSize.value }}
+    </li>
+  </ul>
+ 

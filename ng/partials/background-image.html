@@ -1,0 +1,8 @@
+<h2>Background Images ({{ backgroundImages.length}})</h2>
+<ul>
+  <li ng-repeat="backgroundImage in backgroundImages">
+    <div style="background-image: {{ backgroundImage.value }}; padding: 20px">
+      {{ backgroundImage.property }}: {{ backgroundImage.value }}
+    </div>
+  </li>
+</ul>

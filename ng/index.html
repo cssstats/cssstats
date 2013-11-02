@@ -9,12 +9,25 @@
     <link rel="stylesheet" href="css/i.css">
 
   </head>
-  <body>
+  <body ng-controller="GlobalCtrl">
 
     <header class="tc ptl pbx bg-orange">
       <h1 class="ttu mega-tracked mtn mbs">Rprtr</h1>
       <h2 class="thin ttu man f4 pan">A different way to look at css</h2>
     </header>
+
+    <nav>
+      <a href="#/font-size">Font-size</a>
+      <a href="#/width">Width</a>
+      <a href="#/color">Color</a>
+      <a href="#/background-color">Background Color</a>
+      <a href="#/background-image">Background Image</a>
+
+      <div>
+        <label>Style data URL:</label>
+        <input ng-model="styleUrl">
+      </div>
+    </nav>
 
     <div ng-view class="pas"></div>
     <footer class="pas">
