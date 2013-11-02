@@ -2,8 +2,16 @@
 
 <h2 ng-show="loading" class="py2">Loading...</h2>
 
-<ul>
+<ul class="mb2">
+  <li>{{ declarations.length }} declarations</li>
+  <li>{{ fontSizes.length }} font-size declarations</li>
+  <li>{{ widths.length }} font-size declarations</li>
+  <li>{{ colors.length }} font-size declarations</li>
+  <li>{{ backgroundColors.length }} font-size declarations</li>
+</ul>
+
+<!-- <ul>
   <li ng-repeat="declaration in declarations track by $index">
     {{ declaration }}
   </li>
-</ul>
+</ul> -->

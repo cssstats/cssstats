@@ -42,18 +42,28 @@ rprtr.controller('DeclarationsCtrl', ['$scope', '$http', function($scope, $http)
     $scope.loading = true;
     $http.get(styleUrl).success(function(res) {
       var rules = res.stylesheet.rules;
-      //console.log(rules.length);
+
       $scope.declarations = [];
+      $scope.fontSizes = [];
+      $scope.widths = [];
+      $scope.colors = [];
+      $scope.backgroundColors = [];
+
       for(var i = 0; i < rules.length; i++){
         var declarations = rules[i].declarations;
         for(var j in declarations){
           //console.log(declarations[j].property + ': ' + declarations[j].value);
           $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
+          if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j].value);
+          if(declarations[j].property == 'width') $scope.widths.push(declarations[j].value);
+          if(declarations[j].property == 'color') $scope.colors.push(declarations[j].value);
+          if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);
+
         };
       };
+
       $scope.loading = false;
-      //$scope.styles = res;
-      //$scope.loading = false;
+      
     });
   };
 
