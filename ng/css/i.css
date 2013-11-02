@@ -3124,10 +3124,10 @@ table {
 .blk {
   color: #111111; }
 
-.dk-gry {
+.drkgry {
   color: #333333; }
 
-.md-gry {
+.mdgry {
   color: #666666; }
 
 .gray {
@@ -3136,10 +3136,10 @@ table {
 .silver {
   color: silver; }
 
-.lt-slvr {
+.ltslvr {
   color: #aaaaaa; }
 
-.lt-gry {
+.ltgry {
   color: #cccccc; }
 
 .near-wht {
@@ -3147,6 +3147,33 @@ table {
 
 .wht {
   color: white; }
+
+.bg-blk {
+  background-color: #111111; }
+
+.bg-drkgry {
+  background-color: #333333; }
+
+.bg-mdgry {
+  background-color: #666666; }
+
+.bg-gray {
+  background-color: gray; }
+
+.bg-silver {
+  background-color: silver; }
+
+.bg-ltslvr {
+  background-color: #aaaaaa; }
+
+.bg-ltgry {
+  background-color: #cccccc; }
+
+.bg-nearwht {
+  background-color: #eeeeee; }
+
+.bg-wht {
+  background-color: white; }
 
 /* Text colors */
 .pink {
@@ -3841,7 +3868,7 @@ table {
   background-color: royalblue; }
 
 .bg-blue {
-  background-color: blue; }
+  background-color: #14B9D5; }
 
 .bg-mediumblue {
   background-color: mediumblue; }
