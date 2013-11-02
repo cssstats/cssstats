@@ -4,15 +4,15 @@
 
 var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
-    $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html', controller: 'DeclarationCtrl'});
-    $routeProvider.when('/width', {templateUrl: 'partials/width.html', controller: 'DeclarationCtrl'});
-    $routeProvider.when('/color', {templateUrl: 'partials/color.html', controller: 'DeclarationCtrl'});
-    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html', controller: 'DeclarationCtrl'});
-    $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html', controller: 'DeclarationCtrl'});
-    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html', controller: 'DeclarationCtrl'});
+    $routeProvider.when('/', {templateUrl: 'partials/home.html'});
+    $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
+    $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
+    $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
+    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
+    $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
+    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
 
-    $routeProvider.when('/:params', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
+    //$routeProvider.when('/:params', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
@@ -72,13 +72,4 @@ rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 
   // This function can later be called from the view, if needed.
   $scope.getStyles($scope.styleUrl);
 
-
-}]);
-
-rprtr.controller('HomeCtrl', ['$scope', function($scope) {
-  console.log('HomeCtrl');
-}]);
-
-rprtr.controller('DeclarationCtrl', ['$scope', function($scope){
-  console.log('DeclarationsCtrl');
 }]);
