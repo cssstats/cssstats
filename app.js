@@ -21,7 +21,18 @@ $(function(){
   d3.json("myspace.json", function(error, json) { // Load Json, pass it to d3.
     function onlyUnique(value, index, self) {
       return self.indexOf(value) === index;
+
     }
+function compare(a, b) {
+  if (a > b) {
+     return -1;
+  }
+  if (b > a) {
+     return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
 
     var rules = json.stylesheet.rules; // HAHA TODO better variable name
 
@@ -29,6 +40,9 @@ $(function(){
       if(rules[i].declarations && rules[i].declarations[0].property === "color") {
         cssvalues.push(rules[i].declarations[0].value);
         cssproperties.push(rules[i].declarations[0].property);
+      }
+      if(rules[i].declarations && rules[i].declarations[0].property === "background-image") {
+        image_urls.push(rules[i].declarations[0].value);
       }
       if(rules[i].declarations && rules[i].declarations[0].property === "width") {
         element_width_declarations.push(rules[i].declarations[0].value);
@@ -38,13 +52,12 @@ $(function(){
         bg_color_values.push(rules[i].declarations[0].value);
       }
       if(rules[i].declarations && rules[i].declarations[0].property === "font-size") {
-        font_sizes.push(rules[i].declarations[0].value);
-      }
+        font_sizes.push(rules[i].declarations[0].value); }
       cssvalues.sort();
       element_width_declarations.sort();
       var element_widths_unique = element_width_declarations.sort().filter(onlyUnique);
       var cssvalues_unique = cssvalues.sort().filter(onlyUnique);
-      var bg_colors_unique = bg_color_values.sort().filter(onlyUnique);
+      var bg_colors_unique = bg_color_values.sort(compare).filter(onlyUnique);
       cssproperties.sort();
       font_sizes.sort();
       var fontsizes_unique = font_sizes.sort().filter(onlyUnique);
@@ -82,10 +95,13 @@ $(function(){
       .data(fontsizes_unique)
       .enter()
       .append("div")
-      .text(function(d) { return d + " The quick brown fox jumps over the lazy dog"; })
+      .text(function(d) { return d; })
       .style("font-size", function(d) {return d + " ";})
       .style("text-align", "center")
       .style("padding", "40px 0")
+      .append("p")
+      .attr("class","par")
+      .text("The quick brown fox jumps over the lazy dog")
 
     var dimensions = textContainer.selectAll("div.dimensions")
       .data(element_widths_unique)
@@ -96,9 +112,16 @@ $(function(){
       .style("outline", "1px solid #333")
       .style("margin-bottom", "20px")
       .style("line-height", "8")
-      .style("text-align", "center")
+      .style("text-align", "center");
 
-    console.log(cssvalues);
-    console.log(cssvalues + cssproperties);
+    var background_images = textContainer.selectAll("div.bg-imgs")
+      .data(image_urls)
+      .enter()
+      .append("div")
+      .text(function(d) { return d; })
+      .style("background-image", function(d) {return d;})
+      .style("width", "2850px")
+      .style("height", "300px")
+
   });
 });
