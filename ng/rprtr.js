@@ -5,43 +5,13 @@
 var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
-    $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html', controller: 'DeclarationsCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
 
-rprtr.controller('GlobalCtrl', ['$scope', '$http', function($scope, $http) {
-
-  // Setting as a scope variable that can be updated in the view
-  $scope.styleUrl = 'data/myspace.json';
-
-  // Function to get the styles data
-  // This should really go in a factory
-  $scope.getStyles = function(styleUrl) {
-    $scope.loading = true;
-    $http.get(styleUrl).success(function(res) {
-      $scope.styles = res;
-      $scope.loading = false;
-    });
-  };
-
-  // Getting initial styles data
-  // This function can later be called from the view, if needed.
-  $scope.getStyles($scope.styleUrl);
-
-}]);
-
-rprtr.controller('HomeCtrl', ['$scope', function($scope) {
-
-  
-
-}]);
-
-rprtr.controller('DeclarationsCtrl', ['$scope', '$http', function($scope, $http) {
-
-  // This belongs in a factory
-  $scope.getDeclarations = function(rules) {
-
+rprtr.factory('declarations', function() {
+  return function($scope){
+    var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
     $scope.fontSizes = [];
     $scope.widths = [];
@@ -59,9 +29,28 @@ rprtr.controller('DeclarationsCtrl', ['$scope', '$http', function($scope, $http)
         if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);
       };
     };
+  };
+});
 
+rprtr.controller('HomeCtrl', ['$scope', '$http', 'declarations', function($scope, $http, declarations) {
+  
+  // Setting as a scope variable that can be updated in the view
+  $scope.styleUrl = 'data/myspace.json';
+
+  // Function to get the styles data - This should really go in a factory
+  $scope.getStyles = function(styleUrl) {
+    $scope.loading = true;
+    $http.get(styleUrl).success(function(res) {
+      $scope.styles = res;
+
+      // Calls factory function to separate JSON into lists of declarations
+      declarations($scope);
+      $scope.loading = false;
+    });
   };
 
-  $scope.getDeclarations($scope.styles.stylesheet.rules);
+  // Getting initial styles data
+  // This function can later be called from the view, if needed.
+  $scope.getStyles($scope.styleUrl);
 
 }]);
