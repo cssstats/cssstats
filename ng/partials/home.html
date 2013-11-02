@@ -39,13 +39,22 @@
   
 
   <section id="font-sizes" ng-show="viewSection == 'font-sizes'" class="py2">
-    <h2>Type Scale</h2>
+    <h2>Font sizes ({{ fontSizes.length}})</h2>
     <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
     <ul>
       <li
         ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
         style="font-size: {{ fontSize.value }}">
           {{ fontSize.property }}: {{ fontSize.value }}
+      </li>
+    </ul>
+  </section>
+
+  <section id="widths" ng-show="viewSection == 'widths'">
+    <h2>Widths ({{ widths.length }})</h2>
+    <ul>
+      <li ng-repeat="width in widths | orderBy:'value'">
+          <div style="width: {{ width.value }}; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
       </li>
     </ul>
   </section>
