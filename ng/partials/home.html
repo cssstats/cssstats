@@ -1,6 +1,4 @@
-<label class="b sans-serif f5">Style data URL:</label>
-<input ng-model="styleUrl">
-
+<h2>Overview</h2>
 <h2 ng-show="loading" class="py2">Loading...</h2>
 
 <div ng-hide="loading">
@@ -17,88 +15,10 @@
     </ul>
   </section>
 
-
-  <section id="subnav">
-    <!-- You can use a form for filtering, here's an example -->
-    <!-- <form>
-      <input type="radio" ng-model="viewSection" id="btn-overview" value="overview" hidden>
-      <label for="btn-overview">Overview</label>
-      <input type="radio" ng-model="viewSection" id="btn-font-sizes" value="font-sizes" hidden>
-      <label for="btn-font-sizes">Font-size</label>
-    </form> -->
-
-    <!-- But I think links work -->
-    <!-- viewSection variable is used to determine whether to show or hide a section -->
-    <!-- you can also use ngSwitch to add and remove elements from the DOM -->
-    <ul class="list--h mtl">
-    <li><a href="" ng-click="viewSection = 'font-sizes'">Font-size</a></li>
-    <li><a href="" ng-click="viewSection = 'widths'">Width</a></li>
-    <li><a href="" ng-click="viewSection = 'colors'">Color</a></li>
-    <li><a href="" ng-click="viewSection = 'background-colors'">Background-color</a></li>
-    <li><a href="" ng-click="viewSection = 'background-images'">Background-image</a></li>
-    </ul>
-
-    <a href="" ng-click="viewSection = 'all-rules'">All Rules</a>
-  </section>
-
-
-  <section id="font-sizes" ng-show="viewSection == 'font-sizes'" class="py2">
-    <h2>Font sizes ({{ fontSizes.length}})</h2>
-    <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
-    <ul>
-      <li
-        ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
-        style="font-size: {{ fontSize.value }}">
-          {{ fontSize.property }}: {{ fontSize.value }}
-      </li>
-    </ul>
-  </section>
-
-  <section id="widths" ng-show="viewSection == 'widths'">
-    <h2>Widths ({{ widths.length }})</h2>
-    <ul>
-      <li ng-repeat="width in widths | orderBy:'value'">
-          <div style="width: {{ width.value }}; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
-      </li>
-    </ul>
-  </section>
-
-  <section id="colors" ng-show="viewSection == 'colors'">
-    <h2>Colors ({{ colors.length }})</h2>
-    <ul>
-      <li ng-repeat="color in colors"
-        style="color: {{ color.value }}">
-          {{ color.property }}: {{ color.value }}
-      </li>
-    </ul>
-  </section>
-
-  <section id="background-colors" ng-show="viewSection == 'background-colors'">
-    <h2>Background Colors ({{ backgroundColors.length}})</h2>
-    <ul>
-      <li ng-repeat="backgroundColor in backgroundColors"
-        style="background-color: {{ backgroundColor.value }}">
-          {{ backgroundColor.property }}: {{ backgroundColor.value }}
-      </li>
-    </ul>
-  </section>
-
-  <section id="background-images" ng-show="viewSection == 'background-images'">
-    <h2>Background Images ({{ backgroundImages.length}})</h2>
-    <ul>
-      <li ng-repeat="backgroundImage in backgroundImages">
-        <div style="background-image: {{ backgroundImage.value }}; padding: 20px">
-          {{ backgroundImage.property }}: {{ backgroundImage.value }}
-        </div>
-      </li>
-    </ul>
-  </section>
-
-
-  <section id="all-rules" ng-show="viewSection == 'all-rules'" class="py2">
-
-    <h2 ng-show="styles">{{ styles.stylesheet.rules.length }} rules</h2>
-
+  <section id="all-rules" class="py2">
+    
+    <h2>{{ styles.stylesheet.rules.length }} rules</h2>
+    
     <div id="rules-filters">
       <input ng-model="query" Placeholder="Fuzzy Search">
     </div>

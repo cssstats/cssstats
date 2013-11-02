@@ -1,0 +1,7 @@
+<h2>Background Colors ({{ backgroundColors.length}})</h2>
+<ul>
+  <li ng-repeat="backgroundColor in backgroundColors"
+    style="background-color: {{ backgroundColor.value }}">
+      {{ backgroundColor.property }}: {{ backgroundColor.value }}
+  </li>
+</ul>

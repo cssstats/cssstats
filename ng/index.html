@@ -9,12 +9,28 @@
     <link rel="stylesheet" href="css/i.css">
 
   </head>
-  <body>
+  <body ng-controller="GlobalCtrl">
 
     <header class="tc ptl pbx bg-blue">
       <h1 class="ttu mega-tracked mtn mbs">Rprtr</h1>
       <h2 class="thin ttu man f4 pan">A different way to look at css</h2>
     </header>
+
+    <nav>
+      <ul class="list--h mtl">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/font-size">Font-size</a></li>
+        <li><a href="#/width">Width</a></li>
+        <li><a href="#/color">Color</a></li>
+        <li><a href="#/background-color">Background Color</a></li>
+        <li><a href="#/background-image">Background Image</a></li>
+      </ul>
+
+      <div>
+        <label class="b sans-serif f5">Style data URL:</label>
+        <input ng-model="styleUrl">
+      </div>
+    </nav>
 
     <div ng-view class="pax"></div>
     <footer class="pax bg-nearwht pos-rel">
@@ -25,6 +41,7 @@
         <a href="http://mrmrs.cc" title="Adam Morse (mrmrs)">mrmrs</a>
       </p>
     </footer>
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <script src="rprtr.js"></script>
 </body>
