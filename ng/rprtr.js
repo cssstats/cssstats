@@ -23,7 +23,7 @@ rprtr.factory('declarations', function() {
       for(var j in declarations){
         //console.log(declarations[j].property + ': ' + declarations[j].value);
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
-        if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j].value);
+        if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j]);
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j].value);
         if(declarations[j].property == 'color') $scope.colors.push(declarations[j].value);
         if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);

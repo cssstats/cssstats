@@ -20,9 +20,9 @@
     <h2>Type Scale</h2>
     <ul>
       <li
-        ng-repeat="fontSize in fontSizes track by $index"
-        style="font-size: {{ fontSize }}">
-          font-size: {{ fontSize }}
+        ng-repeat="fontSize in fontSizes | orderBy:'value'"
+        style="font-size: {{ fontSize.value }}">
+          {{ fontSize.property }}: {{ fontSize.value }}
       </li>
     </ul>
   </section>
