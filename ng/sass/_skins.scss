@@ -4,15 +4,24 @@
 
 
 .blk {      color: $near-black; }
-.dk-gry {   color: $dark-gray; }
-.md-gry {   color: $mid-gray; }
+.drkgry {   color: $dark-gray; }
+.mdgry {   color: $mid-gray; }
 .gray {     color: $gray; }
 .silver  {  color: $silver; }
-.lt-slvr {  color: $light-silver; }
-.lt-gry {   color: $light-gray; }
+.ltslvr {  color: $light-silver; }
+.ltgry {   color: $light-gray; }
 .near-wht { color: $near-white; }
 .wht {      color: $white; }
 
+.bg-blk {      background-color: $near-black; }
+.bg-drkgry {   background-color: $dark-gray; }
+.bg-mdgry {   background-color: $mid-gray; }
+.bg-gray {     background-color: $gray; }
+.bg-silver  {  background-color: $silver; }
+.bg-ltslvr {  background-color: $light-silver; }
+.bg-ltgry {   background-color: $light-gray; }
+.bg-nearwht { background-color: $near-white; }
+.bg-wht {      background-color: $white; }
 
 /* Text colors */
 
@@ -250,7 +259,7 @@
 .bg-cornflowerblue { background-color: $cornflowerblue; }
 .bg-steelblue { background-color: $steelblue; }
 .bg-royalblue { background-color: $royalblue; }
-.bg-blue { background-color: $blue; }
+.bg-blue { background-color: #14B9D5; }
 .bg-mediumblue { background-color: $mediumblue; }
 .bg-darkblue { background-color: $darkblue; }
 .bg-navy { background-color: $navy; }

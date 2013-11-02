@@ -25,11 +25,13 @@ rprtr.factory('declarations', function() {
     $scope.declarations = [];
     $scope.fontSizes = [];
     $scope.widths = [];
+    $scope.heights = [];
     $scope.colors = [];
     $scope.backgroundColors = [];
     $scope.backgroundImages = [];
     $scope.margins = [];
     $scope.paddings = [];
+    $scope.transitions = [];
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
@@ -38,9 +40,11 @@ rprtr.factory('declarations', function() {
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
         if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j]);
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
+        if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
         if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
         if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
         if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
+        if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
         // could probably use regex to find shorthand + longhand properties
         if(declarations[j].property == ('margin' || 'margin-top' || 'margin-right' || 'margin-bottom' || 'margin-left')) $scope.margins.push(declarations[j]);
         if(declarations[j].property == ('padding' || 'padding-top' || 'padding-right' || 'padding-bottom' || 'padding-left')) $scope.paddings.push(declarations[j]);
@@ -52,7 +56,7 @@ rprtr.factory('declarations', function() {
 rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations) {
 
   console.log('GlobalCtrl');
-  
+
   // Setting as a scope variable that can be updated in the view
   $scope.styleUrl = 'data/myspace.json';
 
