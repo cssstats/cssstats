@@ -13,33 +13,30 @@
 
 /* Type Scale */
 
-body  { font-size: 1.2rem; }
-p     { line-height: 1.5; }
-small, .small { font-size: .85rem; }
 
-h1, .f1    { font-size: 2rem; }
-h2, .f2    { font-size: 1.5rem; }
-h3, .f3    { font-size: 1.2rem; }
-h4, .f4    { font-size: 1.2rem; }
-h5, .f5    { font-size: 1rem; }
-h6, .f6    { font-size: 1rem; }
+.f1    { font-size: 2rem; }
+.f2    { font-size: 1.5rem; }
+.f3    { font-size: 1.2rem; }
+.f4    { font-size: 1.2rem; }
+.f5    { font-size: 1rem; }
+.f6    { font-size: 1rem; }
 
 @include break(medium) {
- h1, .f1-v2 { font-size: 2rem; }
- h2, .f2-v2 { font-size: 1.5rem; }
- h3, .f3-v2 { font-size: 1.2rem; }
- h4, .f4-v2 { font-size: 1.2rem; }
- h5, .f5-v2 { font-size: 1rem; }
- h6, .f6-v2 { font-size: .85rem; }
+.f1-v2 { font-size: 2rem; }
+.f2-v2 { font-size: 1.5rem; }
+.f3-v2 { font-size: 1.2rem; }
+.f4-v2 { font-size: 1.2rem; }
+.f5-v2 { font-size: 1rem; }
+.f6-v2 { font-size: .85rem; }
 }
 
 @include break(large) {
- h1, .f1 { font-size: 3rem; }
- h2, .f2 { font-size: 2rem; }
- h3, .f3 { font-size: 1.5rem; }
- h4, .f4 { font-size: 1.2rem; }
- h5, .f5 { font-size: 1rem; }
- h6, .f6 { font-size: 1rem; }
+.f1 { font-size: 3rem; }
+.f2 { font-size: 2rem; }
+.f3 { font-size: 1.5rem; }
+.f4 { font-size: 1.2rem; }
+.f5 { font-size: 1rem; }
+.f6 { font-size: 1rem; }
 }
 
 
