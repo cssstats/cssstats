@@ -1,4 +1,4 @@
-<label>Style data URL:</label>
+<label class="b sans-serif f5">Style data URL:</label>
 <input ng-model="styleUrl">
 
 <h2 ng-show="loading" class="py2">Loading...</h2>
@@ -7,12 +7,12 @@
 
   <section id="overview" class="py2">
     <h2>Declaration Stats</h2>
-    <ul class="mb2">
-      <li>{{ declarations.length }} declarations</li>
-      <li>{{ fontSizes.length }} font-size declarations</li>
-      <li>{{ widths.length }} width declarations</li>
-      <li>{{ colors.length }} color declarations</li>
-      <li>{{ backgroundColors.length }} background-color declarations</li>
+    <ul class="sans-serif">
+      <li><span class="b">{{ declarations.length }}</span> declarations</li>
+      <li><span class="b">{{ fontSizes.length }}</span> font-size declarations</li>
+      <li><span class="b">{{ widths.length }}</span> width declarations</li>
+      <li><span class="b">{{ colors.length }}</span> color declarations</li>
+      <li><span class="b">{{ backgroundColors.length }}</span> background-color declarations</li>
     </ul>
   </section>
 
@@ -23,7 +23,7 @@
       <input type="radio" ng-model="viewSection" id="btn-overview" value="overview" hidden>
       <label for="btn-overview">Overview</label>
       <input type="radio" ng-model="viewSection" id="btn-font-sizes" value="font-sizes" hidden>
-      <label for="btn-font-sizes">Font-size</label> 
+      <label for="btn-font-sizes">Font-size</label>
     </form> -->
 
     <!-- But I think links work -->
@@ -36,7 +36,7 @@
 
     <a href="" ng-click="viewSection = 'all-rules'">All Rules</a>
   </section>
-  
+
 
   <section id="font-sizes" ng-show="viewSection == 'font-sizes'" class="py2">
     <h2>Type Scale</h2>
@@ -57,7 +57,7 @@
         style="color: {{ color.value }}">
           {{ color.property }}: {{ color.value }}
       </li>
-    </ul>  
+    </ul>
   </section>
 
   <section id="background-colors" ng-show="viewSection == 'background-colors'">
@@ -72,7 +72,7 @@
 
 
   <section id="all-rules" ng-show="viewSection == 'all-rules'" class="py2">
-    
+
     <h2 ng-show="styles">{{ styles.stylesheet.rules.length }} rules</h2>
 
     <div id="rules-filters">
