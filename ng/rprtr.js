@@ -24,9 +24,9 @@ rprtr.factory('declarations', function() {
         //console.log(declarations[j].property + ': ' + declarations[j].value);
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
         if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j]);
-        if(declarations[j].property == 'width') $scope.widths.push(declarations[j].value);
-        if(declarations[j].property == 'color') $scope.colors.push(declarations[j].value);
-        if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);
+        if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
+        if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
+        if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
       };
     };
   };
@@ -52,5 +52,6 @@ rprtr.controller('HomeCtrl', ['$scope', '$http', 'declarations', function($scope
   // Getting initial styles data
   // This function can later be called from the view, if needed.
   $scope.getStyles($scope.styleUrl);
+
 
 }]);
