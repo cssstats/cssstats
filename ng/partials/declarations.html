@@ -1,1 +1,9 @@
 <h2>Declarations</h2>
+
+<h2 ng-show="loading" class="py2">Loading...</h2>
+
+<ul>
+  <li ng-repeat="declaration in declarations track by $index">
+    {{ declaration }}
+  </li>
+</ul>

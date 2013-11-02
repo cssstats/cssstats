@@ -8,7 +8,7 @@
   <input ng-model="query" Placeholder="Fuzzy Search">
 </div>
 
-<h3>{{ styles.stylesheet.rules.length }} rules</h3>
+<h3 ng-show="styles">{{ styles.stylesheet.rules.length }} rules</h3>
 <ul>
   <li ng-repeat="rule in styles.stylesheet.rules | filter:query">
     <h3 ng-repeat="selector in rule.selectors track by $index">
@@ -19,4 +19,4 @@
 </ul>
 
 <!-- For checking JSON data structure -->
-<!-- <pre>{{ styles.stylesheet.rules | json }}</pre> -->
+<pre>{{ styles.stylesheet.rules | json }}</pre>
