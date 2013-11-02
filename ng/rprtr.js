@@ -53,5 +53,6 @@ rprtr.controller('HomeCtrl', ['$scope', '$http', 'declarations', function($scope
   // This function can later be called from the view, if needed.
   $scope.getStyles($scope.styleUrl);
 
+  $scope.viewSection = null;
 
 }]);
