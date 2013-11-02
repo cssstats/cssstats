@@ -18,30 +18,5 @@
     </ul>
   </section>
 
-  <section id="all-rules" class="py2">
-    <h2>{{ styles.stylesheet.rules.length }} rules</h2>
-    <a href="" ng-show="!showRules" ng-click="showRules = true">Show All Rules</a>
-    <a href="" ng-hide="!showRules" ng-click="showRules = false">Hide All Rules</a>
-
-    <div ng-show="!!showRules">
-      <div id="rules-filters">
-        <input ng-model="query" Placeholder="Fuzzy Search">
-      </div>
-
-      <ul>
-        <li ng-repeat="rule in styles.stylesheet.rules | filter:query">
-          <h3 ng-repeat="selector in rule.selectors track by $index">
-            {{ selector }}
-          </h3>
-          <pre ng-repeat="declaration in rule.declarations">{{ declaration.property }}: {{ declaration.value }};</pre>
-        </li>
-      </ul>
-    </div>
-
-    <!-- For checking JSON data structure -->
-    <!-- <pre>{{ styles.stylesheet.rules | json }}</pre> -->
-
-  </section>
-
 </div>
 
