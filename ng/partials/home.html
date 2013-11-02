@@ -18,14 +18,26 @@
 
   <section id="type-scale" class="py2">
     <h2>Type Scale</h2>
+    <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
     <ul>
       <li
-        ng-repeat="fontSize in fontSizes track by $index"
-        style="font-size: {{ fontSize }}">
-          font-size: {{ fontSize }}
+        ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
+        style="font-size: {{ fontSize.value }}">
+          {{ fontSize.property }}: {{ fontSize.value }}
       </li>
     </ul>
   </section>
+
+  <section id="colors">
+    <h2>Colors</h2>
+    <ul>
+      <li ng-repeat="color in colors"
+        style="color: {{ color.value }}">
+          {{ color.property }}: {{ color.value }}
+      </li>
+    </ul>  
+  </section>
+
 
   <section id="all-rules" class="py2">
     
