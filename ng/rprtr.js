@@ -17,6 +17,7 @@ rprtr.factory('declarations', function() {
     $scope.widths = [];
     $scope.colors = [];
     $scope.backgroundColors = [];
+    $scope.backgroundImages = [];
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
@@ -27,6 +28,7 @@ rprtr.factory('declarations', function() {
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
         if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
         if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
+        if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
       };
     };
   };

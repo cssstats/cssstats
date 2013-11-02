@@ -7,12 +7,13 @@
 
   <section id="overview" class="py2">
     <h2>Declaration Stats</h2>
-    <ul class="sans-serif">
-      <li><span class="b">{{ declarations.length }}</span> declarations</li>
-      <li><span class="b">{{ fontSizes.length }}</span> font-size declarations</li>
-      <li><span class="b">{{ widths.length }}</span> width declarations</li>
-      <li><span class="b">{{ colors.length }}</span> color declarations</li>
-      <li><span class="b">{{ backgroundColors.length }}</span> background-color declarations</li>
+    <ul class="mb2">
+      <li>{{ declarations.length }} declarations</li>
+      <li>{{ fontSizes.length }} font-size declarations</li>
+      <li>{{ widths.length }} width declarations</li>
+      <li>{{ colors.length }} color declarations</li>
+      <li>{{ backgroundColors.length }} background-color declarations</li>
+      <li>{{ backgroundImages.length }} background-image declarations</li>
     </ul>
   </section>
 
@@ -29,23 +30,35 @@
     <!-- But I think links work -->
     <!-- viewSection variable is used to determine whether to show or hide a section -->
     <!-- you can also use ngSwitch to add and remove elements from the DOM -->
-    <a href="" ng-click="viewSection = 'font-sizes'">Font-size</a>
-    <a href="" ng-click="viewSection = 'widths'">Width</a>
-    <a href="" ng-click="viewSection = 'colors'">Color</a>
-    <a href="" ng-click="viewSection = 'background-colors'">Background-color</a>
+    <ul class="list--h mtl">
+    <li><a href="" ng-click="viewSection = 'font-sizes'">Font-size</a></li>
+    <li><a href="" ng-click="viewSection = 'widths'">Width</a></li>
+    <li><a href="" ng-click="viewSection = 'colors'">Color</a></li>
+    <li><a href="" ng-click="viewSection = 'background-colors'">Background-color</a></li>
+    <li><a href="" ng-click="viewSection = 'background-images'">Background-image</a></li>
+    </ul>
 
     <a href="" ng-click="viewSection = 'all-rules'">All Rules</a>
   </section>
 
 
   <section id="font-sizes" ng-show="viewSection == 'font-sizes'" class="py2">
-    <h2>Type Scale</h2>
+    <h2>Font sizes ({{ fontSizes.length}})</h2>
     <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
     <ul>
       <li
         ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'value'"
         style="font-size: {{ fontSize.value }}">
           {{ fontSize.property }}: {{ fontSize.value }}
+      </li>
+    </ul>
+  </section>
+
+  <section id="widths" ng-show="viewSection == 'widths'">
+    <h2>Widths ({{ widths.length }})</h2>
+    <ul>
+      <li ng-repeat="width in widths | orderBy:'value'">
+          <div style="width: {{ width.value }}; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
       </li>
     </ul>
   </section>
@@ -66,6 +79,17 @@
       <li ng-repeat="backgroundColor in backgroundColors"
         style="background-color: {{ backgroundColor.value }}">
           {{ backgroundColor.property }}: {{ backgroundColor.value }}
+      </li>
+    </ul>
+  </section>
+
+  <section id="background-images" ng-show="viewSection == 'background-images'">
+    <h2>Background Images ({{ backgroundImages.length}})</h2>
+    <ul>
+      <li ng-repeat="backgroundImage in backgroundImages">
+        <div style="background-image: {{ backgroundImage.value }}; padding: 20px">
+          {{ backgroundImage.property }}: {{ backgroundImage.value }}
+        </div>
       </li>
     </ul>
   </section>

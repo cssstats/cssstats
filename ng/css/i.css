@@ -2552,6 +2552,8 @@ img {
 .list--h {
   list-style-type: none;
   display: inline-block; }
+  .list--h li {
+    display: inline-block; }
 
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -5871,3 +5873,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
