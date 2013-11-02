@@ -20,7 +20,7 @@ var rprtr = angular.module('rprtr',[])
 rprtr.value('$anchorScroll', angular.noop);
 
 
-rprtr.factory('declarations', function(anythingToPx) {
+rprtr.factory('declarations', function(fontSizeToPx) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
@@ -50,7 +50,7 @@ rprtr.factory('declarations', function(anythingToPx) {
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
         if(declarations[j].property == 'font-size') {
           // Adding absolute px values to sort by
-          declarations[j].pxValue = anythingToPx.convert(declarations[j].value);
+          declarations[j].pxValue = fontSizeToPx.convert(declarations[j].value);
           $scope.fontSizes.push(declarations[j]);
         };
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
@@ -67,15 +67,25 @@ rprtr.factory('declarations', function(anythingToPx) {
   };
 });
 
-rprtr.service('anythingToPx', function(){
+rprtr.service('fontSizeToPx', function(){
   return {
     convert: function(val){
       var raw = parseFloat(val);
       if(val.match(/px$/)) return raw;
       if(val.match(/em$/)) return raw * 16;
       else if(val.match(/%$/)) return raw * .16;
-      else if(val == 'inherit') return raw;
-      // Temporarily handling other values - small, medium, etc.
+      // Based on Webkit defaults
+      else if(val == 'inherit') return 16;
+      else if(val == 'xx-small') return 9;
+      else if(val == 'x-small') return 10;
+      else if(val == 'small') return 13;
+      else if(val == 'medium') return 16;
+      else if(val == 'large') return 18;
+      else if(val == 'x-large') return 24;
+      else if(val == 'xx-large') return 32;
+      else if(val == 'smaller') return 13;
+      else if(val == 'larger') return 19;
+      // All other values
       else return 1024;
     }
   };
