@@ -10,9 +10,7 @@ var rprtr = angular.module('rprtr',[])
   }]);
 
 
-rprtr.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
-
-  $scope.loading = true;
+rprtr.controller('GlobalCtrl', ['$scope', '$http', function($scope, $http) {
 
   // Setting as a scope variable that can be updated in the view
   $scope.styleUrl = 'data/myspace.json';
@@ -20,6 +18,7 @@ rprtr.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
   // Function to get the styles data
   // This should really go in a factory
   $scope.getStyles = function(styleUrl) {
+    $scope.loading = true;
     $http.get(styleUrl).success(function(res) {
       $scope.styles = res;
       $scope.loading = false;
@@ -32,41 +31,37 @@ rprtr.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 
 }]);
 
+rprtr.controller('HomeCtrl', ['$scope', function($scope) {
+
+  
+
+}]);
+
 rprtr.controller('DeclarationsCtrl', ['$scope', '$http', function($scope, $http) {
 
-  $scope.loading = true;
-  $scope.styleUrl = 'data/myspace.json';
-
   // This belongs in a factory
-  $scope.getDeclarations = function(styleUrl) {
-    $scope.loading = true;
-    $http.get(styleUrl).success(function(res) {
-      var rules = res.stylesheet.rules;
+  $scope.getDeclarations = function(rules) {
 
-      $scope.declarations = [];
-      $scope.fontSizes = [];
-      $scope.widths = [];
-      $scope.colors = [];
-      $scope.backgroundColors = [];
+    $scope.declarations = [];
+    $scope.fontSizes = [];
+    $scope.widths = [];
+    $scope.colors = [];
+    $scope.backgroundColors = [];
 
-      for(var i = 0; i < rules.length; i++){
-        var declarations = rules[i].declarations;
-        for(var j in declarations){
-          //console.log(declarations[j].property + ': ' + declarations[j].value);
-          $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
-          if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j].value);
-          if(declarations[j].property == 'width') $scope.widths.push(declarations[j].value);
-          if(declarations[j].property == 'color') $scope.colors.push(declarations[j].value);
-          if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);
-
-        };
+    for(var i = 0; i < rules.length; i++){
+      var declarations = rules[i].declarations;
+      for(var j in declarations){
+        //console.log(declarations[j].property + ': ' + declarations[j].value);
+        $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
+        if(declarations[j].property == 'font-size') $scope.fontSizes.push(declarations[j].value);
+        if(declarations[j].property == 'width') $scope.widths.push(declarations[j].value);
+        if(declarations[j].property == 'color') $scope.colors.push(declarations[j].value);
+        if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j].value);
       };
+    };
 
-      $scope.loading = false;
-      
-    });
   };
 
-  $scope.getDeclarations($scope.styleUrl);
+  $scope.getDeclarations($scope.styles.stylesheet.rules);
 
 }]);
