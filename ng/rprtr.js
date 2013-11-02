@@ -8,19 +8,21 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
     $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
     $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
+    $routeProvider.when('/margin', {templateUrl: 'partials/margin.html'});
+
     $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
     $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
-    // $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
 
-    //$routeProvider.when('/:params', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 
 rprtr.value('$anchorScroll', angular.noop);
 
 
-rprtr.factory('declarations', function(fontSizeToPx) {
+// Factories
+
+rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
@@ -50,7 +52,7 @@ rprtr.factory('declarations', function(fontSizeToPx) {
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
         if(declarations[j].property == 'font-size') {
           // Adding absolute px values to sort by
-          declarations[j].pxValue = fontSizeToPx.convert(declarations[j].value);
+          declarations[j].pxValue = fontSizeToPx(declarations[j].value);
           $scope.fontSizes.push(declarations[j]);
         };
         if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
@@ -60,36 +62,81 @@ rprtr.factory('declarations', function(fontSizeToPx) {
         if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
         if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
         // could probably use regex to find shorthand + longhand properties
-        if(declarations[j].property == ('margin' || 'margin-top' || 'margin-right' || 'margin-bottom' || 'margin-left')) $scope.margins.push(declarations[j]);
+        if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
         if(declarations[j].property == ('padding' || 'padding-top' || 'padding-right' || 'padding-bottom' || 'padding-left')) $scope.paddings.push(declarations[j]);
       };
+    };
+
+    // Iterate through margin values for making charts
+    anythingToRelative($scope.margins);
+
+
+  };
+});
+
+
+// Services
+
+rprtr.factory('fontSizeToPx', function(){
+  return function(val){
+    var raw = parseFloat(val);
+    if(val.match(/px$/)) return raw;
+    if(val.match(/em$/)) return raw * 16;
+    else if(val.match(/%$/)) return raw * .16;
+    // Based on Webkit defaults
+    else if(val == 'inherit') return 16;
+    else if(val == 'xx-small') return 9;
+    else if(val == 'x-small') return 10;
+    else if(val == 'small') return 13;
+    else if(val == 'medium') return 16;
+    else if(val == 'large') return 18;
+    else if(val == 'x-large') return 24;
+    else if(val == 'xx-large') return 32;
+    else if(val == 'smaller') return 13;
+    else if(val == 'larger') return 19;
+    // All other values
+    else return 1024;
+  };
+});
+
+// Call this after declarations service has parsed all the margins, paddings, etc.
+// i.e. call this from the controller
+rprtr.factory('anythingToRelative', function(){
+  return function(obj) {
+
+    // Need to parse through margin shorthands too
+    
+    // Find the highest absolute value
+    var highestValue = 0;
+    for(var i = 0; i < obj.length; i++){
+      var thisValue = obj[i].value, raw = parseFloat(thisValue);
+      // Ignore auto and percentage based values
+      if(thisValue == 'auto' || thisValue.match(/%$/)) {
+        //console.log('ignoring auto or percentage');
+      } else {
+        if(thisValue.match(/em$/)) raw = raw * 16;
+        if(raw > highestValue) highestValue = raw;
+      };
+    };
+
+    // Add relative values to all objects
+    for(var i = 0; i < obj.length; i++) {
+      var thisValue = obj[i].value, raw = parseFloat(thisValue);
+      //console.log(raw + ' : ' + highestValue);
+      if(thisValue == 0) obj[i].relativeValue = raw;
+      if(thisValue == 'auto') obj[i].relativeValue = 100;
+      if(thisValue.match(/%$/)) obj[i].relativeValue = raw;
+      if(thisValue.match(/em$/)) obj[i].relativeValue = ((raw * 16) / highestValue * 100);
+      if(thisValue.match(/px$/)) obj[i].relativeValue = (raw / highestValue * 100);
+      //console.log('value vs rel: ' + obj[i].value + obj[i].relativeValue);
+      // else console.log('wtf is this ' + thisValue);
+      
     };
   };
 });
 
-rprtr.service('fontSizeToPx', function(){
-  return {
-    convert: function(val){
-      var raw = parseFloat(val);
-      if(val.match(/px$/)) return raw;
-      if(val.match(/em$/)) return raw * 16;
-      else if(val.match(/%$/)) return raw * .16;
-      // Based on Webkit defaults
-      else if(val == 'inherit') return 16;
-      else if(val == 'xx-small') return 9;
-      else if(val == 'x-small') return 10;
-      else if(val == 'small') return 13;
-      else if(val == 'medium') return 16;
-      else if(val == 'large') return 18;
-      else if(val == 'x-large') return 24;
-      else if(val == 'xx-large') return 32;
-      else if(val == 'smaller') return 13;
-      else if(val == 'larger') return 19;
-      // All other values
-      else return 1024;
-    }
-  };
-});
+
+// Controllers
 
 rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations) {
 
