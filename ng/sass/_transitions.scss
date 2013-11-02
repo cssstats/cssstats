@@ -1,0 +1,51 @@
+/* ==========================================================================
+   TRANSITIONS
+   ========================================================================== */
+
+/* Transition Delay */
+
+.tdl-1 { transition-delay: 1s; }
+.tdl-2 { transition-delay: 2s; }
+.tdl-3 { transition-delay: 3s; }
+.tdl-4 { transition-delay: 5s; }
+.tdl-i { transition-delay: initial; }
+
+/* Transition Duration */
+
+.td-1 { transition-duration: 120ms; }
+.td-2 { transition-duration: .3s; }
+.td-3 { transition-duration: .6s; }
+.td-4 { transition-duration: 1s; }
+.td-5 { transition-duration: 5s; }
+.td-i { transition-duration: inherit; }
+
+
+/* Transition Properties */
+
+.tp-n   { transition-property: none; }
+.tp-all { transition-property: all; }
+.tp-i   { transition-property: inherit; }
+.tp-c   { transition-property: color; }
+.tp-bc   { transition-property: background-color; }
+.tp-w   { transition-property: width; }
+.tp-h   { transition-property: height; }
+.tp-l   { transition-property: left; }
+.tp-r   { transition-property: right; }
+.tp-t   { transition-property: top; }
+.tp-b   { transition-property: bottom; }
+.tp-o   { transition-property: opacity; }
+
+
+/* Transition Timing Functions */
+
+.ttf-e { transition-timing-function: ease; }
+.ttf-ei { transition-timing-function: ease-in; }
+.ttf-eo { transition-timing-function: ease-out; }
+.ttf-eio { transition-timing-function: ease-in-out; }
+.ttf-lin { transition-timing-function: linear; }
+.ttf-cb { transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); }
+.ttf-ss { transition-timing-function: step-start; }
+.ttf-se  { transition-timing-function: step-end; }
+.ttf-steps { transition-timing-function: steps(4, end); }
+.ttf-i { transition-timing-function: inherit; }
+

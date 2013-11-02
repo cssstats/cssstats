@@ -1,0 +1,68 @@
+/* ==========================================================================
+   ANIMATION UTILITIES
+   - Animation Directions
+
+   ========================================================================== */
+
+/* Animation Directions */
+
+.ani-dir-norm {     animation-direction: normal; }
+.ani-dir-rev {      animation-direction: reverse; }
+.ani-dir-alt {      animation-direction: alternate; }
+.ani-dir-alt-rev {  animation-direction: alternate-reverse; }
+
+
+/* Animation Durations  TODO: Change scale */
+
+.ani-dur-1 { animation-duration: .4s; }
+.ani-dur-2 { animation-duration: .5s; }
+.ani-dur-3 { animation-duration: .6s; }
+.ani-dur-4 { animation-duration: 1s;  }
+.ani-dur-5 { animation-duration: 1.5; }
+.ani-dur-6 { animation-duration: 10;  }
+
+
+/* Animation Fill Mode TODO: Class names. */
+
+.ani-fil-non { animation-fill-mode: none; }
+.ani-fil-frw { animation-fill-mode: forwards; }
+.ani-fil-bck { animation-fill-mode: backwards; }
+.ani-fil-bth { animation-fill-mode: both; }
+
+
+/* Animation Count */
+
+.ani-cnt-1 { animation-iteration-count: 1; }
+.ani-cnt-2 { animation-iteration-count: 2; }
+.ani-cnt-3 { animation-iteration-count: 5; }
+.ani-cnt-4 { animation-iteration-count: 10; }
+.ani-cnt-5 { animation-iteration-count: infinite; }
+
+
+/* Animation Play State */
+
+.ani-state-run { animation-play-state: running; }
+.ani-state-pause { animation-play-state: paused; }
+
+
+/* Animation Timing */
+
+.ani-ease {      animation-timing-function: ease; }
+.ani-easein {    animation-timing-function: ease-in; }
+.ani-easeout {   animation-timing-function: ease-out; }
+.ani-easeinout { animation-timing-function: ease-in-out; }
+.ani-linear {    animation-timing-function: linear; }
+.ani-bezier {    animation-timing-function: cubic-bezier(0.1, 0.1, 0.1, 0.1); }
+.ani-start {     animation-timing-function: step-start; }
+.ani-stop {      animation-timing-function: step-stop; }
+
+
+/* Animation delays */
+
+.ani-delay-1 { animation-delay: .5s; }
+.ani-delay-2 { animation-delay: 1s; }
+.ani-delay-3 { animation-delay: 2s; }
+.ani-delay-4 { animation-delay: 4s; }
+.ani-delay-5 { animation-delay: 8s; }
+.ani-delay-6 { animation-delay: 16s; }
+

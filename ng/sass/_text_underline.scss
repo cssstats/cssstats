@@ -1,0 +1,13 @@
+/* ==========================================================================
+   TEXT UNDERLINE POSITION
+   ========================================================================== */
+
+
+.tup-auto { text-underline-position: auto; }
+.tup-u    { text-underline-position: under; }
+.tup-l    { text-underline-position: left; }
+.tup-r    { text-underline-position: right; }
+.tup-ul   { text-underline-position: under left; }
+.tup-ru   { text-underline-position: right under; }
+.tup-i    { text-underline-position: inherit; }
+
