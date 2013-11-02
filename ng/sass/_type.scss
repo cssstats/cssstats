@@ -21,8 +21,8 @@ h1, .f1    { font-size: 2rem; }
 h2, .f2    { font-size: 1.5rem; }
 h3, .f3    { font-size: 1.2rem; }
 h4, .f4    { font-size: 1.2rem; }
-h5, .f5    { font-size: 1.2rem; }
-h6, .f6    { font-size: 1.2rem; }
+h5, .f5    { font-size: 1rem; }
+h6, .f6    { font-size: 1rem; }
 
 @include break(medium) {
  h1, .f1-v2 { font-size: 2rem; }

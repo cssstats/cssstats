@@ -17,27 +17,31 @@
     </header>
 
     <nav>
-      <a href="#/font-size">Font-size</a>
-      <a href="#/width">Width</a>
-      <a href="#/color">Color</a>
-      <a href="#/background-color">Background Color</a>
-      <a href="#/background-image">Background Image</a>
+      <ul class="list--h mtl">
+        <li><a href="#/font-size">Font-size</a></li>
+        <li><a href="#/width">Width</a></li>
+        <li><a href="#/color">Color</a></li>
+        <li><a href="#/background-color">Background Color</a></li>
+        <li><a href="#/background-image">Background Image</a></li>
+      </ul>
 
       <div>
-        <label>Style data URL:</label>
+        <label class="b sans-serif f5">Style data URL:</label>
         <input ng-model="styleUrl">
       </div>
     </nav>
 
-    <div ng-view class="pas"></div>
-    <footer class="pas">
-      <p>
+    <div ng-view class="pax"></div>
+    
+    <footer class="pax bg-gray pos-rel">
+      <p class="tc">
         Made with care by
         <a href="http://jxnblk.com" title="Brent Jackson (jxnblk)">jxnblk</a>
         and
         <a href="http://mrmrs.cc" title="Adam Morse (mrmrs)">mrmrs</a>
       </p>
     </footer>
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <script src="rprtr.js"></script>
 </body>
