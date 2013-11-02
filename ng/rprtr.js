@@ -23,6 +23,7 @@ rprtr.factory('declarations', function() {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
+    $scope.selectors = [];
     $scope.fontSizes = [];
     $scope.widths = [];
     $scope.heights = [];
@@ -35,6 +36,14 @@ rprtr.factory('declarations', function() {
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
+      var selectors = rules[i].selectors;
+
+      // Adds list of selectors so we can parse just selectors
+      for(var j in selectors) {
+        $scope.selectors.push(selectors[j]);
+      }
+
+      // Adds all the declarations.
       for(var j in declarations){
         //console.log(declarations[j].property + ': ' + declarations[j].value);
         $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
