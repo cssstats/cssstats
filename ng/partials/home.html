@@ -3,35 +3,51 @@
 
 <h2 ng-show="loading" class="py2">Loading...</h2>
 
-<section ng-hide="loading" id="declarations" class="py2">
-  <h2>Declaration Stats</h2>
-  <ul class="mb2">
-    <li>{{ declarations.length }} declarations</li>
-    <li>{{ fontSizes.length }} font-size declarations</li>
-    <li>{{ widths.length }} width declarations</li>
-    <li>{{ colors.length }} color declarations</li>
-    <li>{{ backgroundColors.length }} background-color declarations</li>
-  </ul>
-</section>
-
-<section id="all-rules" ng-hide="loading" class="py2">
+<div ng-hide="loading">
   
-  <h2 ng-show="styles">{{ styles.stylesheet.rules.length }} rules</h2>
+  <section id="declarations" class="py2">
+    <h2>Declaration Stats</h2>
+    <ul class="mb2">
+      <li>{{ declarations.length }} declarations</li>
+      <li>{{ fontSizes.length }} font-size declarations</li>
+      <li>{{ widths.length }} width declarations</li>
+      <li>{{ colors.length }} color declarations</li>
+      <li>{{ backgroundColors.length }} background-color declarations</li>
+    </ul>
+  </section>
 
-  <div id="rules-filters">
-    <input ng-model="query" Placeholder="Fuzzy Search">
-  </div>
+  <section id="type-scale" class="py2">
+    <h2>Type Scale</h2>
+    <ul>
+      <li
+        ng-repeat="fontSize in fontSizes track by $index"
+        style="font-size: {{ fontSize }}">
+          font-size: {{ fontSize }}
+      </li>
+    </ul>
+  </section>
 
-  <ul>
-    <li ng-repeat="rule in styles.stylesheet.rules | filter:query">
-      <h3 ng-repeat="selector in rule.selectors track by $index">
-        {{ selector }}
-      </h3>
-      <pre ng-repeat="declaration in rule.declarations">{{ declaration.property }}: {{ declaration.value }};</pre>
-    </li>
-  </ul>
+  <section id="all-rules" class="py2">
+    
+    <h2 ng-show="styles">{{ styles.stylesheet.rules.length }} rules</h2>
 
-  <!-- For checking JSON data structure -->
-  <!-- <pre>{{ styles.stylesheet.rules | json }}</pre> -->
+    <div id="rules-filters">
+      <input ng-model="query" Placeholder="Fuzzy Search">
+    </div>
 
-</section>
+    <ul>
+      <li ng-repeat="rule in styles.stylesheet.rules | filter:query">
+        <h3 ng-repeat="selector in rule.selectors track by $index">
+          {{ selector }}
+        </h3>
+        <pre ng-repeat="declaration in rule.declarations">{{ declaration.property }}: {{ declaration.value }};</pre>
+      </li>
+    </ul>
+
+    <!-- For checking JSON data structure -->
+    <!-- <pre>{{ styles.stylesheet.rules | json }}</pre> -->
+
+  </section>
+
+</div>
+
