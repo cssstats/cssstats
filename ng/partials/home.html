@@ -13,6 +13,7 @@
       <li>{{ widths.length }} width declarations</li>
       <li>{{ colors.length }} color declarations</li>
       <li>{{ backgroundColors.length }} background-color declarations</li>
+      <li>{{ backgroundImages.length }} background-image declarations</li>
     </ul>
   </section>
 
@@ -33,6 +34,7 @@
     <a href="" ng-click="viewSection = 'widths'">Width</a>
     <a href="" ng-click="viewSection = 'colors'">Color</a>
     <a href="" ng-click="viewSection = 'background-colors'">Background-color</a>
+    <a href="" ng-click="viewSection = 'background-images'">Background-image</a>
 
     <a href="" ng-click="viewSection = 'all-rules'">All Rules</a>
   </section>
@@ -75,6 +77,17 @@
       <li ng-repeat="backgroundColor in backgroundColors"
         style="background-color: {{ backgroundColor.value }}">
           {{ backgroundColor.property }}: {{ backgroundColor.value }}
+      </li>
+    </ul>
+  </section>
+
+  <section id="background-images" ng-show="viewSection == 'background-images'">
+    <h2>Background Images ({{ backgroundImages.length}})</h2>
+    <ul>
+      <li ng-repeat="backgroundImage in backgroundImages">
+        <div style="background-image: {{ backgroundImage.value }}; padding: 20px">
+          {{ backgroundImage.property }}: {{ backgroundImage.value }}
+        </div>
       </li>
     </ul>
   </section>
