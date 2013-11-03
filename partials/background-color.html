@@ -1,8 +1,8 @@
 <h2>Background Colors ({{ backgroundColors.length}})</h2>
 <ul>
-  <li ng-repeat="backgroundColor in backgroundColors"
-    class="pal f3 ttu fw9 sans-serif"
-    style="background-color: {{ backgroundColor.value }}">
-       {{ backgroundColor.value }}
-  </li>
+  <li ng-repeat="backgroundColor in backgroundColors | orderBy: 'value'"
+      class="f3 ttu fw9 sans-serif">
+          <span>{{ backgroundColor.value }}</span>
+         <div style="background-color: {{ backgroundColor.value }}; height: 48px; width: 100%;" class="dib" > </div>
+    </li>
 </ul>
