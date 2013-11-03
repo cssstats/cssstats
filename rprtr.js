@@ -13,8 +13,10 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
     $routeProvider.when('/margin', {templateUrl: 'partials/margin.html'});
     $routeProvider.when('/padding', {templateUrl: 'partials/padding.html'});
+    $routeProvider.when('/spacing', {templateUrl: 'partials/spacing.html'});
+    $routeProvider.when('/dimensions', {templateUrl: 'partials/dimensions.html'});
 
-    $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
+    $routeProvider.when('/colors', {templateUrl: 'partials/colors.html'});
     $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
     $routeProvider.when('/selector', {templateUrl: 'partials/selector.html'});

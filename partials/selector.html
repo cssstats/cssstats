@@ -1,9 +1,10 @@
-<h1>Selectors</h1>
-<ul>
-  <li ng-repeat="selector in selectors | filter:query | orderBy:'-specificityScore'">
-    {{ selector.specificityScore }} - {{ selector.string }}
-  </li>
-</ul>
-  
+<section class="phl">
 
-
+  <h1>Selectors</h1>
+  <p class="f2 lh-copy">As css grows, people tend to add more and more specificity to selectors. This is the tops. </p>
+  <ul>
+    <li ng-repeat="selector in selectors | filter:query | orderBy:'-specificityScore'" class="pvm">
+    <b class="sans-serif f3 prl">{{ selector.specificityScore }}</b> <code class="f6">{{ selector.string }}</code>
+    </li>
+  </ul>
+</section>

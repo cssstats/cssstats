@@ -1,8 +1,8 @@
-<h2>Colors ({{ colors.length }})</h2>
+<h1 class="h2">Colors ({{ colors.length }})</h1>
 <ul>
-  <li ng-repeat="color in colors"
+  <li ng-repeat="color in colors | orderBy:'value'"
     class="sans-serif pvm">
-    <var class="fsn b lh-2">{{ color.value }}</var>
+    <var class="fsn b lh-2 ">{{ color.value }}</var>
     <div
       class="lh-copy"
       style="color: {{ color.value }}">

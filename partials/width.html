@@ -1,9 +1,9 @@
-<div ng-controller="WidthCtrl">
-  <h2>Widths ({{ widths.length }})</h2>
+<div ng-controller="WidthCtrl" class="phl pvm">
+  <h1>Widths ({{ widths.length }})</h1>
   <ul>
-    <li ng-repeat="width in widths | orderBy:'relativeValue'">
-        <div style="width: {{ width.relativeValue }}%; outline: 1px solid pink;">
-          {{ width.property }}: {{ width.value }}
+    <li ng-repeat="width in widths | orderBy:'relativeValue'" class="mbm">
+        <span class="db sans-serif ltgry lh-2 f4">  <b class="blk">{{ width.value }}</b></span>
+        <div style="width: {{ width.relativeValue }}%; outline: 1px solid #222; height: 3rem;">
           <!-- <pre>{{ width.relativeValue }}</pre> -->
         </div>
     </li>
