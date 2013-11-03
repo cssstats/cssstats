@@ -9,6 +9,7 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
     $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
     $routeProvider.when('/margin', {templateUrl: 'partials/margin.html'});
+    $routeProvider.when('/padding', {templateUrl: 'partials/padding.html'});
 
     $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
     $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
@@ -63,13 +64,13 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative) {
         if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
         // could probably use regex to find shorthand + longhand properties
         if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
-        if(declarations[j].property == ('padding' || 'padding-top' || 'padding-right' || 'padding-bottom' || 'padding-left')) $scope.paddings.push(declarations[j]);
+        if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
       };
     };
 
-    // Iterate through margin values for making charts
+    // Iterate through margin and padding values for making charts
     anythingToRelative($scope.margins);
-
+    anythingToRelative($scope.paddings);
 
   };
 });
@@ -104,7 +105,7 @@ rprtr.factory('fontSizeToPx', function(){
 rprtr.factory('anythingToRelative', function(){
   return function(obj) {
 
-    // Need to parse through margin shorthands too
+    // Need to parse through margin and padding shorthands too
     
     // Find the highest absolute value
     var highestValue = 0;
