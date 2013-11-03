@@ -102,6 +102,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
 
     selectors($scope);
 
+    // Pretty sure this is slowing the whole thing down
     var uniqueFilter = $filter('unique');
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
@@ -163,8 +164,6 @@ rprtr.factory('anythingToRelative', function(){
 
 // Filters
 
-
-
 rprtr.filter('unique', function () {
   return function (items, filterOn) {
     if (filterOn === false) return items;
@@ -225,18 +224,6 @@ rprtr.controller('GlobalCtrl',
       $scope.getStyles($scope.styleUrl);
       $location.path('/');
     };
-
-}]);
-
-rprtr.controller('EditCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
-
-  if($scope.styleUrl == null) $scope.styleUrl = 'data/myspace.json';
-
-  $scope.updateStyles = function(){
-    console.log('update styles' + $rootScope.styleUrl);
-    $scope.getStyles($scope.styleUrl);
-    $location.path('/');
-  };
 
 }]);
 
