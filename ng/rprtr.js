@@ -41,7 +41,6 @@ rprtr.factory('specificityScore', function () {
         var childCount = selectors[i].string.split(">").length -1;
         var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount*1;
         // No childCount? WTF?
-        console.log(elementCount);
         selectors[i].specificityScore = score;
       };
   };
