@@ -2442,6 +2442,9 @@ Make an element the width of its parent.
 /* ==========================================================================
    FORMS
    ========================================================================== */
+.input {
+  border: 0px solid; }
+
 /* ==========================================================================
    HYPHENS
    ========================================================================== */
@@ -2502,9 +2505,16 @@ img {
 .link {
   text-decoration: none; }
 
+a {
+  transition: .3s color ease-in-out; }
+
+a:hover {
+  color: orangered;
+  transition: .3s color ease-in-out; }
+
 /* ==========================================================================
-   LISTS
-   ========================================================================== */
+LISTS
+========================================================================== */
 /* List Style Types */
 .disc {
   list-style-type: disc; }
@@ -2550,6 +2560,8 @@ img {
   list-style: none; }
 
 .list--h {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: inline-block; }
   .list--h li {
@@ -5182,7 +5194,7 @@ table {
   font-size: 1rem; }
 
 .f6 {
-  font-size: 1rem; }
+  font-size: .75rem; }
 
 @media screen and (min-width: 48em) and (max-width: 64em) {
   .f1-v2 {
@@ -5203,22 +5215,22 @@ table {
   .f6-v2 {
     font-size: .85rem; } }
 @media screen and (min-width: 64em) {
-  .f1 {
+  .f1-v3 {
     font-size: 3rem; }
 
-  .f2 {
+  .f2-v3 {
     font-size: 2rem; }
 
-  .f3 {
+  .f3-v3 {
     font-size: 1.5rem; }
 
-  .f4 {
+  .f4-v3 {
     font-size: 1.2rem; }
 
-  .f5 {
+  .f5-v3 {
     font-size: 1rem; }
 
-  .f6 {
+  .f6-v3 {
     font-size: 1rem; } }
 /* Text Align */
 .tl {

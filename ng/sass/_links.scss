@@ -3,3 +3,14 @@
    ========================================================================== */
 
 .link { text-decoration: none; }
+
+a {
+  transition: .3s color ease-in-out;
+}
+
+
+
+a:hover {
+  color: $orangered;
+  transition: .3s color ease-in-out;
+}

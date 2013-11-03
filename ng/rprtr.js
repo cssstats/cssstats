@@ -5,6 +5,7 @@
 var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
+
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
     $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
 
@@ -43,6 +44,8 @@ rprtr.factory('specificityScore', function () {
         // No childCount? WTF?
         selectors[i].specificityScore = score;
       };
+    console.log(new Date().getTime());
+    console.log('got specificity scores');
   };
 });
 
@@ -57,6 +60,8 @@ rprtr.factory('selectors', function(specificityScore){
         $scope.selectors.push(obj);
       };
     };
+    console.log(new Date().getTime());
+    console.log('parsed selectors');
     specificityScore($scope.selectors);
   };
 });
@@ -83,24 +88,30 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
       for(var j in declarations){
         $scope.declarations.push(declarations[j]);
 
-        if(declarations[j].property == 'font-size') {
-          // Adding absolute px values to sort by
-          declarations[j].pxValue = fontSizeToPx(declarations[j].value);
-          $scope.fontSizes.push(declarations[j]);
+        if(declarations[j].property){
+          if(declarations[j].property == 'font-size') {
+            // Adding absolute px values to sort by
+            declarations[j].pxValue = fontSizeToPx(declarations[j].value);
+            $scope.fontSizes.push(declarations[j]);
+          };
+          if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
+          if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
+          if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
+          if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
+          if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
+          if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
+          if((typeof declarations[j].property) != 'string') console.log(declarations[j].property);
+          if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
+          if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
         };
-        if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
-        if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
-        if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
-        if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
-        if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
-        if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
-        if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
-        if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
       };
     };
 
+    console.log(new Date().getTime());
+    console.log('parsed declarations');
     selectors($scope);
 
+    // Pretty sure this is slowing the whole thing down
     var uniqueFilter = $filter('unique');
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
@@ -162,8 +173,6 @@ rprtr.factory('anythingToRelative', function(){
 
 // Filters
 
-
-
 rprtr.filter('unique', function () {
   return function (items, filterOn) {
     if (filterOn === false) return items;
@@ -187,7 +196,10 @@ rprtr.filter('unique', function () {
         if (!isDuplicate) newItems.push(item);
       });
       items = newItems;
-    }
+    };
+
+    console.log(new Date().getTime());
+    console.log('parsed unique items');
     return items;
   };
 });
@@ -202,28 +214,34 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Setting as a scope variable that can be updated in the view
-    $scope.styleUrl = 'data/twitter.json';
+    if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
 
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleUrl) {
       $scope.loading = true;
       $http.get(styleUrl).success(function(res) {
         $scope.styles = res;
-
-        // Calls factory function to separate JSON into lists of declarations
-        declarations($scope);
         $scope.loading = false;
+        // Calls factory function to separate JSON into lists of declarations
+        $scope.parsing = true;
+        declarations($scope);
       });
     };
 
     // Getting initial styles data
-    // This function can later be called from the view, if needed.
     $scope.getStyles($scope.styleUrl);
+
+    $scope.updateStyles = function(url){
+      if(url) $scope.styleUrl = url;
+      $scope.getStyles($scope.styleUrl);
+      $location.path('/');
+    };
 
 }]);
 
 rprtr.controller('HomeCtrl', ['$scope', function($scope) {
   console.log('HomeCtrl');
+  console.log($scope.styleUrl);
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
