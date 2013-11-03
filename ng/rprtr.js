@@ -44,6 +44,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
+    // For creating subsets of declarations
     $scope.fontSizes = [];
     $scope.widths = [];
     $scope.heights = [];
@@ -59,7 +60,6 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
       
       // Adds all the declarations.
       for(var j in declarations){
-        //console.log(declarations[j].property + ': ' + declarations[j].value);
         $scope.declarations.push(declarations[j]);
 
         if(declarations[j].property == 'font-size') {
@@ -73,7 +73,6 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
         if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
         if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
         if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
-        // could probably use regex to find shorthand + longhand properties
         if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
         if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
       };
@@ -85,8 +84,10 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
     // Iterate through margin and padding values for making charts
-    anythingToRelative($scope.margins);
+    
     anythingToRelative($scope.paddings);
+    anythingToRelative($scope.widths);
+    anythingToRelative($scope.heights);
 
   };
 });
@@ -210,11 +211,11 @@ rprtr.controller('GlobalCtrl',
 
 }]);
 
+rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+  anythingToRelative($scope.margins);
+}]);
 
 rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
-
   var fontFilter = $filter('unique');
-
   $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
-
 }]);
