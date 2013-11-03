@@ -1,0 +1,4 @@
+<input ng-model="declarationsQuery">
+<div ng-repeat="declaration in declarations | filter:declarationsQuery">
+  <pre>{{ declaration | json }}</pre>
+</div>

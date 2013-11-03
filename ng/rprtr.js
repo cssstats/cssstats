@@ -7,6 +7,7 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
     $routeProvider.when('/selectors', {templateUrl: 'partials/selectors.html'});
+    $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
 
     $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
     $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
@@ -25,7 +26,7 @@ rprtr.value('$anchorScroll', angular.noop);
 
 // Factories
 
-rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative) {
+rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
@@ -52,7 +53,8 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative) {
       // Adds all the declarations.
       for(var j in declarations){
         //console.log(declarations[j].property + ': ' + declarations[j].value);
-        $scope.declarations.push(declarations[j].property + ': ' + declarations[j].value);
+        $scope.declarations.push(declarations[j]);
+
         if(declarations[j].property == 'font-size') {
           // Adding absolute px values to sort by
           declarations[j].pxValue = fontSizeToPx(declarations[j].value);
@@ -70,15 +72,15 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative) {
       };
     };
 
+    var uniqueFilter = $filter('unique');
+    $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
+
     // Iterate through margin and padding values for making charts
     anythingToRelative($scope.margins);
     anythingToRelative($scope.paddings);
 
   };
 });
-
-
-// Services
 
 rprtr.factory('fontSizeToPx', function(){
   return function(val){
@@ -139,6 +141,38 @@ rprtr.factory('anythingToRelative', function(){
 });
 
 
+// Filters
+
+rprtr.filter('unique', function () {
+  return function (items, filterOn) {
+    if (filterOn === false) return items;
+    if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
+      var hashCheck = {}, newItems = [];
+      var extractValueToCompare = function (item) {
+        if (angular.isObject(item) && angular.isString(filterOn)) {
+          return item[filterOn];
+        } else {
+          return item;
+        }
+      };
+      angular.forEach(items, function (item) {
+        var valueToCheck, isDuplicate = false;
+        for (var i = 0; i < newItems.length; i++) {
+          if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
+            isDuplicate = true;
+            break;
+          }
+        }
+        if (!isDuplicate) newItems.push(item);
+      });
+      items = newItems;
+    }
+    return items;
+  };
+});
+
+
+
 // Controllers
 
 rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations) {
@@ -163,5 +197,14 @@ rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 
   // Getting initial styles data
   // This function can later be called from the view, if needed.
   $scope.getStyles($scope.styleUrl);
+
+}]);
+
+
+rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
+
+  var fontFilter = $filter('unique');
+
+  $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
 
 }]);
