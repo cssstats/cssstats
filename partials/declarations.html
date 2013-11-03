@@ -1,3 +1,6 @@
-<input ng-model="declarationsQuery">
+<div ng-controller="DeclarationsCtrl">
+  <h2>Unique Declarations ({{ uniqueDeclarations.lenght }})</h2>
+  <input ng-model="declarationsQuery">
 
-<pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>
+  <pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>
+</div>

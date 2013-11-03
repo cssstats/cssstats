@@ -1,33 +1,4 @@
-// Rprtr
-
-'use strict';
-
-var rprtr = angular.module('rprtr',[])
-  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/', {templateUrl: 'partials/home.html'});
-
-    $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
-    $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
-
-    $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
-    $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
-    $routeProvider.when('/margin', {templateUrl: 'partials/margin.html'});
-    $routeProvider.when('/padding', {templateUrl: 'partials/padding.html'});
-    $routeProvider.when('/spacing', {templateUrl: 'partials/spacing.html'});
-    $routeProvider.when('/dimensions', {templateUrl: 'partials/dimensions.html'});
-
-    $routeProvider.when('/colors', {templateUrl: 'partials/colors.html'});
-    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
-    $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
-    $routeProvider.when('/selector', {templateUrl: 'partials/selector.html'});
-
-    $routeProvider.otherwise({redirectTo: '/'});
-  }]);
-
-rprtr.value('$anchorScroll', angular.noop);
-
-
-// Factories
+// Services
 
 rprtr.factory('specificityScore', function () {
   return function(selectors){
@@ -116,13 +87,15 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     console.log('parsed declarations');
     selectors($scope);
 
-    // Pretty sure this is slowing the whole thing down
+    // This slows everything down tremendously and needs to be loaded in a different way
     //var uniqueFilter = $filter('unique');
     //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
   };
 });
 
+// Converts all font sizes to pixel values for sorting
+// This adds a value to each font-size declaration object
 rprtr.factory('fontSizeToPx', function(){
   return function(val){
     var raw = parseFloat(val);
@@ -176,6 +149,26 @@ rprtr.factory('anythingToRelative', function(){
 });
 
 
+// Local Storage Factory
+rprtr.factory('storage', function(){            
+  return {
+    set: function(key, obj){
+      var string = JSON.stringify(obj)
+      localStorage.setItem(key, string);
+    },
+    get: function(key){
+      var data = localStorage.getItem(key);
+      var obj = JSON.parse(data);
+      return obj;
+    },
+    clearAll: function(){
+      localStorage.clear();
+    }
+  }     
+});
+
+
+
 // Filters
 
 rprtr.filter('unique', function () {
@@ -208,68 +201,3 @@ rprtr.filter('unique', function () {
     return items;
   };
 });
-
-
-// Controllers
-
-rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$location', '$routeParams', 'declarations',
-  function($scope, $http, $location, $routeParams, declarations) {
-
-    console.log('GlobalCtrl');
-    $scope.parsing;
-
-    // Setting as a scope variable that can be updated in the view
-    if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
-
-    // Function to get the styles data - This should really go in a factory
-    $scope.getStyles = function(styleUrl) {
-      $scope.loading = true;
-      $http.get(styleUrl).success(function(res) {
-        $scope.styles = res;
-        $scope.loading = false;
-        // Calls factory function to separate JSON into lists of declarations
-        $scope.parsing = true;
-        declarations($scope);
-      });
-    };
-
-    // Getting initial styles data
-    $scope.getStyles($scope.styleUrl);
-
-    $scope.updateStyles = function(url){
-      if(url) $scope.styleUrl = url;
-      $scope.getStyles($scope.styleUrl);
-      $location.path('/');
-    };
-
-}]);
-
-rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
-  console.log('HomeCtrl');
-  console.log($scope.styleUrl);
-
-  //var uniqueFilter = $filter('unique');
-  //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
-}]);
-
-rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.margins);
-}]);
-
-rprtr.controller('PaddingCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.paddings);
-}]);
-
-rprtr.controller('WidthCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.widths);
-}]);
-
-rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.heights);
-}]);
-
-rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
-  var fontFilter = $filter('unique');
-  $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
-}]);

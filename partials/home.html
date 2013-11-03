@@ -21,6 +21,7 @@
       <li>{{ backgroundImages.length }} background-image declarations</li>
       <li>{{ transitions.length }} transition declarations</li>
     </ul>
+    <!-- Broke this by removing the unique filter from the parser - will fix -->
     <p>Refactoring could potentially reduce your css by {{ (1 - (uniqueDeclarations.length / declarations.length)) * 100 }} % </p>
   </section>
 
