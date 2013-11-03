@@ -8,6 +8,13 @@
 .wi-75  { width: 75%; }
 .wi-full { width: 100%; }
 
+@include break(not-small) {
+  .wi-25-ns  { width: 25%; }
+  .wi-50-ns  { width: 50%; }
+  .wi-75-ns  { width: 75%; }
+  .wi-full-ns { width: 100%; }
+}
+
 /* ==========================================================================
    GEOMETRY
    ========================================================================== */
@@ -87,6 +94,12 @@ Make an element the width of its parent.
 .max-hi-min {  max-height: min-content; }
 .max-hi-fit {  max-height: fit-content; }
 .max-hi-fill { max-height: fill-available; }
+
+.mw-16 { max-width: 16rem; }
+.mw-32 { max-width: 32rem; }
+.mw-48 { max-width: 48rem; }
+.mw-64 { max-width: 64rem; }
+
 
 .max-wi { max-width: 100%; }
 .max-wi { max-width: none; }

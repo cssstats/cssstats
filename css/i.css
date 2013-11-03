@@ -1500,6 +1500,32 @@
 .cb {
   clear: both; }
 
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
 /* ==========================================================================
    CLIP
    ========================================================================== */
@@ -1811,6 +1837,18 @@
 .wi-full {
   width: 100%; }
 
+@media screen and (min-width: 48em) {
+  .wi-25-ns {
+    width: 25%; }
+
+  .wi-50-ns {
+    width: 50%; }
+
+  .wi-75-ns {
+    width: 75%; }
+
+  .wi-full-ns {
+    width: 100%; } }
 /* ==========================================================================
    GEOMETRY
    ========================================================================== */
@@ -1932,6 +1970,18 @@ Make an element the width of its parent.
 .max-hi-fill {
   max-height: fill-available; }
 
+.mw-16 {
+  max-width: 16rem; }
+
+.mw-32 {
+  max-width: 32rem; }
+
+.mw-48 {
+  max-width: 48rem; }
+
+.mw-64 {
+  max-width: 64rem; }
+
 .max-wi {
   max-width: 100%; }
 
@@ -1967,6 +2017,9 @@ Make an element the width of its parent.
 
 .min-wi {
   min-width: 50%; }
+
+.min-wi-100 {
+  min-width: 100px; }
 
 .min-wi {
   min-width: max-content; }
@@ -5893,6 +5946,11 @@ More info: https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
   .wm-rl-bt-l {
     writing-mode: rl-bt; } }
 /* SITE STYLES */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 h1, h2, h3, h4, h5, h6, .sans-serif {
   font-family: "helvetica neue", helvetica, arial, sans-serif; }
 
@@ -5906,3 +5964,23 @@ ul {
 
 a {
   text-decoration: none; }
+
+/* ====== media ====== */
+.media {
+  margin: 10px; }
+
+.media, .bd {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1; }
+
+.media .img {
+  float: left;
+  margin-right: 10px; }
+
+.media .img img {
+  display: block; }
+
+.media .imgExt {
+  float: right;
+  margin-left: 10px; }
