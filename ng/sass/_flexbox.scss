@@ -1,0 +1,75 @@
+/* ==========================================================================
+   FLEXBOX
+   - Align Content
+   ========================================================================== */
+
+/* Align Content */
+
+.ac-fs { align-content: flex-start; }
+.ac-fe { align-content: flex-end; }
+.ac-c {  align-content: center; }
+.ac-sb { align-content: space-between; }
+.ac-sa { align-content: space-around; }
+.ac-s {  align-content: stretch; }
+.ac-i {  align-content: inherit; }
+
+/* Align Items */
+
+.ai-fs { align-items: flex-start; }
+.ai-fe { align-items: flex-end; }
+.ai-c {  align-items: center; }
+.ai-b {  align-items: baseline; }
+.ai-s {  align-items: stretch; }
+.ai-i {  align-items: inherit; }
+
+.as-a { align-self: auto; }
+.as-fs { align-self: flex-start; }
+.as-fe { align-self: flex-end; }
+.as-c { align-self: center; }
+.as-b { align-self: baseline; }
+.as-s { align-self: stretch; }
+.as-i { align-self: inherit; }
+
+
+// TODO add value scale for flex-basis
+
+/* Flex Basis */
+
+.fb-i { flex-basis: inherit; }
+
+
+/* Flex Direction */
+
+.fd-row {     flex-direction: row; }
+.fd-rev {     flex-direction: row-reverse; }
+.fd-col {     flex-direction: column; }
+.fd-colrev {  flex-direction: column-reverse; }
+.fd-i {       flex-direction: inherit; }
+
+
+/* Flex Wrap */
+
+.fw-no {      flex-wrap: nowrap; }
+.fw-wrap {    flex-wrap: wrap; }
+.fw-wraprev { flex-wrap: wrap-reverse; }
+.fw-i {       flex-wrap: inherit; }
+
+.fls-1 { flex-shrink: 1; }
+.fls-2 { flex-shrink: 2; }
+.fls-3 { flex-shrink: 3; }
+.fls-4 { flex-shrink: 4; }
+.fls-i { flex-shrink: inherit; }
+
+.fg-1 { flex-grow: 1; }
+.fg-2 { flex-grow: 2; }
+.fg-3 { flex-grow: 3; }
+.fg-4 { flex-grow: 4; }
+.fg-i { flex-grow: inherit; }
+
+.jc-fs {  justify-content: flex-start; }
+.jc-f3 {  justify-content: flex-end; }
+.jc-c {   justify-content: center; }
+.jc-sb {  justify-content: space-between; }
+.jc-sa {  justify-content: space-around; }
+.jc-i {   justify-content: inherit; }
+

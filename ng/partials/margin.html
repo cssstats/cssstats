@@ -1,0 +1,49 @@
+<div ng-controller="MarginCtrl">
+  <h2>Margins ({{ margins.length }})</h2>
+
+  <h3>Margin-top</h3>
+  <div>
+    <div
+      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-top'"
+      style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
+      class="sans-serif">
+        {{ margin.property }}: {{ margin.value }}
+    </div>
+  </div>
+
+  <h3>Margin-right</h3>
+  <div>
+    <div
+      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-right'"
+      style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
+      class="sans-serif">
+        {{ margin.property }}: {{ margin.value }}
+    </div>
+  </div>
+
+  <h3>Margin-bottom</h3>
+  <div>
+    <div
+      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-bottom'"
+      style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
+      class="sans-serif">
+        {{ margin.property }}: {{ margin.value }}
+    </div>
+  </div>
+
+  <h3>Margin-left</h3>
+  <div>
+    <div
+      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-left'"
+      style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
+      class="sans-serif">
+        {{ margin.property }}: {{ margin.value }}
+    </div>
+  </div>
+
+  <!-- <div ng-repeat="margin in margins | filter: 'margin-top'"
+    class="sans-serif"
+    style="">
+      {{margin.property}}: {{ margin.value }} [{{ margin.relativeValue }}%]
+  </div> -->
+</div>

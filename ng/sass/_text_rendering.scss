@@ -1,0 +1,10 @@
+/* ==========================================================================
+   TEXT RENDERING
+   ========================================================================== */
+
+.txtr-auto      { text-rendering: auto; }
+.txtr-speed     { text-rendering: optimizeSpeed; }
+.txtr-legibile  { text-rendering: optimizeLegibility; }
+.txtr-precise   { text-rendering: geometricPrecision; }
+.txtr-i         { text-rendering: inherit; }
+

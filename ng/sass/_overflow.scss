@@ -1,0 +1,17 @@
+ /* ==========================================================================
+    OVERFLOWS
+    ========================================================================== */
+
+.of-vis { overflow: visible; }
+.of-hid { overflow: hidden; }
+.of-scr { overflow: scroll; }
+.of-aut { overflow: auto; }
+
+
+/* Resize: Use on any element with overflow set to something other than visible */
+
+.resize-none { resize: none; }
+.resize-both { resize: both; }
+.resize-hor  { resize: horizontal; }
+.resize-ver  { resize: vertical; }
+

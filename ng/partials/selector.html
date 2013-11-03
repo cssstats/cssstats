@@ -1,0 +1,9 @@
+<h1>Selectors</h1>
+<ul>
+  <li ng-repeat="selector in selectors | filter:query | orderBy:'-specificityScore'">
+    {{ selector.specificityScore }} - {{ selector.string }}
+  </li>
+</ul>
+  
+
+

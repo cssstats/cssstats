@@ -1,0 +1,98 @@
+/* ==========================================================================
+   FILTERS
+   ========================================================================== */
+
+/* Blurs */
+
+.blur-1 { filter: blur(1px); }
+.blur-2 { filter: blur(2px); }
+.blur-3 { filter: blur(4px); }
+.blur-4 { filter: blur(8px); }
+.blur-5 { filter: blur(16px); }
+
+
+/* Bright */
+
+.bright-1 { filter: brightness(0.25); }
+.bright-2 { filter: brightness(0.5); }
+.bright-3 { filter: brightness(.75); }
+.bright-4 { filter: brightness(1); }
+.bright-5 { filter: brightness(2); }
+
+
+/* Bright */
+
+.contrast-1 { filter: contrast(50%); }
+.contrast-2 { filter: contrast(75%); }
+.contrast-3 { filter: contrast(100%); }
+.contrast-4 { filter: contrast(150%); }
+.contrast-5 { filter: contrast(200%); }
+
+
+/* Drop Shadow */
+
+.drop-shadow { filter: drop-shadow(16px 16px 10px black); }
+.drop-shadow { filter: drop-shadow(16px 16px 10px black); }
+.drop-shadow { filter: drop-shadow(16px 16px 10px black); }
+.drop-shadow { filter: drop-shadow(16px 16px 10px black); }
+.drop-shadow { filter: drop-shadow(16px 16px 10px black); }
+
+
+/* Hue Rotate */
+
+.hue-rotate-1 { filter: hue-rotate(45deg); }
+.hue-rotate-2 { filter: hue-rotate(90deg); }
+.hue-rotate-3 { filter: hue-rotate(135deg); }
+.hue-rotate-4 { filter: hue-rotate(180deg); }
+.hue-rotate-5 { filter: hue-rotate(225deg); }
+.hue-rotate-6 { filter: hue-rotate(270deg); }
+.hue-rotate-7 { filter: hue-rotate(315deg); }
+.hue-rotate-8 { filter: hue-rotate(360deg); }
+
+
+/* Gray Filter */
+
+.gray-1  { filter: grayscale(10%); }
+.gray-2  { filter: grayscale(20%); }
+.gray-3  { filter: grayscale(30%); }
+.gray-4  { filter: grayscale(40%); }
+.gray-5  { filter: grayscale(50%); }
+.gray-6  { filter: grayscale(60%); }
+.gray-7  { filter: grayscale(70%); }
+.gray-8  { filter: grayscale(80%); }
+.gray-9  { filter: grayscale(90%); }
+.gray-10 { filter: grayscale(100%); }
+
+
+/* Inverts */
+
+.invert-1 { filter: invert(20%); }
+.invert-2 { filter: invert(40%); }
+.invert-3 { filter: invert(60%); }
+.invert-4 { filter: invert(80%); }
+.invert-5 { filter: invert(100%); }
+
+
+/* Saturation */
+
+.saturate-1 { filter: saturate(10%); }
+.saturate-2 { filter: saturate(20%); }
+.saturate-3 { filter: saturate(30%); }
+.saturate-4 { filter: saturate(40%); }
+.saturate-5 { filter: saturate(50%); }
+.saturate-6 { filter: saturate(60%); }
+.saturate-7 { filter: saturate(70%); }
+.saturate-8 { filter: saturate(80%); }
+.saturate-9 { filter: saturate(90%); }
+.saturate-10 { filter: saturate(100%); }
+.saturate-11 { filter: saturate(125%); }
+.saturate-12 { filter: saturate(150%); }
+
+
+/* Sepia */
+
+.sepia-1 { filter: sepia(25%); }
+.sepia-2 { filter: sepia(50%); }
+.sepia-3 { filter: sepia(75%); }
+.sepia-4 { filter: sepia(100%); }
+.sepia-5 { filter: sepia(125%); }
