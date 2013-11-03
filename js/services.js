@@ -7,7 +7,6 @@ rprtr.factory('specificityScore', function () {
         // Regex for finding styled elements. Searches for word characters at beginning of line and after spaces.
         var rePattern = /^[a-zA-Z]|\s(?=[a-zA-Z])/;
 
-
         var idCount = selectors[i].string.split("#").length - 1;
         var classCount = selectors[i].string.split(".").length - 1;
         var attributeCount = selectors[i].string.split("[").length - 1;
@@ -40,10 +39,27 @@ rprtr.factory('selectors', function(specificityScore){
   };
 });
 
-rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter, selectors) {
+// Gets all the declarations from each rule
+rprtr.factory('declarations', function(fontSizeToPx, $filter) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
+
+    for(var i = 0; i < rules.length; i++){
+      var declarations = rules[i].declarations;
+      // Adds all the declarations within a rule
+      for(var j in declarations){
+        $scope.declarations.push(declarations[j]);
+      };
+    };
+    console.log('parsed declarations');
+  };
+});
+
+// Factory to parse through declarations and create arrays by type
+rprtr.factory('declarationsByType', function(fontSizeToPx, $filter){
+  return function($scope){
+    var declarations = $scope.declarations;
     // For creating subsets of declarations
     $scope.fontSizes = [];
     $scope.widths = [];
@@ -56,41 +72,24 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     $scope.paddings = [];
     $scope.transitions = [];
 
-    for(var i = 0; i < rules.length; i++){
-      var declarations = rules[i].declarations;
-
-      // Adds all the declarations.
-      for(var j in declarations){
-        $scope.declarations.push(declarations[j]);
-
-        if(declarations[j].property){
-          if(declarations[j].property == 'font-size') {
-            // Adding absolute px values to sort by
-            declarations[j].pxValue = fontSizeToPx(declarations[j].value);
-            $scope.fontSizes.push(declarations[j]);
-          };
-          if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
-          if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
-          if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
-          if(declarations[j].property == 'float') $scope.floats.push(declarations[j]);
-          if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
-          if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
-          if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
-          if((typeof declarations[j].property) != 'string') console.log(declarations[j].property);
-          if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
-          if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
+    for(var i in declarations){
+      if(declarations[i].property){
+        if(declarations[i].property == 'font-size') {
+          // Adding absolute px values to sort by
+          declarations[i].pxValue = fontSizeToPx(declarations[i].value);
+          $scope.fontSizes.push(declarations[i]);
         };
+        if(declarations[i].property == 'width') $scope.widths.push(declarations[i]);
+        if(declarations[i].property == 'height') $scope.heights.push(declarations[i]);
+        if(declarations[i].property == 'color') $scope.colors.push(declarations[i]);
+        if(declarations[i].property == 'float') $scope.floats.push(declarations[i]);
+        if(declarations[i].property == 'background-color') $scope.backgroundColors.push(declarations[i]);
+        if(declarations[i].property == 'background-image') $scope.backgroundImages.push(declarations[i]);
+        if(declarations[i].property == 'transition') $scope.transitions.push(declarations[i]);
+        if(declarations[i].property.match(/^margin/)) $scope.margins.push(declarations[i]);
+        if(declarations[i].property.match(/^padding/)) $scope.paddings.push(declarations[i]);
       };
     };
-
-    console.log(new Date().getTime());
-    console.log('parsed declarations');
-    selectors($scope);
-
-    // This slows everything down tremendously and needs to be loaded in a different way
-    //var uniqueFilter = $filter('unique');
-    //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
-
   };
 });
 
@@ -207,14 +206,3 @@ rprtr.filter('unique', ['$parse', function ($parse) {
     return items;
   };
 }]);
-
-
-rprtr.factory('parseUniques', function($filter){
-  return function($scope){
-    var uniqueFilter = $filter('unique');
-    console.log('getting uniques through service');
-    
-    $scope.uniqueDeclarations = uniqueFilter($scope.declarations); 
-    
-  };
-});

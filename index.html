@@ -16,7 +16,7 @@
         <li class="prm"><a class="blk" href="#" ng-click="updateStyles('data/kickstarter.json')">Kickstarter</a></li>
         <li class="prm"><a class="blk" href="#" ng-click="updateStyles('data/medium.json')">Medium</a></li>
         <li class="prm"><a class="blk" href="#" ng-click="updateStyles('data/myspace.json')">Myspace</a></li>
-        <li class="prm"><a class="blk" href="#" ng-click="updateStyles('data/twitter.json')">Twitter</a></li>
+        <li class="prm"><a class="blk" href="#" ng-click="updateStyles('twitter')">Twitter</a></li>
     </ul>
     </header>
 
@@ -24,7 +24,7 @@
       <div class="bg-blk pvm">
         <form ng-submit="updateStyles()" class="f5 pll">
           <label class="b sans-serif ltgry mrs">Currently Viewing</label>
-          <input ng-model="styleUrl" class="bg-blk input sans-serif ltgry">
+          <input ng-model="styleData" class="bg-blk input sans-serif ltgry">
         </form>
       </div>
       <div class="pll bg-drkgry wht">

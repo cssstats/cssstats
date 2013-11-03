@@ -21,6 +21,8 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
     $routeProvider.when('/selector', {templateUrl: 'partials/selector.html'});
 
+    $routeProvider.when('/parser', {templateUrl: 'partials/parser/parser.html', controller: 'ParserCtrl'});
+
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
 

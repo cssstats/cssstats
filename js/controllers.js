@@ -2,50 +2,47 @@
 
 
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$location', '$routeParams', 'declarations',
-  function($scope, $http, $location, $routeParams, declarations) {
+  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors',
+  function($scope, $http, $location, declarations, declarationsByType, selectors) {
 
     console.log('GlobalCtrl');
-    $scope.parsing = false;
 
     // Setting as a scope variable that can be updated in the view
-    if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
+    if($scope.styleData == null) $scope.styleData = 'twitter';
 
     // Function to get the styles data - This should really go in a factory
-    $scope.getStyles = function(styleUrl) {
+    $scope.getStyles = function(styleData) {
       $scope.loading = true;
-      $http.get(styleUrl).success(function(res) {
+      $http.get('/data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
+        selectors($scope);
         $scope.loading = false;
-        // Calls factory function to separate JSON into lists of declarations
-        $scope.parsing = true;
-        declarations($scope);
+      });
+      // This might break the parser
+      $http.get('/data/' + styleData + '/declarations.json').success(function(res){
+        $scope.declarations = res;
+        // Create arrays for each declaration type in the factory
+        declarationsByType($scope);
+      });
+      $http.get('/data/' + styleData + '/unique_declarations.json').success(function(res){
+        $scope.uniqueDeclarations = res;
       });
     };
 
     // Getting initial styles data
-    $scope.getStyles($scope.styleUrl);
+    $scope.getStyles($scope.styleData);
 
     $scope.updateStyles = function(url){
-      if(url) $scope.styleUrl = url;
-      $scope.getStyles($scope.styleUrl);
+      if(url) $scope.styleData = url;
+      $scope.getStyles($scope.styleData);
       $location.path('/');
     };
 
 }]);
 
 
-rprtr.controller('HomeCtrl', ['$scope', 'parseUniques', function($scope, parseUniques) {
+rprtr.controller('HomeCtrl', ['$scope', function($scope) {
   console.log('HomeCtrl');
-  //console.log($scope.styleUrl);
-
-  $scope.$watch('$scope.declarations', function(){
-    
-    console.log('change to scope.declarations');
-    // No bones about it, this just sucks
-    // going to create a view for parsing the JSON, then copying and pasting to save the file
-    //parseUniques($scope);
-  });
     
 }]);
 
@@ -70,7 +67,15 @@ rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter)
   $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
 }]);
 
-rprtr.controller('DeclarationsCtrl', ['$scope', '$filter', function($scope, $filter){
+rprtr.controller('DeclarationsCtrl', ['$scope', function($scope){
+}]);
+
+
+rprtr.controller('ParserCtrl', ['$scope', '$filter', 'declarations', function($scope, $filter, declarations){
+  // Controller for parsing the base JSON data and spitting out 
+  // declarations and unique_declarations
+  declarations($scope);
   var uniqueFilter = $filter('unique');
   $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
+
 }]);
