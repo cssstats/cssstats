@@ -2508,12 +2508,6 @@ img {
 a {
   transition: .3s color ease-in-out; }
 
-a:visited {
-  color: #111111; }
-
-a:link {
-  color: #111111; }
-
 a:hover {
   color: orangered;
   transition: .3s color ease-in-out; }
