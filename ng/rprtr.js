@@ -141,6 +141,33 @@ rprtr.factory('anythingToRelative', function(){
 
 // Filters
 
+//function calculateSpecificity(id, class, attr, element, child) {
+//    var idScore = idCount * 100;
+//    var classScore = classCount * 10;
+//    var attributeScore = attributeCount * 10;
+//    var elementScore = elementCount * 1;
+//
+//    var specificityScore = idScore+classScore+attributeScore+elementScore;
+//    return specificityScore;
+//
+//}
+//
+//rprtr.filter('specificityScore', function () {
+//
+//  for(var i in selectors) {
+//    var idCount = selector[i].split("#").length - 1;
+//    var classCount = selector[i].split(".").length - 1;
+//    var attributeCount = selector[i].split("[").length - 1;
+//    var elementCount = selector[i].split("\s[a-zA-Z]").length -1;
+//    var childCount = selector[i].split(">").length -1;
+//
+//    calculateSpecificity(idCount, classCount, attributeCount, elementCount, childCount);
+//
+//  }
+//
+//
+//});
+
 rprtr.filter('unique', function () {
   return function (items, filterOn) {
     if (filterOn === false) return items;
