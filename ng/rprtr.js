@@ -29,17 +29,19 @@ rprtr.value('$anchorScroll', angular.noop);
 
 rprtr.factory('specificityScore', function () {
   return function(selectors){
-      console.log('specificityScore');
 
       for(var i = 0; i < selectors.length; i++) {
+        // Regex for finding styled elements. Searches for word characters at beginning of line and after spaces.
+        var rePattern = /^[a-zA-Z]|\s(?=[a-zA-Z])/;
+
+
         var idCount = selectors[i].string.split("#").length - 1;
         var classCount = selectors[i].string.split(".").length - 1;
         var attributeCount = selectors[i].string.split("[").length - 1;
-        var elementCount = selectors[i].string.split("\s[a-zA-Z]").length -1;
+        var elementCount = selectors[i].string.split(rePattern).length -1;
         var childCount = selectors[i].string.split(">").length -1;
-        var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount;
+        var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount*1;
         // No childCount? WTF?
-        // console.log(score);
         selectors[i].specificityScore = score;
       };
   };
@@ -77,7 +79,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
-      
+
       // Adds all the declarations.
       for(var j in declarations){
         $scope.declarations.push(declarations[j]);
@@ -201,7 +203,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Setting as a scope variable that can be updated in the view
-    if($scope.styleUrl == null) $scope.styleUrl = 'data/myspace.json';
+    if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
 
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleUrl) {
