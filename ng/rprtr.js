@@ -83,12 +83,6 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     var uniqueFilter = $filter('unique');
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
-    // Iterate through margin and padding values for making charts
-    
-    anythingToRelative($scope.paddings);
-    anythingToRelative($scope.widths);
-    anythingToRelative($scope.heights);
-
   };
 });
 
@@ -126,9 +120,7 @@ rprtr.factory('anythingToRelative', function(){
     for(var i = 0; i < obj.length; i++){
       var thisValue = obj[i].value, raw = parseFloat(thisValue);
       // Ignore auto and percentage based values
-      if(thisValue == 'auto' || thisValue.match(/%$/)) {
-        //console.log('ignoring auto or percentage');
-      } else {
+      if(thisValue != 'auto' && !thisValue.match(/%$/)) {
         if(thisValue.match(/em$/)) raw = raw * 16;
         if(raw > highestValue) highestValue = raw;
       };
@@ -137,15 +129,11 @@ rprtr.factory('anythingToRelative', function(){
     // Add relative values to all objects
     for(var i = 0; i < obj.length; i++) {
       var thisValue = obj[i].value, raw = parseFloat(thisValue);
-      //console.log(raw + ' : ' + highestValue);
       if(thisValue == 0) obj[i].relativeValue = raw;
       if(thisValue == 'auto') obj[i].relativeValue = 100;
       if(thisValue.match(/%$/)) obj[i].relativeValue = raw;
       if(thisValue.match(/em$/)) obj[i].relativeValue = ((raw * 16) / highestValue * 100);
       if(thisValue.match(/px$/)) obj[i].relativeValue = (raw / highestValue * 100);
-      //console.log('value vs rel: ' + obj[i].value + obj[i].relativeValue);
-      // else console.log('wtf is this ' + thisValue);
-
     };
   };
 });
@@ -211,8 +199,24 @@ rprtr.controller('GlobalCtrl',
 
 }]);
 
+rprtr.controller('HomeCtrl', ['$scope', function($scope) {
+  console.log('HomeCtrl');
+}]);
+
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
   anythingToRelative($scope.margins);
+}]);
+
+rprtr.controller('PaddingCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+  anythingToRelative($scope.paddings);
+}]);
+
+rprtr.controller('WidthCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+  anythingToRelative($scope.widths);
+}]);
+
+rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+  anythingToRelative($scope.heights);
 }]);
 
 rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){

@@ -1,6 +1,8 @@
-<h2>Widths ({{ widths.length }})</h2>
-<ul>
-  <li ng-repeat="width in widths | orderBy:'value'">
-      <div style="width: {{ width.relativeValue }}%; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
-  </li>
-</ul>
+<div ng-controller="WidthCtrl">
+  <h2>Widths ({{ widths.length }})</h2>
+  <ul>
+    <li ng-repeat="width in widths | orderBy:'relativeValue'">
+        <div style="width: {{ width.relativeValue }}%; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
+    </li>
+  </ul>
+</div>
