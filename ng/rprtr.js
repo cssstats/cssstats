@@ -28,17 +28,20 @@ rprtr.value('$anchorScroll', angular.noop);
 
 rprtr.factory('specificityScore', function () {
   return function(selectors){
-      console.log('specificityScore');
 
       for(var i = 0; i < selectors.length; i++) {
+        // Regex for finding styled elements. Searches for word characters at beginning of line and after spaces.
+        var rePattern = /^[a-zA-Z]|\s(?=[a-zA-Z])/;
+
+
         var idCount = selectors[i].string.split("#").length - 1;
         var classCount = selectors[i].string.split(".").length - 1;
         var attributeCount = selectors[i].string.split("[").length - 1;
-        var elementCount = selectors[i].string.split("\s[a-zA-Z]").length -1;
+        var elementCount = selectors[i].string.split(rePattern).length -1;
         var childCount = selectors[i].string.split(">").length -1;
-        var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount;
+        var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount*1;
         // No childCount? WTF?
-        // console.log(score);
+        console.log(elementCount);
         selectors[i].specificityScore = score;
       };
   };
