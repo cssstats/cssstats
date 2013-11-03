@@ -2,15 +2,16 @@
 
 <div ng-hide="loading" ng-controller="HomeCtrl">
 
-  <h2>Overview</h2>
+  <h1>Style Guide</h1>
 
   <section id="overview" class="py2">
-    <h2>Declaration Stats</h2>
+    <h1 class="f2">The Numbers</h1>
     <ul class="mb2">
       <li>{{ selectors.length }} selectors</li>
-      <li>{{ declarations.length }} declarations</li>
+      <li>{{ declarations.length }} total declarations</li>
       <li>{{ uniqueDeclarations.length }} unique declarations</li>
       <li>{{ fontSizes.length }} font-size declarations</li>
+      <li>{{ floats.length }} floats</li>
       <li>{{ widths.length }} width declarations</li>
       <li>{{ heights.length }} height declarations</li>
       <li>{{ colors.length }} color declarations</li>
@@ -18,6 +19,7 @@
       <li>{{ backgroundImages.length }} background-image declarations</li>
       <li>{{ transitions.length }} transition declarations</li>
     </ul>
+    <p>Refactoring could potentially reduce your css by {{ (1 - (uniqueDeclarations.length / declarations.length)) * 100 }} % </p>
   </section>
 
 </div>
