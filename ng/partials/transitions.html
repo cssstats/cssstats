@@ -1,0 +1,12 @@
+<h2>Transitions ({{ transitions.length }})</h2>
+<ul>
+  <li ng-repeat="transition in transitions"
+    class="sans-serif pvm">
+  <var class="fsn b lh-2">{{ transition.property }} : {{ transition.value }}</var>
+    <div
+      style="transition-delay: 4s; -webkit-transition: {{ transition.value }};">
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+     <div class="mts sq-5 bg-blue lh-2 tc"> Content</div>
+    </div>
+  </li>
+</ul>

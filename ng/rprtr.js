@@ -73,6 +73,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     // For creating subsets of declarations
     $scope.fontSizes = [];
     $scope.widths = [];
+    $scope.floats = [];
     $scope.heights = [];
     $scope.colors = [];
     $scope.backgroundColors = [];
@@ -97,6 +98,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
           if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
           if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
           if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
+          if(declarations[j].property == 'float') $scope.floats.push(declarations[j]);
           if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
           if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
           if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
