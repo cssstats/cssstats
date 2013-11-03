@@ -76,7 +76,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
-      
+
       // Adds all the declarations.
       for(var j in declarations){
         $scope.declarations.push(declarations[j]);
@@ -200,7 +200,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Setting as a scope variable that can be updated in the view
-    $scope.styleUrl = 'data/myspace.json';
+    $scope.styleUrl = 'data/twitter.json';
 
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleUrl) {

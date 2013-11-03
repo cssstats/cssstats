@@ -10,31 +10,24 @@
   <body ng-controller="GlobalCtrl">
 
     <header class="tc ptl pbx bg-blue wht">
-      <h1 class="ttu mega-tracked mtn mbs">Rprtr</h1>
+      <h1 class="ttu mega-tracked mtn mbs"><a href="#/">Rprtr</a></h1>
       <h2 class="thin mega-tracked ttu man f4 pan">A different way to look at css</h2>
     </header>
 
     <nav>
-      <ul class="list--h mtl">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/font-size">Font-size</a></li>
-        <li><a href="#/width">Width</a></li>
-        <li><a href="#/margin">Margin</a></li>
-        <li><a href="#/padding">Padding</a></li>
-
-        <li><a href="#/color">Color</a></li>
-        <li><a href="#/background-color">Background Color</a></li>
-        <li><a href="#/background-image">Background Image</a></li>
-        <li><a href="#/all-rules">All Rules</a></li>
-        <li><a href="#/selector">Selectors</a></li>
-
-        <li><a href="#/declarations">Declarations</a></li>
+      <ul class="list--h mtl sans-serif tc">
+        <li class="pas"><a class="dib" href="#/font-size">Font-size</a></li>
+        <li class="pas"><a class="dib" href="#/width">Width</a></li>
+        <li class="pas"><a class="dib" href="#/margin">Margin</a></li>
+        <li class="pas"><a class="dib" href="#/padding">Padding</a></li>
+        <li class="pas"><a class="dib" href="#/color">Color</a></li>
+        <li class="pas"><a class="dib" href="#/background-color">Background Color</a></li>
+        <li class="pas"><a class="dib" href="#/background-image">Background Image</a></li>
+        <li class="pas"><a class="dib" href="#/all-rules">All Rules</a></li>
+        <li class="pas"><a class="dib" href="#/selector">Selectors</a></li>
+        <li class="pas"><a class="dib" href="#/declarations">Declarations</a></li>
       </ul>
 
-      <div>
-        <label class="b sans-serif f5">Style data URL:</label>
-        <input ng-model="styleUrl">
-      </div>
     </nav>
 
     <main ng-view class="pam"></main>
