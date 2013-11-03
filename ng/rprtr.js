@@ -5,7 +5,6 @@
 var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
-    $routeProvider.when('/edit', {templateUrl: 'partials/edit.html'});
 
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
     $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
@@ -202,10 +201,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Setting as a scope variable that can be updated in the view
-    if($scope.styleUrl == null) {
-      console.log('styleUrl is null');
-      // $scope.styleUrl = 'data/myspace.json';
-    };
+    if($scope.styleUrl == null) $scope.styleUrl = 'data/myspace.json';
 
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleUrl) {
@@ -220,17 +216,25 @@ rprtr.controller('GlobalCtrl',
     };
 
     // Getting initial styles data
-    // This function can later be called from the view, if needed.
     $scope.getStyles($scope.styleUrl);
+
+    $scope.updateStyles = function(){
+      $scope.getStyles($scope.styleUrl);
+      $location.path('/');
+    };
 
 }]);
 
 rprtr.controller('EditCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
+
+  if($scope.styleUrl == null) $scope.styleUrl = 'data/myspace.json';
+
   $scope.updateStyles = function(){
     console.log('update styles' + $rootScope.styleUrl);
     $scope.getStyles($scope.styleUrl);
     $location.path('/');
   };
+
 }]);
 
 rprtr.controller('HomeCtrl', ['$scope', function($scope) {

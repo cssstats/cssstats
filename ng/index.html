@@ -32,8 +32,9 @@
       </ul>
 
       <div>
-        <label class="b sans-serif f5">Style data URL:</label>
-        <input ng-model="styleUrl"> <a href="#/edit">(Edit)</a>
+        <form ng-submit="updateStyles()">
+          <input ng-model="styleUrl">
+        </form>
       </div>
     </nav>
 
