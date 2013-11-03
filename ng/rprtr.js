@@ -220,7 +220,8 @@ rprtr.controller('GlobalCtrl',
     // Getting initial styles data
     $scope.getStyles($scope.styleUrl);
 
-    $scope.updateStyles = function(){
+    $scope.updateStyles = function(url){
+      if(url) $scope.styleUrl = url;
       $scope.getStyles($scope.styleUrl);
       $location.path('/');
     };
