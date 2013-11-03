@@ -44,6 +44,8 @@ rprtr.factory('specificityScore', function () {
         // No childCount? WTF?
         selectors[i].specificityScore = score;
       };
+    console.log(new Date().getTime());
+    console.log('got specificity scores');
   };
 });
 
@@ -58,6 +60,8 @@ rprtr.factory('selectors', function(specificityScore){
         $scope.selectors.push(obj);
       };
     };
+    console.log(new Date().getTime());
+    console.log('parsed selectors');
     specificityScore($scope.selectors);
   };
 });
@@ -103,6 +107,8 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
       };
     };
 
+    console.log(new Date().getTime());
+    console.log('parsed declarations');
     selectors($scope);
 
     // Pretty sure this is slowing the whole thing down
@@ -190,7 +196,10 @@ rprtr.filter('unique', function () {
         if (!isDuplicate) newItems.push(item);
       });
       items = newItems;
-    }
+    };
+
+    console.log(new Date().getTime());
+    console.log('parsed unique items');
     return items;
   };
 });
@@ -212,10 +221,10 @@ rprtr.controller('GlobalCtrl',
       $scope.loading = true;
       $http.get(styleUrl).success(function(res) {
         $scope.styles = res;
-
-        // Calls factory function to separate JSON into lists of declarations
-        declarations($scope);
         $scope.loading = false;
+        // Calls factory function to separate JSON into lists of declarations
+        $scope.parsing = true;
+        declarations($scope);
       });
     };
 
