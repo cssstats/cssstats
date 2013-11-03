@@ -14,6 +14,18 @@
     </header>
 
     <nav>
+      <div class="pax tc">
+        <form ng-submit="updateStyles()">
+          <label class="b sans-serif f5">Style data URL:</label>
+          <input ng-model="styleUrl">
+        </form>
+        <a href="#" ng-click="updateStyles('data/foundation.json')">Foundation</a>
+        <a href="#" ng-click="updateStyles('data/github.json')">Github</a>
+        <a href="#" ng-click="updateStyles('data/kickstarter.json')">Kickstarter</a>
+        <a href="#" ng-click="updateStyles('data/medium.json')">Medium</a>
+        <a href="#" ng-click="updateStyles('data/myspace.json')">Myspace</a>
+        <a href="#" ng-click="updateStyles('data/twitter.json')">Twitter</a>
+      </div>
       <ul class="list--h mtl sans-serif tc">
         <li class="pas"><a class="dib" href="#/font-size">Font-size</a></li>
         <li class="pas"><a class="dib" href="#/width">Width</a></li>
@@ -27,18 +39,6 @@
         <li class="pas"><a class="dib" href="#/declarations">Declarations</a></li>
       </ul>
 
-      <div class="pax tc">
-        <form ng-submit="updateStyles()">
-          <label class="b sans-serif f5">Style data URL:</label>
-          <input ng-model="styleUrl">
-        </form>
-        <a href="#" ng-click="updateStyles('data/foundation.json')">Foundation</a>
-        <a href="#" ng-click="updateStyles('data/github.json')">Github</a>
-        <a href="#" ng-click="updateStyles('data/kickstarter.json')">Kickstarter</a>
-        <a href="#" ng-click="updateStyles('data/medium.json')">Medium</a>
-        <a href="#" ng-click="updateStyles('data/myspace.json')">Myspace</a>
-        <a href="#" ng-click="updateStyles('data/twitter.json')">Twitter</a>
-      </div>
     </nav>
 
     <main ng-view class="pam"></main>
