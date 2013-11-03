@@ -27,11 +27,23 @@ rprtr.value('$anchorScroll', angular.noop);
 
 // Factories
 
-rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter) {
+rprtr.factory('selectors', function(){
+  return function($scope) {
+    var rules = $scope.styles.stylesheet.rules;
+    $scope.selectors = [];
+    for(var i = 0; i < rules.length; i++){
+      var selectors = rules[i].selectors;
+      for(var j in selectors) {
+        $scope.selectors.push(selectors[j]);
+      };
+    };
+  };
+});
+
+rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter, selectors) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
-    $scope.selectors = [];
     $scope.fontSizes = [];
     $scope.widths = [];
     $scope.heights = [];
@@ -44,14 +56,7 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
 
     for(var i = 0; i < rules.length; i++){
       var declarations = rules[i].declarations;
-      var selectors = rules[i].selectors;
-
-      // Adds list of selectors so we can parse just selectors
-      for(var k in selectors) {
-        $scope.selectors.push(selectors[k]);
-      }
-
-
+      
       // Adds all the declarations.
       for(var j in declarations){
         //console.log(declarations[j].property + ': ' + declarations[j].value);
@@ -73,6 +78,8 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
         if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
       };
     };
+
+    selectors($scope);
 
     var uniqueFilter = $filter('unique');
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
@@ -201,31 +208,32 @@ rprtr.filter('unique', function () {
 });
 
 
-
 // Controllers
 
-rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations, selectors) {
+rprtr.controller('GlobalCtrl',
+  ['$scope', '$http', '$location', '$routeParams', 'declarations',
+  function($scope, $http, $location, $routeParams, declarations) {
 
-  console.log('GlobalCtrl');
+    console.log('GlobalCtrl');
 
-  // Setting as a scope variable that can be updated in the view
-  $scope.styleUrl = 'data/myspace.json';
+    // Setting as a scope variable that can be updated in the view
+    $scope.styleUrl = 'data/myspace.json';
 
-  // Function to get the styles data - This should really go in a factory
-  $scope.getStyles = function(styleUrl) {
-    $scope.loading = true;
-    $http.get(styleUrl).success(function(res) {
-      $scope.styles = res;
+    // Function to get the styles data - This should really go in a factory
+    $scope.getStyles = function(styleUrl) {
+      $scope.loading = true;
+      $http.get(styleUrl).success(function(res) {
+        $scope.styles = res;
 
-      // Calls factory function to separate JSON into lists of declarations
-      declarations($scope);
-      $scope.loading = false;
-    });
-  };
+        // Calls factory function to separate JSON into lists of declarations
+        declarations($scope);
+        $scope.loading = false;
+      });
+    };
 
-  // Getting initial styles data
-  // This function can later be called from the view, if needed.
-  $scope.getStyles($scope.styleUrl);
+    // Getting initial styles data
+    // This function can later be called from the view, if needed.
+    $scope.getStyles($scope.styleUrl);
 
 }]);
 
