@@ -17,6 +17,7 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/color', {templateUrl: 'partials/color.html'});
     $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
+    $routeProvider.when('/selector', {templateUrl: 'partials/selector.html'});
 
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
@@ -46,9 +47,10 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
       var selectors = rules[i].selectors;
 
       // Adds list of selectors so we can parse just selectors
-      for(var j in selectors) {
-        $scope.selectors.push(selectors[j]);
+      for(var k in selectors) {
+        $scope.selectors.push(selectors[k]);
       }
+
 
       // Adds all the declarations.
       for(var j in declarations){
@@ -110,7 +112,7 @@ rprtr.factory('anythingToRelative', function(){
   return function(obj) {
 
     // Need to parse through margin and padding shorthands too
-    
+
     // Find the highest absolute value
     var highestValue = 0;
     for(var i = 0; i < obj.length; i++){
@@ -135,7 +137,7 @@ rprtr.factory('anythingToRelative', function(){
       if(thisValue.match(/px$/)) obj[i].relativeValue = (raw / highestValue * 100);
       //console.log('value vs rel: ' + obj[i].value + obj[i].relativeValue);
       // else console.log('wtf is this ' + thisValue);
-      
+
     };
   };
 });
@@ -175,7 +177,7 @@ rprtr.filter('unique', function () {
 
 // Controllers
 
-rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations) {
+rprtr.controller('GlobalCtrl', ['$scope', '$http', '$location', '$routeParams', 'declarations', function($scope, $http, $location, $routeParams, declarations, selectors) {
 
   console.log('GlobalCtrl');
 
