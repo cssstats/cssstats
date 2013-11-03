@@ -6,6 +6,8 @@ var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
+    $routeProvider.when('/selectors', {templateUrl: 'partials/selectors.html'});
+
     $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
     $routeProvider.when('/width', {templateUrl: 'partials/width.html'});
     $routeProvider.when('/margin', {templateUrl: 'partials/margin.html'});
@@ -101,7 +103,7 @@ rprtr.factory('fontSizeToPx', function(){
 });
 
 // Call this after declarations service has parsed all the margins, paddings, etc.
-// i.e. call this from the controller
+// Not sure if the name suits this. Not sure that it can handle anything
 rprtr.factory('anythingToRelative', function(){
   return function(obj) {
 
