@@ -3,4 +3,15 @@
    ========================================================================== */
 
 .link { text-decoration: none; }
+a {
+  transition: .3s color ease-in-out;
+}
+
 a:visited { color: $near-black; }
+
+a:link { color: $near-black; }
+
+a:hover {
+  color: $orangered;
+  transition: .3s color ease-in-out;
+}

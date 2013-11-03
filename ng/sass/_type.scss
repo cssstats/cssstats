@@ -19,7 +19,7 @@
 .f3    { font-size: 1.2rem; }
 .f4    { font-size: 1.2rem; }
 .f5    { font-size: 1rem; }
-.f6    { font-size: 1rem; }
+.f6    { font-size: .75rem; }
 
 @include break(medium) {
 .f1-v2 { font-size: 2rem; }
@@ -31,12 +31,12 @@
 }
 
 @include break(large) {
-.f1 { font-size: 3rem; }
-.f2 { font-size: 2rem; }
-.f3 { font-size: 1.5rem; }
-.f4 { font-size: 1.2rem; }
-.f5 { font-size: 1rem; }
-.f6 { font-size: 1rem; }
+.f1-v3 { font-size: 3rem; }
+.f2-v3 { font-size: 2rem; }
+.f3-v3 { font-size: 1.5rem; }
+.f4-v3 { font-size: 1.2rem; }
+.f5-v3 { font-size: 1rem; }
+.f6-v3 { font-size: 1rem; }
 }
 
 
