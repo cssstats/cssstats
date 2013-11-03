@@ -1,10 +1,13 @@
-<div ng-controller="FontSizeCtrl" class="mw-64 center">
-  <h2>Font Sizes</h2>
+<section ng-controller="FontSizeCtrl" class="pal">
+  <header>
+    <h1 class="dib mrs">Font Sizes</h1>
 
-  <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)">
-  <a href="" ng-click="showAll=true">All ({{ fontSizes.length }})</a>
-  |
-  <a href="" ng-click="showAll=false">Unique ({{ uniqueFontSizes.length}})</a>
+    <a href="" ng-click="showAll=true">All ({{ fontSizes.length }})</a>
+    |
+    <a href="" ng-click="showAll=false">Unique ({{ uniqueFontSizes.length}})</a>
+    <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)" class="mlx">
+  </header>
+
 
   <div ng-switch="showAll" ng-init="showAll = true">
 
@@ -32,4 +35,4 @@
     </ul>
 
   </div>
-</div>
+</section>
