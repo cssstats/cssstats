@@ -6,7 +6,7 @@ rprtr.controller('GlobalCtrl',
   function($scope, $http, $location, $routeParams, declarations) {
 
     console.log('GlobalCtrl');
-    $scope.parsing;
+    $scope.parsing = false;
 
     // Setting as a scope variable that can be updated in the view
     if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
@@ -35,12 +35,18 @@ rprtr.controller('GlobalCtrl',
 }]);
 
 
-rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
+rprtr.controller('HomeCtrl', ['$scope', 'parseUniques', function($scope, parseUniques) {
   console.log('HomeCtrl');
-  console.log($scope.styleUrl);
+  //console.log($scope.styleUrl);
 
-  //var uniqueFilter = $filter('unique');
-  //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
+  $scope.$watch('$scope.declarations', function(){
+    
+    console.log('change to scope.declarations');
+    // No bones about it, this just sucks
+    // going to create a view for parsing the JSON, then copying and pasting to save the file
+    //parseUniques($scope);
+  });
+    
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){

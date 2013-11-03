@@ -171,33 +171,50 @@ rprtr.factory('storage', function(){
 
 // Filters
 
-rprtr.filter('unique', function () {
+// Newer Angular UI Filter
+rprtr.filter('unique', ['$parse', function ($parse) {
+
   return function (items, filterOn) {
-    if (filterOn === false) return items;
+
+    if (filterOn === false) {
+      return items;
+    }
+
     if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
-      var hashCheck = {}, newItems = [];
+      var hashCheck = {}, newItems = [],
+        get = angular.isString(filterOn) ? $parse(filterOn) : function (item) { return item; };
+
       var extractValueToCompare = function (item) {
-        if (angular.isObject(item) && angular.isString(filterOn)) {
-          return item[filterOn];
-        } else {
-          return item;
-        }
+        return angular.isObject(item) ? get(item) : item;
       };
+
       angular.forEach(items, function (item) {
         var valueToCheck, isDuplicate = false;
+
         for (var i = 0; i < newItems.length; i++) {
           if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
             isDuplicate = true;
             break;
           }
         }
-        if (!isDuplicate) newItems.push(item);
+        if (!isDuplicate) {
+          newItems.push(item);
+        }
+
       });
       items = newItems;
-    };
-
-    console.log(new Date().getTime());
-    console.log('parsed unique items');
+    }
     return items;
+  };
+}]);
+
+
+rprtr.factory('parseUniques', function($filter){
+  return function($scope){
+    var uniqueFilter = $filter('unique');
+    console.log('getting uniques through service');
+    
+    $scope.uniqueDeclarations = uniqueFilter($scope.declarations); 
+    
   };
 });
