@@ -12,7 +12,6 @@
     <header class="pll pts pbs bb-solid bw-1 bor--near-wht">
       <h1 class="f3 ttu mega-tracked mtn mbn dib mrx pvs"><a href="#/">WTFCSS</a></h1>
     <ul class="list list--h f6 sans-serif ttu mega-tracked wi100 pvs lh-2">
-        <li class="prm"><a href="#" ng-click="updateStyles('data/foundation.json')">Foundation</a></li>
         <li class="prm"><a href="#" ng-click="updateStyles('data/github.json')">Github</a></li>
         <li class="prm"><a href="#" ng-click="updateStyles('data/kickstarter.json')">Kickstarter</a></li>
         <li class="prm"><a href="#" ng-click="updateStyles('data/medium.json')">Medium</a></li>
@@ -22,10 +21,10 @@
     </header>
 
     <nav>
-      <div class="pax tc">
-        <form ng-submit="updateStyles()">
-          <label class="b sans-serif f5">Style data URL:</label>
-          <input ng-model="styleUrl">
+      <div class="bg-blk pvs">
+        <form ng-submit="updateStyles()" class="f5 pll">
+          <label class="b sans-serif ltgry mrs">Currently Viewing</label>
+          <input ng-model="styleUrl" class="bg-blk input pas sans-serif ltgry">
         </form>
       </div>
       <ul class="list--h mtl sans-serif tc">
