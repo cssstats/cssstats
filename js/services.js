@@ -46,6 +46,7 @@ rprtr.factory('declarations', function(fontSizeToPx, $filter) {
     $scope.declarations = [];
 
     for(var i = 0; i < rules.length; i++){
+      console.log('parsing...');
       var declarations = rules[i].declarations;
       // Adds all the declarations within a rule
       for(var j in declarations){
