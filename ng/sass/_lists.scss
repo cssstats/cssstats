@@ -1,6 +1,6 @@
 /* ==========================================================================
-   LISTS
-   ========================================================================== */
+LISTS
+========================================================================== */
 
 /* List Style Types */
 
@@ -24,7 +24,9 @@
 .list {         list-style: none; }
 
 .list--h {
-                list-style-type: none;
-                display: inline-block;
-                li { display: inline-block; }
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  li { display: inline-block; }
 }
