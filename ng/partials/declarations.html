@@ -1,4 +1,3 @@
 <input ng-model="declarationsQuery">
-<div ng-repeat="declaration in declarations | filter:declarationsQuery">
-  <pre>{{ declaration | json }}</pre>
-</div>
+
+<pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>
