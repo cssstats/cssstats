@@ -65,6 +65,7 @@ rprtr.factory('selectors', function(specificityScore){
     console.log(new Date().getTime());
     console.log('parsed selectors');
     specificityScore($scope.selectors);
+    $scope.parsing = false;
   };
 });
 
@@ -116,8 +117,8 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
     selectors($scope);
 
     // Pretty sure this is slowing the whole thing down
-    var uniqueFilter = $filter('unique');
-    $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
+    //var uniqueFilter = $filter('unique');
+    //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
   };
 });
@@ -216,6 +217,7 @@ rprtr.controller('GlobalCtrl',
   function($scope, $http, $location, $routeParams, declarations) {
 
     console.log('GlobalCtrl');
+    $scope.parsing;
 
     // Setting as a scope variable that can be updated in the view
     if($scope.styleUrl == null) $scope.styleUrl = 'data/twitter.json';
@@ -243,9 +245,12 @@ rprtr.controller('GlobalCtrl',
 
 }]);
 
-rprtr.controller('HomeCtrl', ['$scope', function($scope) {
+rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   console.log('HomeCtrl');
   console.log($scope.styleUrl);
+
+  //var uniqueFilter = $filter('unique');
+  //$scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){

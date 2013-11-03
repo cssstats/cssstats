@@ -1,4 +1,5 @@
 <h2 ng-show="loading" class="py2">Loading...</h2>
+<h2 ng-show="parsing" class="py2">Parsing data...</h2>
 
 <div ng-hide="loading" ng-controller="HomeCtrl">
 
@@ -9,7 +10,8 @@
     <ul class="mb2">
       <li>{{ selectors.length }} selectors</li>
       <li>{{ declarations.length }} total declarations</li>
-      <li>{{ uniqueDeclarations.length }} unique declarations</li>
+      <!-- Hiding the uniques until we find a better way to parse this -->
+      <!-- <li>{{ uniqueDeclarations.length }} unique declarations</li> -->
       <li>{{ fontSizes.length }} font-size declarations</li>
       <li>{{ floats.length }} floats</li>
       <li>{{ widths.length }} width declarations</li>
