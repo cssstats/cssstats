@@ -6,7 +6,6 @@ var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
-    $routeProvider.when('/selectors', {templateUrl: 'partials/selectors.html'});
     $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
 
     $routeProvider.when('/font-size', {templateUrl: 'partials/font-size.html'});
@@ -27,16 +26,36 @@ rprtr.value('$anchorScroll', angular.noop);
 
 // Factories
 
-rprtr.factory('selectors', function(){
+rprtr.factory('specificityScore', function () {
+  return function(selectors){
+      console.log('specificityScore');
+
+      for(var i = 0; i < selectors.length; i++) {
+        var idCount = selectors[i].string.split("#").length - 1;
+        var classCount = selectors[i].string.split(".").length - 1;
+        var attributeCount = selectors[i].string.split("[").length - 1;
+        var elementCount = selectors[i].string.split("\s[a-zA-Z]").length -1;
+        var childCount = selectors[i].string.split(">").length -1;
+        var score = idCount*100 + classCount*10 + attributeCount*10 + elementCount;
+        // No childCount? WTF?
+        // console.log(score);
+        selectors[i].specificityScore = score;
+      };
+  };
+});
+
+rprtr.factory('selectors', function(specificityScore){
   return function($scope) {
     var rules = $scope.styles.stylesheet.rules;
     $scope.selectors = [];
     for(var i = 0; i < rules.length; i++){
       var selectors = rules[i].selectors;
       for(var j in selectors) {
-        $scope.selectors.push(selectors[j]);
+        var obj = {'string': selectors[j]};
+        $scope.selectors.push(obj);
       };
     };
+    specificityScore($scope.selectors);
   };
 });
 
@@ -141,32 +160,7 @@ rprtr.factory('anythingToRelative', function(){
 
 // Filters
 
-//function calculateSpecificity(id, class, attr, element, child) {
-//    var idScore = idCount * 100;
-//    var classScore = classCount * 10;
-//    var attributeScore = attributeCount * 10;
-//    var elementScore = elementCount * 1;
-//
-//    var specificityScore = idScore+classScore+attributeScore+elementScore;
-//    return specificityScore;
-//
-//}
-//
-//rprtr.filter('specificityScore', function () {
-//
-//  for(var i in selectors) {
-//    var idCount = selector[i].split("#").length - 1;
-//    var classCount = selector[i].split(".").length - 1;
-//    var attributeCount = selector[i].split("[").length - 1;
-//    var elementCount = selector[i].split("\s[a-zA-Z]").length -1;
-//    var childCount = selector[i].split(">").length -1;
-//
-//    calculateSpecificity(idCount, classCount, attributeCount, elementCount, childCount);
-//
-//  }
-//
-//
-//});
+
 
 rprtr.filter('unique', function () {
   return function (items, filterOn) {

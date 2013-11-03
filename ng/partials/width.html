@@ -2,7 +2,10 @@
   <h2>Widths ({{ widths.length }})</h2>
   <ul>
     <li ng-repeat="width in widths | orderBy:'relativeValue'">
-        <div style="width: {{ width.relativeValue }}%; outline: 1px solid pink;">{{ width.property }}: {{ width.value }}</div>
+        <div style="width: {{ width.relativeValue }}%; outline: 1px solid pink;">
+          {{ width.property }}: {{ width.value }}
+          <!-- <pre>{{ width.relativeValue }}</pre> -->
+        </div>
     </li>
   </ul>
 </div>
