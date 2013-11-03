@@ -84,24 +84,28 @@ rprtr.factory('declarations', function(fontSizeToPx, anythingToRelative, $filter
       for(var j in declarations){
         $scope.declarations.push(declarations[j]);
 
-        if(declarations[j].property == 'font-size') {
-          // Adding absolute px values to sort by
-          declarations[j].pxValue = fontSizeToPx(declarations[j].value);
-          $scope.fontSizes.push(declarations[j]);
+        if(declarations[j].property){
+          if(declarations[j].property == 'font-size') {
+            // Adding absolute px values to sort by
+            declarations[j].pxValue = fontSizeToPx(declarations[j].value);
+            $scope.fontSizes.push(declarations[j]);
+          };
+          if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
+          if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
+          if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
+          if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
+          if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
+          if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
+          if((typeof declarations[j].property) != 'string') console.log(declarations[j].property);
+          if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
+          if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
         };
-        if(declarations[j].property == 'width') $scope.widths.push(declarations[j]);
-        if(declarations[j].property == 'height') $scope.heights.push(declarations[j]);
-        if(declarations[j].property == 'color') $scope.colors.push(declarations[j]);
-        if(declarations[j].property == 'background-color') $scope.backgroundColors.push(declarations[j]);
-        if(declarations[j].property == 'background-image') $scope.backgroundImages.push(declarations[j]);
-        if(declarations[j].property == 'transition') $scope.transitions.push(declarations[j]);
-        if(declarations[j].property.match(/^margin/)) $scope.margins.push(declarations[j]);
-        if(declarations[j].property.match(/^padding/)) $scope.paddings.push(declarations[j]);
       };
     };
 
     selectors($scope);
 
+    // Pretty sure this is slowing the whole thing down
     var uniqueFilter = $filter('unique');
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
 
@@ -163,8 +167,6 @@ rprtr.factory('anythingToRelative', function(){
 
 // Filters
 
-
-
 rprtr.filter('unique', function () {
   return function (items, filterOn) {
     if (filterOn === false) return items;
@@ -225,18 +227,6 @@ rprtr.controller('GlobalCtrl',
       $scope.getStyles($scope.styleUrl);
       $location.path('/');
     };
-
-}]);
-
-rprtr.controller('EditCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
-
-  if($scope.styleUrl == null) $scope.styleUrl = 'data/myspace.json';
-
-  $scope.updateStyles = function(){
-    console.log('update styles' + $rootScope.styleUrl);
-    $scope.getStyles($scope.styleUrl);
-    $location.path('/');
-  };
 
 }]);
 
