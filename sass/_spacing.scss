@@ -16,6 +16,7 @@
 .pam { padding: 1rem; }
 .pal { padding: 2rem; }
 .pax { padding: 4rem; }
+.paxl { padding: 8rem; }
 
 .pln { padding-left: 0; }
 .pls { padding-left: .5rem; }
@@ -41,17 +42,18 @@
 .ptl { padding-top: 2rem; }
 .ptx { padding-top: 4rem; }
 
-.pvn { padding: 0; }
-.pvs { padding: .5rem 0; }
-.pvm { padding: 1rem  0; }
-.pvl { padding: 2rem  0; }
-.pvx { padding: 4rem  0; }
+.pvn { padding-top: 0; padding-bottom: 0; }
+.pvs {  padding-bottom: .5rem; padding-top: .5rem ; }
+.pvm {  padding-bottom: 1rem;  padding-top: 1rem  ; }
+.pvl {  padding-bottom: 2rem;  padding-top: 2rem  ; }
+.pvx {  padding-bottom: 4rem;  padding-top: 4rem  ; }
+.pvxl { padding-top: 8rem; padding-bottom: 8rem; }
 
-.phn { padding: 0; }
-.phs { padding: 0 .5rem; }
-.phm { padding: 0 1rem; }
-.phl { padding: 0 2rem; }
-.phx { padding: 0 4rem; }
+.phn { padding-left: 0; padding-right: 0}
+.phs { padding-left: .5rem; padding-right: .5rem }
+.phm { padding-left: 1rem; padding-right: 1rem; }
+.phl { padding-left: 2rem; padding-right: 2rem; }
+.phx { padding-left: 4rem; padding-right: 4rem; }
 
 
 /* Margins */

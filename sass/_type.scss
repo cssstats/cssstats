@@ -21,6 +21,15 @@
 .f5    { font-size: 1rem; }
 .f6    { font-size: .75rem; }
 
+@include break(not-small) {
+.f1-ns { font-size: 2rem; }
+.f2-ns { font-size: 1.5rem; }
+.f3-ns { font-size: 1.2rem; }
+.f4-ns { font-size: 1.2rem; }
+.f5-ns { font-size: 1rem; }
+.f6-ns { font-size: .85rem; }
+}
+
 @include break(medium) {
 .f1-v2 { font-size: 2rem; }
 .f2-v2 { font-size: 1.5rem; }
