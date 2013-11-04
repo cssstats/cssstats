@@ -17,18 +17,18 @@ rprtr.controller('GlobalCtrl',
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleData) {
       $scope.loading = true;
-      $http.get('/data/' + styleData + '/rules.json').success(function(res) {
+      $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
         $scope.loading = false;
       });
       // This might break the parser
-      $http.get('/data/' + styleData + '/declarations.json').success(function(res){
+      $http.get('data/' + styleData + '/declarations.json').success(function(res){
         $scope.declarations = res;
         // Create arrays for each declaration type in the factory
         declarationsByType($scope);
       });
-      $http.get('/data/' + styleData + '/unique_declarations.json').success(function(res){
+      $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
         $scope.uniqueDeclarations = res;
       });
     };
@@ -47,7 +47,7 @@ rprtr.controller('GlobalCtrl',
 
 rprtr.controller('HomeCtrl', ['$scope', function($scope) {
   console.log('HomeCtrl');
-    
+
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
@@ -77,7 +77,7 @@ rprtr.controller('DeclarationsCtrl', ['$scope', function($scope){
 
 rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
 
-  // Controller for parsing the base JSON data and spitting out 
+  // Controller for parsing the base JSON data and spitting out
   // declarations and unique_declarations
 
   $scope.styleDataToParse = null;
@@ -87,9 +87,9 @@ rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', fu
   $scope.uniqueDeclarations = null;
 
   $scope.updateStylesToParse = function(url){
-    console.log('getting: ' + '/data/' + $scope.styleDataToParse + '/rules.json');
-    $http.get('/data/' + $scope.styleDataToParse + '/rules.json').success(function(res) {
-      console.log('got: ' + '/data/' + $scope.styleDataToParse + '/rules.json');
+    console.log('getting: ' + 'data/' + $scope.styleDataToParse + '/rules.json');
+    $http.get('data/' + $scope.styleDataToParse + '/rules.json').success(function(res) {
+      console.log('got: ' + 'data/' + $scope.styleDataToParse + '/rules.json');
       $scope.styles = res;
       declarations($scope);
     });
