@@ -1,8 +1,9 @@
 <section class="phl">
   <header>
-    <h1>{{ styles.stylesheet.rules.length }} rules</h1>
+    <h1>There are {{ styles.stylesheet.rules.length }} rules</h1>
     <div id="rules-filters">
-      <input ng-model="query" Placeholder="Fuzzy Search">
+      <label for="fuzzy-search">And you can search all of them</label>
+      <input ng-model="query" Placeholder="Fuzzy Search for anything" class="blk sans-serif txt-input mtm" id="fuzzy-search">
     </div>
   </header>
     <article ng-repeat="rule in styles.stylesheet.rules | filter:query"
