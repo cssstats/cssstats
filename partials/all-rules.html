@@ -1,16 +1,17 @@
-<h2>{{ styles.stylesheet.rules.length }} rules</h2>
-
-<div id="rules-filters">
-  <input ng-model="query" Placeholder="Fuzzy Search">
-</div>
-
-<ul>
-  <li ng-repeat="rule in styles.stylesheet.rules | filter:query">
-    <h3>{{ rule.selectors.join(', ') }}</h3>
-    <pre ng-repeat="declaration in rule.declarations">{{ declaration.property }}: {{ declaration.value }};</pre>
-  </li>
-</ul>
-
+<section class="phl">
+  <header>
+    <h1>{{ styles.stylesheet.rules.length }} rules</h1>
+    <div id="rules-filters">
+      <input ng-model="query" Placeholder="Fuzzy Search">
+    </div>
+  </header>
+    <article ng-repeat="rule in styles.stylesheet.rules | filter:query"
+    class="of-x-aut mbl">
+      <h1 class="ws-nw f3">{{ rule.selectors.join(', ') }}</h1>
+      <pre ng-repeat="declaration in rule.declarations"
+      class="man lh-copy f6 f5-ns ws-nw">{{ declaration.property }}: {{ declaration.value }};</pre>
+    </article>
+</section>
 <!-- For checking JSON data structure -->
 <!-- <pre>{{ styles.stylesheet.rules | json }}</pre> -->
 
