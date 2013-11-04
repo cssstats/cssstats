@@ -1,0 +1,22 @@
+<div class="pam">
+
+  <form ng-submit="updateStylesToParse()">
+    <!-- <label>data folder to parse</label> -->
+    <input ng-model="styleDataToParse">
+  </form>
+
+  <h1>Data Parser - {{ styleDataToParse }}</h1>
+  <p>Set the appropriate base file and copy and paste the data into new json files.</p>
+
+  <div class="mbl">
+    <label class="db">declarations.json</label>
+    <textarea style="width: 100%; min-height: 128px;">{{ declarations | json }}</textarea>
+  </div>
+
+  <div class="mbl">
+    <a href="" ng-click="getUniques()">Get Unique declarations</a>
+    <label class="db">unique_declarations.json</label>
+    <textarea style="width: 100%; min-height: 128px;">{{ uniqueDeclarations | json }}</textarea>
+  </div>
+
+</div>
