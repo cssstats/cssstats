@@ -8,7 +8,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Kinda hacky way of doing the select
-    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc'] };
+    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'bootstrap', 'topcoat'] };
 
     if($location.search()) {
       $scope.styleData = $location.search().site;
@@ -28,8 +28,8 @@ rprtr.controller('GlobalCtrl',
       $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
-        
-        
+
+
       });
       // This might break the parser
       $http.get('data/' + styleData + '/declarations.json').success(function(res){
