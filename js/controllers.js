@@ -57,7 +57,6 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   $scope.$watch('loading', function(){
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
   });
-
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
@@ -76,11 +75,6 @@ rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope,
   anythingToRelative($scope.heights);
 }]);
 
-rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
-}]);
-
-rprtr.controller('DeclarationsCtrl', ['$scope', function($scope){
-}]);
 
 
 rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){

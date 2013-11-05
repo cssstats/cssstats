@@ -188,39 +188,45 @@ rprtr.factory('storage', function(){
 
 // Filters
 
-// Newer Angular UI Filter
+// Newer Angular UI Filter (vendor)
 rprtr.filter('unique', ['$parse', function ($parse) {
-
   return function (items, filterOn) {
-
-    if (filterOn === false) {
-      return items;
-    }
-
+    if (filterOn === false) return items;
     if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
       var hashCheck = {}, newItems = [],
         get = angular.isString(filterOn) ? $parse(filterOn) : function (item) { return item; };
-
       var extractValueToCompare = function (item) {
         return angular.isObject(item) ? get(item) : item;
       };
-
       angular.forEach(items, function (item) {
         var valueToCheck, isDuplicate = false;
-
         for (var i = 0; i < newItems.length; i++) {
           if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
             isDuplicate = true;
             break;
           }
         }
-        if (!isDuplicate) {
-          newItems.push(item);
-        }
-
+        if (!isDuplicate) newItems.push(item);
       });
       items = newItems;
     }
     return items;
   };
 }]);
+
+
+// Filter out vendor prefixes
+rprtr.filter('removePrefixes', function(){
+  return function(arr) {
+    var newArr = [];
+    if(angular.isArray(arr)){
+      for (i = 0; i < arr.length; i++){
+        // Check to make sure it's not prefixed with a hyphen
+        if(!arr[i].value.match(/^-/)) console.log(arr[i].value);
+        newArr.push(arr[i]);
+      };
+      return newArr;
+    };
+  };
+});
+
