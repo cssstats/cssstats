@@ -5,8 +5,8 @@
 <div ng-show="declarations" ng-controller="HomeCtrl">
 
   <section id="overview" class="pvl phl phx-l">
-    <h1 class="f1 b mtx" style="color:#0FA68A;">
-      <span class="thin">Let's look at CSS by </span><span class="ttc">{{ styleData }}</span>
+    <h1 class="f1 b mtx">
+      <span class="thin">Let's look at CSS by </span><span class="ttc orangered">{{ styleData }}</span>
     </h1>
     <article class="sans-serif mvm ptx pbm">
     <div class="cf">
@@ -28,7 +28,7 @@
         {{ uniqueFontSizes.length }} lines. Who knows what happened here.
       </p>
     </article>
-    <article class="mbl mts sans-serif">
+    <article class="mvx sans-serif pvx">
       <p class="f1 mega-l man">
         <b>{{ selectors.length }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
@@ -40,11 +40,11 @@
       <p class="f2-l serif man lh-copy">Some genius decided IE<10 only allows 4095 selectors per stylesheet. <br >
         So, that's a thing. Don't worry <a href="http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx" class="blk" title="WTFIE">IE10 let's you include 4095 stylesheets per page</a>.</p>
       </article>
-    <article class="sans-serif mvx">
+    <article class="sans-serif mvx pvx">
       <p class="f1 f1-l man"><b>{{ floats.length }} FLOATS.</b></p>
       <p class="man serif f2 lh-copy">But there are only three choices...</p>
     </article>
-    <article class="sans-serif mvx">
+    <article class="sans-serif mvx pvx">
       <div class="cf">
         <div class="fl wi-50">
           <span class="gry f5 f3-l man lh-copy db mbs">Total declarations</span>
@@ -89,13 +89,13 @@
       <h2>This is in some serious alpha mode</h2>
     </header>
     <article ng-show="fontSizesWarning">
-      <h1 class="f1 f1-l mega-l">{{ fontSizesWarning }}</h1>
+      <h1 class="f1 f1-l mega-l orangered">{{ fontSizesWarning }}</h1>
     </article>
     <article ng-show="uniqueFontSizesWarning">
-      <h1 class="f1 f1-l mega-l">{{ uniqueFontSizesWarning }}</h1>
+      <h1 class="f1 f1-l mega-l orangered">{{ uniqueFontSizesWarning }}</h1>
     </article>
     <article ng-show="declarationsWarning">
-      <h1 class="f1 f1-l mega-l">{{ declarationsWarning }}</h1>
+      <h1 class="f1 f1-l mega-l orangered">{{ declarationsWarning }}</h1>
     </article>
   </section>
 
