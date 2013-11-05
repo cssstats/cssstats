@@ -5,6 +5,7 @@
 var rprtr = angular.module('rprtr',[])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/home.html'});
+    $routeProvider.when('/overview', {templateUrl: 'partials/home.html'});
 
     $routeProvider.when('/all-rules', {templateUrl: 'partials/all-rules.html'});
     $routeProvider.when('/declarations', {templateUrl: 'partials/declarations.html'});
