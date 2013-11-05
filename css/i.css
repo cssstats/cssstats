@@ -6181,7 +6181,7 @@ More info: https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
   box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6, .sans-serif {
-  font-family: avenir, "Comic sans", helvetica, arial, sans-serif; }
+  font-family: avenir, "Comic Sans MS", helvetica, arial, sans-serif; }
 
 body, .serif {
   font-family: georgia, serif; }
