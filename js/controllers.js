@@ -7,12 +7,20 @@ rprtr.controller('GlobalCtrl',
 
     console.log('GlobalCtrl');
 
+    // Kinda hacky way of doing the select
+    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc'] };
+
+    if($location.search()) {
+      $scope.styleData = $location.search().site;
+      $scope.sites.value = $scope.styleData;
+    }
     // Setting as a scope variable that can be updated in the view
     if($scope.styleData == null) {
-
-      $scope.styleData = 'twitter';
+      $scope.styleData = 'github';
+      $scope.sites.value = 'github';
       console.log('getting styles for ' + $scope.styleData);
-    }
+    };
+    console.log($scope.styleData);
 
     // Function to get the styles data - This should really go in a factory
     $scope.getStyles = function(styleData) {
@@ -47,7 +55,9 @@ rprtr.controller('GlobalCtrl',
     $scope.updateStyles = function(url){
       if(url) $scope.styleData = url;
       $scope.getStyles($scope.styleData);
-      if($location.path() != '/parser') $location.path('/');
+      if($location.path() != '/parser') {
+        $location.path('/').search({'site': $scope.styleData});
+      };
     };
 
 }]);
