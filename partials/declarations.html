@@ -1,6 +1,6 @@
-<div class="pam">
+<div class="pal pax-l">
 
-  <h2>Unique Declarations ({{ uniqueDeclarations.length }})</h2>
+  <h1>Declarations <span class="thin">({{ uniqueDeclarations.length }})</span></h1>
   <input ng-model="declarationsQuery">
 
   <pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>

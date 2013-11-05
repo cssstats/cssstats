@@ -1,9 +1,12 @@
-<section class="phl">
-  <header>
-    <h1>There are {{ styles.stylesheet.rules.length }} rules</h1>
-    <div id="rules-filters">
-      <label for="fuzzy-search">And you can search all of them</label>
-      <input ng-model="query" Placeholder="Fuzzy Search for anything" class="blk sans-serif txt-input mtm" id="fuzzy-search">
+<!--<style>* { outline: 1px solid red; }</style>-->
+<section class="phl phx-l">
+  <header class="mvl">
+    <h1 class="f1 mega-l tracked ttu man lh">
+      {{ styles.stylesheet.rules.length }} Rules
+    </h1>
+    <div id="rules-filters" class="mtl">
+      <label for="fuzzy-search" class="dn">And you can search all of them</label>
+      <input ng-model="query" Placeholder="Fuzzy Search for anything" class="blk sans-serif txt-input mtm phm pvm" id="fuzzy-search">
     </div>
   </header>
     <article ng-repeat="rule in styles.stylesheet.rules | filter:query"
