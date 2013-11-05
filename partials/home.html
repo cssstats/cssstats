@@ -31,6 +31,10 @@
       <p class="f1 f1-l man"><b>{{ floats.length }}</b> floats? Really?</p>
       <p>But there are only three choices...</p>
     </article>
+    <article class="sans-serif">
+      <p class="man f1 b"> They only declared <b>{{ transitions.length }}</b> transitions.</p>
+      <p>I bet they are really patting themselves on the back for this one.</p>
+    </article>
     <ul>
       <li class="mvm">
         There are <b>{{ declarations.length }}</b> declarations total.
@@ -48,10 +52,7 @@
       <li class="mvm"><b>{{ backgroundColors.length }}</b> background-color declarations</li>
       <li class="mvm"><b>{{ uniqueBackgroundColors.length }}</b> unique background-color declarations</li>
       <li class="mvm"><b>{{ backgroundImages.length }}</b> background-image declarations</li>
-      <li class="mvm"><b>{{ transitions.length }}</b> transition declarations</li>
     </ul>
-    <!-- Broke this by removing the unique filter from the parser - will fix -->
-    <p>Refactoring could potentially reduce your css by {{ refactoringPotential }}% </p>
   </section>
   <section id="warnings" class="phl">
     <article ng-show="fontSizesWarning">
