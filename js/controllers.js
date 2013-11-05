@@ -6,7 +6,7 @@ rprtr.controller('GlobalCtrl',
   function($scope, $http, $location, declarations, declarationsByType, selectors, createUniques) {
 
     console.log('GlobalCtrl');
-
+    if($location.search()) $scope.styleData = $location.search().site;
     // Setting as a scope variable that can be updated in the view
     if($scope.styleData == null) {
 
@@ -47,7 +47,9 @@ rprtr.controller('GlobalCtrl',
     $scope.updateStyles = function(url){
       if(url) $scope.styleData = url;
       $scope.getStyles($scope.styleData);
-      if($location.path() != '/parser') $location.path('/');
+      if($location.path() != '/parser') {
+        $location.path('/').search({'site': $scope.styleData});
+      };
     };
 
 }]);
