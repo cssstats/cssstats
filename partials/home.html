@@ -5,7 +5,7 @@
 <div ng-show="declarations" ng-controller="HomeCtrl">
 
   <section id="overview" class="pvl phl phx-l">
-    <h1 class="f1 b mtl" style="color:#0FA68A;">
+    <h1 class="f1 b mtx" style="color:#0FA68A;">
       <span class="thin">Let's look at CSS by </span><span class="ttc">{{ styleData }}</span>
     </h1>
     <article class="sans-serif mvm ptx pbm">
@@ -28,20 +28,21 @@
         {{ uniqueFontSizes.length }} lines. Who knows what happened here.
       </p>
     </article>
-    <article class="mbl mtx sans-serif">
+    <article class="mbl mts sans-serif">
       <p class="f1 mega-l man">
         <b>{{ selectors.length }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
           title="What is a selector? TO THE SPEC!"
-          class="blk" >
+          class="blk b ttu" >
            selectors.
         </a>
       </p>
-      <p>Some genius decided IE only allows 4095 selectors per stylesheet. So, that's a thing.</p>
+      <p class="f2-l serif man lh-copy">Some genius decided IE<10 only allows 4095 selectors per stylesheet. <br >
+        So, that's a thing. Don't worry <a href="http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx" class="blk" title="WTFIE">IE10 let's you include 4095 stylesheets per page</a>.</p>
       </article>
     <article class="sans-serif mvx">
-      <p class="f1 f1-l man"><b>{{ floats.length }}</b> floats? Really?</p>
-      <p>But there are only three choices...</p>
+      <p class="f1 f1-l man"><b>{{ floats.length }} FLOATS.</b></p>
+      <p class="man serif f2 lh-copy">But there are only three choices...</p>
     </article>
     <article class="sans-serif">
       <p class="man f1 b"> They only declared <b>{{ transitions.length }}</b> transitions.</p>

@@ -128,6 +128,21 @@
 .lh-2    { line-height: 2; }
 .lh-3    { line-height: 3; }
 
+@include break(not-small) {
+.lh-ns      { line-height: 1; }
+.lh-title-ns { line-height: 1.2; }
+.lh-copy-ns { line-height: 1.6; }
+.lh-2-ns    { line-height: 2; }
+.lh-3-ns    { line-height: 3; }
+}
+@include break(large) {
+.lh-l      { line-height: 1; }
+.lh-title-l { line-height: 1.2; }
+.lh-copy-l { line-height: 1.6; }
+.lh-2-l    { line-height: 2; }
+.lh-3-l    { line-height: 3; }
+}
+
 /* Tracking */
 
 .tracked {      letter-spacing: 0.1em; }
