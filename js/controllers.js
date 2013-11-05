@@ -56,7 +56,25 @@ rprtr.controller('GlobalCtrl',
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   $scope.$watch('loading', function(){
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+    if($scope.fontSizes) {
+      if($scope.fontSizes.length > 128) {
+        $scope.fontSizesWarning = 'You have over 128 font-size declarations, you dick.';
+      } else if($scope.fontSizes.length > 512) {
+        $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
+      };
+    };
+    if($scope.uniqueFontSizes){
+      if($scope.uniqueFontSizes.length > 64) {
+        $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
+      } else if ($scope.uniqueFontSizes.length > 128) {
+        $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
+      };
+    };
+
   });
+
+
+
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
