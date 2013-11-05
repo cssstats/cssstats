@@ -2,17 +2,19 @@
   <h1 ng-show="parsing" class="tc f5  pal man bg-green wht">Parsing data...</h1>
 
 <div ng-show="declarations" ng-controller="HomeCtrl">
-  
-  <section id="overview" class="bg-lightcyan pvl phl">
-    <h1 class="f3 thin mtl">{{ styleData }}</h1>
+
+  <section id="overview" class="pvl phl">
+    <h1 class="f1 b mtl">
+      <span class="thin">Let's look at CSS by </span><span class="ttc">{{ styleData }}</span>
+    </h1>
     <article class="mbl mtx sans-serif">
       <p class="f1 mega-l man">
         <b>{{ selectors.length }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
-           title="What is a selector? TO THE SPEC!">
-           selectors!
+          title="What is a selector? TO THE SPEC!"
+          class="blk" >
+           selectors.
         </a>
-        Wut.
       </p>
       <p>Some genius decided IE only allows 4095 selectors per stylesheet. So, that's a thing.</p>
       </article>
