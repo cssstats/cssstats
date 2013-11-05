@@ -20,8 +20,8 @@ rprtr.controller('GlobalCtrl',
       $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
-        createUniques($scope);
-        $scope.loading = false;
+        
+        
       });
       // This might break the parser
       $http.get('data/' + styleData + '/declarations.json').success(function(res){
@@ -31,6 +31,13 @@ rprtr.controller('GlobalCtrl',
       });
       $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
         $scope.uniqueDeclarations = res;
+      });
+      $scope.$watch('selectors', function(){
+        // Wait for selectors to load, then get uniques
+        if($scope.selectors) {
+          createUniques($scope);
+          $scope.loading = false;
+        };
       });
     };
 
@@ -47,6 +54,9 @@ rprtr.controller('GlobalCtrl',
 
 
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
+  $scope.$watch('loading', function(){
+    if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+  });
 
 }]);
 
