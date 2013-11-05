@@ -11,6 +11,18 @@
     Yeah.
   </p>
 </header>
+  
+  <section id="warnings" class="phl">
+    <div ng-show="fontSizesWarning">
+      <h2>{{ fontSizesWarning }}</h2>
+    </div>
+    <div ng-show="uniqueFontSizesWarning">
+      <h2>{{ uniqueFontSizesWarning }}</h2>
+    </div>
+    <div ng-show="declarationsWarning">
+      <h2>{{ declarationsWarning }}</h2>
+    </div>
+  </section>
 
   <section id="overview" class="pvx phl">
     <h1 class="f2">The Numbers</h1>
@@ -22,14 +34,18 @@
       <li class="mvm"><b>{{ uniqueFontSizes.length }}</b> unique font-size declarations</li>
       <li class="mvm"><b>{{ floats.length }}</b> floats</li>
       <li class="mvm"><b>{{ widths.length }}</b> width declarations</li>
+      <li class="mvm"><b>{{ uniqueWidths.length }}</b> unique width declarations</li>
       <li class="mvm"><b>{{ heights.length }}</b> height declarations</li>
+      <li class="mvm"><b>{{ uniqueHeights.length }}</b> unique height declarations</li>
       <li class="mvm"><b>{{ colors.length }}</b> color declarations</li>
+      <li class="mvm"><b>{{ uniqueColors.length }}</b> unique color declarations</li>
       <li class="mvm"><b>{{ backgroundColors.length }}</b> background-color declarations</li>
+      <li class="mvm"><b>{{ uniqueBackgroundColors.length }}</b> unique background-color declarations</li>
       <li class="mvm"><b>{{ backgroundImages.length }}</b> background-image declarations</li>
       <li class="mvm"><b>{{ transitions.length }}</b> transition declarations</li>
     </ul>
     <!-- Broke this by removing the unique filter from the parser - will fix -->
-    <p>Refactoring could potentially reduce your css by {{ (1 - (uniqueDeclarations.length / declarations.length)) * 100 }} % </p>
+    <p>Refactoring could potentially reduce your css by {{ refactoringPotential }}% </p>
   </section>
 
 </div>

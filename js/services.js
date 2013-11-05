@@ -91,8 +91,25 @@ rprtr.factory('declarationsByType', function(fontSizeToPx, $filter){
         if(declarations[i].property.match(/^padding/)) $scope.paddings.push(declarations[i]);
       };
     };
+
   };
 });
+
+// This'll probably slow down load time a bit
+rprtr.factory('createUniques', function($filter){
+  return function($scope){
+    console.log('creating uniques');
+    var uniqueFilter = $filter('unique');
+    // Each array added to this factory will slow down initial load
+    // This should probably be loaded in a more efficient way
+    $scope.uniqueFontSizes = uniqueFilter($scope.fontSizes);
+    $scope.uniqueWidths = uniqueFilter($scope.widths);
+    $scope.uniqueHeights = uniqueFilter($scope.heights);
+    $scope.uniqueColors = uniqueFilter($scope.colors);
+    $scope.uniqueBackgroundColors = uniqueFilter($scope.backgroundColors);
+  };
+});
+
 
 // Converts all font sizes to pixel values for sorting
 // This adds a value to each font-size declaration object
@@ -171,39 +188,45 @@ rprtr.factory('storage', function(){
 
 // Filters
 
-// Newer Angular UI Filter
+// Newer Angular UI Filter (vendor)
 rprtr.filter('unique', ['$parse', function ($parse) {
-
   return function (items, filterOn) {
-
-    if (filterOn === false) {
-      return items;
-    }
-
+    if (filterOn === false) return items;
     if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
       var hashCheck = {}, newItems = [],
         get = angular.isString(filterOn) ? $parse(filterOn) : function (item) { return item; };
-
       var extractValueToCompare = function (item) {
         return angular.isObject(item) ? get(item) : item;
       };
-
       angular.forEach(items, function (item) {
         var valueToCheck, isDuplicate = false;
-
         for (var i = 0; i < newItems.length; i++) {
           if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
             isDuplicate = true;
             break;
           }
         }
-        if (!isDuplicate) {
-          newItems.push(item);
-        }
-
+        if (!isDuplicate) newItems.push(item);
       });
       items = newItems;
     }
     return items;
   };
 }]);
+
+
+// Filter out vendor prefixes
+rprtr.filter('removePrefixes', function(){
+  return function(arr) {
+    var newArr = [];
+    if(angular.isArray(arr)){
+      for (i = 0; i < arr.length; i++){
+        // Check to make sure it's not prefixed with a hyphen
+        if(!arr[i].value.match(/^-/)) console.log(arr[i].value);
+        newArr.push(arr[i]);
+      };
+      return newArr;
+    };
+  };
+});
+

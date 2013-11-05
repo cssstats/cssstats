@@ -1,7 +1,7 @@
 <section class="phl">
 <h2>Background Images ({{ backgroundImages.length}})</h2>
 <ul>
-  <li ng-repeat="backgroundImage in backgroundImages | orderBy: 'value'">
+  <li ng-repeat="backgroundImage in backgroundImages | removePrefixes | orderBy: 'value'">
     <div style="background-image: {{ backgroundImage.value }};" class="paxl bg-cn">
       {{ backgroundImage.property }}: {{ backgroundImage.value }}
     </div>

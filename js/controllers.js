@@ -2,8 +2,8 @@
 
 
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors',
-  function($scope, $http, $location, declarations, declarationsByType, selectors) {
+  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors', 'createUniques',
+  function($scope, $http, $location, declarations, declarationsByType, selectors, createUniques) {
 
     console.log('GlobalCtrl');
 
@@ -20,7 +20,8 @@ rprtr.controller('GlobalCtrl',
       $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
-        $scope.loading = false;
+        
+        
       });
       // This might break the parser
       $http.get('data/' + styleData + '/declarations.json').success(function(res){
@@ -30,6 +31,13 @@ rprtr.controller('GlobalCtrl',
       });
       $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
         $scope.uniqueDeclarations = res;
+      });
+      $scope.$watch('selectors', function(){
+        // Wait for selectors to load, then get uniques
+        if($scope.selectors) {
+          createUniques($scope);
+          $scope.loading = false;
+        };
       });
     };
 
@@ -45,8 +53,33 @@ rprtr.controller('GlobalCtrl',
 }]);
 
 
-rprtr.controller('HomeCtrl', ['$scope', function($scope) {
-  console.log('HomeCtrl');
+rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
+  $scope.$watch('loading', function(){
+    console.log('checking for warnings...');
+    if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+    if($scope.fontSizes) {
+      if($scope.fontSizes.length > 128) {
+        $scope.fontSizesWarning = 'You have over 128 font-size declarations, you dick.';
+      } else if($scope.fontSizes.length > 512) {
+        $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
+      };
+    };
+    if($scope.uniqueFontSizes){
+      if($scope.uniqueFontSizes.length > 64) {
+        $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
+      } else if ($scope.uniqueFontSizes.length > 128) {
+        $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
+      };
+    };
+    if($scope.declarations){
+      if($scope.declarations.length > 4095) {
+        $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
+      };
+    };
+
+  });
+
+
 
 }]);
 
@@ -66,13 +99,6 @@ rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope,
   anythingToRelative($scope.heights);
 }]);
 
-rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
-  var fontFilter = $filter('unique');
-  $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
-}]);
-
-rprtr.controller('DeclarationsCtrl', ['$scope', function($scope){
-}]);
 
 
 rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
