@@ -91,8 +91,25 @@ rprtr.factory('declarationsByType', function(fontSizeToPx, $filter){
         if(declarations[i].property.match(/^padding/)) $scope.paddings.push(declarations[i]);
       };
     };
+
   };
 });
+
+// This'll probably slow down load time a bit
+rprtr.factory('createUniques', function($filter){
+  return function($scope){
+    console.log('creating uniques');
+    var uniqueFilter = $filter('unique');
+    // Each array added to this factory will slow down initial load
+    // This should probably be loaded in a more efficient way
+    $scope.uniqueFontSizes = uniqueFilter($scope.fontSizes);
+    $scope.uniqueWidths = uniqueFilter($scope.widths);
+    $scope.uniqueHeights = uniqueFilter($scope.heights);
+    $scope.uniqueColors = uniqueFilter($scope.colors);
+    $scope.uniqueBackgroundColors = uniqueFilter($scope.backgroundColors);
+  };
+});
+
 
 // Converts all font sizes to pixel values for sorting
 // This adds a value to each font-size declaration object

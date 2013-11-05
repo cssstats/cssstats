@@ -2,8 +2,8 @@
 
 
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors',
-  function($scope, $http, $location, declarations, declarationsByType, selectors) {
+  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors', 'createUniques',
+  function($scope, $http, $location, declarations, declarationsByType, selectors, createUniques) {
 
     console.log('GlobalCtrl');
 
@@ -20,6 +20,7 @@ rprtr.controller('GlobalCtrl',
       $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
+        createUniques($scope);
         $scope.loading = false;
       });
       // This might break the parser
@@ -45,8 +46,7 @@ rprtr.controller('GlobalCtrl',
 }]);
 
 
-rprtr.controller('HomeCtrl', ['$scope', function($scope) {
-  console.log('HomeCtrl');
+rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
 
 }]);
 
@@ -67,8 +67,6 @@ rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope,
 }]);
 
 rprtr.controller('FontSizeCtrl', ['$scope', '$filter', function($scope, $filter){
-  var fontFilter = $filter('unique');
-  $scope.uniqueFontSizes = fontFilter($scope.fontSizes);
 }]);
 
 rprtr.controller('DeclarationsCtrl', ['$scope', function($scope){
