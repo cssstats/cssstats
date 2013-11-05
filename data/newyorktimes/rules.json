@@ -1,0 +1,4367 @@
+{
+  "type": "stylesheet",
+  "stylesheet": {
+    "rules": [
+      {
+        "type": "comment",
+        "comment": " video ad countdown styles "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdCountdownContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "relative"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "24px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0 0 -24px 0"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "uppercase"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/video/background-1x1-2d2d2d-90a.png) repeat"
+          },
+          {
+            "type": "comment",
+            "comment": " < ie9 "
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "rgba(45,45,45,0.9)"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "10"
+          },
+          {
+            "type": "declaration",
+            "property": "-webkit-transform-style",
+            "value": "preserve-3d"
+          },
+          {
+            "type": "comment",
+            "comment": " fix for android chrome to preserve z-index on video "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdCountdown",
+          ".videoAdSkipButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px !important"
+          },
+          {
+            "type": "comment",
+            "comment": " take precedence over more specific styles for p tag "
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "24px !important"
+          },
+          {
+            "type": "comment",
+            "comment": " need important because of conflict with blogs "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdCountdownContainerSmall .videoAdCountdown",
+          ".videoAdCountdownContainerSmall .videoAdSkipButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 7px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdCountdownContainerSmall .videoAdCountdown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdCountdown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "24px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "center"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#e2e2e2"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdSkipButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "right",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-right",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "underline"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "right"
+          },
+          {
+            "type": "comment",
+            "comment": " ie7 "
+          },
+          {
+            "type": "declaration",
+            "property": "cursor",
+            "value": "pointer"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#999"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoAdSkipButton.hover"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#ccc"
+          }
+        ]
+      },
+      {
+        "type": "import",
+        "import": "url(/css/0.1/screen/common/util/tooltip.css)"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer"
+        ],
+        "declarations": []
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .activity"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "clear",
+            "value": "both"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "8px"
+          },
+          {
+            "type": "declaration",
+            "property": "overflow",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .userImage"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-right",
+            "value": "5px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .actor"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Arial, Helvetica, sans-serif"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .verb"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#999"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "uppercase"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Arial, Helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "normal"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .thumb"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "right"
+          },
+          {
+            "type": "declaration",
+            "property": "clear",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "50px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "50px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Arial, Helvetica, sans-serif"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .popular"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Georgia, serif"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .sectionHeader",
+          "#facebookContainer .sectionHeaderHome"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "12px"
+          },
+          {
+            "type": "declaration",
+            "property": "white-space",
+            "value": "nowrap"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: forms.css 69372 2011-06-08 14:54:46Z fisherc $\n/css/0.1/screen/common/forms.css\n(c)2006 - 2010 The New York Times Company\n"
+      },
+      {
+        "type": "comment",
+        "comment": " form layout controls "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".lastControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "0 !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalControl .control"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-right",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalControl .lastControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-right",
+            "value": "0 !important"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "10px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalControl .control",
+          ".horizontalControl .legendContainer",
+          ".horizontalControl .labelContainer",
+          ".horizontalFormControl .legendContainer",
+          ".horizontalFormControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " clearfix control elements "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control:after",
+          ".horizontalControl:after",
+          ".horizontalFormControl:after"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "content",
+            "value": "\".\""
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "clear",
+            "value": "both"
+          },
+          {
+            "type": "declaration",
+            "property": "visibility",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control",
+          ".horizontalControl",
+          ".horizontalFormControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control",
+          ".horizontalControl",
+          ".horizontalFormControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*display",
+            "value": "inline-block"
+          },
+          {
+            "type": "comment",
+            "comment": " IE8 + ignores this "
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " other controls "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".checkboxControl .labelContainer",
+          ".radioControl .labelContainer",
+          ".switchControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".checkboxControl .fieldContainer",
+          ".radioControl .fieldContainer",
+          ".switchControl .fieldContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".checkboxControl .fieldContainer",
+          ".radioControl .fieldContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "19px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "0 !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".checkboxControl .labelContainer",
+          ".radioControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "19px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".checkboxControl .checkbox",
+          ".radioControl .radio"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "2px 0 0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".errorControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "relative"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " reset labels back to inline default, global.css sets them to block, use .blockLabel if block is needed. "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control label"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".labelBd"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".control .checkboxLabelSm"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline-block"
+          },
+          {
+            "type": "comment",
+            "comment": " creates browser consistent box height "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".labelContainer .insetV"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "4px 0 0"
+          },
+          {
+            "type": "comment",
+            "comment": " use to align label to input type text "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".radio",
+          ".checkbox"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*height",
+            "value": "13px"
+          },
+          {
+            "type": "comment",
+            "comment": " IE7 for vertical alignment consistency "
+          },
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "13px"
+          },
+          {
+            "type": "comment",
+            "comment": " IE7 for horizontal alignment consistency "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".legendDescription",
+          ".legendDescriptionLg",
+          ".labelDescription",
+          ".inputDescription",
+          ".selectDescription",
+          ".textareaDescription"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "normal"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#808080"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".legendDescription",
+          ".labelDescription",
+          ".inputDescription",
+          ".selectDescription",
+          ".textareaDescription",
+          ".checkboxLabelSm"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "comment",
+            "comment": " px in case nested "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".legendDescriptionLg"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "comment",
+            "comment": " px in case nested "
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " font family stack "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".formHint",
+          ".legendDescription",
+          ".legendDescriptionLg",
+          ".labelDescription",
+          ".inputDescription",
+          ".selectDescription",
+          ".textareaDescription",
+          ".button",
+          ".applicationButton",
+          ".applicationButtonLt",
+          ".textButton",
+          ".appButton",
+          ".appButtonSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " form hints "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".formHint"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "1em"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " input hints "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".inputHint"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#808080"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " error handling "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytdvalidateError"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#a81817"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " buttons "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".button",
+          ".applicationButton",
+          ".applicationButtonLt",
+          ".textButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "vertical-align",
+            "value": "middle"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "center"
+          },
+          {
+            "type": "declaration",
+            "property": "overflow",
+            "value": "visible"
+          },
+          {
+            "type": "declaration",
+            "property": "cursor",
+            "value": "pointer"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".button",
+          ".applicationButton",
+          ".applicationButtonLt"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "-moz-border-radius",
+            "value": "2px"
+          },
+          {
+            "type": "declaration",
+            "property": "-webkit-border-radius",
+            "value": "2px"
+          },
+          {
+            "type": "declaration",
+            "property": "border-radius",
+            "value": "2px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".button"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "1px 2px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "12px"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #c1c1c1"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#333"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".applicationButton",
+          ".applicationButtonLt",
+          ".textButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "5px 10px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "13px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".applicationButton",
+          ".textButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".textButton"
+        ],
+        "declarations": [
+          {
+            "type": "comment",
+            "comment": " appears as border-less button "
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "normal"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".applicationButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#004276"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".applicationButtonLt"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #004276"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-top",
+            "value": "4px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-bottom",
+            "value": "4px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "a.applicationButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#fff"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "a.applicationButtonLt"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "a.applicationButton:hover",
+          "a.applicationButtonLt:hover"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " webkit padding adjustments "
+      },
+      {
+        "type": "media",
+        "media": "screen and (-webkit-min-device-pixel-ratio:0)",
+        "rules": [
+          {
+            "type": "rule",
+            "selectors": [
+              ".button"
+            ],
+            "declarations": [
+              {
+                "type": "declaration",
+                "property": "padding",
+                "value": "3px 4px 2px"
+              }
+            ]
+          },
+          {
+            "type": "rule",
+            "selectors": [
+              ".applicationButton",
+              ".textButton"
+            ],
+            "declarations": [
+              {
+                "type": "declaration",
+                "property": "padding",
+                "value": "6px 12px"
+              }
+            ]
+          },
+          {
+            "type": "rule",
+            "selectors": [
+              ".applicationButtonLt"
+            ],
+            "declarations": [
+              {
+                "type": "declaration",
+                "property": "padding-top",
+                "value": "5px"
+              },
+              {
+                "type": "declaration",
+                "property": "padding-bottom",
+                "value": "5px"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " app buttons (sliding door images seen in timespeople) "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton",
+          ".appButtonSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "vertical-align",
+            "value": "middle"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "normal !important"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 12px 0 0"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "28px"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "white"
+          },
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "center"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/rightcap.png) right no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "cursor",
+            "value": "pointer"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButtonSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 8px 0 0"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "19px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/rightcapsmall.png) right no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton::-moz-focus-inner",
+          ".appButtonSmall::-moz-focus-inner"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton:focus",
+          ".appButtonSmall:focus"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "outline",
+            "value": "1px dotted"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton span",
+          ".appButtonSmall span"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "white-space",
+            "value": "nowrap"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 0 0 12px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "28px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "28px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/leftcap.png) left no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButtonSmall span"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 0 0 8px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "19px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "19px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/leftcapsmall.png) left no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".altSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "normal"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/rightcapsmall_line.png) right no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".altSmall span"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/leftcapsmall_line.png) left no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButtonSmallDone"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#808080"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "normal"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/rightcapsmall_done.png) right no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButtonSmallDone span"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/apps/buttons/leftcapsmall_done.png) left no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButtonDisabled"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "opacity",
+            "value": "0.5"
+          },
+          {
+            "type": "declaration",
+            "property": "-moz-opacity",
+            "value": "0.5"
+          },
+          {
+            "type": "declaration",
+            "property": "filter",
+            "value": "alpha(opacity=50)"
+          },
+          {
+            "type": "declaration",
+            "property": "cursor",
+            "value": "default"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": "FIXME remove when this is added in ie files"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton",
+          ".appButtonSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "auto"
+          },
+          {
+            "type": "declaration",
+            "property": "*overflow",
+            "value": "visible"
+          },
+          {
+            "type": "declaration",
+            "property": "_width",
+            "value": "auto"
+          },
+          {
+            "type": "declaration",
+            "property": "_overflow",
+            "value": "visible"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".appButton span",
+          ".appButtonSmall span"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "_margin-top",
+            "value": "1px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "a.appButton",
+          "a.appButtonSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "white !important"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "a.altSmall"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276 !important"
+          }
+        ]
+      },
+      {
+        "type": "import",
+        "import": "url(\"/css/app/facebook/base.css\")"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "187px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "-26px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "-1px"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "-1px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .actor",
+          "#facebookContainer p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "14px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .popular"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "12px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .caption"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "5px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".fbPrivacy"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#777"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "14px"
+          },
+          {
+            "type": "declaration",
+            "property": "border-bottom",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-bottom",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#cColumnTopSpanRegion \n.singleRuleDivider"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "0 !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".fb_button"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".fb_button_text"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "center"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-right",
+            "value": "0px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "0px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer .popular"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(\"/images/misc/bullet4x4.gif\") no-repeat scroll left 0.45em transparent"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 0 0 8px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#fbInfo"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookContainer.loggedIn #fbInfo"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "-1.1em"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "1em"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: loginModal.css 127422 2013-06-11 17:57:01Z mmenezes $\n/css/0.1/screen/common/modal/loginModal.css\n(c)2006 - 2010 The New York Times Company "
+      },
+      {
+        "type": "import",
+        "import": "url(/css/0.1/screen/common/forms.css)"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "right"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "120px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .insetV"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "4px 0 0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm label"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#000"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "13px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .fieldContainer",
+          ".loginModalForm .insetContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "130px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .passwordControl .labelDescription"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "18px"
+          },
+          {
+            "type": "declaration",
+            "property": "right",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "12px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .loginSubmitControl .control"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .loginSubmitControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .loginSubmitControl .checkboxControl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "5px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "110px"
+          },
+          {
+            "type": "comment",
+            "comment": " fixes IE7 bug PMUIS-56 "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .loginSubmitControl .checkboxControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "0px"
+          },
+          {
+            "type": "comment",
+            "comment": " fixes IE7 bug PMUIS-56 "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".loginModalForm .checkboxLabel"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline-block"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "3px"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: modalForms.css 116576 2012-11-27 18:44:58Z joseph.crane-messina $\n/css/0.1/screen/common/modal/modalForms.css\n(c)2006 - 2012 The New York Times Company "
+      },
+      {
+        "type": "comment",
+        "comment": " This file is dependent on /common/forms.css which should be imported \ninto your [name]Modal.css file "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm label",
+          ".modalForm .error",
+          ".nytModalContent .notificationContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm input",
+          ".modalForm label",
+          ".modalForm textarea",
+          ".modalForm select"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#000"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm input"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "vertical-align",
+            "value": "middle"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .containingBlock"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "relative"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm a"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#004276"
+          },
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm a:visited"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#666699"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm a:hover"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "underline"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .hidden"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "none !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .errorContainer",
+          ".nytModalContent .notificationContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "relative"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .error",
+          ".nytModalContent .notification"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0 0 1em 0"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "12px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "15px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .error",
+          ".nytModalContent .errorNotification"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#a81817"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .applicationButtonInactive"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#bfbfbf"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm .submitLoader"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline"
+          },
+          {
+            "type": "comment",
+            "comment": " js toggling display "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".modalForm  .submitLoader img"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "vertical-align",
+            "value": "middle"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " layout styles "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "120px"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .fieldContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "130px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .fieldContainer  .error"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .checkboxControl .fieldContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "143px"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .checkboxControl .labelContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "auto"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "149px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .checkboxLabel"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "inline-block"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-top",
+            "value": "3px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .buttonControl .fieldContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-left",
+            "value": "100px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .applicationButton"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*position",
+            "value": "relative"
+          },
+          {
+            "type": "declaration",
+            "property": "*left",
+            "value": "31px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "31px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".horizontalModalFormControl .submitLoader"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "102px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModalBg"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "fixed"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "2147483644"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "relative"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "150px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "632px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "340px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0 auto"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "white"
+          },
+          {
+            "type": "declaration",
+            "property": "box-shadow",
+            "value": "2px 2px 14px #000000"
+          },
+          {
+            "type": "declaration",
+            "property": "-moz-box-shadow",
+            "value": "2px 2px 14px #000000"
+          },
+          {
+            "type": "declaration",
+            "property": "-webkit-box-shadow",
+            "value": "2px 2px 14px #000000"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal .inset"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "14px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Arial, Helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "8px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal label"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#999"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "8px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".facebookModalBar"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "bottom",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "right"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#f6f6f6"
+          },
+          {
+            "type": "declaration",
+            "property": "border-top",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "56px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".facebookModalBarTop"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border-top",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "border-bottom",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal td"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "vertical-align",
+            "value": "top"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal .facebookModalInner"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "90px 30px 30px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#facebookModal .facebookModalText"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "Georgia, serif"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "14px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "16px"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: nytModal.css 64263 2011-08-16 15:43:23Z reed.emmons $\n/css/0.1/screen/common/modal/nytModal.css\n(c)2006 - 2010 The New York Times Company "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalCloseContainer",
+          ".nytModal",
+          ".nytModalPointer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalContainer"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "2147483644"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytOverlay"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "fixed"
+          },
+          {
+            "type": "declaration",
+            "property": "bottom",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "100%"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "-ms-filter",
+            "value": "\"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)\""
+          },
+          {
+            "type": "declaration",
+            "property": "filter",
+            "value": "alpha(opacity=50)"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "2147483645"
+          },
+          {
+            "type": "declaration",
+            "property": "opacity",
+            "value": "0.5"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "-moz-box-shadow",
+            "value": "0 1px 3px #aaa"
+          },
+          {
+            "type": "declaration",
+            "property": "-webkit-box-shadow",
+            "value": "0 1px 3px #aaa"
+          },
+          {
+            "type": "declaration",
+            "property": "box-shadow",
+            "value": "0 1px 3px #aaa"
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "left"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "2147483646"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #c5d3e1"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "#e6eff8"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .inset"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalHeader"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "4px"
+          },
+          {
+            "type": "declaration",
+            "property": "zoom",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " font stacks "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalHeading",
+          ".nytModalClose"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalHeading"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "14px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "uppercase"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#000"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .opposingFloatControl:after",
+          ".nytModal .wrap:after"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "content",
+            "value": "\".\""
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "clear",
+            "value": "both"
+          },
+          {
+            "type": "declaration",
+            "property": "visibility",
+            "value": "hidden"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .opposingFloatControl",
+          ".nytModal .wrap"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "*display",
+            "value": "inline-block"
+          },
+          {
+            "type": "comment",
+            "comment": " IE8 ignores this "
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .opposingFloatControl .element1"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "left"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .opposingFloatControl .element2"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalClose"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-right",
+            "value": "18px"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "uppercase"
+          },
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#000 !important"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/modules/modal/close-dialog-box-icon.gif) right top no-repeat"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalClose:hover"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "text-decoration",
+            "value": "underline"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalClose.hideText"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-right",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "13px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .singleRule"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border-top",
+            "value": "1px solid #ccc"
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "12px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding-top",
+            "value": "8px"
+          },
+          {
+            "type": "declaration",
+            "property": "clear",
+            "value": "both"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal .nytModalContent"
+        ],
+        "declarations": [
+          {
+            "type": "comment",
+            "comment": " increased specifity to beat singleRule ugh. "
+          },
+          {
+            "type": "declaration",
+            "property": "margin-bottom",
+            "value": "20px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerDown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "48%"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/modules/modal/pointer-down.png) left top no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "11px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerLeft"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "48%"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "-10px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/modules/modal/pointer-left.png) left top no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "15px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerRight"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "48%"
+          },
+          {
+            "type": "declaration",
+            "property": "right",
+            "value": "-10px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/modules/modal/pointer-right.png) left top no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "15px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerUp"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "48%"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "-8px"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "url(/images/modules/modal/pointer-up.png) left top no-repeat"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "8px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "12px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerDown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-down-blue.png)"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerLeft"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-left-blue.png)"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerRight"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-right-blue.png)"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerUp"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-up-blue.png)"
+          },
+          {
+            "type": "declaration",
+            "property": "background-color",
+            "value": "transparent"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " IE8 and below get non shadowed pointer images "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerDown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-down-no-shadow.png)\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerLeft"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "-8px\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-left-no-shadow.png)\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "10px\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "8px\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModalPointerRight"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "right",
+            "value": "-8px\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-right-no-shadow.png)\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "10px\\9"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "8px\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerDown"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-down-no-shadow-blue.png)\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerLeft"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-left-no-shadow-blue.png)\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.blue .nytModalPointerRight"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background-image",
+            "value": "url(/images/modules/modal/pointer-right-no-shadow-blue.png)\\9"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.growl"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "white"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#000"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "rgba(0, 0, 0, .8)"
+          },
+          {
+            "type": "declaration",
+            "property": "border-radius",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "2.5em"
+          },
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "font-weight",
+            "value": "bold"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.growl .nytModalHeader"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".nytModal.growl .singleRule"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "none"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: poster.css 87287 2012-01-24 22:39:33Z david $\n/css/0.1/screen/common/modules/video/poster.css\n(c)2006 - 2012 The New York Times Company "
+      },
+      {
+        "type": "comment",
+        "comment": "container"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoOverlayDiv"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "overflow",
+            "value": "hidden"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#272727"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "20"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": "playbuttons"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "overflow",
+            "value": "hidden"
+          },
+          {
+            "type": "declaration",
+            "property": "opacity",
+            "value": "0.7"
+          },
+          {
+            "type": "declaration",
+            "property": "filter",
+            "value": "Alpha(opacity=70)"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #fff"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#000"
+          },
+          {
+            "type": "declaration",
+            "property": "border-radius",
+            "value": "4px"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "30"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv.standardSize",
+          ".videoPlayButtonDiv.standardSize img"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "55px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "50px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv.mediumSize",
+          ".videoPlayButtonDiv.mediumSize img"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "46px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "42px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv.smallSize",
+          ".videoPlayButtonDiv.smallSize img"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "34px"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "31px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonContracted"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "55px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonExpanded.standardSize"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "-47px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "146px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonExpanded.mediumSize"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "-37px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "120px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonExpanded.smallSize"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "-39px"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "100px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonExpanded.standardSize.bottomleft",
+          ".videoPlayButtonExpanded.mediumSize.bottomleft",
+          ".videoPlayButtonExpanded.smallSize.bottomleft"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "margin-left",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial, helvetica, sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "18px"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "49px"
+          },
+          {
+            "type": "declaration",
+            "property": "text-transform",
+            "value": "uppercase"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#fff"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "normal"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv.mediumSize p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "11px"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "42px"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "15px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonDiv.smallSize p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "left",
+            "value": "30px"
+          },
+          {
+            "type": "declaration",
+            "property": "top",
+            "value": "10px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoPlayButtonContracted p"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "none !important"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": "hotspot"
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoHotspotDiv"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "block"
+          },
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "40"
+          },
+          {
+            "type": "comment",
+            "comment": "top"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#000"
+          },
+          {
+            "type": "declaration",
+            "property": "zoom",
+            "value": "1"
+          },
+          {
+            "type": "declaration",
+            "property": "opacity",
+            "value": "0.4"
+          },
+          {
+            "type": "declaration",
+            "property": "filter",
+            "value": "Alpha(opacity=40)"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoHotspotDiv img"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".videoHotspotDiv.active"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "cursor",
+            "value": "pointer"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " $Id: regiModal.css 114054 2012-10-19 18:31:39Z fisherc $\n/css/0.1/screen/common/modal/regiModal.css\n(c)2006 - 2012 The New York Times Company "
+      },
+      {
+        "type": "import",
+        "import": "url(/css/0.1/screen/common/forms.css)"
+      },
+      {
+        "type": "import",
+        "import": "url(/css/0.1/screen/common/modal/modalForms.css)"
+      },
+      {
+        "type": "comment",
+        "comment": "$Id: styles.css 7828 2009-01-13 18:27:03Z fisherc $\n/css/0.1/print/styles.css \n(c)2006 - 2009 The New York Times Company "
+      },
+      {
+        "type": "comment",
+        "comment": " Global "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#shell"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "973px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#page"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*overflow",
+            "value": "hidden !important"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " Times People "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#TP_container",
+          "#TP_container_shadow"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute !important"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " Sectionfront "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          ".wideA .bColumn"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "203px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "_width",
+            "value": "203px !important"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": " Homepage "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#home #main",
+          "#home #classifiedsWidget #realEstate",
+          "#home #classifiedsWidget #autos",
+          "#home #classifiedsWidget #jobMarket",
+          "#home #classifiedsWidget #allClassifieds"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*overflow",
+            "value": "hidden !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#home .cColumn"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "350px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "_width",
+            "value": "350px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#home .cColumn .subColumn-2 div.last",
+          "#home .cColumn .subColumn-2 .lastColumn"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "176px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "_width",
+            "value": "176px !important"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#home .wideA .bColumn"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "*width",
+            "value": "173px !important"
+          },
+          {
+            "type": "declaration",
+            "property": "_width",
+            "value": "173px !important"
+          }
+        ]
+      },
+      {
+        "type": "comment",
+        "comment": "$Id: tooltip.css 103768 2012-07-17 17:39:19Z konige $\n/css/0.1/screen/common/util/tooltip.css\n(c)2006 - 2011 The New York Times Company "
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip",
+          ".toolTip"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "#FFFFEF"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "352px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "10px"
+          },
+          {
+            "type": "declaration",
+            "property": "border",
+            "value": "1px solid #D5D5D5"
+          },
+          {
+            "type": "declaration",
+            "property": "font-family",
+            "value": "arial,helvetica,sans-serif"
+          },
+          {
+            "type": "declaration",
+            "property": "position",
+            "value": "absolute"
+          },
+          {
+            "type": "declaration",
+            "property": "font-size",
+            "value": "1.1em"
+          },
+          {
+            "type": "declaration",
+            "property": "color",
+            "value": "#333"
+          },
+          {
+            "type": "declaration",
+            "property": "display",
+            "value": "none"
+          },
+          {
+            "type": "declaration",
+            "property": "z-index",
+            "value": "100000003"
+          },
+          {
+            "type": "comment",
+            "comment": " one less than 100000004 reserved for adops fullscreen overlay ads "
+          },
+          {
+            "type": "declaration",
+            "property": "text-align",
+            "value": "left"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip #content",
+          ".toolTip .content"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0 5px 0 0"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "340px"
+          },
+          {
+            "type": "declaration",
+            "property": "line-height",
+            "value": "15px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip #button"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "float",
+            "value": "right"
+          },
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "13px"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "background",
+            "value": "transparent url(/images/article/comments/buttons/close_window.gif) no-repeat left top"
+          },
+          {
+            "type": "declaration",
+            "property": "overflow",
+            "value": "hidden"
+          },
+          {
+            "type": "declaration",
+            "property": "margin",
+            "value": "0"
+          },
+          {
+            "type": "declaration",
+            "property": "height",
+            "value": "0 !important"
+          },
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "13px 0 0 0"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip #button a"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding",
+            "value": "15px"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip.autoWidth",
+          "#toolTip.autoWidth #content"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "width",
+            "value": "auto"
+          }
+        ]
+      },
+      {
+        "type": "rule",
+        "selectors": [
+          "#toolTip.autoWidth #content"
+        ],
+        "declarations": [
+          {
+            "type": "declaration",
+            "property": "padding-right",
+            "value": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

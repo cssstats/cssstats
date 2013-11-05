@@ -102,11 +102,11 @@
 .mhx { margin: 0 4rem; }
 
 @include break(not-small) {
-  .pn-ns { padding: 0; }
-  .ps-ns { padding: .5rem; }
-  .pm-ns { padding: 1rem; }
-  .pl-ns { padding: 2rem; }
-  .px-ns { padding: 4rem; }
+  .pan-ns { padding: 0; }
+  .pas-ns { padding: .5rem; }
+  .pam-ns { padding: 1rem; }
+  .pal-ns { padding: 2rem; }
+  .pax-ns { padding: 4rem; }
 
   .pln-ns { padding-left: 0; }
   .pls-ns { padding-left: .5rem; }
@@ -147,11 +147,11 @@
 
   /* Margins */
 
-  .mn-ns { margin: 0; }
-  .ms-ns { margin: .5rem; }
-  .mm-ns { margin: 1rem; }
-  .ml-ns { margin: 2rem; }
-  .mx-ns { margin: 4rem; }
+  .man-ns { margin: 0; }
+  .mas-ns { margin: .5rem; }
+  .mam-ns { margin: 1rem; }
+  .mal-ns { margin: 2rem; }
+  .max-ns { margin: 4rem; }
 
   .mln-ns { margin-left: 0; }
   .mls-ns { margin-left: .5rem; }
@@ -191,11 +191,11 @@
 }
 
 @include break(medium) {
-  .pn-m { padding: 0; }
-  .ps-m { padding: .5rem; }
-  .pm-m { padding: 1rem; }
-  .pl-m { padding: 2rem; }
-  .px-m { padding: 4rem; }
+  .pan-m { padding: 0; }
+  .pas-m { padding: .5rem; }
+  .pam-m { padding: 1rem; }
+  .pal-m { padding: 2rem; }
+  .pax-m { padding: 4rem; }
 
   .pln-m { padding-left: 0; }
   .pls-m { padding-left: .5rem; }
@@ -280,11 +280,11 @@
 }
 
 @include break(large) {
-  .pn-l { padding: 0; }
-  .ps-l { padding: .5rem; }
-  .pm-l { padding: 1rem; }
-  .pl-l { padding: 2rem; }
-  .px-l { padding: 4rem; }
+  .pan-l { padding: 0; }
+  .pas-l { padding: .5rem; }
+  .pam-l { padding: 1rem; }
+  .pal-l { padding: 2rem; }
+  .pax-l { padding: 4rem; }
 
   .pln-l { padding-left: 0; }
   .pls-l { padding-left: .5rem; }
@@ -325,11 +325,11 @@
 
   /* Margins */
 
-  .mn-l { margin: 0; }
-  .ms-l { margin: .5rem; }
-  .mm-l { margin: 1rem; }
-  .ml-l { margin: 2rem; }
-  .mx-l { margin: 4rem; }
+  .man-l { margin: 0; }
+  .mas-l { margin: .5rem; }
+  .mam-l { margin: 1rem; }
+  .mal-l { margin: 2rem; }
+  .max-l { margin: 4rem; }
 
   .mln-l { margin-left: 0; }
   .mls-l { margin-left: .5rem; }
