@@ -21,23 +21,30 @@
   </section>
 
   <section id="overview" class="pvx phl">
-    <h1 class="f2">The Numbers</h1>
+    <h1 class="f2">This cascading stylesheet has...</h1>
     <ul class="mbl sans-serif">
       <li class="mvm">
-        This cascading stylesheet has exactly <b>{{ selectors.length }}</b>
+        <b>{{ selectors.length }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
            title="What is a selector? TO THE SPEC!">
            selectors.
         </a>
+        Wut.
       </li>
-      <li class="mvm">There are <b>{{ declarations.length }}</b> total declarations. Only <b>{{ uniqueDeclarations.length }}</b> of these are unique.</li>
-      <li class="mvm"><b>{{ fontSizes.length }}</b> font-size declarations</li>
-      <li class="mvm"><b>{{ uniqueFontSizes.length }}</b> unique font-size declarations</li>
+      <li class="mvm">
+        There are <b>{{ declarations.length }}</b> declarations total.
+        <b>{{ uniqueDeclarations.length }}</b> of these are unique.
+        <br>
+        <p>Abstraction could potentially reduce your declarations by ~<b>{{ 100 - (uniqueDeclarations.length / declarations.length * 100) }}</b>%</p>
+      </li>
       <li class="mvm">There are <b>{{ floats.length }}</b> floats. Woah, I wonder what happend. You only have three choices.</li>
-      <li class="mvm"><b>{{ widths.length }}</b> width declarations</li>
-      <li class="mvm"><b>{{ uniqueWidths.length }}</b> unique width declarations</li>
-      <li class="mvm"><b>{{ heights.length }}</b> height declarations</li>
-      <li class="mvm"><b>{{ uniqueHeights.length }}</b> unique height declarations</li>
+      <li class="mvm">
+        Widths: <b>{{ widths.length }}</b> (total) vs.
+                <b>{{ uniqueWidths.length }}</b> (Unique)
+      </li>
+      <li class="mvm">
+        Heights: <b>{{ heights.length }}</b> Total vs.
+                 <b>{{ uniqueHeights.length }}</b> Unique</li>
       <li class="mvm"><b>{{ colors.length }}</b> color declarations</li>
       <li class="mvm"><b>{{ uniqueColors.length }}</b> unique color declarations</li>
       <li class="mvm"><b>{{ backgroundColors.length }}</b> background-color declarations</li>
@@ -45,6 +52,14 @@
       <li class="mvm"><b>{{ backgroundImages.length }}</b> background-image declarations</li>
       <li class="mvm"><b>{{ transitions.length }}</b> transition declarations</li>
     </ul>
+    <article class="sans-serif">
+      <h1 class="f4 man dib thin tracked">Font Sizes</h1>
+      <p class="f1 man">
+        <b>{{ fontSizes.length }}</b>
+        <span class="thin lh-2 ltgry">|</span>
+        <b>{{ uniqueFontSizes.length }}</b>
+      </p>
+    </article>
     <!-- Broke this by removing the unique filter from the parser - will fix -->
     <p>Refactoring could potentially reduce your css by {{ refactoringPotential }}% </p>
   </section>
