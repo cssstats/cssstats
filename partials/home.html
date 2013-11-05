@@ -1,43 +1,42 @@
-
   <h1 ng-show="loading" class="tc f5 pal man bg-green wht">Loading...</h1>
   <h1 ng-show="parsing" class="tc f5  pal man bg-green wht">Parsing data...</h1>
 
 <div ng-show="declarations" ng-controller="HomeCtrl">
-
-<header class="phl">
-  <h1>CSS Overview for {{ styleData }}</h1>
-</header>
-
-  <section id="warnings" class="phl">
-    <div ng-show="fontSizesWarning">
-      <h2>{{ fontSizesWarning }}</h2>
-    </div>
-    <div ng-show="uniqueFontSizesWarning">
-      <h2>{{ uniqueFontSizesWarning }}</h2>
-    </div>
-    <div ng-show="declarationsWarning">
-      <h2>{{ declarationsWarning }}</h2>
-    </div>
-  </section>
-
-  <section id="overview" class="pvx phl">
-    <h1 class="f2">This cascading stylesheet has...</h1>
-    <ul class="mbl sans-serif">
-      <li class="mvm">
+  
+  <section id="overview" class="bg-lightcyan pvl phl">
+    <h1 class="f3 thin mtl">{{ styleData }}</h1>
+    <article class="mbl mtx sans-serif">
+      <p class="f1 mega-l man">
         <b>{{ selectors.length }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
            title="What is a selector? TO THE SPEC!">
-           selectors.
+           selectors!
         </a>
         Wut.
-      </li>
+      </p>
+      <p>Some genius decided IE only allows 4095 selectors per stylesheet. So, that's a thing.</p>
+      </article>
+    <article class="sans-serif mvm pvl bb">
+      <p class="f1 f1-l man">
+        <b>{{ fontSizes.length }}</b>
+        <span class="gry"> font-sizes , but only</span>
+        <b>{{ uniqueFontSizes.length }}</b>
+        <span class="gry">of these are unique.</span>
+      </p>
+      <p>
+        Woah. They are using {{ fontSizes.length }} lines of code when they just need like,
+        {{ uniqueFontSizes.length }} lines. Who knows what happened here.
+      </p>
+    </article>
+    <article class="sans-serif mvx">
+      <p class="f1 f1-l man"><b>{{ floats.length }}</b> floats? Really?</p>
+      <p>But there are only three choices...</p>
+    </article>
+    <ul>
       <li class="mvm">
         There are <b>{{ declarations.length }}</b> declarations total.
         <b>{{ uniqueDeclarations.length }}</b> of these are unique.
-        <br>
-        <p>Abstraction could potentially reduce your declarations by ~<b>{{ 100 - (uniqueDeclarations.length / declarations.length * 100) }}</b>%</p>
       </li>
-      <li class="mvm">There are <b>{{ floats.length }}</b> floats. Woah, I wonder what happend. You only have three choices.</li>
       <li class="mvm">
         Widths: <b>{{ widths.length }}</b> (total) vs.
                 <b>{{ uniqueWidths.length }}</b> (Unique)
@@ -52,16 +51,19 @@
       <li class="mvm"><b>{{ backgroundImages.length }}</b> background-image declarations</li>
       <li class="mvm"><b>{{ transitions.length }}</b> transition declarations</li>
     </ul>
-    <article class="sans-serif">
-      <h1 class="f4 man dib thin tracked">Font Sizes</h1>
-      <p class="f1 man">
-        <b>{{ fontSizes.length }}</b>
-        <span class="thin lh-2 ltgry">|</span>
-        <b>{{ uniqueFontSizes.length }}</b>
-      </p>
-    </article>
     <!-- Broke this by removing the unique filter from the parser - will fix -->
     <p>Refactoring could potentially reduce your css by {{ refactoringPotential }}% </p>
+  </section>
+  <section id="warnings" class="phl">
+    <article ng-show="fontSizesWarning">
+      <h1>{{ fontSizesWarning }}</h1>
+    </article>
+    <article ng-show="uniqueFontSizesWarning">
+      <h1>{{ uniqueFontSizesWarning }}</h1>
+    </article>
+    <article ng-show="declarationsWarning">
+      <h1>{{ declarationsWarning }}</h1>
+    </article>
   </section>
 
 </div>
