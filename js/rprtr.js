@@ -17,7 +17,6 @@ var rprtr = angular.module('rprtr',[])
     $routeProvider.when('/dimensions', {templateUrl: 'partials/dimensions.html'});
 
     $routeProvider.when('/colors', {templateUrl: 'partials/colors.html'});
-    $routeProvider.when('/background-color', {templateUrl: 'partials/background-color.html'});
     $routeProvider.when('/background-image', {templateUrl: 'partials/background-image.html'});
     $routeProvider.when('/selector', {templateUrl: 'partials/selector.html'});
 

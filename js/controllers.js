@@ -99,6 +99,30 @@ rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope,
   anythingToRelative($scope.heights);
 }]);
 
+rprtr.controller('ColorCtrl', ['$scope', function($scope){
+  $scope.$watch('loading', function(){
+    $scope.viewColors = $scope.colors;
+  });
+  $scope.showAll = function(){
+    $scope.viewColors = $scope.colors;
+  };
+  $scope.showUnique = function() {
+    $scope.viewColors = $scope.uniqueColors;
+  };
+}]);
+
+rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
+  $scope.$watch('loading', function(){
+    $scope.viewBackgroundColors = $scope.backgroundColors;
+  });
+  $scope.showAll = function() {
+    $scope.viewBackgroundColors = $scope.backgroundColors;
+  };
+  $scope.showUnique = function() {
+    $scope.viewBackgroundColors = $scope.uniqueBackgroundColors;
+  };
+}]);
+
 
 
 rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){

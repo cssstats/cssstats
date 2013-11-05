@@ -1,21 +1,26 @@
 <div class="cf ptx">
-<section class="fl wi-50-ns phl pvm">
-  <h1 class="h2">Colors ({{ colors.length }})</h1>
+<section class="fl wi-50-ns phl pvm" ng-controller="ColorCtrl">
+  <h1 class="h2 dib mrs">Colors</h1>
+  <a href="" ng-click="showAll()">All ({{ colors.length }})</a>
+  <a href="" ng-click="showUnique()">Unique ({{ uniqueColors.length }})</a>
   <ul>
-    <li ng-repeat="color in colors | orderBy:'value'"
+    <li ng-repeat="color in viewColors | orderBy:'value'"
       class="sans-serif">
-    <var class="fsn b lh-2 ">{{ color.value }}</var>
-    <div
-      class="lh-copy"
-      style="color: {{ color.value }}">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-    </div>
-  </li>
-</ul>
+      <var class="fsn b lh-2 ">{{ color.value }}</var>
+      <div
+        class="lh-copy"
+        style="color: {{ color.value }}">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </div>
+    </li>
+  </ul>
 </section>
-<section class="fl wi-50-ns phl pvm">
-  <h2>Background Colors ({{ backgroundColors.length}})</h2> <ul>
-    <li ng-repeat="backgroundColor in backgroundColors | orderBy: 'value'"
+<section class="fl wi-50-ns phl pvm" ng-controller="BackgroundColorCtrl">
+  <h2 class="dib mrs">Background Colors</h2>
+  <a href="" ng-click="showAll()" ng-class="{'drkgry':viewBackgroundColors == backgroundColors}">All ({{ backgroundColors.length}})</a>
+  <a href="" ng-click="showUnique()">Unique ({{ uniqueBackgroundColors.length }})</a>
+  <ul>
+    <li ng-repeat="backgroundColor in viewBackgroundColors | orderBy: 'value'"
       class="f3 ttu fw9 sans-serif">
     <span class="f5">{{ backgroundColor.value }}</span>
     <div style="background-color: {{ backgroundColor.value }}; height: 5rem; width: 100%;" class="dib" > </div>
