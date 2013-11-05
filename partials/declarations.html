@@ -1,7 +1,16 @@
-<div class="pal pax-l">
-
-  <h1>Declarations <span class="thin">({{ uniqueDeclarations.length }})</span></h1>
-  <input ng-model="declarationsQuery">
-
-  <pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>
+<section>
+<header class="phl phx-l mvl">
+  <h1 class="man f2 f1-m mega-l ttu tracked">Declarations <span class="thin">({{ uniqueDeclarations.length }})</span></h1>
+</header>
+<div class="cf wi-100">
+  <div class="phl phx-l pbl fl wi-100 wi-25-ns">
+    <input placeholder="Search away, it's fun!" ng-model="declarationsQuery" class="input-txt sans-serif pam wi-100">
+    <p class="f6 sans-serif lh-copy">
+      If you think this is fun you should <a href="http://geoff.greer.fm/2011/12/27/the-silver-searcher-better-than-ack/" title="UNIX! AG! TO THE RESCUE!" class="blk">try the command line</a>. It's like this but way better.
+    </p>
+  </div>
+  <div class="phl phx-l fl wi-100 wi-75-ns">
+    <pre ng-repeat="declaration in uniqueDeclarations | filter:declarationsQuery | orderBy:'property'">{{ declaration.property }}: {{ declaration.value }}</pre>
+  </div>
 </div>
+</section>

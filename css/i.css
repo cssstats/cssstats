@@ -1855,6 +1855,30 @@
 
   .wi-full-ns {
     width: 100%; } }
+@media screen and (min-width: 48em) and (max-width: 64em) {
+  .wi-25-m {
+    width: 25%; }
+
+  .wi-50-m {
+    width: 50%; }
+
+  .wi-75-m {
+    width: 75%; }
+
+  .wi-full-m {
+    width: 100%; } }
+@media screen and (min-width: 64em) {
+  .wi-25-l {
+    width: 25%; }
+
+  .wi-50-l {
+    width: 50%; }
+
+  .wi-75-l {
+    width: 75%; }
+
+  .wi-full-l {
+    width: 100%; } }
 /* ==========================================================================
    GEOMETRY
    ========================================================================== */
