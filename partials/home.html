@@ -56,34 +56,46 @@
         </div>
       </div>
     </article>
-    <article class="sans-serif">
+    <article class="sans-serif mbx">
       <p class="man f1 b"> They only declared <b>{{ transitions.length }}</b> transitions.</p>
       <p>I bet they are really patting themselves on the back for this one.</p>
     </article>
-    <ul>
-      <li class="mvm">
-        Widths: <b>{{ widths.length }}</b> (total) vs.
-                <b>{{ uniqueWidths.length }}</b> (Unique)
+  <section class="pbl">
+    <h1 class="h4 tracked">Some other highlights</h1>
+    <ul class="sans-serif">
+      <li class="mvm f2">
+        Widths: <b>{{ widths.length }}</b> total /
+                <b>{{ uniqueWidths.length }}</b> unique
       </li>
-      <li class="mvm">
-        Heights: <b>{{ heights.length }}</b> Total vs.
-                 <b>{{ uniqueHeights.length }}</b> Unique</li>
-      <li class="mvm"><b>{{ colors.length }}</b> color declarations</li>
-      <li class="mvm"><b>{{ uniqueColors.length }}</b> unique color declarations</li>
-      <li class="mvm"><b>{{ backgroundColors.length }}</b> background-color declarations</li>
-      <li class="mvm"><b>{{ uniqueBackgroundColors.length }}</b> unique background-color declarations</li>
-      <li class="mvm"><b>{{ backgroundImages.length }}</b> background-image declarations</li>
+      <li class="mvm f2">
+        Heights: <b>{{ heights.length }}</b> total /
+        <b>{{ uniqueHeights.length }}</b> unique
+      </li>
+      <li class="mvm f2">
+        Color:
+        <b>{{ colors.length }}</b> total /
+        <b>{{ uniqueColors.length }} </b> unique
+      </li>
+      <li class="mvm f2">
+        Background colors:
+        <b>{{ backgroundColors.length }}</b> total /
+        <b>{{ uniqueBackgroundColors.length }}</b> unique
+      </li>
     </ul>
   </section>
-  <section id="warnings" class="phl">
+  <section id="warnings" class="bt mtl ptx">
+    <header>
+      <h1>WARNINGS</h1>
+      <h2>This is in some serious alpha mode</h2>
+    </header>
     <article ng-show="fontSizesWarning">
-      <h1>{{ fontSizesWarning }}</h1>
+      <h1 class="f1 f1-l mega-l">{{ fontSizesWarning }}</h1>
     </article>
     <article ng-show="uniqueFontSizesWarning">
-      <h1>{{ uniqueFontSizesWarning }}</h1>
+      <h1 class="f1 f1-l mega-l">{{ uniqueFontSizesWarning }}</h1>
     </article>
     <article ng-show="declarationsWarning">
-      <h1>{{ declarationsWarning }}</h1>
+      <h1 class="f1 f1-l mega-l">{{ declarationsWarning }}</h1>
     </article>
   </section>
 

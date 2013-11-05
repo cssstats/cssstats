@@ -69,7 +69,7 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
     if($scope.fontSizes) {
       if($scope.fontSizes.length > 128) {
-        $scope.fontSizesWarning = 'You have over 128 font-size declarations, you dick.';
+        $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
       } else if($scope.fontSizes.length > 512) {
         $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
       };

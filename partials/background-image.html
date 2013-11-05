@@ -1,10 +1,15 @@
-<section class="phl">
-<h2>Background Images ({{ backgroundImages.length}})</h2>
-<ul>
-  <li ng-repeat="backgroundImage in backgroundImages | removePrefixes | orderBy: 'value'">
-    <div style="background-image: {{ backgroundImage.value }};" class="paxl bg-cn">
-      {{ backgroundImage.property }}: {{ backgroundImage.value }}
-    </div>
-  </li>
-</ul>
+<section>
+  <header class="phl phx-l mvl">
+    <h1 class="man f1 mega-l ttu tracked lh">{{ backgroundImages.length}} Backgrounds</h1>
+    <h2 class="fw-normal f2 f2-m f2-l">Images and Gradients oh my</h2>
+  </header>
+  <div class="phl phx-l">
+    <ul>
+      <li ng-repeat="backgroundImage in backgroundImages | removePrefixes | orderBy: 'value'">
+        <div style="background-image: {{ backgroundImage.value }};" class="paxl bg-cn">
+          {{ backgroundImage.property }}: {{ backgroundImage.value }}
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
