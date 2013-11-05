@@ -5499,6 +5499,9 @@ table {
   .f6-m {
     font-size: .85rem; } }
 @media screen and (min-width: 64em) {
+  .super-mega-l {
+    font-size: 12rem; }
+
   .mega-l {
     font-size: 6rem; }
 
@@ -5661,6 +5664,9 @@ table {
 /* Leading */
 .lh {
   line-height: 1; }
+
+.lh-title {
+  line-height: 1.2; }
 
 .lh-copy {
   line-height: 1.6; }
