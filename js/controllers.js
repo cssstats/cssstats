@@ -8,7 +8,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Kinda hacky way of doing the select
-    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'bootstrap', 'topcoat'] };
+    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'newyorktimes', 'css', 'bbc', 'bootstrap', 'topcoat'] };
 
     if($location.search()) {
       $scope.styleData = $location.search().site;
