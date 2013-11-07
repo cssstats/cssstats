@@ -46,30 +46,36 @@ rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope
 
 
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
-  // $scope.$watch('loading', function(){
-  //   console.log('checking for warnings...');
-  //   if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
-  //   if($scope.fontSizes) {
-  //     if($scope.fontSizes.length > 128) {
-  //       $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
-  //     } else if($scope.fontSizes.length > 512) {
-  //       $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
-  //     };
-  //   };
-  //   if($scope.uniqueFontSizes){
-  //     if($scope.uniqueFontSizes.length > 64) {
-  //       $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
-  //     } else if ($scope.uniqueFontSizes.length > 128) {
-  //       $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
-  //     };
-  //   };
-  //   if($scope.declarations){
-  //     if($scope.declarations.length > 4095) {
-  //       $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
-  //     };
-  //   };
-
-  // });
+  $scope.$watch('loading', function(){
+    console.log('checking for warnings...');
+    if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+    if ($scope.selectors) {
+      if($scope.selectors.length > 4095) {
+        $scope.selectorsWarning = 'IE9 and lower only allows for 4095 selectors per stylesheet. This is over the limit by: ' + parseInt($scope.selectors.length - 4095);
+      } else if($scope.selectors.length < 4095) {
+        $scope.selectorsWarning = 'Currently '+ parseInt(4095 - $scope.selectors.length) + ' under the limit.';
+      }
+    }
+    if($scope.fontSizes) {
+      if($scope.fontSizes.length > 128) {
+        $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
+      } else if($scope.fontSizes.length > 512) {
+        $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
+      };
+    };
+    if($scope.uniqueFontSizes){
+      if($scope.uniqueFontSizes.length > 64) {
+        $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
+      } else if ($scope.uniqueFontSizes.length > 128) {
+        $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
+      };
+    };
+    if($scope.declarations){
+      if($scope.declarations.length > 4095) {
+        $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
+      };
+    };
+  });
 
 }]);
 
