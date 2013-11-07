@@ -1,35 +1,35 @@
 <section>
-  <header class="phl phx-l mvl">
-    <h1 class="man f1 mega-l ttu tracked lh">
+  <header class="phl phx-l mvl mvx-l">
+    <h1 class="f1 ttu tracked lh">
       {{ colors.length + backgroundColors.length }} Colors
     </h1>
   </header>
   <div>
     <div class="cf">
       <section class="fl wi-50-ns phl phx-l" ng-controller="ColorCtrl">
-        <h1 class="h2 dib mrs">Colors</h1>
+        <h1 class="dib mrs mbm ttu tracked">Colors</h1>
         <!-- <a href="" ng-click="showAll()">All ({{ colors.length }})</a> -->
         <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueColors.length }})</a> -->
         <ul>
           <li ng-repeat="color in viewColors | orderBy:'value'"
             class="sans-serif">
-          <var class="fsn b lh-2 ">{{ color.value }}</var>
-          <div
-            class="lh-copy"
+          <var class="fsn lh-2 b">{{ color.value }}</var>
+          <p
+            class="lh-copy mtn mbl"
             style="color: {{ color.value }}">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </div>
+Whoa, Peppermint butler! Finn, Jake. The Princess wants to see you. As princess of Candy Kingdom, Im in charge of a lot of candy people. They rely on me. I cant imagine what might happen to them if I was gone. And after my brush with death, at the hands of the Lich, I realized something. Im not gonna live forever Finn. I would if I could.
+          </p>
         </li>
       </ul>
     </section>
     <section class="fl wi-50-ns phl phx-l" ng-controller="BackgroundColorCtrl">
-      <h1 class="h2 dib mrs">Background Colors</h1>
+      <h1 class="dib mrs mbm ttu tracked">Background Colors</h1>
       <!-- <a href="" ng-click="showAll()" ng-class="{'drkgry':viewBackgroundColors == backgroundColors}">All ({{ backgroundColors.length}})</a> -->
       <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueBackgroundColors.length }})</a> -->
       <ul>
         <li ng-repeat="backgroundColor in viewBackgroundColors | orderBy: 'value'"
-          class="f3 ttu fw9 sans-serif">
-        <span class="f5">{{ backgroundColor.value }}</span>
+          class="f3 ttu">
+        <span class="f5 b">{{ backgroundColor.value }}</span>
         <div style="background-color: {{ backgroundColor.value }}; height: 5rem; width: 100%;" class="dib" > </div>
       </li>
     </ul>

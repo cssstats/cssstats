@@ -1,8 +1,9 @@
-<div class="pal pax-l">
-<section>
-  <h2>Margins ({{ margins.length }})</h2>
-
-  <h3>Margin-top</h3>
+<section class="phl phx-l">
+  <header class="ptl pbs">
+    <h1 class="f1 lh ttu tracked">Spacing</h1>
+  </header>
+  <h1 class="f2 lh ttu tracked mbs">Margins ({{ margins.length }})</h1>
+  <h2>Margin-top</h2>
   <div>
     <div
       ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-top'"
@@ -93,4 +94,3 @@
     </div>
   </div>
 </section>
-</div>
