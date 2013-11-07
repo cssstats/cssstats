@@ -23,6 +23,8 @@ rprtr.controller('GlobalCtrl',
       twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
     };
 
+    
+
     if($routeParams.site) {
       var site = $routeParams.site;
       $scope.styleData = $scope.sites[site].data;
