@@ -2,13 +2,33 @@
 
 
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$location', 'declarations', 'declarationsByType', 'selectors', 'createUniques',
-  function($scope, $http, $location, declarations, declarationsByType, selectors, createUniques) {
+  ['$scope', '$http', '$routeParams', '$location', 'declarations', 'declarationsByType', 'selectors', 'createUniques',
+  function($scope, $http, $routeParams, $location, declarations, declarationsByType, selectors, createUniques) {
 
     console.log('GlobalCtrl');
 
     // Kinda hacky way of doing the select
-    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'newyorktimes', 'css', 'bbc', 'bootstrap', 'topcoat'] };
+    // $scope.sites = { 'value': 'github', 'values':
+    //['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter',
+    //'salesforce', 'sfdc', 'newyorktimes', 'css', 'bbc', 'bootstrap', 'topcoat'] };
+    
+    // Defining a list of sites with human readable names
+    $scope.sites = [
+      { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk' },
+      { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
+      { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
+      { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
+      { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
+      { 'name': 'Kickstarter', 'data': 'kickstarter', 'url': 'http://kickstarter.com' },
+      { 'name': 'Mapbox', 'data': 'mapbox', 'url': 'http://mapbox.com' },
+      { 'name': 'Medium', 'data': 'medium', 'url': 'http://medium.com' },
+      { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
+      { 'name': 'New York Times', 'data': 'newyorktimes', 'url': 'http://nytimes.com' },
+      { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
+      { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
+      { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
+      { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
+    ];
 
     if($location.search()) {
       $scope.styleData = $location.search().site;
