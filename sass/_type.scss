@@ -134,6 +134,7 @@
 .lh-copy-ns { line-height: 1.6; }
 .lh-2-ns    { line-height: 2; }
 .lh-3-ns    { line-height: 3; }
+.b-ns { font-weight: bold; }
 }
 @include break(large) {
 .lh-l      { line-height: 1; }
@@ -141,6 +142,7 @@
 .lh-copy-l { line-height: 1.6; }
 .lh-2-l    { line-height: 2; }
 .lh-3-l    { line-height: 3; }
+.b-l { font-weight: bold; }
 }
 
 /* Tracking */
