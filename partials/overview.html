@@ -10,20 +10,20 @@
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Total amount of declared font-sizes</span>
-          <b class="super-mega-l lh man db">{{ fontSizes.length }}</b>
+          <b class="super-mega-l lh man db">{{ fontSizes.length | number }}</b>
         </p>
       </div>
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Number of unique font-sizes</span>
-          <b class="super-mega-l lh man db">{{ uniqueFontSizes.length }}</b>
+          <b class="super-mega-l lh man db">{{ uniqueFontSizes.length | number }}</b>
         </p>
       </div>
     </div>
     </article>
     <article class="mvl sans-serif pvl">
       <p class="f1 mega-l man">
-        <b>{{ selectors.length }}</b>
+        <b>{{ selectors.length | number }}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
           title="What is a selector? TO THE SPEC!"
           class="blk b ttu" >
@@ -33,34 +33,33 @@
       <p class="f3">{{ selectorsWarning }}</p>
       </article>
     <article class="sans-serif mvl pvl">
-      <p class="f1 f1-l man"><b>{{ floats.length }} FLOATS.</b></p>
+      <p class="f1 f1-l man"><b>{{ floats.length | number }} FLOATS.</b></p>
       <p class="man f2 lh-copy">There are only three choices...</p>
     </article>
     <article class="sans-serif mbx">
-      <p class="man f1 b"> There are <b>{{ transitions.length }}</b> transitions.</p>
+      <p class="man f1 b"> There are <b>{{ transitions.length | number }}</b> transitions.</p>
     </article>
   <section class="pbl">
     <h1 class="h4 tracked ttu">Other Highlights</h1>
     <ul class="sans-serif">
       <li class="mvm f2">
-        Widths: <b>{{ widths.length }}</b> total /
-                <b>{{ uniqueWidths.length }}</b> unique
+        Widths: <b>{{ widths.length | number }}</b> total /
+                <b>{{ uniqueWidths.length | number }}</b> unique
       </li>
       <li class="mvm f2">
-        Heights: <b>{{ heights.length }}</b> total /
-        <b>{{ uniqueHeights.length }}</b> unique
+        Heights: <b>{{ heights.length | number }}</b> total /
+        <b>{{ uniqueHeights.length | number }}</b> unique
       </li>
       <li class="mvm f2">
         Color:
-        <b>{{ colors.length }}</b> total /
-        <b>{{ uniqueColors.length }} </b> unique
+        <b>{{ colors.length | number }}</b> total /
+        <b>{{ uniqueColors.length | number }} </b> unique
       </li>
       <li class="mvm f2">
         Background colors:
-        <b>{{ backgroundColors.length }}</b> total /
-        <b>{{ uniqueBackgroundColors.length }}</b> unique
+        <b>{{ backgroundColors.length | number }}</b> total /
+        <b>{{ uniqueBackgroundColors.length | number }}</b> unique
       </li>
     </ul>
   </section>
-
 </div>

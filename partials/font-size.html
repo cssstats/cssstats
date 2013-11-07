@@ -2,8 +2,8 @@
   <header class="pvl">
     <h1 class="f1 lh ttu tracked mbl">Font Sizes</h1>
     <div class="mtl">
-      <a href="" ng-click="showAll=true">All ({{ fontSizes.length }})</a> |
-      <a href="" ng-click="showAll=false">Unique ({{ uniqueFontSizes.length}})</a>
+      <a href="" ng-click="showAll=true">All ({{ fontSizes.length | number }})</a> |
+      <a href="" ng-click="showAll=false">Unique ({{ uniqueFontSizes.length | number }})</a>
       <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)" class="mlx">
     </div>
   </header>
