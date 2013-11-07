@@ -1,26 +1,26 @@
 // Controllers
 
-rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$routeParams', 'dataloader',
-  function($scope, $http, $routeParams, dataloader) {
+rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $location){
+  // Defining a list of sites with human readable names
+  $scope.sites = {
+    bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk' },
+    bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
+    css: { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
+    foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
+    github: { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
+    kickstarter: { 'name': 'Kickstarter', 'data': 'kickstarter', 'url': 'http://kickstarter.com' },
+    mapbox: { 'name': 'Mapbox', 'data': 'mapbox', 'url': 'http://mapbox.com' },
+    medium: { 'name': 'Medium', 'data': 'medium', 'url': 'http://medium.com' },
+    myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
+    nytimes: { 'name': 'New York Times', 'data': 'newyorktimes', 'url': 'http://nytimes.com' },
+    salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
+    sfdc: { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
+    topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
+    twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
+  };
+}]);
 
-   // Defining a list of sites with human readable names
-    $scope.sites = {
-      bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk' },
-      bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
-      css: { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
-      foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
-      github: { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
-      kickstarter: { 'name': 'Kickstarter', 'data': 'kickstarter', 'url': 'http://kickstarter.com' },
-      mapbox: { 'name': 'Mapbox', 'data': 'mapbox', 'url': 'http://mapbox.com' },
-      medium: { 'name': 'Medium', 'data': 'medium', 'url': 'http://medium.com' },
-      myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
-      nytimes: { 'name': 'New York Times', 'data': 'newyorktimes', 'url': 'http://nytimes.com' },
-      salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
-      sfdc: { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
-      topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
-      twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
-    };
+rprtr.controller('ReportCtrl', ['$scope', '$http', '$routeParams', 'dataloader', function($scope, $http, $routeParams, dataloader) {  
 
     if($routeParams.site) {
       $scope.currentSite = $scope.sites[$routeParams.site];
@@ -70,8 +70,6 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   //   };
 
   // });
-
-
 
 }]);
 
