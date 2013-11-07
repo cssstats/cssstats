@@ -23,10 +23,6 @@
         </p>
       </div>
     </div>
-      <p class="f1-l serif lh-copy">
-        Woah. They are using {{ fontSizes.length }} lines of code when they just need like,
-        {{ uniqueFontSizes.length }} lines. Who knows what happened here.
-      </p>
     </article>
     <article class="mvx sans-serif pvx">
       <p class="f1 mega-l man">
@@ -37,8 +33,7 @@
            selectors.
         </a>
       </p>
-      <p class="f2-l serif man lh-copy">Some genius decided IE<10 only allows 4095 selectors per stylesheet. <br >
-        So, that's a thing. Don't worry <a href="http://blogs.msdn.com/b/ieinternals/archive/2011/05/14/internet-explorer-stylesheet-rule-selector-import-sheet-limit-maximum.aspx" class="blk" title="WTFIE">IE10 let's you include 4095 stylesheets per page</a>.</p>
+      <p class="f3">{{ selectorsWarning }}</p>
       </article>
     <article class="sans-serif mvx pvx">
       <p class="f1 f1-l man"><b>{{ floats.length }} FLOATS.</b></p>
