@@ -8,26 +8,6 @@
 .wi-75  { width: 75%; }
 .wi-full { width: 100%; }
 
-@include break(not-small) {
-  .wi-25-ns  { width: 25%; }
-  .wi-50-ns  { width: 50%; }
-  .wi-75-ns  { width: 75%; }
-  .wi-full-ns { width: 100%; }
-}
-
-@include break(medium) {
-  .wi-25-m  { width: 25%; }
-  .wi-50-m  { width: 50%; }
-  .wi-75-m  { width: 75%; }
-  .wi-full-m { width: 100%; }
-}
-
-@include break(large) {
-  .wi-25-l  { width: 25%; }
-  .wi-50-l  { width: 50%; }
-  .wi-75-l  { width: 75%; }
-  .wi-full-l { width: 100%; }
-}
 
 /* ==========================================================================
    GEOMETRY
@@ -111,6 +91,7 @@ Make an element the width of its parent.
 
 .mw-16 { max-width: 16rem; }
 .mw-32 { max-width: 32rem; }
+
 .mw-48 { max-width: 48rem; }
 .mw-64 { max-width: 64rem; }
 
@@ -134,3 +115,39 @@ Make an element the width of its parent.
 .min-wi { min-width: min-content; }
 .min-wi { min-width: fit-content; }
 .min-wi { min-width: fill-available; }
+
+@include break(not-small) {
+  .wi-25-ns  { width: 25%; }
+  .wi-50-ns  { width: 50%; }
+  .wi-75-ns  { width: 75%; }
+  .wi-full-ns { width: 100%; }
+  .mw-16-ns { max-width: 16rem; }
+  .mw-32-ns { max-width: 32rem; }
+
+  .mw-48-ns { max-width: 48rem; }
+  .mw-64-ns { max-width: 64rem; }
+}
+
+@include break(medium) {
+  .wi-25-m  { width: 25%; }
+  .wi-50-m  { width: 50%; }
+  .wi-75-m  { width: 75%; }
+  .wi-full-m { width: 100%; }
+  .mw-16-m { max-width: 16rem; }
+  .mw-32-m { max-width: 32rem; }
+  .mw-48-m { max-width: 48rem; }
+  .mw-64-m { max-width: 64rem; }
+}
+
+@include break(large) {
+  .wi-25-l  { width: 25%; }
+  .wi-50-l  { width: 50%; }
+  .wi-75-l  { width: 75%; }
+  .wi-full-l { width: 100%; }
+
+  .mw-16-l { max-width: 16rem; }
+  .mw-32-l { max-width: 32rem; }
+
+  .mw-48-l { max-width: 48rem; }
+  .mw-64-l { max-width: 64rem; }
+}

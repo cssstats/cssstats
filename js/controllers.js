@@ -3,7 +3,7 @@
 rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $location){
   // Defining a list of sites with human readable names
   $scope.sites = {
-    bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk' },
+    bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk', 'fileSize': '57kb' },
     bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
     css: { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
     foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
@@ -27,7 +27,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
 
 }]);
 
-rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataloader', function($scope, $routeParams, $location, dataloader) {  
+rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataloader', function($scope, $routeParams, $location, dataloader) {
 
     if($routeParams.site) {
       $scope.currentSite = $scope.sites[$routeParams.site];
@@ -38,15 +38,15 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataload
     };
 
     $scope.section = 'overview';
-    
+
     $scope.updateSection = function(section){
       $scope.section = section;
-    }; 
+    };
 
 }]);
 
 rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
- 
+
 }]);
 
 
