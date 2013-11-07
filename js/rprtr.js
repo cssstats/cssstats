@@ -9,8 +9,8 @@ var rprtr = angular.module('rprtr',[])
 
     $routeProvider.when('/parser', {templateUrl: 'partials/parser/parser.html', controller: 'ParserCtrl'});
 
-    $routeProvider.when('/:site', {templateUrl: 'partials/home.html', controller: 'GlobalCtrl'});
-    $routeProvider.when('/:site/:section', {templateUrl: 'partials/section.html', controller: 'GlobalCtrl'});
+    $routeProvider.when('/:site', {templateUrl: 'partials/home.html', controller: 'GlobalCtrl', reloadOnSearch: false});
+    $routeProvider.when('/:site/:section', {templateUrl: 'partials/section.html', controller: 'GlobalCtrl', reloadOnSearch: false});
 
     $routeProvider.otherwise({redirectTo: '/github'});
   }]);

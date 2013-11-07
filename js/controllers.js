@@ -1,11 +1,10 @@
 // Controllers
 
-
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$routeParams', '$location', 'dataloader',
-  function($scope, $http, $routeParams, $location, dataloader) {
+  ['$scope', '$http', '$routeParams', 'dataloader',
+  function($scope, $http, $routeParams, dataloader) {
 
-    // Defining a list of sites with human readable names
+   // Defining a list of sites with human readable names
     $scope.sites = {
       bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk' },
       bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
@@ -23,81 +22,59 @@ rprtr.controller('GlobalCtrl',
       twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
     };
 
-    
-
     if($routeParams.site) {
-      var site = $routeParams.site;
-      $scope.styleData = $scope.sites[site].data;
+      $scope.currentSite = $scope.sites[$routeParams.site];
+      console.log($scope.currentSite.name);
+      $scope.styleData = $scope.currentSite.data;
       console.log('styleData: ' + $scope.styleData);
+      dataloader($scope);
     } else {
-      $location.path('/github');
+      console.log('no routeparams');
     };
 
-    // Getting initial styles data
-    dataloader($scope);
-
-    if($routeParams.section){
-      console.log('section ' + $routeParams.section);
-      $scope.section = $routeParams.section;
-    };
+    $scope.section = 'overview';
+    
+    $scope.updateSection = function(section){
+      $scope.section = section;
+    }; 
 
 }]);
 
 rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  $scope.$watch('loading', function(){
-    console.log('loading: ' + $scope.loading);
-    if(!!$scope.loading){
-      
-    };
-  });
+ 
 }]);
 
 
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
-  $scope.$watch('loading', function(){
-    console.log('checking for warnings...');
-    if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
-    if($scope.fontSizes) {
-      if($scope.fontSizes.length > 128) {
-        $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
-      } else if($scope.fontSizes.length > 512) {
-        $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
-      };
-    };
-    if($scope.uniqueFontSizes){
-      if($scope.uniqueFontSizes.length > 64) {
-        $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
-      } else if ($scope.uniqueFontSizes.length > 128) {
-        $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
-      };
-    };
-    if($scope.declarations){
-      if($scope.declarations.length > 4095) {
-        $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
-      };
-    };
+  // $scope.$watch('loading', function(){
+  //   console.log('checking for warnings...');
+  //   if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+  //   if($scope.fontSizes) {
+  //     if($scope.fontSizes.length > 128) {
+  //       $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
+  //     } else if($scope.fontSizes.length > 512) {
+  //       $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
+  //     };
+  //   };
+  //   if($scope.uniqueFontSizes){
+  //     if($scope.uniqueFontSizes.length > 64) {
+  //       $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
+  //     } else if ($scope.uniqueFontSizes.length > 128) {
+  //       $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
+  //     };
+  //   };
+  //   if($scope.declarations){
+  //     if($scope.declarations.length > 4095) {
+  //       $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
+  //     };
+  //   };
 
-  });
+  // });
 
 
 
 }]);
 
-rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  // anythingToRelative($scope.margins);
-}]);
-
-rprtr.controller('PaddingCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  // anythingToRelative($scope.paddings);
-}]);
-
-rprtr.controller('WidthCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  // anythingToRelative($scope.widths);
-}]);
-
-rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  // anythingToRelative($scope.heights);
-}]);
 
 rprtr.controller('ColorCtrl', ['$scope', function($scope){
   $scope.$watch('loading', function(){
