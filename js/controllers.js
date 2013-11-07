@@ -6,7 +6,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     amazon: { 'name': 'Amazon', 'data': 'amazon', 'url': 'http://amazon.com'},
     bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk', 'fileSize': '57kb' },
     bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
-    css: { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
+    css: { 'name': 'CSS', 'data': 'css', 'url': 'http://mrmrs.github.io/css' },
     dribbble: { 'name': 'Dribbble', 'data': 'dribbble', 'url': 'http://dribbble.com'},
     foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
     github: { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
