@@ -2,8 +2,8 @@
 
 
 rprtr.controller('GlobalCtrl',
-  ['$scope', '$http', '$routeParams', '$location', 'declarations', 'declarationsByType', 'selectors', 'createUniques',
-  function($scope, $http, $routeParams, $location, declarations, declarationsByType, selectors, createUniques) {
+  ['$scope', '$http', '$routeParams', '$location', 'dataloader',
+  function($scope, $http, $routeParams, $location, dataloader) {
 
     // Defining a list of sites with human readable names
     $scope.sites = {
@@ -31,34 +31,23 @@ rprtr.controller('GlobalCtrl',
       $location.path('/github');
     };
 
-    // Function to get the styles data - This should really go in a factory
-    $scope.getStyles = function(styleData) {
-      $scope.loading = true;
-      $http.get('data/' + styleData + '/rules.json').success(function(res) {
-        $scope.styles = res;
-        selectors($scope);
-      });
-      $http.get('data/' + styleData + '/declarations.json').success(function(res){
-        $scope.declarations = res;
-        // Create arrays for each declaration type in the factory
-        declarationsByType($scope);
-      });
-      $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
-        $scope.uniqueDeclarations = res;
-      });
-      $scope.$watch('selectors', function(){
-        // Wait for selectors to load, then get uniques
-        if($scope.selectors) {
-          createUniques($scope);
-          $scope.loading = false;
-        };
-      });
+    // Getting initial styles data
+    dataloader($scope);
+
+    if($routeParams.section){
+      console.log('section ' + $routeParams.section);
+      $scope.section = $routeParams.section;
     };
 
-    // Getting initial styles data
-    $scope.getStyles($scope.styleData);
+}]);
 
-
+rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+  $scope.$watch('loading', function(){
+    console.log('loading: ' + $scope.loading);
+    if(!!$scope.loading){
+      
+    };
+  });
 }]);
 
 
@@ -93,19 +82,19 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
 }]);
 
 rprtr.controller('MarginCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.margins);
+  // anythingToRelative($scope.margins);
 }]);
 
 rprtr.controller('PaddingCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.paddings);
+  // anythingToRelative($scope.paddings);
 }]);
 
 rprtr.controller('WidthCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.widths);
+  // anythingToRelative($scope.widths);
 }]);
 
 rprtr.controller('HeightCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-  anythingToRelative($scope.heights);
+  // anythingToRelative($scope.heights);
 }]);
 
 rprtr.controller('ColorCtrl', ['$scope', function($scope){
@@ -133,7 +122,7 @@ rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
 }]);
 
 
-
+// I really wanna move this to a separate app
 rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
 
   // Controller for parsing the base JSON data and spitting out

@@ -166,6 +166,41 @@ rprtr.factory('anythingToRelative', function(){
 });
 
 
+// Service to load all data
+rprtr.factory('dataloader', function($http, selectors, declarationsByType, createUniques, anythingToRelative){
+  return function($scope) {
+    var styleData = $scope.styleData;
+    // Set data var
+      $scope.loading = true;
+      $http.get('data/' + styleData + '/rules.json').success(function(res) {
+        $scope.styles = res;
+        selectors($scope);
+      });
+      $http.get('data/' + styleData + '/declarations.json').success(function(res){
+        $scope.declarations = res;
+        // Create arrays for each declaration type in the factory
+        declarationsByType($scope);
+      });
+      $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
+        $scope.uniqueDeclarations = res;
+      });
+      $scope.$watch('selectors', function(){
+        // Wait for selectors to load, then get uniques
+        if($scope.selectors) {
+          createUniques($scope);
+
+          anythingToRelative($scope.margins);
+          anythingToRelative($scope.paddings);
+          anythingToRelative($scope.widths);
+          anythingToRelative($scope.heights);
+
+          // may not be truly finished yet
+          $scope.loading = false;
+        };
+      });
+  };
+});
+
 // Local Storage Factory
 rprtr.factory('storage', function(){            
   return {
