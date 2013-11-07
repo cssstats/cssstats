@@ -8,7 +8,7 @@ rprtr.controller('GlobalCtrl',
     console.log('GlobalCtrl');
 
     // Kinda hacky way of doing the select
-    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'newyorktimes', 'css', 'bbc', 'bootstrap', 'topcoat'] };
+    $scope.sites = { 'value': 'github', 'values': ['github', 'kickstarter', 'mapbox', 'medium', 'myspace', 'twitter', 'salesforce', 'sfdc', 'google_analytics', 'newyorktimes', 'css', 'bbc', 'bootstrap', 'topcoat'] };
 
     if($location.search()) {
       $scope.styleData = $location.search().site;
@@ -67,6 +67,13 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   $scope.$watch('loading', function(){
     console.log('checking for warnings...');
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
+    if ($scope.selectors) {
+      if($scope.selectors.length > 4095) {
+        $scope.selectorsWarning = 'IE9 and lower only allows for 4095 selectors per stylesheet. This is over the limit by: ' + parseInt($scope.selectors.length - 4095);
+      } else if($scope.selectors.length < 4095) {
+        $scope.selectorsWarning = 'Currently '+ parseInt(4095 - $scope.selectors.length) + ' under the limit.';
+      }
+    }
     if($scope.fontSizes) {
       if($scope.fontSizes.length > 128) {
         $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';

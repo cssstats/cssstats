@@ -33,44 +33,54 @@
     <nav>
       <!-- <div class="bg-blk pvm">
         <form ng-submit="updateStyles()" class="f5 pll">
-        <fieldset class="bn pan man">
+          <fieldset class="bn pan man">
           <legend class="dn">Data File</legend>
-          <label class="b sans-serif ltgry mrs">Currently Viewing</label>
-          <input ng-model="styleData" class="bg-blk input sans-serif ltgry">
-        </fieldset>
-        </form>
-      </div> -->
-      <div class="pll plx-l">
-      <ul class="list list--h f6 sans-serif ttu mega-tracked wi100 pvs lh-2">
-        <li class="prm"><a class="blk dib" href="#/home">Overview</a></li>
-        <li class="prm"><a class="blk dib" href="#/font-size">Font-size</a></li>
-        <li class="prm"><a class="blk dib" href="#/spacing">Spacing</a></li>
-        <li class="prm"><a class="blk dib" href="#/width">Width</a></li>
-        <li class="prm"><a class="blk dib" href="#/colors">Colors</a></li>
-        <li class="prm"><a class="blk dib" href="#/background-image">Background Image</a></li>
-        <li class="prm"><a class="blk dib" href="#/all-rules">All Rules</a></li>
-        <li class="prm"><a class="blk dib" href="#/selector">Selectors</a></li>
-        <li class="prm"><a class="blk dib" href="#/declarations">Declarations</a></li>
-      </ul>
-    </div>
+        <label class="b sans-serif ltgry mrs">Currently Viewing</label>
+        <input ng-model="styleData" class="bg-blk input sans-serif ltgry">
+      </fieldset>
+    </form>
+  </div> -->
+  <div class="pll plx-l">
+    <ul class="list list--h f6 sans-serif ttu mega-tracked wi100 pvs lh-2">
+      <li class="prm"><a class="blk dib" href="#/home">Overview</a></li>
+      <li class="prm"><a class="blk dib" href="#/font-size">Font-size</a></li>
+      <li class="prm"><a class="blk dib" href="#/spacing">Spacing</a></li>
+      <li class="prm"><a class="blk dib" href="#/width">Width</a></li>
+      <li class="prm"><a class="blk dib" href="#/colors">Colors</a></li>
+      <li class="prm"><a class="blk dib" href="#/background-image">Background Image</a></li>
+      <li class="prm"><a class="blk dib" href="#/all-rules">All Rules</a></li>
+      <li class="prm"><a class="blk dib" href="#/selector">Selectors</a></li>
+      <li class="prm"><a class="blk dib" href="#/declarations">Declarations</a></li>
+    </ul>
+  </div>
 
-    </nav>
+</nav>
 
-    <main ng-view></main>
+<main ng-view></main>
 
-    <footer class="pvs bor bb-top bor--near-wht mdgry cf">
-      <p class="f6 tc sans-serif mega-tracked ttu">
-        Built with ♡
-        by
-        <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
-        and
-        <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
-      </p>
-    </footer>
+<footer class="pvs bor bb-top bor--near-wht mdgry cf">
+  <p class="f6 tc sans-serif mega-tracked ttu">
+    Built with ♡
+    by
+    <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
+    and
+    <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
+  </p>
+</footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-    <script src="js/rprtr.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/controllers.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="js/rprtr.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45526812-1', 'mrmrs.github.io');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
