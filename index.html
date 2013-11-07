@@ -1,54 +1,31 @@
 <!doctype html>
 <html lang="en" ng-app="rprtr">
-  <head>
-    <meta charset="utf-8">
-    <title>CSS Stats</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/i.css">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Stats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/i.css">
+</head>
+<body ng-controller="GlobalCtrl" class="sans-serif">
 
-  </head>
-  <body ng-controller="GlobalCtrl">
-    <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht">
-      <h1 class="f3 ttu mega-tracked mtn mbn dib mrx pvs">
-        <a class="blk" href="#/" title="CSS Stats">CSS Stats</a>
-      </h1>
-      <form class="fr mts mrm">
-        <label class="sans-serif">Site:</label>
-        <select ng-model="sites.value" ng-change="updateStyles(sites.value)" ng-options="site for site in sites.values"></select>
-      </form>
-    </header>
-    <nav>
-  <div class="pll plx-l">
-    <ul class="list list--h f6 sans-serif ttu mega-tracked wi100 pvs lh-2">
-      <li class="prm"><a class="blk dib" href="#/home">Overview</a></li>
-      <li class="prm"><a class="blk dib" href="#/font-size">Font-size</a></li>
-      <li class="prm"><a class="blk dib" href="#/spacing">Spacing</a></li>
-      <li class="prm"><a class="blk dib" href="#/width">Width</a></li>
-      <li class="prm"><a class="blk dib" href="#/colors">Colors</a></li>
-      <li class="prm"><a class="blk dib" href="#/background-image">Background Image</a></li>
-      <li class="prm"><a class="blk dib" href="#/all-rules">All Rules</a></li>
-      <li class="prm"><a class="blk dib" href="#/selector">Selectors</a></li>
-      <li class="prm"><a class="blk dib" href="#/declarations">Declarations</a></li>
-    </ul>
-  </div>
-
-</nav>
-
-<!--<main ng-view></main>-->
-<main class="pax">
-  <h1 class="tc">Under Construction</h1>
-</main>
+  <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht sans-serif">
+    <h1 class="f3 ttu mega-tracked mtn mbn dib mrx pvs">
+      <a class="blk" href="#/" title="CSS Stats">CSS Stats</a>
+    </h1>
+  </header>
 
 
-<footer class="pvs bor bb-top bor--near-wht mdgry cf">
-  <p class="f6 tc sans-serif mega-tracked ttu">
-    Built with ♡
-    by
-    <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
-    and
-    <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
-  </p>
-</footer>
+  <main ng-view></main>
+
+  <footer class="pvs bor bb-top bor--near-wht mdgry cf">
+    <p class="f6 tc sans-serif mega-tracked ttu">
+      Built with ♡
+      by
+      <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
+      and
+      <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
+    </p>
+  </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
 <script src="js/rprtr.js"></script>
