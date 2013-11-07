@@ -18,6 +18,13 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
     twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
   };
+
+  $scope.dropbarIsOpen = false;
+  $scope.toggleDropbar = function(){
+    $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
+    console.log($scope.dropbarIsOpen);
+  };
+
 }]);
 
 rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataloader', function($scope, $routeParams, $location, dataloader) {  
@@ -28,7 +35,6 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataload
       dataloader($scope);
     } else {
       console.error('no routeparams');
-      $location.path('/github');
     };
 
     $scope.section = 'overview';
