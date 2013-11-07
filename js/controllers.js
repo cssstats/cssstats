@@ -20,16 +20,15 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
   };
 }]);
 
-rprtr.controller('ReportCtrl', ['$scope', '$http', '$routeParams', 'dataloader', function($scope, $http, $routeParams, dataloader) {  
+rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataloader', function($scope, $routeParams, $location, dataloader) {  
 
     if($routeParams.site) {
       $scope.currentSite = $scope.sites[$routeParams.site];
-      console.log($scope.currentSite.name);
       $scope.styleData = $scope.currentSite.data;
-      console.log('styleData: ' + $scope.styleData);
       dataloader($scope);
     } else {
-      console.log('no routeparams');
+      console.error('no routeparams');
+      $location.path('/github');
     };
 
     $scope.section = 'overview';
@@ -47,7 +46,6 @@ rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope
 
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   $scope.$watch('loading', function(){
-    console.log('checking for warnings...');
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
     if ($scope.selectors) {
       if($scope.selectors.length > 4095) {

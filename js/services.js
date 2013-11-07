@@ -2,7 +2,7 @@
 
 rprtr.factory('specificityScore', function () {
   return function(selectors){
-
+    console.log('calculating specificity scores...');
       for(var i = 0; i < selectors.length; i++) {
         // Regex for finding styled elements. Searches for word characters at beginning of line and after spaces.
         var rePattern = /^[a-zA-Z]|\s(?=[a-zA-Z])/;
@@ -16,13 +16,12 @@ rprtr.factory('specificityScore', function () {
         // No childCount? WTF?
         selectors[i].specificityScore = score;
       };
-    console.log(new Date().getTime());
-    console.log('got specificity scores');
   };
 });
 
 rprtr.factory('selectors', function(specificityScore){
   return function($scope) {
+    console.log('parsing selectors...');
     var rules = $scope.styles.stylesheet.rules;
     $scope.selectors = [];
     for(var i = 0; i < rules.length; i++){
@@ -32,8 +31,6 @@ rprtr.factory('selectors', function(specificityScore){
         $scope.selectors.push(obj);
       };
     };
-    console.log(new Date().getTime());
-    console.log('parsed selectors');
     specificityScore($scope.selectors);
     $scope.parsing = false;
   };
@@ -44,16 +41,14 @@ rprtr.factory('declarations', function(fontSizeToPx, $filter) {
   return function($scope){
     var rules = $scope.styles.stylesheet.rules;
     $scope.declarations = [];
-
+    console.log('parsing declarations...');
     for(var i = 0; i < rules.length; i++){
-      console.log('parsing...');
       var declarations = rules[i].declarations;
       // Adds all the declarations within a rule
       for(var j in declarations){
         $scope.declarations.push(declarations[j]);
       };
     };
-    console.log('parsed declarations');
   };
 });
 
@@ -98,7 +93,7 @@ rprtr.factory('declarationsByType', function(fontSizeToPx, $filter){
 // This'll probably slow down load time a bit
 rprtr.factory('createUniques', function($filter){
   return function($scope){
-    console.log('creating uniques');
+    console.log('calculating uniques...');
     var uniqueFilter = $filter('unique');
     // Each array added to this factory will slow down initial load
     // This should probably be loaded in a more efficient way
