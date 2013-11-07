@@ -1,4 +1,10 @@
 <!-- This is an index:show::hub:spoke model and UI. Deal with it. -->
-<ul>
-  <li ng-repeat="site in sites"><a href="#/{{ site.data }}" class="mrs">{{ site.name }}</a></li>
-</ul>
+<section class="pal pax-l">
+  <ul class="list list--h">
+    <li ng-repeat="site in sites">
+      <a href="#/{{ site.data }}" class="f3 b blk pvm prm db mrm">
+        {{ site.name }}
+      </a>
+    </li>
+  </ul>
+</section>
