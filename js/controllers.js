@@ -16,7 +16,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
     nytimes: { 'name': 'New York Times', 'data': 'nytimes', 'url': 'http://nytimes.com' },
     salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
-    sfdc: { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
+    sfdc: { 'name': 'Salesforce App', 'data': 'sfdc', 'url': '' },
     soundcloud: { 'name': 'Soundcloud', 'data': 'soundcloud', 'url': 'http://soundcloud.com'},
     topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
     twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
