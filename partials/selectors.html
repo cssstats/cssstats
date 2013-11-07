@@ -1,0 +1,19 @@
+<section class="phl phx-l">
+  <h1 class="f1 mega-l ttu tracked man lh ptl"> {{ selectors.length }} Selectors </h1>
+  <p class="f1 lh-copy">
+    IDs carry more weight than classes and
+    <a class="blk" href="http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/"
+      title="That Harry Roberts is the best">are difficult to override.</a>.
+    As css grows, people tend to add more and more specificity to selectors. This is the tops because haha.
+  </p>
+  <section class="mtx mtx-l">
+    <header>
+      <h1 class="f1 f1-l">Specificity Scores <span class="fw-normal">with corresponding selectors</span></h1>
+    </header>
+    <ul>
+      <li ng-repeat="selector in selectors | filter:query | orderBy:'-specificityScore'" class="pvm">
+        <b class="sans-serif f2 prl">{{ selector.specificityScore }}</b> <code class="f5">{{ selector.string }}</code>
+      </li>
+  </ul>
+</section>
+</section>

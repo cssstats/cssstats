@@ -12,7 +12,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     mapbox: { 'name': 'Mapbox', 'data': 'mapbox', 'url': 'http://mapbox.com' },
     medium: { 'name': 'Medium', 'data': 'medium', 'url': 'http://medium.com' },
     myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
-    nytimes: { 'name': 'New York Times', 'data': 'newyorktimes', 'url': 'http://nytimes.com' },
+    nytimes: { 'name': 'New York Times', 'data': 'nytimes', 'url': 'http://nytimes.com' },
     salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
     sfdc: { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
     topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
