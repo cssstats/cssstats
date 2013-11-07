@@ -23,7 +23,6 @@
     <ul ng-switch-when="false">
       <li
         ng-repeat="fontSize in uniqueFontSizes | filter:fontQuery | orderBy:'pxValue'"
-        style="border-bottom: 1px solid #ededed;"
         class="pvm"
         >
         <h1 class="f4"><span class="gray">{{ fontSize.property }}</span>: {{ fontSize.value }}</h1>
