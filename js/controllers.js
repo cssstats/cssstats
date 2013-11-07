@@ -3,9 +3,11 @@
 rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $location){
   // Defining a list of sites with human readable names
   $scope.sites = {
+    amazon: { 'name': 'Amazon', 'data': 'amazon', 'url': 'http://amazon.com'},
     bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk', 'fileSize': '57kb' },
     bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
     css: { 'name': 'CSS', 'data': 'bootstrap', 'url': 'http://mrmrs.github.io/css' },
+    dribbble: { 'name': 'Dribbble', 'data': 'dribbble', 'url': 'http://dribbble.com'},
     foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
     github: { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
     kickstarter: { 'name': 'Kickstarter', 'data': 'kickstarter', 'url': 'http://kickstarter.com' },
@@ -14,7 +16,8 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
     nytimes: { 'name': 'New York Times', 'data': 'nytimes', 'url': 'http://nytimes.com' },
     salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
-    sfdc: { 'name': 'Salesforce (logged in)', 'data': 'sfdc', 'url': '' },
+    sfdc: { 'name': 'Salesforce App', 'data': 'sfdc', 'url': '' },
+    soundcloud: { 'name': 'Soundcloud', 'data': 'soundcloud', 'url': 'http://soundcloud.com'},
     topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
     twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
   };
