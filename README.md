@@ -1,9 +1,21 @@
-To run the app, cd into rprtr and run
+# Rprtr
 
-```
-python -m SimpleHTTPServer 8000
-```
+## Global Dependencies
 
-App is now running at
+Install [node.js](http://nodejs.org) and then open Terminal:
 
-http://localhost:8000
+    npm install -g coffee-script
+    npm install -g grunt-cli
+    npm install -g node-dev
+
+## Project Setup
+
+    git clone git@github.com:mrmrs/rprtr.git
+    cd rprtr
+    npm install
+    grunt build:debug
+    node-dev app.coffee
+
+## Heroku
+
+    ./heroku.sh

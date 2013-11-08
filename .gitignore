@@ -1,0 +1,21 @@
+# compiled output
+/dist
+/tmp
+/public
+
+# dependencies
+node_modules/
+.sass-cache/
+src/client/vendor/*
+!src/client/vendor/ember-data/*
+!src/client/vendor/jquery-ui/*
+!src/client/vendor/loader/*
+!src/client/vendor/modernizr/*
+!src/client/vendor/plupload/*
+
+# misc
+.grunt
+/connect.lock
+/libpeerconnection.log
+.DS_Store
+*.sublime-workspace
