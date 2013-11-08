@@ -1,64 +1,64 @@
 
-<div ng-show="declarations" ng-controller="HomeCtrl">
+<div ng-hide="loading" ng-controller="HomeCtrl">
 
   <section id="overview" class="pvl phl phx-l">
     <h1 class="f1 b mtx">
-      <span class="thin">CSS Stats for </span>{{ currentSite.name }}
+      <span class="thin">CSS Stats for </span>{{site.info.name}}
     </h1>
     <article class="sans-serif mvm ptx pbm">
     <div class="cf">
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Total amount of declared font-sizes</span>
-          <b class="super-mega-l lh man db">{{ fontSizes.length }}</b>
+          <b class="super-mega-l lh man db">{{site.declarations.fontSize.count}}</b>
         </p>
       </div>
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Number of unique font-sizes</span>
-          <b class="super-mega-l lh man db">{{ uniqueFontSizes.length }}</b>
+          <b class="super-mega-l lh man db">{{site.uniqueDeclarations.fontSize.count}}</b>
         </p>
       </div>
     </div>
     </article>
     <article class="mvl sans-serif pvl">
       <p class="f1 mega-l man">
-        <b>{{ selectors.length }}</b>
+        <b>{{site.counts.selectors}}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
           title="What is a selector? TO THE SPEC!"
           class="blk b ttu" >
            selectors.
         </a>
       </p>
-      <p class="f3">{{ selectorsWarning }}</p>
+      <p class="f3">{{selectorsWarning}}</p>
       </article>
     <article class="sans-serif mvl pvl">
-      <p class="f1 f1-l man"><b>{{ floats.length }} FLOATS.</b></p>
+      <p class="f1 f1-l man"><b>{{site.declarations.float.count}} FLOATS.</b></p>
       <p class="man f2 lh-copy">There are only three choices...</p>
     </article>
     <article class="sans-serif mbx">
-      <p class="man f1 b"> There are <b>{{ transitions.length }}</b> transitions.</p>
+      <p class="man f1 b"> There are <b>{{site.declarations.transition.count}}</b> transitions.</p>
     </article>
   <section class="pbl">
     <h1 class="h4 tracked ttu">Other Highlights</h1>
     <ul class="sans-serif">
       <li class="mvm f2">
-        Widths: <b>{{ widths.length }}</b> total /
-                <b>{{ uniqueWidths.length }}</b> unique
+        Widths: <b>{{site.declarations.width.count}}</b> total /
+                <b>{{site.uniqueDeclarations.width.count}}</b> unique
       </li>
       <li class="mvm f2">
-        Heights: <b>{{ heights.length }}</b> total /
-        <b>{{ uniqueHeights.length }}</b> unique
+        Heights: <b>{{site.declarations.height.count}}</b> total /
+        <b>{{site.uniqueDeclarations.height.count}}</b> unique
       </li>
       <li class="mvm f2">
         Color:
-        <b>{{ colors.length }}</b> total /
-        <b>{{ uniqueColors.length }} </b> unique
+        <b>{{site.declarations.color.count}}</b> total /
+        <b>{{site.uniqueDeclarations.color.count}} </b> unique
       </li>
       <li class="mvm f2">
         Background colors:
-        <b>{{ backgroundColors.length }}</b> total /
-        <b>{{ uniqueBackgroundColors.length }}</b> unique
+        <b>{{site.declarations.backgroundColor.count}}</b> total /
+        <b>{{site.uniqueDeclarations.backgroundColor.count}}</b> unique
       </li>
     </ul>
   </section>

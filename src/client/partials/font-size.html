@@ -2,35 +2,28 @@
   <header class="pvl">
     <h1 class="f1 lh ttu tracked mbl">Font Sizes</h1>
     <div class="mtl">
-      <a href="" ng-click="showAll=true">All ({{ fontSizes.length }})</a> |
-      <a href="" ng-click="showAll=false">Unique ({{ uniqueFontSizes.length}})</a>
+      <a href="" ng-click="showAll=true">All ({{site.declarations.fontSize.count}})</a> |
+      <a href="" ng-click="showAll=false">Unique ({{site.uniqueDeclarations.fontSize.count}})</a>
       <input ng-model="fontQuery" Placeholder="Search (e.g. em, px)" class="mlx">
     </div>
   </header>
-
-
   <div ng-switch="showAll" ng-init="showAll = true">
-
     <ul ng-switch-when="true">
-    <li ng-repeat="fontSize in fontSizes | filter:fontQuery | orderBy:'pxValue'"
+    <li ng-repeat="fontSize in site.declarations.fontSize.values | filter:fontQuery | orderBy:'pxValue'"
         class="pvm">
-        <h1 class="f4"><span class="gray">{{ fontSize.property }}</span>: {{ fontSize.value }}</h1>
-        <p style="font-size: {{ fontSize.value }}; white-space: nowrap; overflow: hidden; ">The quick brown fox jumps over the lazy dog is by far my most favorite pangram in the english language. What is yours?
+        <h1 class="f4"><span class="gray">{{fontSize.property}}</span>: {{fontSize.value}}</h1>
+        <p style="font-size: {{fontSize.value}}; white-space: nowrap; overflow: hidden; ">The quick brown fox jumps over the lazy dog is by far my most favorite pangram in the english language. What is yours?
         </p>
       </li>
     </ul>
-
     <ul ng-switch-when="false">
       <li
-        ng-repeat="fontSize in uniqueFontSizes | filter:fontQuery | orderBy:'pxValue'"
-        class="pvm"
-        >
-        <h1 class="f4"><span class="gray">{{ fontSize.property }}</span>: {{ fontSize.value }}</h1>
-        <p style="font-size: {{ fontSize.value }}">
+        ng-repeat="fontSize in site.uniqueDeclarations.fontSize.values | filter:fontQuery | orderBy:'pxValue'" class="pvm">
+        <h1 class="f4"><span class="gray">{{fontSize.property}}</span>: {{fontSize.value}}</h1>
+        <p style="font-size: {{fontSize.value}}">
           The quick brown fox jumps over the lazy dog is by far my most favorite pangram in the english language. What is yours?
         </p>
       </li>
     </ul>
-
   </div>
 </section>

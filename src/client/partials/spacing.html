@@ -2,95 +2,89 @@
   <header class="ptl pbs">
     <h1 class="f1 lh ttu tracked">Spacing</h1>
   </header>
-  <h1 class="f2 lh ttu tracked mbs">Margins ({{ margins.length }})</h1>
+  <h1 class="f2 lh ttu tracked mbs">Margins ({{site.declarations.margin.count}})</h1>
   <h2>Margin-top</h2>
   <div>
     <div
-      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-top'"
+      ng-repeat="margin in site.declarations.margin.values | orderBy: 'relativeValue' | filter: 'margin-top'"
       style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ margin.property }}: {{ margin.value }}
+        {{margin.property}}: {{margin.value}}
     </div>
   </div>
 
   <h3>Margin-right</h3>
   <div>
     <div
-      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-right'"
+      ng-repeat="margin in site.declarations.margin.values | orderBy: 'relativeValue' | filter: 'margin-right'"
       style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ margin.property }}: {{ margin.value }}
+        {{margin.property}}: {{margin.value}}
     </div>
   </div>
 
   <h3>Margin-bottom</h3>
   <div>
     <div
-      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-bottom'"
+      ng-repeat="margin in site.declarations.margin.values | orderBy: 'relativeValue' | filter: 'margin-bottom'"
       style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ margin.property }}: {{ margin.value }}
+        {{margin.property}}: {{margin.value}}
     </div>
   </div>
 
   <h3>Margin-left</h3>
   <div>
     <div
-      ng-repeat="margin in margins | orderBy: 'relativeValue' | filter: 'margin-left'"
+      ng-repeat="margin in site.declarations.margin.values | orderBy: 'relativeValue' | filter: 'margin-left'"
       style="width: {{ margin.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ margin.property }}: {{ margin.value }}
+        {{margin.property}}: {{margin.value}}
     </div>
   </div>
-
-  <!-- <div ng-repeat="margin in margins | filter: 'margin-top'"
-    class="sans-serif"
-    style="">
-      {{margin.property}}: {{ margin.value }} [{{ margin.relativeValue }}%]
-  </div> -->
 </section>
 
 
-<section>
-  <h2>Padding ({{ paddings.length }})</h2>
+<section class="phl phx-l">
+  <h2>Padding ({{site.declarations.padding.count}})</h2>
 
   <h3>Padding-top</h3>
   <div>
     <div
-      ng-repeat="padding in paddings | orderBy: 'relativeValue' | filter: 'padding-top'"
+      ng-repeat="padding in site.declarations.padding.values | orderBy: 'relativeValue' | filter: 'padding-top'"
       style="width: {{ padding.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ padding.property }}: {{ padding.value }}
+        {{padding.property}}: {{padding.value}}
     </div>
   </div>
 
   <h3>Padding-right</h3>
   <div>
     <div
-      ng-repeat="padding in paddings | orderBy: 'relativeValue' | filter: 'padding-right'"
+      ng-repeat="padding in site.declarations.padding.values | orderBy: 'relativeValue' | filter: 'padding-right'"
       style="width: {{ padding.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ padding.property }}: {{ padding.value }}
+        {{padding.property}}: {{padding.value}}
     </div>
   </div>
 
   <h3>Padding-bottom</h3>
   <div>
     <div
-      ng-repeat="padding in paddings | orderBy: 'relativeValue' | filter: 'padding-bottom'"
+      ng-repeat="padding in site.declarations.padding.values | orderBy: 'relativeValue' | filter: 'padding-bottom'"
       style="width: {{ padding.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ padding.property }}: {{ padding.value }}
+        {{padding.property}}: {{padding.value}}
     </div>
   </div>
 
   <h3>Padding-left</h3>
   <div>
     <div
-      ng-repeat="padding in paddings | orderBy: 'relativeValue' | filter: 'padding-left'"
+      ng-repeat="padding in padsite.declarations.padding.valuesdings | orderBy: 'relativeValue' | filter: 'padding-left'"
       style="width: {{ padding.relativeValue }}%; background-color: pink; white-space: nowrap;"
       class="sans-serif">
-        {{ padding.property }}: {{ padding.value }}
+        {{padding.property}}: {{padding.value}}
     </div>
   </div>
 </section>

@@ -1,9 +1,7 @@
 <nav ng-include="'partials/subnav.html'"></nav>
 
-<!--<style> * { outline: 1px solid red; }</style>-->
-  <!-- jesus christ, i do not understand your styles - abstraction needed -->
-  <h1 ng-show="loading" class="tc f5 pal man tc gray">Loading...</h1>
-  <h1 ng-show="parsing" class="tc f5 pal man tc gray">Parsing data...</h1>
+<h1 ng-show="loading" class="tc f5 pal man tc gray">Loading...</h1>
+<h1 ng-show="parsing" class="tc f5 pal man tc gray">Parsing data...</h1>
 
-  <div ng-include="'partials/' + section + '.html'"></div>
+<div ng-include="'partials/' + subNavActive.id + '.html'"></div>
 

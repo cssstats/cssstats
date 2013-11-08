@@ -14,23 +14,30 @@ exports.index = (req, res) ->
 # Util
 ######################################################
 
-elementRe = /^[a-zA-Z]|\s(?=[a-zA-Z])/g
+STRING_CAMELIZE_REGEXP = /(\-|_|\.|\s)+(.)?/g
+ELEMENT_REGEXP = /^[a-zA-Z]|\s(?=[a-zA-Z])/g
 
 util = 
+
+  camelize: (str) ->
+    str.replace(STRING_CAMELIZE_REGEXP, (match, separator, chr) ->
+      (if chr then chr.toUpperCase() else '')
+    ).replace /^([A-Z])/, (match, separator, chr) ->
+      match.toLowerCase()
 
   specificityScore: (selector) ->
     count =
       id: selector.match(/#/g)
       class: selector.match(/\./g)
       attr: selector.split('[')
-      element: selector.match(elementRe)
+      element: selector.match(ELEMENT_REGEXP)
       child: selector.split('>')
     _.forEach count, (value, key) ->
       count[key] = if value then value.length else 0
     count.id * 100 + count.class * 10 + count.attr * 10 + count.element * 1
 
   fontSizeToPx: (value) ->
-    raw = parseFloat value
+    raw = parseFloat value, 10
     if value.match(/px$/) then return raw
     if value.match(/em$/) then return raw * 16  
     if value.match(/%$/) then return raw * .16
@@ -57,6 +64,13 @@ util =
         return 19
       else
         return 1024
+
+  toRelative: (items) ->
+    itemsToCompare = _.filter items, (item) ->
+      item.value isnt 'auto' and not item.value.match(/%$/)
+    max = _.max itemsToCompare, (item) ->
+      raw = parseFloat item.value, 10
+      raw = if item.match(/em$/) then raw * 16 else raw
 
 ######################################################
 # API
@@ -106,17 +120,25 @@ exports.api.parse = (req, res) ->
       dec.value
 
   response =
+    info:
+      name: 'Amazon'
     counts:
       selectors: css.selectors.length
     selectors: css.selectors
-    declarations: _.map css.decsByProperty, (decGroup, property) ->
-      response =
+    declarations: {}
+    uniqueDeclarations: {}
+
+  _.forEach css.decsByProperty, (decGroup, property) ->
+    response.declarations[util.camelize(property)] =
+      property: property
+      count: decGroup.length
+      values: decGroup
+
+  _.forEach css.uniqueDecsByProperty, (decGroup, property) ->
+      response.uniqueDeclarations[util.camelize(property)] =
         property: property
         count: decGroup.length
-    uniqueDeclarations: _.map css.uniqueDecsByProperty, (decGroup, property) ->
-      response =
-        property: property
-        count: decGroup.length
+        values: decGroup
 
   res.send response
         

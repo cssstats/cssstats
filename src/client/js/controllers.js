@@ -1,7 +1,8 @@
 // Controllers
 
 rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $location){
-  // Defining a list of sites with human readable names
+  
+  /*
   $scope.sites = {
     amazon: { 'name': 'Amazon', 'data': 'amazon', 'url': 'http://amazon.com'},
     bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk', 'fileSize': '57kb' },
@@ -21,30 +22,75 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
     twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
   };
+  */
+
+  $scope.subNav = [{
+    id: 'overview',
+    label: 'Overview'
+  },{
+    id: 'font-size',
+    label: 'Font-Size'
+  },{
+    id: 'spacing',
+    label: 'Spacing'
+  },{
+    id: 'width',
+    label: 'Width'
+  },{
+    id: 'colors',
+    label: 'Colors'
+  },{
+    id: 'all',
+    label: 'All Rules'
+  },{
+    id: 'selectors',
+    label: 'Selectors'
+  },{
+    id: 'declarations',
+    label: 'Declarations'
+  }];
+
+  $scope.subNavActive = $scope.subNav[0];
+  $scope.subNavChange = function (newItem) {
+    angular.forEach($scope.subNav, function (item) {
+      item.active = false;
+    });
+    newItem.active = true;
+    $scope.subNavActive = newItem;
+  };
 
   $scope.dropbarIsOpen = false;
-  $scope.toggleDropbar = function(){
+  $scope.toggleDropbar = function () {
     $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
-    console.log($scope.dropbarIsOpen);
   };
 
 }]);
 
-rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', 'dataloader', function($scope, $routeParams, $location, dataloader) {
+rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', function($scope, $routeParams, $location, $http) {
 
-    if($routeParams.site) {
-      $scope.currentSite = $scope.sites[$routeParams.site];
-      $scope.styleData = $scope.currentSite.data;
-      dataloader($scope);
-    } else {
-      console.error('no routeparams');
-    };
+  $scope.loading = false;
 
-    $scope.section = 'overview';
+  $http.get('/parse').then(function (response) {
+    $scope.site = response.data;
+  }, function (err) {
 
-    $scope.updateSection = function(section){
-      $scope.section = section;
-    };
+  });
+
+  /*
+  if($routeParams.site) {
+    $scope.currentSite = $scope.sites[$routeParams.site];
+    $scope.styleData = $scope.currentSite.data;
+    dataloader($scope);
+  } else {
+    console.error('no routeparams');
+  };
+
+  $scope.section = 'overview';
+
+  $scope.updateSection = function(section){
+    $scope.section = section;
+  };
+  */
 
 }]);
 
