@@ -1,12 +1,12 @@
 <section>
   <header class="phl phx-l pvl">
-    <h1 class="f1 ttu tracked lh mtl">Widths ({{ widths.length }})</h1>
+    <h1 class="f1 ttu tracked lh mtl">Widths ({{site.declarations.width.count}})</h1>
   </header>
   <div class="phl phx-l">
     <ul>
-      <li ng-repeat="width in widths | orderBy:'relativeValue'" class="mbm">
+      <li ng-repeat="width in site.declarations.width.values | orderBy:'relativeValue'" class="mbm">
         <span class="db sans-serif ltgry lh-2 f4">  <b class="blk">{{ width.value }}</b></span>
-        <div style="width: {{ width.relativeValue }}%; outline: 1px solid #222; height: 3rem;">
+        <div style="width: {{width.relativeValue}}%; outline: 1px solid #222; height: 3rem;">
             <!-- <pre>{{ width.relativeValue }}</pre> -->
         </div>
       </li>
