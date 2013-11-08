@@ -138,8 +138,6 @@ util =
     _.forEach css.decsByProperty.all, (ids, property) ->
       decs = _.filter css.decs, (dec) ->
         ids.indexOf(dec.id) isnt -1
-      if property is 'backgroundSize'
-        console.log decs
       unique = _.unique decs, (dec) ->
         dec.value
       css.decsByProperty.unique[property] = _.map unique, (dec) ->
