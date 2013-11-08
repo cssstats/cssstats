@@ -1,6 +1,6 @@
 // Controllers
 
-rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $location){
+rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope, $location, $http){
   
   /*
   $scope.sites = {
@@ -24,45 +24,57 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
   };
   */
 
-  $scope.subNav = [{
-    id: 'overview',
-    label: 'Overview',
-    active: true
-  },{
-    id: 'font-size',
-    label: 'Font-Size'
-  },{
-    id: 'spacing',
-    label: 'Spacing'
-  },{
-    id: 'width',
-    label: 'Width'
-  },{
-    id: 'colors',
-    label: 'Colors'
-  },{
-    id: 'all-rules',
-    label: 'All Rules'
-  },{
-    id: 'selectors',
-    label: 'Selectors'
-  },{
-    id: 'declarations',
-    label: 'Declarations'
-  }];
+  $scope.model = {
+    cssInput: '',
+    subNav: {
+      items: [{
+        id: 'overview',
+        label: 'Overview',
+        active: true
+      },{
+        id: 'font-size',
+        label: 'Font-Size'
+      },{
+        id: 'spacing',
+        label: 'Spacing'
+      },{
+        id: 'width',
+        label: 'Width'
+      },{
+        id: 'colors',
+        label: 'Colors'
+      },{
+        id: 'all-rules',
+        label: 'All Rules'
+      },{
+        id: 'selectors',
+        label: 'Selectors'
+      },{
+        id: 'declarations',
+        label: 'Declarations'
+      }]
+    }
+  };
 
-  $scope.subNavActive = $scope.subNav[0];
+  $scope.model.subNav.active = $scope.model.subNav.items[0];
   $scope.subNavChange = function (newItem) {
-    angular.forEach($scope.subNav, function (item) {
+    angular.forEach($scope.model.subNav.items, function (item) {
       item.active = false;
     });
     newItem.active = true;
-    $scope.subNavActive = newItem;
+    $scope.model.subNav.active = newItem;
   };
 
   $scope.dropbarIsOpen = false;
   $scope.toggleDropbar = function () {
     $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
+  };
+
+  $scope.parseCss = function () {
+    $http.post('/parse', { css: $scope.model.cssInput }).then(function (response) {
+      $scope.site = response.data;
+      $location.path('/results');
+    });
   };
 
 }]);
@@ -71,16 +83,20 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', 
 
   $scope.loading = false;
 
-  $http.get('/parse').then(function (response) {
+  /*$http.get('/parse').then(function (response) {
     $scope.site = response.data;
   }, function (err) {
 
-  });
+  });*/
 
   $scope.getDecs = function (ids) {
-    return $filter('filter')($scope.site.decs, function (dec) {
-      return ids.indexOf(dec.id) !== -1;
-    })
+    if (ids) {
+      return $filter('filter')($scope.site.decs, function (dec) {
+        return ids.indexOf(dec.id) !== -1;
+      });
+    } else {
+      return [];
+    }
   };
 
   $scope.getSelectors = function (selectors) {

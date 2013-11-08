@@ -74,4 +74,5 @@ http.createServer(app).listen app.get('port'), ->
 ######################################################
 
 app.get '/', routes.index
-app.get '/parse', routes.api.parse
+app.get '/parse', routes.api.parse.get
+app.post '/parse', routes.api.parse.post

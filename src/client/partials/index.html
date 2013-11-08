@@ -2,6 +2,10 @@
 
 <section class="phl pax-m pax-l f3 lh-copy">
   <h1 class="fw1 f4 mtm">The Data</h1>
+  <div>
+    <textarea ng-model="model.cssInput" class="wi-full ht-4"></textarea>
+    <button ng-click="parseCss()">Parse</button>
+  </div>
   <ul class="list list--h bb pbl pbx-l">
     <li ng-repeat="site in sites">
       <a href="#/{{site.data}}" class="f6 f2-m f2-l b-ns blk pvs pvm-l prm db mrl-m mrx-l">
