@@ -1,6 +1,6 @@
 module.exports =
   main:
-    files: ['src/**/*'],
-    tasks: ['build:debug']
+    files: ['src/client/js/**/*'],
+    tasks: ['build:scripts']
   options: 
     debounceDelay: 200
