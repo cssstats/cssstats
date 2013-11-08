@@ -68,9 +68,17 @@ util =
   toRelative: (items) ->
     itemsToCompare = _.filter items, (item) ->
       item.value isnt 'auto' and not item.value.match(/%$/)
-    max = _.max itemsToCompare, (item) ->
+    itemsToCompare = _.map itemsToCompare, (item) ->
       raw = parseFloat item.value, 10
-      raw = if item.match(/em$/) then raw * 16 else raw
+      raw = if item.value.match(/(em|rem)$/g) then raw * 16 else raw
+    max = _.max itemsToCompare
+    _.forEach items, (item) ->
+      raw = parseFloat item.value, 10
+      if item.value is '0' then item.relativeValue = raw
+      if item.value is 'auto' then item.relativeValue = 100
+      if item.value.match(/%$/g) then item.relativeValue = raw
+      if item.value.match(/(em|rem)$/g) then item.relativeValue = ((raw * 16) / max * 100)
+      if item.value.match(/px$/g) then item.relativeValue = (raw / max * 100)
 
 ######################################################
 # API
@@ -133,6 +141,12 @@ exports.api.parse = (req, res) ->
       property: property
       count: decGroup.length
       values: decGroup
+
+  # Relative values
+  util.toRelative response.declarations.margin.values
+  util.toRelative response.declarations.padding.values
+  util.toRelative response.declarations.width.values
+  util.toRelative response.declarations.height.values
 
   _.forEach css.uniqueDecsByProperty, (decGroup, property) ->
       response.uniqueDeclarations[util.camelize(property)] =
