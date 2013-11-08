@@ -26,7 +26,8 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
 
   $scope.subNav = [{
     id: 'overview',
-    label: 'Overview'
+    label: 'Overview',
+    active: true
   },{
     id: 'font-size',
     label: 'Font-Size'
@@ -40,7 +41,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
     id: 'colors',
     label: 'Colors'
   },{
-    id: 'all',
+    id: 'all-rules',
     label: 'All Rules'
   },{
     id: 'selectors',
@@ -66,7 +67,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', function($scope, $locatio
 
 }]);
 
-rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', function($scope, $routeParams, $location, $http) {
+rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', '$filter', function($scope, $routeParams, $location, $http, $filter) {
 
   $scope.loading = false;
 
@@ -75,6 +76,16 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', 
   }, function (err) {
 
   });
+
+  $scope.getDecs = function (ids) {
+    return $filter('filter')($scope.site.decs, function (dec) {
+      return ids.indexOf(dec.id) !== -1;
+    })
+  };
+
+  $scope.getSelectors = function (selectors) {
+    return selectors.join(', ')
+  };
 
   /*
   if($routeParams.site) {
@@ -100,7 +111,7 @@ rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope
 
 
 rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
-  $scope.$watch('loading', function(){
+  /*$scope.$watch('loading', function(){
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
     if ($scope.selectors) {
       if($scope.selectors.length > 4095) {
@@ -128,13 +139,12 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
         $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
       };
     };
-  });
-
+  });*/
 }]);
 
 
 rprtr.controller('ColorCtrl', ['$scope', function($scope){
-  $scope.$watch('loading', function(){
+  /*$scope.$watch('loading', function(){
     $scope.viewColors = $scope.colors;
   });
   $scope.showAll = function(){
@@ -142,11 +152,11 @@ rprtr.controller('ColorCtrl', ['$scope', function($scope){
   };
   $scope.showUnique = function() {
     $scope.viewColors = $scope.uniqueColors;
-  };
+  };*/
 }]);
 
 rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
-  $scope.$watch('loading', function(){
+  /*$scope.$watch('loading', function(){
     $scope.viewBackgroundColors = $scope.backgroundColors;
   });
   $scope.showAll = function() {
@@ -154,12 +164,12 @@ rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
   };
   $scope.showUnique = function() {
     $scope.viewBackgroundColors = $scope.uniqueBackgroundColors;
-  };
+  };*/
 }]);
 
 
 // I really wanna move this to a separate app
-rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
+/*rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
 
   // Controller for parsing the base JSON data and spitting out
   // declarations and unique_declarations
@@ -196,4 +206,4 @@ rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', fu
     $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
   };
 
-}]);
+}]);*/

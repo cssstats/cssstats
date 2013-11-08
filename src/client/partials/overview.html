@@ -10,13 +10,13 @@
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Total amount of declared font-sizes</span>
-          <b class="super-mega-l lh man db">{{site.declarations.fontSize.count}}</b>
+          <b class="super-mega-l lh man db">{{site.decsByProperty.all.fontSize.length}}</b>
         </p>
       </div>
       <div class="fl wi-50">
         <p class="f1 mega-l man">
           <span class="gry f5 f3-l man lh-copy db mbs"> Number of unique font-sizes</span>
-          <b class="super-mega-l lh man db">{{site.uniqueDeclarations.fontSize.count}}</b>
+          <b class="super-mega-l lh man db">{{site.decsByProperty.unique.fontSize.length}}</b>
         </p>
       </div>
     </div>
@@ -33,32 +33,32 @@
       <p class="f3">{{selectorsWarning}}</p>
       </article>
     <article class="sans-serif mvl pvl">
-      <p class="f1 f1-l man"><b>{{site.declarations.float.count}} FLOATS.</b></p>
+      <p class="f1 f1-l man"><b>{{site.decsByProperty.all.float.length}} FLOATS.</b></p>
       <p class="man f2 lh-copy">There are only three choices...</p>
     </article>
     <article class="sans-serif mbx">
-      <p class="man f1 b"> There are <b>{{site.declarations.transition.count}}</b> transitions.</p>
+      <p class="man f1 b"> There are <b>{{site.decsByProperty.all.transition.length}}</b> transitions.</p>
     </article>
   <section class="pbl">
     <h1 class="h4 tracked ttu">Other Highlights</h1>
     <ul class="sans-serif">
       <li class="mvm f2">
-        Widths: <b>{{site.declarations.width.count}}</b> total /
-                <b>{{site.uniqueDeclarations.width.count}}</b> unique
+        Widths: <b>{{site.decsByProperty.all.width.length}}</b> total /
+                <b>{{site.decsByProperty.unique.width.length}}</b> unique
       </li>
       <li class="mvm f2">
-        Heights: <b>{{site.declarations.height.count}}</b> total /
-        <b>{{site.uniqueDeclarations.height.count}}</b> unique
+        Heights: <b>{{site.decsByProperty.all.height.length}}</b> total /
+        <b>{{site.decsByProperty.unique.height.length}}</b> unique
       </li>
       <li class="mvm f2">
         Color:
-        <b>{{site.declarations.color.count}}</b> total /
-        <b>{{site.uniqueDeclarations.color.count}} </b> unique
+        <b>{{site.decsByProperty.all.color.length}}</b> total /
+        <b>{{site.decsByProperty.unique.color.length}} </b> unique
       </li>
       <li class="mvm f2">
         Background colors:
-        <b>{{site.declarations.backgroundColor.count}}</b> total /
-        <b>{{site.uniqueDeclarations.backgroundColor.count}}</b> unique
+        <b>{{site.decsByProperty.all.backgroundColor.length}}</b> total /
+        <b>{{site.decsByProperty.unique.backgroundColor.length}}</b> unique
       </li>
     </ul>
   </section>

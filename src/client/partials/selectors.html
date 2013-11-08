@@ -1,6 +1,6 @@
 <section class="phl phx-l">
   <header class="pvl">
-  <h1 class="f1 ttu tracked man lh ptl"> {{ selectors.length }} Selectors </h1>
+  <h1 class="f1 ttu tracked man lh ptl"> {{site.selectors.length}} Selectors </h1>
   <p class="f2 lh-copy">
     IDs carry more weight than classes and
     <a class="blk" href="http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/"
@@ -13,8 +13,8 @@
       <h1 class="f1 f1-l">Specificity Scores <span class="fw-normal">with corresponding selectors</span></h1>
     </header>
     <ul>
-      <li ng-repeat="selector in selectors | filter:query | orderBy:'-specificityScore'" class="pvm">
-        <b class="sans-serif f2 prl">{{ selector.specificityScore }}</b> <code class="f5">{{ selector.string }}</code>
+      <li ng-repeat="selector in site.selectors | filter:query | orderBy:'-score'" class="pvm">
+        <b class="sans-serif f2 prl">{{selector.score}}</b> <code class="f5">{{selector.string}}</code>
       </li>
   </ul>
 </section>

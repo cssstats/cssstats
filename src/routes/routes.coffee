@@ -90,23 +90,36 @@ exports.api.parse = (req, res) ->
   
   cssFile = fs.readFileSync './src/client/css/i.css', 'utf8'
   cssRules = cssParse cssFile
+
+  guid = 0
   
   css =
+    rules: []
     selectors: []
     decs: []
-    decsByProperty: {}
-    uniqueDecsByProperty: {}
+    decsByProperty:
+      all:
+        ids: []
+      unique:
+        ids: []
 
   _.forEach cssRules.stylesheet.rules, (rule) ->
+    newRule =
+      selectors: []
+      declarations: []
     if rule.selectors
       _.forEach rule.selectors, (selector) ->
+        selectorId = guid++
         item = 
+          id: selectorId
           string: selector
           score: util.specificityScore selector
         css.selectors.push item
+        newRule.selectors.push selector
     if rule.declarations
       _.forEach rule.declarations, (dec) ->
         delete dec.type
+        declarationId = dec.id = guid++
         if dec.value
           {property} = dec
           # Check for shorthand properties
@@ -115,44 +128,49 @@ exports.api.parse = (req, res) ->
           # Push the declaration
           css.decs.push dec
           # Check to see if this property has been added yet
-          if not css.decsByProperty[property]
-            css.decsByProperty[property] = []
+          camelizedProperty = util.camelize property
+          if not css.decsByProperty.all[camelizedProperty]
+            css.decsByProperty.all[camelizedProperty] = []
           # Convert the font-size to px
           if dec.property is 'font-size'
             dec.pxValue = util.fontSizeToPx dec.value
           # Push the declaration by type
-          css.decsByProperty[property].push dec
+          css.decsByProperty.all.ids.push declarationId
+          css.decsByProperty.all[camelizedProperty].push declarationId
+          newRule.declarations.push declarationId
+      if rule.selectors and rule.declarations
+        css.rules.push newRule
 
-  _.forEach css.decsByProperty, (decGroup, property) ->
-    css.uniqueDecsByProperty[property] = _.unique decGroup, (dec) ->
+  _.forEach css.decsByProperty.all, (ids, property) ->
+    decs = _.filter css.decs, (dec) ->
+      ids.indexOf(dec.id) isnt -1
+    if property is 'backgroundSize'
+      console.log decs
+    unique = _.unique decs, (dec) ->
       dec.value
+    css.decsByProperty.unique[property] = _.map unique, (dec) ->
+      css.decsByProperty.unique.ids.push dec.id
+      dec.id
+
+   # Relative values
+  (relative = () ->
+    all = css.decsByProperty.all
+    _.forEach ['margin', 'padding', 'width', 'height'], (property) ->
+      util.toRelative _.map all[property], (id) -> _.find css.decs, { id: id }
+  )()
 
   response =
     info:
       name: 'Amazon'
     counts:
       selectors: css.selectors.length
+      uniqueDecs: _.keys(css.decsByProperty.unique).length
+    rules: css.rules
+    decs: css.decs
+    decsByProperty:
+      all: css.decsByProperty.all
+      unique: css.decsByProperty.unique
     selectors: css.selectors
-    declarations: {}
-    uniqueDeclarations: {}
-
-  _.forEach css.decsByProperty, (decGroup, property) ->
-    response.declarations[util.camelize(property)] =
-      property: property
-      count: decGroup.length
-      values: decGroup
-
-  # Relative values
-  util.toRelative response.declarations.margin.values
-  util.toRelative response.declarations.padding.values
-  util.toRelative response.declarations.width.values
-  util.toRelative response.declarations.height.values
-
-  _.forEach css.uniqueDecsByProperty, (decGroup, property) ->
-      response.uniqueDeclarations[util.camelize(property)] =
-        property: property
-        count: decGroup.length
-        values: decGroup
 
   res.send response
         

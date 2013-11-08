@@ -1,7 +1,7 @@
 <section>
   <header class="phl phx-l mvl mvx-l">
     <h1 class="f1 ttu tracked lh">
-      {{ colors.length + backgroundColors.length }} Colors
+      {{site.decsByProperty.all.color.length + site.decsByProperty.all.backgroundColor.length}} Colors
     </h1>
   </header>
   <div>
@@ -11,13 +11,13 @@
         <!-- <a href="" ng-click="showAll()">All ({{ colors.length }})</a> -->
         <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueColors.length }})</a> -->
         <ul>
-          <li ng-repeat="color in viewColors | orderBy:'value'"
+          <li ng-repeat="color in getDecs(site.decsByProperty.all.color) | orderBy:'value'"
             class="sans-serif">
-          <var class="fsn lh-2 b">{{ color.value }}</var>
+          <var class="fsn lh-2 b">{{color.value}}</var>
           <p
             class="lh-copy mtn mbl"
-            style="color: {{ color.value }}">
-Whoa, Peppermint butler! Finn, Jake. The Princess wants to see you. As princess of Candy Kingdom, Im in charge of a lot of candy people. They rely on me. I cant imagine what might happen to them if I was gone. And after my brush with death, at the hands of the Lich, I realized something. Im not gonna live forever Finn. I would if I could.
+            style="color: {{color.value}}">
+            Whoa, Peppermint butler! Finn, Jake. The Princess wants to see you. As princess of Candy Kingdom, Im in charge of a lot of candy people. They rely on me. I cant imagine what might happen to them if I was gone. And after my brush with death, at the hands of the Lich, I realized something. Im not gonna live forever Finn. I would if I could.
           </p>
         </li>
       </ul>
@@ -27,10 +27,9 @@ Whoa, Peppermint butler! Finn, Jake. The Princess wants to see you. As princess 
       <!-- <a href="" ng-click="showAll()" ng-class="{'drkgry':viewBackgroundColors == backgroundColors}">All ({{ backgroundColors.length}})</a> -->
       <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueBackgroundColors.length }})</a> -->
       <ul>
-        <li ng-repeat="backgroundColor in viewBackgroundColors | orderBy: 'value'"
-          class="f3 ttu">
-        <span class="f5 b">{{ backgroundColor.value }}</span>
-        <div style="background-color: {{ backgroundColor.value }}; height: 5rem; width: 100%;" class="dib" > </div>
+        <li ng-repeat="backgroundColor in getDecs(site.decsByProperty.all.backgroundColor) | orderBy: 'value'" class="f3 ttu">
+        <span class="f5 b">{{backgroundColor.value}}</span>
+        <div style="background-color: {{backgroundColor.value}}; height: 5rem; width: 100%;" class="dib" > </div>
       </li>
     </ul>
   </section>
