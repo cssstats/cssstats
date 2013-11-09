@@ -100,12 +100,10 @@ module.exports = function(css, options){
     var rules = [];
     whitespace();
     comments(rules);
-    console.log('rules');
     while (css.charAt(0) != '}' && (node = atrule() || rule())) {
       rules.push(node);
       comments(rules);
     }
-    console.log('rules done')
     return rules;
   }
 
