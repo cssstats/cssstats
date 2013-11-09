@@ -25,6 +25,7 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope,
   */
 
   $scope.model = {
+    cssDirectUrl: '',
     cssInput: '',
     subNav: {
       items: [{
