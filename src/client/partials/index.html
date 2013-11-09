@@ -3,10 +3,17 @@
 <section class="phl pax-m pax-l f3 lh-copy">
   <h1 class="fw1 f4 mtm">The Data</h1>
   <div>
-    <input type="text" ng-model="cssDirectUrl" />
+    <select ng-model="model.cssInputType" ng-options="type.value as type.label for type in model.cssInputTypes">
+    </select>
   </div>
-  <div>
-    <textarea ng-model="model.cssInput" class="wi-full ht-4"></textarea>
+  <div ng-show="model.cssInputType == 'directInput'">
+    <textarea ng-model="model.cssDirectInput" class="wi-full ht-4"></textarea>
+  </div>
+  <div ng-show="model.cssInputType == 'directUrl'">
+    <input type="text" ng-model="model.cssDirectUrl" />
+  </div>
+  <div ng-show="model.cssInputType == 'url'">
+    <input type="text" ng-model="model.cssUrl" />
   </div>
   <div>
     <button ng-click="parseCss()">Parse</button>

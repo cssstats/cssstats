@@ -28,6 +28,7 @@
     "coffeelint": "~0.5.7",
     "coffee-script": "~1.6.3",
     "css-parse": "~1.6.0",
+    "cssunminifier": "~0.0.2",
     "express": "~3.3.5",
     "express3-handlebars": "~0.5.0",
     "formidable": "~1.0.14",
@@ -47,8 +48,10 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compress": "~0.5.2",
     "grunt-download": "~0.2",
+    "html-parser": "~0.7.0",
     "lockfile": "~>0.3.0",
     "node-uuid": "~1.4.1",
+    "request": "~2.27.0",
     "versionator": "~0.2.2",
     "when": "~2.4.0"
   },

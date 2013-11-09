@@ -1,8 +1,14 @@
-util        = require 'util'
-fs          = require 'fs'
-cssParse    = require 'css-parse'
-_           = require 'lodash'
-formidable  = require 'formidable'
+util          = require 'util'
+fs            = require 'fs'
+http          = require 'http'
+request       = require 'request'
+_url          = require 'url'
+cssParse      = require 'css-parse'
+cssunminifier = require 'cssunminifier'
+_             = require 'lodash'
+formidable    = require 'formidable'
+_when         = require 'when'
+htmlParse     = require 'html-parser'
 
 ######################################################
 # Util
@@ -74,12 +80,46 @@ util =
       if item.value.match(/(em|rem)$/g) then item.relativeValue = ((raw * 16) / max * 100)
       if item.value.match(/px$/g) then item.relativeValue = (raw / max * 100)
 
-  parse: (cssString) ->
+  getUrlContents: (url) ->
+    _when.promise (resolve, reject, notify) ->
+      request url, (error, response, body) ->
+        if not error and response.statusCode is 200
+          resolve body
+        else
+          reject error
 
-    cssRules = cssParse cssString
+  parseCssFromDirectUrl: (url) ->
+    _when.promise (resolve, reject, notify) ->
+      util.getUrlContents(url).then (body) ->
+        resolve util.parseCss(body)
+      , (err) ->
+        reject err
 
+  parseCssFromUrl: (url) ->
+    _when.promise (resolve, reject, notify) ->
+      util.getUrlContents(url).then (body) ->
+        parsedUrl = _url.parse url
+        cssUrls = []
+        parsedCssFiles = []
+        htmlParse.parse body,
+          attribute: (name, value) ->
+            if name is 'href' and value.match(/\.css/g)
+              cssUrls.push value
+        console.log cssUrls
+        _.forEach cssUrls, (cssUrl) ->
+          if not cssUrl.match(/^(http|https)/g)
+            if cssUrl.match(/^\//g)
+              cssUrl = parsedUrl.href + cssUrl.replace(/^\//g, '')
+            else
+              cssUrl = parsedUrl.href + cssUrl
+          parsedCssFiles.push util.parseCssFromDirectUrl(cssUrl)
+        _when.all(parsedCssFiles).then (response) ->
+          resolve response
+
+  parseCss: (cssString) ->
+    cssRules = cssParse cssunminifier.unminify(cssString)
     guid = 0
-    
+
     css =
       rules: []
       selectors: []
@@ -145,8 +185,6 @@ util =
     )()
 
     response =
-      info:
-        name: 'Site Name'
       counts:
         selectors: css.selectors.length
         uniqueDecs: _.keys(css.decsByProperty.unique).length
@@ -155,7 +193,7 @@ util =
       decsByProperty:
         all: css.decsByProperty.all
         unique: css.decsByProperty.unique
-      selectors: css.selectors
+      selectors: css.selectors  
 
 ######################################################
 # Index
@@ -182,6 +220,12 @@ exports.api.parse =
   post: (req, res) ->
     form = new formidable.IncomingForm()
     form.parse req, (err, fields, files) ->
-      response = util.parse fields.css
-      res.send response
-
+      switch fields.type
+        when 'directInput'
+          res.send util.parseCss(fields.css)
+        when 'directUrl'
+          util.parseCssFromDirectUrl(fields.url).then (response) ->
+            res.send response
+        when 'url'
+          util.parseCssFromUrl(fields.url).then (response) ->
+            res.send response[0]

@@ -24,40 +24,42 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope,
   };
   */
 
-  $scope.model = {
-    cssDirectUrl: '',
-    cssInput: '',
-    subNav: {
-      items: [{
-        id: 'overview',
-        label: 'Overview',
-        active: true
-      },{
-        id: 'font-size',
-        label: 'Font-Size'
-      },{
-        id: 'spacing',
-        label: 'Spacing'
-      },{
-        id: 'width',
-        label: 'Width'
-      },{
-        id: 'colors',
-        label: 'Colors'
-      },{
-        id: 'all-rules',
-        label: 'All Rules'
-      },{
-        id: 'selectors',
-        label: 'Selectors'
-      },{
-        id: 'declarations',
-        label: 'Declarations'
-      }]
-    }
+  var m = $scope.model = {};
+
+  ///////////////////////////////////
+  // Subnav
+  ///////////////////////////////////
+
+  m.subNav = {
+    items: [{
+      id: 'overview',
+      label: 'Overview',
+      active: true
+    },{
+      id: 'font-size',
+      label: 'Font-Size'
+    },{
+      id: 'spacing',
+      label: 'Spacing'
+    },{
+      id: 'width',
+      label: 'Width'
+    },{
+      id: 'colors',
+      label: 'Colors'
+    },{
+      id: 'all-rules',
+      label: 'All Rules'
+    },{
+      id: 'selectors',
+      label: 'Selectors'
+    },{
+      id: 'declarations',
+      label: 'Declarations'
+    }]
   };
 
-  $scope.model.subNav.active = $scope.model.subNav.items[0];
+  m.subNav.active = $scope.model.subNav.items[0];
   $scope.subNavChange = function (newItem) {
     angular.forEach($scope.model.subNav.items, function (item) {
       item.active = false;
@@ -66,16 +68,53 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope,
     $scope.model.subNav.active = newItem;
   };
 
-  $scope.dropbarIsOpen = false;
-  $scope.toggleDropbar = function () {
-    $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
-  };
+  ///////////////////////////////////
+  // CSS Parse
+  ///////////////////////////////////
+
+  m.cssInputTypes = [{
+    label: 'Direct Input',
+    value: 'directInput'
+  },{
+    label: 'Direct URL',
+    value: 'directUrl'
+  },{
+    label: 'URL',
+    value: 'url'
+  }];
+  
+  m.cssInputType = 'url';
+  m.cssDirectInput = '';
+  m.cssDirectUrl = 'http://rprtr.herokuapp.com/css/i.css';
+  m.cssUrl = 'http://rprtr.herokuapp.com'
 
   $scope.parseCss = function () {
-    $http.post('/parse', { css: $scope.model.cssInput }).then(function (response) {
+    var data = {
+      type: m.cssInputType
+    };
+    if (m.cssInputType === 'directUrl') {
+      data.url = m.cssDirectUrl;
+    }
+    if (m.cssInputType === 'url') {
+      data.url = m.cssUrl;
+    }
+    if (m.cssInputType === 'directInput') {
+      data.css = m.cssDirectInput;
+    }
+    $http.post('/parse', data).then(function (response) {
+      console.log(response.data);
       $scope.site = response.data;
       $location.path('/results');
     });
+  };
+  
+  ///////////////////////////////////
+  // Misc
+  ///////////////////////////////////
+
+  $scope.dropbarIsOpen = false;
+  $scope.toggleDropbar = function () {
+    $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
   };
 
 }]);
