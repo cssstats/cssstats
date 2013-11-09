@@ -6,11 +6,11 @@
     <select ng-model="model.cssInputType" ng-options="type.value as type.label for type in model.cssInputTypes">
     </select>
   </div>
-  <div ng-show="model.cssInputType == 'link'" class="pvs">
-    <input type="text" ng-model="model.cssUrlDirect" class="wi-full pas" />
-  </div>
   <div ng-show="model.cssInputType == 'url'" class="pvs">
     <input type="text" ng-model="model.cssUrl" class="wi-full pas" />
+  </div>
+  <div ng-show="model.cssInputType == 'link'" class="pvs">
+    <input type="text" ng-model="model.cssLink" class="wi-full pas" />
   </div>
   <div ng-show="model.cssInputType == 'input'" class="pvs">
     <textarea ng-model="model.cssInput" class="wi-full ht-4 pas"></textarea>

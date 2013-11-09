@@ -18,16 +18,16 @@ angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http'
   }];
   
   m.cssInputType = 'url';
-  m.cssInput = '';
-  m.cssUrlDirect = 'http://rprtr.herokuapp.com/css/i.css';
   m.cssUrl = 'http://rprtr.herokuapp.com'
-
+  m.cssLink = 'http://rprtr.herokuapp.com/css/i.css';
+  m.cssInput = '';
+  
   $scope.parseCss = function () {
-    if (m.cssInputType === 'link') {
-      $location.path('/site/url/' + encodeURIComponent(m.cssDirectUrl));
-    }
     if (m.cssInputType === 'url') {
       $location.path('/site/url/' + encodeURIComponent(m.cssUrl));
+    }
+    if (m.cssInputType === 'link') {
+      $location.path('/site/link/' + encodeURIComponent(m.cssLink));
     }
     if (m.cssInputType === 'input') {
       $http.post('/parse', { css: m.cssInput }).then(function (response) {
