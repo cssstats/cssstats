@@ -88,7 +88,7 @@ util =
         else
           reject error
 
-  parseCssFromDirectUrl: (url) ->
+  parseCssFromLink: (url) ->
     _when.promise (resolve, reject, notify) ->
       util.getUrlContents(url).then (body) ->
         resolve util.parseCss(body)
@@ -210,12 +210,6 @@ exports.index = (req, res) ->
 exports.api = {}
 
 exports.api.parse =
-
-  # GET
-  get: (req, res) ->
-    cssFile = fs.readFileSync './src/client/css/i.css', 'utf8'
-    response = util.parse cssFile
-    res.send response
   
   # POST
   post: (req, res) ->
@@ -224,8 +218,8 @@ exports.api.parse =
       switch fields.type
         when 'input'
           res.send util.parseCss(fields.css)
-        when 'url-direct'
-          util.parseCssFromDirectUrl(fields.url).then (response) ->
+        when 'link'
+          util.parseCssFromLink(fields.url).then (response) ->
             res.send response
         when 'url'
           util.parseCssFromUrl(fields.url).then (response) ->
