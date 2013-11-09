@@ -2256,281 +2256,6 @@
   },
   {
     "type": "declaration",
-    "property": "font-family",
-    "value": "inherit"
-  },
-  {
-    "type": "declaration",
-    "property": "border-radius",
-    "value": "6px"
-  },
-  {
-    "type": "declaration",
-    "property": "border",
-    "value": "1px solid transparent"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "14px"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#75796f"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "12px 18px 14px"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-appearance",
-    "value": "none"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "\"background-color\" 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "\"background-color\" 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "\"background-color\" 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "\"background-color\" 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "outline",
-    "value": "0"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "11px"
-  },
-  {
-    "type": "declaration",
-    "property": "vertical-align",
-    "value": "-1px"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#d0d5cb"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#9ba093"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#d0d5cb"
-  },
-  {
-    "type": "declaration",
-    "property": "cursor",
-    "value": "default"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "12px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "6px 10px"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "16px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "19px 23px 21px"
-  },
-  {
-    "type": "declaration",
-    "property": "vertical-align",
-    "value": "-3px"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#78eb05"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#0096bb"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#04b8e4"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#ec645a"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#ff8980"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#0b1902"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#eef2ea"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#3b5998"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#00aced"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#fff"
-  },
-  {
-    "type": "declaration",
-    "property": "border-color",
-    "value": "#d0d5cb"
-  },
-  {
-    "type": "declaration",
-    "property": "border-color",
-    "value": "#75796f"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "none"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#76cc1e"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#78eb05"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "6px 10px 6px"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "all 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "all 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "all 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "all 0.07s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "10px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin",
-    "value": "20px 0"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#e4fafc"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "10px 20px"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#fff !important"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#3b5998 url(/assets/compass/pledges/thanks/facebook-42e8773066aa29dc86bb69aa52b51954.png) no-repeat 30px 50%"
-  },
-  {
-    "type": "declaration",
-    "property": "padding-left",
-    "value": "60px"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#30487b"
-  },
-  {
-    "type": "declaration",
-    "property": "background-image",
-    "value": "none"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "19px 23px 21px 60px"
-  },
-  {
-    "type": "declaration",
-    "property": "background-position",
-    "value": "20px 50%"
-  },
-  {
-    "type": "declaration",
-    "property": "padding-left",
-    "value": "40px"
-  },
-  {
-    "type": "declaration",
     "property": "content",
     "value": "\" CAD\""
   },
@@ -2621,6 +2346,11 @@
   },
   {
     "type": "declaration",
+    "property": "background",
+    "value": "#fff"
+  },
+  {
+    "type": "declaration",
     "property": "border",
     "value": "1px solid #d0d5cb"
   },
@@ -2698,6 +2428,11 @@
     "type": "declaration",
     "property": "background-color",
     "value": "transparent"
+  },
+  {
+    "type": "declaration",
+    "property": "-webkit-appearance",
+    "value": "none"
   },
   {
     "type": "declaration",
@@ -2806,6 +2541,11 @@
   },
   {
     "type": "declaration",
+    "property": "color",
+    "value": "#76cc1e"
+  },
+  {
+    "type": "declaration",
     "property": "width",
     "value": "30px"
   },
@@ -2841,6 +2581,11 @@
   },
   {
     "type": "declaration",
+    "property": "border-radius",
+    "value": "6px"
+  },
+  {
+    "type": "declaration",
     "property": "border-color",
     "value": "#76cc1e"
   },
@@ -2861,8 +2606,18 @@
   },
   {
     "type": "declaration",
+    "property": "line-height",
+    "value": "16px"
+  },
+  {
+    "type": "declaration",
     "property": "width",
     "value": "242px"
+  },
+  {
+    "type": "declaration",
+    "property": "background-image",
+    "value": "none"
   },
   {
     "type": "declaration",
@@ -2883,6 +2638,11 @@
     "type": "declaration",
     "property": "border-bottom-right-radius",
     "value": "3px"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#d0d5cb"
   },
   {
     "type": "declaration",
@@ -2918,6 +2678,11 @@
     "type": "declaration",
     "property": "padding",
     "value": "20px 40px !important"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#ec645a"
   },
   {
     "type": "declaration",
@@ -3001,6 +2766,11 @@
   },
   {
     "type": "declaration",
+    "property": "padding",
+    "value": "10px 20px"
+  },
+  {
+    "type": "declaration",
     "property": "line-height",
     "value": "24px"
   },
@@ -3021,8 +2791,18 @@
   },
   {
     "type": "declaration",
+    "property": "color",
+    "value": "#d0d5cb"
+  },
+  {
+    "type": "declaration",
     "property": "top",
     "value": "-1px"
+  },
+  {
+    "type": "declaration",
+    "property": "z-index",
+    "value": "5"
   },
   {
     "type": "declaration",
@@ -3128,6 +2908,11 @@
     "type": "declaration",
     "property": "padding-right",
     "value": "10px"
+  },
+  {
+    "type": "declaration",
+    "property": "line-height",
+    "value": "14px"
   },
   {
     "type": "declaration",
@@ -3262,7 +3047,7 @@
   {
     "type": "declaration",
     "property": "top",
-    "value": "3px"
+    "value": "2px"
   },
   {
     "type": "declaration",
@@ -3403,6 +3188,11 @@
     "type": "declaration",
     "property": "border-radius",
     "value": "0px 6px 6px 0px"
+  },
+  {
+    "type": "declaration",
+    "property": "border",
+    "value": "1px solid transparent"
   },
   {
     "type": "declaration",
@@ -3641,6 +3431,11 @@
   },
   {
     "type": "declaration",
+    "property": "background",
+    "value": "#e4fafc"
+  },
+  {
+    "type": "declaration",
     "property": "border",
     "value": "1px dashed #e4fafc"
   },
@@ -3851,11 +3646,6 @@
   },
   {
     "type": "declaration",
-    "property": "z-index",
-    "value": "5"
-  },
-  {
-    "type": "declaration",
     "property": "padding",
     "value": "20px 0"
   },
@@ -3906,6 +3696,11 @@
   },
   {
     "type": "declaration",
+    "property": "border-color",
+    "value": "#75796f"
+  },
+  {
+    "type": "declaration",
     "property": "text-indent",
     "value": "-9999px"
   },
@@ -3913,6 +3708,11 @@
     "type": "declaration",
     "property": "background",
     "value": "#eef2ea url(/assets/compass/loading-small-2724bd6e27f1b91a9aeedc57fa1de271.gif) 50% 50% no-repeat"
+  },
+  {
+    "type": "declaration",
+    "property": "border-color",
+    "value": "#d0d5cb"
   },
   {
     "type": "declaration",
@@ -3928,6 +3728,11 @@
     "type": "declaration",
     "property": "box-shadow",
     "value": "rgba(0, 0, 0, 0.1), 0, 2px, 20px, 0, inset"
+  },
+  {
+    "type": "declaration",
+    "property": "cursor",
+    "value": "default"
   },
   {
     "type": "declaration",
@@ -3983,6 +3788,11 @@
     "type": "declaration",
     "property": "padding-top",
     "value": "10px"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#eef2ea"
   },
   {
     "type": "declaration",
@@ -4073,6 +3883,11 @@
     "type": "declaration",
     "property": "overflow",
     "value": "scroll"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "none"
   },
   {
     "type": "declaration",
@@ -4173,6 +3988,11 @@
     "type": "declaration",
     "property": "font-family",
     "value": "Verdana, sans-serif"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#0b1902"
   },
   {
     "type": "declaration",
@@ -4672,7 +4492,7 @@
   {
     "type": "declaration",
     "property": "background-image",
-    "value": "url(\"data:image/png;\n    base64, iVBORw0KGgoAAAANSUhEUgAAADIAAAB6CAAAAADYX19sAAAAP0lEQVRYw+3TsREAQAQAQWbU8P2X9qUowcgEK9/EUT+2U29PAjlJ0sYQl4yoj6iPIIivRKRE1EfUR1wygiDzND5WAuhwGVizAAAAAElFTkSuQmCC\")"
+    "value": "url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAB6CAAAAADYX19sAAAAP0lEQVRYw+3TsREAQAQAQWbU8P2X9qUowcgEK9/EUT+2U29PAjlJ0sYQl4yoj6iPIIivRKRE1EfUR1wygiDzND5WAuhwGVizAAAAAElFTkSuQmCC\")"
   },
   {
     "type": "declaration",
@@ -4683,6 +4503,11 @@
     "type": "declaration",
     "property": "background-color",
     "value": "#76cc1e"
+  },
+  {
+    "type": "declaration",
+    "property": "vertical-align",
+    "value": "-1px"
   },
   {
     "type": "declaration",
@@ -4946,6 +4771,11 @@
   },
   {
     "type": "declaration",
+    "property": "line-height",
+    "value": "12px"
+  },
+  {
+    "type": "declaration",
     "property": "bottom",
     "value": "43px"
   },
@@ -4978,11 +4808,6 @@
     "type": "declaration",
     "property": "padding-top",
     "value": "5px"
-  },
-  {
-    "type": "declaration",
-    "property": "top",
-    "value": "2px"
   },
   {
     "type": "declaration",
@@ -5128,6 +4953,11 @@
     "type": "declaration",
     "property": "padding-top",
     "value": "17px"
+  },
+  {
+    "type": "declaration",
+    "property": "line-height",
+    "value": "10px"
   },
   {
     "type": "declaration",
@@ -5946,6 +5776,11 @@
   },
   {
     "type": "declaration",
+    "property": "background-color",
+    "value": "#75796f"
+  },
+  {
+    "type": "declaration",
     "property": "padding",
     "value": "0px 2px"
   },
@@ -6562,6 +6397,11 @@
   {
     "type": "declaration",
     "property": "background",
+    "value": "#0096bb"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
     "value": "#062531"
   },
   {
@@ -6633,6 +6473,11 @@
     "type": "declaration",
     "property": "height",
     "value": "450px"
+  },
+  {
+    "type": "declaration",
+    "property": "top",
+    "value": "3px"
   },
   {
     "type": "declaration",
@@ -6821,6 +6666,16 @@
   },
   {
     "type": "declaration",
+    "property": "background",
+    "value": "#78eb05"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#ff8980"
+  },
+  {
+    "type": "declaration",
     "property": "border-radius",
     "value": "0px 6px 6px 6px"
   },
@@ -6838,6 +6693,11 @@
     "type": "declaration",
     "property": "border-radius",
     "value": "20px"
+  },
+  {
+    "type": "declaration",
+    "property": "padding-left",
+    "value": "60px"
   },
   {
     "type": "declaration",
@@ -7196,11 +7056,6 @@
   },
   {
     "type": "declaration",
-    "property": "margin",
-    "value": "40px 0px"
-  },
-  {
-    "type": "declaration",
     "property": "border-radius",
     "value": "75px"
   },
@@ -7222,7 +7077,22 @@
   {
     "type": "declaration",
     "property": "background",
+    "value": "#04b8e4"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
     "value": "#9ba093"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#00aced"
+  },
+  {
+    "type": "declaration",
+    "property": "background",
+    "value": "#3b5998"
   },
   {
     "type": "declaration",
@@ -7931,6 +7801,11 @@
   },
   {
     "type": "declaration",
+    "property": "vertical-align",
+    "value": "-3px"
+  },
+  {
+    "type": "declaration",
     "property": "color",
     "value": "#ee6a61"
   },
@@ -8108,6 +7983,11 @@
     "type": "declaration",
     "property": "background-color",
     "value": "#f6fa88"
+  },
+  {
+    "type": "declaration",
+    "property": "margin",
+    "value": "20px 0"
   },
   {
     "type": "declaration",
@@ -8361,6 +8241,11 @@
   },
   {
     "type": "declaration",
+    "property": "outline",
+    "value": "0"
+  },
+  {
+    "type": "declaration",
     "property": "line-height",
     "value": "50px"
   },
@@ -8478,6 +8363,11 @@
     "type": "declaration",
     "property": "background-position",
     "value": "18px 50%"
+  },
+  {
+    "type": "declaration",
+    "property": "padding-left",
+    "value": "40px"
   },
   {
     "type": "declaration",
@@ -9452,16 +9342,6 @@
   {
     "type": "declaration",
     "property": "padding-left",
-    "value": "120px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding-right",
-    "value": "120px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding-left",
     "value": "48px"
   },
   {
@@ -9743,6 +9623,11 @@
     "type": "declaration",
     "property": "padding-top",
     "value": "0px"
+  },
+  {
+    "type": "declaration",
+    "property": "margin",
+    "value": "40px 0px"
   },
   {
     "type": "declaration",
@@ -10411,6 +10296,11 @@
   },
   {
     "type": "declaration",
+    "property": "padding-right",
+    "value": "120px"
+  },
+  {
+    "type": "declaration",
     "property": "list-style",
     "value": "disc"
   },
@@ -10511,6 +10401,21 @@
   },
   {
     "type": "declaration",
+    "property": "width",
+    "value": "590px"
+  },
+  {
+    "type": "declaration",
+    "property": "padding-left",
+    "value": "50px"
+  },
+  {
+    "type": "declaration",
+    "property": "padding-right",
+    "value": "38px"
+  },
+  {
+    "type": "declaration",
     "property": "line-height",
     "value": "54px"
   },
@@ -10553,6 +10458,11 @@
     "type": "declaration",
     "property": "right",
     "value": "150px"
+  },
+  {
+    "type": "declaration",
+    "property": "padding-left",
+    "value": "120px"
   },
   {
     "type": "declaration",
@@ -11181,6 +11091,16 @@
   },
   {
     "type": "declaration",
+    "property": "line-height",
+    "value": "11px"
+  },
+  {
+    "type": "declaration",
+    "property": "height",
+    "value": "480px"
+  },
+  {
+    "type": "declaration",
     "property": "background",
     "value": "transparent url(/assets/compass/widgets/k-logo-e2f57e938f68d4d9993efdc3188bade8.png) no-repeat top left"
   },
@@ -11197,32 +11117,22 @@
   {
     "type": "declaration",
     "property": "-webkit-transition",
-    "value": "\"all\" 0.5s fadeInUp"
+    "value": "all 0.3s ease"
   },
   {
     "type": "declaration",
     "property": "-moz-transition",
-    "value": "\"all\" 0.5s fadeInUp"
+    "value": "all 0.3s ease"
   },
   {
     "type": "declaration",
     "property": "-o-transition",
-    "value": "\"all\" 0.5s fadeInUp"
+    "value": "all 0.3s ease"
   },
   {
     "type": "declaration",
     "property": "transition",
-    "value": "\"all\" 0.5s fadeInUp"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#102105"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "rgba(16, 33, 5, 0.85)"
+    "value": "all 0.3s ease"
   },
   {
     "type": "declaration",
@@ -11236,33 +11146,8 @@
   },
   {
     "type": "declaration",
-    "property": "font-size",
-    "value": "0.65em"
-  },
-  {
-    "type": "declaration",
     "property": "border-width",
     "value": "4px"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "\"background-color\" 0.1s"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "\"background-color\" 0.1s"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "\"background-color\" 0.1s"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "\"background-color\" 0.1s"
   },
   {
     "type": "declaration",
@@ -11727,17 +11612,22 @@
   {
     "type": "declaration",
     "property": "top",
+    "value": "13px"
+  },
+  {
+    "type": "declaration",
+    "property": "top",
     "value": "14px"
   },
   {
     "type": "declaration",
-    "property": "padding",
-    "value": "4px 10px 4px 48px"
+    "property": "right",
+    "value": "110px"
   },
   {
     "type": "declaration",
-    "property": "width",
-    "value": "301px"
+    "property": "padding",
+    "value": "4px 24px 4px 35px"
   },
   {
     "type": "declaration",
@@ -11761,11 +11651,6 @@
   },
   {
     "type": "declaration",
-    "property": "padding-left",
-    "value": "50px"
-  },
-  {
-    "type": "declaration",
     "property": "font-weight",
     "value": "200"
   },
@@ -11778,6 +11663,26 @@
     "type": "declaration",
     "property": "background-clip",
     "value": "padding-box"
+  },
+  {
+    "type": "declaration",
+    "property": "-webkit-transition",
+    "value": "all 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "-moz-transition",
+    "value": "all 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "-o-transition",
+    "value": "all 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "transition",
+    "value": "all 0.07s ease-in"
   },
   {
     "type": "declaration",
@@ -12337,6 +12242,11 @@
   {
     "type": "declaration",
     "property": "color",
+    "value": "#fff !important"
+  },
+  {
+    "type": "declaration",
+    "property": "color",
     "value": "#0096bb !important"
   },
   {
@@ -12598,6 +12508,11 @@
     "type": "declaration",
     "property": "border-bottom",
     "value": "1px solid #b4d7f9"
+  },
+  {
+    "type": "declaration",
+    "property": "padding",
+    "value": "6px 10px"
   },
   {
     "type": "declaration",
@@ -12958,11 +12873,6 @@
     "type": "declaration",
     "property": "padding",
     "value": "7px 13px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin",
-    "value": "40px 0px 30px 10px"
   },
   {
     "type": "declaration",
@@ -13466,11 +13376,6 @@
   },
   {
     "type": "declaration",
-    "property": "border-bottom",
-    "value": "1px dotted transparent"
-  },
-  {
-    "type": "declaration",
     "property": "margin",
     "value": "0 0px 50px 10px"
   },
@@ -13663,11 +13568,6 @@
     "type": "declaration",
     "property": "padding-bottom",
     "value": "90px"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "480px"
   },
   {
     "type": "declaration",
@@ -14586,6 +14486,11 @@
   },
   {
     "type": "declaration",
+    "property": "color",
+    "value": "#78eb05"
+  },
+  {
+    "type": "declaration",
     "property": "margin",
     "value": "15px 0px 5px"
   },
@@ -14763,11 +14668,6 @@
     "type": "declaration",
     "property": "bottom",
     "value": "8px"
-  },
-  {
-    "type": "declaration",
-    "property": "width",
-    "value": "590px"
   },
   {
     "type": "declaration",
@@ -15283,11 +15183,6 @@
     "type": "declaration",
     "property": "left",
     "value": "9px"
-  },
-  {
-    "type": "declaration",
-    "property": "top",
-    "value": "13px"
   },
   {
     "type": "declaration",
@@ -16406,8 +16301,13 @@
   },
   {
     "type": "declaration",
+    "property": "margin-left",
+    "value": "0.25em"
+  },
+  {
+    "type": "declaration",
     "property": "filter",
-    "value": "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    "value": "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"
   },
   {
     "type": "declaration",
@@ -16447,7 +16347,7 @@
   {
     "type": "declaration",
     "property": "filter",
-    "value": "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    "value": "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"
   },
   {
     "type": "declaration",
@@ -17997,6 +17897,11 @@
   {
     "type": "declaration",
     "property": "background-color",
+    "value": "#30487b"
+  },
+  {
+    "type": "declaration",
+    "property": "background-color",
     "value": "#00aced"
   },
   {
@@ -18336,451 +18241,6 @@
   },
   {
     "type": "declaration",
-    "property": "background",
-    "value": "url(/assets/compass/years/2011/background-wood-2afdf602d88c9855fec7fdb1529d0229.jpg) repeat top center"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-font-smoothing",
-    "value": "antialiased"
-  },
-  {
-    "type": "declaration",
-    "property": "font-smoothing",
-    "value": "antialiased"
-  },
-  {
-    "type": "declaration",
-    "property": "font-size",
-    "value": "38px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "8px 23px 5px 7px"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "rgba(0, 0, 0, 0.7) url(/assets/compass/years/2011/arrow-f518b54f20a1aa5f6af22ed31020d22f.png) no-repeat 83px 8px"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "rgba(255, 255, 255, 0.7)"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "all 0.4s ease-in-out"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "all 0.4s ease-in-out"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "all 0.4s ease-in-out"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "all 0.4s ease-in-out"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#87c442 url(/assets/compass/years/2011/arrow-f518b54f20a1aa5f6af22ed31020d22f.png) no-repeat 83px 8px"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "550px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-left",
-    "value": "-855px"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "rgba(255, 255, 255, 0.85)"
-  },
-  {
-    "type": "declaration",
-    "property": "right",
-    "value": "80px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-top",
-    "value": "220px"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#aab900"
-  },
-  {
-    "type": "declaration",
-    "property": "margin",
-    "value": "0px 40px 0px 80px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-top",
-    "value": "150px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "100px 0px 100px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding-right",
-    "value": "590px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "140px 0px 60px"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "rgba(0, 0, 0, 0.4)"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#acacac"
-  },
-  {
-    "type": "declaration",
-    "property": "font-family",
-    "value": "BrandonGrotesque-Bold, Helvetica, Arial, \"Liberation Sans\", FreeSans, sans-serif"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "1000px"
-  },
-  {
-    "type": "declaration",
-    "property": "bottom",
-    "value": "22.5%"
-  },
-  {
-    "type": "declaration",
-    "property": "left",
-    "value": "440px"
-  },
-  {
-    "type": "declaration",
-    "property": "bottom",
-    "value": "15%"
-  },
-  {
-    "type": "declaration",
-    "property": "left",
-    "value": "200px"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#070b03"
-  },
-  {
-    "type": "declaration",
-    "property": "font-family",
-    "value": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
-  },
-  {
-    "type": "declaration",
-    "property": "min-width",
-    "value": "320px !important"
-  },
-  {
-    "type": "declaration",
-    "property": "border-bottom",
-    "value": "1px solid rgba(255, 255, 255, 0.3)"
-  },
-  {
-    "type": "declaration",
-    "property": "background-image",
-    "value": "url(https://d3mlfyygrfdi2i.cloudfront.net/yir2012_darksky_noipad.gif)"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-top",
-    "value": "70px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin",
-    "value": "-7px 10px 0px 0px"
-  },
-  {
-    "type": "declaration",
-    "property": "margin",
-    "value": "0px 3px"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#009bd6"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#3b5998"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#334d83"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "103px"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "url(/assets/compass/years/2012/yir_logo_green-3468b34e593858bbd024f7d202d02ce0.png) no-repeat 0 0"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "url(/assets/compass/years/2012/yir_logo_yellow-6e0f4f97c7d972f3520aed0fd4827c0a.png) no-repeat 0 0"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "url(/assets/compass/years/2012/yir_logo_blue-6ccc2a511aa6030c45bf998bc3f71b52.png) no-repeat 0 0"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "url(/assets/compass/years/2012/yir_logo_red-8cbd140b6ace33caca0585ccac31e2e4.png) no-repeat 0 0"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "200%"
-  },
-  {
-    "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "color 0.15s ease-out"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "color 0.15s ease-out"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "color 0.15s ease-out"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "color 0.15s ease-out"
-  },
-  {
-    "type": "declaration",
-    "property": "font-size",
-    "value": "0.875rem"
-  },
-  {
-    "type": "declaration",
-    "property": "line-height",
-    "value": "1.25rem"
-  },
-  {
-    "type": "declaration",
-    "property": "height",
-    "value": "1.25rem"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "0.3125rem 0.625rem"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-bottom",
-    "value": "1.25rem"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#84c342"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#253b0e"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#e6f3d9"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#84c342"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#e6f3d9"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#f7bf4f"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#b98f3b"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#fdf2dc"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#f7bf4f"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#fdf2dc"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#24abe2"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#1b80aa"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#d3eef9"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#24abe2"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#d3eef9"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#ee6a61"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#b35049"
-  },
-  {
-    "type": "declaration",
-    "property": "color",
-    "value": "#fce1df"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#fce1df"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#b5db8e"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#253b0e"
-  },
-  {
-    "type": "declaration",
-    "property": "opacity",
-    "value": "0.66"
-  },
-  {
-    "type": "declaration",
-    "property": "margin-top",
-    "value": "11px"
-  },
-  {
-    "type": "declaration",
-    "property": "top",
-    "value": "30px"
-  },
-  {
-    "type": "declaration",
-    "property": "padding",
-    "value": "5px 20px 5px 10px"
-  },
-  {
-    "type": "declaration",
-    "property": "border-radius",
-    "value": "50%"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "#b98f3b"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#92712f"
-  },
-  {
-    "type": "declaration",
-    "property": "background-color",
-    "value": "darkent(#b98f3b, 3)"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#1b80aa"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#145f7e"
-  },
-  {
-    "type": "declaration",
-    "property": "background",
-    "value": "#19769d"
-  },
-  {
-    "type": "declaration",
     "property": "-ms-box-sizing",
     "value": "border-box"
   },
@@ -18811,8 +18271,48 @@
   },
   {
     "type": "declaration",
+    "property": "border-radius",
+    "value": "50%"
+  },
+  {
+    "type": "declaration",
     "property": "margin",
     "value": "auto"
+  },
+  {
+    "type": "declaration",
+    "property": "font-family",
+    "value": "inherit"
+  },
+  {
+    "type": "declaration",
+    "property": "padding",
+    "value": "12px 18px 14px"
+  },
+  {
+    "type": "declaration",
+    "property": "-webkit-transition",
+    "value": "background-color 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "-moz-transition",
+    "value": "background-color 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "-o-transition",
+    "value": "background-color 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "transition",
+    "value": "background-color 0.07s ease-in"
+  },
+  {
+    "type": "declaration",
+    "property": "padding",
+    "value": "19px 23px 21px"
   },
   {
     "type": "declaration",
@@ -18916,6 +18416,16 @@
   },
   {
     "type": "declaration",
+    "property": "background-color",
+    "value": "#9ba093"
+  },
+  {
+    "type": "declaration",
+    "property": "background-color",
+    "value": "#3b5998"
+  },
+  {
+    "type": "declaration",
     "property": "border-color",
     "value": "#78eb05"
   },
@@ -18931,8 +18441,18 @@
   },
   {
     "type": "declaration",
+    "property": "padding",
+    "value": "19px 23px 21px 60px"
+  },
+  {
+    "type": "declaration",
     "property": "background-position",
     "value": "30px 50%"
+  },
+  {
+    "type": "declaration",
+    "property": "background-position",
+    "value": "20px 50%"
   },
   {
     "type": "declaration",
@@ -18971,22 +18491,7 @@
   },
   {
     "type": "declaration",
-    "property": "-webkit-transition",
-    "value": "\"opacity\" 0.2s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-moz-transition",
-    "value": "\"opacity\" 0.2s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "-o-transition",
-    "value": "\"opacity\" 0.2s ease-in"
-  },
-  {
-    "type": "declaration",
-    "property": "transition",
-    "value": "\"opacity\" 0.2s ease-in"
+    "property": "overflow-wrap",
+    "value": "break-word"
   }
 ]

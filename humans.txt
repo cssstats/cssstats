@@ -1,0 +1,15 @@
+# http://mrmrs.github.io/rprtr
+# Team Rad
+
+# TEAM
+
+    Adam Morse -- @mrmrs_
+    Brent Jackson -- @jxnblk
+    Adam Putinski -- @adamputinski
+
+# TECHNOLOGY COLOPHON
+
+    HTML, CSS, SASS
+    Normalize.css, css-parse, node, angular
+
+    Source: https://github.com/mrmrs/rprtr
