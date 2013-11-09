@@ -6,14 +6,14 @@
     <select ng-model="model.cssInputType" ng-options="type.value as type.label for type in model.cssInputTypes">
     </select>
   </div>
-  <div ng-show="model.cssInputType == 'directInput'">
-    <textarea ng-model="model.cssDirectInput" class="wi-full ht-4"></textarea>
-  </div>
-  <div ng-show="model.cssInputType == 'directUrl'">
-    <input type="text" ng-model="model.cssDirectUrl" />
+  <div ng-show="model.cssInputType == 'link'">
+    <input type="text" ng-model="model.cssUrlDirect" class="wi-full" />
   </div>
   <div ng-show="model.cssInputType == 'url'">
-    <input type="text" ng-model="model.cssUrl" />
+    <input type="text" ng-model="model.cssUrl" class="wi-full" />
+  </div>
+  <div ng-show="model.cssInputType == 'input'">
+    <textarea ng-model="model.cssInput" class="wi-full ht-4"></textarea>
   </div>
   <div>
     <button ng-click="parseCss()">Parse</button>

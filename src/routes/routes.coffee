@@ -100,21 +100,22 @@ util =
       util.getUrlContents(url).then (body) ->
         parsedUrl = _url.parse url
         cssUrls = []
-        parsedCssFiles = []
+        cssFiles = []
         htmlParse.parse body,
           attribute: (name, value) ->
             if name is 'href' and value.match(/\.css/g)
               cssUrls.push value
-        console.log cssUrls
         _.forEach cssUrls, (cssUrl) ->
           if not cssUrl.match(/^(http|https)/g)
             if cssUrl.match(/^\//g)
               cssUrl = parsedUrl.href + cssUrl.replace(/^\//g, '')
             else
               cssUrl = parsedUrl.href + cssUrl
-          parsedCssFiles.push util.parseCssFromDirectUrl(cssUrl)
-        _when.all(parsedCssFiles).then (response) ->
-          resolve response
+          cssFiles.push util.getUrlContents(cssUrl)
+        _when.all(cssFiles).then (cssFiles) ->
+          css = _.reduce cssFiles, (css, cssFile) ->
+            css += cssFile
+          resolve util.parseCss(css)
 
   parseCss: (cssString) ->
     cssRules = cssParse cssunminifier.unminify(cssString)
@@ -221,11 +222,11 @@ exports.api.parse =
     form = new formidable.IncomingForm()
     form.parse req, (err, fields, files) ->
       switch fields.type
-        when 'directInput'
+        when 'input'
           res.send util.parseCss(fields.css)
-        when 'directUrl'
+        when 'url-direct'
           util.parseCssFromDirectUrl(fields.url).then (response) ->
             res.send response
         when 'url'
           util.parseCssFromUrl(fields.url).then (response) ->
-            res.send response[0]
+            res.send response

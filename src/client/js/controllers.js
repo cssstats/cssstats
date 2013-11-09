@@ -1,30 +1,61 @@
-// Controllers
-
-rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope, $location, $http){
+angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http', function ($scope, $location, $http) {
   
-  /*
-  $scope.sites = {
-    amazon: { 'name': 'Amazon', 'data': 'amazon', 'url': 'http://amazon.com'},
-    bbc: { 'name': 'BBC', 'data': 'bbc', 'url': 'http://bbc.co.uk', 'fileSize': '57kb' },
-    bootstrap: { 'name': 'Bootstrap', 'data': 'bootstrap', 'url': 'http://getbootstrap.com' },
-    css: { 'name': 'CSS', 'data': 'css', 'url': 'http://mrmrs.github.io/css' },
-    dribbble: { 'name': 'Dribbble', 'data': 'dribbble', 'url': 'http://dribbble.com'},
-    foundation: { 'name': 'Foundation', 'data': 'foundation', 'url': 'http://foundation.zurb.com' },
-    github: { 'name': 'Github', 'data': 'github', 'url': 'http://github.com' },
-    kickstarter: { 'name': 'Kickstarter', 'data': 'kickstarter', 'url': 'http://kickstarter.com' },
-    mapbox: { 'name': 'Mapbox', 'data': 'mapbox', 'url': 'http://mapbox.com' },
-    medium: { 'name': 'Medium', 'data': 'medium', 'url': 'http://medium.com' },
-    myspace: { 'name': 'Myspace', 'data': 'myspace', 'url': 'http://myspace.com' },
-    nytimes: { 'name': 'New York Times', 'data': 'nytimes', 'url': 'http://nytimes.com' },
-    salesforce: { 'name': 'Salesforce', 'data': 'salesforce', 'url': 'http://salesforce.com' },
-    sfdc: { 'name': 'Salesforce App', 'data': 'sfdc', 'url': '' },
-    soundcloud: { 'name': 'Soundcloud', 'data': 'soundcloud', 'url': 'http://soundcloud.com'},
-    topcoat: { 'name': 'Topcoat', 'data': 'topcoat', 'url': 'http://topcoat.io' },
-    twitter: { 'name': 'Twitter', 'data': 'twitter', 'url': 'http://twitter.com' }
-  };
-  */
+  var m = $scope.model = $scope.model || {};
 
-  var m = $scope.model = {};
+  ///////////////////////////////////
+  // CSS Parse
+  ///////////////////////////////////
+
+  m.cssInputTypes = [{
+    label: 'URL',
+    value: 'url'
+  },{
+    label: 'Link',
+    value: 'link'
+  },{
+    label: 'Input',
+    value: 'input'
+  }];
+  
+  m.cssInputType = 'url';
+  m.cssInput = '';
+  m.cssUrlDirect = 'http://rprtr.herokuapp.com/css/i.css';
+  m.cssUrl = 'http://rprtr.herokuapp.com'
+
+  $scope.parseCss = function () {
+    if (m.cssInputType === 'link') {
+      $location.path('/site/url/' + encodeURIComponent(m.cssDirectUrl));
+    }
+    if (m.cssInputType === 'url') {
+      $location.path('/site/url/' + encodeURIComponent(m.cssUrl));
+    }
+    if (m.cssInputType === 'input') {
+      $http.post('/parse', { css: m.cssInput }).then(function (response) {
+        $scope.site = response.data;
+        $location.path('/results');
+      });
+    }
+  };
+  
+  ///////////////////////////////////
+  // Misc
+  ///////////////////////////////////
+
+  $scope.dropbarIsOpen = false;
+  $scope.toggleDropbar = function () {
+    $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
+  };
+
+}]);
+
+angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', '$filter', function ($scope, $routeParams, $location, $http, $filter) {
+
+  var m = $scope.model || {};
+
+  $http.post('/parse', { type: $routeParams.type, url: decodeURIComponent($routeParams.url) }).then(function (response) {
+    $scope.site = response.data;
+    console.log($scope.site);
+  });
 
   ///////////////////////////////////
   // Subnav
@@ -69,65 +100,8 @@ rprtr.controller('GlobalCtrl', ['$scope', '$location', '$http', function($scope,
   };
 
   ///////////////////////////////////
-  // CSS Parse
+  // Utilities
   ///////////////////////////////////
-
-  m.cssInputTypes = [{
-    label: 'Direct Input',
-    value: 'directInput'
-  },{
-    label: 'Direct URL',
-    value: 'directUrl'
-  },{
-    label: 'URL',
-    value: 'url'
-  }];
-  
-  m.cssInputType = 'url';
-  m.cssDirectInput = '';
-  m.cssDirectUrl = 'http://rprtr.herokuapp.com/css/i.css';
-  m.cssUrl = 'http://rprtr.herokuapp.com'
-
-  $scope.parseCss = function () {
-    var data = {
-      type: m.cssInputType
-    };
-    if (m.cssInputType === 'directUrl') {
-      data.url = m.cssDirectUrl;
-    }
-    if (m.cssInputType === 'url') {
-      data.url = m.cssUrl;
-    }
-    if (m.cssInputType === 'directInput') {
-      data.css = m.cssDirectInput;
-    }
-    $http.post('/parse', data).then(function (response) {
-      console.log(response.data);
-      $scope.site = response.data;
-      $location.path('/results');
-    });
-  };
-  
-  ///////////////////////////////////
-  // Misc
-  ///////////////////////////////////
-
-  $scope.dropbarIsOpen = false;
-  $scope.toggleDropbar = function () {
-    $scope.dropbarIsOpen = !$scope.dropbarIsOpen;
-  };
-
-}]);
-
-rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', '$filter', function($scope, $routeParams, $location, $http, $filter) {
-
-  $scope.loading = false;
-
-  /*$http.get('/parse').then(function (response) {
-    $scope.site = response.data;
-  }, function (err) {
-
-  });*/
 
   $scope.getDecs = function (ids) {
     if (ids) {
@@ -140,7 +114,7 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', 
   };
 
   $scope.getSelectors = function (selectors) {
-    return selectors.join(', ')
+    return selectors.join(', ');
   };
 
   /*
@@ -161,12 +135,11 @@ rprtr.controller('ReportCtrl', ['$scope', '$routeParams', '$location', '$http', 
 
 }]);
 
-rprtr.controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
+angular.module('rprtr').controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
 
 }]);
 
-
-rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
+angular.module('rprtr').controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
   /*$scope.$watch('loading', function(){
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
     if ($scope.selectors) {
@@ -199,7 +172,7 @@ rprtr.controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
 }]);
 
 
-rprtr.controller('ColorCtrl', ['$scope', function($scope){
+angular.module('rprtr').controller('ColorCtrl', ['$scope', function($scope){
   /*$scope.$watch('loading', function(){
     $scope.viewColors = $scope.colors;
   });
@@ -211,7 +184,7 @@ rprtr.controller('ColorCtrl', ['$scope', function($scope){
   };*/
 }]);
 
-rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
+angular.module('rprtr').controller('BackgroundColorCtrl', ['$scope', function($scope){
   /*$scope.$watch('loading', function(){
     $scope.viewBackgroundColors = $scope.backgroundColors;
   });
@@ -222,44 +195,3 @@ rprtr.controller('BackgroundColorCtrl', ['$scope', function($scope){
     $scope.viewBackgroundColors = $scope.uniqueBackgroundColors;
   };*/
 }]);
-
-
-// I really wanna move this to a separate app
-/*rprtr.controller('ParserCtrl', ['$scope', '$http', '$filter', 'declarations', function($scope, $http, $filter, declarations){
-
-  // Controller for parsing the base JSON data and spitting out
-  // declarations and unique_declarations
-
-  $scope.styleDataToParse = null;
-
-  // Reset any previously loaded data
-  $scope.declarations = null;
-  $scope.uniqueDeclarations = null;
-
-  // to do: Simplify the parser function
-    // $scope.updateStyles = function(url){
-    //   if(url) $scope.styleData = url;
-    //   $scope.getStyles($scope.styleData);
-    // };
-
-  $scope.updateStylesToParse = function(url){
-    console.log('getting: ' + 'data/' + $scope.styleDataToParse + '/rules.json');
-    $http.get('data/' + $scope.styleDataToParse + '/rules.json').success(function(res) {
-      console.log('got: ' + 'data/' + $scope.styleDataToParse + '/rules.json');
-      $scope.styles = res;
-      declarations($scope);
-    });
-  };
-
-  $scope.$watch($scope.declarations, function(){
-    console.log('found declarations. parsing uniques...');
-    $scope.getUniques();
-  });
-
-  $scope.getUniques = function(){
-    console.log('getting uniques for ' + $scope.styleDataToParse);
-    var uniqueFilter = $filter('unique');
-    $scope.uniqueDeclarations = uniqueFilter($scope.declarations);
-  };
-
-}]);*/
