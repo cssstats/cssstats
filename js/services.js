@@ -162,26 +162,26 @@ rprtr.factory('anythingToRelative', function(){
 
 
 // Service to load all data
-rprtr.factory('dataloader', function($http, selectors, declarationsByType, createUniques, anythingToRelative){
+rprtr.factory('dataloader', function($http, selectors, declarationsByType, createUniques, anythingToRelative, $q){
   return function($scope) {
     var styleData = $scope.styleData;
     // Set data var
       $scope.loading = true;
-      $http.get('data/' + styleData + '/rules.json').success(function(res) {
+      var rules = $http.get('data/' + styleData + '/rules.json').success(function(res) {
         $scope.styles = res;
         selectors($scope);
       });
-      $http.get('data/' + styleData + '/declarations.json').success(function(res){
+      var declarations = $http.get('data/' + styleData + '/declarations.json').success(function(res){
         $scope.declarations = res;
         // Create arrays for each declaration type in the factory
         declarationsByType($scope);
       });
-      $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
+      var uniqueDeclarations = $http.get('data/' + styleData + '/unique_declarations.json').success(function(res){
         $scope.uniqueDeclarations = res;
       });
-      $scope.$watch('selectors', function(){
-        // Wait for selectors to load, then get uniques
-        if($scope.selectors) {
+
+      $q.all([rules, declarations, uniqueDeclarations]).then(function() {
+        $scope.$watch('selectors', function(){
           createUniques($scope);
 
           anythingToRelative($scope.margins);
@@ -189,10 +189,9 @@ rprtr.factory('dataloader', function($http, selectors, declarationsByType, creat
           anythingToRelative($scope.widths);
           anythingToRelative($scope.heights);
 
-          // may not be truly finished yet
           $scope.loading = false;
-        };
-      });
+        });
+      }, function(error) { console.log(error); });
   };
 });
 
