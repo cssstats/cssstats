@@ -30,7 +30,7 @@ angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http'
       $location.path('/site/link/' + encodeURIComponent(m.cssLink));
     }
     if (m.cssInputType === 'input') {
-      $http.post('/parse', { css: m.cssInput }).then(function (response) {
+      $http.post('/parse', { type: 'input', css: m.cssInput }).then(function (response) {
         $scope.site = response.data;
         $location.path('/results');
       });
