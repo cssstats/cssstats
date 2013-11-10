@@ -1,45 +1,62 @@
 <!doctype html>
 <html lang="en" ng-app="rprtr">
-<head>
-  <meta charset="utf-8">
-  <title>CSS Stats</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="author" href="humans.txt">
-  <link rel="stylesheet" href="css/i.css">
-</head>
-<body ng-controller="GlobalCtrl" class="sans-serif">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="author" href="humans.txt">
+    <link rel="stylesheet" href="css/i.css">
+  </head>
+  <body ng-controller="GlobalCtrl" class="sans-serif">
 
-  <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht sans-serif">
-    <h1 class="f2 f2-l ttu mega-tracked mtn mbn db mrx pvs">
-      <a class="blk" href="#/" title="CSS Stats">CSS Stats</a>
-    </h1>
-  </header>
+    <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht sans-serif">
+      <h1 class="f2 f2-l ttu mega-tracked mtn mbn dib mrx pvs">
+        <a class="blk db" href="#/" title="CSS Stats">CSS Stats</a>
+      </h1>
+    </header>
 
 
-  <main ng-view></main>
+    <main ng-view></main>
 
-  <footer class="pvs bor bb-top bor--near-wht mdgry cf">
-    <p class="f6 tc sans-serif mega-tracked ttu">
-      Built with ♡
-      by
-      <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
-      and
-      <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
-    </p>
-  </footer>
+    <footer class="pbs bor bb-top bor--near-wht mdgry cf">
+      <ul class="list list--h f6 tc ptl pbm">
+        <li class="phl" >
+          <iframe
+            src="http://ghbtns.com/github-btn.html?user=mrmrs&repo=rprtr&type=fork&size=large&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="120" height="30">
+          </iframe>
+        </li>
+        <li >
+          <a
+            href="https://twitter.com/share"
+            class="twitter-share-button"
+            data-size="large">
+            Tweet
+          </a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </li>
+      </ul>
+      <p class="f6 tc sans-serif mega-tracked ttu">
+        Built with ♡
+        by
+        <a href="http://mrmrs.cc" class="b blk" title="Adam Morse (mrmrs)">mrmrs</a>
+        and
+        <a href="http://jxnblk.com" class="b blk" title="Brent Jackson (jxnblk)">jxnblk</a>
+      </p>
+    </footer>
 
-  <script src="{{versionPath 'js/vendor.js'}}"></script>
-  <script src="{{versionPath 'js/app.js'}}"></script>
-  <script src="{{versionPath 'js/templates.js'}}"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    <script src="{{versionPath 'js/vendor.js'}}"></script>
+    <script src="{{versionPath 'js/app.js'}}"></script>
+    <script src="{{versionPath 'js/templates.js'}}"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-45526812-1', 'mrmrs.github.io');
     ga('send', 'pageview');
 
-  </script>
-</body>
+    </script>
+  </body>
 </html>
