@@ -1,13 +1,12 @@
 <!-- This is an index:show::hub:spoke model and UI. Deal with it. -->
 
 <section class="phl pax-m pax-l f3 lh-copy">
-  <h1 class="fw1 f4 mtm">The Data</h1>
   <div class="pvs">
     <select ng-model="model.cssInputType" ng-options="type.value as type.label for type in model.cssInputTypes">
     </select>
   </div>
   <div ng-show="model.cssInputType == 'url'" class="pvs">
-    <input type="text" ng-model="model.cssUrl" class="wi-full pas" />
+    <input type="text" ng-model="model.cssUrl" class="f6 wi-full mw-64 pam br-2 bor bor--lt-gry br-2" >
   </div>
   <div ng-show="model.cssInputType == 'link'" class="pvs">
     <input type="text" ng-model="model.cssLink" class="wi-full pas" />
@@ -16,7 +15,7 @@
     <textarea ng-model="model.cssInput" class="wi-full ht-4 pas"></textarea>
   </div>
   <div class="pvs">
-    <button ng-click="parseCss()">Parse</button>
+    <input type="submit" ng-click="parseCss()" value="Parse ▸" class="f6 ttu tracked phl pvm bg-wht br-2 bor bor--lt-gry bg-hov ab">
   </div>
   <ul class="list list--h bb pbl pbx-l">
     <li ng-repeat="site in sites">

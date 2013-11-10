@@ -12,5 +12,13 @@ a {
 
 a:hover {
   color: $orangered;
+  cursor: pointer;
   transition: .3s color ease-in-out;
 }
+
+
+.af { transition: .4s color ease-in; }
+.ab { transition: .4s background-color ease-in; }
+.aa { transition: .4s all ease-in; }
+
+.bg-hov:hover { background-color: $darkcyan; color: $white; padding: 20px; }

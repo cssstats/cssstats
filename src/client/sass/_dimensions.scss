@@ -15,10 +15,15 @@
 
 /* Width Scale */
 
+.wi-0  { width: .5rem; }
 .wi-1  { width: 1rem; }
 .wi-2  { width: 2rem; }
 .wi-3  { width: 4rem; }
 .wi-4  { width: 8rem; }
+.wi-5  { width: 16rem; }
+.wi-6  { width: 32rem; }
+.wi-7  { width: 64rem; }
+.wi-8  { width: 128rem; }
 
 /* Width Keywords */
 
@@ -89,12 +94,14 @@ Make an element the width of its parent.
 .max-hi-fit {  max-height: fit-content; }
 .max-hi-fill { max-height: fill-available; }
 
+.mw-1 { max-width:  1rem; }
+.mw-2 { max-width:  2rem; }
+.mw-4 { max-width:  4rem; }
+.mw-8 { max-width:  8rem; }
 .mw-16 { max-width: 16rem; }
 .mw-32 { max-width: 32rem; }
-
 .mw-48 { max-width: 48rem; }
 .mw-64 { max-width: 64rem; }
-
 
 .max-wi { max-width: 100%; }
 .max-wi { max-width: none; }
@@ -145,9 +152,12 @@ Make an element the width of its parent.
   .wi-75-l  { width: 75%; }
   .wi-full-l { width: 100%; }
 
+  .mw-1-l { max-width:  1rem; }
+  .mw-2-l { max-width:  2rem; }
+  .mw-4-l { max-width:  4rem; }
+  .mw-8-l { max-width:  8rem; }
   .mw-16-l { max-width: 16rem; }
   .mw-32-l { max-width: 32rem; }
-
   .mw-48-l { max-width: 48rem; }
   .mw-64-l { max-width: 64rem; }
 }
