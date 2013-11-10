@@ -2,7 +2,7 @@
 <div ng-hide="loading" ng-controller="HomeCtrl">
 
   <section id="overview" class="pvl phl phx-l">
-    <article class="sans-serif mvm ptx pbm bb">
+    <article class="sans-serif mvm pvl bb">
       <div class="dib mrl mrx-l">
         <p class="f1 mega-l man">
           <span class="gry f6 man lh-copy db mbs"> Declared font-sizes</span>
@@ -17,6 +17,10 @@
       </div>
     </article>
     <article class="sans-serif pvl bb">
+      <p class="f1 f1-l man"><b>{{site.decsByProperty.all.float.length | number}}</b> FLOATS</p>
+      <p class="man f4 lh-copy">There are only three choices...</p>
+    </article>
+    <article class="sans-serif pvl bb">
       <p class="f1 f1-l man">
         <b>{{site.counts.selectors | number}}</b>
         <a href="http://www.w3.org/TR/CSS2/selector.html"
@@ -27,31 +31,35 @@
       </p>
       <p class="f3">{{selectorsWarning}}</p>
     </article>
-    <article class="sans-serif pvl bb">
-      <p class="f1 f1-l man"><b>{{site.decsByProperty.all.float.length | number}}</b> FLOATS</p>
-      <p class="man f4 lh-copy">There are only three choices...</p>
-    </article>
-    <section class="pbl mvl">
-      <h1 class="h4 tracked ttu">Other Highlights</h1>
-      <ul class="sans-serif">
-        <li class="mvm f2">
-          Widths: <b>{{site.decsByProperty.all.width.length | number}}</b> total /
-          <b>{{site.decsByProperty.unique.width.length}}</b> unique
-        </li>
-        <li class="mvm f2">
-          Heights: <b>{{site.decsByProperty.all.height.length  | number}}</b> total /
-          <b>{{site.decsByProperty.unique.height.length}}</b> unique
-        </li>
-        <li class="mvm f2">
-          Color:
-          <b>{{site.decsByProperty.all.color.length | number}}</b> total /
-          <b>{{site.decsByProperty.unique.color.length | number}} </b> unique
-        </li>
-        <li class="mvm f2">
-          Background colors:
-          <b>{{site.decsByProperty.all.backgroundColor.length | number}}</b> total /
-          <b>{{site.decsByProperty.unique.backgroundColor.length | number}}</b> unique
-        </li>
-      </ul>
+    <section class="pvl">
+      <h1 class="f4 tracked ttu">Other Highlights</h1>
+        <div class="mtm mbl">
+          <h1 class="f6 f5-ns mbs fw1">Widths</h1>
+          <p class="f4 f4-ns mtn">
+            <b>{{site.decsByProperty.all.width.length | number}}</b> total /
+            <b>{{site.decsByProperty.unique.width.length}}</b> unique
+          </p>
+        </div>
+        <div class="mtm mbl">
+          <h1 class="f6 f5-ns mbs fw1">Heights</h1>
+          <p class="f4 f4-ns mtn">
+            <b>{{site.decsByProperty.all.height.length  | number}}</b> total /
+            <b>{{site.decsByProperty.unique.height.length}}</b> unique
+          </p>
+        </div>
+        <div class="mtm mbl">
+          <h1 class="f6 f5-ns mbs fw1">Color</h1>
+          <p class="f4 f4-ns mtn">
+            <b>{{site.decsByProperty.all.color.length | number}}</b> total /
+            <b>{{site.decsByProperty.unique.color.length | number}} </b> unique
+          </p>
+        </div>
+        <div class="mtm mbl">
+          <h1 class="f6 f5-ns mbs fw1">Background colors</h1>
+          <p class="f4 f4-ns mtn">
+            <b>{{site.decsByProperty.all.backgroundColor.length | number}}</b> total /
+            <b>{{site.decsByProperty.unique.backgroundColor.length | number}}</b> unique
+          </p>
+        </div>
     </section>
   </div>
