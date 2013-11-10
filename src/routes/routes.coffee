@@ -14,8 +14,6 @@ htmlParse     = require 'html-parser'
 # Util
 ######################################################
 
-iconv = new Iconv 'UTF-8', 'ASCII//IGNORE'
-
 STRING_CAMELIZE_REGEXP = /(\-|_|\.|\s)+(.)?/g
 ELEMENT_REGEXP = /^[a-zA-Z]|\s(?=[a-zA-Z])/g
 
