@@ -48,8 +48,14 @@
                 <b>{{site.decsByProperty.unique.width.length}}</b> unique
       </li>
       <li class="mvm f2">
+        <d3-bars data="widths"></d3-bars>
+      </li>
+      <li class="mvm f2">
         Heights: <b>{{site.decsByProperty.all.height.length  | number}}</b> total /
         <b>{{site.decsByProperty.unique.height.length}}</b> unique
+      </li>
+      <li class="mvm f2">
+        <d3-bars data="heights"></d3-bars>
       </li>
       <li class="mvm f2">
         Color:
@@ -57,9 +63,15 @@
         <b>{{site.decsByProperty.unique.color.length | number}} </b> unique
       </li>
       <li class="mvm f2">
+        <d3-bars data="colors"></d3-bars>
+      </li>
+      <li class="mvm f2">
         Background colors:
         <b>{{site.decsByProperty.all.backgroundColor.length | number}}</b> total /
         <b>{{site.decsByProperty.unique.backgroundColor.length | number}}</b> unique
+      </li>
+      <li class="mvm f2">
+        <d3-bars data="backgroundColors"></d3-bars>
       </li>
     </ul>
   </section>

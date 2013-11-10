@@ -54,7 +54,29 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
 
   $http.post('/parse', { type: $routeParams.type, url: decodeURIComponent($routeParams.url) }).then(function (response) {
     $scope.site = response.data;
-    console.log($scope.site);
+
+    console.log($scope);
+    
+    $scope.widths = [
+      {name: 'Unique', count: $scope.site.decsByProperty.unique.width.length},
+      {name: 'Total', count: $scope.site.decsByProperty.all.width.length},
+    ];
+
+    $scope.heights = [
+      {name: 'Unique', count: $scope.site.decsByProperty.unique.height.length},
+      {name: 'Total', count: $scope.site.decsByProperty.all.height.length},
+    ];
+
+    $scope.colors = [
+      {name: 'Unique', count: $scope.site.decsByProperty.unique.color.length},
+      {name: 'Total', count: $scope.site.decsByProperty.all.color.length},
+    ];
+
+    $scope.backgroundColors = [
+      {name: 'Unique', count: $scope.site.decsByProperty.unique.backgroundColor.length},
+      {name: 'Total', count: $scope.site.decsByProperty.all.backgroundColor.length},
+    ];
+    
   });
 
   ///////////////////////////////////
@@ -132,6 +154,8 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
     $scope.section = section;
   };
   */
+ 
+
 
 }]);
 
@@ -140,6 +164,8 @@ angular.module('rprtr').controller('SectionCtrl', ['$scope', 'anythingToRelative
 }]);
 
 angular.module('rprtr').controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
+
+
   /*$scope.$watch('loading', function(){
     if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
     if ($scope.selectors) {
