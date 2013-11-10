@@ -14,6 +14,8 @@ htmlParse     = require 'html-parser'
 # Util
 ######################################################
 
+iconv = new Iconv 'UTF-8', 'ASCII//IGNORE'
+
 STRING_CAMELIZE_REGEXP = /(\-|_|\.|\s)+(.)?/g
 ELEMENT_REGEXP = /^[a-zA-Z]|\s(?=[a-zA-Z])/g
 
@@ -82,7 +84,7 @@ util =
 
   getUrlContents: (url) ->
     _when.promise (resolve, reject, notify) ->
-      request url, (error, response, body) ->
+      req = request url: url, encoding: 'utf8', (error, response, body) ->
         if not error and response.statusCode is 200
           resolve body
         else
@@ -107,8 +109,10 @@ util =
               cssUrls.push value
         _.forEach cssUrls, (cssUrl) ->
           if not cssUrl.match(/^(http|https)/g)
-            if cssUrl.match(/^\//g)
+            if cssUrl.match(/^\/[^\/]/g)
               cssUrl = parsedUrl.href + cssUrl.replace(/^\//g, '')
+            else if cssUrl.match(/^\/\//g)
+              cssUrl = 'http:' + cssUrl
             else
               cssUrl = parsedUrl.href + cssUrl
           cssFiles.push util.getUrlContents(cssUrl)
