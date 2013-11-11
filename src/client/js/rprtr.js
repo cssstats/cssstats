@@ -1,4 +1,4 @@
-angular.module('rprtr',[])
+angular.module('rprtr', ['ngRoute'])
   
   .config(['$routeProvider', function ($routeProvider) {
 
