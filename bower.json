@@ -2,6 +2,7 @@
   "name": "rprtr",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "~1.0.8"
+    "angular": "~1.2.0",
+    "angular-route": "~1.2.0"
   }
 }

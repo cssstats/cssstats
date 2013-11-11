@@ -1,4 +1,4 @@
-<div ng-hide="loading" ng-controller="HomeCtrl">
+<div ng-hide="loading">
   <section id="overview" class="pvl phl phx-l">
     <article class="sans-serif mvm pvl bb">
       <div class="dib mrl mrx-l">
@@ -34,19 +34,19 @@
       <ul class="sans-serif">
         <li class="mvm f2">
           Widths
-          <d3-bars data="widths"></d3-bars>
+          <d3-bars data="model.d3.widths"></d3-bars>
         </li>
         <li class="mvm f2">
           Heights
-          <d3-bars data="heights"></d3-bars>
+          <d3-bars data="model.d3.heights"></d3-bars>
         </li>
         <li class="mvm f2">
           Color:
-          <d3-bars data="colors"></d3-bars>
+          <d3-bars data="model.d3.colors"></d3-bars>
         </li>
         <li class="mvm f2">
           Background colors:
-          <d3-bars data="backgroundColors"></d3-bars>
+          <d3-bars data="model.d3.backgroundColors"></d3-bars>
         </li>
       </ul>
     </section>
