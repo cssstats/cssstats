@@ -18,7 +18,7 @@ angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http'
   }];
   
   m.cssInputType = 'url';
-  m.cssUrl = 'http://rprtr.herokuapp.com'
+  m.cssUrl = 'http://rprtr.herokuapp.com';
   m.cssLink = 'http://rprtr.herokuapp.com/css/i.css';
   m.cssInput = '';
   
@@ -52,30 +52,18 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
 
   var m = $scope.model || {};
 
+  m.d3 = {};
+
   $http.post('/parse', { type: $routeParams.type, url: decodeURIComponent($routeParams.url) }).then(function (response) {
+    
     $scope.site = response.data;
 
-    console.log($scope);
-    
-    $scope.widths = [
-      {name: 'Unique', count: $scope.site.decsByProperty.unique.width.length},
-      {name: 'Total', count: $scope.site.decsByProperty.all.width.length},
-    ];
-
-    $scope.heights = [
-      {name: 'Unique', count: $scope.site.decsByProperty.unique.height.length},
-      {name: 'Total', count: $scope.site.decsByProperty.all.height.length},
-    ];
-
-    $scope.colors = [
-      {name: 'Unique', count: $scope.site.decsByProperty.unique.color.length},
-      {name: 'Total', count: $scope.site.decsByProperty.all.color.length},
-    ];
-
-    $scope.backgroundColors = [
-      {name: 'Unique', count: $scope.site.decsByProperty.unique.backgroundColor.length},
-      {name: 'Total', count: $scope.site.decsByProperty.all.backgroundColor.length},
-    ];
+    angular.forEach(['width', 'height', 'color', 'backgroundColor'], function (stat) {
+      m.d3[stat + 's'] = [
+        { name: 'Unique', count: $scope.site.decsByProperty.unique[stat].length },
+        { name: 'Total', count: $scope.site.decsByProperty.all[stat].length }
+      ];
+    });
     
   });
 
@@ -139,85 +127,8 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
     return selectors.join(', ');
   };
 
-  /*
-  if($routeParams.site) {
-    $scope.currentSite = $scope.sites[$routeParams.site];
-    $scope.styleData = $scope.currentSite.data;
-    dataloader($scope);
-  } else {
-    console.error('no routeparams');
-  };
-
-  $scope.section = 'overview';
-
-  $scope.updateSection = function(section){
-    $scope.section = section;
-  };
-  */
- 
-
-
-}]);
-
-angular.module('rprtr').controller('SectionCtrl', ['$scope', 'anythingToRelative', function($scope, anythingToRelative){
-
 }]);
 
 angular.module('rprtr').controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
 
-
-  /*$scope.$watch('loading', function(){
-    if($scope.uniqueDeclarations) $scope.refactoringPotential = parseInt((1 - ($scope.uniqueDeclarations.length / $scope.declarations.length)) * 100);
-    if ($scope.selectors) {
-      if($scope.selectors.length > 4095) {
-        $scope.selectorsWarning = 'IE9 and lower only allows for 4095 selectors per stylesheet. This is over the limit by: ' + parseInt($scope.selectors.length - 4095);
-      } else if($scope.selectors.length < 4095) {
-        $scope.selectorsWarning = 'Currently '+ parseInt(4095 - $scope.selectors.length) + ' under the limit.';
-      }
-    }
-    if($scope.fontSizes) {
-      if($scope.fontSizes.length > 128) {
-        $scope.fontSizesWarning = 'You have over 128 font-size declarations, u r silly.';
-      } else if($scope.fontSizes.length > 512) {
-        $scope.fontSizesWarning = 'Over 512 font-size declarations? Go home. You are drunk.';
-      };
-    };
-    if($scope.uniqueFontSizes){
-      if($scope.uniqueFontSizes.length > 64) {
-        $scope.uniqueFontSizesWarning = 'You have over 64 unique font sizes. Type scale much?';
-      } else if ($scope.uniqueFontSizes.length > 128) {
-        $scope.uniqueFontSizesWarning = 'Over 128 unique font sizes. Alright, you\'ve lost your computer privileges.';
-      };
-    };
-    if($scope.declarations){
-      if($scope.declarations.length > 4095) {
-        $scope.declarationsWarning = 'You have ' + $scope.declarations.length + ' selectors. Internet Explorer supports a maximum of 4095 selectors per stylesheet. Also, that is a lot.'
-      };
-    };
-  });*/
-}]);
-
-
-angular.module('rprtr').controller('ColorCtrl', ['$scope', function($scope){
-  /*$scope.$watch('loading', function(){
-    $scope.viewColors = $scope.colors;
-  });
-  $scope.showAll = function(){
-    $scope.viewColors = $scope.colors;
-  };
-  $scope.showUnique = function() {
-    $scope.viewColors = $scope.uniqueColors;
-  };*/
-}]);
-
-angular.module('rprtr').controller('BackgroundColorCtrl', ['$scope', function($scope){
-  /*$scope.$watch('loading', function(){
-    $scope.viewBackgroundColors = $scope.backgroundColors;
-  });
-  $scope.showAll = function() {
-    $scope.viewBackgroundColors = $scope.backgroundColors;
-  };
-  $scope.showUnique = function() {
-    $scope.viewBackgroundColors = $scope.uniqueBackgroundColors;
-  };*/
 }]);

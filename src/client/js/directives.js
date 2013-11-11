@@ -14,8 +14,6 @@
           var svg = d3.select(iElement[0])
               .append("svg")
               .attr("width", "100%");
-
-          console.log(scope);
           
           var margin = parseInt(iAttrs.margin) || 20,
               barHeight = parseInt(iAttrs.barHeight) || 20,
@@ -25,16 +23,19 @@
           window.onresize = function() {
             return scope.$apply();
           };
-          scope.$watch(function(){
+          
+          /*scope.$watch(function(){
               return angular.element(window)[0].innerWidth;
             }, function(){
               return scope.render(scope.data);
             }
-          );
+          );*/
 
           // watch for data changes and re-render
           scope.$watch('data', function(newVals, oldVals) {
-            return scope.render(newVals);
+            if (newVals) {
+              scope.render(newVals);
+            }
           }, true);
 
           // define render function
@@ -50,13 +51,9 @@
 
             color = d3.scale.category20();
 
-
             max = Math.max.apply(Math, data.map(function(val){
-
               return val.count;
             }));
-
-            console.log(max);
             
             // set the height based on the calculations above
             svg.attr('height', height);
