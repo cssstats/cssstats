@@ -128,7 +128,3 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
   };
 
 }]);
-
-angular.module('rprtr').controller('HomeCtrl', ['$scope', '$filter', function($scope, $filter) {
-
-}]);
