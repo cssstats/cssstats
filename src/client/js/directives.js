@@ -14,7 +14,7 @@
           var svg = d3.select(iElement[0])
               .append("svg")
               .attr("width", "100%");
-          
+
           var margin = parseInt(iAttrs.margin) || 20,
               barHeight = parseInt(iAttrs.barHeight) || 20,
               barPadding = parseInt(iAttrs.barPadding) || 5;
@@ -23,7 +23,7 @@
           window.onresize = function() {
             return scope.$apply();
           };
-          
+
           /*scope.$watch(function(){
               return angular.element(window)[0].innerWidth;
             }, function(){
@@ -45,16 +45,15 @@
 
             // setup variables
             var width, height, max, color;
-            width = d3.select(iElement[0])[0][0].offsetWidth - 20;
-              // 20 is for margins and can be changed
-            height = scope.data.length * 35;
+            width = d3.select(iElement[0])[0][0].offsetWidth;
+            height = scope.data.length * 44;
 
-            color = d3.scale.category20();
+            color = d3.scale.category20c();
 
             max = Math.max.apply(Math, data.map(function(val){
               return val.count;
             }));
-            
+
             // set the height based on the calculations above
             svg.attr('height', height);
 
@@ -63,11 +62,11 @@
               .data(data)
               .enter()
                 .append("rect")
-                .attr("height", 30) // height of each bar
+                .attr("height", 44) // height of each bar
                 .attr("width", 0) // initial width of 0 for transition
-                .attr("x", 10) // half of the 20 side margin specified above
+                .attr("x", 0) // half of the 20 side margin specified above
                 .attr("y", function(d, i){
-                  return i * 35;
+                  return i * 44;
                 }) // height + margin between bars
                 .attr('fill', function(d) { return color(d.count); })
                 .transition()
@@ -82,12 +81,13 @@
                   .append('text')
                   .attr('fill', '#fff')
                   .attr('y', function(d,i) {
-                    return i * 35 + 22;
+                    return (i * 44) + 26;
                   })
                   .attr('x', 15)
+                  .attr('font-size', '14px')
                   .text(function(d) {
                     return d.count + ' ' + d.name;
-                  });  
+                  });
           };
         }
       };
