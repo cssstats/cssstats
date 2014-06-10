@@ -10,8 +10,8 @@ Install [node.js](http://nodejs.org) and then open Terminal:
 
 ## Project Setup
 
-    git clone git@github.com:mrmrs/rprtr.git
-    cd rprtr
+    git clone git@github.com:mrmrs/cssstats.git
+    cd cssstats
     npm install
     grunt build:debug
     node-dev app.coffee
