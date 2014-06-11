@@ -4,14 +4,18 @@
 
 .link { text-decoration: none; }
 
-a {
-  transition: .3s color ease-in-out;
+a,a:link,a:visited {
+  transition: color .3s ease-in-out;
 }
 
 a:hover {
-  color: $orangered;
+  color: $silver;
   cursor: pointer;
   transition: .3s color ease-in-out;
+}
+
+a:active {
+  color:darken( $blue, 10% );
 }
 
 .af { transition: .4s color ease-in; }
