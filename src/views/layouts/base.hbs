@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="rprtr">
   <head>
     <meta charset="utf-8">
@@ -7,39 +7,34 @@
     <link rel="author" href="humans.txt">
     <link rel="stylesheet" href="css/i.css">
   </head>
-  <body ng-controller="GlobalCtrl" class="sans-serif pos-rel">
-    <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht sans-serif">
+  <body ng-controller="GlobalCtrl" class="sans-serif pos-rel bg-off-white">
+    <header class="phl phx-l pts pbs bb-solid bw-1 bor--near-wht sans-serif bg-white">
       <h1 class="f2 f2-l ttu mega-tracked mtn mbn dib mrx pvs lh">
         <a class="blk db" href="#/" title="CSS Stats">CSS Stats</a>
       </h1>
     </header>
 
-    <main ng-view></main>
+    <main ng-view class="bg-white pbl pbx-ns"></main>
 
-    <footer class="bt mdgry cf mtl phl phx-l ptl ptl-l">
-      <small>Find something wrong? 
-        <a href="https://github.com/mrmrs/rprtr/issues?state=open" title="File a bug" class="blk b">
-          File a bug
-        </a> 
-      </small>
-      <ul class="list list--h ptl pbm">
-        <li class="dib">
-          <a href="http://github.com/mrmrs/cssstats" target="_blank" class="btn">
-            <i class="btn--github"></i>
-            View on Github
-          </a>
-        </li>
-        <li class="dib">
-
-        <a href="https://twitter.com/intent/tweet?text=Visualize your css&amp;url=http://www.cssstats.com" target="_blank" class="btn">
+    <footer class="bt mdgry cf phl phx-l ptl ptl-l pbx">
+      <div class="mts">
+        <a href="https://twitter.com/intent/tweet?text=Visualize your css&amp;url=http://www.cssstats.com" target="_blank" class="btn" style="font-size:12px;">
           <i class="btn--twitter"></i>
           Tweet This
         </a>
-        </li>
-      </ul>
+      </div>
+      <p class="">
+        Find something wrong? 
+        <a href="https://github.com/mrmrs/rprtr/issues?state=open" title="File a bug" class="blk b">
+          File a bug
+        </a> 
+        <a href="http://github.com/mrmrs/cssstats" target="_blank" class="blk db pvm">
+          View project on Github
+        </a>
+      </p>
       <p class="f6 sans-serif mega-tracked ttu">
         Built with ♡
-        by <a href="https://github.com/mrmrs/rprtr/cssstats/contributors" title="CSS STATS Contributors" class="blk b">Some Rad Folks</a>
+        by <a href="https://github.com/mrmrs/rprtr/cssstats/contributors" title="CSS STATS Contributors" class="blk b">some people</a>
       </p>
     </footer>
 
