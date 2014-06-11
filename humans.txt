@@ -1,5 +1,4 @@
-# http://mrmrs.github.io/rprtr
-# Team Rad
+# http://www.cssstats.com
 
 # TEAM
 
@@ -12,4 +11,4 @@
     HTML, CSS, SASS
     Normalize.css, css-parse, node, angular
 
-    Source: https://github.com/mrmrs/rprtr
+    Source: https://github.com/mrmrs/cssstats
