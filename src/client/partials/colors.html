@@ -1,34 +1,40 @@
 <section>
   <header class="phl phx-l mvl mvx-l">
+    <!--
     <h1 class="f1 ttu tracked lh">
       {{site.decsByProperty.all.color.length + site.decsByProperty.all.backgroundColor.length | number}} Colors
     </h1>
+    -->
   </header>
   <div>
     <div class="cf">
       <section class="fl wi-50-ns phl phx-l">
         <h1 class="dib mrs mbm ttu tracked">Colors</h1>
-        <!-- <a href="" ng-click="showAll()">All ({{ colors.length }})</a> -->
-        <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueColors.length }})</a> -->
+        <div>
+        <a href="" ng-click="showAll=true">All ({{ site.decsByProperty.all.color.length }})</a> |
+        <a href="" ng-click="showAll=false">Unique ({{ site.decsByProperty.unique.color.length }})</a> 
+      </div>
         <ul>
           <li ng-repeat="color in getDecs(site.decsByProperty.all.color) | orderBy:'value'"
             class="sans-serif">
-          <var class="fsn lh-2 b">{{color.value}}</var>
+          <code class="fsn lh-2">{{color.value}}</code>
           <p
-            class="lh-copy mtn mbl"
+            class="lh-copy mtn mbl f3"
             style="color: {{color.value}}">
-            Whoa, Peppermint butler! Finn, Jake. The Princess wants to see you. As princess of Candy Kingdom, Im in charge of a lot of candy people. They rely on me. I cant imagine what might happen to them if I was gone. And after my brush with death, at the hands of the Lich, I realized something. Im not gonna live forever Finn. I would if I could.
+            <b class="f1-ns ttu db">Whoa, Peppermint butler!</b> Finn, Jake. The Princess wants to see you. As princess of Candy Kingdom, Im in charge of a lot of candy people. They rely on me. 
           </p>
         </li>
       </ul>
     </section>
     <section class="fl wi-50-ns phl phx-l">
       <h1 class="dib mrs mbm ttu tracked">Background Colors</h1>
-      <!-- <a href="" ng-click="showAll()" ng-class="{'drkgry':viewBackgroundColors == backgroundColors}">All ({{ backgroundColors.length}})</a> -->
-      <!-- <a href="" ng-click="showUnique()">Unique ({{ uniqueBackgroundColors.length }})</a> -->
-      <ul>
-        <li ng-repeat="backgroundColor in getDecs(site.decsByProperty.all.backgroundColor) | orderBy: 'value'" class="f3 ttu">
-        <span class="f5 b">{{backgroundColor.value}}</span>
+      <div>
+      <a href="" ng-click="showAll()" ng-class="{'drkgry':viewBackgroundColors == backgroundColors}">All ({{ site.decsByProperty.all.backgroundColor.length}})</a> 
+      <a href="" ng-click="showUnique()">Unique ({{ site.decsByProperty.unique.backgroundColor.length }})</a> 
+    </div>
+      <ul class="cf">
+        <li ng-repeat="backgroundColor in getDecs(site.decsByProperty.all.backgroundColor) | orderBy: 'value'" class="f3 ttu fl wi-25">
+        <code class="f5">{{backgroundColor.value}}</code>
         <div style="background-color: {{backgroundColor.value}}; height: 5rem; width: 100%;" class="dib" > </div>
       </li>
     </ul>
