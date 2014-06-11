@@ -58,7 +58,7 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
     
     $scope.site = response.data;
 
-    angular.forEach(['width', 'height', 'color', 'backgroundColor'], function (stat) {
+    angular.forEach(['width', 'height', 'color', 'backgroundColor', 'fontSize', 'maxWidth', 'maxHeight'], function (stat) {
       m.d3[stat + 's'] = [
         { name: 'Unique', count: $scope.site.decsByProperty.unique[stat].length },
         { name: 'Total', count: $scope.site.decsByProperty.all[stat].length }
