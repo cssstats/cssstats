@@ -13,6 +13,7 @@ Install [node.js](http://nodejs.org) and then open Terminal:
     git clone git@github.com:mrmrs/cssstats.git
     cd cssstats
     npm install
+    bower install
     grunt build:debug
     node-dev app.coffee
 
