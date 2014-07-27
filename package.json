@@ -3,7 +3,7 @@
   "namespace": "rprtr",
   "version": "0.0.1",
   "devDependencies": {
-    "bower": "~1.2.5",
+    "bower": "~1.3.8",
     "coffeelint": "~0.5.7",
     "coffee-script": "~1.6.3",
     "load-grunt-tasks": "~0.1.0",
@@ -24,7 +24,7 @@
     "lockfile": "~>0.3.0"
   },
   "dependencies": {
-    "bower": "~1.2.5",
+    "bower": "~1.3.8",
     "coffeelint": "~0.5.7",
     "coffee-script": "~1.6.3",
     "css-parse": "~1.6.0",
@@ -60,6 +60,6 @@
     "npm": "1.3.x"
   },
   "scripts": {
-    "postinstall": "./postinstall.sh"
+    "postinstall": "sh postinstall.sh"
   }
 }
