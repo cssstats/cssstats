@@ -82,7 +82,7 @@ util =
 
   getUrlContents: (url) ->
     _when.promise (resolve, reject, notify) ->
-      req = request url: url, encoding: 'utf8', (error, response, body) ->
+      req = request url: url, encoding: 'utf8', rejectUnauthorized: false, (error, response, body) ->
         if not error and response.statusCode is 200
           resolve body
         else
