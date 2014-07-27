@@ -118,6 +118,8 @@ util =
           css = _.reduce cssFiles, (css, cssFile) ->
             css += cssFile
           resolve util.parseCss(css)
+      , (err) ->
+        reject err
 
   parseCss: (cssString) ->
     cssRules = cssParse cssunminifier.unminify(cssString)
@@ -226,3 +228,5 @@ exports.api.parse =
         when 'url'
           util.parseCssFromUrl(fields.url).then (response) ->
             res.send response
+          , (error) ->
+            res.send 500
