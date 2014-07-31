@@ -82,7 +82,7 @@ util =
 
   getUrlContents: (url) ->
     _when.promise (resolve, reject, notify) ->
-      req = request url: url, encoding: 'utf8', rejectUnauthorized: false, (error, response, body) ->
+      req = request url: url, timeout: 5000, encoding: 'utf8', rejectUnauthorized: false, (error, response, body) ->
         if not error and response.statusCode is 200
           resolve body
         else
@@ -118,6 +118,8 @@ util =
           css = _.reduce cssFiles, (css, cssFile) ->
             css += cssFile
           resolve util.parseCss(css)
+      , (err) ->
+        reject err
 
   parseCss: (cssString) ->
     cssRules = cssParse cssunminifier.unminify(cssString)
@@ -226,3 +228,5 @@ exports.api.parse =
         when 'url'
           util.parseCssFromUrl(fields.url).then (response) ->
             res.send response
+          , (error) ->
+            res.send 500

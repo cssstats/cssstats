@@ -65,7 +65,10 @@ angular.module('rprtr').controller('ReportCtrl', ['$scope', '$routeParams', '$lo
       ];
     });
     
-  });
+  }, function(error){
+    alert('An error occurred while processing the request.');
+    $location.path('/');
+  })
 
   ///////////////////////////////////
   // Subnav
