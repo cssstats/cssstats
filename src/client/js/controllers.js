@@ -2,6 +2,7 @@ angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http'
   
   var m = $scope.model = $scope.model || {};
 
+  $scope.validUrl = true;
   ///////////////////////////////////
   // CSS Parse
   ///////////////////////////////////
@@ -23,6 +24,20 @@ angular.module('rprtr').controller('GlobalCtrl', ['$scope', '$location', '$http'
   m.cssInput = '';
   
   $scope.parseCss = function () {
+
+    /**
+     * Taken from http://stackoverflow.com/a/3975573/1955940
+     *
+     * URL Validation is not an easy task but it does the job.
+     */
+    var urlregex = new RegExp(
+      "^(http|https|ftp)\://([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(\:[0-9]+)*(/($|[a-zA-Z0-9\.\,\?\'\\\+&amp;%\$#\=~_\-]+))*$");
+
+    if (!urlregex.test(m.cssUrl)) {
+      $scope.validUrl = false;
+      return;
+    }
+
     if (m.cssInputType === 'url') {
       $location.path('/site/url/' + encodeURIComponent(m.cssUrl));
     }

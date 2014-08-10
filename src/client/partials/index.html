@@ -18,6 +18,7 @@
              ng-model="model.cssUrl"
              class="f6 wi-full mw-64 pam br-2 bor bor--lt-gry br-2"
              placeholder="http://www.cssstats.com">
+        <p class="input-validation" ng-hide="validUrl">Please enter a valid Url.</p>
     </div>
     <div ng-show="model.cssInputType == 'link'" class="pts pbm">
       <label class="dn f6">Link to a css file</label>
