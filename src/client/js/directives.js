@@ -2,6 +2,17 @@
   'use strict';
 
   angular.module('rprtr')
+      .directive('onEnterPress', function() {
+          return function(scope, elm, attrs) {
+              var keyupFn = scope.$eval(attrs.onEnterPress);
+              elm.bind("keyup", function(e) {
+                  if(e.keyCode == 13)
+                      scope.$apply(function() {
+                          keyupFn.call(scope, e.which);
+                      });
+              });
+          };
+      })
     .directive('d3Bars', ['d3', function(d3) {
       return {
         restrict: 'EA',
