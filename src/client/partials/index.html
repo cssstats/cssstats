@@ -24,7 +24,10 @@
     <div ng-show="model.cssInputType == 'link'" class="pts pbm">
       <label class="dn f6">Link to a css file</label>
       <form ng-submit="parseCss()">
-        <input type="text" ng-model="model.cssLink" class="f6 wi-full mw-64 pam br-2 bor bor--lt-gry br-2" placeholder="http://www.cssstats.com/css/i.css">
+        <input type="text"
+               ng-model="model.cssLink"
+               class="f6 wi-full mw-64 pam br-2 bor bor--lt-gry br-2"
+               placeholder="http://www.cssstats.com/css/i.css">
       </form>
     </div>
     <div ng-show="model.cssInputType == 'input'" class="pts pbm">
