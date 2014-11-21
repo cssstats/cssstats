@@ -3,6 +3,8 @@ var Handlebars = require('handlebars');
 
 module.exports = function(obj, max) {
 
+  if (!obj) console.error('no uniques object!');
+
   var svg;
   var width = 256;
   var height = 240;

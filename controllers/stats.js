@@ -145,6 +145,7 @@ function uniquesGraph(stats) {
     }
   });
   keys.forEach(function(key) {
+    if (!obj[key]) return false;
     obj[key].percentTotal = obj[key].total / obj.max;
     obj[key].percentUnique = obj[key].unique / obj.max;
   });

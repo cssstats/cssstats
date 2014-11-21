@@ -37,6 +37,8 @@ router.get('/', function(req, res) {
       });
   } else if (req.session.css) {
     model.css = req.session.css;
+    model.name = 'Raw CSS';
+    model = controller(model);
     res.render('stats', model);
   } else {
     res.redirect('/');
