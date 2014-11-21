@@ -1,0 +1,30 @@
+
+/* Responsive type sizes */
+.h0  { font-size: 2rem }
+.h00 { font-size: 2rem }
+
+@media (--breakpoint-sm) {
+  .h0  { font-size: 2.5rem }
+  .h00 { font-size: 3rem }
+}
+
+@media (--breakpoint-md) {
+  .h0  { font-size: 3rem }
+  .h00 { font-size: 4rem }
+}
+
+@media (--breakpoint-lg) {
+  .h0  { font-size: 4rem }
+  .h00 { font-size: 5rem }
+}
+
+.lh1 { line-height: 1 }
+
+.break-word { word-wrap: break-word; }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

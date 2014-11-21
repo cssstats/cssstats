@@ -1,0 +1,6 @@
+.table-light th,
+.table-light td {
+  border-bottom-style: solid;
+  border-bottom-width: var(--border-width);
+  border-bottom-color: var(--border-color);
+}
