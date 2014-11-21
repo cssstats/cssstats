@@ -19,3 +19,4 @@ src/client/vendor/*
 /libpeerconnection.log
 .DS_Store
 *.sublime-workspace
+.elasticbeanstalk/
