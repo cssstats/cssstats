@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Stats</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/base.min.css">
+</head>
+<body class="flex flex-column" style="min-height:100vh">
+
+  {{> nav }}
+
+  {{#if error }}
+    <div class="p2">
+      <div class="container">
+        <div class="bold p2 mb1 white bg-red rounded">
+          {{ error }}
+        </div>
+        <div class="xred">
+          {{#if url}}
+            Some URLs do not parse correctly. Try a direct link to the CSS file instead.
+          {{ else }}
+            Know how to fix this?
+            <a href="http://github.com/mrmrs/cssstats/pulls">Submit a Pull Request</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+
+  <main class="flex-grow">
+    <div class="container px2">
+      {{{body}}}
+    </div>
+  </main>
+
+  {{> footer }}
+
+</body>
+</html>

@@ -1,20 +1,22 @@
+# CSS Stats
+Potentially interesting stats on stylesheets
+
+http://cssstats.com
+
 # Local Dev
 
 ## Global Dependencies
 
 Install [node.js](http://nodejs.org) and then open Terminal:
 
-    npm install -g coffee-script
-    npm install -g grunt-cli
-    npm install -g node-dev
+    TK
 
 ## Project Setup
 
     git clone git@github.com:mrmrs/cssstats.git
     cd cssstats
     npm install
-    grunt build:debug
-    node-dev app.coffee
+    TK
 
 # Contributing
 

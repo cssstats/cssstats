@@ -1,0 +1,61 @@
+
+@import 'basscss-base';
+@import 'basscss-utilities';
+@import 'basscss-ui-utilities';
+@import 'flex-object';
+@import 'basscss-grid';
+@import 'basscss-color-basic';
+
+@import './highlight';
+
+.h0  { font-size: 2rem }
+.h00 { font-size: 2rem }
+.lh1 { line-height: 1 }
+
+.break-word { word-wrap: break-word; }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input.input-big {
+  height: 3.5rem;
+}
+
+.square {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.aspect-4-3 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+@media (--breakpoint-sm) {
+  .h0  { font-size: 2.5rem }
+  .h00 { font-size: 3rem }
+}
+
+@media (--breakpoint-md) {
+  .h0  { font-size: 3rem }
+  .h00 { font-size: 4rem }
+}
+
+@media (--breakpoint-lg) {
+  .h0  { font-size: 4rem }
+  .h00 { font-size: 5rem }
+}
+
+:root {
+  --font-family: 'San Francisco Display', 'Helvetica Neue', Helvetica, sans-serif;
+  /*--font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, sans-serif;*/
+  --container-width: 72em;
+  --dark-gray: #334455;
+  --border-color: var(--dark-gray);
+}
+

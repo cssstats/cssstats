@@ -9,6 +9,6 @@
 # TECHNOLOGY COLOPHON
 
     HTML, CSS, SASS
-    Normalize.css, css-parse, node, angular
+    Normalize.css, css-parse, node, express
 
     Source: https://github.com/mrmrs/cssstats

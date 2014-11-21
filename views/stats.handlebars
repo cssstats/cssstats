@@ -1,0 +1,190 @@
+
+<header class="sm-flex flex-center py2 mb3 border-bottom">
+  <h1 class="flex-grow break-word m0" style="max-width:80%">
+    {{#if name }}
+      {{ name }}
+    {{else}}
+      {{#if link }}
+        {{ link }}
+      {{else}}
+        {{ url }}
+      {{/if}}
+    {{/if}}
+  </h1>
+  <div class="right-align flex-grow">
+    <h1 class="h2 m0">{{filesize stats.size }}</h1>
+  </div>
+</header>
+
+<section id="top-stats" class="flex flex-wrap mxn2 mb4">
+  <div class="col-6 lg-col-3 p2">
+    <h1 class="h00 lh1 m0">{{number stats.aggregates.rules }}</h1>
+    <p class="h3 bold lh1 m0">Rules</p>
+  </div>
+  <div class="col-6 lg-col-3 p2">
+    <h1 class="h00 lh1 m0">{{number stats.aggregates.selectors }}</h1>
+    <p class="h3 bold lh1 m0">Selectors</p>
+  </div>
+  <div class="col-6 lg-col-3 p2">
+    <h1 class="h00 lh1 m0">{{number stats.aggregates.declarations }}</h1>
+    <p class="h3 bold lh1 m0">Declarations</p>
+  </div>
+  <div class="col-6 lg-col-3 p2">
+    <h1 class="h00 lh1 m0">{{number stats.aggregates.properties.length }}</h1>
+    <p class="h3 bold lh1 m0">Properties</p>
+  </div>
+</section>
+
+<section id="declarations" class="mb4">
+  <h1 class="h2 m0">Total Declarations</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Font Size</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.fontSizes.total }}</h1>
+    </div>
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Float</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.floats.total }}</h1>
+    </div>
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Width</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.widths.total }}</h1>
+    </div>
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Height</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.heights.total }}</h1>
+    </div>
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Color</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.colors.total }}</h1>
+    </div>
+    <div class="col-6 sm-col-4 lg-col-2 p2">
+      <p class="bold lh1 m0">Background Color</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.backgroundColors.total }}</h1>
+    </div>
+  </div>
+</section>
+
+<section id="uniques" class="mb4">
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.fontSize.length }}
+      Unique Font Sizes
+    </h2>
+    <div class="">
+      {{#each uniques.fontSizeSorted }}
+        <div class="bold truncate mb1" style="font-size:{{ this.value }}">
+          Font Size {{ this.value }}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.fontFamily.length }}
+      {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
+    </h2>
+    {{#each uniques.fontFamily }}
+      <div class="h3 bold mb1" style="font-family:{{ this.value }}">
+        {{ this.value }}
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.color.length }}
+      {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
+    </h2>
+    <div class="flex flex-wrap mxn2">
+      {{#each uniques.color }}
+        <div class="col-4 sm-col-3 lg-col-2 p2">
+          <div class="h0 lh1 bold" style="color:{{ this.value }}">Aa</div>
+          <div class="h6 break-word">{{ this.value }}</div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.backgroundColor.length }}
+      {{pluralize uniques.backgroundColor.length 'Unique Background Color' 'Unique Background Colors' }}
+    </h2>
+    <div class="flex flex-wrap mxn2">
+      {{#each uniques.backgroundColor }}
+        <div class="col-4 sm-col-3 lg-col-2 p2">
+          <div class="square mb1" style="background-color:{{ this.value }}">
+          </div>
+          <div class="h6 break-word">{{ this.value }}</div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</section>
+
+<section id="unique-totals" class="mb4">
+  <h1 class="h2 mt0">Unique vs. Total Declarations</h1>
+  <div class="flex flex-wrap mb4">
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.width }}
+      <div class="h5 bold">Width</div>
+    </div>
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.height }}
+      <div class="h5 bold">Height</div>
+    </div>
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.margin }}
+      <div class="h5 bold">Margin</div>
+    </div>
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.padding }}
+      <div class="h5 bold">Padding</div>
+    </div>
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.color }}
+      <div class="h5 bold">Color</div>
+    </div>
+    <div class="col-4 md-col-3 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.backgroundColor }}
+      <div class="h5 bold">Background Color</div>
+    </div>
+  </div>
+</section>
+
+<section id="specificity-graph" class="mb4">
+  <h1 class="mt0">Specificity Graph</h1>
+  {{specificity_graph specificityGraph 1152 320 }}
+  <p>
+    Specificity score for each selector plotted by source order.
+    The y-axis is specificity treated as a base 10 number,
+    and the x-axis is each selector in source order.
+    Generally, lower scores and flatter curves are better for maintainability.
+    Read more about the specificity graph in
+    <a href="http://csswizardry.com/2014/10/the-specificity-graph/">Harry Robert's Article</a>
+  </p>
+</section>
+
+<section id="media-queries" class="mb4">
+  <h1 class="m0">
+    {{number stats.aggregates.mediaQueries.length }}
+    Media Queries
+  </h1>
+  <div class="flex flex-wrap mxn2">
+    {{#each stats.aggregates.mediaQueries }}
+      <div class="h5 bold break-word col-6 sm-col-4 px2 mb2">
+        {{ this }}
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section id="raw-css" class="mb4">
+  <h1 class="h2">Raw CSS</h1>
+  <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
+</section>
+

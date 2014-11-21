@@ -1,9 +1,0 @@
-/* ==========================================================================
-   UNICODE RANGES
-   ========================================================================== */
-
-.ur { unicode-range: U+26; }         /* single_codepoint */
-.ur-1 { unicode-range: U+0025-00FF; }        /* codepoint_range */
-.ur-2 { unicode-range: U+4??; }              /* wildcard_range */
-.ur-3 { unicode-range: U+0025-00FF, U+4??; } /* multiple values can be separated by commas */
-
