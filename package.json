@@ -1,7 +1,7 @@
 {
   "name": "rprtr",
   "namespace": "rprtr",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "dependencies": {
     "body-parser": "~1.8.1",
     "cheerio": "^0.18.0",
