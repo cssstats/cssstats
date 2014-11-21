@@ -9,14 +9,14 @@ http://cssstats.com
 
 Install [node.js](http://nodejs.org) and then open Terminal:
 
-    TK
+    npm install -g gulp
 
 ## Project Setup
 
     git clone git@github.com:mrmrs/cssstats.git
     cd cssstats
     npm install
-    TK
+    npm start
 
 # Contributing
 
