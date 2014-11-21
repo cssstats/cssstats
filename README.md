@@ -18,6 +18,9 @@ Install [node.js](http://nodejs.org) and then open Terminal:
     npm install
     npm start
 
+## Compiling CSS
+Make changes in the `/css` folder, then use `gulp css` to compile once or `gulp watch` to watch the css folder.
+
 # Contributing
 
 Start by checking out our current issues.
