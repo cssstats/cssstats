@@ -42,7 +42,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 var secret = Math.random().toString(36).slice(2);
 app.use(session({ secret: secret }));
