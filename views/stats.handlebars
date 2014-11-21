@@ -69,32 +69,6 @@
 
   <div class="mb4">
     <h2>
-      {{ uniques.fontSize.length }}
-      Unique Font Sizes
-    </h2>
-    <div class="">
-      {{#each uniques.fontSizeSorted }}
-        <div class="bold truncate mb1" style="font-size:{{ this.value }}">
-          Font Size {{ this.value }}
-        </div>
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="mb4">
-    <h2>
-      {{ uniques.fontFamily.length }}
-      {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
-    </h2>
-    {{#each uniques.fontFamily }}
-      <div class="h3 bold mb1" style="font-family:{{ this.value }}">
-        {{ this.value }}
-      </div>
-    {{/each}}
-  </div>
-
-  <div class="mb4">
-    <h2>
       {{ uniques.color.length }}
       {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
     </h2>
@@ -123,6 +97,33 @@
       {{/each}}
     </div>
   </div>
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.fontSize.length }}
+      Unique Font Sizes
+    </h2>
+    <div class="">
+      {{#each uniques.fontSizeSorted }}
+        <div class="bold truncate mb1" style="font-size:{{ this.value }}">
+          Font Size {{ this.value }}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="mb4">
+    <h2>
+      {{ uniques.fontFamily.length }}
+      {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
+    </h2>
+    {{#each uniques.fontFamily }}
+      <div class="h3 bold mb1" style="font-family:{{ this.value }}">
+        {{ this.value }}
+      </div>
+    {{/each}}
+  </div>
+
 
 </section>
 
