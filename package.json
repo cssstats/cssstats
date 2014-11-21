@@ -1,6 +1,5 @@
 {
   "name": "rprtr",
-  "namespace": "rprtr",
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "~1.8.1",
