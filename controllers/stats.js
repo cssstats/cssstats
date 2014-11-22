@@ -1,6 +1,5 @@
 
 var cssstats = require('css-statistics');
-//var cssstats = require('../../css-statistics');
 var beautify = require('cssbeautify');
 
 function parseDeclarations(declarations, indexes) {
@@ -152,6 +151,15 @@ function uniquesGraph(stats) {
   return obj;
 }
 
+function rulesizeGraph(rules) {
+  var array = [];
+  rules.forEach(function(rule) {
+    if (!rule.declarations) return false;
+    array.push(rule.declarations.length);
+  });
+  return array;
+}
+
 module.exports = function(obj) {
 
   var model = {};
@@ -169,6 +177,7 @@ module.exports = function(obj) {
   }
   model.uniques = parseUniques(model.stats);
   model.specificityGraph = parseSpecificity(model.stats.selectors);
+  model.rulesizeGraph = rulesizeGraph(model.stats.rules);
 
   //model.propertiesBreakdown = parsePropertiesBreakdown(model.stats);
 

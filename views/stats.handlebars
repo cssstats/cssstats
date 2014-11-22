@@ -18,7 +18,7 @@
 
 <section id="top-stats" class="flex flex-wrap mxn2 mb4">
   <div class="col-6 lg-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.rules }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.rules.length }}</h1>
     <p class="h3 bold lh1 m0">Rules</p>
   </div>
   <div class="col-6 lg-col-3 p2">
@@ -167,6 +167,14 @@
     Generally, lower scores and flatter curves are better for maintainability.
     Read more about the specificity graph in
     <a href="http://csswizardry.com/2014/10/the-specificity-graph/">Harry Robert's Article</a>
+  </p>
+</section>
+
+<section id="rulesize-graph" class="mb4">
+  <h1 class="mt0">Ruleset Size Graph</h1>
+  {{rulesize_graph rulesizeGraph 1152 320 }}
+  <p>
+    Number of declarations per ruleset
   </p>
 </section>
 
