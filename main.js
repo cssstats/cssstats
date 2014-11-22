@@ -65,6 +65,8 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
+    console.log(err);
+    console.log(err.message);
     console.log(err.stack);
     res.status(err.status || 500);
     res.render('error', {
@@ -77,7 +79,6 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  console.log(err.stack);
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

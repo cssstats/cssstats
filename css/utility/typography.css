@@ -6,6 +6,7 @@
 @media (--breakpoint-sm) {
   .h0  { font-size: 2.5rem }
   .h00 { font-size: 3rem }
+  .sm-right-align { text-align: right }
 }
 
 @media (--breakpoint-md) {
