@@ -23,8 +23,9 @@ module.exports = {
           } else if (link.match(/^\.\./g)) {
             links[i] = url + link.replace('..', '');
           } else {
-            links[i] = url + link;
+            links[i] = url + '/' + link;
           }
+          console.log(links[i]);
         }
         if (i+1 >= links.length) {
           deferred.resolve(links);
