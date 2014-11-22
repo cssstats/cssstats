@@ -1,7 +1,7 @@
 
 module.exports = function(number, singular, plural) {
   if (number == 1) {
-    return single;
+    return singular;
   } else {
     return plural;
   }
