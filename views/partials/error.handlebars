@@ -1,0 +1,12 @@
+<div class="bold p2 mb1 red bg-lighter-gray rounded">
+  {{ error.status }}
+  {{ error }}
+</div>
+<div class="mb3">
+  {{#if url}}
+    Some URLs do not parse correctly. Try a direct link to the CSS file instead.
+  {{ else }}
+    Know how to fix this?
+    <a href="http://github.com/mrmrs/cssstats/pulls">Submit a Pull Request</a>
+  {{/if}}
+</div>
