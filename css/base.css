@@ -17,6 +17,8 @@
 @import './color/borders';
 @import './color/highlight';
 
+@import './print';
+
 :root {
 
   --font-family: 'San Francisco Display', 'Helvetica Neue', Helvetica, sans-serif;

@@ -21,19 +21,19 @@
 </header>
 
 <section id="top-stats" class="flex flex-wrap mxn2 mb4">
-  <div class="col-6 lg-col-3 p2">
+  <div class="col-6 md-col-3 p2">
     <h1 class="h00 lh1 m0">{{number stats.rules.length }}</h1>
     <p class="h3 bold lh1 m0">Rules</p>
   </div>
-  <div class="col-6 lg-col-3 p2">
+  <div class="col-6 md-col-3 p2">
     <h1 class="h00 lh1 m0">{{number stats.aggregates.selectors }}</h1>
     <p class="h3 bold lh1 m0">Selectors</p>
   </div>
-  <div class="col-6 lg-col-3 p2">
+  <div class="col-6 md-col-3 p2">
     <h1 class="h00 lh1 m0">{{number stats.aggregates.declarations }}</h1>
     <p class="h3 bold lh1 m0">Declarations</p>
   </div>
-  <div class="col-6 lg-col-3 p2">
+  <div class="col-6 md-col-3 p2">
     <h1 class="h00 lh1 m0">{{number stats.aggregates.properties.length }}</h1>
     <p class="h3 bold lh1 m0">Properties</p>
   </div>
@@ -69,67 +69,66 @@
   </div>
 </section>
 
-<section id="uniques" class="mb4">
-
-  <div class="mb4">
-    <h2>
-      {{ uniques.color.length }}
-      {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
-    </h2>
-    <div class="flex flex-wrap mxn2">
-      {{#each uniques.color }}
-        <div class="col-4 sm-col-3 lg-col-2 p2">
-          <div class="h0 lh1 bold" style="color:{{ this.value }}">Aa</div>
-          <div class="h6 break-word">{{ this.value }}</div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="mb4">
-    <h2>
-      {{ uniques.backgroundColor.length }}
-      {{pluralize uniques.backgroundColor.length 'Unique Background Color' 'Unique Background Colors' }}
-    </h2>
-    <div class="flex flex-wrap mxn2">
-      {{#each uniques.backgroundColor }}
-        <div class="col-4 sm-col-3 lg-col-2 p2">
-          <div class="square mb1" style="background-color:{{ this.value }}">
-          </div>
-          <div class="h6 break-word">{{ this.value }}</div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="mb4">
-    <h2>
-      {{ uniques.fontSize.length }}
-      Unique Font Sizes
-    </h2>
-    <div class="">
-      {{#each uniques.fontSizeSorted }}
-        <div class="bold truncate mb1" style="font-size:{{ this.value }}">
-          Font Size {{ this.value }}
-        </div>
-      {{/each}}
-    </div>
-  </div>
-
-  <div class="mb4">
-    <h2>
-      {{ uniques.fontFamily.length }}
-      {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
-    </h2>
-    {{#each uniques.fontFamily }}
-      <div class="h3 bold break-word mb1" style="font-family:{{ this.value }}">
-        {{ this.value }}
+<section id="unique-colors" class="mb4">
+  <h2>
+    {{ uniques.color.length }}
+    {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
+  </h2>
+  <div class="flex flex-wrap mxn2">
+    {{#each uniques.color }}
+      <div class="col-4 sm-col-3 lg-col-2 p2">
+        <div class="h0 lh1 bold" style="color:{{ this.value }}">Aa</div>
+        <div class="h6 break-word">{{ this.value }}</div>
       </div>
     {{/each}}
   </div>
-
-
 </section>
+
+<section id="unique-background-colors" class="mb4">
+  <h2>
+    {{ uniques.backgroundColor.length }}
+    {{pluralize uniques.backgroundColor.length 'Unique Background Color' 'Unique Background Colors' }}
+  </h2>
+  <div class="flex flex-wrap mxn2">
+    {{#each uniques.backgroundColor }}
+      <div class="col-4 sm-col-3 lg-col-2 p2">
+        <div class="mb1">
+          <svg viewBox="0 0 64 64" width="64" height="64" style="display:block;width:100%;height:auto">
+            <rect width="64" height="64" fill="{{ this.value }}"/>
+          </svg>
+        </div>
+        <div class="h6 break-word">{{ this.value }}</div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section id="unique-font-sizes" class="mb4">
+  <h2>
+    {{ uniques.fontSize.length }}
+    Unique Font Sizes
+  </h2>
+  <div class="">
+    {{#each uniques.fontSizeSorted }}
+      <div class="bold truncate mb1" style="font-size:{{ this.value }}">
+        Font Size {{ this.value }}
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section id="unique-font-families" class="mb4">
+  <h2>
+    {{ uniques.fontFamily.length }}
+    {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
+  </h2>
+  {{#each uniques.fontFamily }}
+    <div class="h3 bold break-word mb1" style="font-family:{{ this.value }}">
+      {{ this.value }}
+    </div>
+  {{/each}}
+</section>
+
 
 <section id="unique-totals" class="mb4">
   <h1 class="h2 mt0">Total vs. Unique Declarations</h1>
@@ -162,20 +161,17 @@
 </section>
 
 <section id="specificity-graph" class="mb4">
-  <h1 class="mt0">Specificity Graph</h1>
+  <h1 class="h2 mt0">Specificity Graph</h1>
   {{line_graph specificityGraph 1152 320 }}
   <p>
-    Specificity score for each selector plotted by source order.
-    The y-axis is specificity treated as a base 10 number,
-    and the x-axis is each selector in source order.
+    Base 10 specificity score for each selector by source order.
     Generally, lower scores and flatter curves are better for maintainability.
-    Read more about the specificity graph in
-    <a href="http://csswizardry.com/2014/10/the-specificity-graph/">Harry Robert's Article</a>
+    <a href="http://csswizardry.com/2014/10/the-specificity-graph/">Learn More</a>
   </p>
 </section>
 
 <section id="rulesize-graph" class="mb4">
-  <h1 class="mt0">Ruleset Size</h1>
+  <h1 class="h2 mt0">Ruleset Size</h1>
   {{line_graph rulesizeGraph 1152 320 }}
   <p>
     Number of declarations per ruleset
@@ -183,7 +179,7 @@
 </section>
 
 <section id="media-queries" class="mb4">
-  <h1 class="m0">
+  <h1 class="h2 m0">
     {{number stats.aggregates.mediaQueries.length }}
     Media Queries
   </h1>
@@ -196,7 +192,7 @@
   </div>
 </section>
 
-<section id="raw-css" class="mb4">
+<section id="raw-css" class="mb4 print-hide">
   <h1 class="h2">Raw CSS</h1>
   <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
 </section>

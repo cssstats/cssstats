@@ -1,0 +1,30 @@
+
+.page-break { display: none; }
+
+
+@media print {
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  section {
+    page-break-inside: avoid;
+  }
+  .print-hide { display: none !important; }
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+  .sm-right-align { text-align: right; }
+  .sm-flex { display: flex; }
+  .sm-col-3,
+  .md-col-3,
+  .lg-col-3 {
+    width: calc(3/12 * 100%);
+  }
+  .sm-col-2,
+  .md-col-2,
+  .lg-col-2 {
+    width: calc(2/12 * 100%);
+  }
+}
+
