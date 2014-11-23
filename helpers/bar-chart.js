@@ -25,9 +25,7 @@ module.exports = function(array, width, height) {
 
   array.forEach(function(y, i) {
     // Bar chart
-    //d += 'v -' + (height/vmax) * y + ' ' +'h ' + hx + ' V ' + height + ' h -' + hx +' m' + hx + ' 0 ';
-    // Line graph
-    d += 'L ' + (hx * i) + ' ' + (height - ((height/vmax) * y)) + ' ';
+    d += 'v -' + (height/vmax) * y + ' ' +'h ' + hx + ' V ' + height + ' h -' + hx +' m' + hx + ' 0 ';
   });
 
   ruleInterval = height / 4;

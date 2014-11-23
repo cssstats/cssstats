@@ -122,7 +122,7 @@
       {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
     </h2>
     {{#each uniques.fontFamily }}
-      <div class="h3 bold mb1" style="font-family:{{ this.value }}">
+      <div class="h3 bold break-word mb1" style="font-family:{{ this.value }}">
         {{ this.value }}
       </div>
     {{/each}}
@@ -132,7 +132,7 @@
 </section>
 
 <section id="unique-totals" class="mb4">
-  <h1 class="h2 mt0">Unique vs. Total Declarations</h1>
+  <h1 class="h2 mt0">Total vs. Unique Declarations</h1>
   <div class="flex flex-wrap mb4">
     <div class="col-4 md-col-3 lg-col-2 mb4 center">
       {{uniques_graph uniquesGraph.width }}
@@ -163,7 +163,7 @@
 
 <section id="specificity-graph" class="mb4">
   <h1 class="mt0">Specificity Graph</h1>
-  {{specificity_graph specificityGraph 1152 320 }}
+  {{line_graph specificityGraph 1152 320 }}
   <p>
     Specificity score for each selector plotted by source order.
     The y-axis is specificity treated as a base 10 number,
@@ -175,8 +175,8 @@
 </section>
 
 <section id="rulesize-graph" class="mb4">
-  <h1 class="mt0">Ruleset Size Graph</h1>
-  {{rulesize_graph rulesizeGraph 1152 320 }}
+  <h1 class="mt0">Ruleset Size</h1>
+  {{line_graph rulesizeGraph 1152 320 }}
   <p>
     Number of declarations per ruleset
   </p>

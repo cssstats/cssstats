@@ -26,8 +26,7 @@ app.engine('handlebars', handlebars({
     inspect: require('./helpers/inspect'),
     highlight: require('./helpers/highlight'),
     pluralize: require('./helpers/pluralize'),
-    specificity_graph: require('./helpers/specificity-graph'),
-    rulesize_graph: require('./helpers/rulesize-graph'),
+    line_graph: require('./helpers/line-graph'),
     uniques_graph: require('./helpers/uniques-graph')
   }
 }));

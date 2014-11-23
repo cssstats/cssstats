@@ -11,7 +11,7 @@ gulp.task('css', function() {
     .pipe(basswork())
     .pipe(uncss({
       html: glob.sync('./views/**/*.handlebars'),
-      ignore: []
+      ignore: require('./css/uncss-ignore')
     }))
     .pipe(minifyCss())
     .pipe(rename({ extname: '.min.css' }))
