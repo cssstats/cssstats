@@ -13,7 +13,7 @@ module.exports = function(obj, max) {
   svg = '<svg viewBox="0 0 ' + width + ' ' + (height + 2 * padY) + '" fill="currentcolor" font-weight="bold">\n' +
         '  <defs>\n' +
         '    <pattern id="hash" x="0" y="0" width="8" height="8"' +
-          ' patternContentUnits="default" patternUnits="userSpaceOnUse" patternTransform="rotate(45), scale(2)">\n' +
+          ' patternUnits="userSpaceOnUse" patternTransform="rotate(45), scale(2)">\n' +
         '      <rect width="8" height="8" fill="white"/>\n' +
         '      <path d="M0 1 H16 M0 5 H16 M0 9 H16 M0 13 H16" fill="none" stroke="currentcolor"/>\n' +
         '    </pattern>\n' +
