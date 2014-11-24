@@ -4,7 +4,7 @@ var beautify = require('cssbeautify');
 
 function parseDeclarations(declarations, indexes) {
   var array = [];
-  if (!indexes.length) return;
+  if (!indexes) return;
   indexes.forEach(function(i) {
     array.push(declarations[i]);
   });
@@ -135,12 +135,16 @@ function uniquesGraph(stats) {
   obj.max = 0;
   var keys = ['margin', 'padding', 'width', 'height', 'color', 'backgroundColor', 'float', 'display', 'position'];
   keys.forEach(function(key) {
-    if (!stats.declarations.byProperty[key]) return false;
     obj[key] = {};
-    obj[key].total = stats.declarations.byProperty[key].length;
-    obj[key].unique = stats.declarations.unique[key].length;
-    if (obj[key].total > obj.max) {
-      obj.max = obj[key].total;
+    if (!stats.declarations.byProperty[key]) {
+      obj[key].total = 0;
+      obj[key].unique = 0;
+    } else {
+      obj[key].total = stats.declarations.byProperty[key].length;
+      obj[key].unique = stats.declarations.unique[key].length;
+      if (obj[key].total > obj.max) {
+        obj.max = obj[key].total;
+      }
     }
   });
   keys.forEach(function(key) {
