@@ -9,32 +9,13 @@ http://cssstats.com
 
 Install [node.js](http://nodejs.org) and then open Terminal:
 
-    npm install -g gulp
-
 ## Project Setup
+```
+git clone git@github.com:mrmrs/cssstats.git
+cd cssstats
+npm install && npm start
+```
 
-    git clone git@github.com:mrmrs/cssstats.git
-    cd cssstats
-    npm install
-    npm start
-
-## Compiling CSS
-Make changes in the `/css` folder, then use `gulp css` to compile once or `gulp watch` to watch the css folder.
-
-# Contributing
-
-Start by checking out our current issues.
-
-* Fork the repo
-* Create a branch ```git checkout -b branch-name```
-
-* Commit your changes
-
-```git commit -am "Added some awesome stuff"```
-Push your branch ```git push origin branch-name```
-Make a pull request
-
-Hooray thanks for contributing!
 
 # License
 
