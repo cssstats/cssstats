@@ -33,7 +33,7 @@ module.exports = {
     function handleResolve(data) {
       index++;
       css += data;
-      if (index + 1 >= length) {
+      if (index >= length) {
         deferred.resolve(css);
       }
     }
