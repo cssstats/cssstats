@@ -18,7 +18,6 @@ module.exports = function(obj) {
     { name: 'Trulia', url: 'http://trulia.com' },
     { name: 'Wikipedia', url: 'http://www.wikipedia.org' },
     { name: 'Craigslist', url: 'http://newyork.craigslist.org' },
-    { name: 'Amazon', url: 'http://amazon.com' },
     { name: 'Github', url: 'http://github.com' },
     { name: 'Stack Overflow', url: 'http://stackoverflow.com' },
     { name: 'New York Times', url: 'http://nytimes.com' },
