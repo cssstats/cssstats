@@ -25,10 +25,13 @@ module.exports = function(obj) {
     { name: 'The Guardian', url: 'http://theguardian.com' },
     { name: 'Mozilla', url: 'http://mozilla.org' },
     { name: 'Flickr', url: 'http://flickr.com' },
+    { name: 'Soundcloud', url: 'http://soundcloud.com' },
     //{ name: 'Boston Globe', url: 'http://www.bostonglobe.com' },
     { name: 'BBC', url: 'http://bbc.com' },
     { name: 'Kickstarter', url: 'http://kickstarter.com' },
     { name: 'Etsy', url: 'http://etsy.com' },
+    { name: 'Mapbox', url: 'http://mapbox.com' },
+    { name: 'Grid.io', url: 'https://thegrid.io' },
     // Doesn't seem to have any server-side CSS
     //{ name: 'Squarespace', url: 'http://squarespace.com' },
     { name: 'Bootstrap', link: 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' },
