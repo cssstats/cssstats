@@ -206,19 +206,21 @@
     <ul class="list-reset">
         {{#if source.styles }}
           <li class="h5">
-            {{ source.styles.length }} style tags
+            {{ source.styles.length }} style
+            {{ pluralize source.styles.length 'tag' 'tags' }}
           </li>
         {{/if}}
         {{#if source.links }}
-          <li>
-            {{ source.links.length }} stylesheet links
+          <li class="h5">
+            {{ source.links.length }} stylesheet
+            {{ pluralize source.links.length 'link' 'links' }}
           </li>
         {{/if}}
     </ul>
     {{/if}}
   <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
   {{#if source.links }}
-    <h2 class="h2">Links to css files scraped</h2>
+    <h2 class="h4">CSS files scraped</h2>
     <p class="h5">
       {{#each source.links }}
         <a href="{{ url }}" class="break-word">
