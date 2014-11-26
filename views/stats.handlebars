@@ -4,17 +4,23 @@
 {{/if}}
 
 <header class="sm-flex flex-center py2 mb3 border-bottom">
-  <h1 class="flex-grow break-word m0" style="max-width:80%">
-    {{#if name }}
-      {{ name }}
-    {{else}}
-      {{#if link }}
-        {{ link }}
+  <div class="flex-grow break-word" style="max-width:80%">
+    <h1 class="m0" style="max-width:80%">
+      {{#if name }}
+        {{ name }}
       {{else}}
-        {{ url }}
+        {{#if source.pageTitle }}
+          {{ source.pageTitle }}
+        {{else}}
+          {{#if link }}
+            {{ link }}
+          {{else}}
+            {{ url }}
+          {{/if}}
+        {{/if}}
       {{/if}}
-    {{/if}}
-  </h1>
+    </h1>
+  </div>
   <div class="sm-right-align flex-grow">
     <h1 class="h2 m0">{{filesize stats.size }}</h1>
   </div>
@@ -193,7 +199,29 @@
 </section>
 
 <section id="raw-css" class="mb4 print-hide">
-  <h1 class="h2">Raw CSS</h1>
+  <h1 class="h2">
+    Raw CSS
+    {{#if source }}
+      <span class="h5">
+        {{#if source.styles }}
+          {{ source.styles.length }} style tags
+        {{/if}}
+        {{#if source.links }}
+          {{ source.links.length }} stylesheet links
+        {{/if}}
+      </span>
+    {{/if}}
+  </h1>
   <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
+  {{#if source.links }}
+    <p class="h5">
+      {{#each source.links }}
+        <a href="{{ url }}" class="break-word">
+          {{ url }}
+        </a> <br>
+      {{/each}}
+    </p>
+  {{/if}}
 </section>
+
 

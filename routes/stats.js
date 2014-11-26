@@ -25,9 +25,10 @@ router.get('/', function(req, res) {
       });
   } else if (model.url) {
     resource.getCssFromUrl(model.url)
-      .then(function(css) {
-        req.session.css = css;
-        model.css = css;
+      .then(function(response) {
+        req.session.css = response.css;
+        model.source = response;
+        model.css = response.css;
         model = controller(model);
         res.render('stats', model);
       })
