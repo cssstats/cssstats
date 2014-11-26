@@ -166,11 +166,7 @@ function rulesizeGraph(rules) {
 
 module.exports = function(obj) {
 
-  var model = {};
-  model.url = obj.url;
-  model.link = obj.link;
-  model.name = obj.name;
-  model.css = obj.css;
+  var model = obj;
   model.cssPretty = beautify(obj.css);
 
   model.stats = cssstats(obj.css, {
@@ -182,8 +178,6 @@ module.exports = function(obj) {
   model.uniques = parseUniques(model.stats);
   model.specificityGraph = parseSpecificity(model.stats.selectors);
   model.rulesizeGraph = rulesizeGraph(model.stats.rules);
-
-  //model.propertiesBreakdown = parsePropertiesBreakdown(model.stats);
 
   model.uniquesGraph = uniquesGraph(model.stats);
 

@@ -18,7 +18,8 @@
     "morgan": "~1.3.0",
     "q": "^1.1.1",
     "request": "^2.48.0",
-    "serve-favicon": "~2.1.3"
+    "serve-favicon": "~2.1.3",
+    "get-css": "latest"
   },
   "devDependencies": {
     "basscss-base": "0.0.24",
