@@ -23,3 +23,23 @@ hr {
   border-bottom-width: var(--border-width);
   border-bottom-color: var(--border-color);
 }
+
+.text-link,
+.text-link:link,
+.text-link:visited {
+  color: var(--dark-gray);
+  transition: color .15s ease-in;
+}
+
+.text-link:hover {
+  color: var(--mid-gray);
+  transition: color .15s ease-in;
+}
+.text-link:active {
+  color: var(--light-gray);
+  transition: color .15s ease-in;
+}
+.text-link:focus {
+  color: var(--blue);
+  transition: color .15s ease-in;
+}
