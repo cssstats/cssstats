@@ -18,6 +18,9 @@ npm install && npm start
 
 You can then open your browser to http://localhost:3000 to see it running locally
 
+## Heroku setup
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/mrmrs/cssstats)
+
 # License
 
 The MIT License (MIT)
