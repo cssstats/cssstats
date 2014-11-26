@@ -1,0 +1,6 @@
+{
+  "name": "CSS Stats",
+  "description": "Potentially interesting stats on stylesheets",
+  "repository": "https://github.com/mrmrs/cssstats",
+  "keywords": ["node", "express", "static", "css", "stats"]
+}
