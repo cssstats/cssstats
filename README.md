@@ -7,16 +7,25 @@ http://cssstats.com
 
 ## Global Dependencies
 
-Install [node.js](http://nodejs.org) and then open Terminal:
+You must have node installed to run cssstats. If you don't have node installed yet
+grab it now: [node.js](http://nodejs.org)
 
 ## Project Setup
+
+If you have git installed you can clone the repo.
+
 ```
 git clone git@github.com:mrmrs/cssstats.git
 cd cssstats
 npm install && npm start
 ```
+You can then open your browser to (http://localhost:3000) to see it running locally
 
-You can then open your browser to http://localhost:3000 to see it running locally
+If you want to edit css for your local application you can run
+```
+npm run css
+```
+This will regenerate base.min.css which is currently included in the head of the app.
 
 # License
 
