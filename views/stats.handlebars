@@ -201,19 +201,24 @@
 <section id="raw-css" class="mb4 print-hide">
   <h1 class="h2">
     Raw CSS
+  </h1>
     {{#if source }}
-      <span class="h5">
+    <ul class="list-reset">
         {{#if source.styles }}
-          {{ source.styles.length }} style tags
+          <li class="h5">
+            {{ source.styles.length }} style tags
+          </li>
         {{/if}}
         {{#if source.links }}
-          {{ source.links.length }} stylesheet links
+          <li>
+            {{ source.links.length }} stylesheet links
+          </li>
         {{/if}}
-      </span>
+    </ul>
     {{/if}}
-  </h1>
   <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
   {{#if source.links }}
+    <h2 class="h2">Links to css files scraped</h2>
     <p class="h5">
       {{#each source.links }}
         <a href="{{ url }}" class="break-word">
