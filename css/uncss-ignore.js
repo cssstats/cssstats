@@ -1,5 +1,14 @@
 
 module.exports = [
+  /^\.Chartable/g,
+  '.Chartable-label',
+  '.Chartable-rule',
+  '.Chartable-area',
+  '.Chartable-line',
+  '.Chartable-bar',
+  '.Chartable-bar:nth-child(2)',
+  '.Chartable-value',
+  '.Chartable-label--x',
   '.hljs',
   '.hljs-comment',
   '.diff',

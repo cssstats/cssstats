@@ -139,29 +139,29 @@
 <section id="unique-totals" class="mb4">
   <h1 class="h2 mt0">Total vs. Unique Declarations</h1>
   <div class="flex flex-wrap mb4">
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.width }}
-      <div class="h5 bold">Width</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.width uniquesGraph.max }}
+      <div class="h5 bold mt1">Width</div>
     </div>
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.height }}
-      <div class="h5 bold">Height</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.height uniquesGraph.max }}
+      <div class="h5 bold mt1">Height</div>
     </div>
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.margin }}
-      <div class="h5 bold">Margin</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.margin uniquesGraph.max }}
+      <div class="h5 bold mt1">Margin</div>
     </div>
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.padding }}
-      <div class="h5 bold">Padding</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.padding uniquesGraph.max }}
+      <div class="h5 bold mt1">Padding</div>
     </div>
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.color }}
-      <div class="h5 bold">Color</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.color uniquesGraph.max }}
+      <div class="h5 bold mt1">Color</div>
     </div>
-    <div class="col-4 md-col-3 lg-col-2 mb4 center">
-      {{uniques_graph uniquesGraph.backgroundColor }}
-      <div class="h5 bold">Background Color</div>
+    <div class="col-4 lg-col-2 mb4 center">
+      {{uniques_graph uniquesGraph.backgroundColor uniquesGraph.max }}
+      <div class="h5 bold mt1">Background Color</div>
     </div>
   </div>
 </section>
@@ -206,19 +206,21 @@
     <ul class="list-reset">
         {{#if source.styles }}
           <li class="h5">
-            {{ source.styles.length }} style tags
+            {{ source.styles.length }} style
+            {{ pluralize source.styles.length 'tag' 'tags' }}
           </li>
         {{/if}}
         {{#if source.links }}
-          <li>
-            {{ source.links.length }} stylesheet links
+          <li class="h5">
+            {{ source.links.length }} stylesheet
+            {{ pluralize source.links.length 'link' 'links' }}
           </li>
         {{/if}}
     </ul>
     {{/if}}
   <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
   {{#if source.links }}
-    <h2 class="h2">Links to css files scraped</h2>
+    <h2 class="h4">CSS files scraped</h2>
     <p class="h5">
       {{#each source.links }}
         <a href="{{ url }}" class="break-word">

@@ -17,6 +17,8 @@
 @import './color/borders';
 @import './color/highlight';
 
+@import './components/chartable';
+
 @import './print';
 
 :root {
@@ -29,7 +31,7 @@
   --green: #00cf26;
   --yellow: #efcc00;
 
-  --dark-gray: #334455;
+  --dark-gray: #345;
   --mid-gray: #777;
   --light-gray: #ccc;
   --lighter-gray: #eee;

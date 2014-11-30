@@ -1,0 +1,34 @@
+
+.Chartable {}
+
+.Chartable-label {
+  font-size: var(--h5);
+  color: var(--darken-4);
+}
+.Chartable-label--x {
+  font-weight: bold;
+  color: currentcolor;
+}
+
+.Chartable-rule {
+  border-color: var(--darken-2);
+}
+
+.Chartable-area {
+}
+
+.Chartable-line {
+  stroke: currentcolor;
+  stroke-width: 1px;
+  transform: translateY(0.5px);
+}
+
+.Chartable-value {
+  font-size: var(--h5);
+  font-weight: bold;
+}
+
+.Chartable-bar:nth-child(2) {
+  fill: rgba(var(--dark-gray), .75);
+}
+
