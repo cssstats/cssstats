@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 var secret = Math.random().toString(36).slice(2);
-app.use(session({ secret: secret }));
+app.use(session({ secret: secret, saveUninitialized: true, resave: true }));
 
 app.use('/', routes);
 app.use('/stats', stats);
