@@ -112,7 +112,7 @@
 <section id="unique-font-sizes" class="mb4">
   <h2>
     {{ uniques.fontSize.length }}
-    Unique Font Sizes
+    {{pluralize uniques.fontSize.length 'Unique Font Size' 'Unique Font Sizes' }}
   </h2>
   <div class="">
     {{#each uniques.fontSizeSorted }}
@@ -187,7 +187,7 @@
 <section id="media-queries" class="mb4">
   <h1 class="h2 m0">
     {{number stats.aggregates.mediaQueries.length }}
-    Media Queries
+    {{pluralize stats.aggregates.mediaQueries.length 'Media Query' 'Media Queries' }}
   </h1>
   <div class="flex flex-wrap mxn2">
     {{#each stats.aggregates.mediaQueries }}
