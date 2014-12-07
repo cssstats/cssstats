@@ -1,6 +1,8 @@
 
 var cssstats = require('css-statistics');
 var beautify = require('cssbeautify');
+var parseCSSColor = require('csscolorparser').parseCSSColor;
+var Colr = require('colr');
 
 function parseDeclarations(declarations, indexes) {
   var array = [];
@@ -9,6 +11,37 @@ function parseDeclarations(declarations, indexes) {
     array.push(declarations[i]);
   });
   return array;
+}
+
+function stripImportant(str) {
+  return str.replace(/ *!important *$/, "");
+}
+
+// Converts color property to HSL and sums the components together
+// to make a numeric value that can be compared while sorting.
+function colorPropertyToNumber(colorProperty) {
+  // Parsing will fail for keywords like inherit and transparent -
+  // default all these to black, so they will be sorted at the beginning.
+  var rgba = parseCSSColor(stripImportant(colorProperty.value)) || [0, 0, 0, 0];
+  var hsl = Colr.fromRgbArray(rgba).toHslArray();
+  var alpha = rgba[3];
+  // Hue is in degrees: 0..360
+  // Saturation and Lightness are in percentages: 1..100
+  // Alpha is a fraction: 0..1
+  return hsl[0]*100*100 + hsl[1]*100 + hsl[2] + alpha;
+}
+
+// Sorts array in-place by comparing the values transformed by given function.
+function sortBy(array, fn) {
+  return array.sort(function(aOrig, bOrig){
+    var a = fn(aOrig);
+    var b = fn(bOrig);
+    return (a > b) ? 1 : (a < b ? -1 : 0);
+  });
+}
+
+function sortColors(array) {
+  sortBy(array, colorPropertyToNumber);
 }
 
 function parseUniques(stats) {
@@ -22,7 +55,9 @@ function parseUniques(stats) {
   uniques.width = parseDeclarations(stats.declarations.all, stats.declarations.unique.width);
   uniques.height = parseDeclarations(stats.declarations.all, stats.declarations.unique.height);
   uniques.color = parseDeclarations(stats.declarations.all, stats.declarations.unique.color);
+  sortColors(uniques.color);
   uniques.backgroundColor = parseDeclarations(stats.declarations.all, stats.declarations.unique.backgroundColor);
+  sortColors(uniques.backgroundColor);
   uniques.margin = parseDeclarations(stats.declarations.all, stats.declarations.unique.margin);
   uniques.padding = parseDeclarations(stats.declarations.all, stats.declarations.unique.padding);
   uniques.borderRadius = parseDeclarations(stats.declarations.all, stats.declarations.unique.borderRadius);

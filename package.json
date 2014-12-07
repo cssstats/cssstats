@@ -7,6 +7,8 @@
     "cookie-parser": "~1.3.3",
     "css-statistics": "latest",
     "cssbeautify": "^0.3.1",
+    "csscolorparser": "^1.0.2",
+    "colr": "^1.2.1",
     "debug": "~2.0.0",
     "express": "^4.10.2",
     "express-handlebars": "^1.1.0",
