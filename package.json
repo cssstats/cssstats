@@ -7,8 +7,6 @@
     "cookie-parser": "~1.3.3",
     "css-statistics": "latest",
     "cssbeautify": "^0.3.1",
-    "csscolorparser": "^1.0.2",
-    "colr": "^1.2.1",
     "debug": "~2.0.0",
     "express": "^4.10.2",
     "express-handlebars": "^1.1.0",
@@ -21,6 +19,7 @@
     "q": "^1.1.1",
     "request": "^2.48.0",
     "serve-favicon": "~2.1.3",
+    "tinycolor1": "^1.1.0",
     "get-css": "latest",
     "chartable": "0.0.1"
   },

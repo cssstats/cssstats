@@ -1,8 +1,7 @@
 
 var cssstats = require('css-statistics');
 var beautify = require('cssbeautify');
-var parseCSSColor = require('csscolorparser').parseCSSColor;
-var Colr = require('colr');
+var tinycolor = require('tinycolor2');
 
 function parseDeclarations(declarations, indexes) {
   var array = [];
@@ -20,15 +19,14 @@ function stripImportant(str) {
 // Converts color property to HSL and sums the components together
 // to make a numeric value that can be compared while sorting.
 function colorPropertyToNumber(colorProperty) {
-  // Parsing will fail for keywords like inherit and transparent -
-  // default all these to black, so they will be sorted at the beginning.
-  var rgba = parseCSSColor(stripImportant(colorProperty.value)) || [0, 0, 0, 0];
-  var hsl = Colr.fromRgbArray(rgba).toHslArray();
-  var alpha = rgba[3];
+  // Keywords like inherit and transparent and anything not recognized
+  // will be parsed into hsl(0,0,0), which is nice as it will then sort
+  // at the beginning.
+  var color = tinycolor(stripImportant(colorProperty.value)).toHsl();
   // Hue is in degrees: 0..360
-  // Saturation and Lightness are in percentages: 1..100
+  // Saturation and Lightness are fractions: 0..1
   // Alpha is a fraction: 0..1
-  return hsl[0]*100*100 + hsl[1]*100 + hsl[2] + alpha;
+  return color.h*100*100 + color.s*100*100 + color.l*100 + color.a;
 }
 
 // Sorts array in-place by comparing the values transformed by given function.
