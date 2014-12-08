@@ -15,7 +15,7 @@ grab it now: [node.js](http://nodejs.org)
 If you have git installed you can clone the repo.
 
 ```
-git clone git@github.com:mrmrs/cssstats.git
+git clone https://github.com/mrmrs/cssstats.git
 cd cssstats
 npm install && npm start
 ```
