@@ -57,13 +57,13 @@ function parseUniques(stats, sorted) {
   uniques.margin = parseDeclarations(stats.declarations.all, stats.declarations.unique.margin);
   uniques.padding = parseDeclarations(stats.declarations.all, stats.declarations.unique.padding);
   uniques.borderRadius = parseDeclarations(stats.declarations.all, stats.declarations.unique.borderRadius);
+  uniques.fontSize = parseDeclarations(stats.declarations.all, stats.declarations.unique.fontSize);
 
   if (sorted) {
     sortColors(uniques.color);
     sortColors(uniques.backgroundColor);
+    sortFontSizes(uniques.fontSize);
   }
-
-  uniques.fontSizeSorted = sortFontSizes(stats);
 
   return uniques;
 
@@ -125,7 +125,7 @@ function fontSizeToPx(value) {
   }
 }
 
-function sortFontSizes(stats) {
+function sortFontSizes(fontSizes) {
   var sortBy = function(a, b) {
     c = fontSizeToPx(a.value);
     d = fontSizeToPx(b.value);
@@ -134,10 +134,9 @@ function sortFontSizes(stats) {
     } else {
       return 1;
     }
-  }
-  var sorted = parseDeclarations(stats.declarations.all, stats.declarations.unique.fontSize);
-  if (!sorted) return false;
-  return sorted.sort(sortBy);
+  };
+
+  return fontSizes.sort(sortBy);
 }
 
 function parsePropertiesBreakdown(stats) {

@@ -124,7 +124,7 @@
     {{pluralize uniques.fontSize.length 'Unique Font Size' 'Unique Font Sizes' }}
   </h2>
   <div class="">
-    {{#each uniques.fontSizeSorted }}
+    {{#each uniques.fontSize }}
       <div class="bold truncate mb1" style="font-size:{{ this.value }}">
         Font Size {{ this.value }}
       </div>
