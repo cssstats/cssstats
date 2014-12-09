@@ -5,7 +5,7 @@ var tinycolor = require('tinycolor2');
 
 function parseDeclarations(declarations, indexes) {
   var array = [];
-  if (!indexes) return;
+  if (!indexes) return [];
   indexes.forEach(function(i) {
     array.push(declarations[i]);
   });
