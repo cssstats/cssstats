@@ -164,6 +164,35 @@ function rulesizeGraph(rules) {
   return array;
 }
 
+function parseUtilityPotential(stats) {
+  var result = {};
+  var properties = [
+    'font',
+    'fontSize',
+    'fontWeight',
+    'fontStyle',
+    'color',
+    'backgroundColor',
+    'display',
+    'position',
+    'width',
+    'max-width',
+    'height',
+    'float',
+    'margin',
+    'padding'
+  ];
+  result.total = stats.declarations.all.length;
+  result.potential = 0;
+  var keys = Object.keys(stats.declarations.byProperty);
+  properties.forEach(function(key) {
+    if (!stats.declarations.byProperty[key]) return false;
+    result.potential += stats.declarations.byProperty[key].length;
+  });
+  result.percentage = Math.round(result.potential / result.total * 10000) / 100;
+  return result;
+}
+
 module.exports = function(obj) {
 
   var model = obj;
@@ -178,8 +207,8 @@ module.exports = function(obj) {
   model.uniques = parseUniques(model.stats);
   model.specificityGraph = parseSpecificity(model.stats.selectors);
   model.rulesizeGraph = rulesizeGraph(model.stats.rules);
-
   model.uniquesGraph = uniquesGraph(model.stats);
+  model.utilityPotential = parseUtilityPotential(model.stats);
 
   return model;
 
