@@ -42,7 +42,7 @@ function sortColors(array) {
   sortBy(array, colorPropertyToNumber);
 }
 
-function parseUniques(stats) {
+function parseUniques(stats, sorted) {
 
   if (!stats) return false;
 
@@ -53,12 +53,15 @@ function parseUniques(stats) {
   uniques.width = parseDeclarations(stats.declarations.all, stats.declarations.unique.width);
   uniques.height = parseDeclarations(stats.declarations.all, stats.declarations.unique.height);
   uniques.color = parseDeclarations(stats.declarations.all, stats.declarations.unique.color);
-  sortColors(uniques.color);
   uniques.backgroundColor = parseDeclarations(stats.declarations.all, stats.declarations.unique.backgroundColor);
-  sortColors(uniques.backgroundColor);
   uniques.margin = parseDeclarations(stats.declarations.all, stats.declarations.unique.margin);
   uniques.padding = parseDeclarations(stats.declarations.all, stats.declarations.unique.padding);
   uniques.borderRadius = parseDeclarations(stats.declarations.all, stats.declarations.unique.borderRadius);
+
+  if (sorted) {
+    sortColors(uniques.color);
+    sortColors(uniques.backgroundColor);
+  }
 
   uniques.fontSizeSorted = sortFontSizes(stats);
 
@@ -208,7 +211,7 @@ module.exports = function(obj) {
   if (!model.stats) {
     console.log('no stats');
   }
-  model.uniques = parseUniques(model.stats);
+  model.uniques = parseUniques(model.stats, model.sorted);
   model.specificityGraph = parseSpecificity(model.stats.selectors);
   model.rulesizeGraph = rulesizeGraph(model.stats.rules);
 

@@ -1,9 +1,18 @@
-
+var url = require('url');
 var express = require('express');
 var router = express.Router();
 
 var resource = require('../services/resource');
 var controller = require('../controllers/stats');
+
+function formatUrl(query, sorted) {
+  return url.format({query: {
+      url: query.url,
+      link: query.link,
+      name: query.name,
+      sorted: sorted || ""
+  }});
+}
 
 router.get('/', function(req, res) {
 
@@ -11,6 +20,10 @@ router.get('/', function(req, res) {
   model.url = req.query.url || null;
   model.link = req.query.link || null;
   model.name = req.query.name || null;
+  model.sorted = !!req.query.sorted;
+
+  model.unsortedUrl = formatUrl(req.query, false);
+  model.sortedUrl = formatUrl(req.query, true);
 
   if (model.link) {
     resource.getCssFromLink(model.link)

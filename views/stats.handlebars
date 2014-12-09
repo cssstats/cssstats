@@ -79,6 +79,15 @@
   <h2>
     {{ uniques.color.length }}
     {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
+    <span class="h5">
+      {{#if sorted}}
+        (<a href="{{ unsortedUrl }}" class="regular">source order</a> /
+        <a href="{{ sortedUrl }}" class="dark-gray">sorted</a>)
+      {{else}}
+        (<a href="{{ unsortedUrl }}" class="dark-gray">source order</a> /
+        <a href="{{ sortedUrl }}" class="regular">sorted</a>)
+      {{/if}}
+    </span>
   </h2>
   <div class="flex flex-wrap mxn2">
     {{#each uniques.color }}
