@@ -19,6 +19,12 @@ git clone git@github.com:mrmrs/cssstats.git
 cd cssstats
 npm install && npm start
 ```
+
+Note: If you do not have a github account you will need to clone the repo with the https:// url
+```
+https://github.com/mrmrs/cssstats.git
+```
+
 You can then open your browser to (http://localhost:3000) to see it running locally
 
 If you want to edit css for your local application you can run
