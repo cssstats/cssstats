@@ -1,6 +1,5 @@
 
-//var cssstats = require('css-statistics');
-var cssstats = require('../../css-statistics');
+var cssstats = require('cssstats');
 var beautify = require('cssbeautify');
 
 
@@ -154,7 +153,7 @@ module.exports = function(obj) {
   model.cssPretty = beautify(obj.css);
 
   model.stats = cssstats(obj.css, {
-    silent: true
+    safe: true
   });
   if (!model.stats) {
     console.log('no stats');
