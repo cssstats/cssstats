@@ -1,15 +1,7 @@
 
-var cssstats = require('css-statistics');
+var cssstats = require('cssstats');
 var beautify = require('cssbeautify');
 
-function parseDeclarations(declarations, indexes) {
-  var array = [];
-  if (!indexes) return;
-  indexes.forEach(function(i) {
-    array.push(declarations[i]);
-  });
-  return array;
-}
 
 function parseUniques(stats) {
 
@@ -17,15 +9,15 @@ function parseUniques(stats) {
 
   var uniques = {};
 
-  uniques.fontSize = parseDeclarations(stats.declarations.all, stats.declarations.unique.fontSize);
-  uniques.fontFamily = parseDeclarations(stats.declarations.all, stats.declarations.unique.fontFamily);
-  uniques.width = parseDeclarations(stats.declarations.all, stats.declarations.unique.width);
-  uniques.height = parseDeclarations(stats.declarations.all, stats.declarations.unique.height);
-  uniques.color = parseDeclarations(stats.declarations.all, stats.declarations.unique.color);
-  uniques.backgroundColor = parseDeclarations(stats.declarations.all, stats.declarations.unique.backgroundColor);
-  uniques.margin = parseDeclarations(stats.declarations.all, stats.declarations.unique.margin);
-  uniques.padding = parseDeclarations(stats.declarations.all, stats.declarations.unique.padding);
-  uniques.borderRadius = parseDeclarations(stats.declarations.all, stats.declarations.unique.borderRadius);
+  uniques.fontSize = stats.declarations.unique.fontSize;
+  uniques.fontFamily = stats.declarations.unique.fontFamily;
+  uniques.width = stats.declarations.unique.width;
+  uniques.height = stats.declarations.unique.height;
+  uniques.color = stats.declarations.unique.color;
+  uniques.backgroundColor = stats.declarations.unique.backgroundColor;
+  uniques.margin = stats.declarations.unique.margin;
+  uniques.padding = stats.declarations.unique.padding;
+  uniques.borderRadius = stats.declarations.unique.borderRadius;
 
   uniques.fontSizeSorted = sortFontSizes(stats);
 
@@ -37,16 +29,7 @@ function parseSpecificity(selectors) {
   if (!selectors.length) return;
   var array = [];
   selectors.forEach(function(selector) {
-    var values = selector.specificity.split(',');
-    var a = parseInt(values[0], 10) * 1000;
-    var b = parseInt(values[1], 10) * 100;
-    var c = parseInt(values[2], 10) * 10;
-    var d = parseInt(values[3], 10);
-    if (a > 10000) a = 10000;
-    if (b > 1000) b = 1000;
-    if (c > 100) c = 100;
-    if (d > 10) d = 10;
-    array.push(a + b + c + d);
+    array.push(selector.specificity_10);
   });
   return array;
 }
@@ -99,7 +82,7 @@ function sortFontSizes(stats) {
       return 1;
     }
   }
-  var sorted = parseDeclarations(stats.declarations.all, stats.declarations.unique.fontSize);
+  var sorted = stats.declarations.unique.fontSize;
   if (!sorted) return false;
   return sorted.sort(sortBy);
 }
@@ -170,7 +153,7 @@ module.exports = function(obj) {
   model.cssPretty = beautify(obj.css);
 
   model.stats = cssstats(obj.css, {
-    silent: true
+    safe: true
   });
   if (!model.stats) {
     console.log('no stats');
