@@ -12,6 +12,7 @@ router.post('/', function(req, res) {
   form.parse(req, function(error, fields, files) {
     var url = fields.url;
     req.session.css = null;
+    if (!url.match(/^(http|https)/g)) url = 'http://'+url;
     if (fields.css) {
       req.session.css = fields.css;
       res.redirect('/stats');
@@ -19,8 +20,6 @@ router.post('/', function(req, res) {
       console.log(files.file);
     } else if (url.match(/\.css/g)) {
       res.redirect('/stats?link=' + encodeURIComponent(url));
-    } else if (!url.match(/^(http|https)/g)) {
-      res.redirect('/stats?url=' + encodeURIComponent('http://' + url));
     } else {
       console.log('no match');
       res.redirect('/stats?url=' + encodeURIComponent(url));
