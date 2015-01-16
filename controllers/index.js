@@ -30,7 +30,7 @@ module.exports = function(obj) {
     { name: 'Kickstarter', url: 'http://kickstarter.com' },
     { name: 'Etsy', url: 'http://etsy.com' },
     { name: 'Mapbox', url: 'http://mapbox.com' },
-    { name: 'Grid.io', url: 'https://thegrid.io' },
+    //{ name: 'Grid.io', url: 'https://thegrid.io' },
     // Doesn't seem to have any server-side CSS
     //{ name: 'Squarespace', url: 'http://squarespace.com' },
     { name: 'Bootstrap', link: 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' },
