@@ -36,6 +36,11 @@ function parseSpecificity(selectors) {
 
 function fontSizeToPx(value) {
   var raw;
+
+  if (typeof value !== 'string') {
+    value = value.toString();
+  }
+
   raw = parseFloat(value, 10);
   if (value.match(/px$/)) {
     return raw;
@@ -167,4 +172,3 @@ module.exports = function(obj) {
   return model;
 
 };
-
