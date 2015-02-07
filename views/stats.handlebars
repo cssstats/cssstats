@@ -45,6 +45,28 @@
   </div>
 </section>
 
+<section id="selector-stats" class="mb4">
+  <h1 class="h2 m0">Selectors</h1>
+  <div class="flex flex-wrap mxn2">
+    <div class="col-6 md-col-3 p2">
+      <p class="bold lh1 m0">Ids</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.idSelectors }}</h1>
+    </div>
+    <div class="col-6 md-col-3 p2">
+      <p class="bold lh1 m0">Classes</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.classSelectors }}</h1>
+    </div>
+    <div class="col-6 md-col-3 p2">
+      <p class="bold lh1 m0">Pseudo Classes</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.pseudoClasses }}</h1>
+    </div>
+    <div class="col-6 md-col-3 p2">
+      <p class="bold lh1 m0">Pseudo Elements</p>
+      <h1 class="h0 lh1 m0">{{number stats.aggregates.pseudoElements }}</h1>
+    </div>
+  </div>
+</section>
+
 <section id="declarations" class="mb4">
   <h1 class="h2 m0">Total Declarations</h1>
   <div class="flex flex-wrap mxn2">
@@ -230,5 +252,3 @@
     </p>
   {{/if}}
 </section>
-
-
