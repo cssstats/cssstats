@@ -1,6 +1,9 @@
 
 var express = require('express');
 var formidable = require('formidable');
+var normalizeUrl = require('normalize-url');
+var isCss = require('is-css');
+
 var router = express.Router();
 
 router.get('/', function(req, res) {
@@ -10,19 +13,11 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
   var form = new formidable.IncomingForm();
   form.parse(req, function(error, fields, files) {
-    var url = fields.url;
-    req.session.css = null;
-    if (fields.css) {
-      req.session.css = fields.css;
-      res.redirect('/stats');
-    } else if (fields.file) {
-      console.log(files.file);
-    } else if (url.match(/\.css/g)) {
+    var url = normalizeUrl(fields.url);
+
+    if (isCss(url)) {
       res.redirect('/stats?link=' + encodeURIComponent(url));
-    } else if (!url.match(/^(http|https)/g)) {
-      res.redirect('/stats?url=' + encodeURIComponent('http://' + url));
     } else {
-      console.log('no match');
       res.redirect('/stats?url=' + encodeURIComponent(url));
     }
   });
