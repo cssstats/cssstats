@@ -4,6 +4,7 @@ var router = express.Router();
 
 var resource = require('../services/resource');
 var controller = require('../controllers/stats');
+var user_agents = require('../helpers/user-agents');
 
 router.get('/', function(req, res) {
 
@@ -11,7 +12,16 @@ router.get('/', function(req, res) {
   model.url = req.query.url || null;
   model.link = req.query.link || null;
   model.name = req.query.name || null;
-  model.user_agent = req.query.ua || null;
+
+  if (req.query.ua) {
+    found_agents = user_agents.filter(function (ua) {
+      return ua.name === req.query.ua;
+    });
+
+    if (found_agents.length > 0) {
+      model.user_agent = found_agents[0].user_agent;
+    }
+  }
 
   if (model.link) {
     resource.getCssFromLink(model.link)
@@ -22,7 +32,7 @@ router.get('/', function(req, res) {
         res.render('stats', model);
       })
       .catch(function(error) {
-        res.render('index', { error: error });
+        res.render('index', { error: error, user_agents: user_agents });
       });
   } else if (model.url) {
     resource.getCssFromUrl(model.url, model.user_agent)
@@ -35,6 +45,7 @@ router.get('/', function(req, res) {
       })
       .catch(function(error) {
         model.error = error;
+        model.user_agents = user_agents;
         res.render('index', model);
       });
   } else if (req.session.css) {
