@@ -3,3 +3,10 @@ input.input-big {
   height: 3.5rem;
 }
 
+select {
+  -webkit-appearance: none;
+  background: url(/svg/arrow.svg) right no-repeat;
+  background-size: 18px 18px;
+  background-position: right 13px top 14px;
+}
+

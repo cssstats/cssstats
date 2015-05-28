@@ -14,11 +14,15 @@ router.post('/', function(req, res) {
   var form = new formidable.IncomingForm();
   form.parse(req, function(error, fields, files) {
     var url = normalizeUrl(fields.url);
+    var ua = '';
+    if (fields.user_agent && fields.user_agent !== 'default') {
+      ua = '&ua=' + encodeURIComponent(fields.user_agent);
+    }
 
     if (isCss(url)) {
       res.redirect('/stats?link=' + encodeURIComponent(url));
     } else {
-      res.redirect('/stats?url=' + encodeURIComponent(url));
+      res.redirect('/stats?url=' + encodeURIComponent(url) + ua);
     }
   });
 });

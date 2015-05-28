@@ -22,6 +22,14 @@
       style="min-height:8rem"
       name="css"></textarea>
   </div>
+  <div class="mb2">
+    <label class="bold block">User Agent</label>
+    <select class="h3 block input-big full-width field-light" name="user_agent">
+      {{#each user_agents }}
+        <option value="{{ this.user_agent }}">{{ this.name }}</option>
+      {{/each}}
+    </select>
+  </div>
   <button class="h3 button-blue" type="submit">Go</button>
 </form>
 

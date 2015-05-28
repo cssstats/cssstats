@@ -22,11 +22,16 @@ module.exports = {
 
   },
 
-  getCssFromUrl: function(url) {
+  getCssFromUrl: function(url, ua) {
 
     var deferred = q.defer();
 
-    getCss(url)
+    var options;
+    if (ua) {
+      options = { headers: { 'User-Agent': ua } };
+    }
+
+    getCss(url, options)
       .then(function(response) {
         deferred.resolve(response);
       })

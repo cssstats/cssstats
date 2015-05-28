@@ -11,6 +11,7 @@ router.get('/', function(req, res) {
   model.url = req.query.url || null;
   model.link = req.query.link || null;
   model.name = req.query.name || null;
+  model.user_agent = req.query.ua || null;
 
   if (model.link) {
     resource.getCssFromLink(model.link)
@@ -24,7 +25,7 @@ router.get('/', function(req, res) {
         res.render('index', { error: error });
       });
   } else if (model.url) {
-    resource.getCssFromUrl(model.url)
+    resource.getCssFromUrl(model.url, model.user_agent)
       .then(function(response) {
         req.session.css = response.css;
         model.source = response;
