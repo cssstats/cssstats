@@ -1,4 +1,3 @@
-
 var express = require('express');
 var formidable = require('formidable');
 var normalizeUrl = require('normalize-url');
@@ -12,13 +11,19 @@ router.get('/', function(req, res) {
 
 router.post('/', function(req, res) {
   var form = new formidable.IncomingForm();
-  form.parse(req, function(error, fields, files) {
-    var url = normalizeUrl(fields.url);
+  form.parse(req, function(error, fields) {
+    if (fields.url) {
+      var url = normalizeUrl(fields.url);
 
-    if (isCss(url)) {
-      res.redirect('/stats?link=' + encodeURIComponent(url));
+      if (isCss(url)) {
+        res.redirect('/stats?link=' + encodeURIComponent(url));
+      } else {
+        res.redirect('/stats?url=' + encodeURIComponent(url));
+      }
     } else {
-      res.redirect('/stats?url=' + encodeURIComponent(url));
+      // Raw CSS was given
+      req.session.css = fields.css;
+      res.redirect('/stats');
     }
   });
 });
