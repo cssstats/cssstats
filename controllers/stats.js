@@ -157,9 +157,7 @@ module.exports = function(obj) {
   var model = obj;
   model.cssPretty = beautify(obj.css);
 
-  model.stats = cssstats(obj.css, {
-    safe: true
-  });
+  model.stats = cssstats(obj.css, { safe: true });
   if (!model.stats) {
     console.log('no stats');
   }
