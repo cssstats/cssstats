@@ -16,9 +16,9 @@ router.post('/', function(req, res) {
   var form = new formidable.IncomingForm();
   form.parse(req, function(error, fields, files) {
 
-    if (isPresent(fields.url) && isUrl(fields.url)) {
-      var url = normalizeUrl(fields.url || '');
+    var url = isPresent(fields.url) ? normalizeUrl(fields.url) : ''
 
+    if (isUrl(url)) {
       if (isCss(url)) {
         res.redirect('/stats?link=' + encodeURIComponent(url));
       } else {
