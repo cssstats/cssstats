@@ -218,7 +218,9 @@
         {{/if}}
     </ul>
     {{/if}}
-  <pre class="p2 rounded" style="max-height:50vh;overflow:auto">{{highlight cssPretty }}</pre>
+  <pre class="p2 rounded" style="max-height: 50vh; overflow: auto; -webkit-overflow-scrolling: touch;">
+    {{highlight cssPretty }}
+  </pre>
   {{#if source.links }}
     <h2 class="h4">CSS files scraped</h2>
     <p class="h5">
@@ -230,5 +232,3 @@
     </p>
   {{/if}}
 </section>
-
-
