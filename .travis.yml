@@ -1,0 +1,10 @@
+language: node_js
+sudo: false
+node_js:
+- '4.1'
+before_script:
+- npm install --quiet -g gulp
+- npm install
+- npm ls
+script:
+- npm test
