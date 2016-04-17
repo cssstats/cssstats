@@ -137,24 +137,25 @@ function parsePropertiesBreakdown(stats) {
 function uniquesGraph(stats) {
   var obj = {};
   obj.max = 0;
-  var keys = ['margin', 'padding', 'width', 'height', 'color', 'backgroundColor', 'float', 'display', 'position'];
+  var keys = ['width', 'height', 'margin', 'padding', 'color', 'background-color'];
   keys.forEach(function(key) {
-    obj[key] = {};
-    if (!stats.declarations.byProperty[key]) {
-      obj[key].total = 0;
-      obj[key].unique = 0;
+    camelKey = camelCase(key);
+    obj[camelKey] = {};
+    if (!stats.declarations.properties[key]) {
+      obj[camelKey].total = 0;
+      obj[camelKey].unique = 0;
     } else {
-      obj[key].total = stats.declarations.byProperty[key].length;
-      obj[key].unique = stats.declarations.unique[key].length;
-      if (obj[key].total > obj.max) {
-        obj.max = obj[key].total;
+      obj[camelKey].total = stats.declarations.properties[key].length;
+      obj[camelKey].unique = stats.declarations.getUniquePropertyCount(key);
+      if (obj[camelKey].total > obj.max) {
+        obj.max = obj[camelKey].total;
       }
     }
   });
   keys.forEach(function(key) {
-    if (!obj[key]) return false;
-    obj[key].percentTotal = obj[key].total / obj.max;
-    obj[key].percentUnique = obj[key].unique / obj.max;
+    if (!obj[camelKey]) return false;
+    obj[camelKey].percentTotal = obj[camelKey].total / obj.max;
+    obj[camelKey].percentUnique = obj[camelKey].unique / obj.max;
   });
   return obj;
 }
@@ -182,10 +183,10 @@ module.exports = function(obj) {
 
   model.totals = parseTotals(model.stats);
   model.uniques = parseUniques(model.stats);
+  model.uniquesGraph = uniquesGraph(model.stats);
   //model.specificityGraph = parseSpecificity(model.stats.selectors);
   //model.rulesizeGraph = rulesizeGraph(model.stats.rules);
 
-  //model.uniquesGraph = uniquesGraph(model.stats);
 
   return model;
 
