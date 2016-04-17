@@ -33,17 +33,9 @@ function parseUniques(stats) {
     uniques[camelCase(property)] = _.uniq(stats.declarations.properties[property]);
   }
 
-  //uniques.fontSize = stats.declarations.unique.fontSize;
-  //uniques.fontFamily = stats.declarations.unique.fontFamily;
-  //uniques.width = stats.declarations.unique.width;
-  //uniques.height = stats.declarations.unique.height;
-  //uniques.color = stats.declarations.unique.color;
-  //uniques.backgroundColor = stats.declarations.unique.backgroundColor;
-  //uniques.margin = stats.declarations.unique.margin;
-  //uniques.padding = stats.declarations.unique.padding;
-  //uniques.borderRadius = stats.declarations.unique.borderRadius;
-
-  //uniques.fontSizeSorted = sortFontSizes(stats);
+  uniques.fontSize = _.uniq(stats.declarations.getAllFontSizes());
+  uniques.fontFamily = _.uniq(stats.declarations.getAllFontFamilies());
+  uniques.fontSizeSorted = sortFontSizes(uniques.fontSize);
 
   return uniques;
 
@@ -101,17 +93,17 @@ function fontSizeToPx(value) {
   }
 }
 
-function sortFontSizes(stats) {
+function sortFontSizes(fontSizes) {
   var sortBy = function(a, b) {
-    c = fontSizeToPx(a.value);
-    d = fontSizeToPx(b.value);
+    c = fontSizeToPx(a);
+    d = fontSizeToPx(b);
     if (c > d) {
       return -1;
     } else {
       return 1;
     }
   }
-  var sorted = stats.declarations.unique.fontSize;
+  var sorted = fontSizes;
   if (!sorted) return false;
   return sorted.sort(sortBy);
 }

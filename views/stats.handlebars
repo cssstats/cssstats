@@ -116,8 +116,8 @@
   </h2>
   <div class="">
     {{#each uniques.fontSizeSorted }}
-      <div class="bold truncate mb1" style="font-size:{{ this.value }}">
-        Font Size {{ this.value }}
+      <div class="bold truncate mb1" style="font-size:{{ this }}">
+        Font Size {{ this }}
       </div>
     {{/each}}
   </div>
@@ -129,8 +129,8 @@
     {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
   </h2>
   {{#each uniques.fontFamily }}
-    <div class="h3 bold break-word mb1" style="font-family:{{ this.value }}">
-      {{ this.value }}
+    <div class="h3 bold break-word mb1" style="font-family:{{ this }}">
+      {{ this }}
     </div>
   {{/each}}
 </section>
