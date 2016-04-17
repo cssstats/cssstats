@@ -186,6 +186,7 @@ module.exports = function(obj) {
   model.uniquesGraph = uniquesGraph(model.stats);
   model.specificityGraph = model.stats.selectors.getSpecificityGraph();
   model.rulesizeGraph = model.stats.rules.size.graph;
+  model.mediaQueries = _.uniq(model.stats.mediaQueries.values);
 
   return model;
 

@@ -184,14 +184,13 @@
   </p>
 </section>
 
-{{!--
 <section id="media-queries" class="mb4">
   <h1 class="h2 m0">
-    {{number stats.aggregates.mediaQueries.length }}
-    {{pluralize stats.aggregates.mediaQueries.length 'Media Query' 'Media Queries' }}
+    {{number mediaQueries.length }}
+    {{pluralize mediaQueries.length 'Media Query' 'Media Queries' }}
   </h1>
   <div class="flex flex-wrap mxn2">
-    {{#each stats.aggregates.mediaQueries }}
+    {{#each mediaQueries }}
       <div class="h5 bold break-word col-6 sm-col-4 px2 mb2">
         {{ this }}
       </div>
@@ -233,4 +232,3 @@
     </p>
   {{/if}}
 </section>
---}}
