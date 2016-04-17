@@ -184,9 +184,8 @@ module.exports = function(obj) {
   model.totals = parseTotals(model.stats);
   model.uniques = parseUniques(model.stats);
   model.uniquesGraph = uniquesGraph(model.stats);
-  //model.specificityGraph = parseSpecificity(model.stats.selectors);
-  //model.rulesizeGraph = rulesizeGraph(model.stats.rules);
-
+  model.specificityGraph = model.stats.selectors.getSpecificityGraph();
+  model.rulesizeGraph = model.stats.rules.size.graph;
 
   return model;
 
