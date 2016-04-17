@@ -1,7 +1,26 @@
 
 var cssstats = require('cssstats');
 var beautify = require('cssbeautify');
+var camelCase = require('camel-case')
+var _ = require('lodash');
 
+
+function parseTotals(stats) {
+
+  if (!stats) return false;
+
+  stats.declarations.properties.total = _.size(stats.declarations.properties);
+
+  var totals = {};
+  var totalProperties = ['float', 'width', 'height', 'color', 'background-color'];
+  for(var property of totalProperties) {
+    totals[camelCase(property)] = stats.declarations.properties[property].length;
+  }
+
+  totals.fontSize = stats.declarations.getAllFontSizes().length;
+
+  return totals;
+}
 
 function parseUniques(stats) {
 
@@ -163,11 +182,13 @@ module.exports = function(obj) {
   if (!model.stats) {
     console.log('no stats');
   }
-  model.uniques = parseUniques(model.stats);
-  model.specificityGraph = parseSpecificity(model.stats.selectors);
-  model.rulesizeGraph = rulesizeGraph(model.stats.rules);
 
-  model.uniquesGraph = uniquesGraph(model.stats);
+  model.totals = parseTotals(model.stats);
+  //model.uniques = parseUniques(model.stats);
+  //model.specificityGraph = parseSpecificity(model.stats.selectors);
+  //model.rulesizeGraph = rulesizeGraph(model.stats.rules);
+
+  //model.uniquesGraph = uniquesGraph(model.stats);
 
   return model;
 

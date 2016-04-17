@@ -28,19 +28,19 @@
 
 <section id="top-stats" class="flex flex-wrap mxn2 mb4">
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.rules.length }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.rules.total }}</h1>
     <p class="h3 bold lh1 m0">Rules</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.selectors }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.selectors.total }}</h1>
     <p class="h3 bold lh1 m0">Selectors</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.declarations }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.declarations.total }}</h1>
     <p class="h3 bold lh1 m0">Declarations</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.properties.length }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.declarations.properties.total }}</h1>
     <p class="h3 bold lh1 m0">Properties</p>
   </div>
 </section>
@@ -50,27 +50,27 @@
   <div class="flex flex-wrap mxn2">
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Font Size</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.fontSize.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.fontSize }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Float</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.float.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.float }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Width</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.width.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.width }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Height</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.height.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.height }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Color</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.color.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.color }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Background Color</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.backgroundColor.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.backgroundColor }}</h1>
     </div>
   </div>
 </section>
@@ -136,6 +136,7 @@
 </section>
 
 
+{{!--
 <section id="unique-totals" class="mb4">
   <h1 class="h2 mt0">Total vs. Unique Declarations</h1>
   <div class="flex flex-wrap mb4">
@@ -232,3 +233,4 @@
     </p>
   {{/if}}
 </section>
+--}}
