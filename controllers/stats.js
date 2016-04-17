@@ -108,32 +108,6 @@ function sortFontSizes(fontSizes) {
   return sorted.sort(sortBy);
 }
 
-function parsePropertiesBreakdown(stats) {
-  if (!stats) return false;
-  var result = [];
-  var total = stats.declarations.all.length;
-  var properties = stats.aggregates.properties;
-  var otherSum = 0;
-  if (!properties.length) return false;
-  properties.forEach(function(property) {
-    var obj = {};
-    obj.property = property;
-    obj.percentage = (stats.declarations.byProperty[property].length / total * 100);
-    if (obj.percentage < 2) {
-      otherSum += obj.percentage;
-    } else {
-      result.push(obj);
-    }
-  });
-  if (!result.length) return false;
-  result = result.sort(function(a,b) { return b.percentage - a.percentage });
-  result.push({ property: 'other', percentage: otherSum });
-  result.forEach(function(property) {
-    property.percentagePretty = property.percentage.toFixed(2);
-  });
-  return result;
-}
-
 function uniquesGraph(stats) {
   var obj = {};
   obj.max = 0;
@@ -158,15 +132,6 @@ function uniquesGraph(stats) {
     obj[camelKey].percentUnique = obj[camelKey].unique / obj.max;
   });
   return obj;
-}
-
-function rulesizeGraph(rules) {
-  var array = [];
-  rules.forEach(function(rule) {
-    if (!rule.declarations) return false;
-    array.push(rule.declarations.length);
-  });
-  return array;
 }
 
 module.exports = function(obj) {
