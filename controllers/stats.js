@@ -27,18 +27,23 @@ function parseUniques(stats) {
   if (!stats) return false;
 
   var uniques = {};
+  var uniqueProperties = ['width', 'height', 'color', 'background-color',
+    'margin', 'padding', 'border-radius'];
+  for(var property of uniqueProperties) {
+    uniques[camelCase(property)] = _.uniq(stats.declarations.properties[property]);
+  }
 
-  uniques.fontSize = stats.declarations.unique.fontSize;
-  uniques.fontFamily = stats.declarations.unique.fontFamily;
-  uniques.width = stats.declarations.unique.width;
-  uniques.height = stats.declarations.unique.height;
-  uniques.color = stats.declarations.unique.color;
-  uniques.backgroundColor = stats.declarations.unique.backgroundColor;
-  uniques.margin = stats.declarations.unique.margin;
-  uniques.padding = stats.declarations.unique.padding;
-  uniques.borderRadius = stats.declarations.unique.borderRadius;
+  //uniques.fontSize = stats.declarations.unique.fontSize;
+  //uniques.fontFamily = stats.declarations.unique.fontFamily;
+  //uniques.width = stats.declarations.unique.width;
+  //uniques.height = stats.declarations.unique.height;
+  //uniques.color = stats.declarations.unique.color;
+  //uniques.backgroundColor = stats.declarations.unique.backgroundColor;
+  //uniques.margin = stats.declarations.unique.margin;
+  //uniques.padding = stats.declarations.unique.padding;
+  //uniques.borderRadius = stats.declarations.unique.borderRadius;
 
-  uniques.fontSizeSorted = sortFontSizes(stats);
+  //uniques.fontSizeSorted = sortFontSizes(stats);
 
   return uniques;
 
@@ -184,7 +189,7 @@ module.exports = function(obj) {
   }
 
   model.totals = parseTotals(model.stats);
-  //model.uniques = parseUniques(model.stats);
+  model.uniques = parseUniques(model.stats);
   //model.specificityGraph = parseSpecificity(model.stats.selectors);
   //model.rulesizeGraph = rulesizeGraph(model.stats.rules);
 
