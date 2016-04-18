@@ -135,6 +135,17 @@
   {{/each}}
 </section>
 
+<section id="unique-z-index" class="mb4">
+  <h2>
+    {{ uniques.zIndex.length }}
+    {{pluralize uniques.zIndex.length 'Unique Z Index' 'Unique Z Indicies' }}
+  </h2>
+  {{#each uniques.zIndexSorted }}
+    <div class="h3 bold break-word mb1" style="font-family:{{ this }}">
+      {{ this }}
+    </div>
+  {{/each}}
+</section>
 
 <section id="unique-totals" class="mb4">
   <h1 class="h2 mt0">Total vs. Unique Declarations</h1>
