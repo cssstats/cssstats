@@ -134,15 +134,17 @@ function uniquesGraph(stats) {
   return obj;
 }
 
-function marginResets(stats) {
-  var margin = {};
-  var marginProperties = ['margin', 'margin-top', 'margin-left',
-    'margin-right', 'margin-bottom']
-  for(var property of marginProperties) {
-    margin[camelCase(property)] = stats.declarations.getPropertyValueCount(property, '0');
+function spacingResets(stats) {
+  var spacing = {};
+  var spacingProperties = ['margin', 'margin-top', 'margin-left',
+    'margin-right', 'margin-bottom', 'padding', 'padding-top', 'padding-left',
+    'padding-bottom', 'padding-right'
+  ]
+  for(var property of spacingProperties) {
+    spacing[camelCase(property)] = stats.declarations.getPropertyValueCount(property, '0');
   }
 
-  return margin;
+  return spacing;
 }
 
 module.exports = function(obj) {
@@ -163,7 +165,7 @@ module.exports = function(obj) {
   model.specificityGraph = model.stats.selectors.getSpecificityGraph();
   model.rulesizeGraph = model.stats.rules.size.graph;
   model.mediaQueries = _.uniq(model.stats.mediaQueries.values);
-  model.marginResets = marginResets(model.stats);
+  model.spacingResets = spacingResets(model.stats);
 
   return model;
 
