@@ -134,6 +134,17 @@ function uniquesGraph(stats) {
   return obj;
 }
 
+function marginResets(stats) {
+  var margin = {};
+  var marginProperties = ['margin', 'margin-top', 'margin-left',
+    'margin-right', 'margin-bottom']
+  for(var property of marginProperties) {
+    margin[camelCase(property)] = stats.declarations.getPropertyValueCount(property, '0');
+  }
+
+  return margin;
+}
+
 module.exports = function(obj) {
 
   var model = obj;
@@ -152,6 +163,7 @@ module.exports = function(obj) {
   model.specificityGraph = model.stats.selectors.getSpecificityGraph();
   model.rulesizeGraph = model.stats.rules.size.graph;
   model.mediaQueries = _.uniq(model.stats.mediaQueries.values);
+  model.marginResets = marginResets(model.stats);
 
   return model;
 
