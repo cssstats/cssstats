@@ -28,19 +28,19 @@
 
 <section id="top-stats" class="flex flex-wrap mxn2 mb4">
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.rules.length }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.rules.total }}</h1>
     <p class="h3 bold lh1 m0">Rules</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.selectors }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.selectors.total }}</h1>
     <p class="h3 bold lh1 m0">Selectors</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.declarations }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.declarations.total }}</h1>
     <p class="h3 bold lh1 m0">Declarations</p>
   </div>
   <div class="col-6 md-col-3 p2">
-    <h1 class="h00 lh1 m0">{{number stats.aggregates.properties.length }}</h1>
+    <h1 class="h00 lh1 m0">{{number stats.declarations.properties.total }}</h1>
     <p class="h3 bold lh1 m0">Properties</p>
   </div>
 </section>
@@ -50,27 +50,27 @@
   <div class="flex flex-wrap mxn2">
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Font Size</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.fontSize.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.fontSize }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Float</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.float.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.float }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Width</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.width.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.width }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Height</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.height.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.height }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Color</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.color.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.color }}</h1>
     </div>
     <div class="col-6 sm-col-4 lg-col-2 p2">
       <p class="bold lh1 m0">Background Color</p>
-      <h1 class="h0 lh1 m0">{{number stats.aggregates.backgroundColor.total }}</h1>
+      <h1 class="h0 lh1 m0">{{number totals.backgroundColor }}</h1>
     </div>
   </div>
 </section>
@@ -78,13 +78,13 @@
 <section id="unique-colors" class="mb4">
   <h2>
     {{ uniques.color.length }}
-    {{pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
+    {{ pluralize uniques.color.length 'Unique Color' 'Unique Colors' }}
   </h2>
   <div class="flex flex-wrap mxn2">
     {{#each uniques.color }}
       <div class="col-4 sm-col-3 lg-col-2 p2">
-        <div class="h0 lh1 bold" style="color:{{ this.value }}">Aa</div>
-        <div class="h6 break-word">{{ this.value }}</div>
+        <div class="h0 lh1 bold" style="color:{{ this }}">Aa</div>
+        <div class="h6 break-word">{{ this }}</div>
       </div>
     {{/each}}
   </div>
@@ -93,17 +93,17 @@
 <section id="unique-background-colors" class="mb4">
   <h2>
     {{ uniques.backgroundColor.length }}
-    {{pluralize uniques.backgroundColor.length 'Unique Background Color' 'Unique Background Colors' }}
+    {{ pluralize uniques.backgroundColor.length 'Unique Background Color' 'Unique Background Colors' }}
   </h2>
   <div class="flex flex-wrap mxn2">
     {{#each uniques.backgroundColor }}
       <div class="col-4 sm-col-3 lg-col-2 p2">
         <div class="mb1">
           <svg viewBox="0 0 64 64" width="64" height="64" style="display:block;width:100%;height:auto">
-            <rect width="64" height="64" fill="{{ this.value }}"/>
+            <rect width="64" height="64" fill="{{ this }}"/>
           </svg>
         </div>
-        <div class="h6 break-word">{{ this.value }}</div>
+        <div class="h6 break-word">{{ this }}</div>
       </div>
     {{/each}}
   </div>
@@ -116,8 +116,8 @@
   </h2>
   <div class="">
     {{#each uniques.fontSizeSorted }}
-      <div class="bold truncate mb1" style="font-size:{{ this.value }}">
-        Font Size {{ this.value }}
+      <div class="bold truncate mb1" style="font-size:{{ this }}">
+        Font Size {{ this }}
       </div>
     {{/each}}
   </div>
@@ -129,8 +129,8 @@
     {{pluralize uniques.fontFamily.length 'Unique Font Family' 'Unique Font Families' }}
   </h2>
   {{#each uniques.fontFamily }}
-    <div class="h3 bold break-word mb1" style="font-family:{{ this.value }}">
-      {{ this.value }}
+    <div class="h3 bold break-word mb1" style="font-family:{{ this }}">
+      {{ this }}
     </div>
   {{/each}}
 </section>
@@ -186,11 +186,11 @@
 
 <section id="media-queries" class="mb4">
   <h1 class="h2 m0">
-    {{number stats.aggregates.mediaQueries.length }}
-    {{pluralize stats.aggregates.mediaQueries.length 'Media Query' 'Media Queries' }}
+    {{number mediaQueries.length }}
+    {{pluralize mediaQueries.length 'Media Query' 'Media Queries' }}
   </h1>
   <div class="flex flex-wrap mxn2">
-    {{#each stats.aggregates.mediaQueries }}
+    {{#each mediaQueries }}
       <div class="h5 bold break-word col-6 sm-col-4 px2 mb2">
         {{ this }}
       </div>
