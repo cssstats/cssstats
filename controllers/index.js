@@ -1,3 +1,4 @@
+var user_agents = require('../helpers/user-agents');
 
 module.exports = function(obj) {
 
@@ -41,6 +42,8 @@ module.exports = function(obj) {
     { name: 'Basscss', link: 'http://d2v52k3cl9vedd.cloudfront.net/basscss/4.1.4/basscss.min.css' },
     { name: 'Tachyons', link: 'http://tachyons.io/css/tachyons.min.css' }
   ];
+
+  this.user_agents = user_agents;
 
   return this;
 

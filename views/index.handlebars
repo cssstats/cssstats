@@ -15,6 +15,14 @@
       pattern="[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"
       autofocus>
   </div>
+  <div class="mb3">
+    <label class="bold block">User Agent</label>
+    <select class="h3 block input-big full-width field-light" name="user_agent">
+      {{#each user_agents }}
+        <option>{{ this.name }}</option>
+      {{/each}}
+    </select>
+  </div>
   <button class="h3 button-blue" type="submit">Go</button>
 </form>
 

@@ -17,12 +17,16 @@ router.post('/', function(req, res) {
   form.parse(req, function(error, fields, files) {
 
     var url = isPresent(fields.url) ? normalizeUrl(fields.url, { stripWWW: false }) : ''
+    var ua = '';
+    if (fields.user_agent && fields.user_agent !== 'default') {
+      ua = '&ua=' + encodeURIComponent(fields.user_agent);
+    }
 
     if (isUrl(url)) {
       if (isCss(url)) {
         res.redirect('/stats?link=' + encodeURIComponent(url));
       } else {
-        res.redirect('/stats?url=' + encodeURIComponent(url));
+        res.redirect('/stats?url=' + encodeURIComponent(url) + ua);
       }
     } else {
       res.render('index', { error: 'Please provide a valid url' });
