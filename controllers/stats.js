@@ -141,6 +141,19 @@ function uniquesGraph(stats) {
   return obj;
 }
 
+function spacingResets(stats) {
+  var spacing = {};
+  var spacingProperties = ['margin', 'margin-top', 'margin-left',
+    'margin-right', 'margin-bottom', 'padding', 'padding-top', 'padding-left',
+    'padding-bottom', 'padding-right'
+  ]
+  for(var property of spacingProperties) {
+    spacing[camelCase(property)] = stats.declarations.getPropertyValueCount(property, '0');
+  }
+
+  return spacing;
+}
+
 module.exports = function(obj) {
 
   var model = obj;
@@ -159,6 +172,7 @@ module.exports = function(obj) {
   model.specificityGraph = model.stats.selectors.getSpecificityGraph();
   model.rulesizeGraph = model.stats.rules.size.graph;
   model.mediaQueries = _.uniq(model.stats.mediaQueries.values);
+  model.spacingResets = spacingResets(model.stats);
 
   return model;
 
