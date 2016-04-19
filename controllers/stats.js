@@ -28,7 +28,7 @@ function parseUniques(stats) {
 
   var uniques = {};
   var uniqueProperties = ['width', 'height', 'color', 'background-color',
-    'margin', 'padding', 'border-radius'];
+    'margin', 'padding', 'border-radius', 'z-index'];
   for(var property of uniqueProperties) {
     uniques[camelCase(property)] = _.uniq(stats.declarations.properties[property]);
   }
@@ -36,6 +36,7 @@ function parseUniques(stats) {
   uniques.fontSize = _.uniq(stats.declarations.getAllFontSizes());
   uniques.fontFamily = _.uniq(stats.declarations.getAllFontFamilies());
   uniques.fontSizeSorted = sortFontSizes(uniques.fontSize);
+  uniques.zIndexSorted = sortZIndicies(uniques.zIndex);
 
   return uniques;
 
@@ -106,6 +107,12 @@ function sortFontSizes(fontSizes) {
   var sorted = fontSizes;
   if (!sorted) return false;
   return sorted.sort(sortBy);
+}
+
+function sortZIndicies(zIndicies) {
+  var sorted = zIndicies;
+  if (!sorted) return false;
+  return sorted.sort(function(a, b) { return a - b; });
 }
 
 function uniquesGraph(stats) {
