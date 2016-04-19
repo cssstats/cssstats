@@ -15,14 +15,14 @@ grab it now: [node.js](http://nodejs.org)
 If you have git installed you can clone the repo.
 
 ```
-git clone git@github.com:mrmrs/cssstats.git
+git clone git@github.com:cssstats/cssstats.git
 cd cssstats
 npm install && npm start
 ```
 
 Note: If you do not have a github account you will need to clone the repo with the https:// url
 ```
-https://github.com/mrmrs/cssstats.git
+https://github.com/cssstats/cssstats.git
 ```
 
 You can then open your browser to (http://localhost:3000) to see it running locally
@@ -56,4 +56,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
