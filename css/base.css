@@ -23,7 +23,7 @@
 
 :root {
 
-  --font-family: 'San Francisco Display', 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family: '-apple-system', BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
   --container-width: 72em;
 
   --blue: #0076df;
@@ -46,4 +46,3 @@
   --border-radius: 3px;
 
 }
-
