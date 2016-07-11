@@ -14,7 +14,8 @@ function parseTotals(stats) {
   var totals = {};
   var totalProperties = ['float', 'width', 'height', 'color', 'background-color'];
   for(var property of totalProperties) {
-    totals[camelCase(property)] = stats.declarations.properties[property].length;
+    var prop = stats.declarations.properties[property];
+    totals[camelCase(property)] = prop ? prop.length : 0;
   }
 
   totals.fontSize = stats.declarations.getAllFontSizes().length;
