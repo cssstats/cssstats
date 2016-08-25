@@ -4,6 +4,7 @@ var fs = require('fs');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var compression = require('compression');
 
 var handlebars = require('express-handlebars');
 var session = require('express-session');
@@ -13,6 +14,8 @@ var stats = require('./routes/stats');
 var parse = require('./routes/parse');
 
 var app = express();
+
+app.use(compression());
 
 // view engine setup
 app.engine('handlebars', handlebars({
