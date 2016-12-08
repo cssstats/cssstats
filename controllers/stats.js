@@ -37,7 +37,7 @@ function parseUniques(stats) {
   uniques.fontSize = _.uniq(stats.declarations.getAllFontSizes());
   uniques.fontFamily = _.uniq(stats.declarations.getAllFontFamilies());
   uniques.fontSizeSorted = sortFontSizes(uniques.fontSize);
-  uniques.zIndexSorted = sortZIndicies(uniques.zIndex);
+  uniques.zIndexSorted = sortZIndices(uniques.zIndex);
 
   return uniques;
 
@@ -110,8 +110,8 @@ function sortFontSizes(fontSizes) {
   return sorted.sort(sortBy);
 }
 
-function sortZIndicies(zIndicies) {
-  var sorted = zIndicies;
+function sortZIndices(zIndices) {
+  var sorted = zIndices;
   if (!sorted) return false;
   return sorted.sort(function(a, b) { return a - b; });
 }
