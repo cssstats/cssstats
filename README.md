@@ -33,6 +33,19 @@ npm run css
 ```
 This will regenerate base.min.css which is currently included in the head of the app.
 
+# Running in Docker
+Build the image with a name:
+```
+docker build -t my-cssstats-image .
+```
+
+Then run:
+```
+docker run -d -p 3000:3000 my-cssstats-image
+```
+
+Now you can access it on http://localhost:3000 .
+
 # License
 
 The MIT License (MIT)
