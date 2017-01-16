@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var compression = require('compression');
+var debug = require('debug')('exp-test');
 
 var handlebars = require('express-handlebars');
 var session = require('express-session');
@@ -35,6 +36,9 @@ app.engine('handlebars', handlebars({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 
+// Custom sets
+app.set('port', process.env.PORT || 3000);
+app.set('timeout', process.env.TIMEOUT || 5000);
 
 app.use(favicon(__dirname + '/public/favicon.png'));
 app.use(logger('dev'));
@@ -83,6 +87,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
 
 module.exports = app;
-

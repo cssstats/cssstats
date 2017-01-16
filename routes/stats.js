@@ -1,4 +1,3 @@
-
 var express = require('express');
 var router = express.Router();
 
@@ -35,7 +34,10 @@ router.get('/', function(req, res) {
         res.render('index', { error: error, user_agents: user_agents });
       });
   } else if (model.url) {
-    resource.getCssFromUrl(model.url, model.user_agent)
+    
+    var timeout = parseInt(req.query.timeout, 10) || 5000;
+
+    resource.getCssFromUrl(model.url, model.user_agent, timeout)
       .then(function(response) {
         req.session.css = response.css;
         model.source = response;
@@ -59,4 +61,3 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
-

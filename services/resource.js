@@ -22,7 +22,7 @@ module.exports = {
 
   },
 
-  getCssFromUrl: function(url, ua) {
+  getCssFromUrl: function(url, ua, timeout) {
 
     var deferred = q.defer();
 
@@ -30,6 +30,8 @@ module.exports = {
     if (ua) {
       options = { headers: { 'User-Agent': ua } };
     }
+
+    options.timeout = timeout;
 
     getCss(url, options)
       .then(function(response) {
@@ -44,4 +46,3 @@ module.exports = {
   }
 
 };
-
