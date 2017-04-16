@@ -155,6 +155,12 @@ function spacingResets(stats) {
   return spacing;
 }
 
+function propertyResets(stats, property) {
+  return stats.declarations.byProperty[property].filter(function(declaration) {
+    return declaration.value.match(/^(0\w* ?)+$/);
+  }).length;
+}
+
 module.exports = function(obj) {
 
   var model = obj;
@@ -174,6 +180,11 @@ module.exports = function(obj) {
   model.rulesizeGraph = model.stats.rules.size.graph;
   model.mediaQueries = _.uniq(model.stats.mediaQueries.values);
   model.spacingResets = spacingResets(model.stats);
+
+  model.propertyResets = {
+    margin: propertyResets(model.stats, 'margin'),
+    padding: propertyResets(model.stats, 'padding')
+  };
 
   return model;
 
