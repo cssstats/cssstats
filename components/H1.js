@@ -1,0 +1,18 @@
+import styled from 'styled-components'
+import { space, fontSize, width, color, borderColor } from 'styled-system'
+
+const H1 = styled('h1')(
+  [],
+  props => ({}),
+  space,
+  fontSize,
+  width,
+  color,
+  borderColor
+)
+
+H1.defaultProps = {
+  borderColor: 'black'
+}
+
+export default H1
