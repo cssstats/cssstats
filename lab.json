@@ -214,7 +214,7 @@
         "Flex",
         "Link"
       ],
-      "jsx": "<Flex\n  alignItems='center'\n  justify='space-between'\n>\n  <Link\n    href='/'\n    fontSize={3}\n    fontWeight='bold'\n    color='black'\n    children='Css Stats'\n  />\n  \n  <Link\n    fontWeight='bold'\n    color='black'\n    href='https://github.com/cssstats/cssstats'\n    children='GitHub'\n  />\n</Flex>",
+      "jsx": "<Flex\n  py={2}\n  alignItems='center'\n  justify='space-between'\n>\n  <Link\n    href='/'\n    fontSize={3}\n    fontWeight='bold'\n    color='black'\n    children='Css Stats'\n  />\n  \n  <Link\n    fontWeight='bold'\n    color='black'\n    href='https://github.com/cssstats/cssstats'\n    children='GitHub'\n  />\n</Flex>",
       "examples": [
         "<Header />"
       ],
@@ -228,7 +228,7 @@
         "Div",
         "Hr"
       ],
-      "jsx": "<footer>\n  <Hr />\n  <Flex\n    w={1}\n    alignItems='center'\n    justify='space-between'\n  />\n    <Div w={[1, 1/2]}>\n      Made by\n      <Link\n        ml={2}\n        fontWeight={600}\n        color='black'\n        children='@mrmrs'\n      />, <Link\n        fontWeight={600}\n        color='black'\n        children='@jxnblk'\n      /> & <Link\n        fontWeight={600}\n        color='black'\n        children='@4lpine'\n      />\n    </Div>\n    <Div w={[1, 1/3]}>\n      <Link\n        fontWeight={600}\n        color='black'\n        children='Issues'\n      />\n      <Link\n        ml={2}\n        fontWeight={600}\n        color='black'\n        children='GitHub'\n      />\n    </Div>\n</footer>",
+      "jsx": "<Div>\n  <Hr />\n  <Flex\n    py={3}\n    alignItems='center'\n    justify='space-between'\n  >\n    <Div>\n      Made by\n      <Link\n        href='https://compositor.io'\n        ml={1}\n        fontWeight='bold'\n        color='black'\n        children='compositor.io'\n      />\n    </Div>\n    <Link\n      fontWeight='bold'\n      color='black'\n      href='https://github.com/cssstats/cssstats'\n      children='GitHub'\n    />\n  </Flex>\n</Div>",
       "examples": [
         "<Footer />"
       ],
@@ -252,6 +252,22 @@
       "jsx": "<Flex\n  wrap='wrap'\n  children={props.links.map(link =>\n    <Flex\n      p={2}\n      w={[1/2, 1/3, 1/6]}\n    >\n      <Link\n        fontWeight={600}\n        display='block'\n        href={link.href}\n        title={link.name}\n        children={link.name}\n      />\n    </Flex>\n  )}\n/>",
       "examples": [
         "<LinkBox\n  links={[\n    {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n        {\n      href: '#!',\n      name: 'Foo'\n    },\n  ]}\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Container",
+      "type": "Font",
+      "props": {
+        "px": 1
+      },
+      "style": {
+        "maxWidth": "72rem",
+        "marginLeft": "auto",
+        "marginRight": "auto"
+      },
+      "examples": [
+        "<Container />"
       ],
       "system": []
     }

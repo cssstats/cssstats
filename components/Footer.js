@@ -5,20 +5,27 @@ import Div from './Div'
 import Hr from './Hr'
 
 const Footer = props => (
-  <footer>
+  <Div>
     <Hr />
-    <Flex w={1} alignItems="center" justify="space-between" />
-    <Div w={[1, 1 / 2]}>
-      Made by
-      <Link ml={2} fontWeight={600} color="black" children="@mrmrs" />,{' '}
-      <Link fontWeight={600} color="black" children="@jxnblk" /> &{' '}
-      <Link fontWeight={600} color="black" children="@4lpine" />
-    </Div>
-    <Div w={[1, 1 / 3]}>
-      <Link fontWeight={600} color="black" children="Issues" />
-      <Link ml={2} fontWeight={600} color="black" children="GitHub" />
-    </Div>
-  </footer>
+    <Flex py={3} alignItems="center" justify="space-between">
+      <Div>
+        Made by
+        <Link
+          href="https://compositor.io"
+          ml={1}
+          fontWeight="bold"
+          color="black"
+          children="compositor.io"
+        />
+      </Div>
+      <Link
+        fontWeight="bold"
+        color="black"
+        href="https://github.com/cssstats/cssstats"
+        children="GitHub"
+      />
+    </Flex>
+  </Div>
 )
 
 export default Footer

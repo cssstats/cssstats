@@ -3,7 +3,7 @@ import Flex from './Flex'
 import Link from './Link'
 
 const Header = props => (
-  <Flex alignItems="center" justify="space-between">
+  <Flex py={2} alignItems="center" justify="space-between">
     <Link
       href="/"
       fontSize={3}
