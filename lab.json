@@ -1,0 +1,162 @@
+{
+  "name": "cssstats",
+  "library": "styled-components",
+  "components": [
+    {
+      "name": "Button",
+      "type": "button",
+      "props": {
+        "fontSize": 1,
+        "color": "white",
+        "bg": "blue",
+        "px": 3,
+        "py": 2,
+        "hover": {
+          "backgroundColor": "gray"
+        },
+        "focus": {
+          "backgroundColor": "gray"
+        }
+      },
+      "style": {
+        "display": "inline-block",
+        "fontFamily": "inherit",
+        "borderWidth": 0,
+        "borderRadius": "4px",
+        "appearance": "none"
+      },
+      "examples": [
+        "<Button children='Click me' />"
+      ],
+      "system": [
+        "hover",
+        "focus"
+      ]
+    },
+    {
+      "name": "Divider",
+      "type": "hr",
+      "props": {
+        "borderColor": "black",
+        "borderWidth": 1
+      },
+      "style": {},
+      "examples": [
+        "<Divider />"
+      ],
+      "system": [
+        "borderColor",
+        "borderWidth"
+      ]
+    },
+    {
+      "name": "Link",
+      "type": "a",
+      "props": {
+        "color": "blue",
+        "display": "inline",
+        "href": "#!"
+      },
+      "style": {
+        "display": "${props.display}",
+        "textDecoration": "none"
+      },
+      "examples": [
+        "<Link children='Click me' />"
+      ],
+      "system": []
+    },
+    {
+      "name": "Flex",
+      "type": "div",
+      "props": {
+        "flex": "initial",
+        "alignContent": "initial",
+        "alignItems": "initial",
+        "alignSelf": "initial",
+        "basis": "initial",
+        "direction": "initial",
+        "flow": "initial",
+        "grow": "initial",
+        "shrink": "initial",
+        "wrap": "initial",
+        "justify": "initial",
+        "order": "initial"
+      },
+      "style": {
+        "display": "flex",
+        "flex": "${props.flex}",
+        "alignContent": "${props.alignContent}",
+        "alignItems": "${props.alignItems}",
+        "alignSelf": "${props.self}",
+        "flexBasis": "${props.basis}",
+        "flexDirection": "${props.direction}",
+        "flexFlow": "${props.flow}",
+        "flexGrow": "${props.grow}",
+        "flexShrink": "${props.shrink}",
+        "flexWrap": "${props.wrap}",
+        "justifyContent": "${props.justify}",
+        "order": "${props.order}"
+      },
+      "examples": [
+        "<Flex\n  f={6}\n  p={4}\n  mb={2}\n  bg='black'\n  color='white'\n  justify='space-around'\n>\n  <Flex children='<Flex />' />\n</Flex>",
+        "<Flex\n  p={4}\n  mb={2}\n  bg='black'\n  justify='space-between'\n>\n  <Flex bg='white' p={4} w={1/4} />\n  <Flex bg='white' p={4} w={1/4} />\n</Flex>",
+        "<Flex\n  p={4}\n  mb={2}\n  bg='black'\n  justify='flex-end'\n>\n  <Flex bg='white' mr={2}p={4} w={1/4} />\n  <Flex bg='white' p={4} w={1/4} />\n</Flex>",
+        "<Flex\n  p={4}\n  mb={2}\n  bg='black'\n  justify='flex-start'\n>\n  <Flex bg='white' mr={2}p={4} w={1/4} />\n  <Flex bg='white' p={4} w={1/4} />\n</Flex>",
+        "<Flex\n  p={4}\n  mb={2}\n  bg='black'\n>\n  <Flex bg='gray' grow={1} mr={2}p={4} w={1/4} />\n  <Flex bg='white' p={4} w={1/4} />\n</Flex>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Input",
+      "type": "input",
+      "props": {
+        "m": 0,
+        "w": 1,
+        "color": "inherit",
+        "bg": "transparent",
+        "placeholder": "Input a url",
+        "borderColor": "black",
+        "borderWidth": 1,
+        "focus": {
+          "borderColor": "blue"
+        },
+        "active": {
+          "borderColor": "blue"
+        },
+        "py": 3,
+        "pl": 3
+      },
+      "style": {
+        "display": "block",
+        "fontFamily": "inherit",
+        "fontSize": "inherit",
+        "borderRadius": "4px"
+      },
+      "examples": [
+        "<Input />"
+      ],
+      "system": [
+        "borderColor",
+        "borderWidth",
+        "focus",
+        "active"
+      ]
+    },
+    {
+      "name": "Font",
+      "type": "div",
+      "props": {
+        "fontFamily": "-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif"
+      },
+      "style": {
+        "fontFamily": "${props.mono ? 'monospace' : props.fontFamily}"
+      },
+      "examples": [
+        "<Font>Hello</Font>",
+        "<Font mono>Hello</Font>"
+      ],
+      "system": []
+    }
+  ]
+}

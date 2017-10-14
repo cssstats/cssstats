@@ -1,43 +1,14 @@
 # CSS Stats
+
 Potentially interesting stats on stylesheets
 
-http://cssstats.com
+https://cssstats.com
 
-# Local Dev
-
-## Global Dependencies
-
-You must have node installed to run cssstats. If you don't have node installed yet
-grab it now: [node.js](http://nodejs.org)
-
-## Project Setup
-
-If you have git installed you can clone the repo.
-
-```
-git clone git@github.com:cssstats/cssstats.git
-cd cssstats
-npm install && npm start
-```
-
-Note: If you do not have a github account you will need to clone the repo with the https:// url
-```
-https://github.com/cssstats/cssstats.git
-```
-
-You can then open your browser to (http://localhost:3000) to see it running locally
-
-If you want to edit css for your local application you can run
-```
-npm run css
-```
-This will regenerate base.min.css which is currently included in the head of the app.
-
-# License
+## License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @mrmrs & @jxnblk
+Copyright (c) 2017 compositor.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
