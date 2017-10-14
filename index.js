@@ -17,10 +17,6 @@ app
     router.get('*', (req, res) => {
       handle(req, res, parse(req.url, true))
     })
-
-    router.get('/', (req, res) => {
-      app.render(req, res, '/', req.query)
-    })
   })
 
 module.exports = (req, res) => {
