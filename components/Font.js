@@ -1,0 +1,19 @@
+import styled from 'styled-components'
+import { space, fontSize, width, color } from 'styled-system'
+
+const Font = styled('div')(
+  [],
+  props => ({
+    fontFamily: `${props.mono ? 'monospace' : props.fontFamily}`
+  }),
+  space,
+  fontSize,
+  width,
+  color
+)
+
+Font.defaultProps = {
+  fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif'
+}
+
+export default Font
