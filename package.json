@@ -1,50 +1,21 @@
 {
-  "name": "rprtr",
+  "name": "cssstats-app",
   "version": "1.0.0",
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "camel-case": "^3.0.0",
-    "chartable": "0.0.1",
-    "cheerio": "^0.22.0",
-    "compression": "^1.6.2",
-    "cookie-parser": "~1.4.3",
-    "cssbeautify": "^0.3.1",
-    "cssstats": "^3.0.0-beta.2",
-    "debug": "~2.2.0",
-    "express": "^4.14.0",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.14.1",
-    "formidable": "^1.0.17",
-    "get-css": "latest",
-    "handlebars": "^4.0.5",
-    "highlight.js": "^9.7.0",
-    "humanize-plus": "^1.8.2",
-    "is-css": "^1.0.0",
-    "is-present": "1.0.0",
-    "is-url": "^1.2.2",
-    "morgan": "~1.7.0",
-    "normalize-url": "^1.6.1",
-    "q": "^1.4.1",
-    "request": "^2.75.0",
-    "serve-favicon": "~2.3.0"
-  },
-  "devDependencies": {
-    "basscss-base": "0.0.27",
-    "basscss-grid": "2.0.0",
-    "basscss-ui-utilities": "0.0.3",
-    "basscss-utilities": "0.0.21",
-    "flex-object": "2.0.5",
-    "glob": "^7.1.1",
-    "gulp": "^3.9.1",
-    "gulp-basswork": "0.2.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-uncss": "^1.0.6",
-    "inline-source-cli": "^1.1.1"
+    "cssstats": "^3.1.0",
+    "finalhandler": "^1.1.0",
+    "get-css": "^1.2.5",
+    "micro": "^9.0.0",
+    "router": "^1.3.2",
+    "styled-components": "^2.2.1",
+    "styled-system": "^1.0.7"
   },
   "scripts": {
-    "start": "node ./bin/www",
-    "css": "gulp css && inline-source views/layouts/application.handlebars.src > views/layouts/application.handlebars"
+    "start": "micro",
+    "dev": "micro-dev"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "micro-dev": "^1.2.3"
+  }
 }
