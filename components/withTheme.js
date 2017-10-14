@@ -1,20 +1,18 @@
-const React = require('react')
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-const {
-  ThemeProvider
-} = require('styled-system')
+import theme from '../theme.json'
+import Font from './Font'
 
-const theme = require('../theme.json')
-const Font = require('./Font')
-
-class Theme extends React.Component {
-  render () {
-    <ThemeProvider theme={theme}>
-      <Font>
-        <Component {...this.props} />
-      </Font>
-    </ThemeProvider>
+export default Component =>
+  class Theme extends React.Component {
+    render () {
+      return (
+        <ThemeProvider theme={theme}>
+          <Font>
+            <Component {...this.props} />
+          </Font>
+        </ThemeProvider>
+      )
+    }
   }
-}
-
-module.exports = Component => Theme
