@@ -6,7 +6,8 @@
       "name": "Font",
       "type": "div",
       "props": {
-        "fontFamily": "-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif"
+        "fontFamily": "-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif",
+        "color": "black"
       },
       "style": {
         "fontFamily": "${props.mono ? 'monospace' : props.fontFamily}"
@@ -21,7 +22,8 @@
       "name": "H1",
       "type": "h1",
       "props": {
-        "borderColor": "black"
+        "borderColor": "transparent",
+        "color": "black"
       },
       "style": {},
       "examples": [
@@ -34,11 +36,14 @@
     {
       "name": "H2",
       "type": "h2",
-      "props": {},
+      "props": {
+        "color": "black"
+      },
       "style": {},
       "examples": [
         "<H2>Hello</H2>"
-      ]
+      ],
+      "system": []
     },
     {
       "name": "Button",
