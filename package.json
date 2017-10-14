@@ -19,11 +19,7 @@
   },
   "scripts": {
     "build": "next build",
-    "dev": "micro -p 3001",
     "start": "micro"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "micro-dev": "^1.2.3"
-  }
+  "license": "MIT"
 }

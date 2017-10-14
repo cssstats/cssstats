@@ -13,7 +13,9 @@ const Font = styled('div')(
 )
 
 Font.defaultProps = {
-  fontFamily: '-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif'
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif',
+  color: 'black'
 }
 
 export default Font

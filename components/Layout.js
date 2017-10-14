@@ -1,12 +1,15 @@
 import React from 'react'
 
-import Div from './Div'
 import Header from './Header'
 import Footer from './Footer'
+import Container from './Container'
 
 export default ({ children }) =>
-  <Div>
+  <Container>
     <Header />
-    {children}
+    <Container
+      py={3}
+      children={children}
+    />
     <Footer />
-  </Div>
+  </Container>
