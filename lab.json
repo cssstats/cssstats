@@ -271,6 +271,71 @@
         "<Container />"
       ],
       "system": []
+    },
+    {
+      "name": "Dl",
+      "type": "dl",
+      "props": {},
+      "style": {},
+      "examples": [
+        "<Dl></Dl>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Dt",
+      "type": "dt",
+      "props": {
+        "fontWeight": "bold"
+      },
+      "style": {},
+      "examples": [
+        "<Dt>Hello</Dt>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "Dd",
+      "type": "dd",
+      "props": {
+        "ml": 0,
+        "fontWeight": "normal"
+      },
+      "style": {},
+      "examples": [
+        "<Dd>Hello</Dd>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
+      "name": "SlabStat",
+      "imports": [
+        "Dl",
+        "Dt",
+        "Dd"
+      ],
+      "jsx": "<Dl>\n  <Dt\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
+      "examples": [
+        "<SlabStat\n  title='Heights'\n  stat='80'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "GiantSlabStat",
+      "imports": [
+        "Dl",
+        "Dt",
+        "Dd"
+      ],
+      "jsx": "<Dl>\n  <Dt\n    f={3}\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
+      "examples": [
+        "<GiantSlabStat\n  title='Heights'\n  stat='80'\n/>"
+      ],
+      "system": []
     }
   ]
 }
