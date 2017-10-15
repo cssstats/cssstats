@@ -46,6 +46,20 @@
       "system": []
     },
     {
+      "name": "Text",
+      "type": "div",
+      "props": {
+        "fontWeight": "normal"
+      },
+      "style": {},
+      "examples": [
+        "<Text>Hello</Text>"
+      ],
+      "system": [
+        "fontWeight"
+      ]
+    },
+    {
       "name": "Button",
       "type": "button",
       "props": {
@@ -334,6 +348,61 @@
       "jsx": "<Dl>\n  <Dt\n    f={3}\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
       "examples": [
         "<GiantSlabStat\n  title='Heights'\n  stat='80'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Color",
+      "imports": [
+        "Div",
+        "Text"
+      ],
+      "jsx": "<Div>\n  <Text\n    f={7}\n    fontWeight='bold'\n    children='Aa'\n    style={{\n      color: props.color\n    }}\n  />\n  <Text\n    f={1}\n    children={props.color}\n  />\n</Div>",
+      "examples": [
+        "<Color color='tomato' />"
+      ],
+      "system": []
+    },
+    {
+      "name": "BackgroundColor",
+      "imports": [
+        "Div",
+        "Text"
+      ],
+      "jsx": "<Div>\n  <svg\n    viewBox=\"0 0 64 64\"\n    width=\"64\"\n    height=\"64\"\n    style={{\n      display: 'block',\n      width: '100%',\n      height: 'auto'\n    }}\n  >\n    <rect width=\"64\" height=\"64\" fill={props.color}></rect>\n  </svg>\n\n  <Text\n    f={1}\n    children={props.color}\n  />\n</Div>",
+      "examples": [
+        "<BackgroundColor\n  color='tomato'\n/>"
+      ],
+      "system": []
+    },
+    {
+      "name": "Pre",
+      "type": "pre",
+      "props": {
+        "bg": "lightgray",
+        "p": 3,
+        "borderRadius": 3
+      },
+      "style": {
+        "maxHeight": "50vh",
+        "overflow": "auto"
+      },
+      "examples": [
+        "<Pre>Hello</Pre>"
+      ],
+      "system": [
+        "borderRadius"
+      ]
+    },
+    {
+      "name": "CodeBlock",
+      "imports": [
+        "Pre",
+        "Font"
+      ],
+      "jsx": "<Font mono>\n  <Pre\n    children={props.children}\n  />\n</Font>",
+      "examples": [
+        "<CodeBlock\n  children={`\n.css {\n  is: fun;\n}\n  `.trim()}\n/>"
       ],
       "system": []
     }
