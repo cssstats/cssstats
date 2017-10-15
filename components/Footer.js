@@ -18,12 +18,21 @@ const Footer = props => (
           children="compositor.io"
         />
       </Div>
-      <Link
-        fontWeight="bold"
-        color="black"
-        href="https://github.com/cssstats/cssstats"
-        children="GitHub"
-      />
+      <Div>
+        <Link
+          fontWeight="bold"
+          color="black"
+          href="https://github.com/cssstats/cssstats/issues"
+          children="Issues"
+        />
+        <Link
+          ml={2}
+          fontWeight="bold"
+          color="black"
+          href="https://github.com/cssstats/cssstats"
+          children="GitHub"
+        />
+      </Div>
     </Flex>
   </Div>
 )

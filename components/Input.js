@@ -14,6 +14,7 @@ const Input = styled('input')(
   [],
   props => ({
     display: 'block',
+    boxSizing: 'border-box',
     fontFamily: 'inherit',
     fontSize: 'inherit',
     borderRadius: '4px'

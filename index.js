@@ -12,7 +12,7 @@ const router = Router()
 app
   .prepare()
   .then(() => {
-    router.get('/api/stats', require('./lib/stats'))
+    router.get('/api/stats', require('./api/stats'))
 
     router.get('*', (req, res) => {
       handle(req, res, parse(req.url, true))
