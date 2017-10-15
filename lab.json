@@ -405,6 +405,19 @@
         "<CodeBlock\n  children={`\n.css {\n  is: fun;\n}\n  `.trim()}\n/>"
       ],
       "system": []
+    },
+    {
+      "name": "Logo",
+      "imports": [
+        "Div",
+        "Flex",
+        "Text"
+      ],
+      "jsx": "<svg\n  xmlns=\"http://www.w3.org/2000/svg\"\n  viewBox=\"0 0 16 16\"\n  width={props.size}\n  height={props.size}\n  fill={props.color || 'currentcolor'}\n>\n  <g\n    fontFamily=\"inherit\"\n    fontSize=\"12px\"\n    fontWeight=\"bold\"\n    >\n      <text\n        x=\"0.5\"\n        y=\"11\"\n        children='{'\n      />\n      <text\n        x=\"15.5\"\n        y=\"11\"\n        textAnchor=\"end\"\n        children='}'\n      />\n    </g>\n\n    <rect\n      x=\"5\"\n      y=\"7\"\n      width=\"2.5\"\n      height=\"4\"\n    />\n    <rect\n      x=\"8.5\"\n      y=\"5\"\n      width=\"2.5\"\n      height=\"6\"\n    />\n</svg>",
+      "examples": [
+        "<Logo\n  size={42}\n/>"
+      ],
+      "system": []
     }
   ]
 }
