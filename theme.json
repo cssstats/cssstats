@@ -27,6 +27,7 @@
   "colors": {
     "black": "#364453",
     "blue": "#4688dd",
-    "gray": "#666"
+    "gray": "#666",
+    "lightgray": "#eeeeee"
   }
 }
