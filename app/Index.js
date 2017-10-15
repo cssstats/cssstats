@@ -1,12 +1,14 @@
-import withTheme from '../components/withTheme'
+import React from 'react'
 
-import H1 from '../components/H1'
-import H2 from '../components/H2'
-import Layout from '../components/Layout'
-import Button from '../components/Button'
-import Input from '../components/Input'
-import Label from '../components/Label'
-import LinkBox from '../components/LinkBox'
+import withTheme from './withTheme'
+
+import H1 from './H1'
+import H2 from './H2'
+import Layout from './Layout'
+import Button from './Button'
+import Input from './Input'
+import Label from './Label'
+import LinkBox from './LinkBox'
 
 const Index = () =>
   <Layout>
