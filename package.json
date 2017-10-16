@@ -16,6 +16,7 @@
     "finalhandler": "^1.1.0",
     "get-css": "^1.2.5",
     "get-query-param": "^2.0.1",
+    "history": "^4.7.2",
     "is-present": "^1.0.0",
     "is-url": "^1.2.2",
     "micro": "^9.0.0",

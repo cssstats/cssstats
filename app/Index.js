@@ -1,5 +1,9 @@
 import React from 'react'
 
+import {
+  connect
+} from 'refunk'
+
 import H1 from './H1'
 import H2 from './H2'
 import Layout from './Layout'
@@ -9,18 +13,31 @@ import Input from './Input'
 import Label from './Label'
 import LinkBox from './LinkBox'
 
+import Debug from './Debug'
+
 import sites from './data/sites.json'
 
-export default () =>
+const Index = props =>
   <Layout>
     <H1
       children='Parse Css'
     />
 
+    <Debug object={props} />
+
     <Form
       onSubmit={e => {
         e.preventDefault()
-        console.log(e)
+
+        const url = props.urlInput
+
+        props.update({
+          redirectTo: '/parse',
+          urlInput: null,
+          url
+        })
+
+        props.history.push(`/stats?url=${url}`)
       }}
     >
       <Label
@@ -29,6 +46,7 @@ export default () =>
       <Input
         mt={1}
         placeholder='Url, domain, or direct css link'
+        onChange={e => props.update({ urlInput: e.target.value })}
       />
       <Button
         mt={2}
@@ -58,3 +76,5 @@ export default () =>
       })}
     />
   </Layout>
+
+export default connect()(Index)

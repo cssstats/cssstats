@@ -429,6 +429,16 @@
         "<Form>Form</Form>"
       ],
       "system": []
+    },
+    {
+      "name": "Debug",
+      "imports": [
+        "Pre"
+      ],
+      "jsx": "<Pre\n  {...props}\n  children={JSON.stringify(props.object, null, 2)}\n/>",
+      "examples": [
+        "<Debug />"
+      ]
     }
   ]
 }
