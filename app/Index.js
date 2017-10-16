@@ -8,7 +8,6 @@ import Button from './Button'
 import Input from './Input'
 import Label from './Label'
 import LinkBox from './LinkBox'
-import LoadingCircle from './LoadingCircle'
 
 import sites from './data/sites.json'
 
@@ -47,8 +46,6 @@ export default () =>
         return link
       })}
     />
-
-    <LoadingCircle />
 
     <H2
       children='View Stats for Popular Frameworks'
