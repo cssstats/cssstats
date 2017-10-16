@@ -437,8 +437,9 @@
       ],
       "jsx": "<Pre\n  {...props}\n  children={JSON.stringify(props.object, null, 2)}\n/>",
       "examples": [
-        "<Debug />"
-      ]
+        "<Debug\n  object={{\n    foo: 'bar',\n    baz: {\n      hi: 'bye'\n    }\n  }}\n/>"
+      ],
+      "system": []
     }
   ]
 }
