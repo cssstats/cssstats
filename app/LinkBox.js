@@ -10,9 +10,9 @@ const LinkBox = props => (
         <Link
           fontWeight={600}
           display="block"
-          href={link}
-          title={link}
-          children={link}
+          href={link.url || link}
+          title={link.name || link}
+          children={link.name || link}
         />
       </Flex>
     ))}

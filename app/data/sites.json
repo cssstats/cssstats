@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Google"
+  },
+  {
+    "name": "Yahoo"
+  },
+  {
+    "name": "Twitter"
+  },
+  {
+    "name": "Facebook"
+  },
+  {
+    "name": "Tumblr"
+  },
+  {
+    "name": "Apple"
+  },
+  {
+    "name": "YouTube"
+  },
+  {
+    "name": "Pinterest"
+  },
+  {
+    "name": "Medium"
+  },
+  {
+    "name": "PayPal"
+  },
+  {
+    "name": "Stripe"
+  },
+  {
+    "name": "Trulia"
+  },
+  {
+    "name": "Wikipedia",
+    "url": "https://wikipedia.org"
+  },
+  {
+    "name": "Craigslist",
+    "url": "https://craigslist.org"
+  },
+  {
+    "name": "GitHub"
+  },
+  {
+    "name": "Stack Overflow"
+  },
+  {
+    "name": "New York Times",
+    "url": "https://nytimes.com"
+  },
+  {
+    "name": "The Guardian"
+  }
+]
