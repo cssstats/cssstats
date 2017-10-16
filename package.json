@@ -3,11 +3,11 @@
   "version": "2.0.0",
   "scripts": {
     "build": "x0 build app/Index -d public",
-    "dev": "x0 dev app/Index | micro-dev",
+    "dev": "x0 dev app/Index --proxy http://localhost:3000 | micro-dev",
     "start": "micro"
   },
   "dependencies": {
-    "@compositor/x0": "^2.0.0-3",
+    "@compositor/x0": "github:c8r/x0#proxy",
     "cssstats": "^3.1.0",
     "finalhandler": "^1.1.0",
     "get-css": "^1.2.5",
