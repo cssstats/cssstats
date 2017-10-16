@@ -13,8 +13,6 @@ import Input from './Input'
 import Label from './Label'
 import LinkBox from './LinkBox'
 
-import Debug from './Debug'
-
 import sites from './data/sites.json'
 
 const Index = props =>
@@ -22,8 +20,6 @@ const Index = props =>
     <H1
       children='Parse Css'
     />
-
-    <Debug object={props} />
 
     <Form
       onSubmit={e => {

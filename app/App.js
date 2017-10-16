@@ -21,7 +21,7 @@ import Index from './Index'
 import Stats from './Stats'
 
 const initialState = {
-  history: createHistory()
+  history: typeof document !== 'undefined' ? createHistory() : null
 }
 
 const App = props =>
