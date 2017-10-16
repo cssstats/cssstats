@@ -427,6 +427,27 @@
         "<Loading\n  color='tomato'\n  size={32}\n/>"
       ],
       "system": []
+    },
+    {
+      "name": "Svg",
+      "type": "svg",
+      "props": {},
+      "style": {},
+      "examples": [
+        "<Svg viewBox='0 0 32 32' color='blue'>\n<rect\n  fill='currentcolor'\n  width={32}\n  height={32}\n/>\n</Svg>"
+      ],
+      "system": []
+    },
+    {
+      "name": "LoadingCircle",
+      "imports": [
+        "Svg"
+      ],
+      "jsx": "  <Svg\n    color={props.color}\n    xmlns='http://www.w3.org/2000/svg'\n    viewBox='0 0 32 32'\n    width={props.size}\n    height={props.size}\n    fill='currentcolor'>\n    <path\n      opacity='.25'\n      d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'\n    />\n    <path d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'>\n      <animateTransform\n        attributeName='transform'\n        type='rotate'\n        from='0 16 16'\n        to='360 16 16'\n        dur='0.8s'\n        repeatCount='indefinite'\n      />\n    </path>\n  </Svg>\n",
+      "examples": [
+        "<LoadingCircle size={32} color='blue' />"
+      ],
+      "system": []
     }
   ]
 }
