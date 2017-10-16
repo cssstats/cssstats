@@ -11,7 +11,7 @@ module.exports = handler => async (req, res) => {
 
   const fullUrl = url && normalizeUrl(url)
 
-  if (!isValidUrl(url)) {
+  if (!isValidUrl(fullUrl)) {
     return send(res, 406, {
       error: 'unacceptable',
       message: 'Url is invalid'
@@ -19,7 +19,7 @@ module.exports = handler => async (req, res) => {
   }
 
   try {
-    const css = await getCss(url)
+    const css = await getCss(fullUrl)
     const stats = cssstats(css.css)
 
     req.cssstats = {
