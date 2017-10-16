@@ -13,7 +13,8 @@ const H1 = styled('h1')(
 
 H1.defaultProps = {
   borderColor: 'transparent',
-  color: 'black'
+  color: 'black',
+  fontSize: null
 }
 
 export default H1

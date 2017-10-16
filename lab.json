@@ -23,7 +23,8 @@
       "type": "h1",
       "props": {
         "borderColor": "transparent",
-        "color": "black"
+        "color": "black",
+        "fontSize": null
       },
       "style": {},
       "examples": [
@@ -264,7 +265,7 @@
         "Flex",
         "Link"
       ],
-      "jsx": "<Flex\n  wrap='wrap'\n  children={props.links.map(link =>\n    <Flex\n      py={3}\n      w={[1/2, 1/3, 1/6]}\n    >\n      <Link\n        fontWeight={600}\n        display='block'\n        href={link.url || link}\n        title={link.name || link}\n        children={link.name || link}\n      />\n    </Flex>\n  )}\n/>",
+      "jsx": "<Flex\n  wrap='wrap'\n  children={props.links.map(link =>\n    <Flex\n      key={link.name || link}\n      py={3}\n      w={[1/2, 1/3, 1/6]}\n    >\n      <Link\n        fontWeight={600}\n        display='block'\n        href={link.url || link}\n        title={link.name || link}\n        children={link.name || link}\n      />\n    </Flex>\n  )}\n/>",
       "examples": [
         "<LinkBox\n  links={[\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com',\n   'foo.com'\n  ]}\n/>"
       ],
@@ -446,6 +447,14 @@
       "jsx": "  <Svg\n    color={props.color}\n    xmlns='http://www.w3.org/2000/svg'\n    viewBox='0 0 32 32'\n    width={props.size}\n    height={props.size}\n    fill='currentcolor'>\n    <path\n      opacity='.25'\n      d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'\n    />\n    <path d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'>\n      <animateTransform\n        attributeName='transform'\n        type='rotate'\n        from='0 16 16'\n        to='360 16 16'\n        dur='0.8s'\n        repeatCount='indefinite'\n      />\n    </path>\n  </Svg>\n",
       "examples": [
         "<LoadingCircle size={32} color='blue' />"
+    },
+    {
+      "name": "Form",
+      "type": "form",
+      "props": {},
+      "style": {},
+      "examples": [
+        "<Form>Form</Form>"
       ],
       "system": []
     }
