@@ -23,8 +23,7 @@
       "type": "h1",
       "props": {
         "borderColor": "transparent",
-        "color": "black",
-        "fontSize": null
+        "color": "black"
       },
       "style": {},
       "examples": [
