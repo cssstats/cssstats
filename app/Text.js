@@ -3,7 +3,9 @@ import { space, fontSize, width, color, fontWeight } from 'styled-system'
 
 const Text = styled('div')(
   [],
-  props => ({}),
+  props => ({
+    textTransform: `${props.uppercase ? 'uppercase' : 'initial'}`
+  }),
   space,
   fontSize,
   width,
@@ -12,7 +14,8 @@ const Text = styled('div')(
 )
 
 Text.defaultProps = {
-  fontWeight: 'normal'
+  fontWeight: 'normal',
+  uppercase: false
 }
 
 export default Text

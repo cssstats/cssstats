@@ -6,6 +6,8 @@ import {
 
 import H1 from './H1'
 import Pre from './Pre'
+import SubHeader from './SubHeader'
+import Loading from './Loading'
 import Layout from './Layout'
 
 import sites from './data/sites.json'
@@ -23,14 +25,29 @@ class Stats extends React.Component {
   }
 
   render () {
+    if (!this.props.css) {
+      return <Loading />
+    }
+
+    const {
+      css: {
+        css,
+        pageTitle
+      },
+      stats: {
+        humanizedGzipSize
+      }
+    } = this.props
+
     return (
       <Layout>
-        <H1
-          children={this.props.css ? this.props.css.pageTitle : 'Stats'}
+        <SubHeader
+          title={pageTitle}
+          text={humanizedGzipSize}
         />
 
         <Pre
-          children={this.props.css && this.props.css.css.trim()}
+          children={css.trim()}
         />
       </Layout>
     )

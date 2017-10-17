@@ -49,11 +49,15 @@
       "name": "Text",
       "type": "div",
       "props": {
-        "fontWeight": "normal"
+        "fontWeight": "normal",
+        "uppercase": false
       },
-      "style": {},
+      "style": {
+        "textTransform": "${props.uppercase ? 'uppercase' : 'initial'}"
+      },
       "examples": [
-        "<Text>Hello</Text>"
+        "<Text>Hello</Text>",
+        "<Text uppercase>Hello</Text>"
       ],
       "system": [
         "fontWeight"
@@ -232,6 +236,22 @@
       "jsx": "<Flex\n  py={2}\n  alignItems='center'\n  justify='space-between'\n>\n  <Link\n    href='/'\n    fontSize={3}\n    fontWeight='bold'\n    color='black'\n    children='Css Stats'\n  />\n  \n  <Link\n    fontWeight='bold'\n    color='black'\n    href='https://github.com/cssstats/cssstats'\n    children='GitHub'\n  />\n</Flex>",
       "examples": [
         "<Header />"
+      ],
+      "system": []
+    },
+    {
+      "name": "SubHeader",
+      "imports": [
+        "Flex",
+        "Div",
+        "Link",
+        "Hr",
+        "Text",
+        "H2"
+      ],
+      "jsx": "<Div>\n  <Flex\n    py={3}\n    alignItems='center'\n    justify='space-between'\n  >\n    <H2\n      my={0}\n      children={props.title}\n    />\n    \n    <Text\n      uppercase\n      fontWeight='bold'\n      children={props.text}\n    />\n  </Flex>\n  <Hr />\n</Div>",
+      "examples": [
+        "<SubHeader\n  title='Foo Bar Site'\n  text='32kb'\n/>"
       ],
       "system": []
     },
