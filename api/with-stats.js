@@ -5,6 +5,7 @@ const isUrl = require('is-url')
 const isPresent = require('is-present')
 const normalizeUrl = require('normalize-url')
 const cssstats = require('cssstats')
+const cssbeautify = require('cssbeautify')
 
 module.exports = handler => async (req, res) => {
   const url = getParam('url', req.url)
@@ -21,6 +22,8 @@ module.exports = handler => async (req, res) => {
   try {
     const css = await getCss(fullUrl)
     const stats = cssstats(css.css)
+
+    css.css = cssbeautify(css.css)
 
     req.cssstats = {
       stats,
