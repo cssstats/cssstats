@@ -14,10 +14,6 @@ import Layout from './Layout'
 import sites from './data/sites.json'
 
 class Stats extends React.Component {
-  constructor () {
-    super()
-  }
-
   componentDidMount () {
     fetch(`/api/stats${this.props.history.location.search}`)
       .then(res => res.json())
