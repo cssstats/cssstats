@@ -3,12 +3,17 @@
   "version": "2.0.0",
   "scripts": {
     "build": "x0 build app/App -d public",
-    "dev": "x0 dev app/App --proxy http://localhost:3000 | lab -d app -w | micro",
+    "dev": "x0 dev app/App | lab -d app -w | micro",
     "start": "micro"
+  },
+  "x0": {
+    "proxy": {
+      "/api": "http://localhost:3000"
+    }
   },
   "dependencies": {
     "@compositor/lab": "^1.0.0-30",
-    "@compositor/x0": "2.0.0-7",
+    "@compositor/x0": "github:c8r/x0#package-config",
     "css-unit-sort": "^1.1.1",
     "cssbeautify": "^0.3.1",
     "cssstats": "^3.1.0",
