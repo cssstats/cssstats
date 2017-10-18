@@ -5,6 +5,7 @@ import {
 } from 'refunk'
 
 import H1 from './H1'
+import H2 from './H2'
 import Pre from './Pre'
 import SubHeader from './SubHeader'
 import Loading from './Loading'
@@ -46,9 +47,8 @@ class Stats extends React.Component {
           text={humanizedGzipSize}
         />
 
-        <Pre
-          children={css.trim()}
-        />
+        <H2>Raw Css</H2>
+        <Pre>{css.trim()}</Pre>
       </Layout>
     )
   }
