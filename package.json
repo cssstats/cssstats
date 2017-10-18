@@ -9,6 +9,7 @@
   "dependencies": {
     "@compositor/lab": "^1.0.0-30",
     "@compositor/x0": "2.0.0-7",
+    "css-unit-sort": "^1.1.1",
     "cssbeautify": "^0.3.1",
     "cssstats": "^3.1.0",
     "finalhandler": "^1.1.0",

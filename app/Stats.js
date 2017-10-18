@@ -7,6 +7,7 @@ import {
 
 import H1 from './H1'
 import H2 from './H2'
+import Div from './Div'
 import Pre from './Pre'
 import SubHeader from './SubHeader'
 import Loading from './Loading'
@@ -16,6 +17,8 @@ import SummaryStats from './SummaryStats'
 import Declarations from './Declarations'
 import Colors from './Colors'
 import BackgroundColors from './BackgroundColors'
+import FontSizes from './FontSizes'
+import FontFamilies from './FontFamilies'
 
 import sites from './data/sites.json'
 
@@ -80,8 +83,18 @@ class Stats extends React.Component {
           backgroundColors={backgroundColors}
         />
 
-        <H2>Raw Css</H2>
-        <Pre>{css.trim()}</Pre>
+        <FontSizes
+          fontSizes={properties['font-size'] || []}
+        />
+
+        <FontFamilies
+          fontFamilies={properties['font-family'] || []}
+        />
+
+        <Div mt={5}>
+          <H2>Raw css</H2>
+          <Pre>{css.trim()}</Pre>
+        </Div>
       </Layout>
     )
   }

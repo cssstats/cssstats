@@ -6,7 +6,6 @@ import Flex from './Flex'
 import SlabStat from './SlabStat'
 
 export default ({ properties }) => {
-  console.log(properties)
   const color = properties.color || []
   const floats = properties.float || []
   const widths = properties.width || []
@@ -16,7 +15,7 @@ export default ({ properties }) => {
 
   return (
     <Div>
-      <H2 mb={0}>Total Declarations</H2>
+      <H2 mb={0}>Total declarations</H2>
 
       <Flex wrap mt={0} mb={4}>
         <Flex
