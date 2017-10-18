@@ -12,7 +12,7 @@ export default ({
   <Div>
     <H2>{title}</H2>
 
-    <Flex wrap>
+    <Flex wrap='wrap'>
       {colors.map(color =>
         <Div
           key={color}

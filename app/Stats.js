@@ -19,6 +19,7 @@ import Colors from './Colors'
 import BackgroundColors from './BackgroundColors'
 import FontSizes from './FontSizes'
 import FontFamilies from './FontFamilies'
+import ZIndexes from './ZIndexes'
 
 import sites from './data/sites.json'
 
@@ -89,6 +90,10 @@ class Stats extends React.Component {
 
         <FontFamilies
           fontFamilies={properties['font-family'] || []}
+        />
+
+        <ZIndexes
+          zIndexes={properties['z-index'] || []}
         />
 
         <Div mt={5}>

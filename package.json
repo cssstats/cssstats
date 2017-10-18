@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "build": "x0 build app/App -d public",
-    "dev": "x0 dev app/App --proxy http://localhost:3000 | lab -d app -w | micro-dev",
+    "dev": "x0 dev app/App --proxy http://localhost:3000 | lab -d app -w | micro",
     "start": "micro"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash.uniq": "^4.5.0",
     "micro": "^9.0.0",
-    "micro-dev": "^1.2.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
