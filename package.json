@@ -3,10 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "build": "x0 build app/App -d public",
-    "dev": "npm run dev:x0 | npm run dev:lab | npm run dev:api",
-    "dev:api": "micro-dev",
-    "dev:lab": "lab -d app -w",
-    "dev:x0": "x0 dev app/App --proxy http://localhost:3000",
+    "dev": "x0 dev app/App --proxy http://localhost: 3000 | lab -d app -w | micro-dev",
     "start": "micro"
   },
   "dependencies": {

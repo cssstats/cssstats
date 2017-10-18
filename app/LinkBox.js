@@ -6,7 +6,7 @@ const LinkBox = props => (
   <Flex
     wrap="wrap"
     children={props.links.map(link => (
-      <Flex key={link.name || link} py={3} w={[1 / 2, 1 / 3, 1 / 6]}>
+      <Flex key={link.name || link} py={4} w={[1 / 2, 1 / 3, 1 / 6]}>
         <Link
           fontWeight={600}
           display="block"
