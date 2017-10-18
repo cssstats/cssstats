@@ -14,6 +14,7 @@ import Label from './Label'
 import LinkBox from './LinkBox'
 
 import sites from './data/sites.json'
+import frameworks from './data/frameworks.json'
 
 const Index = props =>
   <Layout>
@@ -65,11 +66,7 @@ const Index = props =>
       children='View Stats for Popular Frameworks'
     />
     <LinkBox
-      links={sites.map(link => {
-        const fallbackUrl = `https://${link.name.replace(' ','').toLowerCase()}.com`
-        link.url = `/stats?url=${link.url || fallbackUrl}`
-        return link
-      })}
+      links={frameworks}
     />
   </Layout>
 
