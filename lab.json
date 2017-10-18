@@ -389,7 +389,7 @@
         "Div",
         "Text"
       ],
-      "jsx": "<Div>\n  <svg\n    viewBox=\"0 0 64 64\"\n    width=\"64\"\n    height=\"64\"\n    style={{\n      display: 'block',\n      width: '100%',\n      height: 'auto'\n    }}\n  >\n    <rect width=\"64\" height=\"64\" fill={props.color}></rect>\n  </svg>\n\n  <Text\n    f={1}\n    children={props.color}\n  />\n</Div>",
+      "jsx": "<Div>\n  <svg\n    viewBox=\"0 0 64 64\"\n    width=\"64\"\n    height=\"64\"\n    style={{\n      display: 'block',\n      width: '100%',\n      height: 'auto'\n    }}\n  >\n    <rect width=\"64\" height=\"64\" fill={props.color}></rect>\n  </svg>\n\n  <Text\n    f={1}\n    mt={2}\n    children={props.color}\n  />\n</Div>",
       "examples": [
         "<BackgroundColor\n  color='tomato'\n/>"
       ],
