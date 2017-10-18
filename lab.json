@@ -337,7 +337,9 @@
         "ml": 0,
         "fontWeight": "normal"
       },
-      "style": {},
+      "style": {
+        "lineHeight": "1"
+      },
       "examples": [
         "<Dd>Hello</Dd>"
       ],
@@ -365,7 +367,7 @@
         "Dt",
         "Dd"
       ],
-      "jsx": "<Dl>\n  <Dt\n    f={3}\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
+      "jsx": "<Dl>\n  <Dd\n    f={8}\n    fontWeight='bold'\n    children={props.stat}\n  />\n  <Dt\n    f={3}\n    children={props.title}\n  />\n</Dl>",
       "examples": [
         "<GiantSlabStat\n  title='Heights'\n  stat='80'\n/>"
       ],

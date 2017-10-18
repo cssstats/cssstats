@@ -3,7 +3,9 @@ import { space, fontSize, width, color, fontWeight } from 'styled-system'
 
 const Dd = styled('dd')(
   [],
-  props => ({}),
+  props => ({
+    lineHeight: '1'
+  }),
   space,
   fontSize,
   width,

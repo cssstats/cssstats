@@ -5,8 +5,8 @@ import Dd from './Dd'
 
 const GiantSlabStat = props => (
   <Dl>
+    <Dd f={8} fontWeight="bold" children={props.stat} />
     <Dt f={3} children={props.title} />
-    <Dd f={6} fontWeight="bold" children={props.stat} />
   </Dl>
 )
 

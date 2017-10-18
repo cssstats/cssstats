@@ -12,6 +12,8 @@ import SubHeader from './SubHeader'
 import Loading from './Loading'
 import Layout from './Layout'
 
+import SummaryStats from './SummaryStats'
+import Declarations from './Declarations'
 import Colors from './Colors'
 import BackgroundColors from './BackgroundColors'
 
@@ -30,20 +32,22 @@ class Stats extends React.Component {
       return <Loading />
     }
 
-    console.log(this.props)
-
     const {
       css: {
         css,
         pageTitle
       },
       stats: {
+        rules,
         humanizedGzipSize,
-        declarations: {
-          properties
-        }
+        declarations,
+        selectors
       }
     } = this.props
+
+    console.log(this.props)
+
+    const properties = declarations.properties
 
     const backgroundColors = uniq(properties['background-color'])
     const colors = uniq(properties.color)
@@ -53,6 +57,17 @@ class Stats extends React.Component {
         <SubHeader
           title={pageTitle}
           text={humanizedGzipSize}
+        />
+
+        <SummaryStats
+          rules={rules.total}
+          selectors={selectors.total}
+          declarations={declarations.total}
+          properties={Object.keys(properties).length}
+        />
+
+        <Declarations
+          properties={properties}
         />
 
         <Colors
