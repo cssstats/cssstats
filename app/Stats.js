@@ -31,7 +31,8 @@ class Stats extends React.Component {
     super()
 
     this.state = {
-      url: props.url || getParam('url', window.location.href)
+      url: props.url || getParam('url', window.location.href),
+      name: props.name || getParam('name', window.location.href)
     }
   }
 
@@ -81,7 +82,7 @@ class Stats extends React.Component {
     return (
       <Layout>
         <SubHeader
-          title={pageTitle}
+          title={pageTitle || this.state.name || url}
           text={humanizedGzipSize}
         />
 

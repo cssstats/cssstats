@@ -1,4 +1,5 @@
 import React from 'react'
+import titleize from 'titleize'
 import { intComma } from 'humanize-plus'
 
 import {
@@ -9,71 +10,46 @@ import {
 } from './library'
 
 export default ({ properties }) => {
-  const colors = properties.color || []
-  const floats = properties.float || []
-  const widths = properties.width || []
-  const heights = properties.height || []
-  const fontSizes = properties['font-size'] || []
-  const backgroundColors = properties['background-color'] || []
+  const metrics = [{
+    name: 'Float',
+    value: properties.float || []
+  }, {
+    name: 'Width',
+    value: properties.width || []
+  }, {
+    name: 'Height',
+    value: properties.height || []
+  }, {
+    name: 'Font Sizes',
+    value: properties['font-size'] || []
+  }, {
+    name: 'Color',
+    value: properties.color || []
+  }, {
+    name: 'Background Colors',
+    value: properties['background-color'] || []
+  }]
 
   return (
     <Div>
-      <H2 mb={0}>Total Declarations</H2>
+      <H2
+        mb={0}
+        children='Total Declarations'
+      />
 
       <Flex
         mt={0}
         mb={4}
         wrap='wrap'
-      >
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Font Size'
-            stat={intComma(fontSizes.length)}
-          />
-        </Flex>
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Float'
-            stat={intComma(floats.length)}
-          />
-        </Flex>
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Width'
-            stat={intComma(widths.length)}
-          />
-        </Flex>
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Height'
-            stat={intComma(heights.length)}
-          />
-        </Flex>
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Color'
-            stat={intComma(colors.length)}
-          />
-        </Flex>
-        <Flex
-          w={[1/2, 1/3, 1/6]}
-        >
-          <SlabStat
-            title='Background colors'
-            stat={intComma(backgroundColors.length)}
-          />
-        </Flex>
-      </Flex>
+        children={metrics.map(metric =>
+          <Flex w={[1/2, 1/3, 1/6]}>
+            <SlabStat
+              title={metric.name}
+              stat={intComma(metric.value.length)}
+            />
+          </Flex>
+        )}
+      />
     </Div>
   )
 }

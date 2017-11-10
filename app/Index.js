@@ -68,8 +68,9 @@ const Index = props =>
       <LinkBox
         links={sites.map(link => {
           const fallbackUrl = `https://${link.name.replace(' ','').toLowerCase()}.com`
-          link.url = `/stats?url=${link.url || fallbackUrl}`
-          return link
+          const url = `/stats?url=${link.url || fallbackUrl}&name=${link.name}`
+
+          return Object.assign({}, link, { url })
         })}
       />
     </Div>
@@ -80,7 +81,11 @@ const Index = props =>
       />
 
       <LinkBox
-        links={frameworks}
+        links={frameworks.map(link => {
+          const url = `/stats?url=${link.url}&name=${link.name}`
+
+          return Object.assign({}, link, { url })
+        })}
       />
     </Div>
   </Layout>

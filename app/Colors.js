@@ -15,8 +15,9 @@ export default ({ colors = [] }) =>
       description={`${colors.length} total`}
     />
 
-    <Flex wrap='wrap'>
-      {uniq(colors).map(color =>
+    <Flex
+      wrap='wrap'
+      children={uniq(colors).map(color =>
         <Div
           key={color}
           p={3}
@@ -26,5 +27,5 @@ export default ({ colors = [] }) =>
           <Color color={color} />
         </Div>
       )}
-    </Flex>
+    />
   </Div>

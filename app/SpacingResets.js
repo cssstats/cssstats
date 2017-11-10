@@ -16,7 +16,10 @@ export default ({ properties }) => {
 
   return (
     <Div>
-      <H2>Spacing Resets</H2>
+      <H2
+        mb={0}
+        children='Spacing Resets'
+      />
 
       <Flex
         wrap='wrap'

@@ -15,8 +15,9 @@ export default ({ backgroundColors = [] }) =>
       description={`${backgroundColors.length} total`}
     />
 
-    <Flex wrap='wrap'>
-      {uniq(backgroundColors).map(bg =>
+    <Flex
+      wrap='wrap'
+      children={uniq(backgroundColors).map(bg =>
         <Div
           key={bg}
           p={3}
@@ -26,5 +27,5 @@ export default ({ backgroundColors = [] }) =>
           <BackgroundColor color={bg} />
         </Div>
       )}
-    </Flex>
+    />
   </Div>

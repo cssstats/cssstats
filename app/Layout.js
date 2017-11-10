@@ -7,8 +7,12 @@ import {
   Container
 } from './library'
 
-export default ({ children }) =>
+export default ({ title, children }) =>
   <Font>
+    <title
+      children={title || 'Css Stats'}
+    />
+
     <Container>
       <Header />
       <Container
