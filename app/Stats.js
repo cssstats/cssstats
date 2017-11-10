@@ -11,10 +11,10 @@ import {
   Div,
   Pre,
   Flex,
-  Loading
+  Loading,
+  SubHeader
 } from './library'
 
-import SubHeader from './SubHeader'
 import Layout from './Layout'
 
 import SummaryStats from './SummaryStats'
@@ -75,8 +75,8 @@ class Stats extends React.Component {
 
     const properties = declarations.properties
 
-    const backgroundColors = properties['background-color']
-    const colors = properties.color
+    const backgroundColors = properties['background-color'] || []
+    const colors = properties.color || []
 
     return (
       <Layout>

@@ -26,6 +26,7 @@ export default ({ properties }) => {
 
           return (
             <SlabStat
+              key={prop}
               w={[1/2, 1/3, 1/5]}
               title={titleize(prop.replace('-', ' '))}
               stat={resets.length}

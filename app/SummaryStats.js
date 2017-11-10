@@ -12,7 +12,7 @@ export default ({
   declarations,
   properties
 }) =>
-  <Flex wrap my={4}>
+  <Flex wrap='wrap' my={4}>
     <Flex
       w={[1/2, 1/2, 1/4]}
     >
@@ -21,6 +21,7 @@ export default ({
         stat={intComma(rules)}
       />
     </Flex>
+
     <Flex
       w={[1/2, 1/2, 1/4]}
     >
@@ -29,6 +30,7 @@ export default ({
         stat={intComma(selectors)}
       />
     </Flex>
+
     <Flex
       w={[1/2, 1/2, 1/4]}
     >
@@ -37,6 +39,7 @@ export default ({
         stat={intComma(declarations)}
       />
     </Flex>
+
     <Flex
       w={[1/2, 1/2, 1/4]}
     >

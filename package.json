@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "build": "lab -d app/library --pkg && x0 build app/App -d public",
-    "dev": "x0 dev app/App | lab -d app -w | micro",
+    "dev": "x0 dev app/App | lab -d app/library -w | micro",
     "start": "micro"
   },
   "x0": {

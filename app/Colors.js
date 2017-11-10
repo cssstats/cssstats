@@ -8,10 +8,7 @@ import {
   SectionTitle
 } from './library'
 
-export default ({
-  title,
-  colors
-}) =>
+export default ({ colors = [] }) =>
   <Div>
     <SectionTitle
       title={`${uniq(colors).length} Unique Colors`}

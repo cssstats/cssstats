@@ -8,10 +8,7 @@ import {
   BackgroundColor
 } from './library'
 
-export default ({
-  title,
-  backgroundColors
-}) =>
+export default ({ backgroundColors = [] }) =>
   <Div>
     <SectionTitle
       title={`${uniq(backgroundColors).length} Unique Background Colors`}

@@ -7,7 +7,7 @@ import {
   SectionTitle
 } from './library'
 
-export default ({ zIndexes }) =>
+export default ({ zIndexes = [] }) =>
   <Div mt={4} mb={3}>
     <SectionTitle
       title={`${uniq(zIndexes).length} Unique Z Indices`}

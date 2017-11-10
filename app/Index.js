@@ -49,8 +49,6 @@ const Index = props =>
 
               const url = props.urlInput
 
-              console.log(props)
-
               props.update({
                 urlInput: null,
                 url
@@ -66,6 +64,7 @@ const Index = props =>
       <H2
         children='View Stats for Popular Sites'
       />
+
       <LinkBox
         links={sites.map(link => {
           const fallbackUrl = `https://${link.name.replace(' ','').toLowerCase()}.com`
@@ -79,6 +78,7 @@ const Index = props =>
       <H2
         children='View Stats for Popular Frameworks'
       />
+
       <LinkBox
         links={frameworks}
       />

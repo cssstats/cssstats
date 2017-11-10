@@ -20,7 +20,11 @@ export default ({ properties }) => {
     <Div>
       <H2 mb={0}>Total Declarations</H2>
 
-      <Flex wrap mt={0} mb={4}>
+      <Flex
+        mt={0}
+        mb={4}
+        wrap='wrap'
+      >
         <Flex
           w={[1/2, 1/3, 1/6]}
         >

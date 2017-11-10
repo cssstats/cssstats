@@ -7,7 +7,7 @@ import {
   SectionTitle
 } from './library'
 
-export default ({ fontFamilies }) =>
+export default ({ fontFamilies = [] }) =>
   <Div mt={5}>
     <SectionTitle
       title={`${uniq(fontFamilies).length} Unique Font Families`}
