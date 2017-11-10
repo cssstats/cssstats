@@ -1,8 +1,9 @@
 import React from 'react'
+import uniq from 'lodash.uniq'
 
-import H2 from './H2'
 import Div from './Div'
 import Flex from './Flex'
+import SectionTitle from './SectionTitle'
 import BackgroundColor from './BackgroundColor'
 
 export default ({
@@ -10,10 +11,13 @@ export default ({
   backgroundColors
 }) =>
   <Div>
-    <H2>{title}</H2>
+    <SectionTitle
+      title={`${uniq(backgroundColors).length} unique background colors`}
+      description={`${backgroundColors.length} total`}
+    />
 
     <Flex wrap='wrap'>
-      {backgroundColors.map(bg =>
+      {uniq(backgroundColors).map(bg =>
         <Div
           key={bg}
           p={3}

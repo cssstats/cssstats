@@ -1,15 +1,18 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import H2 from './H2'
 import Div from './Div'
 import Text from './Text'
+import SectionTitle from './SectionTitle'
 
 export default ({ fontFamilies }) =>
   <Div mt={5}>
-    <H2>{uniq(fontFamilies).length} unique font families</H2>
+    <SectionTitle
+      title={`${uniq(fontFamilies).length} unique font families`}
+      description={`${fontFamilies.length} total`}
+    />
 
-    {fontFamilies.map(fontFamily =>
+    {uniq(fontFamilies).map(fontFamily =>
       <Text
         key={fontFamily}
         mb={3}

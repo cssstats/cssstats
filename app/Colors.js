@@ -1,19 +1,23 @@
 import React from 'react'
+import uniq from 'lodash.uniq'
 
-import H2 from './H2'
 import Div from './Div'
 import Flex from './Flex'
 import Color from './Color'
+import SectionTitle from './SectionTitle'
 
 export default ({
   title,
   colors
 }) =>
   <Div>
-    <H2>{title}</H2>
+    <SectionTitle
+      title={`${uniq(colors).length} unique colors`}
+      description={`${colors.length} total`}
+    />
 
     <Flex wrap='wrap'>
-      {colors.map(color =>
+      {uniq(colors).map(color =>
         <Div
           key={color}
           p={3}

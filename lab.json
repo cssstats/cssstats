@@ -64,6 +64,19 @@
       ]
     },
     {
+      "name": "SectionTitle",
+      "imports": [
+        "H2",
+        "Div",
+        "Text"
+      ],
+      "jsx": "<Div mb={3} {...props}>\n  <H2 mb={0} children={props.title} />\n  <Text mt={0} children={props.description} />\n</Div>",
+      "examples": [
+        "<SectionTitle\n  title='The title'\n  description='The description'\n/>"
+      ],
+      "system": []
+    },
+    {
       "name": "Button",
       "type": "button",
       "props": {

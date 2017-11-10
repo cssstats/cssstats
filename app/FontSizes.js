@@ -2,15 +2,18 @@ import React from 'react'
 import uniq from 'lodash.uniq'
 import sort from 'css-unit-sort'
 
-import H2 from './H2'
 import Div from './Div'
 import Text from './Text'
+import SectionTitle from './SectionTitle'
 
 export default ({ fontSizes }) =>
   <Div mt={5}>
-    <H2>{uniq(fontSizes).length} unique font sizes</H2>
+    <SectionTitle
+      title={`${uniq(fontSizes).length} unique font families`}
+      description={`${fontSizes.length} total`}
+    />
 
-    {sort(fontSizes).map(fontSize =>
+    {sort(uniq(fontSizes)).map(fontSize =>
       <Text
         key={fontSize}
         mb={3}

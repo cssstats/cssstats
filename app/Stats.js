@@ -1,5 +1,5 @@
 import React from 'react'
-import uniq from 'lodash.uniq'
+import getParam from 'get-query-param'
 
 import {
   connect
@@ -21,11 +21,10 @@ import FontSizes from './FontSizes'
 import FontFamilies from './FontFamilies'
 import ZIndexes from './ZIndexes'
 
-import sites from './data/sites.json'
-
 class Stats extends React.Component {
   componentDidMount () {
-    fetch(`/api/stats${this.props.history.location.search}`)
+    const url = this.props.url || getParam('url', window.location.href)
+    fetch(`/api/stats?url=${url}`)
       .then(res => res.json())
       .then(body => this.props.update(body))
       .catch(console.error)
@@ -49,12 +48,10 @@ class Stats extends React.Component {
       }
     } = this.props
 
-    console.log(this.props)
-
     const properties = declarations.properties
 
-    const backgroundColors = uniq(properties['background-color'])
-    const colors = uniq(properties.color)
+    const backgroundColors = properties['background-color']
+    const colors = properties.color
 
     return (
       <Layout>
@@ -80,7 +77,6 @@ class Stats extends React.Component {
         />
 
         <BackgroundColors
-          title={`${backgroundColors.length} unique background colors`}
           backgroundColors={backgroundColors}
         />
 

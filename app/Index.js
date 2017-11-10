@@ -4,6 +4,10 @@ import {
   connect
 } from 'refunk'
 
+import {
+  Route
+} from 'react-router-dom'
+
 import H1 from './H1'
 import H2 from './H2'
 import Div from './Div'
@@ -32,9 +36,26 @@ const Index = props =>
         placeholder='Url, domain, or direct css link'
         onChange={e => props.update({ urlInput: e.target.value })}
       />
-      <Button
-        mt={2}
-        children='Go'
+      <Route
+        render={({ history }) =>
+          <Button
+            mt={2}
+            children='Go'
+            onClick={e => {
+              e.preventDefault()
+
+              const url = props.urlInput
+
+              console.log(props)
+
+              props.update({
+                urlInput: null,
+                url
+              })
+              history.push(`/stats?url=${url}`)
+            }}
+          />
+        }
       />
     </Form>
 
