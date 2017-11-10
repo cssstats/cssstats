@@ -23,22 +23,7 @@ const Index = props =>
       children='Parse Css'
     />
 
-    <Form
-      py={3}
-      onSubmit={e => {
-        e.preventDefault()
-
-        const url = props.urlInput
-
-        props.update({
-          redirectTo: '/parse',
-          urlInput: null,
-          url
-        })
-
-        props.history.push(`/stats?url=${url}`)
-      }}
-    >
+    <Form py={3}>
       <Label
         children='URI'
       />
