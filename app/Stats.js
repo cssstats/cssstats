@@ -9,6 +9,7 @@ import H1 from './H1'
 import H2 from './H2'
 import Div from './Div'
 import Pre from './Pre'
+import Flex from './Flex'
 import SubHeader from './SubHeader'
 import Loading from './Loading'
 import Layout from './Layout'
@@ -33,7 +34,16 @@ class Stats extends React.Component {
 
   render () {
     if (!this.props.css) {
-      return <Loading />
+      return (
+        <Layout p={[4, 5, 6]}>
+          <Flex h={9/10} items='center'>
+            <Loading />
+            <H2 my={0} pl={3}>
+              Downloading and analyzing css from ${this.props.url}
+            </H2>
+          </Flex>
+        </Layout>
+      )
     }
 
     const {
