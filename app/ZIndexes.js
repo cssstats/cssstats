@@ -1,18 +1,23 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import H2 from './H2'
 import Div from './Div'
 import Text from './Text'
+import SectionTitle from './SectionTitle'
 
 export default ({ zIndexes }) =>
-  <Div mt={5}>
-    <H2>{uniq(zIndexes).length} unique z indices</H2>
+  <Div mt={4} mb={3}>
+    <SectionTitle
+      title={`${uniq(zIndexes).length} Unique Z Indices`}
+      description={`${zIndexes.length} total`}
+    />
 
-    {zIndexes.map(zIndex =>
+    {uniq(zIndexes).map(zIndex =>
       <Text
         key={zIndex}
         mb={3}
+        mr={3}
+        inline={true}
         fontWeight='bold'
         children={zIndex}
       />

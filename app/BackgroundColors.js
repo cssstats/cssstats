@@ -12,7 +12,7 @@ export default ({
 }) =>
   <Div>
     <SectionTitle
-      title={`${uniq(backgroundColors).length} unique background colors`}
+      title={`${uniq(backgroundColors).length} Unique Background Colors`}
       description={`${backgroundColors.length} total`}
     />
 

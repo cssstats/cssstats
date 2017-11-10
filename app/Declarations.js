@@ -1,4 +1,5 @@
 import React from 'react'
+import { intComma } from 'humanize-plus'
 
 import H2 from './H2'
 import Div from './Div'
@@ -6,7 +7,7 @@ import Flex from './Flex'
 import SlabStat from './SlabStat'
 
 export default ({ properties }) => {
-  const color = properties.color || []
+  const colors = properties.color || []
   const floats = properties.float || []
   const widths = properties.width || []
   const heights = properties.height || []
@@ -15,7 +16,7 @@ export default ({ properties }) => {
 
   return (
     <Div>
-      <H2 mb={0}>Total declarations</H2>
+      <H2 mb={0}>Total Declarations</H2>
 
       <Flex wrap mt={0} mb={4}>
         <Flex
@@ -23,7 +24,7 @@ export default ({ properties }) => {
         >
           <SlabStat
             title='Font Size'
-            stat={fontSizes.length}
+            stat={intComma(fontSizes.length)}
           />
         </Flex>
         <Flex
@@ -31,7 +32,7 @@ export default ({ properties }) => {
         >
           <SlabStat
             title='Float'
-            stat={floats.length}
+            stat={intComma(floats.length)}
           />
         </Flex>
         <Flex
@@ -39,7 +40,7 @@ export default ({ properties }) => {
         >
           <SlabStat
             title='Width'
-            stat={widths.length}
+            stat={intComma(widths.length)}
           />
         </Flex>
         <Flex
@@ -47,23 +48,23 @@ export default ({ properties }) => {
         >
           <SlabStat
             title='Height'
-            stat={heights.length}
+            stat={intComma(heights.length)}
           />
         </Flex>
         <Flex
           w={[1/2, 1/3, 1/6]}
         >
           <SlabStat
-            title='Height'
-            stat={heights.length}
+            title='Color'
+            stat={intComma(colors.length)}
           />
         </Flex>
         <Flex
           w={[1/2, 1/3, 1/6]}
         >
           <SlabStat
-            title='Height'
-            stat={heights.length}
+            title='Background colors'
+            stat={intComma(backgroundColors.length)}
           />
         </Flex>
       </Flex>

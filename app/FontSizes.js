@@ -9,7 +9,7 @@ import SectionTitle from './SectionTitle'
 export default ({ fontSizes }) =>
   <Div mt={5}>
     <SectionTitle
-      title={`${uniq(fontSizes).length} unique font families`}
+      title={`${uniq(fontSizes).length} Unique Font Families`}
       description={`${fontSizes.length} total`}
     />
 

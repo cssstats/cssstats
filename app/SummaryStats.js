@@ -1,4 +1,5 @@
 import React from 'react'
+import { intComma } from 'humanize-plus'
 
 import Flex from './Flex'
 import GiantSlabStat from './GiantSlabStat'
@@ -15,7 +16,7 @@ export default ({
     >
       <GiantSlabStat
         title='Rules'
-        stat={rules}
+        stat={intComma(rules)}
       />
     </Flex>
     <Flex
@@ -23,7 +24,7 @@ export default ({
     >
       <GiantSlabStat
         title='Selectors'
-        stat={selectors}
+        stat={intComma(selectors)}
       />
     </Flex>
     <Flex
@@ -31,7 +32,7 @@ export default ({
     >
       <GiantSlabStat
         title='Declarations'
-        stat={declarations}
+        stat={intComma(declarations)}
       />
     </Flex>
     <Flex
@@ -39,7 +40,7 @@ export default ({
     >
       <GiantSlabStat
         title='Properties'
-        stat={properties}
+        stat={intComma(properties)}
       />
     </Flex>
   </Flex>

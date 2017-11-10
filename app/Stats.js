@@ -20,6 +20,7 @@ import BackgroundColors from './BackgroundColors'
 import FontSizes from './FontSizes'
 import FontFamilies from './FontFamilies'
 import ZIndexes from './ZIndexes'
+import SpacingResets from './SpacingResets'
 
 class Stats extends React.Component {
   componentDidMount () {
@@ -92,8 +93,12 @@ class Stats extends React.Component {
           zIndexes={properties['z-index'] || []}
         />
 
+        <SpacingResets
+          properties={properties}
+        />
+
         <Div mt={5}>
-          <H2>Raw css</H2>
+          <H2>Raw Css</H2>
           <Pre>{css.trim()}</Pre>
         </Div>
       </Layout>

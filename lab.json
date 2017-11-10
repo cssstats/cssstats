@@ -50,10 +50,12 @@
       "type": "div",
       "props": {
         "fontWeight": "normal",
-        "uppercase": false
+        "uppercase": false,
+        "inline": false
       },
       "style": {
-        "textTransform": "${props.uppercase ? 'uppercase' : 'initial'}"
+        "textTransform": "${props.uppercase ? 'uppercase' : 'initial'}",
+        "display": "${props.inline ? 'inline-block' : 'block'}"
       },
       "examples": [
         "<Text>Hello</Text>",
@@ -367,7 +369,7 @@
         "Dt",
         "Dd"
       ],
-      "jsx": "<Dl>\n  <Dt\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
+      "jsx": "<Dl {...props}>\n  <Dt\n    children={props.title}\n  />\n  <Dd\n    f={6}\n    fontWeight='bold'\n    children={props.stat}\n  />\n</Dl>",
       "examples": [
         "<SlabStat\n  title='Heights'\n  stat='80'\n/>"
       ],
