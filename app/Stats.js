@@ -5,13 +5,16 @@ import {
   connect
 } from 'refunk'
 
-import H1 from './H1'
-import H2 from './H2'
-import Div from './Div'
-import Pre from './Pre'
-import Flex from './Flex'
+import {
+  H1,
+  H2,
+  Div,
+  Pre,
+  Flex,
+  Loading
+} from './library'
+
 import SubHeader from './SubHeader'
-import Loading from './Loading'
 import Layout from './Layout'
 
 import SummaryStats from './SummaryStats'
@@ -24,8 +27,17 @@ import ZIndexes from './ZIndexes'
 import SpacingResets from './SpacingResets'
 
 class Stats extends React.Component {
+  constructor (props) {
+    super()
+
+    this.state = {
+      url: props.url || getParam('url', window.location.href)
+    }
+  }
+
   componentDidMount () {
-    const url = this.props.url || getParam('url', window.location.href)
+    const url = this.props.url || this.state.url
+
     fetch(`/api/stats?url=${url}`)
       .then(res => res.json())
       .then(body => this.props.update(body))
@@ -33,13 +45,15 @@ class Stats extends React.Component {
   }
 
   render () {
+    const url = this.props.url || this.state.url
+
     if (!this.props.css) {
       return (
         <Layout p={[4, 5, 6]}>
           <Flex h={9/10} items='center'>
             <Loading />
             <H2 my={0} pl={3}>
-              Downloading and analyzing css from ${this.props.url}
+              Downloading and analyzing css from {url}
             </H2>
           </Flex>
         </Layout>

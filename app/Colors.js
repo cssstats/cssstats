@@ -1,10 +1,12 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import Div from './Div'
-import Flex from './Flex'
-import Color from './Color'
-import SectionTitle from './SectionTitle'
+import {
+  Div,
+  Flex,
+  Color,
+  SectionTitle
+} from './library'
 
 export default ({
   title,

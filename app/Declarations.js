@@ -1,10 +1,12 @@
 import React from 'react'
 import { intComma } from 'humanize-plus'
 
-import H2 from './H2'
-import Div from './Div'
-import Flex from './Flex'
-import SlabStat from './SlabStat'
+import {
+  H2,
+  Div,
+  Flex,
+  SlabStat
+} from './library'
 
 export default ({ properties }) => {
   const colors = properties.color || []

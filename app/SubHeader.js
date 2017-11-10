@@ -1,10 +1,13 @@
 import React from 'react'
-import Flex from './Flex'
-import Div from './Div'
-import Link from './Link'
-import Hr from './Hr'
-import Text from './Text'
-import H2 from './H2'
+
+import {
+  H2,
+  Hr,
+  Div,
+  Flex,
+  Link,
+  Text
+} from './library'
 
 const SubHeader = props => (
   <Div>

@@ -1,9 +1,11 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import Div from './Div'
-import Text from './Text'
-import SectionTitle from './SectionTitle'
+import {
+  Div,
+  Text,
+  SectionTitle
+} from './library'
 
 export default ({ fontFamilies }) =>
   <Div mt={5}>

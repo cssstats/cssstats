@@ -1,6 +1,8 @@
 import React from 'react'
-import Div from './Div'
-import Text from './Text'
+import {
+  Div,
+  Text
+} from './library'
 
 const BackgroundColor = props => (
   <Div>

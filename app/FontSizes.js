@@ -2,9 +2,11 @@ import React from 'react'
 import uniq from 'lodash.uniq'
 import sort from 'css-unit-sort'
 
-import Div from './Div'
-import Text from './Text'
-import SectionTitle from './SectionTitle'
+import {
+  Div,
+  Text,
+  SectionTitle
+} from './library'
 
 export default ({ fontSizes }) =>
   <Div mt={5}>

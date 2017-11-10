@@ -1,10 +1,12 @@
 import React from 'react'
 import titleize from 'titleize'
 
-import H2 from './H2'
-import Div from './Div'
-import Flex from './Flex'
-import SlabStat from './SlabStat'
+import {
+  H2,
+  Div,
+  Flex,
+  SlabStat
+} from './library'
 
 export default ({ properties }) => {
   const spacingProperties = [

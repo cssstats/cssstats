@@ -1,8 +1,10 @@
 import React from 'react'
 import { intComma } from 'humanize-plus'
 
-import Flex from './Flex'
-import GiantSlabStat from './GiantSlabStat'
+import {
+  Flex,
+  GiantSlabStat
+} from './library'
 
 export default ({
   rules,

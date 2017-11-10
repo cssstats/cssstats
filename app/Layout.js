@@ -1,9 +1,11 @@
 import React from 'react'
 
-import Font from './Font'
-import Header from './Header'
-import Footer from './Footer'
-import Container from './Container'
+import {
+  Font,
+  Header,
+  Footer,
+  Container
+} from './library'
 
 export default ({ children }) =>
   <Font>

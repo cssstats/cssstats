@@ -1,6 +1,15 @@
 import styled from 'styled-components'
-import { space, fontSize, width, color } from 'styled-system'
-import Font from './Font'
+
+import {
+  space,
+  fontSize,
+  width,
+  color
+} from 'styled-system'
+
+import {
+  Font
+} from './library'
 
 const Container = styled(Font)(
   [],

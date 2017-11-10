@@ -2,7 +2,7 @@
   "name": "cssstats-app",
   "version": "2.0.0",
   "scripts": {
-    "build": "x0 build app/App -d public",
+    "build": "lab -d app/library --pkg && x0 build app/App -d public",
     "dev": "x0 dev app/App | lab -d app -w | micro",
     "start": "micro"
   },
@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "@compositor/lab": "^1.0.0-30",
+    "@compositor/lab": "^1.0.0-33",
     "@compositor/x0": "^2.0.0-13",
     "css-unit-sort": "^1.1.1",
     "cssbeautify": "^0.3.1",

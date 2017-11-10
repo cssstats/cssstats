@@ -8,15 +8,18 @@ import {
   Route
 } from 'react-router-dom'
 
-import H1 from './H1'
-import H2 from './H2'
-import Div from './Div'
+import {
+  H1,
+  H2,
+  Div,
+  Form,
+  Button,
+  Input,
+  Label,
+  LinkBox
+} from './library'
+
 import Layout from './Layout'
-import Form from './Form'
-import Button from './Button'
-import Input from './Input'
-import Label from './Label'
-import LinkBox from './LinkBox'
 
 import sites from './data/sites.json'
 import frameworks from './data/frameworks.json'
