@@ -1,8 +1,6 @@
-# CSS Stats
+# [Css Stats](https://cssstats.com)
 
-Potentially interesting stats on stylesheets
-
-https://cssstats.com
+Potentially interesting stats on stylesheets.
 
 ## Installation
 
@@ -14,9 +12,19 @@ npm i
 
 ## Usage
 
+
+#### Development
+
 ```
+npm run dev
+open localhost:8000
+```
+
+#### Production
+
+```
+npm run build
 npm start
-open localhost:3000
 ```
 
 ## License
