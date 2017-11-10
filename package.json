@@ -35,7 +35,8 @@
     "send": "^0.16.1",
     "styled-components": "^2.2.1",
     "styled-system": "^1.0.7",
-    "titleize": "^1.0.0"
+    "titleize": "^1.0.0",
+    "victory": "^0.24.1"
   },
   "license": "MIT"
 }

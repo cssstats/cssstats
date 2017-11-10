@@ -25,6 +25,7 @@ import FontSizes from './FontSizes'
 import FontFamilies from './FontFamilies'
 import ZIndexes from './ZIndexes'
 import SpacingResets from './SpacingResets'
+import RulesetChart from './RulesetChart'
 
 class Stats extends React.Component {
   constructor (props) {
@@ -120,6 +121,10 @@ class Stats extends React.Component {
 
         <SpacingResets
           properties={properties}
+        />
+
+        <RulesetChart
+          data={rules.size.graph}
         />
 
         <Div mt={5}>
