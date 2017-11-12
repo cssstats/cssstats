@@ -27,6 +27,7 @@ import ZIndexes from './ZIndexes'
 import SpacingResets from './SpacingResets'
 import RulesetChart from './RulesetChart'
 import SpecificityChart from './SpecificityChart'
+import DeclarationsChart from './DeclarationsChart'
 
 class Stats extends React.Component {
   constructor (props) {
@@ -104,6 +105,7 @@ class Stats extends React.Component {
         <SpacingResets properties={properties} />
         <SpecificityChart data={selectors.specificity.graph} />
         <RulesetChart data={rules.size.graph} />
+        <DeclarationsChart data={declarations} />
 
         <Div mt={5}>
           <H2>Raw Css</H2>
