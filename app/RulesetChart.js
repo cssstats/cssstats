@@ -8,16 +8,11 @@ import {
 import LineChart from './LineChart'
 
 export default ({ data }) =>
-  <Div>
+  <Div mt={4}>
     <SectionTitle
-      mb={[-40, -70, -90]}
       title='Ruleset Size'
       description='Number of declarations per ruleset'
     />
 
-    <Div
-      m={[-20, -40, -80]}
-    >
-      <LineChart data={data} />
-    </Div>
+    <LineChart data={data} />
   </Div>

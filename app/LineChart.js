@@ -12,9 +12,18 @@ export default ({ data }) => {
   const max = getMax(data)
 
   return (
-    <VictoryChart height={225}>
+    <VictoryChart
+      height={225}
+      padding={{
+        top: 10,
+        left: 20,
+        right: 20,
+        bottom: 0
+      }}
+    >
       <VictoryAxis
         dependentAxis
+        tickFormat={t => t.toFixed(0)}
         tickValues={[
           max * .25, max * .5, max * .75, max
         ]}

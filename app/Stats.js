@@ -95,42 +95,15 @@ class Stats extends React.Component {
           properties={Object.keys(properties).length}
         />
 
-        <Declarations
-          properties={properties}
-        />
-
-        <Colors
-          title={`${colors.length} unique colors`}
-          colors={colors}
-        />
-
-        <BackgroundColors
-          backgroundColors={backgroundColors}
-        />
-
-        <FontSizes
-          fontSizes={properties['font-size'] || []}
-        />
-
-        <FontFamilies
-          fontFamilies={properties['font-family'] || []}
-        />
-
-        <ZIndexes
-          zIndexes={properties['z-index'] || []}
-        />
-
-        <SpacingResets
-          properties={properties}
-        />
-
-        <RulesetChart
-          data={rules.size.graph}
-        />
-
-        <SpecificityChart
-          data={selectors.specificity.graph}
-        />
+        <Declarations properties={properties} />
+        <Colors colors={colors} />
+        <BackgroundColors backgroundColors={backgroundColors} />
+        <FontSizes fontSizes={properties['font-size']} />
+        <FontFamilies fontFamilies={properties['font-family']} />
+        <ZIndexes zIndexes={properties['z-index']} />
+        <SpacingResets properties={properties} />
+        <SpecificityChart data={selectors.specificity.graph} />
+        <RulesetChart data={rules.size.graph} />
 
         <Div mt={5}>
           <H2>Raw Css</H2>

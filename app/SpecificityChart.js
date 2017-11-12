@@ -11,18 +11,11 @@ import LineChart from './LineChart'
 
 export default ({ data }) =>
   <Div>
-    <SectionTitle
-      mb={[-40, -70, -90]}
-      title='Specificity Graph'
-    />
+    <SectionTitle title='Specificity Graph' />
 
-    <Div
-      m={[-20, -40, -80]}
-    >
-      <LineChart data={data} />
-    </Div>
+    <LineChart data={data} />
 
-    <Text>
+    <Text ml={10} mt={2}>
       Base 10 specificity score for each selector by source order.
       Generally, lower scores and flatter curves are better for maintainability.
       <Link ml={2} href='https://csswizardry.com/2014/10/the-specificity-graph/'>Learn More</Link>
