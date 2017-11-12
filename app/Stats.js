@@ -26,6 +26,7 @@ import FontFamilies from './FontFamilies'
 import ZIndexes from './ZIndexes'
 import SpacingResets from './SpacingResets'
 import RulesetChart from './RulesetChart'
+import SpecificityChart from './SpecificityChart'
 
 class Stats extends React.Component {
   constructor (props) {
@@ -125,6 +126,10 @@ class Stats extends React.Component {
 
         <RulesetChart
           data={rules.size.graph}
+        />
+
+        <SpecificityChart
+          data={selectors.specificity.graph}
         />
 
         <Div mt={5}>

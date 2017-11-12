@@ -21,7 +21,11 @@ module.exports = handler => async (req, res) => {
 
   try {
     const css = await getCss(fullUrl)
-    const stats = cssstats(css.css)
+    const stats = cssstats(css.css, {
+      specificityGraph: true,
+      repeatedSelectors: true,
+      propertyResets: true
+    })
 
     css.css = cssbeautify(css.css)
 
