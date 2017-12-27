@@ -1,9 +1,6 @@
 import React from 'react'
 import getParam from 'get-query-param'
-
-import {
-  connect
-} from 'refunk'
+import connect from 'refunk'
 
 import {
   H1,
@@ -116,4 +113,4 @@ class Stats extends React.Component {
   }
 }
 
-export default connect()(Stats)
+export default connect(Stats)

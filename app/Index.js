@@ -1,8 +1,5 @@
 import React from 'react'
-
-import {
-  connect
-} from 'refunk'
+import connect from 'refunk'
 
 import {
   Route
@@ -90,4 +87,4 @@ const Index = props =>
     </Div>
   </Layout>
 
-export default connect()(Index)
+export default connect(Index)

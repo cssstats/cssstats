@@ -54,8 +54,8 @@
         "inline": false
       },
       "style": {
-        "textTransform": "${props.uppercase ? 'uppercase' : 'initial'}",
-        "display": "${props.inline ? 'inline-block' : 'block'}"
+        "textTransform": "${props.uppercase ? \"uppercase\" : \"initial\"}",
+        "display": "${props.inline ? \"inline-block\" : \"block\"}"
       },
       "examples": [
         "<Text>Hello</Text>",
