@@ -23,6 +23,7 @@ module.exports = function(obj) {
     { name: 'Stack Overflow', url: 'http://stackoverflow.com' },
     { name: 'New York Times', url: 'http://nytimes.com' },
     { name: 'The Guardian', url: 'http://theguardian.com' },
+    { name: 'Financial Times', url: 'https://www.ft.com' },
     { name: 'Mozilla', url: 'http://mozilla.org' },
     { name: 'Flickr', url: 'http://flickr.com' },
     { name: 'Soundcloud', url: 'http://soundcloud.com' },
