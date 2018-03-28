@@ -1,4 +1,4 @@
-# [Css Stats](https://cssstats.com)
+# [:bar_chart:](https://cssstats.com) Css Stats
 
 Potentially interesting stats on stylesheets.
 
@@ -17,7 +17,7 @@ npm i
 
 ```
 npm run dev
-open localhost:8000
+open http://localhost:3000
 ```
 
 #### Production
@@ -33,4 +33,4 @@ MIT
 
 ***
 
-> Built by [Compositor](https://compositor.io) with [Lab](https://compositor.io/lab)
+_Built by [Compositor](https://compositor.io) with [Lab](https://compositor.io/lab)_
