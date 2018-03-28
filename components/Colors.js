@@ -13,7 +13,7 @@ export default ({ colors = [] }) => (
     <Flex
       wrap="wrap"
       children={uniq(colors).map(color => (
-        <Div key={color} p={3} mb={2} w={[1 / 2, 1 / 3, 1 / 6]}>
+        <Div key={color} p={3} mb={2} w={[2 / 5, 1 / 3, 1 / 6]}>
           <Color color={color} />
         </Div>
       ))}

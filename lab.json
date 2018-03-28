@@ -1,5 +1,6 @@
 {
   "name": "cssstats",
+  "harmony": true,
   "library": "styled-components",
   "components": [
     {
