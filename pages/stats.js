@@ -1,5 +1,5 @@
 import React from "react"
-import getParam from "get-query-param"
+import fetch from "isomorphic-fetch"
 
 import {
   H1,
@@ -25,27 +25,20 @@ import RulesetChart from "../components/RulesetChart"
 import SpecificityChart from "../components/SpecificityChart"
 import DeclarationsChart from "../components/DeclarationsChart"
 
+const API_URL = `https://cssstats-api-cwyzvrikjl.now.sh`
+
 class Stats extends React.Component {
-  constructor(props) {
-    super()
+  static async getInitialProps({ query }) {
+    const { url } = query
 
-    this.state = {
-      url: props.url || getParam("url", window.location.href),
-      name: props.name || getParam("name", window.location.href)
-    }
-  }
+    const response = await fetch(`${API_URL}/stats?url=${url}`)
+    const stats = await response.json()
 
-  componentDidMount() {
-    const url = this.props.url || this.state.url
-
-    fetch(`/api/stats?url=${url}`)
-      .then(res => res.json())
-      .then(body => this.props.update(body))
-      .catch(console.error)
+    return { uri: url, ...stats }
   }
 
   render() {
-    const url = this.props.url || this.state.url
+    const url = this.props.uri
 
     if (!this.props.css) {
       return (

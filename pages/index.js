@@ -23,10 +23,10 @@ class Index extends Component {
   render() {
     return (
       <Layout>
-        <H1 children="Parse Css" />
+        <H1>Parse css</H1>
 
         <Form py={3}>
-          <Label children="URI" />
+          <Label>URL</Label>
           <Input
             mt={2}
             placeholder="Url, domain, or direct css link"
@@ -44,7 +44,7 @@ class Index extends Component {
         </Form>
 
         <Div mt={3}>
-          <H2 children="View Stats for Popular Sites" />
+          <H2>View stats for popular sites</H2>
 
           <LinkBox
             links={sites.map(link => {
@@ -61,7 +61,7 @@ class Index extends Component {
         </Div>
 
         <Div mt={4}>
-          <H2 children="View Stats for Popular Frameworks" />
+          <H2>View stats for popular frameworks</H2>
 
           <LinkBox
             links={frameworks.map(link => {
