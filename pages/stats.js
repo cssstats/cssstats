@@ -1,6 +1,5 @@
 import React from 'react'
 import getParam from 'get-query-param'
-import connect from 'refunk'
 
 import {
   H1,
@@ -10,21 +9,21 @@ import {
   Flex,
   Loading,
   SubHeader
-} from './library'
+} from '../components/library'
 
-import Layout from './Layout'
+import Layout from '../components/Layout'
 
-import SummaryStats from './SummaryStats'
-import Declarations from './Declarations'
-import Colors from './Colors'
-import BackgroundColors from './BackgroundColors'
-import FontSizes from './FontSizes'
-import FontFamilies from './FontFamilies'
-import ZIndexes from './ZIndexes'
-import SpacingResets from './SpacingResets'
-import RulesetChart from './RulesetChart'
-import SpecificityChart from './SpecificityChart'
-import DeclarationsChart from './DeclarationsChart'
+import SummaryStats from '../components/SummaryStats'
+import Declarations from '../components/Declarations'
+import Colors from '../components/Colors'
+import BackgroundColors from '../components/BackgroundColors'
+import FontSizes from '../components/FontSizes'
+import FontFamilies from '../components/FontFamilies'
+import ZIndexes from '../components/ZIndexes'
+import SpacingResets from '../components/SpacingResets'
+import RulesetChart from '../components/RulesetChart'
+import SpecificityChart from '../components/SpecificityChart'
+import DeclarationsChart from '../components/DeclarationsChart'
 
 class Stats extends React.Component {
   constructor (props) {
@@ -113,4 +112,4 @@ class Stats extends React.Component {
   }
 }
 
-export default connect(Stats)
+export default Stats

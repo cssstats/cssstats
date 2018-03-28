@@ -1,9 +1,4 @@
 import React from 'react'
-import connect from 'refunk'
-
-import {
-  Route
-} from 'react-router-dom'
 
 import {
   H1,
@@ -14,12 +9,11 @@ import {
   Input,
   Label,
   LinkBox
-} from './library'
+} from '../components/library'
 
-import Layout from './Layout'
+import Layout from '../components/Layout'
 
-import sites from './data/sites.json'
-import frameworks from './data/frameworks.json'
+import { sites, frameworks } from '../components/constants'
 
 const Index = props =>
   <Layout>
@@ -87,4 +81,4 @@ const Index = props =>
     </Div>
   </Layout>
 
-export default connect(Index)
+export default Index

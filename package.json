@@ -8,7 +8,7 @@
     "build": "next build",
     "dev": "next",
     "test": "lerna run test",
-    "prepare": "lab -d app/library --pkg",
+    "prepare": "lab -d components/library --pkg",
     "pretest": "lerna run bootstrap"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@compositor/lab": "^1.0.0-37",
-    "lerna": "^2.5.1"
+    "lerna": "^2.5.1",
+    "prettier": "^1.11.1"
   }
 }
