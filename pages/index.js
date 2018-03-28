@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Router from "next/router"
 
 import {
   H1,
@@ -37,8 +38,7 @@ class Index extends Component {
             children="Go"
             onClick={e => {
               e.preventDefault()
-
-              console.log(this.state.urlInput)
+              Router.push(`/stats?url=${this.state.urlInput}`)
             }}
           />
         </Form>

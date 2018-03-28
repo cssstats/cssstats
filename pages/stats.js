@@ -25,7 +25,7 @@ import RulesetChart from "../components/RulesetChart"
 import SpecificityChart from "../components/SpecificityChart"
 import DeclarationsChart from "../components/DeclarationsChart"
 
-const API_URL = `https://cssstats-api-cwyzvrikjl.now.sh`
+const API_URL = "https://cssstats-api-xgvyurhnqo.now.sh"
 
 class Stats extends React.Component {
   static async getInitialProps({ query }) {

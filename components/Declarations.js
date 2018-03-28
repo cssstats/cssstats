@@ -41,7 +41,7 @@ export default ({ properties }) => {
         mb={4}
         wrap="wrap"
         children={metrics.map(metric => (
-          <Flex w={[1 / 2, 1 / 3, 1 / 6]}>
+          <Flex key={metric.name} w={[1 / 2, 1 / 3, 1 / 6]}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
