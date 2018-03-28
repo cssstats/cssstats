@@ -5,11 +5,12 @@
   "version": "2.0.0",
   "scripts": {
     "start": "next start",
-    "build": "next build",
+    "build": "npm run build:components && next build",
+    "build:components": "lab -d components/library --pkg",
     "dev": "next",
     "format": "prettier --no-semi --write {api,components,packages,pages}/**/*.js",
     "test": "lerna run test",
-    "prepare": "lab -d components/library --pkg",
+    "prepare": "npm run build:components",
     "pretest": "lerna run bootstrap"
   },
   "dependencies": {
