@@ -2,9 +2,11 @@
   "name": "cssstats-app",
   "version": "2.0.0",
   "scripts": {
+    "start": "micro",
     "build": "lab -d app/library --pkg && x0 build app/App -d public",
     "dev": "x0 dev app/App -o # | lab -d app/library -w | micro",
-    "start": "micro"
+    "test": "lerna run test",
+    "pretest": "lerna run bootstrap"
   },
   "x0": {
     "proxy": {
