@@ -1,47 +1,34 @@
 {
-  "name": "cssstats-app",
+  "name": "cssstats",
+  "private": true,
+  "license": "MIT",
   "version": "2.0.0",
   "scripts": {
-    "start": "micro",
-    "build": "lab -d app/library --pkg && x0 build app/App -d public",
-    "dev": "x0 dev app/App -o # | lab -d app/library -w | micro",
+    "start": "next start",
+    "build": "next build",
+    "dev": "next",
     "test": "lerna run test",
+    "prepare": "lab -d app/library --pkg",
     "pretest": "lerna run bootstrap"
   },
-  "x0": {
-    "proxy": {
-      "/api": "http://localhost:3000"
-    }
-  },
   "dependencies": {
-    "@compositor/lab": "^1.0.0-37",
-    "@compositor/x0": "^3.0.3",
     "css-unit-sort": "^1.1.1",
-    "cssbeautify": "^0.3.1",
-    "cssstats": "^3.1.0",
-    "finalhandler": "^1.1.0",
-    "get-css": "^1.2.5",
-    "get-query-param": "^2.0.3",
     "history": "^4.7.2",
     "humanize-plus": "^1.8.2",
-    "is-present": "^1.0.0",
-    "is-url": "^1.2.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash.uniq": "^4.5.0",
-    "micro": "^9.0.2",
+    "next": "^5.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "refunk": "^2.1.0",
-    "router": "^1.3.2",
-    "send": "^0.16.1",
     "styled-components": "^2.4.0",
     "styled-system": "^1.1.1",
     "titleize": "^1.0.0",
     "victory": "^0.24.3"
   },
-  "license": "MIT",
   "devDependencies": {
+    "@compositor/lab": "^1.0.0-37",
     "lerna": "^2.5.1"
   }
 }
