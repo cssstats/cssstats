@@ -1,0 +1,27 @@
+{
+  "name": "has-pseudo-class",
+  "description": "Determine whether a selector contains a pseudo-class",
+  "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
+  "version": "1.0.1",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "cssstats/has-pseudo-class",
+  "keywords": [
+    "css",
+    "pseudo",
+    "class",
+    "has"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "pseudo-classes": "1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

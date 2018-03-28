@@ -1,0 +1,31 @@
+{
+  "name": "has-class-selector",
+  "description": "Check if a CSS selector string has a class.",
+  "author": "John Otander",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/has-class-selector.git"
+  },
+  "keywords": [
+    "css",
+    "class",
+    "selector"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/has-class-selector/issues"
+  },
+  "homepage": "https://github.com/johnotander/has-class-selector",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

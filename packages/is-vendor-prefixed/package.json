@@ -1,0 +1,28 @@
+{
+  "name": "is-vendor-prefixed",
+  "description": "Check whether a property is vendor prefixed",
+  "author": "John Otander",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": "cssstats/is-vendor-prefixed",
+  "keywords": [
+    "css",
+    "vendor",
+    "prefix",
+    "prefixes",
+    "vendor-prefixes"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "vendor-prefixes": "1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}

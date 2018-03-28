@@ -1,0 +1,3799 @@
+{
+  "size": 21984,
+  "gzipSize": 4954,
+  "humanizedSize": "21KB",
+  "humanizedGzipSize": "5KB",
+  "rules": {
+    "total": 511,
+    "size": {
+      "graph": [
+        6,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        5,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        1,
+        6,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max": 6,
+      "average": 1.086105675146771
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".fa-stack",
+        "declarations": 6
+      },
+      {
+        "selector": ".fa",
+        "declarations": 6
+      },
+      {
+        "selector": ".fa-li",
+        "declarations": 5
+      },
+      {
+        "selector": ".fa-stack-1x,.fa-stack-2x",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-flip-vertical",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-flip-horizontal",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-rotate-270",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-rotate-180",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-rotate-90",
+        "declarations": 4
+      },
+      {
+        "selector": ".fa-border",
+        "declarations": 3
+      },
+      {
+        "selector": ".fa-ul",
+        "declarations": 3
+      },
+      {
+        "selector": ".fa-lg",
+        "declarations": 3
+      },
+      {
+        "selector": "100%",
+        "declarations": 2
+      },
+      {
+        "selector": "0%",
+        "declarations": 2
+      },
+      {
+        "selector": "100%",
+        "declarations": 2
+      },
+      {
+        "selector": "0%",
+        "declarations": 2
+      },
+      {
+        "selector": ".fa-spin",
+        "declarations": 2
+      },
+      {
+        "selector": ".fa-fw",
+        "declarations": 2
+      },
+      {
+        "selector": ".fa-meanpath:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-shekel:before,.fa-sheqel:before,.fa-ils:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angellist:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ioxhost:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bicycle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-on:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-off:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-lastfm-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-lastfm:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-line-chart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pie-chart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-area-chart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-birthday-cake:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paint-brush:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-eyedropper:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-at:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-copyright:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-trash:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bell-slash-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bell-slash:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-stripe:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-paypal:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-amex:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-discover:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-mastercard:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cc-visa:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-google-wallet:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paypal:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-calculator:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-wifi:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-newspaper-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-yelp:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-twitch:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-slideshare:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plug:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-binoculars:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tty:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-soccer-ball-o:before,.fa-futbol-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bomb:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-share-alt-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-share-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sliders:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paragraph:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-header:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-circle-thin:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-history:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-send-o:before,.fa-paper-plane-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-send:before,.fa-paper-plane:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-wechat:before,.fa-weixin:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-qq:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tencent-weibo:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hacker-news:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-git:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-git-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ge:before,.fa-empire:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ra:before,.fa-rebel:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-circle-o-notch:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-life-bouy:before,.fa-life-buoy:before,.fa-life-saver:before,.fa-support:before,.fa-life-ring:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-jsfiddle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-codepen:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-vine:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-code-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-movie-o:before,.fa-file-video-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-sound-o:before,.fa-file-audio-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-zip-o:before,.fa-file-archive-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-photo-o:before,.fa-file-picture-o:before,.fa-file-image-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-powerpoint-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-excel-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-word-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-pdf-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-database:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-soundcloud:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-deviantart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-spotify:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tree:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cab:before,.fa-taxi:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-automobile:before,.fa-car:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-recycle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-steam-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-steam:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-behance-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-behance:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cubes:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cube:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-spoon:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paw:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-child:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-building:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fax:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-language:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-joomla:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-drupal:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pied-piper-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pied-piper:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-digg:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-delicious:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stumbleupon:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stumbleupon-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-reddit-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-reddit:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-google:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-yahoo:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-mortar-board:before,.fa-graduation-cap:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-institution:before,.fa-bank:before,.fa-university:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-openid:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-wordpress:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-envelope-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-slack:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-space-shuttle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plus-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-turkish-lira:before,.fa-try:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-vimeo-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-wheelchair:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dot-circle-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-left:before,.fa-caret-square-o-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-o-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-o-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stack-exchange:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pagelines:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-renren:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-weibo:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-vk:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bug:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-archive:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-moon-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sun-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gittip:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-male:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-female:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-trello:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-foursquare:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-skype:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dribbble:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-linux:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-android:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-windows:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-apple:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-long-arrow-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-long-arrow-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-long-arrow-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-long-arrow-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tumblr-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tumblr:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bitbucket-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bitbucket:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-adn:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flickr:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-instagram:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stack-overflow:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dropbox:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-youtube-play:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-xing-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-xing:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-youtube:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-youtube-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-thumbs-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-thumbs-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-numeric-desc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-numeric-asc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-amount-desc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-amount-asc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-alpha-desc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-alpha-asc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-text:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bitcoin:before,.fa-btc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-won:before,.fa-krw:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ruble:before,.fa-rouble:before,.fa-rub:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rupee:before,.fa-inr:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dollar:before,.fa-usd:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gbp:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-euro:before,.fa-eur:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-right:before,.fa-caret-square-o-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-up:before,.fa-caret-square-o-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-toggle-down:before,.fa-caret-square-o-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-compass:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-share-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-external-link-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pencil-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-check-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-level-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-level-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-minus-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-minus-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ticket:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-play-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rss-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ellipsis-v:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ellipsis-h:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bullseye:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-unlock-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-anchor:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-css3:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-html5:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-circle-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-circle-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-circle-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-circle-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-maxcdn:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rocket:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fire-extinguisher:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-calendar-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-shield:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-microphone-slash:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-microphone:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-puzzle-piece:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-eraser:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-subscript:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-superscript:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-exclamation:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-info:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-question:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-unlink:before,.fa-chain-broken:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-code-fork:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-crop:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-location-arrow:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-mail-reply-all:before,.fa-reply-all:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-code:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-terminal:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flag-checkered:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flag-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-keyboard-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gamepad:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-meh-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-frown-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-smile-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-folder-open-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-folder-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-github-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-mail-reply:before,.fa-reply:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-spinner:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-quote-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-quote-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-circle-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-mobile-phone:before,.fa-mobile:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tablet:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-laptop:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-desktop:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-double-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-double-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-double-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-angle-double-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plus-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-h-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-beer:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fighter-jet:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-medkit:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ambulance:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hospital-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-building-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-text-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cutlery:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-coffee:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bell-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-suitcase:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stethoscope:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-user-md:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cloud-upload:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cloud-download:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-exchange:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-lightbulb-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paste:before,.fa-clipboard:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-umbrella:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sitemap:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flash:before,.fa-bolt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-comments-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-comment-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dashboard:before,.fa-tachometer:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-legal:before,.fa-gavel:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rotate-left:before,.fa-undo:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-linkedin:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-envelope:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-up:before,.fa-sort-asc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sort-down:before,.fa-sort-desc:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-unsorted:before,.fa-sort:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-columns:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-caret-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-caret-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-caret-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-caret-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-money:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-google-plus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-google-plus-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pinterest-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pinterest:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-truck:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-magic:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-table:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-underline:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-strikethrough:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-list-ol:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-list-ul:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-navicon:before,.fa-reorder:before,.fa-bars:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-save:before,.fa-floppy-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-paperclip:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-copy:before,.fa-files-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cut:before,.fa-scissors:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flask:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-cloud:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chain:before,.fa-link:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-group:before,.fa-users:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrows-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-briefcase:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-filter:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tasks:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-wrench:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-globe:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hand-o-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hand-o-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hand-o-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hand-o-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-certificate:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bell:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bullhorn:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-hdd-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rss:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-credit-card:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-unlock:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-github:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-facebook:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-twitter:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-phone-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bookmark-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-phone:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-lemon-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-upload:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-github-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-trophy:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sign-in:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-external-link:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-thumb-tack:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-linkedin-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-sign-out:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-heart-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-star-half:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-thumbs-o-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-thumbs-o-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-comments:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gears:before,.fa-cogs:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-key:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-camera-retro:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-facebook-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-twitter-square:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bar-chart-o:before,.fa-bar-chart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrows-h:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrows-v:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-folder-open:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-folder:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-shopping-cart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-retweet:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-magnet:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-comment:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-random:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-calendar:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plane:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-warning:before,.fa-exclamation-triangle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-eye-slash:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-eye:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fire:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-leaf:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gift:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-exclamation-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-asterisk:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-minus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-compress:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-expand:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-mail-forward:before,.fa-share:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ban:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-check-circle-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-times-circle-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-crosshairs:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-info-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-question-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-check-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-times-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-minus-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-plus-circle:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-chevron-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-eject:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-step-forward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fast-forward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-forward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stop:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pause:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-play:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-backward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-fast-backward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-step-backward:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrows:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-check-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-share-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-edit:before,.fa-pencil-square-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tint:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-adjust:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-map-marker:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-pencil:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-photo:before,.fa-image:before,.fa-picture-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-video-camera:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-indent:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-dedent:before,.fa-outdent:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-list:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-align-justify:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-align-right:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-align-center:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-align-left:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-text-width:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-text-height:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-italic:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bold:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-font:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-camera:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-print:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-bookmark:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-book:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tags:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-tag:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-barcode:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-qrcode:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-volume-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-volume-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-volume-off:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-headphones:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-flag:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-lock:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-list-alt:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-refresh:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-rotate-right:before,.fa-repeat:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-play-circle-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-inbox:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-o-up:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-arrow-circle-o-down:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-download:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-road:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-clock-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-file-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-home:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-trash-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-gear:before,.fa-cog:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-signal:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-power-off:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-search-minus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-search-plus:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-remove:before,.fa-close:before,.fa-times:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-check:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-th-list:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-th:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-th-large:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-film:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-user:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-star-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-star:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-heart:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-envelope-o:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-search:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-music:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-glass:before",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-inverse",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stack-2x",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-stack-1x",
+        "declarations": 1
+      },
+      {
+        "selector": ":root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-flip-horizontal,:root .fa-flip-vertical",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa.pull-right",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa.pull-left",
+        "declarations": 1
+      },
+      {
+        "selector": ".pull-left",
+        "declarations": 1
+      },
+      {
+        "selector": ".pull-right",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-li.fa-lg",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-ul>li",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-5x",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-4x",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-3x",
+        "declarations": 1
+      },
+      {
+        "selector": ".fa-2x",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 586,
+    "type": 1,
+    "class": 582,
+    "id": 0,
+    "pseudoClass": 5,
+    "pseudoElement": 549,
+    "values": [
+      ".fa",
+      ".fa-lg",
+      ".fa-2x",
+      ".fa-3x",
+      ".fa-4x",
+      ".fa-5x",
+      ".fa-fw",
+      ".fa-ul",
+      ".fa-ul>li",
+      ".fa-li",
+      ".fa-li.fa-lg",
+      ".fa-border",
+      ".pull-right",
+      ".pull-left",
+      ".fa.pull-left",
+      ".fa.pull-right",
+      ".fa-spin",
+      "0%",
+      "100%",
+      "0%",
+      "100%",
+      ".fa-rotate-90",
+      ".fa-rotate-180",
+      ".fa-rotate-270",
+      ".fa-flip-horizontal",
+      ".fa-flip-vertical",
+      ":root .fa-rotate-90",
+      ":root .fa-rotate-180",
+      ":root .fa-rotate-270",
+      ":root .fa-flip-horizontal",
+      ":root .fa-flip-vertical",
+      ".fa-stack",
+      ".fa-stack-1x",
+      ".fa-stack-2x",
+      ".fa-stack-1x",
+      ".fa-stack-2x",
+      ".fa-inverse",
+      ".fa-glass:before",
+      ".fa-music:before",
+      ".fa-search:before",
+      ".fa-envelope-o:before",
+      ".fa-heart:before",
+      ".fa-star:before",
+      ".fa-star-o:before",
+      ".fa-user:before",
+      ".fa-film:before",
+      ".fa-th-large:before",
+      ".fa-th:before",
+      ".fa-th-list:before",
+      ".fa-check:before",
+      ".fa-remove:before",
+      ".fa-close:before",
+      ".fa-times:before",
+      ".fa-search-plus:before",
+      ".fa-search-minus:before",
+      ".fa-power-off:before",
+      ".fa-signal:before",
+      ".fa-gear:before",
+      ".fa-cog:before",
+      ".fa-trash-o:before",
+      ".fa-home:before",
+      ".fa-file-o:before",
+      ".fa-clock-o:before",
+      ".fa-road:before",
+      ".fa-download:before",
+      ".fa-arrow-circle-o-down:before",
+      ".fa-arrow-circle-o-up:before",
+      ".fa-inbox:before",
+      ".fa-play-circle-o:before",
+      ".fa-rotate-right:before",
+      ".fa-repeat:before",
+      ".fa-refresh:before",
+      ".fa-list-alt:before",
+      ".fa-lock:before",
+      ".fa-flag:before",
+      ".fa-headphones:before",
+      ".fa-volume-off:before",
+      ".fa-volume-down:before",
+      ".fa-volume-up:before",
+      ".fa-qrcode:before",
+      ".fa-barcode:before",
+      ".fa-tag:before",
+      ".fa-tags:before",
+      ".fa-book:before",
+      ".fa-bookmark:before",
+      ".fa-print:before",
+      ".fa-camera:before",
+      ".fa-font:before",
+      ".fa-bold:before",
+      ".fa-italic:before",
+      ".fa-text-height:before",
+      ".fa-text-width:before",
+      ".fa-align-left:before",
+      ".fa-align-center:before",
+      ".fa-align-right:before",
+      ".fa-align-justify:before",
+      ".fa-list:before",
+      ".fa-dedent:before",
+      ".fa-outdent:before",
+      ".fa-indent:before",
+      ".fa-video-camera:before",
+      ".fa-photo:before",
+      ".fa-image:before",
+      ".fa-picture-o:before",
+      ".fa-pencil:before",
+      ".fa-map-marker:before",
+      ".fa-adjust:before",
+      ".fa-tint:before",
+      ".fa-edit:before",
+      ".fa-pencil-square-o:before",
+      ".fa-share-square-o:before",
+      ".fa-check-square-o:before",
+      ".fa-arrows:before",
+      ".fa-step-backward:before",
+      ".fa-fast-backward:before",
+      ".fa-backward:before",
+      ".fa-play:before",
+      ".fa-pause:before",
+      ".fa-stop:before",
+      ".fa-forward:before",
+      ".fa-fast-forward:before",
+      ".fa-step-forward:before",
+      ".fa-eject:before",
+      ".fa-chevron-left:before",
+      ".fa-chevron-right:before",
+      ".fa-plus-circle:before",
+      ".fa-minus-circle:before",
+      ".fa-times-circle:before",
+      ".fa-check-circle:before",
+      ".fa-question-circle:before",
+      ".fa-info-circle:before",
+      ".fa-crosshairs:before",
+      ".fa-times-circle-o:before",
+      ".fa-check-circle-o:before",
+      ".fa-ban:before",
+      ".fa-arrow-left:before",
+      ".fa-arrow-right:before",
+      ".fa-arrow-up:before",
+      ".fa-arrow-down:before",
+      ".fa-mail-forward:before",
+      ".fa-share:before",
+      ".fa-expand:before",
+      ".fa-compress:before",
+      ".fa-plus:before",
+      ".fa-minus:before",
+      ".fa-asterisk:before",
+      ".fa-exclamation-circle:before",
+      ".fa-gift:before",
+      ".fa-leaf:before",
+      ".fa-fire:before",
+      ".fa-eye:before",
+      ".fa-eye-slash:before",
+      ".fa-warning:before",
+      ".fa-exclamation-triangle:before",
+      ".fa-plane:before",
+      ".fa-calendar:before",
+      ".fa-random:before",
+      ".fa-comment:before",
+      ".fa-magnet:before",
+      ".fa-chevron-up:before",
+      ".fa-chevron-down:before",
+      ".fa-retweet:before",
+      ".fa-shopping-cart:before",
+      ".fa-folder:before",
+      ".fa-folder-open:before",
+      ".fa-arrows-v:before",
+      ".fa-arrows-h:before",
+      ".fa-bar-chart-o:before",
+      ".fa-bar-chart:before",
+      ".fa-twitter-square:before",
+      ".fa-facebook-square:before",
+      ".fa-camera-retro:before",
+      ".fa-key:before",
+      ".fa-gears:before",
+      ".fa-cogs:before",
+      ".fa-comments:before",
+      ".fa-thumbs-o-up:before",
+      ".fa-thumbs-o-down:before",
+      ".fa-star-half:before",
+      ".fa-heart-o:before",
+      ".fa-sign-out:before",
+      ".fa-linkedin-square:before",
+      ".fa-thumb-tack:before",
+      ".fa-external-link:before",
+      ".fa-sign-in:before",
+      ".fa-trophy:before",
+      ".fa-github-square:before",
+      ".fa-upload:before",
+      ".fa-lemon-o:before",
+      ".fa-phone:before",
+      ".fa-square-o:before",
+      ".fa-bookmark-o:before",
+      ".fa-phone-square:before",
+      ".fa-twitter:before",
+      ".fa-facebook:before",
+      ".fa-github:before",
+      ".fa-unlock:before",
+      ".fa-credit-card:before",
+      ".fa-rss:before",
+      ".fa-hdd-o:before",
+      ".fa-bullhorn:before",
+      ".fa-bell:before",
+      ".fa-certificate:before",
+      ".fa-hand-o-right:before",
+      ".fa-hand-o-left:before",
+      ".fa-hand-o-up:before",
+      ".fa-hand-o-down:before",
+      ".fa-arrow-circle-left:before",
+      ".fa-arrow-circle-right:before",
+      ".fa-arrow-circle-up:before",
+      ".fa-arrow-circle-down:before",
+      ".fa-globe:before",
+      ".fa-wrench:before",
+      ".fa-tasks:before",
+      ".fa-filter:before",
+      ".fa-briefcase:before",
+      ".fa-arrows-alt:before",
+      ".fa-group:before",
+      ".fa-users:before",
+      ".fa-chain:before",
+      ".fa-link:before",
+      ".fa-cloud:before",
+      ".fa-flask:before",
+      ".fa-cut:before",
+      ".fa-scissors:before",
+      ".fa-copy:before",
+      ".fa-files-o:before",
+      ".fa-paperclip:before",
+      ".fa-save:before",
+      ".fa-floppy-o:before",
+      ".fa-square:before",
+      ".fa-navicon:before",
+      ".fa-reorder:before",
+      ".fa-bars:before",
+      ".fa-list-ul:before",
+      ".fa-list-ol:before",
+      ".fa-strikethrough:before",
+      ".fa-underline:before",
+      ".fa-table:before",
+      ".fa-magic:before",
+      ".fa-truck:before",
+      ".fa-pinterest:before",
+      ".fa-pinterest-square:before",
+      ".fa-google-plus-square:before",
+      ".fa-google-plus:before",
+      ".fa-money:before",
+      ".fa-caret-down:before",
+      ".fa-caret-up:before",
+      ".fa-caret-left:before",
+      ".fa-caret-right:before",
+      ".fa-columns:before",
+      ".fa-unsorted:before",
+      ".fa-sort:before",
+      ".fa-sort-down:before",
+      ".fa-sort-desc:before",
+      ".fa-sort-up:before",
+      ".fa-sort-asc:before",
+      ".fa-envelope:before",
+      ".fa-linkedin:before",
+      ".fa-rotate-left:before",
+      ".fa-undo:before",
+      ".fa-legal:before",
+      ".fa-gavel:before",
+      ".fa-dashboard:before",
+      ".fa-tachometer:before",
+      ".fa-comment-o:before",
+      ".fa-comments-o:before",
+      ".fa-flash:before",
+      ".fa-bolt:before",
+      ".fa-sitemap:before",
+      ".fa-umbrella:before",
+      ".fa-paste:before",
+      ".fa-clipboard:before",
+      ".fa-lightbulb-o:before",
+      ".fa-exchange:before",
+      ".fa-cloud-download:before",
+      ".fa-cloud-upload:before",
+      ".fa-user-md:before",
+      ".fa-stethoscope:before",
+      ".fa-suitcase:before",
+      ".fa-bell-o:before",
+      ".fa-coffee:before",
+      ".fa-cutlery:before",
+      ".fa-file-text-o:before",
+      ".fa-building-o:before",
+      ".fa-hospital-o:before",
+      ".fa-ambulance:before",
+      ".fa-medkit:before",
+      ".fa-fighter-jet:before",
+      ".fa-beer:before",
+      ".fa-h-square:before",
+      ".fa-plus-square:before",
+      ".fa-angle-double-left:before",
+      ".fa-angle-double-right:before",
+      ".fa-angle-double-up:before",
+      ".fa-angle-double-down:before",
+      ".fa-angle-left:before",
+      ".fa-angle-right:before",
+      ".fa-angle-up:before",
+      ".fa-angle-down:before",
+      ".fa-desktop:before",
+      ".fa-laptop:before",
+      ".fa-tablet:before",
+      ".fa-mobile-phone:before",
+      ".fa-mobile:before",
+      ".fa-circle-o:before",
+      ".fa-quote-left:before",
+      ".fa-quote-right:before",
+      ".fa-spinner:before",
+      ".fa-circle:before",
+      ".fa-mail-reply:before",
+      ".fa-reply:before",
+      ".fa-github-alt:before",
+      ".fa-folder-o:before",
+      ".fa-folder-open-o:before",
+      ".fa-smile-o:before",
+      ".fa-frown-o:before",
+      ".fa-meh-o:before",
+      ".fa-gamepad:before",
+      ".fa-keyboard-o:before",
+      ".fa-flag-o:before",
+      ".fa-flag-checkered:before",
+      ".fa-terminal:before",
+      ".fa-code:before",
+      ".fa-mail-reply-all:before",
+      ".fa-reply-all:before",
+      ".fa-star-half-empty:before",
+      ".fa-star-half-full:before",
+      ".fa-star-half-o:before",
+      ".fa-location-arrow:before",
+      ".fa-crop:before",
+      ".fa-code-fork:before",
+      ".fa-unlink:before",
+      ".fa-chain-broken:before",
+      ".fa-question:before",
+      ".fa-info:before",
+      ".fa-exclamation:before",
+      ".fa-superscript:before",
+      ".fa-subscript:before",
+      ".fa-eraser:before",
+      ".fa-puzzle-piece:before",
+      ".fa-microphone:before",
+      ".fa-microphone-slash:before",
+      ".fa-shield:before",
+      ".fa-calendar-o:before",
+      ".fa-fire-extinguisher:before",
+      ".fa-rocket:before",
+      ".fa-maxcdn:before",
+      ".fa-chevron-circle-left:before",
+      ".fa-chevron-circle-right:before",
+      ".fa-chevron-circle-up:before",
+      ".fa-chevron-circle-down:before",
+      ".fa-html5:before",
+      ".fa-css3:before",
+      ".fa-anchor:before",
+      ".fa-unlock-alt:before",
+      ".fa-bullseye:before",
+      ".fa-ellipsis-h:before",
+      ".fa-ellipsis-v:before",
+      ".fa-rss-square:before",
+      ".fa-play-circle:before",
+      ".fa-ticket:before",
+      ".fa-minus-square:before",
+      ".fa-minus-square-o:before",
+      ".fa-level-up:before",
+      ".fa-level-down:before",
+      ".fa-check-square:before",
+      ".fa-pencil-square:before",
+      ".fa-external-link-square:before",
+      ".fa-share-square:before",
+      ".fa-compass:before",
+      ".fa-toggle-down:before",
+      ".fa-caret-square-o-down:before",
+      ".fa-toggle-up:before",
+      ".fa-caret-square-o-up:before",
+      ".fa-toggle-right:before",
+      ".fa-caret-square-o-right:before",
+      ".fa-euro:before",
+      ".fa-eur:before",
+      ".fa-gbp:before",
+      ".fa-dollar:before",
+      ".fa-usd:before",
+      ".fa-rupee:before",
+      ".fa-inr:before",
+      ".fa-cny:before",
+      ".fa-rmb:before",
+      ".fa-yen:before",
+      ".fa-jpy:before",
+      ".fa-ruble:before",
+      ".fa-rouble:before",
+      ".fa-rub:before",
+      ".fa-won:before",
+      ".fa-krw:before",
+      ".fa-bitcoin:before",
+      ".fa-btc:before",
+      ".fa-file:before",
+      ".fa-file-text:before",
+      ".fa-sort-alpha-asc:before",
+      ".fa-sort-alpha-desc:before",
+      ".fa-sort-amount-asc:before",
+      ".fa-sort-amount-desc:before",
+      ".fa-sort-numeric-asc:before",
+      ".fa-sort-numeric-desc:before",
+      ".fa-thumbs-up:before",
+      ".fa-thumbs-down:before",
+      ".fa-youtube-square:before",
+      ".fa-youtube:before",
+      ".fa-xing:before",
+      ".fa-xing-square:before",
+      ".fa-youtube-play:before",
+      ".fa-dropbox:before",
+      ".fa-stack-overflow:before",
+      ".fa-instagram:before",
+      ".fa-flickr:before",
+      ".fa-adn:before",
+      ".fa-bitbucket:before",
+      ".fa-bitbucket-square:before",
+      ".fa-tumblr:before",
+      ".fa-tumblr-square:before",
+      ".fa-long-arrow-down:before",
+      ".fa-long-arrow-up:before",
+      ".fa-long-arrow-left:before",
+      ".fa-long-arrow-right:before",
+      ".fa-apple:before",
+      ".fa-windows:before",
+      ".fa-android:before",
+      ".fa-linux:before",
+      ".fa-dribbble:before",
+      ".fa-skype:before",
+      ".fa-foursquare:before",
+      ".fa-trello:before",
+      ".fa-female:before",
+      ".fa-male:before",
+      ".fa-gittip:before",
+      ".fa-sun-o:before",
+      ".fa-moon-o:before",
+      ".fa-archive:before",
+      ".fa-bug:before",
+      ".fa-vk:before",
+      ".fa-weibo:before",
+      ".fa-renren:before",
+      ".fa-pagelines:before",
+      ".fa-stack-exchange:before",
+      ".fa-arrow-circle-o-right:before",
+      ".fa-arrow-circle-o-left:before",
+      ".fa-toggle-left:before",
+      ".fa-caret-square-o-left:before",
+      ".fa-dot-circle-o:before",
+      ".fa-wheelchair:before",
+      ".fa-vimeo-square:before",
+      ".fa-turkish-lira:before",
+      ".fa-try:before",
+      ".fa-plus-square-o:before",
+      ".fa-space-shuttle:before",
+      ".fa-slack:before",
+      ".fa-envelope-square:before",
+      ".fa-wordpress:before",
+      ".fa-openid:before",
+      ".fa-institution:before",
+      ".fa-bank:before",
+      ".fa-university:before",
+      ".fa-mortar-board:before",
+      ".fa-graduation-cap:before",
+      ".fa-yahoo:before",
+      ".fa-google:before",
+      ".fa-reddit:before",
+      ".fa-reddit-square:before",
+      ".fa-stumbleupon-circle:before",
+      ".fa-stumbleupon:before",
+      ".fa-delicious:before",
+      ".fa-digg:before",
+      ".fa-pied-piper:before",
+      ".fa-pied-piper-alt:before",
+      ".fa-drupal:before",
+      ".fa-joomla:before",
+      ".fa-language:before",
+      ".fa-fax:before",
+      ".fa-building:before",
+      ".fa-child:before",
+      ".fa-paw:before",
+      ".fa-spoon:before",
+      ".fa-cube:before",
+      ".fa-cubes:before",
+      ".fa-behance:before",
+      ".fa-behance-square:before",
+      ".fa-steam:before",
+      ".fa-steam-square:before",
+      ".fa-recycle:before",
+      ".fa-automobile:before",
+      ".fa-car:before",
+      ".fa-cab:before",
+      ".fa-taxi:before",
+      ".fa-tree:before",
+      ".fa-spotify:before",
+      ".fa-deviantart:before",
+      ".fa-soundcloud:before",
+      ".fa-database:before",
+      ".fa-file-pdf-o:before",
+      ".fa-file-word-o:before",
+      ".fa-file-excel-o:before",
+      ".fa-file-powerpoint-o:before",
+      ".fa-file-photo-o:before",
+      ".fa-file-picture-o:before",
+      ".fa-file-image-o:before",
+      ".fa-file-zip-o:before",
+      ".fa-file-archive-o:before",
+      ".fa-file-sound-o:before",
+      ".fa-file-audio-o:before",
+      ".fa-file-movie-o:before",
+      ".fa-file-video-o:before",
+      ".fa-file-code-o:before",
+      ".fa-vine:before",
+      ".fa-codepen:before",
+      ".fa-jsfiddle:before",
+      ".fa-life-bouy:before",
+      ".fa-life-buoy:before",
+      ".fa-life-saver:before",
+      ".fa-support:before",
+      ".fa-life-ring:before",
+      ".fa-circle-o-notch:before",
+      ".fa-ra:before",
+      ".fa-rebel:before",
+      ".fa-ge:before",
+      ".fa-empire:before",
+      ".fa-git-square:before",
+      ".fa-git:before",
+      ".fa-hacker-news:before",
+      ".fa-tencent-weibo:before",
+      ".fa-qq:before",
+      ".fa-wechat:before",
+      ".fa-weixin:before",
+      ".fa-send:before",
+      ".fa-paper-plane:before",
+      ".fa-send-o:before",
+      ".fa-paper-plane-o:before",
+      ".fa-history:before",
+      ".fa-circle-thin:before",
+      ".fa-header:before",
+      ".fa-paragraph:before",
+      ".fa-sliders:before",
+      ".fa-share-alt:before",
+      ".fa-share-alt-square:before",
+      ".fa-bomb:before",
+      ".fa-soccer-ball-o:before",
+      ".fa-futbol-o:before",
+      ".fa-tty:before",
+      ".fa-binoculars:before",
+      ".fa-plug:before",
+      ".fa-slideshare:before",
+      ".fa-twitch:before",
+      ".fa-yelp:before",
+      ".fa-newspaper-o:before",
+      ".fa-wifi:before",
+      ".fa-calculator:before",
+      ".fa-paypal:before",
+      ".fa-google-wallet:before",
+      ".fa-cc-visa:before",
+      ".fa-cc-mastercard:before",
+      ".fa-cc-discover:before",
+      ".fa-cc-amex:before",
+      ".fa-cc-paypal:before",
+      ".fa-cc-stripe:before",
+      ".fa-bell-slash:before",
+      ".fa-bell-slash-o:before",
+      ".fa-trash:before",
+      ".fa-copyright:before",
+      ".fa-at:before",
+      ".fa-eyedropper:before",
+      ".fa-paint-brush:before",
+      ".fa-birthday-cake:before",
+      ".fa-area-chart:before",
+      ".fa-pie-chart:before",
+      ".fa-line-chart:before",
+      ".fa-lastfm:before",
+      ".fa-lastfm-square:before",
+      ".fa-toggle-off:before",
+      ".fa-toggle-on:before",
+      ".fa-bicycle:before",
+      ".fa-bus:before",
+      ".fa-ioxhost:before",
+      ".fa-angellist:before",
+      ".fa-cc:before",
+      ".fa-shekel:before",
+      ".fa-sheqel:before",
+      ".fa-ils:before",
+      ".fa-meanpath:before"
+    ],
+    "specificity": {
+      "max": 20,
+      "average": 11.013651877133105
+    }
+  },
+  "declarations": {
+    "total": 555,
+    "unique": 545,
+    "properties": {
+      "display": [
+        "inline-block",
+        "inline-block"
+      ],
+      "font": [
+        "normal normal normal 14px/1 FontAwesome"
+      ],
+      "font-size": [
+        "inherit",
+        "1.33333333em",
+        "2em",
+        "3em",
+        "4em",
+        "5em",
+        "2em"
+      ],
+      "text-rendering": [
+        "auto"
+      ],
+      "-webkit-font-smoothing": [
+        "antialiased"
+      ],
+      "-moz-osx-font-smoothing": [
+        "grayscale"
+      ],
+      "line-height": [
+        ".75em",
+        "2em",
+        "inherit"
+      ],
+      "vertical-align": [
+        "-15%",
+        "middle"
+      ],
+      "width": [
+        "1.28571429em",
+        "2.14285714em",
+        "2em",
+        "100%"
+      ],
+      "text-align": [
+        "center",
+        "center",
+        "center"
+      ],
+      "padding-left": [
+        "0"
+      ],
+      "margin-left": [
+        "2.14285714em",
+        ".3em"
+      ],
+      "list-style-type": [
+        "none"
+      ],
+      "position": [
+        "relative",
+        "absolute",
+        "relative",
+        "absolute"
+      ],
+      "left": [
+        "-2.14285714em",
+        "-1.85714286em",
+        "0"
+      ],
+      "top": [
+        ".14285714em"
+      ],
+      "padding": [
+        ".2em .25em .15em"
+      ],
+      "border": [
+        "solid .08em #eee"
+      ],
+      "border-radius": [
+        ".1em"
+      ],
+      "float": [
+        "right",
+        "left"
+      ],
+      "margin-right": [
+        ".3em"
+      ],
+      "-webkit-animation": [
+        "fa-spin 2s infinite linear"
+      ],
+      "animation": [
+        "fa-spin 2s infinite linear"
+      ],
+      "-webkit-transform": [
+        "rotate(0deg)",
+        "rotate(359deg)",
+        "rotate(0deg)",
+        "rotate(359deg)",
+        "rotate(90deg)",
+        "rotate(180deg)",
+        "rotate(270deg)",
+        "scale(-1, 1)",
+        "scale(1, -1)"
+      ],
+      "transform": [
+        "rotate(0deg)",
+        "rotate(359deg)",
+        "rotate(0deg)",
+        "rotate(359deg)",
+        "rotate(90deg)",
+        "rotate(180deg)",
+        "rotate(270deg)",
+        "scale(-1, 1)",
+        "scale(1, -1)"
+      ],
+      "filter": [
+        "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)",
+        "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)",
+        "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)",
+        "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)",
+        "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)",
+        "none"
+      ],
+      "-ms-transform": [
+        "rotate(90deg)",
+        "rotate(180deg)",
+        "rotate(270deg)",
+        "scale(-1, 1)",
+        "scale(1, -1)"
+      ],
+      "height": [
+        "2em"
+      ],
+      "color": [
+        "#fff"
+      ],
+      "content": [
+        "\"\\f000\"",
+        "\"\\f001\"",
+        "\"\\f002\"",
+        "\"\\f003\"",
+        "\"\\f004\"",
+        "\"\\f005\"",
+        "\"\\f006\"",
+        "\"\\f007\"",
+        "\"\\f008\"",
+        "\"\\f009\"",
+        "\"\\f00a\"",
+        "\"\\f00b\"",
+        "\"\\f00c\"",
+        "\"\\f00d\"",
+        "\"\\f00e\"",
+        "\"\\f010\"",
+        "\"\\f011\"",
+        "\"\\f012\"",
+        "\"\\f013\"",
+        "\"\\f014\"",
+        "\"\\f015\"",
+        "\"\\f016\"",
+        "\"\\f017\"",
+        "\"\\f018\"",
+        "\"\\f019\"",
+        "\"\\f01a\"",
+        "\"\\f01b\"",
+        "\"\\f01c\"",
+        "\"\\f01d\"",
+        "\"\\f01e\"",
+        "\"\\f021\"",
+        "\"\\f022\"",
+        "\"\\f023\"",
+        "\"\\f024\"",
+        "\"\\f025\"",
+        "\"\\f026\"",
+        "\"\\f027\"",
+        "\"\\f028\"",
+        "\"\\f029\"",
+        "\"\\f02a\"",
+        "\"\\f02b\"",
+        "\"\\f02c\"",
+        "\"\\f02d\"",
+        "\"\\f02e\"",
+        "\"\\f02f\"",
+        "\"\\f030\"",
+        "\"\\f031\"",
+        "\"\\f032\"",
+        "\"\\f033\"",
+        "\"\\f034\"",
+        "\"\\f035\"",
+        "\"\\f036\"",
+        "\"\\f037\"",
+        "\"\\f038\"",
+        "\"\\f039\"",
+        "\"\\f03a\"",
+        "\"\\f03b\"",
+        "\"\\f03c\"",
+        "\"\\f03d\"",
+        "\"\\f03e\"",
+        "\"\\f040\"",
+        "\"\\f041\"",
+        "\"\\f042\"",
+        "\"\\f043\"",
+        "\"\\f044\"",
+        "\"\\f045\"",
+        "\"\\f046\"",
+        "\"\\f047\"",
+        "\"\\f048\"",
+        "\"\\f049\"",
+        "\"\\f04a\"",
+        "\"\\f04b\"",
+        "\"\\f04c\"",
+        "\"\\f04d\"",
+        "\"\\f04e\"",
+        "\"\\f050\"",
+        "\"\\f051\"",
+        "\"\\f052\"",
+        "\"\\f053\"",
+        "\"\\f054\"",
+        "\"\\f055\"",
+        "\"\\f056\"",
+        "\"\\f057\"",
+        "\"\\f058\"",
+        "\"\\f059\"",
+        "\"\\f05a\"",
+        "\"\\f05b\"",
+        "\"\\f05c\"",
+        "\"\\f05d\"",
+        "\"\\f05e\"",
+        "\"\\f060\"",
+        "\"\\f061\"",
+        "\"\\f062\"",
+        "\"\\f063\"",
+        "\"\\f064\"",
+        "\"\\f065\"",
+        "\"\\f066\"",
+        "\"\\f067\"",
+        "\"\\f068\"",
+        "\"\\f069\"",
+        "\"\\f06a\"",
+        "\"\\f06b\"",
+        "\"\\f06c\"",
+        "\"\\f06d\"",
+        "\"\\f06e\"",
+        "\"\\f070\"",
+        "\"\\f071\"",
+        "\"\\f072\"",
+        "\"\\f073\"",
+        "\"\\f074\"",
+        "\"\\f075\"",
+        "\"\\f076\"",
+        "\"\\f077\"",
+        "\"\\f078\"",
+        "\"\\f079\"",
+        "\"\\f07a\"",
+        "\"\\f07b\"",
+        "\"\\f07c\"",
+        "\"\\f07d\"",
+        "\"\\f07e\"",
+        "\"\\f080\"",
+        "\"\\f081\"",
+        "\"\\f082\"",
+        "\"\\f083\"",
+        "\"\\f084\"",
+        "\"\\f085\"",
+        "\"\\f086\"",
+        "\"\\f087\"",
+        "\"\\f088\"",
+        "\"\\f089\"",
+        "\"\\f08a\"",
+        "\"\\f08b\"",
+        "\"\\f08c\"",
+        "\"\\f08d\"",
+        "\"\\f08e\"",
+        "\"\\f090\"",
+        "\"\\f091\"",
+        "\"\\f092\"",
+        "\"\\f093\"",
+        "\"\\f094\"",
+        "\"\\f095\"",
+        "\"\\f096\"",
+        "\"\\f097\"",
+        "\"\\f098\"",
+        "\"\\f099\"",
+        "\"\\f09a\"",
+        "\"\\f09b\"",
+        "\"\\f09c\"",
+        "\"\\f09d\"",
+        "\"\\f09e\"",
+        "\"\\f0a0\"",
+        "\"\\f0a1\"",
+        "\"\\f0f3\"",
+        "\"\\f0a3\"",
+        "\"\\f0a4\"",
+        "\"\\f0a5\"",
+        "\"\\f0a6\"",
+        "\"\\f0a7\"",
+        "\"\\f0a8\"",
+        "\"\\f0a9\"",
+        "\"\\f0aa\"",
+        "\"\\f0ab\"",
+        "\"\\f0ac\"",
+        "\"\\f0ad\"",
+        "\"\\f0ae\"",
+        "\"\\f0b0\"",
+        "\"\\f0b1\"",
+        "\"\\f0b2\"",
+        "\"\\f0c0\"",
+        "\"\\f0c1\"",
+        "\"\\f0c2\"",
+        "\"\\f0c3\"",
+        "\"\\f0c4\"",
+        "\"\\f0c5\"",
+        "\"\\f0c6\"",
+        "\"\\f0c7\"",
+        "\"\\f0c8\"",
+        "\"\\f0c9\"",
+        "\"\\f0ca\"",
+        "\"\\f0cb\"",
+        "\"\\f0cc\"",
+        "\"\\f0cd\"",
+        "\"\\f0ce\"",
+        "\"\\f0d0\"",
+        "\"\\f0d1\"",
+        "\"\\f0d2\"",
+        "\"\\f0d3\"",
+        "\"\\f0d4\"",
+        "\"\\f0d5\"",
+        "\"\\f0d6\"",
+        "\"\\f0d7\"",
+        "\"\\f0d8\"",
+        "\"\\f0d9\"",
+        "\"\\f0da\"",
+        "\"\\f0db\"",
+        "\"\\f0dc\"",
+        "\"\\f0dd\"",
+        "\"\\f0de\"",
+        "\"\\f0e0\"",
+        "\"\\f0e1\"",
+        "\"\\f0e2\"",
+        "\"\\f0e3\"",
+        "\"\\f0e4\"",
+        "\"\\f0e5\"",
+        "\"\\f0e6\"",
+        "\"\\f0e7\"",
+        "\"\\f0e8\"",
+        "\"\\f0e9\"",
+        "\"\\f0ea\"",
+        "\"\\f0eb\"",
+        "\"\\f0ec\"",
+        "\"\\f0ed\"",
+        "\"\\f0ee\"",
+        "\"\\f0f0\"",
+        "\"\\f0f1\"",
+        "\"\\f0f2\"",
+        "\"\\f0a2\"",
+        "\"\\f0f4\"",
+        "\"\\f0f5\"",
+        "\"\\f0f6\"",
+        "\"\\f0f7\"",
+        "\"\\f0f8\"",
+        "\"\\f0f9\"",
+        "\"\\f0fa\"",
+        "\"\\f0fb\"",
+        "\"\\f0fc\"",
+        "\"\\f0fd\"",
+        "\"\\f0fe\"",
+        "\"\\f100\"",
+        "\"\\f101\"",
+        "\"\\f102\"",
+        "\"\\f103\"",
+        "\"\\f104\"",
+        "\"\\f105\"",
+        "\"\\f106\"",
+        "\"\\f107\"",
+        "\"\\f108\"",
+        "\"\\f109\"",
+        "\"\\f10a\"",
+        "\"\\f10b\"",
+        "\"\\f10c\"",
+        "\"\\f10d\"",
+        "\"\\f10e\"",
+        "\"\\f110\"",
+        "\"\\f111\"",
+        "\"\\f112\"",
+        "\"\\f113\"",
+        "\"\\f114\"",
+        "\"\\f115\"",
+        "\"\\f118\"",
+        "\"\\f119\"",
+        "\"\\f11a\"",
+        "\"\\f11b\"",
+        "\"\\f11c\"",
+        "\"\\f11d\"",
+        "\"\\f11e\"",
+        "\"\\f120\"",
+        "\"\\f121\"",
+        "\"\\f122\"",
+        "\"\\f123\"",
+        "\"\\f124\"",
+        "\"\\f125\"",
+        "\"\\f126\"",
+        "\"\\f127\"",
+        "\"\\f128\"",
+        "\"\\f129\"",
+        "\"\\f12a\"",
+        "\"\\f12b\"",
+        "\"\\f12c\"",
+        "\"\\f12d\"",
+        "\"\\f12e\"",
+        "\"\\f130\"",
+        "\"\\f131\"",
+        "\"\\f132\"",
+        "\"\\f133\"",
+        "\"\\f134\"",
+        "\"\\f135\"",
+        "\"\\f136\"",
+        "\"\\f137\"",
+        "\"\\f138\"",
+        "\"\\f139\"",
+        "\"\\f13a\"",
+        "\"\\f13b\"",
+        "\"\\f13c\"",
+        "\"\\f13d\"",
+        "\"\\f13e\"",
+        "\"\\f140\"",
+        "\"\\f141\"",
+        "\"\\f142\"",
+        "\"\\f143\"",
+        "\"\\f144\"",
+        "\"\\f145\"",
+        "\"\\f146\"",
+        "\"\\f147\"",
+        "\"\\f148\"",
+        "\"\\f149\"",
+        "\"\\f14a\"",
+        "\"\\f14b\"",
+        "\"\\f14c\"",
+        "\"\\f14d\"",
+        "\"\\f14e\"",
+        "\"\\f150\"",
+        "\"\\f151\"",
+        "\"\\f152\"",
+        "\"\\f153\"",
+        "\"\\f154\"",
+        "\"\\f155\"",
+        "\"\\f156\"",
+        "\"\\f157\"",
+        "\"\\f158\"",
+        "\"\\f159\"",
+        "\"\\f15a\"",
+        "\"\\f15b\"",
+        "\"\\f15c\"",
+        "\"\\f15d\"",
+        "\"\\f15e\"",
+        "\"\\f160\"",
+        "\"\\f161\"",
+        "\"\\f162\"",
+        "\"\\f163\"",
+        "\"\\f164\"",
+        "\"\\f165\"",
+        "\"\\f166\"",
+        "\"\\f167\"",
+        "\"\\f168\"",
+        "\"\\f169\"",
+        "\"\\f16a\"",
+        "\"\\f16b\"",
+        "\"\\f16c\"",
+        "\"\\f16d\"",
+        "\"\\f16e\"",
+        "\"\\f170\"",
+        "\"\\f171\"",
+        "\"\\f172\"",
+        "\"\\f173\"",
+        "\"\\f174\"",
+        "\"\\f175\"",
+        "\"\\f176\"",
+        "\"\\f177\"",
+        "\"\\f178\"",
+        "\"\\f179\"",
+        "\"\\f17a\"",
+        "\"\\f17b\"",
+        "\"\\f17c\"",
+        "\"\\f17d\"",
+        "\"\\f17e\"",
+        "\"\\f180\"",
+        "\"\\f181\"",
+        "\"\\f182\"",
+        "\"\\f183\"",
+        "\"\\f184\"",
+        "\"\\f185\"",
+        "\"\\f186\"",
+        "\"\\f187\"",
+        "\"\\f188\"",
+        "\"\\f189\"",
+        "\"\\f18a\"",
+        "\"\\f18b\"",
+        "\"\\f18c\"",
+        "\"\\f18d\"",
+        "\"\\f18e\"",
+        "\"\\f190\"",
+        "\"\\f191\"",
+        "\"\\f192\"",
+        "\"\\f193\"",
+        "\"\\f194\"",
+        "\"\\f195\"",
+        "\"\\f196\"",
+        "\"\\f197\"",
+        "\"\\f198\"",
+        "\"\\f199\"",
+        "\"\\f19a\"",
+        "\"\\f19b\"",
+        "\"\\f19c\"",
+        "\"\\f19d\"",
+        "\"\\f19e\"",
+        "\"\\f1a0\"",
+        "\"\\f1a1\"",
+        "\"\\f1a2\"",
+        "\"\\f1a3\"",
+        "\"\\f1a4\"",
+        "\"\\f1a5\"",
+        "\"\\f1a6\"",
+        "\"\\f1a7\"",
+        "\"\\f1a8\"",
+        "\"\\f1a9\"",
+        "\"\\f1aa\"",
+        "\"\\f1ab\"",
+        "\"\\f1ac\"",
+        "\"\\f1ad\"",
+        "\"\\f1ae\"",
+        "\"\\f1b0\"",
+        "\"\\f1b1\"",
+        "\"\\f1b2\"",
+        "\"\\f1b3\"",
+        "\"\\f1b4\"",
+        "\"\\f1b5\"",
+        "\"\\f1b6\"",
+        "\"\\f1b7\"",
+        "\"\\f1b8\"",
+        "\"\\f1b9\"",
+        "\"\\f1ba\"",
+        "\"\\f1bb\"",
+        "\"\\f1bc\"",
+        "\"\\f1bd\"",
+        "\"\\f1be\"",
+        "\"\\f1c0\"",
+        "\"\\f1c1\"",
+        "\"\\f1c2\"",
+        "\"\\f1c3\"",
+        "\"\\f1c4\"",
+        "\"\\f1c5\"",
+        "\"\\f1c6\"",
+        "\"\\f1c7\"",
+        "\"\\f1c8\"",
+        "\"\\f1c9\"",
+        "\"\\f1ca\"",
+        "\"\\f1cb\"",
+        "\"\\f1cc\"",
+        "\"\\f1cd\"",
+        "\"\\f1ce\"",
+        "\"\\f1d0\"",
+        "\"\\f1d1\"",
+        "\"\\f1d2\"",
+        "\"\\f1d3\"",
+        "\"\\f1d4\"",
+        "\"\\f1d5\"",
+        "\"\\f1d6\"",
+        "\"\\f1d7\"",
+        "\"\\f1d8\"",
+        "\"\\f1d9\"",
+        "\"\\f1da\"",
+        "\"\\f1db\"",
+        "\"\\f1dc\"",
+        "\"\\f1dd\"",
+        "\"\\f1de\"",
+        "\"\\f1e0\"",
+        "\"\\f1e1\"",
+        "\"\\f1e2\"",
+        "\"\\f1e3\"",
+        "\"\\f1e4\"",
+        "\"\\f1e5\"",
+        "\"\\f1e6\"",
+        "\"\\f1e7\"",
+        "\"\\f1e8\"",
+        "\"\\f1e9\"",
+        "\"\\f1ea\"",
+        "\"\\f1eb\"",
+        "\"\\f1ec\"",
+        "\"\\f1ed\"",
+        "\"\\f1ee\"",
+        "\"\\f1f0\"",
+        "\"\\f1f1\"",
+        "\"\\f1f2\"",
+        "\"\\f1f3\"",
+        "\"\\f1f4\"",
+        "\"\\f1f5\"",
+        "\"\\f1f6\"",
+        "\"\\f1f7\"",
+        "\"\\f1f8\"",
+        "\"\\f1f9\"",
+        "\"\\f1fa\"",
+        "\"\\f1fb\"",
+        "\"\\f1fc\"",
+        "\"\\f1fd\"",
+        "\"\\f1fe\"",
+        "\"\\f200\"",
+        "\"\\f201\"",
+        "\"\\f202\"",
+        "\"\\f203\"",
+        "\"\\f204\"",
+        "\"\\f205\"",
+        "\"\\f206\"",
+        "\"\\f207\"",
+        "\"\\f208\"",
+        "\"\\f209\"",
+        "\"\\f20a\"",
+        "\"\\f20b\"",
+        "\"\\f20c\""
+      ]
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

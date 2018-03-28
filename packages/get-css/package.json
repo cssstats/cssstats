@@ -1,0 +1,50 @@
+{
+  "name": "get-css",
+  "version": "1.2.7-2",
+  "description": "Get CSS from a URL",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --no-semi --single-quote --write {test,utils,bin}/**/*.js index.js",
+    "test": "node test/test && mocha test 'test/**/*.js'"
+  },
+  "bin": {
+    "getcss": "./bin/getcss"
+  },
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "commander": "^2.9.0",
+    "is-blank": "^1.1.0",
+    "is-css": "^2.0.0",
+    "is-present": "^1.0.0",
+    "is-url-superb": "^2.0.0",
+    "normalize-url": "^1.8.0",
+    "q": "^1.4.1",
+    "request": "^2.79.0",
+    "requestretry": "^1.13.0",
+    "resolve-css-import-urls": "1.0.0",
+    "strip-html-comments": "1.0.0",
+    "strip-wayback-toolbar": "^1.0.4",
+    "ua-string": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "prettier": "^1.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cssstats/get-css.git"
+  },
+  "keywords": [
+    "CSS",
+    "request",
+    "parse",
+    "get",
+    "getcss"
+  ],
+  "bugs": {
+    "url": "https://github.com/cssstats/get-css/issues"
+  },
+  "homepage": "https://github.com/cssstats/get-css"
+}

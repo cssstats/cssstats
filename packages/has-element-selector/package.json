@@ -1,0 +1,22 @@
+{
+  "name": "has-element-selector",
+  "description": "Check whether a given selector contains an element",
+  "author": "John Otander",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "cssstats/has-element-selector",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "css-selector-tokenizer": "^0.7.0"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}
