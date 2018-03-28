@@ -1,10 +1,10 @@
-'use strict'
+"use strict"
 
-var parse = require('css-selector-tokenizer').parse
+var parse = require("css-selector-tokenizer").parse
 
 module.exports = function hasElementSelector(selector) {
-  if (typeof selector !== 'string') {
-    throw new TypeError('has-element-selector expected a string')
+  if (typeof selector !== "string") {
+    throw new TypeError("has-element-selector expected a string")
   }
 
   return parse(selector)
@@ -12,7 +12,7 @@ module.exports = function hasElementSelector(selector) {
       return a.concat(b.nodes)
     }, [])
     .reduce(function(a, b) {
-      if (b.type === 'element') {
+      if (b.type === "element") {
         return true
       }
 

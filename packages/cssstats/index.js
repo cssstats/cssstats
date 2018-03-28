@@ -1,13 +1,13 @@
-var _ = require('lodash')
-var postcss = require('postcss')
-var safeParser = require('postcss-safe-parser')
-var bytes = require('bytes')
-var gzipSize = require('gzip-size')
-var size = require('./lib/size')
-var rules = require('./lib/rules')
-var selectors = require('./lib/selectors')
-var declarations = require('./lib/declarations')
-var mediaQueries = require('./lib/media-queries')
+var _ = require("lodash")
+var postcss = require("postcss")
+var safeParser = require("postcss-safe-parser")
+var bytes = require("bytes")
+var gzipSize = require("gzip-size")
+var size = require("./lib/size")
+var rules = require("./lib/rules")
+var selectors = require("./lib/selectors")
+var declarations = require("./lib/declarations")
+var mediaQueries = require("./lib/media-queries")
 
 module.exports = function(src, opts) {
   opts = opts || {}
@@ -39,8 +39,8 @@ module.exports = function(src, opts) {
     // Push message to PostCSS when used as a plugin
     if (result && result.messages) {
       result.messages.push({
-        type: 'cssstats',
-        plugin: 'postcss-cssstats',
+        type: "cssstats",
+        plugin: "postcss-cssstats",
         stats: stats
       })
     }
@@ -63,17 +63,17 @@ module.exports = function(src, opts) {
     return stats
   }
 
-  if (typeof src === 'string') {
+  if (typeof src === "string") {
     // Default behavior
     var root = postcss().process(src, { parser: safeParser }).root
     var result = parse(root, {})
     return result
-  } else if (typeof src === 'object' || typeof src === 'undefined') {
+  } else if (typeof src === "object" || typeof src === "undefined") {
     // Return a PostCSS plugin
     return parse
   } else {
     throw new TypeError(
-      'cssstats expects a string or to be used as a PostCSS plugin'
+      "cssstats expects a string or to be used as a PostCSS plugin"
     )
   }
 }

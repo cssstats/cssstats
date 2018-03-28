@@ -1,5 +1,5 @@
-import React from 'react'
-import getParam from 'get-query-param'
+import React from "react"
+import getParam from "get-query-param"
 
 import {
   H1,
@@ -9,29 +9,29 @@ import {
   Flex,
   Loading,
   SubHeader
-} from '../components/library'
+} from "../components/library"
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout"
 
-import SummaryStats from '../components/SummaryStats'
-import Declarations from '../components/Declarations'
-import Colors from '../components/Colors'
-import BackgroundColors from '../components/BackgroundColors'
-import FontSizes from '../components/FontSizes'
-import FontFamilies from '../components/FontFamilies'
-import ZIndexes from '../components/ZIndexes'
-import SpacingResets from '../components/SpacingResets'
-import RulesetChart from '../components/RulesetChart'
-import SpecificityChart from '../components/SpecificityChart'
-import DeclarationsChart from '../components/DeclarationsChart'
+import SummaryStats from "../components/SummaryStats"
+import Declarations from "../components/Declarations"
+import Colors from "../components/Colors"
+import BackgroundColors from "../components/BackgroundColors"
+import FontSizes from "../components/FontSizes"
+import FontFamilies from "../components/FontFamilies"
+import ZIndexes from "../components/ZIndexes"
+import SpacingResets from "../components/SpacingResets"
+import RulesetChart from "../components/RulesetChart"
+import SpecificityChart from "../components/SpecificityChart"
+import DeclarationsChart from "../components/DeclarationsChart"
 
 class Stats extends React.Component {
   constructor(props) {
     super()
 
     this.state = {
-      url: props.url || getParam('url', window.location.href),
-      name: props.name || getParam('name', window.location.href)
+      url: props.url || getParam("url", window.location.href),
+      name: props.name || getParam("name", window.location.href)
     }
   }
 
@@ -67,7 +67,7 @@ class Stats extends React.Component {
 
     const properties = declarations.properties
 
-    const backgroundColors = properties['background-color'] || []
+    const backgroundColors = properties["background-color"] || []
     const colors = properties.color || []
 
     return (
@@ -87,9 +87,9 @@ class Stats extends React.Component {
         <Declarations properties={properties} />
         <Colors colors={colors} />
         <BackgroundColors backgroundColors={backgroundColors} />
-        <FontSizes fontSizes={properties['font-size']} />
-        <FontFamilies fontFamilies={properties['font-family']} />
-        <ZIndexes zIndexes={properties['z-index']} />
+        <FontSizes fontSizes={properties["font-size"]} />
+        <FontFamilies fontFamilies={properties["font-family"]} />
+        <ZIndexes zIndexes={properties["z-index"]} />
         <SpacingResets properties={properties} />
         <SpecificityChart data={selectors.specificity.graph} />
         <RulesetChart data={rules.size.graph} />

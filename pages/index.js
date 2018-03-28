@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from "react"
 
 import {
   H1,
@@ -9,71 +9,71 @@ import {
   Input,
   Label,
   LinkBox
-} from '../components/library'
+} from "../components/library"
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout"
 
-import { sites, frameworks } from '../components/constants'
+import { sites, frameworks } from "../components/constants"
 
-const Index = props => (
-  <Layout>
-    <H1 children="Parse Css" />
+class Index extends Component {
+  state = {
+    urlInput: ""
+  }
 
-    <Form py={3}>
-      <Label children="URI" />
-      <Input
-        mt={2}
-        placeholder="Url, domain, or direct css link"
-        onChange={e => props.update({ urlInput: e.target.value })}
-      />
-      <Route
-        render={({ history }) => (
+  render() {
+    return (
+      <Layout>
+        <H1 children="Parse Css" />
+
+        <Form py={3}>
+          <Label children="URI" />
+          <Input
+            mt={2}
+            placeholder="Url, domain, or direct css link"
+            onChange={e => this.setState({ urlInput: e.target.value })}
+          />
           <Button
             mt={2}
             children="Go"
             onClick={e => {
               e.preventDefault()
 
-              const url = props.urlInput
-
-              props.update({
-                urlInput: null,
-                url
-              })
-              history.push(`/stats?url=${url}`)
+              console.log(this.state.urlInput)
             }}
           />
-        )}
-      />
-    </Form>
+        </Form>
 
-    <Div mt={3}>
-      <H2 children="View Stats for Popular Sites" />
+        <Div mt={3}>
+          <H2 children="View Stats for Popular Sites" />
 
-      <LinkBox
-        links={sites.map(link => {
-          const fallbackUrl = `https://${link.name
-            .replace(' ', '')
-            .toLowerCase()}.com`
-          const url = `/stats?url=${link.url || fallbackUrl}&name=${link.name}`
+          <LinkBox
+            links={sites.map(link => {
+              const fallbackUrl = `https://${link.name
+                .replace(" ", "")
+                .toLowerCase()}.com`
+              const url = `/stats?url=${link.url || fallbackUrl}&name=${
+                link.name
+              }`
 
-          return Object.assign({}, link, { url })
-        })}
-      />
-    </Div>
+              return Object.assign({}, link, { url })
+            })}
+          />
+        </Div>
 
-    <Div mt={4}>
-      <H2 children="View Stats for Popular Frameworks" />
+        <Div mt={4}>
+          <H2 children="View Stats for Popular Frameworks" />
 
-      <LinkBox
-        links={frameworks.map(link => {
-          const url = `/stats?url=${link.url}&name=${link.name}`
+          <LinkBox
+            links={frameworks.map(link => {
+              const url = `/stats?url=${link.url}&name=${link.name}`
 
-          return Object.assign({}, link, { url })
-        })}
-      />
-    </Div>
-  </Layout>
-)
+              return Object.assign({}, link, { url })
+            })}
+          />
+        </Div>
+      </Layout>
+    )
+  }
+}
 
 export default Index

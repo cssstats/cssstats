@@ -1,23 +1,23 @@
-const { send } = require('micro')
-const getCss = require('get-css')
-const getParam = require('get-query-param')
-const isUrl = require('is-url')
-const isPresent = require('is-present')
-const normalizeUrl = require('normalize-url')
-const cssstats = require('cssstats')
-const cssbeautify = require('cssbeautify')
+const { send } = require("micro")
+const getCss = require("get-css")
+const getParam = require("get-query-param")
+const isUrl = require("is-url")
+const isPresent = require("is-present")
+const normalizeUrl = require("normalize-url")
+const cssstats = require("cssstats")
+const cssbeautify = require("cssbeautify")
 
 const isValidUrl = url => isPresent(url) && isUrl(url)
 
 module.exports = async (req, res) => {
-  const url = getParam('url', req.url)
+  const url = getParam("url", req.url)
 
   const fullUrl = url && normalizeUrl(url)
 
   if (!isValidUrl(fullUrl)) {
     return send(res, 406, {
-      error: 'unacceptable',
-      message: 'Url is invalid'
+      error: "unacceptable",
+      message: "Url is invalid"
     })
   }
 
@@ -34,8 +34,8 @@ module.exports = async (req, res) => {
     send(res, 200, { stats, css })
   } catch (e) {
     send(res, 500, {
-      error: 'server_error',
-      message: 'Something went wrong',
+      error: "server_error",
+      message: "Something went wrong",
       stack: e
     })
   }

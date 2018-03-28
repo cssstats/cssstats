@@ -1,15 +1,19 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
+import theme from '../theme.json'
 import { Font, Header, Footer, Container } from './library'
 
 export default ({ title, children }) => (
-  <Font>
-    <title children={title || 'Css Stats'} />
+  <ThemeProvider theme={theme}>
+    <Font>
+      <title children={title || 'Css Stats'} />
 
-    <Container>
-      <Header />
-      <Container py={3} children={children} />
-      <Footer />
-    </Container>
-  </Font>
+      <Container>
+        <Header />
+        <Container py={3} children={children} />
+        <Footer />
+      </Container>
+    </Font>
+  </ThemeProvider>
 )
