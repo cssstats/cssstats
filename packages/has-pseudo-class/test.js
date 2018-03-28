@@ -14,11 +14,7 @@ const pseudoClasses = [
   '.some-selector > ul > li:focus'
 ]
 
-var noPseudoClasses = [
-  '.foo-bar',
-  '.foo-bar:after',
-  '.foo-bar::after'
-]
+var noPseudoClasses = ['.foo-bar', '.foo-bar:after', '.foo-bar::after']
 
 test('returns true when there is a pseudo element', t => {
   t.plan(pseudoClasses.length)

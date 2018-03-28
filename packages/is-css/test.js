@@ -7,11 +7,7 @@ const cssPaths = [
   'http://foo.com/bar.css'
 ]
 
-const nonCssPaths = [
-  'foo/filecss',
-  'file',
-  'file.scss'
-]
+const nonCssPaths = ['foo/filecss', 'file', 'file.scss']
 
 test('returns true for css files', t => {
   t.plan(cssPaths.length)

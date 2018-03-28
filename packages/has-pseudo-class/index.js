@@ -2,7 +2,7 @@
 
 var pseudoClasses = require('pseudo-classes')
 
-module.exports = function hasPseudoClass (selector) {
+module.exports = function hasPseudoClass(selector) {
   if (typeof selector !== 'string') {
     throw new TypeError('has-pseudo-class expected a string')
   }

@@ -9,7 +9,7 @@ module.exports = (url, timestamp) => {
   let waybackUrl = null
 
   return getAvailableUrl(url, timestamp)
-    .then(url => waybackUrl = url && got(url))
+    .then(url => (waybackUrl = url && got(url)))
     .then(res => stripWayback(res.body))
     .then(getCss)
     .then(getCssFromLinks)
@@ -44,12 +44,11 @@ const getCssFromLinks = css => {
       .catch(console.log)
   })
 
-  return Promise.all(px)
-    .then(() => ({
-      styles: css.styles,
-      inline: css.inline,
-      links: linkCss
-    }))
+  return Promise.all(px).then(() => ({
+    styles: css.styles,
+    inline: css.inline,
+    links: linkCss
+  }))
 }
 
 const getCss = html => {
@@ -62,11 +61,11 @@ const getCss = html => {
     inline: getInline(html)
   }
 
-  $('style').each(function () {
+  $('style').each(function() {
     results.styles.push(stripComments($(this).text()))
   })
 
-  $('link[rel=stylesheet]').each(function () {
+  $('link[rel=stylesheet]').each(function() {
     results.links.push($(this).attr('href'))
   })
 

@@ -1,16 +1,9 @@
 import test from 'ava'
 import hasAdjacentSiblingSelector from './'
 
-const adjacentSiblingSelectors = [
-  'li + li',
-  '#foo .bar .baz + .baz'
-]
+const adjacentSiblingSelectors = ['li + li', '#foo .bar .baz + .baz']
 
-const noAdjacentSiblingSelectors = [
-  'foo',
-  '#bar',
-  'li > li'
-]
+const noAdjacentSiblingSelectors = ['foo', '#bar', 'li > li']
 
 test('returns true for adjacent sibling selectors', t => {
   t.plan(adjacentSiblingSelectors.length)

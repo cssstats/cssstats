@@ -1,12 +1,8 @@
 import React from 'react'
 
-import {
-  VictoryChart,
-  VictoryBar,
-  VictoryAxis
-} from 'victory'
+import { VictoryChart, VictoryBar, VictoryAxis } from 'victory'
 
-const getMax = data => data.reduce((p, v) => p > v ? p : v, 0)
+const getMax = data => data.reduce((p, v) => (p > v ? p : v), 0)
 
 export default ({ data }) => {
   const max = getMax(data)
@@ -24,9 +20,7 @@ export default ({ data }) => {
       <VictoryAxis
         dependentAxis
         tickFormat={t => t.toFixed(0)}
-        tickValues={[
-          max * .25, max * .5, max * .75, max
-        ]}
+        tickValues={[max * 0.25, max * 0.5, max * 0.75, max]}
         style={{
           grid: {
             stroke: '#ccc',
@@ -45,9 +39,7 @@ export default ({ data }) => {
         }}
       />
 
-      <VictoryBar
-        data={data.map((v, i) => ({ x: i, y: v}))}
-      />
+      <VictoryBar data={data.map((v, i) => ({ x: i, y: v }))} />
     </VictoryChart>
   )
 }

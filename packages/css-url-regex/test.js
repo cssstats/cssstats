@@ -8,16 +8,12 @@ const matches = [
   'url(http://google.com/foo/bar)'
 ]
 
-const nonMatches = [
-  'foo',
-  '(foo.css)',
-  'url (foo.css)'
-]
+const nonMatches = ['foo', '(foo.css)', 'url (foo.css)']
 
 test('matches urls', t => {
   t.plan(matches.length)
 
-  matches.forEach((match) => {
+  matches.forEach(match => {
     t.truthy(cssUrlRegex().test(match))
   })
 })
@@ -25,7 +21,7 @@ test('matches urls', t => {
 test('does not match non existent urls', t => {
   t.plan(nonMatches.length)
 
-  nonMatches.forEach((nonMatch) => {
+  nonMatches.forEach(nonMatch => {
     t.falsy(cssUrlRegex().test(nonMatch))
   })
 })

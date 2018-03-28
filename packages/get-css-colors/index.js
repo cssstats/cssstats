@@ -15,10 +15,14 @@ module.exports = string => {
   const hexRegex = '#([a-f]|[A-F]|[0-9]){3}(([a-f]|[A-F]|[0-9]){3})?\\b'
 
   const cssColorRegex = new RegExp(
-    colorListRegex + '|' +
-    rgbOrRgbaRegex + '|' +
-    hslOrHslaRegex + '|' +
-    hexRegex, 'ig'
+    colorListRegex +
+      '|' +
+      rgbOrRgbaRegex +
+      '|' +
+      hslOrHslaRegex +
+      '|' +
+      hexRegex,
+    'ig'
   )
 
   return string.match(cssColorRegex)

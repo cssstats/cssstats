@@ -9,7 +9,7 @@ import {
   VictoryLabel
 } from 'victory'
 
-const getMax = data => data[0].reduce((p, { y }) => p > y ? p : y, 0)
+const getMax = data => data[0].reduce((p, { y }) => (p > y ? p : y), 0)
 
 export default ({ data }) => {
   const max = getMax(data)
@@ -27,9 +27,7 @@ export default ({ data }) => {
       <VictoryAxis
         dependentAxis
         tickFormat={t => t.toFixed(0)}
-        tickValues={[
-          max * .25, max * .5, max * .75, max
-        ]}
+        tickValues={[max * 0.25, max * 0.5, max * 0.75, max]}
         style={{
           grid: {
             stroke: '#ccc',
@@ -75,9 +73,7 @@ export default ({ data }) => {
           }
         }}
         labelComponent={<VictoryLabel y={215} dy={0} dx={-10} />}
-        children={data.map((d, i) =>
-          <VictoryBar key={i} data={d} />
-        )}
+        children={data.map((d, i) => <VictoryBar key={i} data={d} />)}
       />
     </VictoryChart>
   )

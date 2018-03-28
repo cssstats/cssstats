@@ -26,7 +26,7 @@ import SpecificityChart from '../components/SpecificityChart'
 import DeclarationsChart from '../components/DeclarationsChart'
 
 class Stats extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super()
 
     this.state = {
@@ -35,7 +35,7 @@ class Stats extends React.Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const url = this.props.url || this.state.url
 
     fetch(`/api/stats?url=${url}`)
@@ -44,13 +44,13 @@ class Stats extends React.Component {
       .catch(console.error)
   }
 
-  render () {
+  render() {
     const url = this.props.url || this.state.url
 
     if (!this.props.css) {
       return (
         <Layout p={[4, 5, 6]}>
-          <Flex h={9/10} items='center'>
+          <Flex h={9 / 10} items="center">
             <Loading />
             <H2 my={0} pl={3}>
               Downloading and analyzing css from {url}
@@ -61,16 +61,8 @@ class Stats extends React.Component {
     }
 
     const {
-      css: {
-        css,
-        pageTitle
-      },
-      stats: {
-        rules,
-        humanizedGzipSize,
-        declarations,
-        selectors
-      }
+      css: { css, pageTitle },
+      stats: { rules, humanizedGzipSize, declarations, selectors }
     } = this.props
 
     const properties = declarations.properties

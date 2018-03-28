@@ -10,7 +10,7 @@ const importantValues = [
 const unimportantValues = [
   'green',
   'thin solid #fafafa',
-  'url(http://foo.bar/important.jpg)',
+  'url(http://foo.bar/important.jpg)'
 ]
 
 test('it returns true for important values', t => {

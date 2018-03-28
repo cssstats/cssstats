@@ -7,10 +7,7 @@ const WITH_GRADIENTS = [
   'linear-gradient(blue, rgba(0, 0, 0, .4)'
 ]
 
-const WITHOUT_GRADIENTS = [
-  'red',
-  'url(/my/img.png)'
-]
+const WITHOUT_GRADIENTS = ['red', 'url(/my/img.png)']
 
 test('returns true with a gradient', t => {
   t.plan(WITH_GRADIENTS.length)

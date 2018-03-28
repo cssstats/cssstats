@@ -1,19 +1,11 @@
 'use strict'
 
-import test from 'ava';
+import test from 'ava'
 import hasChildSelector from './'
 
-const childSelectors = [
-  'ul>li',
-  '.foo > .bar'
-]
+const childSelectors = ['ul>li', '.foo > .bar']
 
-const noChildSelectors = [
-  'foo',
-  '#bar',
-  'li + li',
-  '[]'
-]
+const noChildSelectors = ['foo', '#bar', 'li + li', '[]']
 
 test('returns true with child selectors', t => {
   t.plan(childSelectors.length)

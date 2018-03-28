@@ -5,50 +5,50 @@
 const cssUnitSort = units => units.sort(sortFn)
 
 const sortFn = (a, b) => {
-	const aa = convert(a)
-	const bb = convert(b)
+  const aa = convert(a)
+  const bb = convert(b)
 
-	if (aa === bb) return 0
-	return aa < bb ? 1 : -1
+  if (aa === bb) return 0
+  return aa < bb ? 1 : -1
 }
 
 const convert = value => {
-	if (typeof value !== 'string') {
-		value = value.toString()
-	}
+  if (typeof value !== 'string') {
+    value = value.toString()
+  }
 
-	const raw = parseFloat(value, 10)
+  const raw = parseFloat(value, 10)
 
-	if (value == 0) return 0
-	if (value.match(/px$/)) return raw
-	if (value.match(/pt$/)) return raw
-	if (value.match(/em$/)) return raw * 16
-	if (value.match(/%$/)) return raw * .16
+  if (value == 0) return 0
+  if (value.match(/px$/)) return raw
+  if (value.match(/pt$/)) return raw
+  if (value.match(/em$/)) return raw * 16
+  if (value.match(/%$/)) return raw * 0.16
 
-	switch (value) {
-		case 'inherit':
-			return 16
-		case 'xx-small':
-			return 9
-		case 'x-small':
-			return 10
-		case 'small':
-			return 13
-		case 'medium':
-			return 16
-		case 'large':
-			return 18
-		case 'x-large':
-			return 24
-		case 'xx-large':
-			return 32
-		case 'small':
-			return 13
-		case 'larger':
-			return 19
-		default:
-			return 1024
-	}
+  switch (value) {
+    case 'inherit':
+      return 16
+    case 'xx-small':
+      return 9
+    case 'x-small':
+      return 10
+    case 'small':
+      return 13
+    case 'medium':
+      return 16
+    case 'large':
+      return 18
+    case 'x-large':
+      return 24
+    case 'xx-large':
+      return 32
+    case 'small':
+      return 13
+    case 'larger':
+      return 19
+    default:
+      return 1024
+  }
 }
 
 module.exports = cssUnitSort

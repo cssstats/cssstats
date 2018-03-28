@@ -9,7 +9,7 @@ var selectors = require('./lib/selectors')
 var declarations = require('./lib/declarations')
 var mediaQueries = require('./lib/media-queries')
 
-module.exports = function (src, opts) {
+module.exports = function(src, opts) {
   opts = opts || {}
   opts = _.defaults(opts, {
     safe: true,
@@ -22,7 +22,7 @@ module.exports = function (src, opts) {
     vendorPrefixedProperties: false
   })
 
-  function parse (root, result) {
+  function parse(root, result) {
     var stats = {}
 
     var string = postcss().process(root).css
@@ -45,7 +45,7 @@ module.exports = function (src, opts) {
       })
     }
 
-    stats.toJSON = function () {
+    stats.toJSON = function() {
       // Remove methods when using JSON.stringify
       delete stats.selectors.getSpecificityGraph
       delete stats.selectors.getRepeatedValues
@@ -72,6 +72,8 @@ module.exports = function (src, opts) {
     // Return a PostCSS plugin
     return parse
   } else {
-    throw new TypeError('cssstats expects a string or to be used as a PostCSS plugin')
+    throw new TypeError(
+      'cssstats expects a string or to be used as a PostCSS plugin'
+    )
   }
 }
