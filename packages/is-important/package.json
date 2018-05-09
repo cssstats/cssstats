@@ -1,0 +1,23 @@
+{
+  "name": "is-important",
+  "description": "Check to see if a css declaration value is !important",
+  "author": "John Otander",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": "cssstats/is-important",
+  "keywords": [
+    "css",
+    "important"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}

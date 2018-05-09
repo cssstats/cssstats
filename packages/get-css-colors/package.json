@@ -1,0 +1,37 @@
+{
+  "name": "get-css-colors",
+  "description": "Get css colors from a string, including rgb, rgba, hsl, hsla, hex, named, etc.",
+  "author": "John Otander",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": "cssstats/get-css-colors",
+  "keywords": [
+    "css",
+    "color",
+    "colors",
+    "hsl",
+    "hsla",
+    "hex",
+    "rgb",
+    "rgba",
+    "named",
+    "system"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "css-color-list": "0.0.1",
+    "hsl-regex": "^1.0.0",
+    "hsla-regex": "^1.0.0",
+    "rgb-regex": "^1.0.1",
+    "rgba-regex": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
+}

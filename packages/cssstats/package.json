@@ -1,0 +1,50 @@
+{
+  "name": "cssstats",
+  "version": "3.2.0",
+  "description": "High-level stats for stylesheets",
+  "main": "index.js",
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "repository": "cssstats/cssstats-core",
+  "keywords": [
+    "CSS",
+    "Performance",
+    "Stats",
+    "cssstats"
+  ],
+  "dependencies": {
+    "bytes": "^3.0.0",
+    "css-selector-tokenizer": "^0.7.0",
+    "css-shorthand-expand": "^1.1.0",
+    "gzip-size": "^4.1.0",
+    "has-class-selector": "1.0.0",
+    "has-element-selector": "^1.0.0",
+    "has-id-selector": "1.0.0",
+    "has-pseudo-class": "1.0.1",
+    "has-pseudo-element": "1.0.0",
+    "is-blank": "^2.1.0",
+    "is-css-shorthand": "^1.0.1",
+    "is-present": "^1.0.0",
+    "is-vendor-prefixed": "1.0.0",
+    "lodash": "^4.17.5",
+    "postcss": "^6.0.21",
+    "postcss-safe-parser": "^3.0.1",
+    "specificity": "^0.3.2"
+  },
+  "devDependencies": {
+    "get-css": "1.2.7-2",
+    "mocha": "^5.0.5",
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "test": "npm run lint && rm -rf test/results && mkdir test/results && mocha test",
+    "lint": "standard --fix"
+  },
+  "standard": {
+    "global": [
+      "before",
+      "describe",
+      "it"
+    ]
+  }
+}

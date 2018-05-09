@@ -1,0 +1,27 @@
+{
+  "name": "is-css",
+  "description": "Check if a path or url points to a css file",
+  "author": "John Otander",
+  "version": "2.0.1",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "standard index.js",
+    "test": "npm run lint && ava -v"
+  },
+  "repository": "cssstats/is-css",
+  "keywords": [
+    "css",
+    "url",
+    "extension",
+    "is-css"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "standard": "^10.0.3"
+  }
+}

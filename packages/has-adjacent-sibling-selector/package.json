@@ -1,0 +1,25 @@
+{
+  "name": "has-adjacent-sibling-selector",
+  "description": "Check if a selector string has an adjacent sibling selector",
+  "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "cssstats/has-adjacent-sibling-selector",
+  "keywords": [
+    "css",
+    "sibling",
+    "adjacent",
+    "selector"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

@@ -1,0 +1,37 @@
+.red, #foo { color: red !important }
+
+.red { color: red }
+
+@media (min-width: 30em) {
+  .sm-tomato { color: tomato; background-color: hotpink; -ms-border-radius: 0 }
+}
+
+.sm-tomato::after { content: 'hello' }
+
+.sm-tomato:first-child:last-child { opacity: .8; border-bottom: none; }
+
+.box { margin: 10px; padding: 5px; }
+.box:first-child { margin: 0px 0; }
+.box:last-child { margin-bottom: 0px; }
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+
+    -webkit-transform: translateY(-20px) translate3d(0, 0, 0);
+    -ms-transform: translateY(-20px) translate3d(0, 0, 0);
+    transform: translateY(-20px) translate3d(0, 0, 0) !important;
+  }
+
+  100% {
+    opacity: 1;
+
+    -webkit-transform: translateY(0) translate3d(0, 0, 0);
+    -ms-transform: translateY(0) translate3d(0, 0, 0);
+    transform: translateY(0) translate3d(0, 0, 0);
+  }
+}
+
+header { padding: 0; }
+.georgia { font: 1.5em Georgia; }
+

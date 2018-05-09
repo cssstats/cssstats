@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var program = require('commander');
+var normalizeUrl = require('normalize-url');
+var getCss = require('..');
+
+program
+  .version('0.0.2')
+  .usage('[options] <url>')
+    .option("-j, --json","output downloaded html and css as json")
+    .option("-t, --timeout [ms]","timeout in ms to wait for responses", 30000)
+    .option("-s, --strip_wayback_css","remove wayback toolbar css from internet archive captures")
+  .action(function(url, options) {
+    if(url) {
+      url = normalizeUrl(url, { stripWWW: false });
+      getCss(url, { verbose: true, timeout: options.timeout, stripWayback: options.strip_wayback_css }).then(function(css) {
+          if (options.json){
+              console.log(JSON.stringify(css));
+          }
+          else {
+              console.log(css.css);
+          }
+      });
+    }
+  });
+
+program.parse(process.argv);

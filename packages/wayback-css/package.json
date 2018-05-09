@@ -1,0 +1,28 @@
+{
+  "name": "wayback-css",
+  "description": "Get the css for a wayback machine url",
+  "author": "John Otander",
+  "version": "1.0.3",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": "cssstats/wayback-css",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "get-inline-styles": "^1.0.0",
+    "got": "^6.6.3",
+    "is-blank": "^1.1.0",
+    "strip-html-comments": "^1.0.0",
+    "strip-wayback-toolbar": "^1.0.0",
+    "ua-string": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}

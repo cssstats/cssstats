@@ -1,0 +1,249 @@
+{
+  "size": 3562,
+  "gzipSize": 529,
+  "humanizedSize": "3KB",
+  "humanizedGzipSize": "529B",
+  "rules": {
+    "total": 14,
+    "size": {
+      "graph": [
+        6,
+        6,
+        6,
+        8,
+        1,
+        2,
+        2,
+        1,
+        5,
+        5,
+        5,
+        10,
+        2,
+        1
+      ],
+      "max": 10,
+      "average": 4.285714285714286
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": ".odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner",
+        "declarations": 10
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner",
+        "declarations": 8
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer",
+        "declarations": 6
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-default .odometer-digit",
+        "declarations": 6
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme, .odometer.odometer-theme-default",
+        "declarations": 6
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner",
+        "declarations": 5
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner",
+        "declarations": 5
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner",
+        "declarations": 5
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme, .odometer.odometer-theme-default",
+        "declarations": 2
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-default .odometer-digit .odometer-value",
+        "declarations": 2
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner",
+        "declarations": 2
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value",
+        "declarations": 1
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value",
+        "declarations": 1
+      },
+      {
+        "selector": ".odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 28,
+    "type": 0,
+    "class": 28,
+    "id": 0,
+    "pseudoClass": 0,
+    "pseudoElement": 0,
+    "values": [
+      ".odometer.odometer-auto-theme",
+      ".odometer.odometer-theme-default",
+      ".odometer.odometer-auto-theme .odometer-digit",
+      ".odometer.odometer-theme-default .odometer-digit",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-digit-inner",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-ribbon",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-ribbon",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-value",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-value",
+      ".odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value",
+      ".odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value",
+      ".odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner",
+      ".odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner",
+      ".odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner",
+      ".odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner",
+      ".odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner",
+      ".odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner",
+      ".odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner",
+      ".odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner",
+      ".odometer.odometer-auto-theme",
+      ".odometer.odometer-theme-default",
+      ".odometer.odometer-auto-theme .odometer-value",
+      ".odometer.odometer-theme-default .odometer-value"
+    ],
+    "specificity": {
+      "max": 50,
+      "average": 37.857142857142854
+    }
+  },
+  "declarations": {
+    "total": 60,
+    "unique": 35,
+    "properties": {
+      "display": [
+        "inline-block",
+        "inline",
+        "inline-block",
+        "inline",
+        "inline-block",
+        "inline",
+        "block",
+        "block",
+        "block",
+        "block"
+      ],
+      "vertical-align": [
+        "middle",
+        "auto",
+        "middle",
+        "auto",
+        "middle",
+        "auto"
+      ],
+      "zoom": [
+        "1",
+        "1",
+        "1"
+      ],
+      "position": [
+        "relative",
+        "relative",
+        "absolute",
+        "absolute"
+      ],
+      "visibility": [
+        "hidden"
+      ],
+      "text-align": [
+        "left",
+        "center"
+      ],
+      "top": [
+        "0"
+      ],
+      "left": [
+        "0"
+      ],
+      "right": [
+        "0"
+      ],
+      "bottom": [
+        "0"
+      ],
+      "overflow": [
+        "hidden"
+      ],
+      "-webkit-backface-visibility": [
+        "hidden"
+      ],
+      "-webkit-transform": [
+        "translateZ(0)",
+        "translateY(-100%)",
+        "translateY(-100%)",
+        "translateY(0)"
+      ],
+      "-webkit-transition": [
+        "-webkit-transform 2s",
+        "-webkit-transform 2s"
+      ],
+      "-moz-transition": [
+        "-moz-transform 2s",
+        "-moz-transform 2s"
+      ],
+      "-ms-transition": [
+        "-ms-transform 2s",
+        "-ms-transform 2s"
+      ],
+      "-o-transition": [
+        "-o-transform 2s",
+        "-o-transform 2s"
+      ],
+      "transition": [
+        "transform 2s",
+        "transform 2s"
+      ],
+      "-moz-transform": [
+        "translateY(-100%)",
+        "translateY(-100%)",
+        "translateY(0)"
+      ],
+      "-ms-transform": [
+        "translateY(-100%)",
+        "translateY(-100%)",
+        "translateY(0)"
+      ],
+      "-o-transform": [
+        "translateY(-100%)",
+        "translateY(-100%)",
+        "translateY(0)"
+      ],
+      "transform": [
+        "translateY(-100%)",
+        "translateY(-100%)",
+        "translateY(0)"
+      ],
+      "font-family": [
+        "\"Helvetica Neue\", sans-serif"
+      ],
+      "line-height": [
+        "1.1em"
+      ]
+    }
+  },
+  "mediaQueries": {
+    "total": 0,
+    "unique": 0,
+    "values": [],
+    "contents": []
+  }
+}

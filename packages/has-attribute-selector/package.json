@@ -1,0 +1,24 @@
+{
+  "name": "has-attribute-selector",
+  "description": "Check if a selector string has an attribute selector.",
+  "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "cssstats/has-attribute-selector",
+  "keywords": [
+    "css",
+    "attribute",
+    "selector"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "*"
+  }
+}

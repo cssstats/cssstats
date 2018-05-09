@@ -1,0 +1,14 @@
+.a {
+  color: red;
+}
+
+@keyframes 'loading-fade' {
+  10% { color: blue; }
+  20% { color: navy; }
+  30% { color: blue; }
+}
+
+.b {
+  color: green;
+  background-color: gray;
+}

@@ -1,0 +1,3338 @@
+{
+  "size": 18858,
+  "gzipSize": 3546,
+  "humanizedSize": "18KB",
+  "humanizedGzipSize": "3KB",
+  "rules": {
+    "total": 289,
+    "size": {
+      "graph": [
+        1,
+        2,
+        1,
+        1,
+        3,
+        5,
+        3,
+        1,
+        2,
+        3,
+        2,
+        5,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        5,
+        4,
+        1,
+        4,
+        4,
+        1,
+        12,
+        2,
+        1,
+        4,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        4,
+        7,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        4,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        9,
+        1,
+        1,
+        2,
+        1,
+        11,
+        2,
+        1,
+        2,
+        3,
+        9,
+        1,
+        1,
+        2,
+        1,
+        9,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "max": 12,
+      "average": 1.6297577854671281
+    },
+    "selectorByRuleSizes": [
+      {
+        "selector": "button,\n.button",
+        "declarations": 12
+      },
+      {
+        "selector": ".button-blue-outline",
+        "declarations": 11
+      },
+      {
+        "selector": ".button-red",
+        "declarations": 9
+      },
+      {
+        "selector": ".button-gray",
+        "declarations": 9
+      },
+      {
+        "selector": ".button-blue",
+        "declarations": 9
+      },
+      {
+        "selector": ".field-light",
+        "declarations": 7
+      },
+      {
+        "selector": ".absolute-center",
+        "declarations": 6
+      },
+      {
+        "selector": ".button-nav-tab.is-active",
+        "declarations": 5
+      },
+      {
+        "selector": ".hide",
+        "declarations": 5
+      },
+      {
+        "selector": "input[type=text],\ninput[type=datetime],\ninput[type=datetime-local],\ninput[type=email],\ninput[type=month],\ninput[type=number],\ninput[type=password],\ninput[type=search],\ninput[type=tel],\ninput[type=time],\ninput[type=url],\ninput[type=week]",
+        "declarations": 5
+      },
+      {
+        "selector": "blockquote",
+        "declarations": 5
+      },
+      {
+        "selector": "h1,\nh2,\nh3,\nh4,\nh5,\nh6",
+        "declarations": 5
+      },
+      {
+        "selector": ".field-dark",
+        "declarations": 4
+      },
+      {
+        "selector": "hr",
+        "declarations": 4
+      },
+      {
+        "selector": "table",
+        "declarations": 4
+      },
+      {
+        "selector": ".fieldset-reset",
+        "declarations": 4
+      },
+      {
+        "selector": "textarea",
+        "declarations": 4
+      },
+      {
+        "selector": "select",
+        "declarations": 4
+      },
+      {
+        "selector": ".border-left",
+        "declarations": 3
+      },
+      {
+        "selector": ".border-bottom",
+        "declarations": 3
+      },
+      {
+        "selector": ".border-right",
+        "declarations": 3
+      },
+      {
+        "selector": ".border-top",
+        "declarations": 3
+      },
+      {
+        "selector": ".border",
+        "declarations": 3
+      },
+      {
+        "selector": ".button-nav-tab",
+        "declarations": 3
+      },
+      {
+        "selector": ".button-blue-outline:disabled,\n.button-blue-outline.is-disabled",
+        "declarations": 3
+      },
+      {
+        "selector": ".table-light th,\n.table-light td",
+        "declarations": 3
+      },
+      {
+        "selector": ".field-light:focus",
+        "declarations": 3
+      },
+      {
+        "selector": ".lg-col-right",
+        "declarations": 3
+      },
+      {
+        "selector": ".lg-col",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-col-right",
+        "declarations": 3
+      },
+      {
+        "selector": ".md-col",
+        "declarations": 3
+      },
+      {
+        "selector": ".sm-col-right",
+        "declarations": 3
+      },
+      {
+        "selector": ".sm-col",
+        "declarations": 3
+      },
+      {
+        "selector": ".col-right",
+        "declarations": 3
+      },
+      {
+        "selector": ".col",
+        "declarations": 3
+      },
+      {
+        "selector": ".container",
+        "declarations": 3
+      },
+      {
+        "selector": "pre",
+        "declarations": 3
+      },
+      {
+        "selector": "p,\ndl,\nol,\nul",
+        "declarations": 3
+      },
+      {
+        "selector": "body",
+        "declarations": 3
+      },
+      {
+        "selector": ".button-red:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".button-gray:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".button-blue-outline:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".button-blue-outline:hover,\n.button-blue-outline.is-active",
+        "declarations": 2
+      },
+      {
+        "selector": ".button-blue:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".field-dark:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".radio-light:focus,\n.checkbox-light:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".radio-light,\n.checkbox-light",
+        "declarations": 2
+      },
+      {
+        "selector": ".field-light:disabled",
+        "declarations": 2
+      },
+      {
+        "selector": "pre,\ncode",
+        "declarations": 2
+      },
+      {
+        "selector": "a",
+        "declarations": 2
+      },
+      {
+        "selector": "body",
+        "declarations": 2
+      },
+      {
+        "selector": ".lg-table-cell",
+        "declarations": 2
+      },
+      {
+        "selector": ".lg-table",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-table-cell",
+        "declarations": 2
+      },
+      {
+        "selector": ".md-table",
+        "declarations": 2
+      },
+      {
+        "selector": ".sm-table-cell",
+        "declarations": 2
+      },
+      {
+        "selector": ".sm-table",
+        "declarations": 2
+      },
+      {
+        "selector": ".table-cell",
+        "declarations": 2
+      },
+      {
+        "selector": ".table",
+        "declarations": 2
+      },
+      {
+        "selector": ".x-group-item:focus,\n.x-group-item-2:focus,\n.y-group-item:focus,\n.y-group-item-2:focus",
+        "declarations": 2
+      },
+      {
+        "selector": ".button-narrow",
+        "declarations": 2
+      },
+      {
+        "selector": ".px4",
+        "declarations": 2
+      },
+      {
+        "selector": ".py4",
+        "declarations": 2
+      },
+      {
+        "selector": ".px3",
+        "declarations": 2
+      },
+      {
+        "selector": ".py3",
+        "declarations": 2
+      },
+      {
+        "selector": ".px2",
+        "declarations": 2
+      },
+      {
+        "selector": ".py2",
+        "declarations": 2
+      },
+      {
+        "selector": ".px1",
+        "declarations": 2
+      },
+      {
+        "selector": ".py1",
+        "declarations": 2
+      },
+      {
+        "selector": ".mx-auto",
+        "declarations": 2
+      },
+      {
+        "selector": ".mxn4",
+        "declarations": 2
+      },
+      {
+        "selector": ".mxn3",
+        "declarations": 2
+      },
+      {
+        "selector": ".mxn2",
+        "declarations": 2
+      },
+      {
+        "selector": ".mxn1",
+        "declarations": 2
+      },
+      {
+        "selector": ".caps",
+        "declarations": 2
+      },
+      {
+        "selector": ".clearfix:before,\n.clearfix:after",
+        "declarations": 2
+      },
+      {
+        "selector": "th,\ntd",
+        "declarations": 2
+      },
+      {
+        "selector": "th",
+        "declarations": 2
+      },
+      {
+        "selector": "::-moz-focus-inner",
+        "declarations": 2
+      },
+      {
+        "selector": "input,\nselect,\ntextarea,\nfieldset",
+        "declarations": 2
+      },
+      {
+        "selector": ".list-reset",
+        "declarations": 2
+      },
+      {
+        "selector": "blockquote,\nblockquote p",
+        "declarations": 2
+      },
+      {
+        "selector": "hr",
+        "declarations": 2
+      },
+      {
+        "selector": "pre,\ncode,\nsamp",
+        "declarations": 2
+      },
+      {
+        "selector": "button,\ninput,\nselect,\ntextarea",
+        "declarations": 2
+      },
+      {
+        "selector": ".not-rounded",
+        "declarations": 1
+      },
+      {
+        "selector": ".rounded-left",
+        "declarations": 1
+      },
+      {
+        "selector": ".rounded-bottom",
+        "declarations": 1
+      },
+      {
+        "selector": ".rounded-right",
+        "declarations": 1
+      },
+      {
+        "selector": ".rounded-top",
+        "declarations": 1
+      },
+      {
+        "selector": ".circle",
+        "declarations": 1
+      },
+      {
+        "selector": ".rounded",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-darken-4",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-darken-3",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-darken-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-darken-1",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-yellow",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-green",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-red",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-lighter-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-light-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-mid-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-blue",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-white",
+        "declarations": 1
+      },
+      {
+        "selector": ".bg-dark-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".yellow",
+        "declarations": 1
+      },
+      {
+        "selector": ".green",
+        "declarations": 1
+      },
+      {
+        "selector": ".red",
+        "declarations": 1
+      },
+      {
+        "selector": ".lighter-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".light-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".mid-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".blue",
+        "declarations": 1
+      },
+      {
+        "selector": ".white",
+        "declarations": 1
+      },
+      {
+        "selector": ".dark-gray",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-tab:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-dark:active,\n.button-nav-dark.is-active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-dark:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-dark",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-light:active,\n.button-nav-light.is-active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-nav-light:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-red:disabled,\n.button-red.is-disabled",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-red:active,\n.button-red.is-active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-red:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-gray:disabled,\n.button-gray.is-disabled",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-gray:active,\n.button-gray:is-active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-gray:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-blue-outline:active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-blue:disabled,\n.button-blue.is-disabled",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-blue:active,\n.button-blue.is-active",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-blue:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark.is-error",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark.is-warning",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark.is-success",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark:invalid",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark:read-only:not(select)",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark::placeholder",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark:-ms-input-placeholder",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark::-moz-placeholder",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-dark::-webkit-input-placeholder",
+        "declarations": 1
+      },
+      {
+        "selector": ".radio-light",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-light.is-error",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-light.is-warning",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-light.is-success",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-light:invalid",
+        "declarations": 1
+      },
+      {
+        "selector": ".field-light:read-only:not(select)",
+        "declarations": 1
+      },
+      {
+        "selector": "a:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".table-fixed",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-12",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-11",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-10",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-9",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-8",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-7",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-6",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-5",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-4",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-3",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-col-1",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-12",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-11",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-10",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-9",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-8",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-7",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-6",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-5",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-4",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-3",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-col-1",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-12",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-11",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-10",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-9",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-8",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-7",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-6",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-5",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-4",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-3",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-col-1",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-12",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-11",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-10",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-9",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-8",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-7",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-6",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-5",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-4",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-3",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".col-1",
+        "declarations": 1
+      },
+      {
+        "selector": ".disclosure-group.is-active .disclosure-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".disclosure-group .disclosure-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".y-group-item-2:first-of-type",
+        "declarations": 1
+      },
+      {
+        "selector": ".y-group-item-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".x-group-item-2:first-of-type",
+        "declarations": 1
+      },
+      {
+        "selector": ".x-group-item-2",
+        "declarations": 1
+      },
+      {
+        "selector": ".y-group-item:first-of-type",
+        "declarations": 1
+      },
+      {
+        "selector": ".y-group-item",
+        "declarations": 1
+      },
+      {
+        "selector": ".x-group-item:first-of-type",
+        "declarations": 1
+      },
+      {
+        "selector": ".x-group-item",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-big",
+        "declarations": 1
+      },
+      {
+        "selector": ".button-small",
+        "declarations": 1
+      },
+      {
+        "selector": ".z4",
+        "declarations": 1
+      },
+      {
+        "selector": ".z3",
+        "declarations": 1
+      },
+      {
+        "selector": ".z2",
+        "declarations": 1
+      },
+      {
+        "selector": ".z1",
+        "declarations": 1
+      },
+      {
+        "selector": ".left-0",
+        "declarations": 1
+      },
+      {
+        "selector": ".bottom-0",
+        "declarations": 1
+      },
+      {
+        "selector": ".right-0",
+        "declarations": 1
+      },
+      {
+        "selector": ".top-0",
+        "declarations": 1
+      },
+      {
+        "selector": ".fixed",
+        "declarations": 1
+      },
+      {
+        "selector": ".absolute",
+        "declarations": 1
+      },
+      {
+        "selector": ".relative",
+        "declarations": 1
+      },
+      {
+        "selector": ".display-none",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-hide",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-hide",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-hide",
+        "declarations": 1
+      },
+      {
+        "selector": ".lg-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".md-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".sm-show,\n.md-show,\n.lg-show",
+        "declarations": 1
+      },
+      {
+        "selector": ".p4",
+        "declarations": 1
+      },
+      {
+        "selector": ".p3",
+        "declarations": 1
+      },
+      {
+        "selector": ".p2",
+        "declarations": 1
+      },
+      {
+        "selector": ".p1",
+        "declarations": 1
+      },
+      {
+        "selector": ".ml4",
+        "declarations": 1
+      },
+      {
+        "selector": ".mb4",
+        "declarations": 1
+      },
+      {
+        "selector": ".mr4",
+        "declarations": 1
+      },
+      {
+        "selector": ".mt4",
+        "declarations": 1
+      },
+      {
+        "selector": ".m4",
+        "declarations": 1
+      },
+      {
+        "selector": ".ml3",
+        "declarations": 1
+      },
+      {
+        "selector": ".mb3",
+        "declarations": 1
+      },
+      {
+        "selector": ".mr3",
+        "declarations": 1
+      },
+      {
+        "selector": ".mt3",
+        "declarations": 1
+      },
+      {
+        "selector": ".m3",
+        "declarations": 1
+      },
+      {
+        "selector": ".ml2",
+        "declarations": 1
+      },
+      {
+        "selector": ".mb2",
+        "declarations": 1
+      },
+      {
+        "selector": ".mr2",
+        "declarations": 1
+      },
+      {
+        "selector": ".mt2",
+        "declarations": 1
+      },
+      {
+        "selector": ".m2",
+        "declarations": 1
+      },
+      {
+        "selector": ".ml1",
+        "declarations": 1
+      },
+      {
+        "selector": ".mb1",
+        "declarations": 1
+      },
+      {
+        "selector": ".mr1",
+        "declarations": 1
+      },
+      {
+        "selector": ".mt1",
+        "declarations": 1
+      },
+      {
+        "selector": ".m1",
+        "declarations": 1
+      },
+      {
+        "selector": ".ml0",
+        "declarations": 1
+      },
+      {
+        "selector": ".mb0",
+        "declarations": 1
+      },
+      {
+        "selector": ".mr0",
+        "declarations": 1
+      },
+      {
+        "selector": ".mt0",
+        "declarations": 1
+      },
+      {
+        "selector": ".m0",
+        "declarations": 1
+      },
+      {
+        "selector": ".nowrap",
+        "declarations": 1
+      },
+      {
+        "selector": ".justify",
+        "declarations": 1
+      },
+      {
+        "selector": ".right-align",
+        "declarations": 1
+      },
+      {
+        "selector": ".center",
+        "declarations": 1
+      },
+      {
+        "selector": ".left-align",
+        "declarations": 1
+      },
+      {
+        "selector": ".italic",
+        "declarations": 1
+      },
+      {
+        "selector": ".regular",
+        "declarations": 1
+      },
+      {
+        "selector": ".bold",
+        "declarations": 1
+      },
+      {
+        "selector": ".full-width",
+        "declarations": 1
+      },
+      {
+        "selector": ".half-width",
+        "declarations": 1
+      },
+      {
+        "selector": ".fit",
+        "declarations": 1
+      },
+      {
+        "selector": ".right",
+        "declarations": 1
+      },
+      {
+        "selector": ".left",
+        "declarations": 1
+      },
+      {
+        "selector": ".clearfix:after",
+        "declarations": 1
+      },
+      {
+        "selector": ".overflow-scroll",
+        "declarations": 1
+      },
+      {
+        "selector": ".overflow-hidden",
+        "declarations": 1
+      },
+      {
+        "selector": ".inline-block",
+        "declarations": 1
+      },
+      {
+        "selector": ".block",
+        "declarations": 1
+      },
+      {
+        "selector": ".inline",
+        "declarations": 1
+      },
+      {
+        "selector": "td",
+        "declarations": 1
+      },
+      {
+        "selector": "th",
+        "declarations": 1
+      },
+      {
+        "selector": ".button:hover",
+        "declarations": 1
+      },
+      {
+        "selector": ".fieldset-reset legend",
+        "declarations": 1
+      },
+      {
+        "selector": "select:not([multiple])",
+        "declarations": 1
+      },
+      {
+        "selector": "h6,\n.h6",
+        "declarations": 1
+      },
+      {
+        "selector": "h5,\n.h5",
+        "declarations": 1
+      },
+      {
+        "selector": "h4,\n.h4",
+        "declarations": 1
+      },
+      {
+        "selector": "h3,\n.h3",
+        "declarations": 1
+      },
+      {
+        "selector": "h2,\n.h2",
+        "declarations": 1
+      },
+      {
+        "selector": "h1,\n.h1",
+        "declarations": 1
+      },
+      {
+        "selector": "ol,\nul",
+        "declarations": 1
+      },
+      {
+        "selector": "svg",
+        "declarations": 1
+      },
+      {
+        "selector": "img",
+        "declarations": 1
+      },
+      {
+        "selector": "body,\nbutton",
+        "declarations": 1
+      }
+    ]
+  },
+  "selectors": {
+    "total": 347,
+    "type": 70,
+    "class": 279,
+    "id": 0,
+    "pseudoClass": 41,
+    "pseudoElement": 3,
+    "values": [
+      "body",
+      "button",
+      "button",
+      "input",
+      "select",
+      "textarea",
+      "img",
+      "svg",
+      "body",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "p",
+      "dl",
+      "ol",
+      "ul",
+      "ol",
+      "ul",
+      "pre",
+      "code",
+      "samp",
+      "pre",
+      "hr",
+      "blockquote",
+      "blockquote",
+      "blockquote p",
+      "h1",
+      ".h1",
+      "h2",
+      ".h2",
+      "h3",
+      ".h3",
+      "h4",
+      ".h4",
+      "h5",
+      ".h5",
+      "h6",
+      ".h6",
+      ".list-reset",
+      "input",
+      "select",
+      "textarea",
+      "fieldset",
+      "input[type=text]",
+      "input[type=datetime]",
+      "input[type=datetime-local]",
+      "input[type=email]",
+      "input[type=month]",
+      "input[type=number]",
+      "input[type=password]",
+      "input[type=search]",
+      "input[type=tel]",
+      "input[type=time]",
+      "input[type=url]",
+      "input[type=week]",
+      "select",
+      "select:not([multiple])",
+      "textarea",
+      ".fieldset-reset",
+      ".fieldset-reset legend",
+      "button",
+      ".button",
+      "::-moz-focus-inner",
+      ".button:hover",
+      "table",
+      "th",
+      "th",
+      "td",
+      "th",
+      "td",
+      ".inline",
+      ".block",
+      ".inline-block",
+      ".overflow-hidden",
+      ".overflow-scroll",
+      ".clearfix:before",
+      ".clearfix:after",
+      ".clearfix:after",
+      ".left",
+      ".right",
+      ".fit",
+      ".half-width",
+      ".full-width",
+      ".bold",
+      ".regular",
+      ".italic",
+      ".caps",
+      ".left-align",
+      ".center",
+      ".right-align",
+      ".justify",
+      ".nowrap",
+      ".m0",
+      ".mt0",
+      ".mr0",
+      ".mb0",
+      ".ml0",
+      ".m1",
+      ".mt1",
+      ".mr1",
+      ".mb1",
+      ".ml1",
+      ".m2",
+      ".mt2",
+      ".mr2",
+      ".mb2",
+      ".ml2",
+      ".m3",
+      ".mt3",
+      ".mr3",
+      ".mb3",
+      ".ml3",
+      ".m4",
+      ".mt4",
+      ".mr4",
+      ".mb4",
+      ".ml4",
+      ".mxn1",
+      ".mxn2",
+      ".mxn3",
+      ".mxn4",
+      ".mx-auto",
+      ".p1",
+      ".py1",
+      ".px1",
+      ".p2",
+      ".py2",
+      ".px2",
+      ".p3",
+      ".py3",
+      ".px3",
+      ".p4",
+      ".py4",
+      ".px4",
+      ".sm-show",
+      ".md-show",
+      ".lg-show",
+      ".sm-show",
+      ".md-show",
+      ".lg-show",
+      ".sm-hide",
+      ".md-hide",
+      ".lg-hide",
+      ".display-none",
+      ".hide",
+      ".relative",
+      ".absolute",
+      ".fixed",
+      ".top-0",
+      ".right-0",
+      ".bottom-0",
+      ".left-0",
+      ".z1",
+      ".z2",
+      ".z3",
+      ".z4",
+      ".absolute-center",
+      ".button-small",
+      ".button-big",
+      ".button-narrow",
+      ".x-group-item",
+      ".x-group-item:first-of-type",
+      ".y-group-item",
+      ".y-group-item:first-of-type",
+      ".x-group-item-2",
+      ".x-group-item-2:first-of-type",
+      ".y-group-item-2",
+      ".y-group-item-2:first-of-type",
+      ".x-group-item:focus",
+      ".x-group-item-2:focus",
+      ".y-group-item:focus",
+      ".y-group-item-2:focus",
+      ".disclosure-group .disclosure-show",
+      ".disclosure-group.is-active .disclosure-show",
+      ".container",
+      ".col",
+      ".col-right",
+      ".col-1",
+      ".col-2",
+      ".col-3",
+      ".col-4",
+      ".col-5",
+      ".col-6",
+      ".col-7",
+      ".col-8",
+      ".col-9",
+      ".col-10",
+      ".col-11",
+      ".col-12",
+      ".sm-col",
+      ".sm-col-right",
+      ".sm-col-1",
+      ".sm-col-2",
+      ".sm-col-3",
+      ".sm-col-4",
+      ".sm-col-5",
+      ".sm-col-6",
+      ".sm-col-7",
+      ".sm-col-8",
+      ".sm-col-9",
+      ".sm-col-10",
+      ".sm-col-11",
+      ".sm-col-12",
+      ".md-col",
+      ".md-col-right",
+      ".md-col-1",
+      ".md-col-2",
+      ".md-col-3",
+      ".md-col-4",
+      ".md-col-5",
+      ".md-col-6",
+      ".md-col-7",
+      ".md-col-8",
+      ".md-col-9",
+      ".md-col-10",
+      ".md-col-11",
+      ".md-col-12",
+      ".lg-col",
+      ".lg-col-right",
+      ".lg-col-1",
+      ".lg-col-2",
+      ".lg-col-3",
+      ".lg-col-4",
+      ".lg-col-5",
+      ".lg-col-6",
+      ".lg-col-7",
+      ".lg-col-8",
+      ".lg-col-9",
+      ".lg-col-10",
+      ".lg-col-11",
+      ".lg-col-12",
+      ".table",
+      ".table-cell",
+      ".table-fixed",
+      ".sm-table",
+      ".sm-table-cell",
+      ".md-table",
+      ".md-table-cell",
+      ".lg-table",
+      ".lg-table-cell",
+      "body",
+      "a",
+      "a:hover",
+      "pre",
+      "code",
+      "hr",
+      ".field-light",
+      ".field-light:focus",
+      ".field-light:disabled",
+      ".field-light:read-only:not(select)",
+      ".field-light:invalid",
+      ".field-light.is-success",
+      ".field-light.is-warning",
+      ".field-light.is-error",
+      ".radio-light",
+      ".checkbox-light",
+      ".radio-light",
+      ".radio-light:focus",
+      ".checkbox-light:focus",
+      ".field-dark",
+      ".field-dark::-webkit-input-placeholder",
+      ".field-dark::-moz-placeholder",
+      ".field-dark:-ms-input-placeholder",
+      ".field-dark::placeholder",
+      ".field-dark:focus",
+      ".field-dark:read-only:not(select)",
+      ".field-dark:invalid",
+      ".field-dark.is-success",
+      ".field-dark.is-warning",
+      ".field-dark.is-error",
+      ".table-light th",
+      ".table-light td",
+      ".button-blue",
+      ".button-blue:hover",
+      ".button-blue:active",
+      ".button-blue.is-active",
+      ".button-blue:focus",
+      ".button-blue:disabled",
+      ".button-blue.is-disabled",
+      ".button-blue-outline",
+      ".button-blue-outline:hover",
+      ".button-blue-outline.is-active",
+      ".button-blue-outline:active",
+      ".button-blue-outline:focus",
+      ".button-blue-outline:disabled",
+      ".button-blue-outline.is-disabled",
+      ".button-gray",
+      ".button-gray:hover",
+      ".button-gray:active",
+      ".button-gray:is-active",
+      ".button-gray:focus",
+      ".button-gray:disabled",
+      ".button-gray.is-disabled",
+      ".button-red",
+      ".button-red:hover",
+      ".button-red:active",
+      ".button-red.is-active",
+      ".button-red:focus",
+      ".button-red:disabled",
+      ".button-red.is-disabled",
+      ".button-nav-light:hover",
+      ".button-nav-light:active",
+      ".button-nav-light.is-active",
+      ".button-nav-dark",
+      ".button-nav-dark:hover",
+      ".button-nav-dark:active",
+      ".button-nav-dark.is-active",
+      ".button-nav-tab",
+      ".button-nav-tab:hover",
+      ".button-nav-tab.is-active",
+      ".dark-gray",
+      ".white",
+      ".blue",
+      ".mid-gray",
+      ".light-gray",
+      ".lighter-gray",
+      ".red",
+      ".green",
+      ".yellow",
+      ".bg-dark-gray",
+      ".bg-white",
+      ".bg-blue",
+      ".bg-mid-gray",
+      ".bg-light-gray",
+      ".bg-lighter-gray",
+      ".bg-red",
+      ".bg-green",
+      ".bg-yellow",
+      ".bg-darken-1",
+      ".bg-darken-2",
+      ".bg-darken-3",
+      ".bg-darken-4",
+      ".border",
+      ".border-top",
+      ".border-right",
+      ".border-bottom",
+      ".border-left",
+      ".rounded",
+      ".circle",
+      ".rounded-top",
+      ".rounded-right",
+      ".rounded-bottom",
+      ".rounded-left",
+      ".not-rounded"
+    ],
+    "specificity": {
+      "max": 30,
+      "average": 10.403458213256485
+    }
+  },
+  "declarations": {
+    "total": 471,
+    "unique": 232,
+    "properties": {
+      "margin": [
+        "0",
+        "0",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        "auto"
+      ],
+      "font-family": [
+        "inherit",
+        "'Helvetica Neue', Helvetica, sans-serif",
+        "'Helvetica Neue', Helvetica, sans-serif",
+        "'Source Code Pro', Consolas, monospace"
+      ],
+      "font-size": [
+        "100%",
+        "100%",
+        "1rem",
+        "inherit",
+        "1.25rem",
+        "2rem",
+        "1.5rem",
+        "1.25rem",
+        "1rem",
+        ".875rem",
+        ".75rem"
+      ],
+      "max-width": [
+        "100%",
+        "100%",
+        "100%",
+        "64em"
+      ],
+      "max-height": [
+        "100%"
+      ],
+      "line-height": [
+        "1.5",
+        "1.25",
+        "1.75",
+        "1.75",
+        "1.125",
+        "inherit",
+        "1.625",
+        "1"
+      ],
+      "font-weight": [
+        "bold",
+        "bold",
+        "bold",
+        "bold",
+        "normal"
+      ],
+      "margin-top": [
+        "1em",
+        "0",
+        "0",
+        "2rem",
+        "2rem",
+        "0",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        "-1px",
+        "0",
+        "-2px",
+        "0"
+      ],
+      "margin-bottom": [
+        ".5em",
+        "1rem",
+        "1rem",
+        "2rem",
+        "2rem",
+        ".5rem",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        "-1px"
+      ],
+      "padding-left": [
+        "2rem",
+        "1rem",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        ".5rem"
+      ],
+      "overflow-x": [
+        "scroll"
+      ],
+      "margin-left": [
+        "0",
+        "0",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        "-.5rem",
+        "-1rem",
+        "-2rem",
+        "-4rem",
+        "auto",
+        "-1px",
+        "0",
+        "-2px",
+        "0",
+        "auto"
+      ],
+      "padding-right": [
+        "1rem",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        ".5rem"
+      ],
+      "font-style": [
+        "italic",
+        "italic"
+      ],
+      "list-style": [
+        "none"
+      ],
+      "-moz-box-sizing": [
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box"
+      ],
+      "box-sizing": [
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box",
+        "border-box"
+      ],
+      "height": [
+        "2.25em",
+        "2.25em",
+        "auto",
+        "1px"
+      ],
+      "padding": [
+        ".25em 1rem",
+        ".25em 1rem",
+        ".25em 1rem",
+        "0",
+        "0",
+        ".5em 1rem",
+        "0",
+        ".25em 1rem",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        ".25em .5rem"
+      ],
+      "-webkit-appearance": [
+        "none",
+        "none"
+      ],
+      "margin-right": [
+        "0",
+        "0",
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem",
+        "-.5rem",
+        "-1rem",
+        "-2rem",
+        "-4rem",
+        "auto",
+        "auto"
+      ],
+      "border": [
+        "0",
+        "1px solid transparent",
+        "0",
+        "0",
+        "1px solid rgba(0, 0, 0, .0625)",
+        "1px solid rgba(255, 255, 255, .5)",
+        "2px solid #0076df"
+      ],
+      "text-decoration": [
+        "none",
+        "none",
+        "none",
+        "underline"
+      ],
+      "cursor": [
+        "pointer"
+      ],
+      "display": [
+        "inline-block",
+        "inline",
+        "block",
+        "inline-block",
+        "table",
+        "none",
+        "block",
+        "block",
+        "block",
+        "none",
+        "none",
+        "none",
+        "none",
+        "table",
+        "none",
+        "block",
+        "table",
+        "table-cell",
+        "table",
+        "table-cell",
+        "table",
+        "table-cell",
+        "table",
+        "table-cell"
+      ],
+      "border-collapse": [
+        "collapse"
+      ],
+      "border-spacing": [
+        "0"
+      ],
+      "width": [
+        "100%",
+        "50%",
+        "100%",
+        "1px",
+        "8.333333333333332%",
+        "16.666666666666664%",
+        "25%",
+        "33.33333333333333%",
+        "41.66666666666667%",
+        "50%",
+        "58.333333333333336%",
+        "66.66666666666666%",
+        "75%",
+        "83.33333333333334%",
+        "91.66666666666666%",
+        "100%",
+        "8.333333333333332%",
+        "16.666666666666664%",
+        "25%",
+        "33.33333333333333%",
+        "41.66666666666667%",
+        "50%",
+        "58.333333333333336%",
+        "66.66666666666666%",
+        "75%",
+        "83.33333333333334%",
+        "91.66666666666666%",
+        "100%",
+        "8.333333333333332%",
+        "16.666666666666664%",
+        "25%",
+        "33.33333333333333%",
+        "41.66666666666667%",
+        "50%",
+        "58.333333333333336%",
+        "66.66666666666666%",
+        "75%",
+        "83.33333333333334%",
+        "91.66666666666666%",
+        "100%",
+        "8.333333333333332%",
+        "16.666666666666664%",
+        "25%",
+        "33.33333333333333%",
+        "41.66666666666667%",
+        "50%",
+        "58.333333333333336%",
+        "66.66666666666666%",
+        "75%",
+        "83.33333333333334%",
+        "91.66666666666666%",
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      "text-align": [
+        "left",
+        "left",
+        "center",
+        "right",
+        "justify"
+      ],
+      "vertical-align": [
+        "bottom",
+        "top",
+        "middle",
+        "middle",
+        "middle",
+        "middle"
+      ],
+      "overflow": [
+        "hidden",
+        "scroll",
+        "hidden"
+      ],
+      "content": [
+        "\" \""
+      ],
+      "clear": [
+        "both"
+      ],
+      "float": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "left",
+        "right",
+        "left",
+        "right",
+        "left",
+        "right"
+      ],
+      "text-transform": [
+        "uppercase"
+      ],
+      "letter-spacing": [
+        ".2em"
+      ],
+      "white-space": [
+        "nowrap"
+      ],
+      "padding-top": [
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem"
+      ],
+      "padding-bottom": [
+        ".5rem",
+        "1rem",
+        "2rem",
+        "4rem"
+      ],
+      "position": [
+        "absolute",
+        "relative",
+        "absolute",
+        "fixed",
+        "relative"
+      ],
+      "clip": [
+        "rect(1px, 1px, 1px, 1px)"
+      ],
+      "top": [
+        "0",
+        "0"
+      ],
+      "right": [
+        "0",
+        "0"
+      ],
+      "bottom": [
+        "0",
+        "0"
+      ],
+      "left": [
+        "0",
+        "0"
+      ],
+      "z-index": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "table-layout": [
+        "fixed"
+      ],
+      "color": [
+        "#333",
+        "#0076df",
+        "#777",
+        "white",
+        "rgba(255, 255, 255, .75)",
+        "rgba(255, 255, 255, .75)",
+        "rgba(255, 255, 255, .75)",
+        "rgba(255, 255, 255, .75)",
+        "white",
+        "#0076df",
+        "white",
+        "#0076df",
+        "white",
+        "white",
+        "#333",
+        "white",
+        "#333",
+        "white",
+        "#0076df",
+        "#777",
+        "#ccc",
+        "#eee",
+        "#f95020",
+        "#00cf26",
+        "#efcc00"
+      ],
+      "background-color": [
+        "white",
+        "#eee",
+        "white",
+        "rgba(0, 0, 0, .125)",
+        "rgba(0, 0, 0, .125)",
+        "rgba(0, 0, 0, .25)",
+        "rgba(255, 255, 255, .25)",
+        "#0076df",
+        "transparent",
+        "#0076df",
+        "transparent",
+        "#777",
+        "#f95020",
+        "rgba(0, 0, 0, .0625)",
+        "rgba(0, 0, 0, .125)",
+        "rgba(0, 0, 0, .125)",
+        "rgba(0, 0, 0, .0625)",
+        "white",
+        "#333",
+        "white",
+        "#0076df",
+        "#777",
+        "#ccc",
+        "#eee",
+        "#f95020",
+        "#00cf26",
+        "#efcc00",
+        "rgba(0, 0, 0, .0625)",
+        "rgba(0, 0, 0, .125)",
+        "rgba(0, 0, 0, .25)",
+        "rgba(0, 0, 0, .5)"
+      ],
+      "border-radius": [
+        "3px",
+        "3px",
+        "50%",
+        "3px",
+        "3px",
+        "3px",
+        "3px",
+        "3px",
+        "3px 3px 0 0",
+        "3px",
+        "50%",
+        "3px 3px 0 0",
+        "0 3px 3px 0",
+        "0 0 3px 3px",
+        "3px 0 0 3px",
+        "0"
+      ],
+      "border-bottom-style": [
+        "solid",
+        "solid",
+        "solid"
+      ],
+      "border-bottom-width": [
+        "1px",
+        "1px",
+        "1px"
+      ],
+      "border-bottom-color": [
+        "#ccc",
+        "#ccc",
+        "#ccc"
+      ],
+      "-webkit-transition": [
+        "box-shadow .2s ease",
+        "box-shadow .2s ease"
+      ],
+      "transition": [
+        "box-shadow .2s ease",
+        "box-shadow .2s ease"
+      ],
+      "border-style": [
+        "solid",
+        "solid"
+      ],
+      "border-width": [
+        "1px",
+        "1px"
+      ],
+      "border-color": [
+        "#ccc",
+        "#0076df",
+        "#f95020",
+        "#00cf26",
+        "#efcc00",
+        "#f95020",
+        "#f95020",
+        "#00cf26",
+        "#efcc00",
+        "#f95020",
+        "#ccc"
+      ],
+      "outline": [
+        "none",
+        "none",
+        "0",
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "box-shadow": [
+        "0 0 2px rgba(0, 118, 223, .5)",
+        "0 0 2px rgba(0, 118, 223, .5)",
+        "inset 0 0 0 32px rgba(0, 0, 0, .125), inset 0 2px 3px 0 rgba(0, 0, 0, .25)",
+        "0 0 0 2px rgba(255, 255, 255, .5), 0 0 1px 4px rgba(0, 118, 223, .5)",
+        "inset 0 3px 3px 0 rgba(0, 0, 0, .25)",
+        "0 0 0 2px rgba(255, 255, 255, .5), 0 0 1px 4px rgba(0, 118, 223, .5)",
+        "inset 0 0 0 32px rgba(0, 0, 0, .125), inset 0 2px 3px 0 rgba(0, 0, 0, .25)",
+        "0 0 0 2px white, 0 0 1px 4px rgba(0, 118, 223, .5)",
+        "inset 0 0 0 32px rgba(0, 0, 0, .125), inset 0 2px 3px 0 rgba(0, 0, 0, .25)",
+        "0 0 0 2px rgba(255, 255, 255, .5), 0 0 1px 4px rgba(249, 80, 32, .5)"
+      ],
+      "-webkit-transition-duration": [
+        ".1s",
+        ".1s",
+        ".1s",
+        ".1s"
+      ],
+      "transition-duration": [
+        ".1s",
+        ".1s",
+        ".1s",
+        ".1s"
+      ],
+      "-webkit-transition-timing-function": [
+        "ease-out",
+        "ease-out",
+        "ease-out",
+        "ease-out"
+      ],
+      "transition-timing-function": [
+        "ease-out",
+        "ease-out",
+        "ease-out",
+        "ease-out"
+      ],
+      "-webkit-transition-property": [
+        "box-shadow, background-color",
+        "box-shadow, background-color",
+        "box-shadow, background-color",
+        "box-shadow, background-color"
+      ],
+      "transition-property": [
+        "box-shadow, background-color",
+        "box-shadow, background-color",
+        "box-shadow, background-color",
+        "box-shadow, background-color"
+      ],
+      "opacity": [
+        ".875",
+        ".5",
+        ".5",
+        ".875",
+        ".5",
+        ".875",
+        ".5"
+      ],
+      "border-bottom": [
+        "1px solid #ccc",
+        "1px solid white"
+      ],
+      "border-top": [
+        "1px solid #ccc"
+      ],
+      "border-left": [
+        "1px solid #ccc"
+      ],
+      "border-right": [
+        "1px solid #ccc"
+      ],
+      "border-top-style": [
+        "solid"
+      ],
+      "border-top-width": [
+        "1px"
+      ],
+      "border-top-color": [
+        "#ccc"
+      ],
+      "border-right-style": [
+        "solid"
+      ],
+      "border-right-width": [
+        "1px"
+      ],
+      "border-right-color": [
+        "#ccc"
+      ],
+      "border-left-style": [
+        "solid"
+      ],
+      "border-left-width": [
+        "1px"
+      ],
+      "border-left-color": [
+        "#ccc"
+      ]
+    }
+  },
+  "mediaQueries": {
+    "total": 12,
+    "unique": 3,
+    "values": [
+      "(min-width: 40em)",
+      "(min-width: 52em)",
+      "(min-width: 64em)",
+      "(min-width: 40em)",
+      "(min-width: 52em)",
+      "(min-width: 64em)",
+      "(min-width: 40em)",
+      "(min-width: 52em)",
+      "(min-width: 64em)",
+      "(min-width: 40em)",
+      "(min-width: 52em)",
+      "(min-width: 64em)"
+    ],
+    "contents": [
+      {
+        "value": "(min-width: 40em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".sm-show",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".sm-show"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "block"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 52em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".md-show",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".md-show"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "block"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 64em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".lg-show",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".lg-show"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "block"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 40em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".sm-hide",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".sm-hide"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "none"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 52em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".md-hide",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".md-hide"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "none"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 64em)",
+        "rules": {
+          "total": 1,
+          "size": {
+            "graph": [
+              1
+            ],
+            "max": 1,
+            "average": 1
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ".lg-hide",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 1,
+          "type": 0,
+          "class": 1,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".lg-hide"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 1,
+          "unique": 1,
+          "properties": {
+            "display": [
+              "none"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 40em)",
+        "rules": {
+          "total": 14,
+          "size": {
+            "graph": [
+              3,
+              3,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "max": 3,
+            "average": 1.2857142857142858
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.sm-col-right",
+              "declarations": 3
+            },
+            {
+              "selector": ".sm-col",
+              "declarations": 3
+            },
+            {
+              "selector": ",.sm-col-12",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-11",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-10",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-9",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-8",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-7",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-6",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-5",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-4",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-3",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-2",
+              "declarations": 1
+            },
+            {
+              "selector": ",.sm-col-1",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 14,
+          "type": 0,
+          "class": 14,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".sm-col",
+            ".sm-col-right",
+            ".sm-col-1",
+            ".sm-col-2",
+            ".sm-col-3",
+            ".sm-col-4",
+            ".sm-col-5",
+            ".sm-col-6",
+            ".sm-col-7",
+            ".sm-col-8",
+            ".sm-col-9",
+            ".sm-col-10",
+            ".sm-col-11",
+            ".sm-col-12"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 18,
+          "unique": 16,
+          "properties": {
+            "float": [
+              "left",
+              "right"
+            ],
+            "-moz-box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "width": [
+              "8.333333333333332%",
+              "16.666666666666664%",
+              "25%",
+              "33.33333333333333%",
+              "41.66666666666667%",
+              "50%",
+              "58.333333333333336%",
+              "66.66666666666666%",
+              "75%",
+              "83.33333333333334%",
+              "91.66666666666666%",
+              "100%"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 52em)",
+        "rules": {
+          "total": 14,
+          "size": {
+            "graph": [
+              3,
+              3,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "max": 3,
+            "average": 1.2857142857142858
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.md-col-right",
+              "declarations": 3
+            },
+            {
+              "selector": ".md-col",
+              "declarations": 3
+            },
+            {
+              "selector": ",.md-col-12",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-11",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-10",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-9",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-8",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-7",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-6",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-5",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-4",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-3",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-2",
+              "declarations": 1
+            },
+            {
+              "selector": ",.md-col-1",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 14,
+          "type": 0,
+          "class": 14,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".md-col",
+            ".md-col-right",
+            ".md-col-1",
+            ".md-col-2",
+            ".md-col-3",
+            ".md-col-4",
+            ".md-col-5",
+            ".md-col-6",
+            ".md-col-7",
+            ".md-col-8",
+            ".md-col-9",
+            ".md-col-10",
+            ".md-col-11",
+            ".md-col-12"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 18,
+          "unique": 16,
+          "properties": {
+            "float": [
+              "left",
+              "right"
+            ],
+            "-moz-box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "width": [
+              "8.333333333333332%",
+              "16.666666666666664%",
+              "25%",
+              "33.33333333333333%",
+              "41.66666666666667%",
+              "50%",
+              "58.333333333333336%",
+              "66.66666666666666%",
+              "75%",
+              "83.33333333333334%",
+              "91.66666666666666%",
+              "100%"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 64em)",
+        "rules": {
+          "total": 14,
+          "size": {
+            "graph": [
+              3,
+              3,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "max": 3,
+            "average": 1.2857142857142858
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.lg-col-right",
+              "declarations": 3
+            },
+            {
+              "selector": ".lg-col",
+              "declarations": 3
+            },
+            {
+              "selector": ",.lg-col-12",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-11",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-10",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-9",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-8",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-7",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-6",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-5",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-4",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-3",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-2",
+              "declarations": 1
+            },
+            {
+              "selector": ",.lg-col-1",
+              "declarations": 1
+            }
+          ]
+        },
+        "selectors": {
+          "total": 14,
+          "type": 0,
+          "class": 14,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".lg-col",
+            ".lg-col-right",
+            ".lg-col-1",
+            ".lg-col-2",
+            ".lg-col-3",
+            ".lg-col-4",
+            ".lg-col-5",
+            ".lg-col-6",
+            ".lg-col-7",
+            ".lg-col-8",
+            ".lg-col-9",
+            ".lg-col-10",
+            ".lg-col-11",
+            ".lg-col-12"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 18,
+          "unique": 16,
+          "properties": {
+            "float": [
+              "left",
+              "right"
+            ],
+            "-moz-box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "box-sizing": [
+              "border-box",
+              "border-box"
+            ],
+            "width": [
+              "8.333333333333332%",
+              "16.666666666666664%",
+              "25%",
+              "33.33333333333333%",
+              "41.66666666666667%",
+              "50%",
+              "58.333333333333336%",
+              "66.66666666666666%",
+              "75%",
+              "83.33333333333334%",
+              "91.66666666666666%",
+              "100%"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 40em)",
+        "rules": {
+          "total": 2,
+          "size": {
+            "graph": [
+              2,
+              2
+            ],
+            "max": 2,
+            "average": 2
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.sm-table-cell",
+              "declarations": 2
+            },
+            {
+              "selector": ".sm-table",
+              "declarations": 2
+            }
+          ]
+        },
+        "selectors": {
+          "total": 2,
+          "type": 0,
+          "class": 2,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".sm-table",
+            ".sm-table-cell"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 4,
+          "unique": 4,
+          "properties": {
+            "display": [
+              "table",
+              "table-cell"
+            ],
+            "width": [
+              "100%"
+            ],
+            "vertical-align": [
+              "middle"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 52em)",
+        "rules": {
+          "total": 2,
+          "size": {
+            "graph": [
+              2,
+              2
+            ],
+            "max": 2,
+            "average": 2
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.md-table-cell",
+              "declarations": 2
+            },
+            {
+              "selector": ".md-table",
+              "declarations": 2
+            }
+          ]
+        },
+        "selectors": {
+          "total": 2,
+          "type": 0,
+          "class": 2,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".md-table",
+            ".md-table-cell"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 4,
+          "unique": 4,
+          "properties": {
+            "display": [
+              "table",
+              "table-cell"
+            ],
+            "width": [
+              "100%"
+            ],
+            "vertical-align": [
+              "middle"
+            ]
+          }
+        }
+      },
+      {
+        "value": "(min-width: 64em)",
+        "rules": {
+          "total": 2,
+          "size": {
+            "graph": [
+              2,
+              2
+            ],
+            "max": 2,
+            "average": 2
+          },
+          "selectorByRuleSizes": [
+            {
+              "selector": ",.lg-table-cell",
+              "declarations": 2
+            },
+            {
+              "selector": ".lg-table",
+              "declarations": 2
+            }
+          ]
+        },
+        "selectors": {
+          "total": 2,
+          "type": 0,
+          "class": 2,
+          "id": 0,
+          "pseudoClass": 0,
+          "pseudoElement": 0,
+          "values": [
+            ".lg-table",
+            ".lg-table-cell"
+          ],
+          "specificity": {
+            "max": 10,
+            "average": 10
+          }
+        },
+        "declarations": {
+          "total": 4,
+          "unique": 4,
+          "properties": {
+            "display": [
+              "table",
+              "table-cell"
+            ],
+            "width": [
+              "100%"
+            ],
+            "vertical-align": [
+              "middle"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
