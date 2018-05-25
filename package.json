@@ -8,7 +8,7 @@
     "build": "npm run build:components && next build",
     "build:components": "lab -d components/library --pkg",
     "dev": "next",
-    "format": "prettier --no-semi --write {api,components,packages,pages}/**/*.js",
+    "format": "prettier --write {api,components,packages,pages}/**/*.js",
     "test": "lerna run test",
     "prepare": "npm run build:components",
     "pretest": "lerna run bootstrap"
@@ -31,5 +31,9 @@
     "@compositor/lab": "^1.0.0-37",
     "lerna": "^2.5.1",
     "prettier": "^1.11.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

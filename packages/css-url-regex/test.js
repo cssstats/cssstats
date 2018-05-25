@@ -1,16 +1,16 @@
-import test from "ava"
-import cssUrlRegex from "./"
+import test from 'ava'
+import cssUrlRegex from './'
 
 const matches = [
-  "url(foo.css)",
+  'url(foo.css)',
   "url('foo.css')",
-  "url(foo/bar.css)",
-  "url(http://google.com/foo/bar)"
+  'url(foo/bar.css)',
+  'url(http://google.com/foo/bar)'
 ]
 
-const nonMatches = ["foo", "(foo.css)", "url (foo.css)"]
+const nonMatches = ['foo', '(foo.css)', 'url (foo.css)']
 
-test("matches urls", t => {
+test('matches urls', t => {
   t.plan(matches.length)
 
   matches.forEach(match => {
@@ -18,7 +18,7 @@ test("matches urls", t => {
   })
 })
 
-test("does not match non existent urls", t => {
+test('does not match non existent urls', t => {
   t.plan(nonMatches.length)
 
   nonMatches.forEach(nonMatch => {

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-"use strict"
+'use strict'
 
-const meow = require("meow")
-const cssstats = require("cssstats")
-const read = require("read-file-stdin")
-const write = require("write-file-stdout")
+const meow = require('meow')
+const cssstats = require('cssstats')
+const read = require('read-file-stdin')
+const write = require('write-file-stdout')
 
 const cli = meow(`
   Usage

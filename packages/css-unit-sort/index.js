@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 // Originally written by @jxnblk
 // https://github.com/cssstats/cssstats/blob/16fe37c96623fd3cdb24bd302ef6f6e93826af0f/controllers/stats.js#L98
@@ -13,7 +13,7 @@ const sortFn = (a, b) => {
 }
 
 const convert = value => {
-  if (typeof value !== "string") {
+  if (typeof value !== 'string') {
     value = value.toString()
   }
 
@@ -26,25 +26,25 @@ const convert = value => {
   if (value.match(/%$/)) return raw * 0.16
 
   switch (value) {
-    case "inherit":
+    case 'inherit':
       return 16
-    case "xx-small":
+    case 'xx-small':
       return 9
-    case "x-small":
+    case 'x-small':
       return 10
-    case "small":
+    case 'small':
       return 13
-    case "medium":
+    case 'medium':
       return 16
-    case "large":
+    case 'large':
       return 18
-    case "x-large":
+    case 'x-large':
       return 24
-    case "xx-large":
+    case 'xx-large':
       return 32
-    case "small":
+    case 'small':
       return 13
-    case "larger":
+    case 'larger':
       return 19
     default:
       return 1024

@@ -1,11 +1,11 @@
-import test from "ava"
-import hasAdjacentSiblingSelector from "./"
+import test from 'ava'
+import hasAdjacentSiblingSelector from './'
 
-const adjacentSiblingSelectors = ["li + li", "#foo .bar .baz + .baz"]
+const adjacentSiblingSelectors = ['li + li', '#foo .bar .baz + .baz']
 
-const noAdjacentSiblingSelectors = ["foo", "#bar", "li > li"]
+const noAdjacentSiblingSelectors = ['foo', '#bar', 'li > li']
 
-test("returns true for adjacent sibling selectors", t => {
+test('returns true for adjacent sibling selectors', t => {
   t.plan(adjacentSiblingSelectors.length)
 
   adjacentSiblingSelectors.forEach(selector => {
@@ -13,7 +13,7 @@ test("returns true for adjacent sibling selectors", t => {
   })
 })
 
-test("returns false when not an adjacent sibling selector", t => {
+test('returns false when not an adjacent sibling selector', t => {
   t.plan(noAdjacentSiblingSelectors.length)
 
   noAdjacentSiblingSelectors.forEach(selector => {

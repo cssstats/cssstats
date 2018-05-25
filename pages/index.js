@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import Router from "next/router"
+import React, { Component } from 'react'
+import Router from 'next/router'
 
 import {
   H1,
@@ -10,15 +10,15 @@ import {
   Input,
   Label,
   LinkBox
-} from "../components/library"
+} from '../components/library'
 
-import Layout from "../components/Layout"
+import Layout from '../components/Layout'
 
-import { sites, frameworks } from "../components/constants"
+import { sites, frameworks } from '../components/constants'
 
 class Index extends Component {
   state = {
-    urlInput: ""
+    urlInput: ''
   }
 
   render() {
@@ -49,7 +49,7 @@ class Index extends Component {
           <LinkBox
             links={sites.map(link => {
               const fallbackUrl = `https://${link.name
-                .replace(" ", "")
+                .replace(' ', '')
                 .toLowerCase()}.com`
               const url = `/stats?url=${link.url || fallbackUrl}&name=${
                 link.name
