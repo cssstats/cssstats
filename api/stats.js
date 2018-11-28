@@ -6,11 +6,15 @@ const isPresent = require('is-present')
 const normalizeUrl = require('normalize-url')
 const cssstats = require('cssstats')
 const cssbeautify = require('cssbeautify')
+const waybackCss = require('wayback-css')
 
 const isValidUrl = url => isPresent(url) && isUrl(url)
 
+const retrieveCss = (url, date) => date ? waybackCss(url, date) : getCss(url)
+
 module.exports = async (req, res) => {
   const url = getParam('url', req.url)
+  const date = getParam('date', req.url)
 
   const fullUrl = url && normalizeUrl(url)
 
@@ -22,7 +26,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const css = await getCss(fullUrl)
+    const css = await retrieveCss(fullUrl, date)
     const stats = cssstats(css.css, {
       specificityGraph: true,
       repeatedSelectors: true,
