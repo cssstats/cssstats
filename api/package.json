@@ -1,5 +1,7 @@
 {
-  "name": "cssstats-api",
+  "private": true,
+  "name": "api",
+  "version": "3.0.0",
   "scripts": {
     "start": "micro"
   },

@@ -1,5 +1,12 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+`
 
 export default class _Document extends Document {
   static getInitialProps({ renderPage }) {
@@ -21,6 +28,7 @@ export default class _Document extends Document {
         <body>
           <Main />
           <NextScript />
+          <GlobalStyle />
         </body>
       </html>
     )
