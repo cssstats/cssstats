@@ -14,7 +14,7 @@
       }
     },
     {
-      "src": "api/package.json",
+      "src": "api/stats/package.json",
       "use": "@now/node-server"
     }
   ]
