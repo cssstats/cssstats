@@ -66,7 +66,7 @@ class Stats extends React.Component {
     return (
       <Layout>
         <SubHeader
-          title={pageTitle || this.state.name || url}
+          title={pageTitle || (this.state && this.state.name) || url}
           text={humanizedGzipSize}
         />
 
