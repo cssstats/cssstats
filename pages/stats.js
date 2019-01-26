@@ -1,5 +1,5 @@
 import React from 'react'
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-unfetch'
 
 import {
   H1,
