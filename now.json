@@ -1,0 +1,21 @@
+{
+  "name": "cssstats",
+  "version": 2,
+  "alias": [
+    "beta.cssstats.com",
+    "www.beta.cssstats.com"
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    },
+    {
+      "src": "api/stats/package.json",
+      "use": "@now/node-server"
+    }
+  ]
+}

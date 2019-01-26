@@ -8,7 +8,6 @@ export default ({ title, children }) => (
   <ThemeProvider theme={theme}>
     <Font>
       <title children={title || 'Css Stats'} />
-
       <Container>
         <Header />
         <Container py={3} children={children} />

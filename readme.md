@@ -7,7 +7,7 @@ Potentially interesting stats on stylesheets.
 ```
 git clone https://github.com/cssstats/cssstats
 cd cssstats
-npm i
+yarn
 ```
 
 ## Usage
@@ -16,20 +16,20 @@ npm i
 #### Development
 
 ```
-npm run dev
+yarn dev
 open http://localhost:3000
 ```
 
 #### Production
 
 ```
-npm run build
-npm start
+yarn build
+yarn start
 ```
 
 ## License
 
-MIT
+[MIT](./license)
 
 ***
 
