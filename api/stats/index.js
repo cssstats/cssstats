@@ -1,4 +1,5 @@
 const { send } = require('micro')
+const cors = require('micro-cors')()
 const getCss = require('get-css')
 const getParam = require('get-query-param')
 const isUrl = require('is-url')
@@ -12,7 +13,7 @@ const isValidUrl = url => isPresent(url) && isUrl(url)
 
 const retrieveCss = (url, date) => date ? waybackCss(url, date) : getCss(url)
 
-module.exports = async (req, res) => {
+const stats = async (req, res) => {
   const url = getParam('url', req.url)
   const date = getParam('date', req.url)
 
@@ -44,3 +45,5 @@ module.exports = async (req, res) => {
     })
   }
 }
+
+module.exports = cors(stats)

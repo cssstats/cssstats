@@ -29,7 +29,7 @@ yarn start
 
 ## License
 
-MIT
+[MIT](./license)
 
 ***
 
