@@ -11,8 +11,8 @@
       "use": "@now/next"
     },
     {
-      "src": "api/stats/package.json",
-      "use": "@now/node-server"
+      "src": "api/stats/index.js",
+      "use": "@now/node"
     }
   ]
 }
