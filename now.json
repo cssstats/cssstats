@@ -7,11 +7,8 @@
   ],
   "builds": [
     {
-      "src": "package.json",
-      "use": "@now/next",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "src": "next.config.js",
+      "use": "@now/next"
     },
     {
       "src": "api/stats/package.json",

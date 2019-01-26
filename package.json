@@ -5,12 +5,11 @@
   "version": "2.0.0",
   "scripts": {
     "start": "next start",
-    "build": "yarn build:components && next build",
+    "build": "next build",
     "build:components": "lab -d components/library --pkg",
     "dev": "next",
     "format": "prettier --write {api,components,packages,pages}/**/*.js",
     "test": "lerna run test",
-    "prepare": "yarn build:components",
     "pretest": "lerna run bootstrap"
   },
   "dependencies": {
@@ -37,9 +36,5 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
-  },
-  "workspaces": [
-    "packages/*",
-    "api/stats"
-  ]
+  }
 }
