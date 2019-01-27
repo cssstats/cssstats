@@ -279,7 +279,7 @@
         "Div",
         "Hr"
       ],
-      "jsx": "<Div>\n  <Hr />\n  <Flex\n    py={3}\n    alignItems='center'\n    justify='space-between'\n  >\n    <Div>\n      Made by\n      <Link\n        href='https://compositor.io'\n        ml={1}\n        fontWeight='bold'\n        color='black'\n        children='compositor.io'\n      />\n    </Div>\n    <Div>\n      <Link\n        fontWeight='bold'\n        color='black'\n        href='https://github.com/cssstats/cssstats/issues'\n        children='Issues'\n      />\n      <Link\n        ml={2}\n        fontWeight='bold'\n        color='black'\n        href='https://github.com/cssstats/cssstats'\n        children='GitHub'\n      />\n    </Div>\n  </Flex>\n</Div>",
+      "jsx": "<Div>\n  <Hr />\n  <Flex\n    py={3}\n    alignItems='center'\n    justify='space-between'\n  >\n    <Div>\n      Made by\n      <Link\n        href='https://mrmrs.io'\n        ml={1}\n        fontWeight='bold'\n        color='black'\n        children='mrmrs'\n      />,\n      <Link\n        href='https://jxnblk.com'\n        ml={1}\n        fontWeight='bold'\n        color='black'\n        children='jxnblk'\n      />, &\n      <Link\n        href='https://johno.com'\n        ml={1}\n        fontWeight='bold'\n        color='black'\n        children='johno'\n      />\n    </Div>\n    <Div>\n      <Link\n        fontWeight='bold'\n        color='black'\n        href='/docs'\n        children='Docs'\n      />\n      <Link\n        ml={2}\n        fontWeight='bold'\n        color='black'\n        href='https://github.com/cssstats/cssstats/issues'\n        children='Issues'\n      />\n      <Link\n        ml={2}\n        fontWeight='bold'\n        color='black'\n        href='https://github.com/cssstats/cssstats'\n        children='GitHub'\n      />\n    </Div>\n  </Flex>\n</Div>",
       "examples": [
         "<Footer />"
       ],
@@ -504,6 +504,318 @@
         "<TextCenter>Hello</TextCenter>"
       ],
       "system": []
+    }
+  ],
+  "layout": [
+    {
+      "name": "Font",
+      "i": "0",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "H1",
+      "i": "1",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "H2",
+      "i": "2",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Text",
+      "i": "3",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "SectionTitle",
+      "i": "4",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Button",
+      "i": "5",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Input",
+      "i": "6",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 28,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Label",
+      "i": "7",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Hr",
+      "i": "8",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Link",
+      "i": "9",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Flex",
+      "i": "10",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Header",
+      "i": "11",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "SubHeader",
+      "i": "12",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 28,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Footer",
+      "i": "13",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 28,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Div",
+      "i": "14",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 20,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "LinkBox",
+      "i": "15",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Container",
+      "i": "16",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Dl",
+      "i": "17",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Dt",
+      "i": "18",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 8,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Dd",
+      "i": "19",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "SlabStat",
+      "i": "20",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "GiantSlabStat",
+      "i": "21",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Color",
+      "i": "22",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 24,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "BackgroundColor",
+      "i": "23",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Pre",
+      "i": "24",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "CodeBlock",
+      "i": "25",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Logo",
+      "i": "26",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 4,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Form",
+      "i": "27",
+      "w": 3,
+      "h": 4,
+      "x": 9,
+      "y": 12,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Loading",
+      "i": "28",
+      "w": 3,
+      "h": 4,
+      "x": 0,
+      "y": 16,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "Svg",
+      "i": "29",
+      "w": 3,
+      "h": 4,
+      "x": 3,
+      "y": 0,
+      "moved": false,
+      "static": false
+    },
+    {
+      "name": "TextCenter",
+      "i": "30",
+      "w": 3,
+      "h": 4,
+      "x": 6,
+      "y": 16,
+      "moved": false,
+      "static": false
     }
   ]
 }
