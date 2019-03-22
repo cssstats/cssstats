@@ -10,7 +10,7 @@
     "dev": "next",
     "format": "prettier --write {api,components,packages,pages}/**/*.js",
     "test": "lerna run test",
-    "pretest": "lerna run bootstrap"
+    "pretest": "lerna bootstrap"
   },
   "dependencies": {
     "@compositor/lab": "^1.0.0-37",
