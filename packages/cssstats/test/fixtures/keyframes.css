@@ -8,6 +8,15 @@
   30% { color: blue; }
 }
 
+@keyframes grow {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .b {
   color: green;
   background-color: gray;
