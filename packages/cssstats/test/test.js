@@ -138,6 +138,10 @@ describe('css-statistics', function () {
     it('should correctly get statistics for CSS in, and after, a keyframe', function () {
       assert.equal(keyframeStats.declarations.properties.color.length, 5)
     })
+
+    it('should not include @keyframes stops in the selectors list', function () {
+      assert.deepEqual(keyframeStats.selectors.values, ['.a', '.b'])
+    })
   })
 
   describe('selector methods', function () {
