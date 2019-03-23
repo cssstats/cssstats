@@ -31,6 +31,10 @@ module.exports = function (root, opts) {
   var graph
 
   root.walkRules(function (rule) {
+    var parent = rule.parent
+    if (parent.type === 'atrule' && parent.name === 'keyframes') {
+      return
+    }
     rule.selectors.forEach(function (selector) {
       result.total++
       result.values.push(selector)
