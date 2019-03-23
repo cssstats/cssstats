@@ -2,7 +2,7 @@
   "name": "has-pseudo-class",
   "description": "Determine whether a selector contains a pseudo-class",
   "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
-  "version": "1.0.1",
+  "version": "3.3.0",
   "main": "index.js",
   "files": [
     "index.js"

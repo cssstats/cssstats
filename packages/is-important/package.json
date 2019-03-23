@@ -2,7 +2,7 @@
   "name": "is-important",
   "description": "Check to see if a css declaration value is !important",
   "author": "John Otander",
-  "version": "1.0.0",
+  "version": "3.3.0",
   "main": "index.js",
   "files": [
     "index.js"
@@ -16,7 +16,6 @@
     "important"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "ava": "^0.16.0"
   }

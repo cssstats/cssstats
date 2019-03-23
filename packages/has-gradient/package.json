@@ -2,7 +2,7 @@
   "name": "has-gradient",
   "description": "Determine whether a property contains a gradient",
   "author": "John Otander",
-  "version": "1.0.1",
+  "version": "3.3.0",
   "main": "index.js",
   "files": [
     "index.js"
@@ -13,7 +13,6 @@
   "repository": "cssstats/has-gradient",
   "keywords": [],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "ava": "*"
   }

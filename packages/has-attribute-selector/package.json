@@ -2,7 +2,7 @@
   "name": "has-attribute-selector",
   "description": "Check if a selector string has an attribute selector.",
   "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
-  "version": "1.0.0",
+  "version": "3.3.0",
   "main": "index.js",
   "files": [
     "index.js"
@@ -17,7 +17,6 @@
     "selector"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "ava": "*"
   }
