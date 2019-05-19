@@ -31,6 +31,7 @@ class Index extends Component {
           <Input
             mt={2}
             placeholder="Url, domain, or direct css link"
+            type="url"
             onChange={e => this.setState({ urlInput: e.target.value })}
           />
           <Button
