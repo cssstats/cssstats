@@ -12,7 +12,7 @@
     "publish": "lerna publish"
   },
   "workspaces": [
-    "api",
+    "api/*",
     "packages/*"
   ],
   "dependencies": {
