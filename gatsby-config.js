@@ -5,7 +5,7 @@ module.exports = {
       options: {
         extensions: ['.md', '.mdx'],
         defaultLayouts: {
-          default: require.resolve('./components/Layout')
+          docs: require.resolve('./components/Layout')
         }
       }
     },

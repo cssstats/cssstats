@@ -42,6 +42,20 @@
       "lineHeight": 1.5,
       "maxWidth": 800
     },
+    "li": {
+      "fontSize": 3,
+      "lineHeight": 1.2
+    },
+    "blockquote": {
+      "color": "darkGray",
+      "borderLeft": "8px solid",
+      "borderColor": "blue",
+      "pl": 4,
+      "py": 2,
+      "& p": {
+        "fontSize": 4
+      }
+    },
     "hr": {
       "my": 4,
       "borderStyle": "solid",

@@ -9,7 +9,7 @@ import {
   Styled,
   css
 } from 'theme-ui'
-import { GitHub } from 'react-feather'
+import { GitHub, Twitter } from 'react-feather'
 
 import theme from './theme.json'
 import { Logo, Link, Label, Input } from './ui'
@@ -48,6 +48,7 @@ export default ({ title, initialUrl, children }) => {
             ) : null}
 
             <Box ml="auto">
+              <Styled.a mr={3} href="https://mobile.twitter.com/cssstats"><Twitter /></Styled.a>
               <Styled.a href="https://github.com/cssstats"><GitHub /></Styled.a>
             </Box>
           </Flex>

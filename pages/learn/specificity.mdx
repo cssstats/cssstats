@@ -1,0 +1,103 @@
+# CSS Specificity
+
+When CSS doesn't do what you think it should, one of your first likely culprits is specificity.
+However, the notion of specificity shouldn't be a source of frustration. It provides a set of
+rules that you can count on when constructing your style sheets. There needs to be a system to
+determine which style property to use when there are conflicts, and specificity values do just
+that.
+
+## How is specificity determined?
+
+Every selector has a specificity value. Whichever value is largest dictates which styles are applied.
+When the specificity value is the same between multiple rules, the rule that is defined last is
+the rule that is applied. When it comes to specificity, as a whole, the last rule defined determines
+the styling to be applied whenever there is a conflict.
+
+As a general rule, it's best to spend time thinking about how to structure your styling in a more
+modular fashion. Leveraging
+<a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS principles</a>
+or a <a href="http://sass-lang.com/">preprocessor</a> would be a great place to start. This allows
+you to approach styling in a consistent, predicitable way. You should apply styling to an HTML
+document so specificity isn't even a consideration.
+
+> Web browsers use specificity like a hierarchy to determine which style properties to apply. This is
+> how the styling of a document "cascades".
+
+In order to make sense of what CSS selectors to prioritize, selectors are placed in four categories:
+
+- Inline styles
+- IDs
+- Classes and Attributes
+- Elements
+
+## Specificity categories
+
+### 1. Inline styling
+
+Inline styling will always win the "specificity war". Always.
+
+### 2. IDs
+
+ID selectors have a *very* high specificity value. This becomes especially problematic when you
+consider the fact that only one ID can be applied to an HTML element. So, similarly to inline styling,
+refrain from leveraging IDs for styling except under the most dire circumstances. IDs are best used
+for javascript DOM queries, anyway.
+
+### 3. Classes, attributes, and pseudo-classes
+
+Classes, attributes, and pseudo-classes are the bread and butter of properly implemented OOCSS that
+makes specificity a mere hiccup during development. A class selector will *always* have a
+higher specificity value than an element selector.
+
+**Classes** are perfect for implementing styling that isn't the default. For example, if you want to make
+a link look like a button or give a paragraph a different line-height.
+
+**Attributes** are also quite useful for selecting, for example `input[type="submit"]` will select
+the submit button, but leave all the other input types alone. This is handy for adding submit button
+styles.
+
+**Pseudo-classes** include selectors like `:hover`, `:first-child`, and `:active`.
+They can be used to apply more specific styling to a given state or property element.
+
+### 4. Elements and pseudo-elements
+
+This category is the lowest in the specificity value hierarchy. These selectors are typically used for
+a webpage's baseline styling. This is especially useful for any style elements that will likely be applied
+to the majority of elements.
+
+Applying baseline styles for `background-color`, `font-family`, `font-size`,
+and `color`, among others, is useful in establishing a general feel for your webpage. This is
+desirable because it ensures a large amount of site styling without stacking on unnecessary specificity
+and complex cascading styles.
+
+## Calculating specificity
+
+You can calculate the specificty by giving point values to different types of selectors.
+
+- Inline Styles get 1000 points
+- IDs get 100 points
+- Classes, attributes, and pseudo-classes get 10 points
+- Elements and psuedo-elements get 1 point each
+
+For a visual explanation, see [cssspecificity.com](http://cssspecificity.com/).
+
+## Using the specificity graph
+
+CSS Stats shows a graph of specificity which can be used to illustrate the health of CSS. The
+**ideal chart is upward trending**. This means that more specific selectors are found at the end
+of a stylesheet ensuring that more specific selectors are one-off overrides rather than a
+common pattern.
+
+[Learn more about the specificity graph &rarr;](https://csswizardry.com/2014/10/the-specificity-graph)
+
+## Further reading
+
+<ul>
+  <li><a href="https://csswizardry.com/2014/10/the-specificity-graph/">The Specificity Graph</a></li>
+  <li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">CSS Specificity Things You Should Know</a></li>
+  <li><a href="http://css-tricks.com/specifics-on-css-specificity/">Specifics on CSS Specificity</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN Specificity</a></li>
+  <li><a href="http://www.w3.org/TR/selectors/#specificity">W3C on Specificity</a></li>
+  <li><a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">Specificity Wars</a></li>
+  <li><a href="http://www.slideshare.net/stubbornella/our-best-practices-are-killing-us">Our Best Practices Are Killing Us</a></li>
+</ul>
