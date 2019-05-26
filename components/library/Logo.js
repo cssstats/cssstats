@@ -1,7 +1,4 @@
 import React from 'react'
-import Div from './Div'
-import Flex from './Flex'
-import Text from './Text'
 
 const Logo = props => (
   <svg

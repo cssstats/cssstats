@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import {
   space,
   fontSize,
@@ -11,7 +11,7 @@ import {
 
 const Button = styled('button')(
   [],
-  props => ({
+  _ => ({
     display: 'inline-block',
     fontFamily: 'inherit',
     borderWidth: 0,

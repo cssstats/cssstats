@@ -1,5 +1,4 @@
-export { default as lab } from './lab'
-export { default as theme } from './theme'
+export { default as theme } from '../theme.json'
 export { default as Font } from './Font'
 export { default as H1 } from './H1'
 export { default as H2 } from './H2'

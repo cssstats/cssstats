@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { space, fontSize, width, color, borderRadius } from 'styled-system'
 
 const Pre = styled('pre')(

@@ -1,0 +1,58 @@
+{
+  "fonts": [
+    "-apple-system, BlinkMacSystemFont, sans-serif"
+  ],
+  "space": [
+    0,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "fontSizes": [
+    12,
+    14,
+    16,
+    20,
+    24,
+    32,
+    48,
+    64,
+    72,
+    96
+  ],
+  "colors": {
+    "black": "#000",
+    "text": "#000",
+    "blue": "#33e",
+    "darkGray": "#666",
+    "gray": "#ccc",
+    "lightGray": "#eeeeee"
+  },
+  "styles": {
+    "a": {
+      "textDecoration": "none",
+      "color": "blue"
+    },
+    "p": {
+      "fontSize": 3,
+      "lineHeight": 1.5,
+      "maxWidth": 800
+    },
+    "hr": {
+      "my": 4,
+      "borderStyle": "solid",
+      "borderColor": "lightGray"
+    },
+    "Header": {
+      "fontWeight": "bold",
+      "p": [1, 2, 3],
+      "& a": {
+        "color": "black"
+      }
+    }
+  }
+}

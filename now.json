@@ -7,8 +7,8 @@
   ],
   "builds": [
     {
-      "src": "next.config.js",
-      "use": "@now/next"
+      "src": "package.json",
+      "use": "@now/static"
     },
     {
       "src": "api/stats/index.js",

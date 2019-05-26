@@ -1,8 +1,7 @@
-import React from 'react'
-import fetch from 'isomorphic-unfetch'
+import React, { useEffect, useState } from 'react'
+import getQueryParam from 'get-query-param'
 
 import {
-  H1,
   H2,
   Div,
   Pre,
@@ -27,74 +26,72 @@ import DeclarationsChart from '../components/DeclarationsChart'
 
 const API_URL = 'https://api.cssstats.com'
 
-class Stats extends React.Component {
-  static async getInitialProps({ query }) {
-    const { url } = query
+export default () => {
+  const [stats, setStats] = useState(null)
+  const url = getQueryParam('url', window.location.href)
 
-    const response = await fetch(`${API_URL}/stats?url=${url}`)
-    const stats = await response.json()
-
-    return { uri: url, ...stats }
-  }
-
-  render() {
-    const url = this.props.uri
-
-    if (!this.props.css) {
-      return (
-        <Layout p={[4, 5, 6]}>
-          <Flex h={9 / 10} items="center">
-            <Loading />
-            <H2 my={0} pl={3}>
-              Downloading and analyzing css from {url}
-            </H2>
-          </Flex>
-        </Layout>
-      )
+  useEffect(() => {
+    const fetchStats = async () => {
+      const response = await fetch(`${API_URL}/stats?url=${url}`)
+      const data = await response.json()
+      setStats(data)
     }
 
-    const {
-      css: { css, pageTitle },
-      stats: { rules, humanizedGzipSize, declarations, selectors }
-    } = this.props
+    fetchStats()
+  }, [url])
 
-    const properties = declarations.properties
-
-    const backgroundColors = properties['background-color'] || []
-    const colors = properties.color || []
-
+  if (!stats) {
     return (
-      <Layout>
-        <SubHeader
-          title={pageTitle || (this.state && this.state.name) || url}
-          text={humanizedGzipSize}
-        />
-
-        <SummaryStats
-          rules={rules.total}
-          selectors={selectors.total}
-          declarations={declarations.total}
-          properties={Object.keys(properties).length}
-        />
-
-        <Declarations properties={properties} />
-        <Colors colors={colors} />
-        <BackgroundColors backgroundColors={backgroundColors} />
-        <FontSizes fontSizes={properties['font-size']} />
-        <FontFamilies fontFamilies={properties['font-family']} />
-        <ZIndexes zIndexes={properties['z-index']} />
-        <SpacingResets properties={properties} />
-        <SpecificityChart data={selectors.specificity.graph} />
-        <RulesetChart data={rules.size.graph} />
-        <DeclarationsChart data={declarations} />
-
-        <Div mt={5}>
-          <H2>Raw Css</H2>
-          <Pre>{css.trim()}</Pre>
-        </Div>
+      <Layout p={[4, 5, 6]} initialUrl={url}>
+        <Flex h={9 / 10} items="center">
+          <Loading />
+          <H2 my={0} pl={3}>
+            Downloading and analyzing css from {url}
+          </H2>
+        </Flex>
       </Layout>
     )
   }
-}
 
-export default Stats
+  const {
+    css: { css, pageTitle },
+    stats: { rules, humanizedGzipSize, declarations, selectors }
+  } = stats
+
+  const properties = declarations.properties
+
+  const backgroundColors = properties['background-color'] || []
+  const colors = properties.color || []
+
+  return (
+    <Layout initialUrl={url}>
+      <SubHeader
+        title={pageTitle || (this.state && this.state.name) || url}
+        text={humanizedGzipSize}
+      />
+
+      <SummaryStats
+        rules={rules.total}
+        selectors={selectors.total}
+        declarations={declarations.total}
+        properties={Object.keys(properties).length}
+      />
+
+      <Declarations properties={properties} />
+      <Colors colors={colors} />
+      <BackgroundColors backgroundColors={backgroundColors} />
+      <FontSizes fontSizes={properties['font-size']} />
+      <FontFamilies fontFamilies={properties['font-family']} />
+      <ZIndexes zIndexes={properties['z-index']} />
+      <SpacingResets properties={properties} />
+      <SpecificityChart data={selectors.specificity.graph} />
+      <RulesetChart data={rules.size.graph} />
+      <DeclarationsChart data={declarations} />
+
+      <Div mt={5}>
+        <H2>Raw Css</H2>
+        <Pre>{css.trim()}</Pre>
+      </Div>
+    </Layout>
+  )
+}
