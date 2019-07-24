@@ -1,3 +1,3 @@
 # API
 
-## /stats
+## cssstats.com/api/stats

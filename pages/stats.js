@@ -26,9 +26,17 @@ import DeclarationsChart from '../components/DeclarationsChart'
 
 const API_URL = 'https://api.cssstats.com'
 
+const getUrl = () => {
+  if (typeof window !== undefined) {
+    return getQueryParam('url', window.location.href)
+  } else {
+    return null
+  }
+}
+
 export default () => {
   const [stats, setStats] = useState(null)
-  const url = getQueryParam('url', window.location.href)
+  const url = getUrl()
 
   useEffect(() => {
     const fetchStats = async () => {

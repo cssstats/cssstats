@@ -7,6 +7,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "format": "prettier --write {api,components,packages,pages}/**/*.js",
+    "now-build": "yarn build",
     "test": "lerna run test",
     "pretest": "lerna bootstrap",
     "publish": "lerna publish"
@@ -24,6 +25,7 @@
     "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-page-creator": "^2.0.13",
+    "gatsby-source-filesystem": "^2.0.37",
     "get-query-param": "^2.0.3",
     "humanize-plus": "^1.8.2",
     "isomorphic-unfetch": "^3.0.0",

@@ -8,7 +8,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@now/static"
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
     },
     {
       "src": "api/stats/index.js",
