@@ -2,8 +2,8 @@
   "name": "cssstats",
   "version": 2,
   "alias": [
-    "beta.cssstats.com",
-    "www.beta.cssstats.com"
+    "cssstats.com",
+    "www.cssstats.com"
   ],
   "builds": [
     {

@@ -1,4 +1,4 @@
-# [:bar_chart:](https://cssstats.com) CSS Stats
+# [CSS Stats](https://cssstats.com)
 
 Potentially interesting stats on stylesheets.
 
