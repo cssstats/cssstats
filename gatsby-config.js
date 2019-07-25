@@ -1,26 +1,21 @@
 module.exports = {
+  siteMetadata: {
+    title: 'CSS Stats',
+    description: 'Potentially interesting stats on stylesheets'
+  },
   plugins: [
+    'gatsby-plugin-theme-ui',
     {
-      resolve: 'gatsby-mdx',
+      resolve: 'gatsby-theme-documentation',
       options: {
-        extensions: ['.md', '.mdx'],
-        defaultLayouts: {
-          docs: require.resolve('./components/Layout')
-        }
+        basePath: 'docs'
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        path: 'docs'
+        siteId: 'CNDZKOSM'
       }
-    },
-    {
-      resolve: 'gatsby-plugin-page-creator',
-      options: {
-        path: 'pages'
-      }
-    },
-    'gatsby-plugin-emotion'
+    }
   ]
 }

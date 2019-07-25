@@ -6,7 +6,7 @@ import Dd from './Dd'
 const SlabStat = props => (
   <Dl {...props}>
     <Dt children={props.title} />
-    <Dd f={6} fontWeight="bold" children={props.stat} />
+    <Dd fontSize={6} fontWeight="bold" children={props.stat} />
   </Dl>
 )
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import titleize from 'titleize'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { intComma } from 'humanize-plus'
 
 import { H2, Div, Flex, SlabStat } from './library'
@@ -41,7 +41,7 @@ export default ({ properties }) => {
         mb={4}
         wrap="wrap"
         children={metrics.map(metric => (
-          <Flex key={metric.name} w={[1 / 2, 1 / 3, 1 / 6]}>
+          <Flex key={metric.name} sx={{ width: ['50%', '25%', '15%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}

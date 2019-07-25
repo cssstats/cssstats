@@ -4,9 +4,7 @@ import {
   fontSize,
   width,
   color,
-  fontWeight,
-  hover,
-  focus
+  fontWeight
 } from 'styled-system'
 
 const Button = styled('button')(
@@ -22,9 +20,7 @@ const Button = styled('button')(
   fontSize,
   width,
   color,
-  fontWeight,
-  hover,
-  focus
+  fontWeight
 )
 
 Button.defaultProps = {
@@ -32,12 +28,6 @@ Button.defaultProps = {
   fontWeight: 600,
   color: 'white',
   bg: 'blue',
-  hover: {
-    backgroundColor: 'gray'
-  },
-  focus: {
-    backgroundColor: 'gray'
-  },
   py: 3,
   px: 4
 }

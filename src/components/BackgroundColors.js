@@ -1,10 +1,11 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 
-import { Div, Flex, SectionTitle, BackgroundColor } from './library'
+import { Flex, SectionTitle, BackgroundColor } from './library'
 
 export default ({ backgroundColors = [] }) => (
-  <Div>
+  <div>
     <SectionTitle
       title={`${uniq(backgroundColors).length} Unique Background Colors`}
       description={`${backgroundColors.length} total`}
@@ -14,10 +15,17 @@ export default ({ backgroundColors = [] }) => (
       wrap="wrap"
       justify="space-between"
       children={uniq(backgroundColors).map(bg => (
-        <Div key={bg} p={3} mb={2} w={[2 / 5, 1 / 3, 1 / 6]}>
+        <div
+          key={bg}
+          sx={{
+            p: 3,
+            mb: 2,
+            width: ['50%', '25%', '20%']
+          }}
+        >
           <BackgroundColor color={bg} />
-        </Div>
+        </div>
       ))}
     />
-  </Div>
+  </div>
 )

@@ -1,7 +1,8 @@
-{
-  "fonts": [
-    "-apple-system, BlinkMacSystemFont, sans-serif"
-  ],
+export default {
+  "fonts": {
+    "body": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "heading": "-apple-system, BlinkMacSystemFont, sans-serif"
+  },
   "space": [
     0,
     4,
@@ -30,9 +31,13 @@
     "blue": "#33e",
     "darkGray": "#666",
     "gray": "#ccc",
-    "lightGray": "#eeeeee"
+    "lightGray": "#eeeeee",
+    "background": "#fff"
   },
   "styles": {
+    "root": {
+      "fontFamily": "body"
+    },
     "a": {
       "textDecoration": "none",
       "color": "blue"
@@ -44,7 +49,7 @@
     },
     "li": {
       "fontSize": 3,
-      "lineHeight": 1.2
+      "lineHeight": 1.5
     },
     "blockquote": {
       "color": "darkGray",
@@ -60,6 +65,17 @@
       "my": 4,
       "borderStyle": "solid",
       "borderColor": "lightGray"
+    },
+    inlineCode: {
+      backgroundColor: '#fafafa',
+      px: 2
+    },
+    pre: {
+      fontSize: 3,
+      backgroundColor: "#fafafa",
+      borderRadius: 4,
+      p: 3,
+      overflowX: 'auto'
     },
     "Header": {
       "fontWeight": "bold",

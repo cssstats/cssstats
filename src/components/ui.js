@@ -1,6 +1,6 @@
-import React from 'react'
+/** @jsx jsx */
 import { Link as GatsbyLink } from 'gatsby'
-import { css, Styled } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 
 export const Link = ({ href, ...props }) => (
   <Styled.a as={GatsbyLink} to={href} {...props} />
@@ -8,19 +8,19 @@ export const Link = ({ href, ...props }) => (
 
 export const Label = ({ display = 'block', ...props }) => (
   <label
-    css={css({
+    sx={{
       display,
       color: 'text',
       fontSize: 2,
       fontWeight: 'bold'
-    })}
+    }}
     {...props}
   />
 )
 
 export const Input = ({ ...props }) => (
   <input
-    css={css({
+    sx={{
       fontSize: 2,
       display: 'block',
       width: '100%',
@@ -36,7 +36,7 @@ export const Input = ({ ...props }) => (
         0 2px 3px -1px rgba(0, 0, 0, .16),
         0 1px 2px -1px rgba(0, 0, 0, .08)
       `
-    })}
+    }}
     {...props}
   />
 )

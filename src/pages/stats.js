@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
+import isUrl from 'is-url'
+import { Styled } from 'theme-ui'
 
 import {
   H2,
@@ -54,7 +56,7 @@ export default () => {
         <Flex h={9 / 10} items="center">
           <Loading />
           <H2 my={0} pl={3}>
-            Downloading and analyzing css from {url}
+            Downloading and analyzing CSS from <Styled.a href={isUrl(url) ? url : '//' + url}>{url}</Styled.a>
           </H2>
         </Flex>
       </Layout>
@@ -74,7 +76,7 @@ export default () => {
   return (
     <Layout initialUrl={url}>
       <SubHeader
-        title={pageTitle || (this.state && this.state.name) || url}
+        title={pageTitle || (stats && stats.name) || url}
         text={humanizedGzipSize}
       />
 

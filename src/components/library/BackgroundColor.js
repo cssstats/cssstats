@@ -17,7 +17,7 @@ const BackgroundColor = props => (
       <rect width="64" height="64" fill={props.color} />
     </svg>
 
-    <Text f={1} mt={2} children={props.color} />
+    <Text fontSize={0} mt={2} children={props.color} />
   </Div>
 )
 

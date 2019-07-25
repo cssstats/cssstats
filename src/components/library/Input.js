@@ -5,14 +5,12 @@ import {
   width,
   color,
   borderColor,
-  borderWidth,
-  focus,
-  active
+  borderWidth
 } from 'styled-system'
 
 const Input = styled('input')(
   [],
-  props => ({
+  () => ({
     display: 'block',
     boxSizing: 'border-box',
     fontFamily: 'inherit',
@@ -24,9 +22,7 @@ const Input = styled('input')(
   width,
   color,
   borderColor,
-  borderWidth,
-  focus,
-  active
+  borderWidth
 )
 
 Input.defaultProps = {
@@ -37,12 +33,6 @@ Input.defaultProps = {
   placeholder: 'Input a url',
   borderColor: 'black',
   borderWidth: 1,
-  focus: {
-    borderColor: 'blue'
-  },
-  active: {
-    borderColor: 'blue'
-  },
   py: 3,
   pl: 3
 }

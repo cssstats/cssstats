@@ -5,14 +5,14 @@ import Text from './Text'
 const Color = props => (
   <Div>
     <Text
-      f={7}
+      fontSize={7}
       fontWeight="bold"
       children="Aa"
       style={{
         color: props.color
       }}
     />
-    <Text f={1} children={props.color} />
+    <Text fontSize={1} children={props.color} />
   </Div>
 )
 
