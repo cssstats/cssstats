@@ -16,6 +16,7 @@ import Layout from '../components/Layout'
 
 import SummaryStats from '../components/SummaryStats'
 import Declarations from '../components/Declarations'
+import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
 import BackgroundColors from '../components/BackgroundColors'
 import FontSizes from '../components/FontSizes'
@@ -91,6 +92,12 @@ export default () => {
       />
 
       <Declarations properties={properties} />
+      <Selectors
+        classes={selectors.class}
+        id={selectors.id}
+        pseudoClass={selectors.pseudoClass}
+        pseudoElement={selectors.pseudoElement}
+      />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
       <FontSizes fontSizes={properties['font-size']} />
