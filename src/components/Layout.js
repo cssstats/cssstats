@@ -59,7 +59,7 @@ export default ({ title, initialUrl, children }) => {
             </Link>
 
             {initialUrl ? (
-              <div m="auto" px={3} sx={{ m: 'auto', px: 3, width: ['100%', 1024, 1024], flexShrink: 0 }}>
+              <div sx={{ m: 'auto', px: 3, width: ['100%', 1024, 1024], flexShrink: 0 }}>
                 <form
                     onSubmit={e => {
                       e.preventDefault()
