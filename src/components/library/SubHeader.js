@@ -10,7 +10,6 @@ const SubHeader = props => (
     <Flex py={3} alignItems="center" justify="space-between" flexWrap="wrap">
       <H2 my={0} children={props.title} />
       <Text uppercase fontWeight="bold" children={props.text} />
-      <Text uppercase fontWeight="bold" children={props.text} />
     </Flex>
     <Hr />
   </Div>
