@@ -77,6 +77,12 @@ export default {
       p: 3,
       overflowX: 'auto'
     },
+    textStyles: {
+      'caps': {
+        textTransform: 'uppercase', 
+        letterSpacing: '0.05em'
+      }
+    },
     "Header": {
       "fontWeight": "bold",
       "p": [1, 2, 3],

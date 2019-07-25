@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { space, fontSize, width, color } from 'styled-system'
+import { borderRadius, space, fontSize, width, color } from 'styled-system'
 
 const Flex = styled('div')(
   [],
@@ -18,6 +18,7 @@ const Flex = styled('div')(
     justifyContent: `${props.justify}`,
     order: `${props.order}`
   }),
+  borderRadius,
   space,
   fontSize,
   width,
