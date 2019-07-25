@@ -19,11 +19,13 @@ export default ({ colors = [] }) => (
       ))}
     />
     <SectionTitle
-      title={`${colors.length} Total`}
+      title={`${colors.length} declarations`}
+      description='Total usage frequency'
     />
-    <Div
+    <Flex
+      wrap="wrap"
       children={colors.sort().map((color, i) => (
-          <Div key={color * i} py={1} bg={color}  />
+          <Div key={color * i} children='A' fontSize='16px' fontWeight={900} color={color}  />
       ))}
     />
   </Div>

@@ -5,7 +5,7 @@ import { intComma } from 'humanize-plus'
 import { Flex, GiantSlabStat } from './library'
 
 export default ({ rules, selectors, declarations, properties }) => (
-  <Flex wrap="wrap" my={4}>
+  <Flex wrap="wrap" mt={3}>
     <Flex sx={{ width: ['50%', '50%', '25%'] }}>
       <GiantSlabStat title="Rules" stat={intComma(rules)} />
     </Flex>

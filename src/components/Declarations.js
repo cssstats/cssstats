@@ -19,29 +19,49 @@ export default ({ properties }) => {
       value: properties.height || []
     },
     {
-      name: 'Font Sizes',
+      name: 'Padding',
+      value: properties['padding'] || []
+    },
+    {
+      name: 'Margin',
+      value: properties['margin'] || []
+    },
+    {
+      name: 'Display',
+      value: properties['display'] || []
+    },
+    {
+      name: 'Font Size',
       value: properties['font-size'] || []
+    },
+    {
+      name: 'Text Align',
+      value: properties['text-align'] || []
     },
     {
       name: 'Color',
       value: properties.color || []
     },
     {
-      name: 'Background Colors',
+      name: 'Background Color',
       value: properties['background-color'] || []
-    }
+    },
+    {
+      name: 'Border Color',
+      value: properties['border-color'] || []
+    },
   ]
 
   return (
     <Div>
-      <H2 mb={0} children="Total Declarations" />
+      <H2 mb={0} fontSize={3} fontWeight={600} children="Total Declarations of Select Properties" />
 
       <Flex
         mt={0}
         mb={4}
         wrap="wrap"
         children={metrics.map(metric => (
-          <Flex key={metric.name} sx={{ width: ['50%', '25%', '15%'] }}>
+          <Flex key={metric.name} sx={{ width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import { space, typography, width, color } from 'styled-system'
+import { space, borders, borderRadius, typography, width, color } from 'styled-system'
 
-const Div = styled('div')([], props => ({}), space, typography, width, color)
+const Div = styled('div')([], props => ({}), space, borders, borderRadius, typography, width, color)
 
 Div.defaultProps = {}
 

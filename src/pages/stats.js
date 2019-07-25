@@ -78,18 +78,20 @@ export default () => {
 
   return (
     <Layout initialUrl={url}>
-      <SubHeader
-        title={pageTitle || (stats && stats.name) || url}
-        gzipSize={humanizedGzipSize} 
-        size={humanizedSize}
-      />
+      <Div bg='#1d1d1d' color='white' borderRadius='7px' p={4}>
+        <SubHeader
+          title={pageTitle || (stats && stats.name) || url}
+          gzipSize={humanizedGzipSize} 
+          size={humanizedSize}
+        />
 
-      <SummaryStats
-        rules={rules.total}
-        selectors={selectors.total}
-        declarations={declarations.total}
-        properties={Object.keys(properties).length}
-      />
+        <SummaryStats
+          rules={rules.total}
+          selectors={selectors.total}
+          declarations={declarations.total}
+          properties={Object.keys(properties).length}
+        />
+      </Div>
 
       <Declarations properties={properties} />
       <Selectors
