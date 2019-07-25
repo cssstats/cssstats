@@ -26,7 +26,7 @@ import RulesetChart from '../components/RulesetChart'
 import SpecificityChart from '../components/SpecificityChart'
 import DeclarationsChart from '../components/DeclarationsChart'
 
-const API_URL = 'https://api.cssstats.com'
+const API_URL = 'https://cssstats.com/api/stats'
 
 export default () => {
   const [stats, setStats] = useState(null)
