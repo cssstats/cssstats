@@ -7,7 +7,7 @@ import H2 from './H2'
 
 const SubHeader = props => (
   <Div>
-    <Flex py={3} alignItems="center" justify="space-between">
+    <Flex py={3} alignItems="center" justify="space-between" flexWrap="wrap">
       <H2 my={0} children={props.title} />
 
       <Text uppercase fontWeight="bold" children={props.text} />

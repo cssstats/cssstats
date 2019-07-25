@@ -67,7 +67,7 @@ export default () => {
 
   const {
     css: { css, pageTitle },
-    stats: { rules, humanizedGzipSize, declarations, selectors }
+    stats: { rules, humanizedGzipSize, humanizedSize, declarations, selectors }
   } = stats
 
   const properties = declarations.properties
@@ -79,7 +79,7 @@ export default () => {
     <Layout initialUrl={url}>
       <SubHeader
         title={pageTitle || (stats && stats.name) || url}
-        text={humanizedGzipSize}
+        text={humanizedGzipSize + ' | ' + humanizedSize}
       />
 
       <SummaryStats
