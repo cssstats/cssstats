@@ -7,8 +7,11 @@
   ],
   "builds": [
     {
-      "src": "next.config.js",
-      "use": "@now/next"
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
     },
     {
       "src": "api/stats/index.js",

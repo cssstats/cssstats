@@ -1,5 +1,3 @@
-'use strict'
-
 // Originally written by @jxnblk
 // https://github.com/cssstats/cssstats/blob/16fe37c96623fd3cdb24bd302ef6f6e93826af0f/controllers/stats.js#L98
 const cssUnitSort = units => units.sort(sortFn)
@@ -19,7 +17,7 @@ const convert = value => {
 
   const raw = parseFloat(value, 10)
 
-  if (value == 0) return 0
+  if (value === 0) return 0
   if (value.match(/px$/)) return raw
   if (value.match(/pt$/)) return raw
   if (value.match(/em$/)) return raw * 16
@@ -42,8 +40,6 @@ const convert = value => {
       return 24
     case 'xx-large':
       return 32
-    case 'small':
-      return 13
     case 'larger':
       return 19
     default:

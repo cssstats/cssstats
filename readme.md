@@ -1,4 +1,4 @@
-# [:bar_chart:](https://cssstats.com) Css Stats
+# [:bar_chart:](https://cssstats.com) CSS Stats
 
 Potentially interesting stats on stylesheets.
 
@@ -12,25 +12,15 @@ yarn
 
 ## Usage
 
-
-#### Development
-
 ```
-yarn dev
-open http://localhost:3000
-```
-
-#### Production
-
-```
-yarn build
 yarn start
+open http://localhost:8000
 ```
 
 ## License
 
-[MIT](./license)
+MIT
 
 ***
 
-_Built by [Compositor](https://compositor.io) with [Lab](https://compositor.io/lab)_
+_Built by [mrmrs](https://mrmrs.cc), [jxnblk](https://jxnblk.com), and [johno](https://johno.com)
