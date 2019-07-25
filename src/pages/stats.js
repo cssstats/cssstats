@@ -28,20 +28,22 @@ import DeclarationsChart from '../components/DeclarationsChart'
 
 const API_URL = 'https://api.cssstats.com'
 
-const getUrl = () => {
-  if (typeof window !== undefined) {
-    return getQueryParam('url', window.location.href)
-  } else {
-    return null
-  }
-}
-
 export default () => {
   const [stats, setStats] = useState(null)
-  const url = getUrl()
+  const [url, setUrl] = useState(null)
+
+  useEffect(() => {
+    const linkFromQuery = getQueryParam('link', window.location.href)
+    const urlFromQuery = getQueryParam('url', window.location.href)
+    setUrl(linkFromQuery || urlFromQuery)
+  }, [])
 
   useEffect(() => {
     const fetchStats = async () => {
+      if (!url) {
+        return
+      }
+
       const response = await fetch(`${API_URL}/stats?url=${url}`)
       const data = await response.json()
       setStats(data)
@@ -65,7 +67,7 @@ export default () => {
 
   const {
     css: { css, pageTitle },
-    stats: { rules, humanizedGzipSize, declarations, selectors }
+    stats: { rules, humanizedGzipSize, humanizedSize, declarations, selectors }
   } = stats
 
   const properties = declarations.properties
@@ -77,7 +79,7 @@ export default () => {
     <Layout initialUrl={url}>
       <SubHeader
         title={pageTitle || (stats && stats.name) || url}
-        text={'Gzip: '+humanizedGzipSize}
+        text={humanizedGzipSize + ' | ' + humanizedSize}
       />
 
       <SummaryStats
