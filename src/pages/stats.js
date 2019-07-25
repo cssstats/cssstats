@@ -77,7 +77,7 @@ export default () => {
   const colors = properties.color || []
 
   return (
-    <Layout initialUrl={url}>
+    <Layout initialUrl={url} onUrlChange={url => setUrl(url)}>
       <Div bg='#1d1d1d' color='white' borderRadius='7px' p={4}>
         <SubHeader
           title={pageTitle || (stats && stats.name) || url}
