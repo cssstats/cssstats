@@ -42,7 +42,9 @@ export default ({ title, initialUrl, children }) => {
             sx={{
               display: 'flex',
               width: '100%',
-              alignItems: 'center'
+              maxWidth: '100%',
+              alignItems: 'center',
+              flexWrap: 'nowrap'
             }}
           >
             <Link href="/" ml={2} color="text">
@@ -53,13 +55,13 @@ export default ({ title, initialUrl, children }) => {
                   alignItems: 'center'
                 }}
               >
-                <Logo size={40} />
-                <span sx={{ ml: 2, fontSize: [1, 2, 3] }}>CSS Stats</span>
+                <Logo size={32} />
+                <span sx={{ ml: 2, fontSize: 0, display: ['none', 'block'], textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>CSS Stats</span>
               </span>
             </Link>
 
             {initialUrl ? (
-              <div m="auto" px={3} sx={{ m: 'auto', px: 3, width: ['100%', 1024, 1024], flexShrink: 0 }}>
+              <div sx={{ px: 3, width: ['100%'] }}>
                 <form
                     onSubmit={e => {
                       e.preventDefault()
@@ -72,7 +74,7 @@ export default ({ title, initialUrl, children }) => {
               </div>
             ) : null}
 
-            <div sx={{ ml: 'auto' }}>
+            <div sx={{ ml: 'auto', width: 96, display: 'flex', alignItems: 'center' }}>
               <Styled.a sx={{ mr: 3 }} href="https://mobile.twitter.com/cssstats"><Twitter /></Styled.a>
               <Styled.a href="https://github.com/cssstats"><GitHub /></Styled.a>
             </div>
