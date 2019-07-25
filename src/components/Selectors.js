@@ -7,7 +7,7 @@ import { H2, Div, Flex, SlabStat } from './library'
 export default ({ classes, id, pseudoClass, pseudoElement }) => {
   return (
     <Div>
-      <H2 mb={0} children="Selectors" />
+      <H2 mb={0} children="Total Selectors by Type" />
 
       <Flex
         mt={0}
