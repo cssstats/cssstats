@@ -1,14 +1,13 @@
 import styled from '@emotion/styled'
-import { space, fontSize, width, color, fontWeight } from 'styled-system'
+import { space, typography, width, color } from 'styled-system'
 
 const Dt = styled('dt')(
   [],
   props => ({}),
   space,
-  fontSize,
+  typography,
   width,
   color,
-  fontWeight
 )
 
 Dt.defaultProps = {

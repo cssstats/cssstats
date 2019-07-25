@@ -7,11 +7,13 @@ import H2 from './H2'
 
 const SubHeader = props => (
   <Div>
-    <Flex py={3} alignItems="center" justify="space-between" flexWrap="wrap">
-      <H2 my={0} children={props.title} />
-      <Text uppercase fontWeight="bold" children={props.text} />
-    </Flex>
-    <Hr />
+    <Div py={3}>
+      <H2 fontSize={[3,4,5]} mt={0} mb={2} children={props.title} />
+      <Flex>
+        <Text fontWeight="700" mr={4} children={'Total file size: '+props.size} />
+        <Text fontWeight="700" children={'Gzipped file size: '+props.gzipSize} />
+      </Flex>
+    </Div>
   </Div>
 )
 

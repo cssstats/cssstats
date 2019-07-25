@@ -79,7 +79,8 @@ export default () => {
     <Layout initialUrl={url}>
       <SubHeader
         title={pageTitle || (stats && stats.name) || url}
-        text={humanizedGzipSize + ' | ' + humanizedSize}
+        gzipSize={humanizedGzipSize} 
+        size={humanizedSize}
       />
 
       <SummaryStats
