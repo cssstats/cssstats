@@ -16,7 +16,7 @@ import favicon16 from "../images/favicon-16.png";
 import favicon32 from "../images/favicon-32.png";
 import favicon64 from "../images/favicon-64.png";
 
-export default ({ title, initialUrl, children }) => {
+export default ({ title, initialUrl, onUrlChange, children }) => {
   const [url, setUrl] = useState(initialUrl)
   
   return (
@@ -65,7 +65,7 @@ export default ({ title, initialUrl, children }) => {
                 <form
                     onSubmit={e => {
                       e.preventDefault()
-                      navigate(`/stats?url=${url}`)
+                      onUrlChange(url)
                     }}
                   >
                   <Label display="none">Url</Label>
