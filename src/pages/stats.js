@@ -96,7 +96,11 @@ export default () => {
       <FontFamilies fontFamilies={properties['font-family']} />
       <ZIndexes zIndexes={properties['z-index']} />
       <SpacingResets properties={properties} />
-      <SpecificityChart data={selectors.specificity.graph} />
+      <SpecificityChart
+        max={selectors.specificity.max}
+        average={Math.round(selectors.specificity.average)}
+        data={selectors.specificity.graph}
+      />
       <RulesetChart data={rules.size.graph} />
       <DeclarationsChart data={declarations} />
 

@@ -1,12 +1,24 @@
 import React from 'react'
 
-import { Div, Text, Link, SectionTitle } from './library'
+import { Flex, Div, Text, Link, SectionTitle, SlabStat } from './library'
 
 import LineChart from './LineChart'
 
-export default ({ data }) => (
+export default ({ data, average, max }) => (
   <Div>
-    <SectionTitle title="Specificity Graph" />
+    <SectionTitle title="Specificity" />
+
+    <Flex alignItems="center">
+      <SlabStat
+        title="Average"
+        stat={average}
+      />
+      <SlabStat
+        ml={3}
+        title="Max"
+        stat={max}
+      />
+    </Flex>
 
     <LineChart data={data} />
 
