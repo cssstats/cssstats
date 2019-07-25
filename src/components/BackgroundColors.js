@@ -18,12 +18,29 @@ export default ({ backgroundColors = [] }) => (
         <div
           key={bg}
           sx={{
-            p: 3,
+            p: 2,
             mb: 2,
-            width: ['50%', '25%', '20%']
+            width: ['50%', '25%', '10%']
           }}
         >
           <BackgroundColor color={bg} />
+        </div>
+      ))}
+    />
+
+    <Flex
+      wrap="nowrap"
+      width={1}
+      children={backgroundColors.sort().map(bg => (
+        <div
+          key={bg}
+          sx={{
+            bg: bg,
+            height: '16px',
+            maxWidth: '16px',
+            minWidth: '1px'
+          }}
+        >
         </div>
       ))}
     />

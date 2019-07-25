@@ -7,37 +7,35 @@ import { H2, Div, Flex, SlabStat } from './library'
 export default ({ classes, id, pseudoClass, pseudoElement }) => {
   return (
     <Div>
-      <H2 mb={0} children="Total Selectors by Type" />
+      <H2 mb={2} children="Total Selectors by Type" />
+    <p sx={{opacity: .7, fontSize: 1, lineHeight: 1.5}}>
+      Selectors are the part of a CSS ruleset that describes what elements in a document the rule will match.
+    </p>
 
       <Flex
-        mt={0}
-        mb={4}
+        mt={3}
+        mb={[4,5,6]}
         wrap="wrap"
       >
-        <Flex sx={{ width: ['50%', '25%', '15%'] }}>
           <SlabStat
-            title='Class'
-            stat={intComma(classes)}
-          />
-        </Flex>
-        <Flex sx={{ width: ['50%', '25%', '15%'] }}>
-          <SlabStat
+            mr={[4,5]}
             title='ID'
             stat={intComma(id)}
           />
-        </Flex>
-        <Flex sx={{ width: ['50%', '25%', '15%'] }}>
           <SlabStat
+    mr={[4,5]}
+            title='Class'
+            stat={intComma(classes)}
+          />
+          <SlabStat
+    mr={[4,5]}
             title='Pseudo Class'
             stat={intComma(pseudoClass)}
           />
-        </Flex>
-        <Flex sx={{ width: ['50%', '25%', '15%'] }}>
           <SlabStat
             title='Pseudo Element'
             stat={intComma(pseudoElement)}
           />
-        </Flex>
       </Flex>
     </Div>
   )
