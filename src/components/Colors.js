@@ -18,5 +18,13 @@ export default ({ colors = [] }) => (
         </Div>
       ))}
     />
+    <SectionTitle
+      title={`${colors.length} Total`}
+    />
+    <Div
+      children={colors.sort().map((color, i) => (
+          <Div key={color * i} py={1} bg={color}  />
+      ))}
+    />
   </Div>
 )
