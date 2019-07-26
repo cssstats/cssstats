@@ -1,6 +1,6 @@
 {
   "name": "cssstats",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "High-level stats for stylesheets",
   "main": "index.js",
   "author": "Brent Jackson",
@@ -17,22 +17,22 @@
     "css-selector-tokenizer": "^0.7.0",
     "css-shorthand-expand": "^1.1.0",
     "gzip-size": "^4.1.0",
-    "has-class-selector": "^3.3.0",
-    "has-element-selector": "^3.3.0",
-    "has-id-selector": "^3.3.0",
-    "has-pseudo-class": "^3.3.0",
-    "has-pseudo-element": "^3.3.0",
+    "has-class-selector": "^3.3.1",
+    "has-element-selector": "^3.3.1",
+    "has-id-selector": "^3.3.1",
+    "has-pseudo-class": "^3.3.1",
+    "has-pseudo-element": "^3.3.1",
     "is-blank": "^2.1.0",
     "is-css-shorthand": "^1.0.1",
     "is-present": "^1.0.0",
-    "is-vendor-prefixed": "^3.3.0",
+    "is-vendor-prefixed": "^3.3.1",
     "lodash": "^4.17.5",
     "postcss": "^6.0.21",
     "postcss-safe-parser": "^3.0.1",
     "specificity": "^0.3.2"
   },
   "devDependencies": {
-    "get-css": "^3.3.0",
+    "get-css": "^3.3.1",
     "mocha": "^5.0.5"
   },
   "scripts": {

@@ -2,7 +2,7 @@
   "name": "has-element-selector",
   "description": "Check whether a given selector contains an element",
   "author": "John Otander",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "main": "index.js",
   "files": [
     "index.js"

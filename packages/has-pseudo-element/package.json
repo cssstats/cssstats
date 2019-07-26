@@ -2,7 +2,7 @@
   "name": "has-pseudo-element",
   "description": "Determine whether a selector contains a pseudo-element.",
   "author": "John Otander",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "main": "index.js",
   "directories": {
     "test": "test"

@@ -1,5 +1,8 @@
 {
   "lerna": "2.5.1",
-  "packages": ["packages/*", "api/*"],
-  "version": "3.3.0"
+  "packages": [
+    "api/*",
+    "packages/*"
+  ],
+  "version": "3.3.1"
 }
