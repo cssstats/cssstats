@@ -3,9 +3,11 @@
 CSS Stats offers a JSON API that can be used in other tools. It's completely
 **open source** and **free to use**. All responses are JSON objects.
 
-## [`/api/stats?url=google.com`](https://cssstats.com/api/stats?url=google.com)
+## Stats
 
-The stats endpoint is the primary API for CSS Stats. It takes a url query
+### [`/api/stats?url=google.com`](https://cssstats.com/api/stats?url=google.com)
+
+The Stats endpoint is the primary API for CSS Stats. It takes a url query
 parameter which is used to scrape all CSS and then return a stats object
 based on the CSS it finds. This is what the app itself uses to populate
 the CSS visualizations.
@@ -111,7 +113,9 @@ Where the stats object has the following shape:
 }
 ```
 
-## [`/api/history?url=google.com&date=2010-01-01`](https://cssstats.com/api/history?url=google.com&date=2010-01-01)
+## History
+
+### [`/api/history?url=google.com&date=2010-01-01`](https://cssstats.com/api/history?url=google.com&date=2010-01-01)
 
 If you'd like to get a snapshot of CSS Stats for a url for
 a particular date, you can use the History API.
@@ -125,7 +129,11 @@ please throttle your requests so that everyone can use this service.
 
 **The date must be formatted as YYYY-MM-DD**.
 
-## [`/api/css?url=google.com`](https://cssstats.com/api/css?url=google.com)
+The returned JSON object is in the same shape as the Stats API.
+
+## CSS
+
+### [`/api/css?url=google.com`](https://cssstats.com/api/css?url=google.com)
 
 If you only want to retrieve the CSS for a given url you can use `/api/css`.
 It will return all the CSS links, style elements, and an aggregated CSS string.
