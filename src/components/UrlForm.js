@@ -23,6 +23,7 @@ export default ({ showLabel = false }) => {
         inputMode="url"
         value={url}
         onChange={e => setUrl(e.target.value)}
+        sx={{ color: 'text' }}
       />
     </form>
   )
