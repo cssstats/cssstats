@@ -28,6 +28,7 @@ export const Input = ({ ...props }) => (
       px: 4,
       overflow: 'visible',
       WekitAppearance: 'none',
+      bg: 'background',
       borderStyle: 'solid',
       borderRadius: 4,
       borderWidth: 1,

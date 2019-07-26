@@ -1,7 +1,8 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 
-import { Span, Div, Text, SectionTitle } from './library'
+import { Div, Text, SectionTitle } from './library'
 
 export default ({ fontFamilies = [] }) => (
   <Div mt={5}>
@@ -11,24 +12,19 @@ export default ({ fontFamilies = [] }) => (
     />
 
     {uniq(fontFamilies).map(fontFamily => (
-    <Div key={fontFamily} borderBottom='1px solid' py={4}>
-      <Text
-        mb={3}
-        fontWeight="bold"
-        children={fontFamily}
-      />
-      <Div
-        fontSize={[4,5,6]}
-        fontWeight="bold"
-        style={{ fontFamily }}
+      <div
+        key={fontFamily}
+        sx={{ borderBottom: '1px solid', borderColor: 'gray', py: 4 }}
       >
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ 
-        <br />
-        <span style={{fontWeight: 400}}>abcdefghijklmnopqrstuvwxyz</span>
-        <br />
-        <span style={{fontWeight: 400}}>0123456789!@#$%^&*()-+{}[];</span>
-      </Div>
-      </Div>
+        <Text mb={3} fontWeight="bold" children={fontFamily} />
+        <Div fontSize={[4, 5, 6]} fontWeight="bold" style={{ fontFamily }}>
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          <br />
+          <span style={{ fontWeight: 400 }}>abcdefghijklmnopqrstuvwxyz</span>
+          <br />
+          <span style={{ fontWeight: 400 }}>0123456789!@#$%^&*()-+{}[];</span>
+        </Div>
+      </div>
     ))}
   </Div>
 )
