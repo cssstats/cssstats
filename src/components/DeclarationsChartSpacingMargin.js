@@ -12,16 +12,11 @@ export default ({ data }) => {
   const unique = intComma(data.unique)
 
   const properties = [
-    'padding',
-    'padding-left',
-    'padding-right',
-    'padding-top',
-    'padding-bottom',
-   // 'margin',
-   // 'margin-left',
-   // 'margin-right',
-   // 'margin-top',
-   // 'margin-bottom',
+    'margin',
+    'margin-left',
+    'margin-right',
+    'margin-top',
+    'margin-bottom',
   ]
 
   const formattedData = [
@@ -35,9 +30,8 @@ export default ({ data }) => {
   return (
     <Div mt={4}>
       <SectionTitle
-        title="Padding"
+        title="Margin"
       />
-
       <GroupedBarChart data={formattedData} />
     </Div>
   )

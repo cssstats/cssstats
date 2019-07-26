@@ -31,11 +31,14 @@ export default ({ data }) => {
   ]
 
   return (
-    <Div mt={4}>
+    <Div pt={[4,5,6]}>
       <SectionTitle
         title="Total vs Unique Declarations"
-        description={`${total} total, ${unique} unique`}
+        description={<span>Out of the <b>{total}</b> total declarations, <b>{unique}</b> have unique values.</span>}
       />
+      <p>
+       The comparison charts below can help you identify which properties might be the best candidates for creating abstractions. 
+      </p>
       <SectionTitle
         title="Layout and Structure"
       />

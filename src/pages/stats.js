@@ -31,6 +31,7 @@ import DeclarationsChart from '../components/DeclarationsChart'
 import DeclarationsChartLayout from '../components/DeclarationsChartLayout'
 import DeclarationsChartTypography from '../components/DeclarationsChartTypography'
 import DeclarationsChartSpacing from '../components/DeclarationsChartSpacing'
+import DeclarationsChartSpacingMargin from '../components/DeclarationsChartSpacingMargin'
 
 const API_URL = 'https://cssstats.com/api'
 
@@ -190,6 +191,7 @@ export default () => {
       <DeclarationsChartLayout data={declarations} />
       <DeclarationsChartTypography data={declarations} />
       <DeclarationsChartSpacing data={declarations} />
+      <DeclarationsChartSpacingMargin data={declarations} />
 
       <Div mt={5}>
         <H2>Raw Css</H2>
