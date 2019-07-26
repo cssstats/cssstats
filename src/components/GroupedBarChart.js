@@ -1,4 +1,5 @@
 import React from 'react'
+import { useThemeUI } from 'theme-ui'
 import titleize from 'titleize'
 
 import {
@@ -12,6 +13,11 @@ import {
 const getMax = data => data[0].reduce((p, { y }) => (p > y ? p : y), 0)
 
 export default ({ data }) => {
+  const { theme, colorMode } = useThemeUI()
+  const colors =
+    colorMode !== theme.initialColorMode
+      ? theme.colors.modes[colorMode]
+      : theme.colors
   const max = getMax(data)
 
   return (
@@ -30,12 +36,13 @@ export default ({ data }) => {
         tickValues={[max * 0.25, max * 0.5, max * 0.75, max]}
         style={{
           grid: {
-            stroke: '#ccc',
+            stroke: colors.gray,
             strokeWidth: 1
           },
           tickLabels: {
+            fill: colors.text,
             fontSize: 5,
-            fontFamily: 'sans-serif'
+            fontFamily: theme.fonts.body
           },
           axis: {
             stroke: 'transparent'
@@ -49,11 +56,12 @@ export default ({ data }) => {
       <VictoryAxis
         style={{
           tickLabels: {
+            fill: colors.text,
             fontSize: 0,
-            fontFamily: 'sans-serif'
+            fontFamily: theme.fonts.body
           },
           axis: {
-            stroke: '#ccc'
+            stroke: colors.gray
           },
           tick: {
             stroke: 'transparent'
@@ -64,16 +72,19 @@ export default ({ data }) => {
       <VictoryGroup
         offset={20}
         labels={d => titleize(d.x.replace('-', ' '))}
-        colorScale={['#222', '#999']}
+        colorScale={colors.chart}
         style={{
           labels: {
+            fill: colors.text,
             fontSize: 6,
             fontWeight: 600,
-            fontFamily: 'sans-serif'
+            fontFamily: theme.fonts.body
           }
         }}
         labelComponent={<VictoryLabel y={215} dy={0} dx={-10} />}
-        children={data.map((d, i) => <VictoryBar key={i} data={d} />)}
+        children={data.map((d, i) => (
+          <VictoryBar key={i} data={d} />
+        ))}
       />
     </VictoryChart>
   )

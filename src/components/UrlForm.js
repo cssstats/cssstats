@@ -15,8 +15,16 @@ export default ({ showLabel = false }) => {
         navigate(`/stats?url=${url}`)
       }}
     >
-      <Label sx={{ mb: 2, display: showLabel ? 'block' : 'none' }}>Input a URL</Label>
-      <Input placeholder="google.com" value={url} onChange={e => setUrl(e.target.value)} />
+      <Label sx={{ mb: 2, display: showLabel ? 'block' : 'none' }}>
+        Input a URL
+      </Label>
+      <Input
+        placeholder="google.com"
+        inputMode="url"
+        value={url}
+        onChange={e => setUrl(e.target.value)}
+        sx={{ color: 'text' }}
+      />
     </form>
   )
 }

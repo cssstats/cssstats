@@ -1,10 +1,15 @@
 import React from 'react'
-
+import { useThemeUI } from 'theme-ui'
 import { VictoryChart, VictoryBar, VictoryAxis } from 'victory'
 
 const getMax = data => data.reduce((p, v) => (p > v ? p : v), 0)
 
 export default ({ data }) => {
+  const { theme, colorMode } = useThemeUI()
+  const colors =
+    colorMode !== theme.initialColorMode
+      ? theme.colors.modes[colorMode]
+      : theme.colors
   const max = getMax(data)
 
   return (
@@ -23,12 +28,13 @@ export default ({ data }) => {
         tickValues={[max * 0.25, max * 0.5, max * 0.75, max]}
         style={{
           grid: {
-            stroke: '#ccc',
+            stroke: colors.gray,
             strokeWidth: 1
           },
           tickLabels: {
+            fill: colors.text,
             fontSize: 5,
-            fontFamily: 'sans-serif'
+            fontFamily: theme.fonts.body
           },
           axis: {
             stroke: 'transparent'
@@ -39,7 +45,10 @@ export default ({ data }) => {
         }}
       />
 
-      <VictoryBar data={data.map((v, i) => ({ x: i, y: v }))} />
+      <VictoryBar
+        data={data.map((v, i) => ({ x: i, y: v }))}
+        style={{ data: { fill: colors.text } }}
+      />
     </VictoryChart>
   )
 }

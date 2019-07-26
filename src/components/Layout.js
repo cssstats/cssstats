@@ -5,9 +5,10 @@ import {
   Container,
   Header,
   Styled,
-  jsx
+  jsx,
+  useColorMode
 } from 'theme-ui'
-import { GitHub, Twitter } from 'react-feather'
+import { GitHub, Twitter, Moon } from 'react-feather'
 import { Helmet } from 'react-helmet'
 
 import { Logo, Link, Label, Input } from './ui'
@@ -18,6 +19,7 @@ import favicon64 from "../images/favicon-64.png";
 
 export default ({ title, initialUrl, onUrlChange, children }) => {
   const [url, setUrl] = useState(initialUrl)
+  const [colorMode, setColorMode] = useColorMode()
   
   return (
     <div>
@@ -69,12 +71,30 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                     }}
                   >
                   <Label display="none">Url</Label>
-                  <Input placeholder="Url to extract CSS stats" value={url} onChange={e => setUrl(e.target.value)} />
+                  <Input
+                    placeholder="Url to extract CSS stats"
+                    inputMode="url"
+                    value={url}
+                    onChange={e => setUrl(e.target.value)}
+                    sx={{ color: 'text' }}
+                  />
                 </form>
               </div>
             ) : null}
 
             <div sx={{ ml: 'auto', width: 96, display: 'flex', alignItems: 'center' }}>
+              <Styled.a
+                sx={{
+                  mr: 3,
+                  cursor: 'pointer'
+                }}
+                onClick={() => {
+                  setColorMode(colorMode === 'light' ? 'dark' : 'light')
+                }}
+                title="Toggle color mode"
+              >
+                <Moon />
+              </Styled.a>
               <Styled.a sx={{ mr: 3 }} href="https://mobile.twitter.com/cssstats"><Twitter /></Styled.a>
               <Styled.a href="https://github.com/cssstats"><GitHub /></Styled.a>
             </div>

@@ -5,7 +5,8 @@ const Pre = styled('pre')(
   [],
   props => ({
     maxHeight: '50vh',
-    overflow: 'auto'
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch'
   }),
   space,
   fontSize,
@@ -15,9 +16,9 @@ const Pre = styled('pre')(
 )
 
 Pre.defaultProps = {
-  bg: '#ecece6',
+  bg: 'lightGray',
   p: 3,
-  borderRadius: 3
+  borderRadius: 4
 }
 
 export default Pre

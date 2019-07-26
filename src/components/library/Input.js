@@ -28,7 +28,7 @@ const Input = styled('input')(
 Input.defaultProps = {
   m: 0,
   w: 1,
-  color: 'inherit',
+  color: 'text',
   bg: 'transparent',
   placeholder: 'Input a url',
   borderColor: 'black',
