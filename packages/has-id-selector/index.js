@@ -13,5 +13,5 @@ module.exports = function hasIdSelector(selector, selectorToCheck) {
     return matcher.test(selector)
   }
 
-  return /#/.test(selector)
+  return /(?![^[]*])#/.test(selector)
 }
