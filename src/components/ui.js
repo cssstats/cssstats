@@ -25,7 +25,7 @@ export const Input = ({ ...props }) => (
       display: 'block',
       width: '100%',
       py: 3,
-      px: 4,
+      px: 24,
       overflow: 'visible',
       WebkitAppearance: 'none',
       borderStyle: 'solid',
