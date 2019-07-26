@@ -5,7 +5,7 @@ import sort from 'css-unit-sort'
 import { Flex, Div, Span, H2, H3, Text, SectionTitle } from './library'
 
 export default ({ fontSizes = [] }) => (
-  <Div mt={5} style={{overflowX: 'auto' }}>
+  <Div mt={5} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
     <SectionTitle
       title='Type Scale'
       description={`${uniq(fontSizes).length} Unique font sizes`}
@@ -29,7 +29,7 @@ export default ({ fontSizes = [] }) => (
       mt={5}
       title={`${fontSizes.length} Total font size declarations`}
     />
-    <div style={{overflowX: 'auto', paddingBottom: 16}}>
+    <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: 16 }}>
     <table cellSpacing='0' cellPadding='0'>
     <tr>
     {sort(fontSizes).map(fontSize => (
