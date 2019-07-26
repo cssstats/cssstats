@@ -36,6 +36,9 @@ export default ({ data }) => {
         title="Total vs Unique Declarations"
         description={`${total} total, ${unique} unique`}
       />
+      <SectionTitle
+        title="Layout and Structure"
+      />
 
       <GroupedBarChart data={formattedData} />
     </Div>

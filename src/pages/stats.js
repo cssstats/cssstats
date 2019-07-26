@@ -22,6 +22,7 @@ import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
 import BackgroundColors from '../components/BackgroundColors'
 import FontSizes from '../components/FontSizes'
+import FontWeights from '../components/FontWeights'
 import FontFamilies from '../components/FontFamilies'
 import ZIndexes from '../components/ZIndexes'
 import SpacingResets from '../components/SpacingResets'
@@ -151,24 +152,33 @@ export default () => {
 
 
       
-        <SummaryStats
-          rules={rules.total}
-          selectors={selectors.total}
-          declarations={declarations.total}
-          properties={Object.keys(properties).length}
-        />
+        <div sx={{
+          mt: 4,
+          p: 4,
+          borderRadius: '7px',
+          bg: '#1d1d1d',
+          color: '#ffffff'
+        }}>
+          <SummaryStats
+            rules={rules.total}
+            selectors={selectors.total}
+            declarations={declarations.total}
+            properties={Object.keys(properties).length}
+          />
+          <Selectors
+            classes={selectors.class}
+            id={selectors.id}
+            pseudoClass={selectors.pseudoClass}
+            pseudoElement={selectors.pseudoElement}
+          />
+        </div>
 
       <Declarations properties={properties} />
-      <Selectors
-        classes={selectors.class}
-        id={selectors.id}
-        pseudoClass={selectors.pseudoClass}
-        pseudoElement={selectors.pseudoElement}
-      />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
       <H2 fontSize={6}>Typography</H2>
       <FontSizes fontSizes={properties['font-size']} />
+      <FontWeights fontWeights={properties['font-weight']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <SpacingResets properties={properties} />
       <ZIndexes zIndexes={properties['z-index']} />
