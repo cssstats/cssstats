@@ -4,15 +4,8 @@ import React, { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { Styled } from 'theme-ui'
-
-import {
-  H2,
-  Div,
-  Pre,
-  Flex,
-  Loading,
-  SubHeader
-} from '../components/library'
+import { Eye, EyeOff } from 'react-feather'
+import { H2, Div, Pre, Flex, Loading, SubHeader } from '../components/library'
 
 import Layout from '../components/Layout'
 
@@ -38,6 +31,7 @@ const API_URL = 'https://cssstats.com/api'
 export default () => {
   const [stats, setStats] = useState(null)
   const [url, setUrl] = useState(null)
+  const [preview, setPreview] = useState(false)
 
   useEffect(() => {
     const linkFromQuery = getQueryParam('link', window.location.href)
@@ -194,9 +188,20 @@ export default () => {
       <DeclarationsChartSpacingMargin data={declarations} />
 
       <Div mt={5}>
+        <div
+          role="button"
+          title="Preview raw CSS directly on this page"
+          sx={{ float: 'right', pl: 3, cursor: 'pointer' }}
+          tabindex="0"
+          onClick={() => setPreview(!preview)}
+        >
+          {preview ? <EyeOff /> : <Eye />}
+        </div>
         <H2>Raw Css</H2>
         <Pre>{css.trim()}</Pre>
       </Div>
+
+      <style children={preview ? css.trim() : ''} />
     </Layout>
   )
 }
