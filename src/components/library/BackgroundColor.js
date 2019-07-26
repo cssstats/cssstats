@@ -6,8 +6,6 @@ const BackgroundColor = props => (
   <Div>
     <svg
       viewBox="0 0 32 32"
-      width="32"
-      height="32"
       style={{
         display: 'block',
         width: '100%',

@@ -5,7 +5,7 @@ import Font from './Font'
 const Container = styled(Font)(
   [],
   props => ({
-    maxWidth: '72rem',
+    maxWidth: '96rem',
     marginLeft: 'auto',
     marginRight: 'auto'
   }),

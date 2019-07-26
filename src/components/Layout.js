@@ -81,7 +81,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
           </div>
         </Header>
         <title children={title || 'CSS Stats'} />
-        <Container>{children}</Container>
+        <Container sx={{maxWidth: '72rem'}}>{children}</Container>
       </Styled.root>
     </div>
   )
