@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React, { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
@@ -81,20 +83,80 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={url => setUrl(url)}>
-      <Div bg='#1d1d1d' color='white' borderRadius='7px' p={4}>
         <SubHeader
-          title={pageTitle || (stats && stats.name) || url}
-          gzipSize={humanizedGzipSize} 
-          size={humanizedSize}
+          title={url}
+          description={pageTitle}
+          mb={5}
         />
+    <Flex>
+      <Div bg='#f5f5f5' color='#1e1e1e' borderRadius='7px' p={4}>
+        <Flex>
+          <dl sx={{marginRight: 32, paddingRight: 32, borderRight: '1px solid'}}>
+            <dt>File size</dt>
+            <dd sx={{fontSize: 64, fontWeight: 700, marginLeft: 0}}>{humanizedSize}</dd>
+          </dl>
+          <dl sx={{marginRight: 32, paddingRight: 32}}>
+            <dt>Gzipped file size</dt>
+            <dd style={{fontSize: 64, fontWeight: 700, marginLeft: 0}}>{humanizedGzipSize}</dd>
+          </dl>
+    </Flex>
+    </Div>
+    <Div width={1}>
+            <div 
+              sx={{
+                pl: 4,
+                  width: '100%'
+            }}
+            >
+          <table sx={{ fontSize: 1, width: '100%', }} cellSpacing='0'>
+            <tr>
+              <th sx={{ borderBottom: '1px solid rgba(0,0,0,.2)', textTransform: 'uppercase', letterSpacing: '0.05em',fontSize: 0, textAlign: 'left'}}></th>
+              <th sx={{ borderBottom: '1px solid rgba(0,0,0,.2)', textTransform: 'uppercase', letterSpacing: '0.05em',fontSize: 0, textAlign: 'right'}}>Size</th>
+              <th sx={{ borderBottom: '1px solid rgba(0,0,0,.2)', textTransform: 'uppercase', letterSpacing: '0.05em',fontSize: 0, textAlign: 'right'}}>Gzipped</th>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Basscss</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>10kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>2kb</td>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Tachyons</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>72kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>13kb</td>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Foundation</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>119kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>16kb</td>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Primer</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>140kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>22kb</td>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Bootstrap</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>123kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>23kb</td>
+            </tr>
+            <tr>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', py: 1, fontWeight: 'bold'}}>Bulma</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>186kb</td>
+              <td sx={{borderBottom: '1px solid rgba(0,0,0,.2)', textAlign: 'right'}}>24kb</td>
+            </tr>
+          </table>
+            </div>
+    </Div>
+    </Flex>
 
+
+      
         <SummaryStats
           rules={rules.total}
           selectors={selectors.total}
           declarations={declarations.total}
           properties={Object.keys(properties).length}
         />
-      </Div>
 
       <Declarations properties={properties} />
       <Selectors

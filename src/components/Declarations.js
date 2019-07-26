@@ -141,6 +141,29 @@ export default ({ properties }) => {
     },
   ]
 
+  const borderMetrics = [
+    {
+      name: 'Border',
+      value: properties['border'] || []
+    },
+    {
+      name: 'Border Width',
+      value: properties['border-width'] || []
+    },
+    {
+      name: 'Border Style',
+      value: properties['border-style'] || []
+    },
+    {
+      name: 'Border Radius',
+      value: properties['border-radius'] || []
+    },
+    {
+      name: 'Box Shadow',
+      value: properties['box-shadow'] || []
+    },
+  ]
+
   return (
     <Div py={[4,5]}>
       <H2 mb={2} fontSize={4} fontWeight={900}  children="Total Declaration Counts" />
@@ -234,8 +257,28 @@ export default ({ properties }) => {
         ))}
       />
     </div>
-
-
+      <h3 sx={{
+        mt: 4,
+        mb: 3,
+        fontSize: 1,
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+      }}>Borders</h3>
+    <div sx={{ 
+    }}>
+      <Flex
+        mt={0}
+        wrap="wrap"
+        children={borderMetrics.map(metric => (
+          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+            <SlabStat
+              title={metric.name}
+              stat={intComma(metric.value.length)}
+            />
+          </Flex>
+        ))}
+      />
+    </div>
     </Div>
   )
 }

@@ -6,14 +6,9 @@ import Text from './Text'
 import H2 from './H2'
 
 const SubHeader = props => (
-  <Div>
-    <Div py={3}>
-      <H2 color='inherit' fontSize={[3,4,4]} mt={0} mb={2} children={props.title} />
-      <Flex>
-        <Text fontWeight="700" mr={4} children={'Total file size: '+props.size} />
-        <Text fontWeight="700" children={'Gzipped file size: '+props.gzipSize} />
-      </Flex>
-    </Div>
+  <Div {...props}>
+      <H2 color='inherit' fontSize={[3,5,5]} mt={0} mb={2} children={props.title} />
+      <Text color='inherit' fontWeight='500' fontSize={[0,1,1]} mt={0} mb={2} children={props.description} />
   </Div>
 )
 
