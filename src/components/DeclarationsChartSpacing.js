@@ -12,12 +12,16 @@ export default ({ data }) => {
   const unique = intComma(data.unique)
 
   const properties = [
-    'width',
-    'height',
-    'margin',
     'padding',
-    'background-color',
-    'color',
+    'padding-left',
+    'padding-right',
+    'padding-top',
+    'padding-bottom',
+    'margin',
+    'margin-left',
+    'margin-right',
+    'margin-top',
+    'margin-bottom',
   ]
 
   const formattedData = [
@@ -31,8 +35,7 @@ export default ({ data }) => {
   return (
     <Div mt={4}>
       <SectionTitle
-        title="Total vs Unique Declarations"
-        description={`${total} total, ${unique} unique`}
+        title="Spacing"
       />
 
       <GroupedBarChart data={formattedData} />

@@ -26,6 +26,9 @@ import SpacingResets from '../components/SpacingResets'
 import RulesetChart from '../components/RulesetChart'
 import SpecificityChart from '../components/SpecificityChart'
 import DeclarationsChart from '../components/DeclarationsChart'
+import DeclarationsChartLayout from '../components/DeclarationsChartLayout'
+import DeclarationsChartTypography from '../components/DeclarationsChartTypography'
+import DeclarationsChartSpacing from '../components/DeclarationsChartSpacing'
 
 const API_URL = 'https://cssstats.com/api'
 
@@ -113,7 +116,10 @@ export default () => {
         data={selectors.specificity.graph}
       />
       <RulesetChart data={rules.size.graph} />
-      <DeclarationsChart data={declarations} />
+
+      <DeclarationsChartLayout data={declarations} />
+      <DeclarationsChartTypography data={declarations} />
+      <DeclarationsChartSpacing data={declarations} />
 
       <Div mt={5}>
         <H2>Raw Css</H2>

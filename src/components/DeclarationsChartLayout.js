@@ -12,12 +12,14 @@ export default ({ data }) => {
   const unique = intComma(data.unique)
 
   const properties = [
+    'display',
+    'float',
     'width',
     'height',
-    'margin',
-    'padding',
-    'background-color',
-    'color',
+    'max-width',
+    'min-width',
+    'max-height',
+    'min-height',
   ]
 
   const formattedData = [
