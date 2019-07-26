@@ -102,6 +102,7 @@ export default () => {
       />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
+      <H2 fontSize={6}>Typography</H2>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <ZIndexes zIndexes={properties['z-index']} />

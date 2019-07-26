@@ -1,7 +1,7 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { Div, Text, SectionTitle } from './library'
+import { Span, Div, Text, SectionTitle } from './library'
 
 export default ({ fontFamilies = [] }) => (
   <Div mt={5}>
@@ -11,13 +11,24 @@ export default ({ fontFamilies = [] }) => (
     />
 
     {uniq(fontFamilies).map(fontFamily => (
+    <Div key={fontFamily} borderBottom='1px solid' py={4}>
       <Text
-        key={fontFamily}
         mb={3}
         fontWeight="bold"
-        style={{ fontFamily }}
         children={fontFamily}
       />
+      <Div
+        fontSize={[4,5,6]}
+        fontWeight="bold"
+        style={{ fontFamily }}
+      >
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+        <br />
+        <span style={{fontWeight: 400}}>abcdefghijklmnopqrstuvwxyz</span>
+        <br />
+        <span style={{fontWeight: 400}}>0123456789!@#$%^&*()-+{}[];</span>
+      </Div>
+      </Div>
     ))}
   </Div>
 )
