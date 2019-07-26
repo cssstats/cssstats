@@ -15,7 +15,7 @@ const Pre = styled('pre')(
 )
 
 Pre.defaultProps = {
-  bg: 'lightgray',
+  bg: '#ecece6',
   p: 3,
   borderRadius: 3
 }
