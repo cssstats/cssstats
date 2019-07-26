@@ -111,11 +111,28 @@ Where the stats object has the following shape:
 }
 ```
 
+## [`/api/history?url=google.com&date=2010-01-01`](https://cssstats.com/api/history?url=google.com&date=2010-01-01)
+
+If you'd like to get a snapshot of CSS Stats for a url for
+a particular date, you can use the History API.
+
+This API uses [Archive.org's Wayback Machine](https://archive.org/web/)
+so you must have a `robot.txt` that allows bots and the closest snapshot
+for the given date will be used.
+
+Currently, all requests scrape directly from the Wayback Machine so
+please throttle your requests so that everyone can use this service.
+
+**The date must be formatted as YYYY-MM-DD**.
+
 ## [`/api/css?url=google.com`](https://cssstats.com/api/css?url=google.com)
 
 If you only want to retrieve the CSS for a given url you can use `/api/css`.
 It will return all the CSS links, style elements, and an aggregated CSS string.
-The retrieval will follow CSS imports recursively as well.
+The retrieval will follow CSS imports recursively.
+
+The endpoint will also return the page title and HTML string returned by the
+URL.
 
 ### Shape of the returned CSS object
 
@@ -127,6 +144,8 @@ The retrieval will follow CSS imports recursively as well.
   styles: [
     ''
   ],
-  css: ''
+  css: '',
+  pageTitle: '',
+  html: ''
 }
 ```

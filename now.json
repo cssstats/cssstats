@@ -15,6 +15,10 @@
       "use": "@now/node"
     },
     {
+      "src": "api/history/index.js",
+      "use": "@now/node"
+    },
+    {
       "src": "api/css/index.js",
       "use": "@now/node"
     }
