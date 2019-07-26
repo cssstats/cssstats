@@ -61,12 +61,12 @@ export default {
       borderColor: 'lightGray'
     },
     inlineCode: {
-      backgroundColor: '#fafafa',
+      backgroundColor: 'lightGray',
       px: 2
     },
     pre: {
       fontSize: 3,
-      backgroundColor: '#fafafa',
+      backgroundColor: 'lightGray',
       borderRadius: 4,
       p: 3,
       overflowX: 'auto'
