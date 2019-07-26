@@ -87,7 +87,8 @@ export default {
       "fontWeight": "bold",
       "p": [1, 2, 3],
       "& a": {
-        "color": "black"
+        "color": "black",
+        "textDecoration": "none"
       }
     }
   }
