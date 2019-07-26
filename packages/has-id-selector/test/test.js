@@ -7,10 +7,18 @@ var idSelectors = [
   '#bar::after',
   '#bar:after',
   '[input="text"] #foo',
-  'ul > li + li #baz'
+  'ul > li + li #baz',
+  'element#baz'
 ]
 
-var otherSelectors = ['.foo', 'a', '[input="text"]', 'a:visisted', 'li + li']
+var otherSelectors = [
+  '.foo',
+  'a',
+  '[input="text"]',
+  'a:visisted',
+  'li + li',
+  '[href="#anchor"]'
+]
 
 describe('has-id-selector', function() {
   it('should return true if there is an id selector', function() {
