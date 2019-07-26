@@ -19,19 +19,19 @@ npm i -g get-css
 ## Usage
 
 ```js
-var getCss = require('get-css');
+var getCss = require('get-css')
 
 var options = {
   timeout: 5000
-};
+}
 
 getCss('http://github.com', options)
   .then(function(response) {
-    console.log(response);
+    console.log(response)
   })
   .catch(function(error) {
-    console.error(error);
-  });
+    console.error(error)
+  })
 ```
 
 ### Using the CLI
@@ -44,6 +44,7 @@ getcss google.com > google.css
 ## Response
 
 ### `links`
+
 An array of objects base on `rel=stylesheet` links found in the document.
 
 Each object has the following:
@@ -54,23 +55,29 @@ Each object has the following:
 - `imports` - an array of urls for `@import` rules
 
 ### `styles`
+
 An array of contents from `style` tags found in the document.
 
 ### `css`
+
 A concatenated string of all css found in links and styles
 
 ### `pageTitle`
+
 The contents of the `title` tag in the document.
 
 ## Options
 
 ### `timeout`
+
 An integer to reflect the timeout for the request. Default: `5000`
 
 ### `ignoreCerts`
+
 A boolean to determine whether invalid certificates are ignored. Default: `false`
 
 ### `verbose`
+
 A boolean to determine whether errors should be `console.log`ged. Default: `false`
 
 ## License

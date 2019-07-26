@@ -1,6 +1,6 @@
 var shorthandExpand = require('css-shorthand-expand')
 
-module.exports = function (properties) {
+module.exports = function(properties) {
   properties = properties || this.properties
 
   if (!properties) {
@@ -10,15 +10,16 @@ module.exports = function (properties) {
   var fontSizes = properties['font-size'] || []
 
   if (properties.font) {
-    fontSizes = fontSizes.concat(properties.font
-      .map(function (value) {
-        try {
-          return shorthandExpand('font', value)['font-family']
-        } catch (e) {}
-      })
-      .filter(function (value) {
-        return value
-      })
+    fontSizes = fontSizes.concat(
+      properties.font
+        .map(function(value) {
+          try {
+            return shorthandExpand('font', value)['font-family']
+          } catch (e) {}
+        })
+        .filter(function(value) {
+          return value
+        })
     )
   }
 

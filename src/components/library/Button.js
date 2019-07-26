@@ -1,11 +1,5 @@
 import styled from '@emotion/styled'
-import {
-  space,
-  fontSize,
-  width,
-  color,
-  fontWeight
-} from 'styled-system'
+import { space, fontSize, width, color, fontWeight } from 'styled-system'
 
 const Button = styled('button')(
   [],

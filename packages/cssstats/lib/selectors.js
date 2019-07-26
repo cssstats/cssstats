@@ -9,7 +9,7 @@ var getRepeatedValues = require('./get-repeated-values')
 var getSpecificityValues = require('./get-specificity-values')
 var getSortedSpecificity = require('./get-sorted-specificity')
 
-module.exports = function (root, opts) {
+module.exports = function(root, opts) {
   var result = {
     total: 0,
     type: 0,
@@ -30,12 +30,12 @@ module.exports = function (root, opts) {
 
   var graph
 
-  root.walkRules(function (rule) {
+  root.walkRules(function(rule) {
     var parent = rule.parent
     if (parent.type === 'atrule' && parent.name === 'keyframes') {
       return
     }
-    rule.selectors.forEach(function (selector) {
+    rule.selectors.forEach(function(selector) {
       result.total++
       result.values.push(selector)
 

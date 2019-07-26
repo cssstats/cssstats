@@ -13,8 +13,8 @@ npm install --save has-attribute-selector
 ```javascript
 var hasAttributeSelector = require('has-attribute-selector')
 
-hasAttributeSelector('[hidden]')  // => true
-hasAttributeSelector('.hidden')  // => false
+hasAttributeSelector('[hidden]') // => true
+hasAttributeSelector('.hidden') // => false
 ```
 
 ## License
@@ -31,6 +31,6 @@ MIT
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

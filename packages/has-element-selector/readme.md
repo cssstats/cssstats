@@ -13,9 +13,9 @@ npm install --save has-element-selector
 ```javascript
 var hasElementSelector = require('has-element-selector')
 
-hasElementSelector('input')  // => true
-hasElementSelector('#foo ul.bar')  // => true
-hasElementSelector('#foo .bar.baz')  // => false
+hasElementSelector('input') // => true
+hasElementSelector('#foo ul.bar') // => true
+hasElementSelector('#foo .bar.baz') // => false
 ```
 
 ## License
@@ -32,6 +32,6 @@ MIT
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

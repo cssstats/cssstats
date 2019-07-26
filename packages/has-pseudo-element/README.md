@@ -13,11 +13,11 @@ npm install --save has-pseudo-element
 ## Usage
 
 ```javascript
-var hasPseudoElement = require('has-pseudo-element');
+var hasPseudoElement = require('has-pseudo-element')
 
-hasPseudoElement('.some-selector:after');   // => true
-hasPseudoElement('.some-selector::after');  // => true
-hasPseudoElement('.some-selector');         // => false
+hasPseudoElement('.some-selector:after') // => true
+hasPseudoElement('.some-selector::after') // => true
+hasPseudoElement('.some-selector') // => false
 ```
 
 ## License

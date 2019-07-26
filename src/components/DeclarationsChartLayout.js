@@ -19,7 +19,7 @@ export default ({ data }) => {
     'max-width',
     'min-width',
     'max-height',
-    'min-height',
+    'min-height'
   ]
 
   const formattedData = [
@@ -31,17 +31,21 @@ export default ({ data }) => {
   ]
 
   return (
-    <Div pt={[4,5,6]}>
+    <Div pt={[4, 5, 6]}>
       <SectionTitle
         title="Total vs Unique Declarations"
-        description={<span>Out of the <b>{total}</b> total declarations, <b>{unique}</b> have unique values.</span>}
+        description={
+          <span>
+            Out of the <b>{total}</b> total declarations, <b>{unique}</b> have
+            unique values.
+          </span>
+        }
       />
       <p>
-       The comparison charts below can help you identify which properties might be the best candidates for creating abstractions. 
+        The comparison charts below can help you identify which properties might
+        be the best candidates for creating abstractions.
       </p>
-      <SectionTitle
-        title="Layout and Structure"
-      />
+      <SectionTitle title="Layout and Structure" />
 
       <GroupedBarChart data={formattedData} />
     </Div>

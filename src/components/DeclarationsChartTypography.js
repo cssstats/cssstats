@@ -18,7 +18,7 @@ export default ({ data }) => {
     'line-height',
     'text-align',
     'text-decoration',
-    'letter-spacing',
+    'letter-spacing'
   ]
 
   const formattedData = [
@@ -31,9 +31,7 @@ export default ({ data }) => {
 
   return (
     <Div mt={4}>
-      <SectionTitle
-        title="Typography"
-      />
+      <SectionTitle title="Typography" />
 
       <GroupedBarChart data={formattedData} />
     </Div>

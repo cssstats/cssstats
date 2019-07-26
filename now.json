@@ -1,10 +1,7 @@
 {
   "name": "cssstats",
   "version": 2,
-  "alias": [
-    "cssstats.com",
-    "www.cssstats.com"
-  ],
+  "alias": ["cssstats.com", "www.cssstats.com"],
   "builds": [
     {
       "src": "package.json",
