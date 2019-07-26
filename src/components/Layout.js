@@ -69,7 +69,12 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                     }}
                   >
                   <Label display="none">Url</Label>
-                  <Input placeholder="Url to extract CSS stats" value={url} onChange={e => setUrl(e.target.value)} />
+                  <Input
+                    placeholder="Url to extract CSS stats"
+                    inputMode="url"
+                    value={url}
+                    onChange={e => setUrl(e.target.value)}
+                  />
                 </form>
               </div>
             ) : null}
