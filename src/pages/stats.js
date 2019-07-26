@@ -22,7 +22,6 @@ import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
 import BackgroundColors from '../components/BackgroundColors'
 import FontSizes from '../components/FontSizes'
-import FontWeights from '../components/FontWeights'
 import FontFamilies from '../components/FontFamilies'
 import ZIndexes from '../components/ZIndexes'
 import SpacingResets from '../components/SpacingResets'
@@ -178,7 +177,6 @@ export default () => {
       <BackgroundColors backgroundColors={backgroundColors} />
       <H2 fontSize={6}>Typography</H2>
       <FontSizes fontSizes={properties['font-size']} />
-      <FontWeights fontWeights={properties['font-weight']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <SpacingResets properties={properties} />
       <ZIndexes zIndexes={properties['z-index']} />
