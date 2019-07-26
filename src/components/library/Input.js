@@ -15,8 +15,7 @@ const Input = styled('input')(
     boxSizing: 'border-box',
     fontFamily: 'inherit',
     fontSize: 'inherit',
-    borderRadius: '4px',
-    WebkitAppearance: 'none'
+    borderRadius: '4px'
   }),
   space,
   fontSize,
