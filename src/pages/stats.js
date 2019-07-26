@@ -23,6 +23,7 @@ import FontSizes from '../components/FontSizes'
 import FontFamilies from '../components/FontFamilies'
 import ZIndexes from '../components/ZIndexes'
 import SpacingResets from '../components/SpacingResets'
+import Spacing from '../components/Spacing'
 import RulesetChart from '../components/RulesetChart'
 import SpecificityChart from '../components/SpecificityChart'
 import DeclarationsChart from '../components/DeclarationsChart'
@@ -92,6 +93,11 @@ export default () => {
           properties={Object.keys(properties).length}
         />
       </Div>
+
+      <Spacing paddings={properties['padding-right']} />
+      <Spacing paddings={properties['padding-left']} />
+      <Spacing paddings={properties['padding-top']} />
+      <Spacing paddings={properties['padding-right']} />
 
       <Declarations properties={properties} />
       <Selectors
