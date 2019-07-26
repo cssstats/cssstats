@@ -28,7 +28,7 @@ export default ({ colors = [] }) => (
     <Flex
       wrap="wrap"
       children={colors.sort().map((color, i) => (
-          <Div key={color * i} children='Aa' fontSize='24px' fontWeight={900} color={color}  title={color} />
+          <Div key={color * i} children='A' fontSize='32px' fontWeight={900} color={color}  title={color} />
       ))}
     />
   </Div>

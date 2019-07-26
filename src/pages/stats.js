@@ -105,8 +105,8 @@ export default () => {
       <H2 fontSize={6}>Typography</H2>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
-      <ZIndexes zIndexes={properties['z-index']} />
       <SpacingResets properties={properties} />
+      <ZIndexes zIndexes={properties['z-index']} />
       <SpecificityChart
         max={selectors.specificity.max}
         average={Math.round(selectors.specificity.average)}

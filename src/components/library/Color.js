@@ -12,7 +12,7 @@ const Color = props => (
         color: props.color
       }}
     />
-    <Text fontSize={1} fontWeight={600} children={props.color} />
+    <Text fontSize={1} children={props.color} />
   </Div>
 )
 

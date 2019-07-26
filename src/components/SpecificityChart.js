@@ -8,21 +8,18 @@ export default ({ data, average, max }) => (
   <Div>
     <SectionTitle title="Specificity" />
 
-    <Flex alignItems="center">
+    <Flex alignItems="top" my={3} wrap={['wrap', 'wrap', 'nowrap']}>
       <SlabStat
-        title="Average"
+        mr={5}
+        title="Average score"
         stat={average}
       />
       <SlabStat
-        ml={3}
-        title="Max"
+        mr={5}
+        title="Max score"
         stat={max}
       />
-    </Flex>
-
-    <LineChart data={data} />
-
-    <Text ml={10} mt={2}>
+    <Text mt={0} style={{lineHeight: 1.5 }} width={1}>
       Base 10 specificity score for each selector by source order. Generally,
       lower scores and flatter curves are better for maintainability.
       <Link
@@ -32,5 +29,9 @@ export default ({ data, average, max }) => (
         Learn More
       </Link>
     </Text>
+    </Flex>
+
+    <LineChart data={data} />
+
   </Div>
 )

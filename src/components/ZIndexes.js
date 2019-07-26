@@ -4,7 +4,7 @@ import uniq from 'lodash.uniq'
 import { Div, Text, SectionTitle } from './library'
 
 export default ({ zIndexes = [] }) => (
-  <Div mt={4} mb={3}>
+  <Div py={[4,5,6]}>
     <SectionTitle
       title={`${uniq(zIndexes).length} Unique Z Indices`}
       description={`${zIndexes.length} total`}

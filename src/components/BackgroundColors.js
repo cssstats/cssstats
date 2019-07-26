@@ -21,7 +21,7 @@ export default ({ backgroundColors = [] }) => (
           sx={{
             p: 2,
             mb: 2,
-            width: ['50%', '25%', '15%']
+            width: ['25%', '25%', '15%']
           }}
         >
           <BackgroundColor color={bg} />
