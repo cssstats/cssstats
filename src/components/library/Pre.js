@@ -5,7 +5,8 @@ const Pre = styled('pre')(
   [],
   props => ({
     maxHeight: '50vh',
-    overflow: 'auto'
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch'
   }),
   space,
   fontSize,
