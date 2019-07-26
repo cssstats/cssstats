@@ -10,7 +10,7 @@ export default ({ colors = [] }) => (
     <h2 sx={{ fontSize: 5 }}>Colors</h2>
     <SectionTitle
       title={`${uniq(colors).length} unique colors`}
-      description='Printed by declaration order in source code'
+      description="Printed by declaration order in source code"
     />
     <Flex
       wrap="wrap"
@@ -23,12 +23,19 @@ export default ({ colors = [] }) => (
     />
     <SectionTitle
       title={`${colors.length} total color declarations`}
-      description='Sorted by like values'
+      description="Sorted by like values"
     />
     <Flex
       wrap="wrap"
       children={colors.sort().map((color, i) => (
-          <Div key={color * i} children='A' fontSize='32px' fontWeight={900} color={color}  title={color} />
+        <Div
+          key={color * i}
+          children="A"
+          fontSize="32px"
+          fontWeight={900}
+          color={color}
+          title={color}
+        />
       ))}
     />
   </Div>

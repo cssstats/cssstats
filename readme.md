@@ -21,6 +21,6 @@ open http://localhost:8000
 
 MIT
 
-***
+---
 
 _Built by [mrmrs](https://mrmrs.cc), [jxnblk](https://jxnblk.com), and [johno](https://johno.com)_

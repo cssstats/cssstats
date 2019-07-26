@@ -17,7 +17,7 @@ export default ({ data }) => {
     'margin',
     'padding',
     'background-color',
-    'color',
+    'color'
   ]
 
   const formattedData = [

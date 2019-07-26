@@ -35,8 +35,8 @@ var css = fs.readFileSync('./styles.css', 'utf8')
 postcss()
   .use(cssstats())
   .process(css)
-  .then(function (result) {
-    result.messages.forEach(function (message) {
+  .then(function(result) {
+    result.messages.forEach(function(message) {
       console.log(message)
     })
   })
@@ -152,9 +152,11 @@ The following options add the results of helper methods to the returned object. 
 ```
 
 #### `size` number
+
 The size of the file in bytes
 
 #### `gzipSize` number
+
 The size of the stylesheet gzipped in bytes
 
 #### `rules` object
@@ -202,7 +204,6 @@ The size of the stylesheet gzipped in bytes
 - `values` array - array of values for each media query
 - `contents` array - array of media query blocks with full stats object for each
 
-
 See the `/test/results` folder for example JSON results.
 
 ### Usage examples
@@ -233,7 +234,10 @@ var uniqueColorsCount = stats.declarations.getUniquePropertyCount('color')
 #### `display: none` count
 
 ```js
-var displayNoneCount = stats.declarations.getPropertyValueCount('display', 'none')
+var displayNoneCount = stats.declarations.getPropertyValueCount(
+  'display',
+  'none'
+)
 ```
 
 ## License

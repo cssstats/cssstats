@@ -13,7 +13,7 @@ npm install --save has-gradient
 ```javascript
 const hasGradient = require('has-gradient')
 
-hasGradient('linear-gradient(tomato, lime)')  // => true
+hasGradient('linear-gradient(tomato, lime)') // => true
 ```
 
 ## License
@@ -30,6 +30,6 @@ MIT
 
 Crafted with <3 by John Otander ([@cssstats](https://twitter.com/cssstats)).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

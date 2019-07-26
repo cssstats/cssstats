@@ -16,12 +16,12 @@ export default ({ data }) => {
     'padding-left',
     'padding-right',
     'padding-top',
-    'padding-bottom',
-   // 'margin',
-   // 'margin-left',
-   // 'margin-right',
-   // 'margin-top',
-   // 'margin-bottom',
+    'padding-bottom'
+    // 'margin',
+    // 'margin-left',
+    // 'margin-right',
+    // 'margin-top',
+    // 'margin-bottom',
   ]
 
   const formattedData = [
@@ -34,9 +34,7 @@ export default ({ data }) => {
 
   return (
     <Div mt={4}>
-      <SectionTitle
-        title="Padding"
-      />
+      <SectionTitle title="Padding" />
 
       <GroupedBarChart data={formattedData} />
     </Div>

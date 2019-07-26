@@ -13,8 +13,8 @@ npm install --save is-css
 ```javascript
 const isCss = require('is-css')
 
-isCss('http://foo.bar/css-file.css')  // => true
-isCss('some/path/to/a/css-file.css')  // => true
+isCss('http://foo.bar/css-file.css') // => true
+isCss('some/path/to/a/css-file.css') // => true
 isCss('yikes/a/preprocessor.scss') // => false
 ```
 
@@ -32,6 +32,6 @@ MIT
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

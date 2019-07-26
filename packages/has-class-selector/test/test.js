@@ -10,16 +10,9 @@ var classSelectors = [
   'ul > li + li .baz'
 ]
 
-var otherSelectors = [
-  '#foo',
-  'a',
-  '[input="text"]',
-  'a:visisted',
-  'li + li'
-]
+var otherSelectors = ['#foo', 'a', '[input="text"]', 'a:visisted', 'li + li']
 
 describe('has-class-selector', function() {
-
   it('should return true if there is a class selector', function() {
     classSelectors.forEach(function(classSelector) {
       assert.ok(hasClassSelector(classSelector))
@@ -34,8 +27,8 @@ describe('has-class-selector', function() {
 
   it('should return true if there is a class called foo', function() {
     classSelectors
-      .filter(function(classSelector){
-        return classSelector.indexOf('foo') >= 0;
+      .filter(function(classSelector) {
+        return classSelector.indexOf('foo') >= 0
       })
       .forEach(function(classSelector) {
         assert.ok(hasClassSelector(classSelector, 'foo'))

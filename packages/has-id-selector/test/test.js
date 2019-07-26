@@ -1,5 +1,5 @@
-var assert = require('assert');
-var hasIdSelector = require('..');
+var assert = require('assert')
+var hasIdSelector = require('..')
 
 var idSelectors = [
   '.foo #bar',
@@ -10,16 +10,9 @@ var idSelectors = [
   'ul > li + li #baz'
 ]
 
-var otherSelectors = [
-  '.foo',
-  'a',
-  '[input="text"]',
-  'a:visisted',
-  'li + li'
-]
+var otherSelectors = ['.foo', 'a', '[input="text"]', 'a:visisted', 'li + li']
 
 describe('has-id-selector', function() {
-
   it('should return true if there is an id selector', function() {
     idSelectors.forEach(function(idSelector) {
       assert.ok(hasIdSelector(idSelector))
@@ -34,8 +27,8 @@ describe('has-id-selector', function() {
 
   it('should return true if there is an id called bar', function() {
     idSelectors
-      .filter(function(idSelector){
-        return idSelector.indexOf('bar') >= 0;
+      .filter(function(idSelector) {
+        return idSelector.indexOf('bar') >= 0
       })
       .forEach(function(idSelector) {
         assert.ok(hasIdSelector(idSelector, 'bar'))

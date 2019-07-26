@@ -2976,10 +2976,7 @@
         "middle",
         "top"
       ],
-      "border-right": [
-        "0",
-        "4px dashed transparent"
-      ],
+      "border-right": ["0", "4px dashed transparent"],
       "margin-top": [
         "5px",
         "-1px",
@@ -2995,14 +2992,7 @@
         "1px",
         "15px"
       ],
-      "margin-bottom": [
-        "0",
-        "32px",
-        "8px",
-        "16px",
-        "5px",
-        "32px"
-      ],
+      "margin-bottom": ["0", "32px", "8px", "16px", "5px", "32px"],
       "outline": [
         "none",
         "0",
@@ -3396,16 +3386,8 @@
         "center",
         "right"
       ],
-      "border-bottom-left-radius": [
-        "0",
-        "0",
-        "0"
-      ],
-      "border-top-left-radius": [
-        "0",
-        "0",
-        "0"
-      ],
+      "border-bottom-left-radius": ["0", "0", "0"],
+      "border-top-left-radius": ["0", "0", "0"],
       "min-width": [
         "38px",
         "54px",
@@ -3735,12 +3717,7 @@
         "height .2s ease-in-out",
         "width .5s ease-in-out,min-width .5s ease-in-out,max-width .5s ease-in-out,padding .5s ease-in-out,left .5s ease-in-out"
       ],
-      "padding-bottom": [
-        "2px",
-        "0",
-        "35px",
-        "10px"
-      ],
+      "padding-bottom": ["2px", "0", "35px", "10px"],
       "max-width": [
         "650px",
         "484px",
@@ -3793,10 +3770,7 @@
         "60px",
         "5px"
       ],
-      "border-bottom": [
-        "1px solid #666",
-        "1px solid #ebebeb"
-      ],
+      "border-bottom": ["1px solid #666", "1px solid #ebebeb"],
       "border-color": [
         "#e5e5e5",
         "rgba(0,0,0,.15)",
@@ -3832,13 +3806,7 @@
         "#2f5bb7",
         "#fff"
       ],
-      "min-height": [
-        "11px",
-        "196px",
-        "100px",
-        "20px",
-        "100%"
-      ],
+      "min-height": ["11px", "196px", "100px", "20px", "100%"],
       "opacity": [
         "0",
         "1",
@@ -4031,13 +3999,7 @@
         "padding-box",
         "padding-box"
       ],
-      "border-right-width": [
-        "0",
-        "1px",
-        "1px",
-        "0",
-        "1px"
-      ],
+      "border-right-width": ["0", "1px", "1px", "0", "1px"],
       "text-decoration": [
         "none",
         "none",
@@ -4144,10 +4106,7 @@
         "rotate(45deg)",
         "scale(.5)"
       ],
-      "text-shadow": [
-        "0 1px 0 rgba(0,0,0,0.1)",
-        "0 1px 0 rgba(0,0,0,0.1)"
-      ],
+      "text-shadow": ["0 1px 0 rgba(0,0,0,0.1)", "0 1px 0 rgba(0,0,0,0.1)"],
       "visibility": [
         "hidden",
         "visible",
@@ -4185,14 +4144,8 @@
         "gb__a .2s",
         "gb__nb .6s 1s both ease-in-out"
       ],
-      "-webkit-perspective-origin": [
-        "top right",
-        "top right"
-      ],
-      "perspective-origin": [
-        "top right",
-        "top right"
-      ],
+      "-webkit-perspective-origin": ["top right", "top right"],
+      "perspective-origin": ["top right", "top right"],
       "-webkit-transform-origin": [
         "top right",
         "left 0",
@@ -4200,16 +4153,8 @@
         "top right",
         "0 0"
       ],
-      "transform-origin": [
-        "top right",
-        "left 0",
-        "left 0",
-        "top right",
-        "0 0"
-      ],
-      "overflow-y": [
-        "auto"
-      ],
+      "transform-origin": ["top right", "left 0", "left 0", "top right", "0 0"],
+      "overflow-y": ["auto"],
       "transition": [
         "height .2s ease-in-out",
         "width .5s ease-in-out,min-width .5s ease-in-out,max-width .5s ease-in-out,padding .5s ease-in-out,left .5s ease-in-out",
@@ -4231,9 +4176,7 @@
         "opacity 0.218s,box-shadow 0.218s",
         "opacity 0.218s,box-shadow 0.218s"
       ],
-      "border-bottom-width": [
-        "0"
-      ],
+      "border-bottom-width": ["0"],
       "-webkit-background-size": [
         "64px 2065px",
         "64px 2065px",
@@ -4259,11 +4202,7 @@
         "url('//ssl.gstatic.com/gb/images/i1_1967ca6a.png')",
         "url('//ssl.gstatic.com/gb/images/i2_2ec824b0.png')"
       ],
-      "text-overflow": [
-        "ellipsis",
-        "ellipsis",
-        "ellipsis"
-      ],
+      "text-overflow": ["ellipsis", "ellipsis", "ellipsis"],
       "border-top": [
         "4px solid #000",
         "1px solid #ccc",
@@ -4328,63 +4267,22 @@
         "0",
         "30px"
       ],
-      "max-height": [
-        "230px",
-        "29px"
-      ],
-      "border-style": [
-        "dashed dashed solid",
-        "dashed dashed solid"
-      ],
-      "border-width": [
-        "0 8.5px 8.5px",
-        "0 8.5px 8.5px"
-      ],
-      "text-transform": [
-        "uppercase",
-        "uppercase",
-        "uppercase"
-      ],
-      "background-repeat": [
-        "no-repeat"
-      ],
-      "-webkit-order": [
-        "1"
-      ],
-      "order": [
-        "1"
-      ],
-      "-webkit-align-items": [
-        "center"
-      ],
-      "align-items": [
-        "center"
-      ],
-      "-webkit-justify-content": [
-        "flex-end"
-      ],
-      "justify-content": [
-        "flex-end"
-      ],
-      "background-origin": [
-        "content-box"
-      ],
-      "-webkit-box-flex": [
-        "0 0 auto"
-      ],
-      "border-collapse": [
-        "collapse"
-      ],
-      "font-style": [
-        "normal"
-      ],
-      "transition-delay": [
-        "0s",
-        "0s",
-        "0",
-        "0",
-        "0"
-      ],
+      "max-height": ["230px", "29px"],
+      "border-style": ["dashed dashed solid", "dashed dashed solid"],
+      "border-width": ["0 8.5px 8.5px", "0 8.5px 8.5px"],
+      "text-transform": ["uppercase", "uppercase", "uppercase"],
+      "background-repeat": ["no-repeat"],
+      "-webkit-order": ["1"],
+      "order": ["1"],
+      "-webkit-align-items": ["center"],
+      "align-items": ["center"],
+      "-webkit-justify-content": ["flex-end"],
+      "justify-content": ["flex-end"],
+      "background-origin": ["content-box"],
+      "-webkit-box-flex": ["0 0 auto"],
+      "border-collapse": ["collapse"],
+      "font-style": ["normal"],
+      "transition-delay": ["0s", "0s", "0", "0", "0"],
       "pointer-events": [
         "none",
         "none",
@@ -4407,21 +4305,11 @@
         "none",
         "none"
       ],
-      "-webkit-font-smoothing": [
-        "antialiased"
-      ],
-      "-webkit-animation-direction": [
-        "alternate"
-      ],
-      "-webkit-animation-timing-function": [
-        "ease-out"
-      ],
-      "-webkit-text-size-adjust": [
-        "none"
-      ],
-      "-webkit-tap-highlight-color": [
-        "rgba(0,0,0,0)"
-      ],
+      "-webkit-font-smoothing": ["antialiased"],
+      "-webkit-animation-direction": ["alternate"],
+      "-webkit-animation-timing-function": ["ease-out"],
+      "-webkit-text-size-adjust": ["none"],
+      "-webkit-tap-highlight-color": ["rgba(0,0,0,0)"],
       "clip": [
         "rect(25px 235px 41px 219px)",
         "rect(-0 210px 16px 194px)",
@@ -4450,9 +4338,7 @@
         "rules": {
           "total": 1,
           "size": {
-            "graph": [
-              1
-            ],
+            "graph": [1],
             "max": 1,
             "average": 1
           }
@@ -4464,9 +4350,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 0,
-          "values": [
-            "span.lsbb"
-          ],
+          "values": ["span.lsbb"],
           "specificity": {
             "max": 11,
             "average": 11
@@ -4475,9 +4359,7 @@
         "declarations": {
           "total": 1,
           "properties": {
-            "height": [
-              "17px"
-            ]
+            "height": ["17px"]
           }
         }
       },
@@ -4486,10 +4368,7 @@
         "rules": {
           "total": 2,
           "size": {
-            "graph": [
-              4,
-              4
-            ],
+            "graph": [4, 4],
             "max": 4,
             "average": 4
           }
@@ -4501,10 +4380,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 2,
-          "values": [
-            ".gb_2a::before",
-            ".gb_mb::before"
-          ],
+          "values": [".gb_2a::before", ".gb_mb::before"],
           "specificity": {
             "max": 11,
             "average": 11
@@ -4513,22 +4389,10 @@
         "declarations": {
           "total": 8,
           "properties": {
-            "-webkit-transform": [
-              "scale(.5)",
-              "scale(.5)"
-            ],
-            "transform": [
-              "scale(.5)",
-              "scale(.5)"
-            ],
-            "-webkit-transform-origin": [
-              "left 0",
-              "left 0"
-            ],
-            "transform-origin": [
-              "left 0",
-              "left 0"
-            ]
+            "-webkit-transform": ["scale(.5)", "scale(.5)"],
+            "transform": ["scale(.5)", "scale(.5)"],
+            "-webkit-transform-origin": ["left 0", "left 0"],
+            "transform-origin": ["left 0", "left 0"]
           }
         }
       },
@@ -4537,9 +4401,7 @@
         "rules": {
           "total": 1,
           "size": {
-            "graph": [
-              1
-            ],
+            "graph": [1],
             "max": 1,
             "average": 1
           }
@@ -4551,9 +4413,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 0,
-          "values": [
-            ".gb_Qb"
-          ],
+          "values": [".gb_Qb"],
           "specificity": {
             "max": 10,
             "average": 10
@@ -4573,10 +4433,7 @@
         "rules": {
           "total": 2,
           "size": {
-            "graph": [
-              1,
-              1
-            ],
+            "graph": [1, 1],
             "max": 1,
             "average": 1
           }
@@ -4588,10 +4445,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 2,
-          "values": [
-            ".gbii::before",
-            ".gbip::before"
-          ],
+          "values": [".gbii::before", ".gbip::before"],
           "specificity": {
             "max": 11,
             "average": 11
@@ -4612,10 +4466,7 @@
         "rules": {
           "total": 2,
           "size": {
-            "graph": [
-              1,
-              1
-            ],
+            "graph": [1, 1],
             "max": 1,
             "average": 1
           }
@@ -4627,10 +4478,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 0,
-          "values": [
-            ".gbii",
-            ".gbip"
-          ],
+          "values": [".gbii", ".gbip"],
           "specificity": {
             "max": 10,
             "average": 10
@@ -4651,9 +4499,7 @@
         "rules": {
           "total": 1,
           "size": {
-            "graph": [
-              1
-            ],
+            "graph": [1],
             "max": 1,
             "average": 1
           }
@@ -4665,9 +4511,7 @@
           "id": 1,
           "pseudoClass": 0,
           "pseudoElement": 0,
-          "values": [
-            "#ftby"
-          ],
+          "values": ["#ftby"],
           "specificity": {
             "max": 100,
             "average": 100
@@ -4676,9 +4520,7 @@
         "declarations": {
           "total": 1,
           "properties": {
-            "margin": [
-              "0 44px"
-            ]
+            "margin": ["0 44px"]
           }
         }
       },
@@ -4687,9 +4529,7 @@
         "rules": {
           "total": 1,
           "size": {
-            "graph": [
-              1
-            ],
+            "graph": [1],
             "max": 1,
             "average": 1
           }
@@ -4701,9 +4541,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 0,
-          "values": [
-            ".gb_oa .gb_3"
-          ],
+          "values": [".gb_oa .gb_3"],
           "specificity": {
             "max": 20,
             "average": 20
@@ -4723,10 +4561,7 @@
         "rules": {
           "total": 2,
           "size": {
-            "graph": [
-              1,
-              1
-            ],
+            "graph": [1, 1],
             "max": 1,
             "average": 1
           }
@@ -4738,10 +4573,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 2,
-          "values": [
-            ".gb_N .gb_4e::before",
-            ".gb_N .gb_5e::before"
-          ],
+          "values": [".gb_N .gb_4e::before", ".gb_N .gb_5e::before"],
           "specificity": {
             "max": 21,
             "average": 21
@@ -4750,10 +4582,7 @@
         "declarations": {
           "total": 2,
           "properties": {
-            "clip": [
-              "rect(50px 470px 82px 438px)",
-              "rect(-0 420px 32px 388px)"
-            ]
+            "clip": ["rect(50px 470px 82px 438px)", "rect(-0 420px 32px 388px)"]
           }
         }
       },
@@ -4762,9 +4591,7 @@
         "rules": {
           "total": 1,
           "size": {
-            "graph": [
-              5
-            ],
+            "graph": [5],
             "max": 5,
             "average": 5
           }
@@ -4776,9 +4603,7 @@
           "id": 0,
           "pseudoClass": 0,
           "pseudoElement": 1,
-          "values": [
-            ".gb_N .gb_Qb::before"
-          ],
+          "values": [".gb_N .gb_Qb::before"],
           "specificity": {
             "max": 21,
             "average": 21
@@ -4787,21 +4612,11 @@
         "declarations": {
           "total": 5,
           "properties": {
-            "content": [
-              "url('//ssl.gstatic.com/gb/images/i2_2ec824b0.png')"
-            ],
-            "-webkit-transform": [
-              "scale(.5)"
-            ],
-            "transform": [
-              "scale(.5)"
-            ],
-            "-webkit-transform-origin": [
-              "0 0"
-            ],
-            "transform-origin": [
-              "0 0"
-            ]
+            "content": ["url('//ssl.gstatic.com/gb/images/i2_2ec824b0.png')"],
+            "-webkit-transform": ["scale(.5)"],
+            "transform": ["scale(.5)"],
+            "-webkit-transform-origin": ["0 0"],
+            "transform-origin": ["0 0"]
           }
         }
       }

@@ -1,3 +1,3 @@
-module.exports = function (string) {
+module.exports = function(string) {
   return Buffer.byteLength(string, 'utf8')
 }

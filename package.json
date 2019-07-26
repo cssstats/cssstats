@@ -10,7 +10,7 @@
     "favicon:16": "repng src/components/logo.js -w 16 -h 16 -d src/images -f favicon-16.png -p '{\"size\": 16}'",
     "favicon:32": "repng src/components/logo.js -w 32 -h 32 -d src/images -f favicon-32.png -p '{\"size\": 32}'",
     "favicon:64": "repng src/components/logo.js -w 64 -h 64 -d src/images -f favicon-64.png -p '{\"size\": 64}'",
-    "format": "prettier --write {api,components,packages,pages}/**/*.js",
+    "format": "prettier --write {api,packages,src}/**/**.{js,json,md,mdx}",
     "now-build": "yarn build",
     "test": "lerna run test",
     "pretest": "lerna bootstrap",

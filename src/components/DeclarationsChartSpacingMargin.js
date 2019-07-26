@@ -16,7 +16,7 @@ export default ({ data }) => {
     'margin-left',
     'margin-right',
     'margin-top',
-    'margin-bottom',
+    'margin-bottom'
   ]
 
   const formattedData = [
@@ -29,9 +29,7 @@ export default ({ data }) => {
 
   return (
     <Div mt={4}>
-      <SectionTitle
-        title="Margin"
-      />
+      <SectionTitle title="Margin" />
       <GroupedBarChart data={formattedData} />
     </Div>
   )

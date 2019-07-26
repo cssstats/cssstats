@@ -19,9 +19,11 @@ export default ({ properties }) => {
   ]
 
   return (
-    <Div py={[ 3,4,5 ]}>
+    <Div py={[3, 4, 5]}>
       <H2 mb={3} children="Spacing Resets" />
-      <p sx={{fontSize: 0, mt:0 }}>Amount of times each property has been set to 0</p>
+      <p sx={{ fontSize: 0, mt: 0 }}>
+        Amount of times each property has been set to 0
+      </p>
 
       <Flex
         wrap="wrap"

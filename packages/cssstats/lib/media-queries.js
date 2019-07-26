@@ -4,7 +4,7 @@ var rules = require('./rules')
 var selectors = require('./selectors')
 var declarations = require('./declarations')
 
-module.exports = function (root, opts) {
+module.exports = function(root, opts) {
   var result = {
     total: 0,
     unique: 0,
@@ -12,7 +12,7 @@ module.exports = function (root, opts) {
     contents: []
   }
 
-  root.walkAtRules(function (rule) {
+  root.walkAtRules(function(rule) {
     if (rule.name === 'media') {
       result.total++
       result.values.push(rule.params)

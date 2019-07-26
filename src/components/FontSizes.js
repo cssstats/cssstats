@@ -29,7 +29,13 @@ export default ({ fontSizes = [] }) => (
       mt={5}
       title={`${fontSizes.length} Total font size declarations`}
     />
-    <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', paddingBottom: 16 }}>
+    <div
+      style={{
+        overflowX: 'auto',
+        WebkitOverflowScrolling: 'touch',
+        paddingBottom: 16
+      }}
+    >
       <table cellSpacing="0" cellPadding="0">
         <tr>
           {sort(fontSizes).map(fontSize => (

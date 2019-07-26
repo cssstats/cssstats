@@ -5,7 +5,7 @@ var getVendorPrefixedProperties = require('./get-vendor-prefixed-properties')
 var getAllFontSizes = require('./get-all-font-sizes')
 var getAllFontFamilies = require('./get-all-font-families')
 
-module.exports = function (root, opts) {
+module.exports = function(root, opts) {
   var result = {
     total: 0,
     unique: 0,
@@ -19,8 +19,8 @@ module.exports = function (root, opts) {
     getAllFontFamilies: getAllFontFamilies
   }
 
-  root.walkRules(function (rule) {
-    rule.walkDecls(function (declaration) {
+  root.walkRules(function(rule) {
+    rule.walkDecls(function(declaration) {
       var prop = declaration.prop
 
       result.total++
@@ -37,7 +37,7 @@ module.exports = function (root, opts) {
     })
   })
 
-  result.unique = Object.keys(result.properties).reduce(function (a, property) {
+  result.unique = Object.keys(result.properties).reduce(function(a, property) {
     return a + getUniquePropertyCount.call(result, property)
   }, 0)
 

@@ -11,7 +11,7 @@ const waybackCss = require('wayback-css')
 
 const isValidUrl = url => isPresent(url) && isUrl(url)
 
-const retrieveCss = (url, date) => date ? waybackCss(url, date) : getCss(url)
+const retrieveCss = (url, date) => (date ? waybackCss(url, date) : getCss(url))
 
 const stats = async (req, res) => {
   const url = getParam('url', req.url)

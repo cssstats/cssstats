@@ -1,6 +1,6 @@
 var _ = require('lodash')
 
-module.exports = function (property) {
+module.exports = function(property) {
   if (!this.properties || !this.properties[property]) {
     return 0
   }

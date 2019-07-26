@@ -14,9 +14,7 @@ npm i -S css-unit-sort
 ```javascript
 const cssUnitSort = require('css-unit-sort')
 
-cssUnitSort([
-  '2rem', 'inherit', 'small', '12px', '20px', '60px', '1.5em'
-]) // => ['60px', '2rem', '1.5em', '20px', 'inherit', 'small', '12px']
+cssUnitSort(['2rem', 'inherit', 'small', '12px', '20px', '60px', '1.5em']) // => ['60px', '2rem', '1.5em', '20px', 'inherit', 'small', '12px']
 ```
 
 ## License
@@ -33,6 +31,6 @@ MIT
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
