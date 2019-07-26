@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { intComma } from 'humanize-plus'
 
-import { H2,  Div, Flex, SlabStat } from './library'
+import { H2, Div, Flex, SlabStat } from './library'
 
 export default ({ properties }) => {
   const metrics = [
@@ -37,7 +37,7 @@ export default ({ properties }) => {
     {
       name: 'Min Height',
       value: properties['min-height'] || []
-    },
+    }
   ]
 
   const spacingMetrics = [
@@ -80,7 +80,7 @@ export default ({ properties }) => {
     {
       name: 'Margin Bottom',
       value: properties['margin-bottom'] || []
-    },
+    }
   ]
 
   const typographyMetrics = [
@@ -119,7 +119,7 @@ export default ({ properties }) => {
     {
       name: 'Text Shadow',
       value: properties['text-shadow'] || []
-    },
+    }
   ]
 
   const colorMetrics = [
@@ -138,7 +138,7 @@ export default ({ properties }) => {
     {
       name: 'Box Shadow',
       value: properties['box-shadow'] || []
-    },
+    }
   ]
 
   const borderMetrics = [
@@ -161,45 +161,62 @@ export default ({ properties }) => {
     {
       name: 'Box Shadow',
       value: properties['box-shadow'] || []
-    },
+    }
   ]
 
   return (
-    <Div py={[4,5]}>
-      <H2 mb={2} fontSize={4} fontWeight={900}  children="Total Declaration Counts" />
-      <p sx={{ fontSize: 1, mt: 0, opacity: .7, lineHeight: 1.5 }}>A declaration represents a property value pair. e.g. display: block would represent 1 declaration</p>
-
-      <h3 sx={{
-        mt: 4,
-        mb: 3,
-        fontSize: 1,
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>Layout and Structure</h3>
-    <div sx={{ 
-//      borderBottom: '1px solid',
-//      pb: 3
-    }}>
-      <Flex
-        mt={0}
-        wrap="wrap"
-        children={metrics.map(metric => (
-          <Flex mb={3} key={metric.name} sx={{ width: ['50%', '25%', '20%'] }}>
-            <SlabStat
-              title={metric.name}
-              stat={intComma(metric.value.length)}
-            />
-          </Flex>
-        ))}
+    <Div py={[4, 5]}>
+      <H2
+        mb={2}
+        fontSize={4}
+        fontWeight={900}
+        children="Total Declaration Counts"
       />
-    </div>
-      <h3 sx={{
-        mt: 4,
-        mb: 3,
-        fontSize: 1,
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>Spacing</h3>
+      <p sx={{ fontSize: 1, mt: 0, opacity: 0.7, lineHeight: 1.5 }}>
+        A declaration represents a property value pair. e.g. display: block
+        would represent 1 declaration
+      </p>
+
+      <h3
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Layout and Structure
+      </h3>
+      <div>
+        <Flex
+          mt={0}
+          wrap="wrap"
+          children={metrics.map(metric => (
+            <Flex
+              mb={3}
+              key={metric.name}
+              sx={{ width: ['50%', '25%', '20%'] }}
+            >
+              <SlabStat
+                title={metric.name}
+                stat={intComma(metric.value.length)}
+              />
+            </Flex>
+          ))}
+        />
+      </div>
+      <h3
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Spacing
+      </h3>
       <Flex
         mt={0}
         mb={4}
@@ -214,13 +231,17 @@ export default ({ properties }) => {
         ))}
       />
 
-      <h3 sx={{
-        mt: 4,
-        mb: 3,
-        fontSize: 1,
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>Skins</h3>
+      <h3
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Skins
+      </h3>
       <Flex
         mt={0}
         mb={4}
@@ -234,51 +255,63 @@ export default ({ properties }) => {
           </Flex>
         ))}
       />
-     
-      <h3 sx={{
-        mt: 4,
-        mb: 3,
-        fontSize: 1,
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>Typography</h3>
-    <div sx={{ 
-    }}>
-      <Flex
-        mt={0}
-        wrap="wrap"
-        children={typographyMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
-            <SlabStat
-              title={metric.name}
-              stat={intComma(metric.value.length)}
-            />
-          </Flex>
-        ))}
-      />
-    </div>
-      <h3 sx={{
-        mt: 4,
-        mb: 3,
-        fontSize: 1,
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-      }}>Borders</h3>
-    <div sx={{ 
-    }}>
-      <Flex
-        mt={0}
-        wrap="wrap"
-        children={borderMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
-            <SlabStat
-              title={metric.name}
-              stat={intComma(metric.value.length)}
-            />
-          </Flex>
-        ))}
-      />
-    </div>
+
+      <h3
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Typography
+      </h3>
+      <div sx={{}}>
+        <Flex
+          mt={0}
+          wrap="wrap"
+          children={typographyMetrics.map(metric => (
+            <Flex
+              key={metric.name}
+              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+            >
+              <SlabStat
+                title={metric.name}
+                stat={intComma(metric.value.length)}
+              />
+            </Flex>
+          ))}
+        />
+      </div>
+      <h3
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Borders
+      </h3>
+      <div sx={{}}>
+        <Flex
+          mt={0}
+          wrap="wrap"
+          children={borderMetrics.map(metric => (
+            <Flex
+              key={metric.name}
+              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+            >
+              <SlabStat
+                title={metric.name}
+                stat={intComma(metric.value.length)}
+              />
+            </Flex>
+          ))}
+        />
+      </div>
     </Div>
   )
 }

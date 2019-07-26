@@ -16,9 +16,9 @@ const Pre = styled('pre')(
 )
 
 Pre.defaultProps = {
-  bg: '#ecece6',
+  bg: 'lightGray',
   p: 3,
-  borderRadius: 3
+  borderRadius: 4
 }
 
 export default Pre
