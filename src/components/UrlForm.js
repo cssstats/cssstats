@@ -12,7 +12,7 @@ export default ({ showLabel = false }) => {
     <form
       onSubmit={e => {
         e.preventDefault()
-        navigate(`/stats?url=${url}`)
+        navigate(`/stats?url=${encodeURIComponent(url)}`)
       }}
     >
       <Label sx={{ mb: 2, display: showLabel ? 'block' : 'none' }}>
