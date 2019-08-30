@@ -15,7 +15,7 @@ const retrieveCss = (url, date) => (date ? waybackCss(url, date) : getCss(url))
 
 const stats = async (req, res) => {
   const url = getParam('url', req.url)
-  const date = getParam('date', req.url)
+  const date = getParam('date', req.date)
 
   const fullUrl = url && normalizeUrl(url)
 
