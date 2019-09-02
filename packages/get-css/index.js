@@ -74,7 +74,7 @@ module.exports = function(url, options, html) {
 
     status.total = result.links.length + result.styles.length
     if (!status.total) {
-      deferred.resolve(false)
+      handleResolve()
     }
 
     result.links.forEach(function(link) {
