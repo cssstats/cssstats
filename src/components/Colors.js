@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import React from 'react'
 import uniq from 'lodash.uniq'
 
 import { Div, Flex, Color, SectionTitle } from './library'
 
 export default ({ colors = [] }) => (
   <Div>
-    <h2 sx={{ fontSize: 5 }}>Colors</h2>
+    <h2 id="colors" sx={{ fontSize: 5 }}>Colors</h2>
     <SectionTitle
       title={`${uniq(colors).length} unique colors`}
       description="Printed by declaration order in source code"

@@ -23,6 +23,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@sindresorhus/slugify": "^0.9.1",
     "gatsby": "^2.13.41",
     "gatsby-plugin-fathom": "^1.1.0",
     "gatsby-plugin-theme-ui": "^0.2.18",

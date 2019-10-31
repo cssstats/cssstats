@@ -355,7 +355,7 @@ export default () => {
       <Declarations properties={properties} />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
-      <H2 fontSize={6}>Typography</H2>
+      <H2 id="typography" fontSize={6}>Typography</H2>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <SpacingResets properties={properties} />

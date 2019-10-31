@@ -13,11 +13,8 @@ import {
 const getMax = data => data[0].reduce((p, { y }) => (p > y ? p : y), 0)
 
 export default ({ data }) => {
-  const { theme, colorMode } = useThemeUI()
-  const colors =
-    colorMode !== theme.initialColorMode
-      ? theme.colors.modes[colorMode]
-      : theme.colors
+  const { theme } = useThemeUI()
+  const { colors } = theme
   const max = getMax(data)
 
   return (

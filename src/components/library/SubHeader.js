@@ -1,7 +1,5 @@
 import React from 'react'
-import Flex from './Flex'
 import Div from './Div'
-import Hr from './Hr'
 import Text from './Text'
 import H2 from './H2'
 

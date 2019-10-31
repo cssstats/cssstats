@@ -5,11 +5,8 @@ import { VictoryChart, VictoryBar, VictoryAxis } from 'victory'
 const getMax = data => data.reduce((p, v) => (p > v ? p : v), 0)
 
 export default ({ data }) => {
-  const { theme, colorMode } = useThemeUI()
-  const colors =
-    colorMode !== theme.initialColorMode
-      ? theme.colors.modes[colorMode]
-      : theme.colors
+  const { theme } = useThemeUI()
+  const { colors } = theme
   const max = getMax(data)
 
   return (

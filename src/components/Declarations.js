@@ -167,6 +167,7 @@ export default ({ properties }) => {
   return (
     <Div py={[4, 5]}>
       <H2
+        id="total-declaration-counts"
         mb={2}
         fontSize={4}
         fontWeight={900}
@@ -178,6 +179,7 @@ export default ({ properties }) => {
       </p>
 
       <h3
+        id="layout-and-structure"
         sx={{
           mt: 4,
           mb: 3,
@@ -207,6 +209,7 @@ export default ({ properties }) => {
         />
       </div>
       <h3
+        id="spacing"
         sx={{
           mt: 4,
           mb: 3,
@@ -232,6 +235,7 @@ export default ({ properties }) => {
       />
 
       <h3
+        id="skins"
         sx={{
           mt: 4,
           mb: 3,
@@ -257,6 +261,7 @@ export default ({ properties }) => {
       />
 
       <h3
+        id="typography"
         sx={{
           mt: 4,
           mb: 3,
@@ -285,6 +290,7 @@ export default ({ properties }) => {
         />
       </div>
       <h3
+        id="borders"
         sx={{
           mt: 4,
           mb: 3,

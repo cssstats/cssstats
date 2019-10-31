@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { navigate } from 'gatsby'
 import { Container, Header, Styled, jsx, useColorMode } from 'theme-ui'
 import { GitHub, Twitter, Moon } from 'react-feather'
 import { Helmet } from 'react-helmet'

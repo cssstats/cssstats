@@ -1,16 +1,11 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { intComma } from 'humanize-plus'
-
 import { Div, SectionTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
 export default ({ data }) => {
-  const total = intComma(data.total)
-  const unique = intComma(data.unique)
-
   const properties = [
     'font-family',
     'font-size',
