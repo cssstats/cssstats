@@ -64,12 +64,12 @@ module.exports = function(url, options, html) {
       if (isPresent(link)) {
         result.links.push(createLink(link, url))
       } else {
-        result.styles.push(stripHtmlComments($(this).text()))
+        result.styles.push(stripHtmlComments($(this).html()))
       }
     })
 
     $('style').each(function() {
-      result.styles.push(stripHtmlComments($(this).text()))
+      result.styles.push(stripHtmlComments($(this).html()))
     })
 
     status.total = result.links.length + result.styles.length
