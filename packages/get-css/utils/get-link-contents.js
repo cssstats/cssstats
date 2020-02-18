@@ -1,11 +1,14 @@
 var q = require('q')
 var request = require('request')
+var query = require('query-string')
 
 module.exports = function getLinkContents(linkUrl, options) {
   var d = q.defer()
+  const { url } = query.parseUrl(linkUrl)
 
   // expect linked css content
-  if (!/\.css$/i.test(linkUrl)) {
+  // TODO: Make this check the actual response type
+  if (!/\.css$/i.test(url)) {
     d.resolve('')
     return d.promise
   }

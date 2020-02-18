@@ -21,6 +21,7 @@
     "is-url-superb": "^2.0.0",
     "normalize-url": "^1.8.0",
     "q": "^1.4.1",
+    "query-string": "^6.11.0",
     "request": "^2.79.0",
     "requestretry": "^1.13.0",
     "resolve-css-import-urls": "1.0.0",
