@@ -1,0 +1,45 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  default:
+    name: Build and test on ${{ matrix.os }} with node v${{ matrix.node }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [12, 14]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Setup yarn
+        if: matrix.os != 'windows-latest'
+        run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash
+          export PATH="$HOME/.yarn/bin:$PATH"
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ matrix.os }}-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ matrix.os }}-${{ matrix.node }}-yarn-
+
+      - name: Install Dependencies
+        run: yarn --frozen-lockfile
+        env:
+          CI: 'true'
+
+      - name: Test
+        run: yarn test
+        env:
+          CI: 'true'
