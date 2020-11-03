@@ -68,7 +68,7 @@ export default () => {
 
   const {
     css: { css, pageTitle },
-    stats: { rules, humanizedGzipSize, humanizedSize, declarations, selectors }
+    stats: { rules, humanizedGzipSize, humanizedSize, declarations, selectors },
   } = stats
 
   const properties = declarations.properties
@@ -76,8 +76,10 @@ export default () => {
   const backgroundColors = properties['background-color'] || []
   const colors = properties.color || []
 
+  console.log(stats)
+
   return (
-    <Layout initialUrl={url} onUrlChange={url => setUrl(url)}>
+    <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
       <SubHeader title={url} description={pageTitle} mb={5} />
       <Flex>
         <div
@@ -89,7 +91,7 @@ export default () => {
                 marginRight: 32,
                 paddingRight: 32,
                 borderRight: '1px solid',
-                borderColor: 'gray'
+                borderColor: 'gray',
               }}
             >
               <dt>File size</dt>
@@ -116,7 +118,7 @@ export default () => {
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
-                    textAlign: 'left'
+                    textAlign: 'left',
                   }}
                 ></th>
                 <th
@@ -126,7 +128,7 @@ export default () => {
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   Size
@@ -138,7 +140,7 @@ export default () => {
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   Gzipped
@@ -150,7 +152,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Basscss
@@ -159,7 +161,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   10kb
@@ -168,7 +170,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   2kb
@@ -180,7 +182,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Tachyons
@@ -189,7 +191,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   72kb
@@ -198,7 +200,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   13kb
@@ -210,7 +212,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Foundation
@@ -219,7 +221,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   119kb
@@ -228,7 +230,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   16kb
@@ -240,7 +242,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Primer
@@ -249,7 +251,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   140kb
@@ -258,7 +260,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   22kb
@@ -270,7 +272,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Bootstrap
@@ -279,7 +281,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   123kb
@@ -288,7 +290,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   23kb
@@ -300,7 +302,7 @@ export default () => {
                     borderBottom: '1px solid',
                     borderColor: 'gray',
                     py: 1,
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
                   }}
                 >
                   Bulma
@@ -309,7 +311,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   186kb
@@ -318,7 +320,7 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textAlign: 'right'
+                    textAlign: 'right',
                   }}
                 >
                   24kb
@@ -335,7 +337,7 @@ export default () => {
           p: 4,
           borderRadius: '7px',
           bg: 'darkGray',
-          color: 'lightGray'
+          color: 'lightGray',
         }}
       >
         <SummaryStats
@@ -355,7 +357,9 @@ export default () => {
       <Declarations properties={properties} />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
-      <H2 id="typography" fontSize={6}>Typography</H2>
+      <H2 id="typography" fontSize={6}>
+        Typography
+      </H2>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <SpacingResets properties={properties} />

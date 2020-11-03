@@ -1,5 +1,5 @@
-import test from 'ava'
-import isVendorPrefixed from './'
+const test = require('ava')
+const isVendorPrefixed = require('.')
 
 const prefixedProperties = [
   '-ms-background-image',
@@ -16,7 +16,7 @@ const prefixedProperties = [
   '-hp-background-image', //	Hewlett Packard
   '-ro-background-image', //	Real Objects
   '-rim-background-image', //	Research In Motion
-  '-tc-background-image' //	TallComponents
+  '-tc-background-image', //	TallComponents
 ]
 
 const unprefixedProperties = [
@@ -24,21 +24,21 @@ const unprefixedProperties = [
   'foo-bar',
   '-not-valid-background-image',
   '-mozbackground-image',
-  'mox-background-image'
+  'mox-background-image',
 ]
 
-test('returns true for prefixed properties', t => {
+test('returns true for prefixed properties', (t) => {
   t.plan(prefixedProperties.length)
 
-  prefixedProperties.forEach(property => {
+  prefixedProperties.forEach((property) => {
     t.truthy(isVendorPrefixed(property))
   })
 })
 
-test('returns false for unprefixed properties', t => {
+test('returns false for unprefixed properties', (t) => {
   t.plan(unprefixedProperties.length)
 
-  unprefixedProperties.forEach(property => {
+  unprefixedProperties.forEach((property) => {
     t.falsy(isVendorPrefixed(property))
   })
 })

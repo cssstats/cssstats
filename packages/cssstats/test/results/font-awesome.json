@@ -2570,7 +2570,7 @@
     ]
   },
   "selectors": {
-    "total": 586,
+    "total": 584,
     "type": 1,
     "class": 582,
     "id": 0,
@@ -2594,8 +2594,6 @@
       ".fa.pull-left",
       ".fa.pull-right",
       ".fa-spin",
-      "0%",
-      "100%",
       "0%",
       "100%",
       ".fa-rotate-90",
@@ -3166,7 +3164,7 @@
     ],
     "specificity": {
       "max": 20,
-      "average": 11.013651877133105
+      "average": 11.047945205479452
     }
   },
   "declarations": {

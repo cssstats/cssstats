@@ -13,10 +13,10 @@
     "cssstats"
   ],
   "dependencies": {
-    "bytes": "^3.0.0",
-    "css-selector-tokenizer": "^0.7.0",
-    "css-shorthand-expand": "^1.1.0",
-    "gzip-size": "^4.1.0",
+    "bytes": "^3.1.0",
+    "css-selector-tokenizer": "^0.7.3",
+    "css-shorthand-expand": "^1.2.0",
+    "gzip-size": "^5.1.1",
     "has-class-selector": "^3.3.1",
     "has-element-selector": "^3.3.1",
     "has-id-selector": "^3.3.1",
@@ -26,14 +26,14 @@
     "is-css-shorthand": "^1.0.1",
     "is-present": "^1.0.0",
     "is-vendor-prefixed": "^3.3.1",
-    "lodash": "^4.17.5",
-    "postcss": "^6.0.21",
-    "postcss-safe-parser": "^3.0.1",
-    "specificity": "^0.3.2"
+    "lodash": "^4.17.20",
+    "postcss": "^8.1.4",
+    "postcss-safe-parser": "^5.0.2",
+    "specificity": "^0.4.1"
   },
   "devDependencies": {
     "get-css": "^3.4.1",
-    "mocha": "^5.0.5"
+    "mocha": "^8.2.1"
   },
   "scripts": {
     "test": "rm -rf test/results && mkdir test/results && mocha test"

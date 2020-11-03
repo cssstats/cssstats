@@ -23,6 +23,6 @@
     "vendor-prefixes": "1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.16.0"
+    "ava": "^3.13.0"
   }
 }

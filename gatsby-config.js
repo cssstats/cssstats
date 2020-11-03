@@ -1,21 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: 'CSS Stats',
-    description: 'Potentially interesting stats on stylesheets'
+    description: 'Potentially interesting stats on stylesheets',
   },
   plugins: [
     'gatsby-plugin-theme-ui',
     {
-      resolve: 'gatsby-theme-documentation',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        basePath: 'docs'
-      }
+        extensions: ['.md', '.mdx'],
+      },
     },
     {
       resolve: 'gatsby-plugin-fathom',
       options: {
-        siteId: 'CNDZKOSM'
-      }
-    }
-  ]
+        siteId: 'CNDZKOSM',
+      },
+    },
+  ],
 }

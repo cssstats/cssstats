@@ -14,7 +14,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "css-selector-tokenizer": "^0.7.0"
+    "css-selector-tokenizer": "^0.7.3"
   },
   "devDependencies": {
     "ava": "*"

@@ -1,0 +1,159 @@
+# CSS Stats API
+
+CSS Stats offers a JSON API that can be used in other tools. It's completely
+**open source** and **free to use**. All responses are JSON objects.
+
+## Stats
+
+### [`/api/stats?url=google.com`](https://cssstats.com/api/stats?url=google.com)
+
+The Stats endpoint is the primary API for CSS Stats. It takes a url query
+parameter which is used to scrape all CSS and then return a stats object
+based on the CSS it finds. This is what the app itself uses to populate
+the CSS visualizations.
+
+#### Shape of the returned object
+
+```js
+{
+  stats: {},
+  css: {
+    links: [''],
+    styles: [''],
+    css: ''
+  }
+}
+```
+
+Where the stats object has the following shape:
+
+```js
+{
+  size: n,
+  gzipSize: n,
+  rules: {
+    total: n,
+    size: {
+      graph: [n],
+      max: n,
+      average: n
+    }
+  },
+  selectors: {
+    total: n,
+    id: n,
+    class: n,
+    type: n,
+    pseudoClass: n,
+    psuedoElement: n,
+    values: [str],
+    specificity: {
+      max: n
+      average: n
+    },
+    getSpecificityGraph(),
+    getSpecificityValues(),
+    getRepeatedValues(),
+    getSortedSpecificity()
+  },
+  declarations: {
+    total: n,
+    unique: n,
+    important: [obj],
+    properties:
+      prop: [str]
+    },
+    getPropertyResets(),
+    getUniquePropertyCount(),
+    getPropertyValueCount(),
+    getVendorPrefixed(),
+    getAllFontSizes(),
+    getAllFontFamilies(),
+  },
+  mediaQueries: {
+    total: n,
+    unique: n,
+    values: [str],
+    contents: [
+      {
+        value: str,
+        rules: {
+          total: n,
+          size: {
+            graph: [n],
+            max: n,
+            average: n
+          }
+        },
+        selectors: {
+          total: n,
+          id: n,
+          class: n,
+          type: n,
+          pseudoClass: n,
+          pseudoElement: n,
+          values: [str],
+          specificity: {
+            max: n,
+            average: n
+          }
+        },
+        declarations: {
+          total: n,
+          unique: n,
+          important: [obj],
+          vendorPrefix: n,
+          properties: {
+            prop: [str]
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+## History
+
+### [`/api/history?url=google.com&date=2010-01-01`](https://cssstats.com/api/history?url=google.com&date=2010-01-01)
+
+If you'd like to get a snapshot of CSS Stats for a url for
+a particular date, you can use the History API.
+
+This API uses [Archive.org's Wayback Machine](https://archive.org/web/)
+so you must have a `robot.txt` that allows bots and the closest snapshot
+for the given date will be used.
+
+Currently, all requests scrape directly from the Wayback Machine so
+please throttle your requests so that everyone can use this service.
+
+**The date must be formatted as YYYY-MM-DD**.
+
+The returned JSON object is in the same shape as the Stats API.
+
+## CSS
+
+### [`/api/css?url=google.com`](https://cssstats.com/api/css?url=google.com)
+
+If you only want to retrieve the CSS for a given url you can use `/api/css`.
+It will return all the CSS links, style elements, and an aggregated CSS string.
+The retrieval will follow CSS imports recursively.
+
+The endpoint will also return the page title and HTML string returned by the
+URL.
+
+### Shape of the returned CSS object
+
+```js
+{
+  links: [
+    ''
+  ]
+  styles: [
+    ''
+  ],
+  css: '',
+  pageTitle: '',
+  html: ''
+}
+```

@@ -1,7 +1,7 @@
 export default {
   fonts: {
     body: '-apple-system, BlinkMacSystemFont, sans-serif',
-    heading: '-apple-system, BlinkMacSystemFont, sans-serif'
+    heading: '-apple-system, BlinkMacSystemFont, sans-serif',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
@@ -24,26 +24,26 @@ export default {
         gray: '#444',
         darkGray: '#eee',
         chart: ['#666', '#eee'],
-        background: '#000'
-      }
-    }
+        background: '#000',
+      },
+    },
   },
   styles: {
     root: {
-      fontFamily: 'body'
+      fontFamily: 'body',
     },
     a: {
       textDecoration: 'none',
-      color: 'blue'
+      color: 'blue',
     },
     p: {
       fontSize: 3,
       lineHeight: 1.5,
-      maxWidth: 800
+      maxWidth: 800,
     },
     li: {
       fontSize: 3,
-      lineHeight: 1.5
+      lineHeight: 1.5,
     },
     blockquote: {
       color: 'darkGray',
@@ -52,38 +52,30 @@ export default {
       pl: 4,
       py: 2,
       '& p': {
-        fontSize: 4
-      }
+        fontSize: 4,
+      },
     },
     hr: {
       my: 4,
       borderStyle: 'solid',
-      borderColor: 'lightGray'
+      borderColor: 'lightGray',
     },
     inlineCode: {
       backgroundColor: 'lightGray',
-      px: 2
+      px: 2,
     },
     pre: {
       fontSize: 3,
       backgroundColor: 'lightGray',
       borderRadius: 4,
       p: 3,
-      overflowX: 'auto'
+      overflowX: 'auto',
     },
     textStyles: {
       caps: {
         textTransform: 'uppercase',
-        letterSpacing: '0.05em'
-      }
+        letterSpacing: '0.05em',
+      },
     },
-    Header: {
-      fontWeight: 'bold',
-      p: [1, 2, 3],
-      '& a': {
-        color: 'black',
-        textDecoration: 'none'
-      }
-    }
-  }
+  },
 }

@@ -14,24 +14,24 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "commander": "^2.9.0",
-    "is-blank": "^1.1.0",
+    "commander": "^6.2.0",
+    "is-blank": "^2.1.0",
     "is-css": "^3.3.1",
     "is-present": "^1.0.0",
-    "is-url-superb": "^2.0.0",
-    "normalize-url": "^1.8.0",
-    "q": "^1.4.1",
-    "query-string": "^6.11.0",
-    "request": "^2.79.0",
-    "requestretry": "^1.13.0",
+    "is-url-superb": "^4.0.0",
+    "normalize-url": "^5.3.0",
+    "q": "^1.5.1",
+    "query-string": "^6.13.6",
+    "request": "^2.88.2",
+    "requestretry": "^4.1.1",
     "resolve-css-import-urls": "1.0.0",
     "strip-html-comments": "1.0.0",
     "strip-wayback-toolbar": "^1.0.4",
-    "ua-string": "^1.0.0"
+    "ua-string": "^3.1.0"
   },
   "devDependencies": {
-    "mocha": "^3.2.0",
-    "prettier": "^1.11.1"
+    "mocha": "^8.2.1",
+    "prettier": "^2.1.2"
   },
   "repository": {
     "type": "git",

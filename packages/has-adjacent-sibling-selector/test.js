@@ -1,5 +1,5 @@
-import test from 'ava'
-import hasAdjacentSiblingSelector from './'
+const test = require('ava')
+const hasAdjacentSiblingSelector = require('.')
 
 const adjacentSiblingSelectors = ['li + li', '#foo .bar .baz + .baz']
 
