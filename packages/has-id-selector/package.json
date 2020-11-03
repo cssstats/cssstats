@@ -2,7 +2,7 @@
   "name": "has-id-selector",
   "description": "Check to see if a CSS selector string has an id.",
   "author": "John Otander",
-  "version": "3.3.1",
+  "version": "3.5.0",
   "main": "index.js",
   "repository": "cssstats/cssstats",
   "keywords": [

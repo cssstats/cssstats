@@ -2,7 +2,7 @@
   "name": "is-important",
   "description": "Check to see if a css declaration value is !important",
   "author": "John Otander",
-  "version": "3.3.1",
+  "version": "3.5.0",
   "main": "index.js",
   "files": [
     "index.js"
