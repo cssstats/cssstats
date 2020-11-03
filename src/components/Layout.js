@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { Container, Header, Styled, jsx, useColorMode } from 'theme-ui'
+import { Container, Styled, jsx, useColorMode } from 'theme-ui'
 import { GitHub, Twitter, Moon } from 'react-feather'
 import { Helmet } from 'react-helmet'
 
@@ -22,34 +22,44 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
         meta={[
           {
             name: 'description',
-            content: 'Potentially interesting stats on stylesheets'
-          }
+            content: 'Potentially interesting stats on stylesheets',
+          },
         ]}
         link={[
           {
             rel: 'icon',
             type: 'image/png',
             sizes: '16x16',
-            href: `${favicon16}`
+            href: `${favicon16}`,
           },
           {
             rel: 'icon',
             type: 'image/png',
             sizes: '32x32',
-            href: `${favicon32}`
+            href: `${favicon32}`,
           },
-          { rel: 'shortcut icon', type: 'image/png', href: `${favicon64}` }
+          { rel: 'shortcut icon', type: 'image/png', href: `${favicon64}` },
         ]}
       />
       <Styled.root>
-        <Header>
+        <header
+          sx={{
+            fontWeight: 'bold',
+            p: [1, 2, 3],
+            mb: 3,
+            '& a': {
+              color: 'black',
+              textDecoration: 'none',
+            },
+          }}
+        >
           <div
             sx={{
               display: 'flex',
               width: '100%',
               maxWidth: '100%',
               alignItems: 'center',
-              flexWrap: 'nowrap'
+              flexWrap: 'nowrap',
             }}
           >
             <Link href="/" ml={2} color="text">
@@ -57,7 +67,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 sx={{
                   display: 'flex',
                   width: '100%',
-                  alignItems: 'center'
+                  alignItems: 'center',
                 }}
               >
                 <Logo size={32} />
@@ -68,7 +78,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                     display: ['none', 'block'],
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
-                    whiteSpace: 'nowrap'
+                    whiteSpace: 'nowrap',
                   }}
                 >
                   CSS Stats
@@ -79,7 +89,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             {initialUrl ? (
               <div sx={{ px: 3, width: ['100%'] }}>
                 <form
-                  onSubmit={e => {
+                  onSubmit={(e) => {
                     e.preventDefault()
                     onUrlChange(url)
                   }}
@@ -89,7 +99,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                     placeholder="Url to extract CSS stats"
                     inputMode="url"
                     value={url}
-                    onChange={e => setUrl(e.target.value)}
+                    onChange={(e) => setUrl(e.target.value)}
                     sx={{ color: 'text' }}
                   />
                 </form>
@@ -99,15 +109,16 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             <div
               sx={{
                 ml: 'auto',
+                mr: 2,
                 width: 96,
                 display: 'flex',
-                alignItems: 'center'
+                alignItems: 'center',
               }}
             >
               <Styled.a
                 sx={{
                   mr: 3,
-                  cursor: 'pointer'
+                  cursor: 'pointer',
                 }}
                 onClick={() => {
                   setColorMode(colorMode === 'light' ? 'dark' : 'light')
@@ -127,9 +138,9 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
               </Styled.a>
             </div>
           </div>
-        </Header>
+        </header>
         <title children={title || 'CSS Stats'} />
-        <Container sx={{ maxWidth: '72rem' }}>{children}</Container>
+        <Container sx={{ maxWidth: '72rem', pb: 4 }}>{children}</Container>
       </Styled.root>
     </div>
   )
