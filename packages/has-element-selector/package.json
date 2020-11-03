@@ -7,16 +7,10 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": "cssstats/has-element-selector",
+  "repository": "cssstats/cssstats",
   "keywords": [],
   "license": "MIT",
   "dependencies": {
     "css-selector-tokenizer": "^0.7.3"
-  },
-  "devDependencies": {
-    "ava": "*"
   }
 }

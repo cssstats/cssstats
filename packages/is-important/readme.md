@@ -1,4 +1,4 @@
-# is-important [![Build Status](https://secure.travis-ci.org/cssstats/is-important.svg?branch=master)](https://travis-ci.org/cssstats/is-important) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# is-important
 
 Check to see if a css declaration value is `!important`.
 

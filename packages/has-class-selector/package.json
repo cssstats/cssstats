@@ -4,27 +4,11 @@
   "author": "John Otander",
   "version": "3.3.1",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/has-class-selector.git"
-  },
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "class",
     "selector"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/has-class-selector/issues"
-  },
-  "homepage": "https://github.com/johnotander/has-class-selector",
-  "devDependencies": {
-    "mocha": "*"
-  }
+  "license": "MIT"
 }

@@ -1,7 +1,5 @@
 # has-class-selector
 
-[![Build Status](https://secure.travis-ci.org/cssstats/has-class-selector.png?branch=master)](https://travis-ci.org/cssstats/has-class-selector)
-
 Check if a selector string has a class selector.
 
 ## Installation

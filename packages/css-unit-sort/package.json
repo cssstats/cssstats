@@ -7,10 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/css-unit-sort",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "sort",
     "css",
@@ -19,8 +16,5 @@
     "rem",
     "em"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "*"
-  }
+  "license": "MIT"
 }

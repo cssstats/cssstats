@@ -6,26 +6,12 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/css-url-regex.git"
-  },
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "css-url",
     "regex",
     "regexp"
   ],
-  "author": "John Otander <johnotander@gmail.com> (http://johnotander.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/css-url-regex/issues"
-  },
-  "homepage": "https://github.com/johnotander/css-url-regex",
-  "devDependencies": {
-    "ava": "^3.13.0"
-  }
+  "license": "MIT"
 }

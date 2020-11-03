@@ -7,20 +7,12 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "lint": "standard index.js",
-    "test": "npm run lint && ava -v"
-  },
-  "repository": "cssstats/is-css",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "url",
     "extension",
     "is-css"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "^3.13.0",
-    "standard": "^16.0.1"
-  }
+  "license": "MIT"
 }

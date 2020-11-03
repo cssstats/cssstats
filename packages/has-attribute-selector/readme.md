@@ -1,4 +1,4 @@
-# has-attribute-selector [![Build Status](https://secure.travis-ci.org/cssstats/has-attribute-selector.png?branch=master)](https://travis-ci.org/cssstats/has-attribute-selector)
+# has-attribute-selector
 
 Check if a selector string has an attribute selector.
 
@@ -30,7 +30,3 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
-
----
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

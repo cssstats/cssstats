@@ -1,4 +1,4 @@
-# get-css-colors [![Build Status](https://secure.travis-ci.org/cssstats/get-css-colors.svg?branch=master)](https://travis-ci.org/cssstats/get-css-colors) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# get-css-colors
 
 Get css colors from a string, including rgb, rgba, hsl, hsla, hex, named, etc.
 
@@ -30,7 +30,3 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
-
----
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

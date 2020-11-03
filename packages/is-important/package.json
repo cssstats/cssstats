@@ -7,16 +7,10 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/is-important",
+  "repository": "cssstatscssstats",
   "keywords": [
     "css",
     "important"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "^3.13.0"
-  }
+  "license": "MIT"
 }

@@ -7,11 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/wayback-css",
-  "keywords": [],
+  "repository": "cssstats/cssstats",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -21,8 +17,5 @@
     "strip-html-comments": "^1.0.0",
     "strip-wayback-toolbar": "^1.0.4",
     "ua-string": "^3.1.0"
-  },
-  "devDependencies": {
-    "ava": "*"
   }
 }
