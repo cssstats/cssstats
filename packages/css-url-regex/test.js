@@ -1,5 +1,5 @@
-import test from 'ava'
-import cssUrlRegex from './'
+const test = require('ava')
+const cssUrlRegex = require('.')
 
 const matches = [
   'url(foo.css)',

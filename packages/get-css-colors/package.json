@@ -25,13 +25,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "css-color-list": "0.0.1",
+    "css-color-list": "0.0.2",
     "hsl-regex": "^1.0.0",
     "hsla-regex": "^1.0.0",
     "rgb-regex": "^1.0.1",
     "rgba-regex": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.16.0"
+    "ava": "^3.13.0"
   }
 }

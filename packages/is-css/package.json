@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.22.0",
-    "standard": "^10.0.3"
+    "ava": "^3.13.0",
+    "standard": "^16.0.1"
   }
 }

@@ -27,13 +27,13 @@
   "license": "MIT",
   "dependencies": {
     "cssstats": "^3.4.1",
-    "meow": "^3.7.0",
+    "meow": "^8.0.0",
     "read-file-stdin": "^0.2.1",
     "write-file-stdout": "0.0.2"
   },
   "devDependencies": {
     "ava": "*",
     "is-present": "^1.0.0",
-    "pify": "^2.3.0"
+    "pify": "^5.0.0"
   }
 }

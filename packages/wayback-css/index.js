@@ -9,14 +9,14 @@ module.exports = (url, timestamp) => {
   let waybackUrl = null
 
   return getAvailableUrl(url, timestamp)
-    .then(url => (waybackUrl = url && got(url)))
-    .then(res => stripWayback(res.body))
+    .then((url) => (waybackUrl = url && got(url)))
+    .then((res) => stripWayback(res.body))
     .then(getCss)
     .then(getCssFromLinks)
     .then(aggregateCss)
 }
 
-const aggregateCss = css => {
+const aggregateCss = (css) => {
   css.css = css.links.concat(css.styles).join(' ')
 
   return css
@@ -32,40 +32,40 @@ const normalizeLink = (baseUrl, link) => {
   }
 }
 
-const getCssFromLinks = css => {
+const getCssFromLinks = (css) => {
   const baseUrl = 'http://web.archive.org'
   const linkCss = []
 
-  const px = css.links.map(link => {
+  const px = css.links.map((link) => {
     const loc = normalizeLink(baseUrl, link)
 
     return got(loc)
-      .then(res => linkCss.push(res.body))
+      .then((res) => linkCss.push(res.body))
       .catch(console.log)
   })
 
   return Promise.all(px).then(() => ({
     styles: css.styles,
     inline: css.inline,
-    links: linkCss
+    links: linkCss,
   }))
 }
 
-const getCss = html => {
+const getCss = (html) => {
   const $ = cheerio.load(html)
 
   const results = {
     html,
     links: [],
     styles: [],
-    inline: getInline(html)
+    inline: getInline(html),
   }
 
-  $('style').each(function() {
+  $('style').each(function () {
     results.styles.push(stripComments($(this).text()))
   })
 
-  $('link[rel=stylesheet]').each(function() {
+  $('link[rel=stylesheet]').each(function () {
     results.links.push($(this).attr('href'))
   })
 
@@ -75,7 +75,7 @@ const getCss = html => {
 const getAvailableUrl = (url, timestamp) => {
   const availabilityUrl = `http://archive.org/wayback/available?url=${url}&timestamp=${timestamp}`
 
-  return got(availabilityUrl, { json: true })
-    .then(res => res.body.archived_snapshots.closest)
-    .then(closest => closest.available && closest.url)
+  return got(availabilityUrl, { responseType: 'json' })
+    .then((res) => res.body.archived_snapshots.closest)
+    .then((closest) => closest.available && closest.url)
 }

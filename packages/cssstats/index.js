@@ -3,13 +3,14 @@ var postcss = require('postcss')
 var safeParser = require('postcss-safe-parser')
 var bytes = require('bytes')
 var gzipSize = require('gzip-size')
+
 var size = require('./lib/size')
 var rules = require('./lib/rules')
 var selectors = require('./lib/selectors')
 var declarations = require('./lib/declarations')
 var mediaQueries = require('./lib/media-queries')
 
-module.exports = function(src, opts) {
+module.exports = function (src, opts) {
   opts = opts || {}
   opts = _.defaults(opts, {
     safe: true,
@@ -19,7 +20,7 @@ module.exports = function(src, opts) {
     sortedSpecificityGraph: false,
     repeatedSelectors: false,
     propertyResets: false,
-    vendorPrefixedProperties: false
+    vendorPrefixedProperties: false,
   })
 
   function parse(root, result) {
@@ -41,11 +42,11 @@ module.exports = function(src, opts) {
       result.messages.push({
         type: 'cssstats',
         plugin: 'postcss-cssstats',
-        stats: stats
+        stats: stats,
       })
     }
 
-    stats.toJSON = function() {
+    stats.toJSON = function () {
       // Remove methods when using JSON.stringify
       delete stats.selectors.getSpecificityGraph
       delete stats.selectors.getRepeatedValues
@@ -65,7 +66,8 @@ module.exports = function(src, opts) {
 
   if (typeof src === 'string') {
     // Default behavior
-    var root = postcss().process(src, { parser: safeParser }).root
+    var root = postcss([]).process(src, { parser: safeParser, from: undefined })
+      .root
     var result = parse(root, {})
     return result
   } else if (typeof src === 'object' || typeof src === 'undefined') {

@@ -75,7 +75,7 @@
     ]
   },
   "selectors": {
-    "total": 13,
+    "total": 11,
     "type": 1,
     "class": 9,
     "id": 1,
@@ -91,14 +91,12 @@
       ".box",
       ".box:first-child",
       ".box:last-child",
-      "0%",
-      "100%",
       "header",
       ".georgia"
     ],
     "specificity": {
       "max": 100,
-      "average": 18
+      "average": 21.09090909090909
     }
   },
   "declarations": {
