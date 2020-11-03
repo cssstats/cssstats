@@ -17,8 +17,6 @@ export default ({ data }) => {
   const { colors } = theme
   const max = getMax(data)
 
-  console.log(data)
-
   return (
     <VictoryChart
       height={225}

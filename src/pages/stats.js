@@ -76,8 +76,6 @@ export default () => {
   const backgroundColors = properties['background-color'] || []
   const colors = properties.color || []
 
-  console.log(stats)
-
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
       <SubHeader title={url} description={pageTitle} mb={5} />
