@@ -1,4 +1,4 @@
-# has-element-selector [![Build Status](https://secure.travis-ci.org/cssstats/has-element-selector.png?branch=master)](https://travis-ci.org/cssstats/has-element-selector) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# has-element-selector
 
 Check whether a given selector contains an element
 
@@ -31,7 +31,3 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
-
----
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

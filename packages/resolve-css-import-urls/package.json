@@ -1,0 +1,25 @@
+{
+  "name": "resolve-css-import-urls",
+  "version": "1.0.0",
+  "description": "Turn css @import statements into full urls",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": "cssstats/cssstats",
+  "keywords": [
+    "css",
+    "css-import",
+    "import",
+    "url",
+    "resolve"
+  ],
+  "author": "John Otander",
+  "license": "MIT",
+  "dependencies": {
+    "get-css-urls": "1.0.1",
+    "get-imports": "^1.0.0",
+    "is-present": "^1.0.0",
+    "is-url": "^1.2.2"
+  }
+}

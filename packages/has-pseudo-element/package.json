@@ -4,26 +4,9 @@
   "author": "John Otander",
   "version": "3.3.1",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/has-pseudo-element.git"
-  },
-  "keywords": [],
+  "repository": "cssstats/cssstats",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/has-pseudo-element/issues"
-  },
-  "homepage": "https://github.com/johnotander/has-pseudo-element",
   "dependencies": {
     "pseudo-elements": "1.1.0"
-  },
-  "devDependencies": {
-    "mocha": "*"
   }
 }

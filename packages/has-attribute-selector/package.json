@@ -7,17 +7,11 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": "cssstats/has-attribute-selector",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "attribute",
     "selector"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "*"
-  }
+  "license": "MIT"
 }

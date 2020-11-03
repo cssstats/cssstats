@@ -7,13 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/has-gradient",
+  "repository": "cssstats/cssstats",
   "keywords": [],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "*"
-  }
+  "license": "MIT"
 }

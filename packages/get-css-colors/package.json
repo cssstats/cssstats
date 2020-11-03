@@ -7,10 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/get-css-colors",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "color",
@@ -30,8 +27,5 @@
     "hsla-regex": "^1.0.0",
     "rgb-regex": "^1.0.1",
     "rgba-regex": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "^3.13.0"
   }
 }

@@ -4,27 +4,11 @@
   "author": "John Otander",
   "version": "3.3.1",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/has-id-selector.git"
-  },
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "selector",
     "id"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/has-id-selector/issues"
-  },
-  "homepage": "https://github.com/johnotander/has-id-selector",
-  "devDependencies": {
-    "mocha": "*"
-  }
+  "license": "MIT"
 }

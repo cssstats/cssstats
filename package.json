@@ -12,8 +12,7 @@
     "favicon:32": "repng src/components/logo.js -w 32 -h 32 -d src/images -f favicon-32.png -p '{\"size\": 32}'",
     "favicon:64": "repng src/components/logo.js -w 64 -h 64 -d src/images -f favicon-64.png -p '{\"size\": 64}'",
     "format": "prettier --write {api,packages,src}/**/**.{js,json,md,mdx}",
-    "test": "lerna run test",
-    "pretest": "lerna bootstrap",
+    "test": "ava -v",
     "publish": "lerna publish"
   },
   "workspaces": [
@@ -23,6 +22,12 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "ava": {
+    "files": [
+      "**/*/test.js",
+      "**/*/*-test.js"
+    ]
   },
   "resolutions": {
     "@emotion/core": "10.1.1",
@@ -37,6 +42,7 @@
     "@mdx-js/mdx": "^2.0.0-next.8",
     "@mdx-js/react": "^2.0.0-next.8",
     "@sindresorhus/slugify": "^1.1.0",
+    "ava": "^3.13.0",
     "gatsby": "^2.25.1",
     "gatsby-plugin-fathom": "^1.3.0",
     "gatsby-plugin-mdx": "^1.3.0",

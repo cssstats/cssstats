@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Brent Jackson",
   "license": "MIT",
-  "repository": "cssstats/cssstats-core",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "CSS",
     "Performance",
@@ -30,12 +30,5 @@
     "postcss": "^8.1.4",
     "postcss-safe-parser": "^5.0.2",
     "specificity": "^0.4.1"
-  },
-  "devDependencies": {
-    "get-css": "^3.4.1",
-    "mocha": "^8.2.1"
-  },
-  "scripts": {
-    "test": "rm -rf test/results && mkdir test/results && mocha test"
   }
 }

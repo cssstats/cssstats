@@ -7,10 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava -v"
-  },
-  "repository": "cssstats/is-vendor-prefixed",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "vendor",
@@ -21,8 +18,5 @@
   "license": "MIT",
   "dependencies": {
     "vendor-prefixes": "1.0.0"
-  },
-  "devDependencies": {
-    "ava": "^3.13.0"
   }
 }

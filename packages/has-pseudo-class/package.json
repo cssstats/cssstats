@@ -7,10 +7,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": "cssstats/has-pseudo-class",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "pseudo",
@@ -20,8 +17,5 @@
   "license": "MIT",
   "dependencies": {
     "pseudo-classes": "1.0.0"
-  },
-  "devDependencies": {
-    "ava": "^3.13.0"
   }
 }

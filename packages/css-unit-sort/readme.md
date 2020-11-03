@@ -1,4 +1,4 @@
-# css-unit-sort [![Build Status](https://secure.travis-ci.org/cssstats/css-unit-sort.svg?branch=master)](https://travis-ci.org/cssstats/css-unit-sort) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# css-unit-sort
 
 Sort css values no matter the unit.
 Originally [written](https://github.com/cssstats/cssstats/blob/16fe37c96623fd3cdb24bd302ef6f6e93826af0f/controllers/stats.js#L98) by [@jxnblk](https://twitter.com/jxnblk).
@@ -30,7 +30,3 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by John Otander ([@4lpine](https://twitter.com/4lpine)).
-
----
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

@@ -1,4 +1,4 @@
-# cssstats [![Build Status](https://travis-ci.org/cssstats/core.svg?branch=master)](https://travis-ci.org/cssstats/core)
+# cssstats
 
 Parses stylesheets and returns an object with statistics.
 This is the core module used in [cssstats.com](http://cssstats.com)
@@ -35,8 +35,8 @@ var css = fs.readFileSync('./styles.css', 'utf8')
 postcss()
   .use(cssstats())
   .process(css)
-  .then(function(result) {
-    result.messages.forEach(function(message) {
+  .then(function (result) {
+    result.messages.forEach(function (message) {
       console.log(message)
     })
   })

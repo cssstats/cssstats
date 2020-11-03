@@ -3,3 +3,4 @@ node_modules
 *.swp
 public
 .cache
+package-lock.json

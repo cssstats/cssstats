@@ -1,4 +1,4 @@
-# has-gradient [![Build Status](https://secure.travis-ci.org/cssstats/has-gradient.svg?branch=master)](https://travis-ci.org/cssstats/has-gradient) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# has-gradient
 
 Determine whether a property contains a gradient
 
@@ -29,7 +29,3 @@ MIT
 5. Create new Pull Request
 
 Crafted with <3 by John Otander ([@cssstats](https://twitter.com/cssstats)).
-
----
-
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

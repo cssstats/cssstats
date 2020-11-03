@@ -10,15 +10,12 @@
   "scripts": {
     "test": "ava"
   },
-  "repository": "cssstats/has-adjacent-sibling-selector",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "css",
     "sibling",
     "adjacent",
     "selector"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "ava": "^3.13.0"
-  }
+  "license": "MIT"
 }

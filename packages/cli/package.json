@@ -13,10 +13,7 @@
   "engines": {
     "node": ">=4"
   },
-  "scripts": {
-    "test": "ava"
-  },
-  "repository": "cssstats/cssstats-cli",
+  "repository": "cssstats/cssstats",
   "keywords": [
     "cssstats",
     "cli",
@@ -32,7 +29,6 @@
     "write-file-stdout": "0.0.2"
   },
   "devDependencies": {
-    "ava": "*",
     "is-present": "^1.0.0",
     "pify": "^5.0.0"
   }

@@ -1,4 +1,4 @@
-# wayback-css [![Build Status](https://secure.travis-ci.org/cssstats/wayback-css.svg?branch=master)](https://travis-ci.org/cssstats/wayback-css) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# wayback-css
 
 Get the css for a wayback machine url.
 

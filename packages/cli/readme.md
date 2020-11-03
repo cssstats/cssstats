@@ -1,6 +1,4 @@
-# cssstats-cli [![Build Status](https://secure.travis-ci.org/cssstats/cssstats-cli.png?branch=master)](https://travis-ci.org/cssstats/cssstats-cli) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-
-**Work in progress**
+# cssstats-cli
 
 CLI app for cssstats
 
