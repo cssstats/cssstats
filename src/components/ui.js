@@ -7,6 +7,7 @@ export const Link = ({ href, ...props }) => (
 )
 
 export const Label = ({ display = 'block', ...props }) => (
+  // eslint-disable-next-line jsx-a11y/label-has-associated-control
   <label
     sx={{
       display,
@@ -19,6 +20,7 @@ export const Label = ({ display = 'block', ...props }) => (
 )
 
 export const Input = ({ ...props }) => (
+  // eslint-disable-next-line jsx-a11y/control-has-associated-label
   <input
     sx={{
       fontSize: 2,
