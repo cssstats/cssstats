@@ -7,6 +7,7 @@ import { Styled } from 'theme-ui'
 
 import { H2, Div, Pre, Flex, Loading, SubHeader } from '../components/library'
 
+import Homepage from './index.mdx'
 import Layout from '../components/Layout'
 
 import SummaryStats from '../components/SummaryStats'
@@ -51,6 +52,10 @@ export default () => {
 
     fetchStats()
   }, [url])
+
+  if (!url && !stats) {
+    return <Homepage />
+  }
 
   if (!stats) {
     return (
