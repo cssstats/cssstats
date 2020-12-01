@@ -10,6 +10,7 @@ import { H2, Div, Pre, Flex, Loading, SubHeader } from '../components/library'
 import { CheckSquare, Clipboard } from 'react-feather'
 import copy from 'copy-to-clipboard'
 
+import Homepage from './index.mdx'
 import Layout from '../components/Layout'
 
 import SummaryStats from '../components/SummaryStats'
@@ -55,6 +56,10 @@ export default () => {
 
     fetchStats()
   }, [url])
+
+  if (!url && !stats) {
+    return <Homepage />
+  }
 
   if (!stats) {
     return (
