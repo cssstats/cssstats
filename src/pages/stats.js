@@ -3,9 +3,12 @@ import { jsx } from 'theme-ui'
 import { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
-import { Styled } from 'theme-ui'
+import { Styled, IconButton } from 'theme-ui'
 
 import { H2, Div, Pre, Flex, Loading, SubHeader } from '../components/library'
+
+import { CheckSquare, Clipboard } from 'react-feather'
+import copy from 'copy-to-clipboard'
 
 import Homepage from './index.mdx'
 import Layout from '../components/Layout'
@@ -32,6 +35,7 @@ const API_URL = 'https://cssstats.com/api'
 export default () => {
   const [stats, setStats] = useState(null)
   const [url, setUrl] = useState(null)
+  const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     const linkFromQuery = getQueryParam('link', window.location.href)
@@ -380,6 +384,19 @@ export default () => {
       <DeclarationsChartSpacingMargin data={declarations} />
 
       <Div mt={5}>
+        <IconButton
+          role="button"
+          title="Copy CSS to clipboard"
+          sx={{ float: 'right' }}
+          tabindex="0"
+          onClick={() => {
+            setCopied(true)
+            copy(css.trim())
+            setTimeout(() => setCopied(false), 2000)
+          }}
+        >
+          {copied ? <CheckSquare /> : <Clipboard />}
+        </IconButton>
         <H2>Raw Css</H2>
         <Pre>{css.trim()}</Pre>
       </Div>
