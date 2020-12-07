@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --no-semi --single-quote --write {test,utils,bin}/**/*.js index.js",
-    "test": "node test/test && mocha test 'test/**/*.js'"
+    "test": "ava 'test/**/*.js'"
   },
   "bin": {
     "getcss": "./bin/getcss"
@@ -13,24 +13,24 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
+    "abort-controller": "^3.0.0",
     "cheerio": "^0.22.0",
     "commander": "^6.2.0",
     "is-blank": "^2.1.0",
     "is-css": "^3.5.0",
     "is-present": "^1.0.0",
     "is-url-superb": "^4.0.0",
+    "node-fetch": "^2.6.1",
     "normalize-url": "^5.3.0",
     "q": "^1.5.1",
     "query-string": "^6.13.6",
-    "request": "^2.88.2",
-    "requestretry": "^4.1.1",
     "resolve-css-import-urls": "^3.5.0",
     "strip-html-comments": "1.0.0",
     "strip-wayback-toolbar": "^1.0.4",
     "ua-string": "^3.1.0"
   },
   "devDependencies": {
-    "mocha": "^8.2.1",
+    "ava": "^3.14.0",
     "prettier": "^2.1.2"
   },
   "repository": {

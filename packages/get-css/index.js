@@ -3,7 +3,8 @@ var isCss = require('is-css')
 var isPresent = require('is-present')
 var isBlank = require('is-blank')
 var isUrl = require('is-url-superb')
-var request = require('requestretry')
+var fetch = require('node-fetch')
+var AbortController = require('abort-controller')
 var cheerio = require('cheerio')
 var normalizeUrl = require('normalize-url')
 var stripHtmlComments = require('strip-html-comments')
@@ -14,21 +15,16 @@ var ua = require('ua-string')
 var getLinkContents = require('./utils/get-link-contents')
 var createLink = require('./utils/create-link')
 
-module.exports = function(url, options, html) {
+module.exports = function (url, options, html) {
   var deferred = q.defer()
-  var options = options || {}
-  options.headers = options.headers || {}
-  options.headers['User-Agent'] = options.headers['User-Agent'] || ua
-  options.timeout = options.timeout || 5000
-  options.stripWayback = options.stripWayback || false
-  options.gzip = true
+  options = options || {}
+  var timeout = options.timeout || 5000
 
   if (typeof url !== 'string' || isBlank(url) || !isUrl(url)) {
     throw new TypeError('get-css expected a url as a string')
   }
 
   url = normalizeUrl(url, { stripWWW: false })
-  options.url = url
 
   if (options.ignoreCerts) {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -36,13 +32,13 @@ module.exports = function(url, options, html) {
 
   var status = {
     parsed: 0,
-    total: 0
+    total: 0,
   }
 
   var result = {
     links: [],
     styles: [],
-    css: ''
+    css: '',
   }
 
   function handleResolve() {
@@ -52,14 +48,15 @@ module.exports = function(url, options, html) {
   }
 
   function parseHtml(html) {
-    if (options.stripWayback) {
+    var stripWayback = options.stripWayback || false
+    if (stripWayback) {
       html = stripWaybackToolbar(html)
     }
     var $ = cheerio.load(html)
     result.pageTitle = $('head > title').text()
     result.html = html
 
-    $('[rel=stylesheet]').each(function() {
+    $('[rel=stylesheet]').each(function () {
       var link = $(this).attr('href')
       if (isPresent(link)) {
         result.links.push(createLink(link, url))
@@ -68,7 +65,7 @@ module.exports = function(url, options, html) {
       }
     })
 
-    $('style').each(function() {
+    $('style').each(function () {
       result.styles.push(stripHtmlComments($(this).html()))
     })
 
@@ -77,19 +74,19 @@ module.exports = function(url, options, html) {
       handleResolve()
     }
 
-    result.links.forEach(function(link) {
-      getLinkContents(link.url, options)
-        .then(function(css) {
+    result.links.forEach(function (link) {
+      getLinkContents(link.url, { timeout })
+        .then(function (css) {
           handleCssFromLink(link, css)
         })
-        .catch(function(error) {
+        .catch(function (error) {
           link.error = error
           status.parsed++
           handleResolve()
         })
     })
 
-    result.styles.forEach(function(css) {
+    result.styles.forEach(function (css) {
       result.css += css
       status.parsed++
       handleResolve()
@@ -111,15 +108,15 @@ module.exports = function(url, options, html) {
     status.total += link.imports.length
     result.css += css
 
-    link.imports.forEach(function(importUrl) {
+    link.imports.forEach(function (importUrl) {
       var importLink = createLink(importUrl, importUrl)
       result.links.push(importLink)
 
       getLinkContents(importLink.url, options)
-        .then(function(css) {
+        .then(function (css) {
           handleCssFromLink(importLink, css)
         })
-        .catch(function(error) {
+        .catch(function (error) {
           link.error = error
           status.parsed++
           handleResolve()
@@ -140,22 +137,40 @@ module.exports = function(url, options, html) {
   if (html) {
     handleBody(html)
   } else {
-    request(options, function(error, response, body) {
-      if (error) {
-        if (options.verbose) console.log('Error from ' + url + ' ' + error)
+    var controller = new AbortController()
+
+    var options = options || {}
+    options.headers = options.headers || {}
+    options.headers['User-Agent'] = options.headers['User-Agent'] || ua
+    options.signal = controller.signal
+
+    var timeoutTimer = setTimeout(() => {
+      controller.abort()
+    }, timeout)
+    fetch(url, options)
+      .then((response) => {
+        if (response && response.status != 200) {
+          if (options.verbose) {
+            console.log('Received a ' + response.status + ' from: ' + url)
+          }
+          deferred.reject({ url: url, status: response.status })
+          return
+        }
+
+        return response.text()
+      })
+      .then((body) => {
+        handleBody(body)
+      })
+      .catch((error) => {
+        if (options.verbose) {
+          console.log('Error from ' + url + ' ' + error)
+        }
         deferred.reject(error)
-        return
-      }
-
-      if (response && response.statusCode != 200) {
-        if (options.verbose)
-          console.log('Received a ' + response.statusCode + ' from: ' + url)
-        deferred.reject({ url: url, statusCode: response.code })
-        return
-      }
-
-      handleBody(body)
-    })
+      })
+      .finally(() => {
+        clearTimeout(timeoutTimer)
+      })
   }
 
   return deferred.promise
