@@ -1,6 +1,7 @@
 var _ = require('lodash')
 var postcss = require('postcss')
 var safeParser = require('postcss-safe-parser')
+var customProperties = require('postcss-custom-properties')
 var bytes = require('bytes')
 var gzipSize = require('gzip-size')
 
@@ -21,12 +22,21 @@ module.exports = function (src, opts) {
     repeatedSelectors: false,
     propertyResets: false,
     vendorPrefixedProperties: false,
+    preserveCustomProperties: false
   })
 
   function parse(root, result) {
     var stats = {}
 
-    var string = postcss().process(root).css
+    const plugins = []
+    if (!opts.preserveCustomProperties) {
+      plugins.push(customProperties({ preserve: false }))
+    }
+
+    const parser = postcss()
+    plugins.forEach(plugin => parser.use(plugin))
+
+    var string = parser.process(root).css
     stats.size = size(string)
     stats.gzipSize = gzipSize.sync(string)
     stats.humanizedSize = bytes(stats.size, { decimalPlaces: 0 })
