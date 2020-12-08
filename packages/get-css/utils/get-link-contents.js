@@ -1,6 +1,7 @@
 var q = require('q')
-var request = require('request')
+var fetch = require('node-fetch')
 var query = require('query-string')
+var AbortController = require('abort-controller')
 
 module.exports = function getLinkContents(linkUrl, options) {
   var d = q.defer()
@@ -13,17 +14,28 @@ module.exports = function getLinkContents(linkUrl, options) {
     return d.promise
   }
 
-  request({ url: linkUrl, timeout: options.timeout, gzip: true }, function(
-    error,
-    response,
-    body
-  ) {
-    if (error || response.statusCode !== 200) {
-      d.reject(error)
-    }
+  var controller = new AbortController()
+  var timeoutTimer = setTimeout(() => {
+    controller.abort()
+  }, options.timeout)
 
-    d.resolve(body)
-  })
+  fetch(linkUrl, { signal: controller.signal })
+    .then((response) => {
+      if (response.status !== 200) {
+        d.reject(response.error)
+      }
+
+      return response.text()
+    })
+    .then((body) => {
+      d.resolve(body)
+    })
+    .catch((error) => {
+      d.reject(error)
+    })
+    .finally(() => {
+      clearTimeout(timeoutTimer)
+    })
 
   return d.promise
 }
