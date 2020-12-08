@@ -28,6 +28,7 @@
     "is-vendor-prefixed": "^3.5.0",
     "lodash": "^4.17.20",
     "postcss": "^8.1.4",
+    "postcss-custom-properties": "^10.0.0",
     "postcss-safe-parser": "^5.0.2",
     "specificity": "^0.4.1"
   }

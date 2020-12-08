@@ -1105,7 +1105,7 @@
     "@emotion/utils" "0.11.3"
     "@emotion/weak-memoize" "0.2.5"
 
-"@emotion/core@10.1.1", "@emotion/core@^10.0.0", "@emotion/core@^10.1.1":
+"@emotion/core@^10.0.0", "@emotion/core@^10.1.1":
   version "10.1.1"
   resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.1.1.tgz#c956c1365f2f2481960064bcb8c4732e5fb612c3"
   integrity sha512-ZMLG6qpXR8x031NXD8HJqugy/AZSkAuMxxqB46pmAR7ze47MhNJ56cdoX243QPZdGctrdfo+s08yZTiwaUcRKA==
@@ -1181,7 +1181,7 @@
     "@emotion/serialize" "^0.11.15"
     "@emotion/utils" "0.11.3"
 
-"@emotion/styled@10.0.27", "@emotion/styled@^10.0.0", "@emotion/styled@^10.0.27":
+"@emotion/styled@^10.0.0", "@emotion/styled@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.27.tgz#12cb67e91f7ad7431e1875b1d83a94b814133eaf"
   integrity sha512-iK/8Sh7+NLJzyp9a5+vIQIXTYxfT4yB/OJbjzQanB2RZpvmzBQOHZWhpAMZWYEKRNNbsD6WfBw5sVWkb6WzS/Q==
@@ -2155,7 +2155,7 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@mdx-js/mdx@2.0.0-next.8", "@mdx-js/mdx@^2.0.0-next.8":
+"@mdx-js/mdx@^2.0.0-next.8":
   version "2.0.0-next.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.0.0-next.8.tgz#7d29d7ee634ab0c37cf44bd8d9b1e93c5e09649f"
   integrity sha512-OT3bkvsA+rmqv378+UWFgeQuchaafhVgOO46+hc5U7KrGK3iPI2yGTcFwD3/KzSu+JGPCEUBREE96ncpvYqKjA==
@@ -2182,7 +2182,12 @@
     unist-builder "2.0.3"
     unist-util-visit "2.0.3"
 
-"@mdx-js/react@2.0.0-next.8", "@mdx-js/react@^1.0.0", "@mdx-js/react@^2.0.0-next.8":
+"@mdx-js/react@^1.0.0":
+  version "1.6.22"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.22.tgz#ae09b4744fddc74714ee9f9d6f17a66e77c43573"
+  integrity sha512-TDoPum4SHdfPiGSAaRBw7ECyI8VaHpK8GJugbJIJuqyh6kzw9ZLJZW3HGL3NNrJGxcAixUvqROm+YuQOo5eXtg==
+
+"@mdx-js/react@^2.0.0-next.8":
   version "2.0.0-next.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.0.0-next.8.tgz#fa774dc781600eb075513eebaae6bd705776ac34"
   integrity sha512-I/ped8Wb1L4sUlumQmUlYQsH0tjd2Zj2eyCWbqgigpg+rtRlNFO9swkeyr0GY9hNZnwI8QOnJtNe+UdIZim8LQ==
@@ -4924,7 +4929,7 @@ color-name@1.1.3:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-color-name@^1.0.0, color-name@~1.1.4:
+color-name@^1.0.0, color-name@^1.1.4, color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
@@ -13055,6 +13060,14 @@ postcss-convert-values@^4.0.1:
     postcss "^7.0.0"
     postcss-value-parser "^3.0.0"
 
+postcss-custom-properties@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-10.0.0.tgz#5cb31afc530f58ad241f1e836dd5f5f7065334df"
+  integrity sha512-55BPj5FudpCiPZzBaO+MOeqmwMDa+nV9/0QBJBfhZjYg6D9hE+rW9lpMBLTJoF4OTXnS5Po4yM1nMlgkPbCxFg==
+  dependencies:
+    postcss "^7.0.17"
+    postcss-values-parser "^4.0.0"
+
 postcss-discard-comments@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-4.0.2.tgz#1fbabd2c246bff6aaad7997b2b0918f4d7af4033"
@@ -13365,6 +13378,15 @@ postcss-value-parser@^4.1.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
+postcss-values-parser@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-values-parser/-/postcss-values-parser-4.0.0.tgz#3b4625e649279613f52842f1c81f2064321beec7"
+  integrity sha512-R9x2D87FcbhwXUmoCXJR85M1BLII5suXRuXibGYyBJ7lVDEpRIdKZh4+8q5S+/+A4m0IoG1U5tFw39asyhX/Hw==
+  dependencies:
+    color-name "^1.1.4"
+    is-url-superb "^4.0.0"
+    postcss "^7.0.5"
+
 postcss@^6.0.1, postcss@^6.0.23:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
@@ -13374,7 +13396,7 @@ postcss@^6.0.1, postcss@^6.0.23:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.5:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.17, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.5:
   version "7.0.35"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.35.tgz#d2be00b998f7f211d8a276974079f2e92b970e24"
   integrity sha512-3QT8bBJeX/S5zKTTjTCIjRF3If4avAT6kqxcASlTWEtAFCb9NH0OUxNDfgZSWdP5fJnBYCMEWkIFfWeugjzYMg==
@@ -16089,7 +16111,7 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-theme-ui@0.4.0-rc.5, theme-ui@^0.4.0-rc.5:
+theme-ui@^0.4.0-rc.5:
   version "0.4.0-rc.5"
   resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.4.0-rc.5.tgz#9cbf472dd2ac750467e2fb2e64638e688f852686"
   integrity sha512-Qjwja3xiE8mSf5ozNNJiCE6DhAg3QCdNw3YtceGSwiswC3vsL+jl7LAkaBcjME6r4GAVOuvNaVqu1tFuzqR1Vw==
