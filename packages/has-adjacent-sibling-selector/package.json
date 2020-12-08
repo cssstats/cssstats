@@ -2,7 +2,7 @@
   "name": "has-adjacent-sibling-selector",
   "description": "Check if a selector string has an adjacent sibling selector",
   "author": "John Otander <johnotander@gmail.com> (johnotander.com)",
-  "version": "3.5.0",
+  "version": "4.0.0",
   "main": "index.js",
   "files": [
     "index.js"

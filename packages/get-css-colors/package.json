@@ -2,7 +2,7 @@
   "name": "get-css-colors",
   "description": "Get css colors from a string, including rgb, rgba, hsl, hsla, hex, named, etc.",
   "author": "John Otander",
-  "version": "3.5.0",
+  "version": "4.0.0",
   "main": "index.js",
   "files": [
     "index.js"

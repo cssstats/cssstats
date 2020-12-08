@@ -2,7 +2,7 @@
   "name": "cssstats-cli",
   "description": "CLI app for cssstats",
   "author": "John Otander",
-  "version": "3.5.0",
+  "version": "4.0.0",
   "main": "cli.js",
   "files": [
     "cli.js"
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "cssstats": "^3.5.0",
+    "cssstats": "^4.0.0",
     "meow": "^8.0.0",
     "read-file-stdin": "^0.2.1",
     "write-file-stdout": "0.0.2"
