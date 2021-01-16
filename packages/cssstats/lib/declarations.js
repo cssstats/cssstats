@@ -9,6 +9,7 @@ module.exports = function(root, opts) {
   var result = {
     total: 0,
     unique: 0,
+    uniqueToTotalRatio: 0,
     important: [],
     properties: {},
     getPropertyResets: getPropertyResets,
@@ -40,6 +41,8 @@ module.exports = function(root, opts) {
   result.unique = Object.keys(result.properties).reduce(function(a, property) {
     return a + getUniquePropertyCount.call(result, property)
   }, 0)
+
+  result.uniqueToTotalRatio = (result.unique / result.total)
 
   if (opts.propertyResets) {
     result.resets = result.getPropertyResets()

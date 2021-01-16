@@ -97,6 +97,7 @@ The following options add the results of helper methods to the returned object. 
   declarations: {
     total: n,
     unique: n,
+    uniqueToTotalRatio: n,
     important: [obj],
     properties:
       prop: [str]
@@ -188,6 +189,7 @@ The size of the stylesheet gzipped in bytes
 
 - `total` number - total number of declarations
 - `unique` number - total unique declarations
+- `uniqueToTotalRatio` number - ratio of unique declarations to total declarations
 - `properties` object - object with each unique property and an array of that property’s values
 - `getPropertyResets()` function - returns an object with the number of times margin or padding is reset for each property
 - `getUniquePropertyCount(property)` function - returns the number of unique values for the given property
