@@ -6,6 +6,7 @@
     "start": "micro"
   },
   "dependencies": {
+    "base-64": "^1.0.0",
     "cssbeautify": "^0.3.1",
     "cssstats": "^4.0.0",
     "get-css": "^4.0.0",
