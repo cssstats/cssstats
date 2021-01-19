@@ -28,6 +28,7 @@
   "declarations": {
     "total": 0,
     "unique": 0,
+    "uniqueToTotalRatio": 0,
     "properties": {}
   },
   "mediaQueries": {

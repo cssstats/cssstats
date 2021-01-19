@@ -3170,6 +3170,7 @@
   "declarations": {
     "total": 555,
     "unique": 545,
+    "uniqueToTotalRatio": 0.9819819819819819,
     "properties": {
       "display": [
         "inline-block",
