@@ -19,9 +19,11 @@ module.exports = function getLinkContents(linkUrl, options) {
       }
 
       var contentType = response.headers.get('content-type')
+      // Has contentType header and is text/css
       var hasCssContentType = contentType && contentType.includes('text/css')
+      // Has no contentType header and end with .css
       var urlHasCssExtension = !contentType && /\.css$/i.test(url)
-      console.log(hasCssContentType, urlHasCssExtension)
+      // If neither is the case ignore this link, consider there to be no css
       if (!hasCssContentType && !urlHasCssExtension) {
         d.resolve('')
       }
