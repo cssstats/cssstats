@@ -7,13 +7,6 @@ module.exports = function getLinkContents(linkUrl, linkOptions, options) {
   var d = q.defer()
   const { url } = query.parseUrl(linkUrl)
 
-  // expect linked css content
-  // TODO: Make this check the actual response type
-  if (!/\.css$/i.test(url)) {
-    d.resolve('')
-    return d.promise
-  }
-
   var controller = new AbortController()
   var timeoutTimer = setTimeout(() => {
     controller.abort()
@@ -25,6 +18,16 @@ module.exports = function getLinkContents(linkUrl, linkOptions, options) {
     .then((response) => {
       if (response.status !== 200) {
         d.reject(response.error)
+      }
+
+      var contentType = response.headers.get('content-type')
+      // Has contentType header and is text/css
+      var hasCssContentType = contentType && contentType.includes('text/css')
+      // Has no contentType header and end with .css
+      var urlHasCssExtension = !contentType && /\.css$/i.test(url)
+      // If neither is the case ignore this link, consider there to be no css
+      if (!hasCssContentType && !urlHasCssExtension) {
+        d.resolve('')
       }
 
       return response.text()
