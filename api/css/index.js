@@ -12,7 +12,7 @@ const isValidUrl = url => isPresent(url) && isUrl(url)
 const cssApi = async (req, res) => {
   const url = getParam('url', req.url)
 
-  const fullUrl = url && normalizeUrl(url)
+  const fullUrl = url && normalizeUrl(url, { stripAuthentication: false })
 
   if (!isValidUrl(fullUrl)) {
     return send(res, 406, {
@@ -22,7 +22,7 @@ const cssApi = async (req, res) => {
   }
 
   try {
-    const css = await getCss(fullUrl)
+    const css = await getCss(fullUrl, options)
     css.css = cssbeautify(css.css)
 
     send(res, 200, { css })

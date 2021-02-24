@@ -75,7 +75,7 @@ module.exports = function (url, options, html) {
     }
 
     result.links.forEach(function (link) {
-      getLinkContents(link.url, { timeout })
+      getLinkContents(link.url, options, { timeout })
         .then(function (css) {
           handleCssFromLink(link, css)
         })
