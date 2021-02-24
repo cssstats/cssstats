@@ -102,6 +102,7 @@
   "declarations": {
     "total": 22,
     "unique": 21,
+    "uniqueToTotalRatio": 0.9545454545454546,
     "properties": {
       "color": [
         "red",
@@ -196,6 +197,7 @@
         "declarations": {
           "total": 3,
           "unique": 3,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "color": [
               "tomato"

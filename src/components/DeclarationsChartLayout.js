@@ -1,7 +1,7 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { intComma } from 'humanize-plus'
+import { formatNumber, intComma } from 'humanize-plus'
 
 import { Div, SectionTitle } from './library'
 
@@ -10,6 +10,7 @@ import GroupedBarChart from './GroupedBarChart'
 export default ({ data }) => {
   const total = intComma(data.total)
   const unique = intComma(data.unique)
+  const uniqueToTotalRatio = formatNumber(data.uniqueToTotalRatio, 2)
 
   const properties = [
     'display',
@@ -37,7 +38,8 @@ export default ({ data }) => {
         description={
           <span>
             Out of the <b>{total}</b> total declarations, <b>{unique}</b> have
-            unique values.
+            unique values. The ratio of unique to total declarations is <b>
+            {uniqueToTotalRatio}</b>
           </span>
         }
       />

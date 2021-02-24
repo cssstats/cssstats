@@ -1823,6 +1823,7 @@
   "declarations": {
     "total": 471,
     "unique": 232,
+    "uniqueToTotalRatio": 0.49256900212314225,
     "properties": {
       "margin": [
         "0",
@@ -2511,6 +2512,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "block"
@@ -2554,6 +2556,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "block"
@@ -2597,6 +2600,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "block"
@@ -2640,6 +2644,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "none"
@@ -2683,6 +2688,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "none"
@@ -2726,6 +2732,7 @@
         "declarations": {
           "total": 1,
           "unique": 1,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "none"
@@ -2847,6 +2854,7 @@
         "declarations": {
           "total": 18,
           "unique": 16,
+          "uniqueToTotalRatio": 0.8888888888888888,
           "properties": {
             "float": [
               "left",
@@ -2991,6 +2999,7 @@
         "declarations": {
           "total": 18,
           "unique": 16,
+          "uniqueToTotalRatio": 0.8888888888888888,
           "properties": {
             "float": [
               "left",
@@ -3135,6 +3144,7 @@
         "declarations": {
           "total": 18,
           "unique": 16,
+          "uniqueToTotalRatio": 0.8888888888888888,
           "properties": {
             "float": [
               "left",
@@ -3207,6 +3217,7 @@
         "declarations": {
           "total": 4,
           "unique": 4,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "table",
@@ -3263,6 +3274,7 @@
         "declarations": {
           "total": 4,
           "unique": 4,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "table",
@@ -3319,6 +3331,7 @@
         "declarations": {
           "total": 4,
           "unique": 4,
+          "uniqueToTotalRatio": 1,
           "properties": {
             "display": [
               "table",
