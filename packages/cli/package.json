@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "cssstats": "^4.0.1",
-    "meow": "^8.0.0",
+    "meow": "^9.0.0",
     "read-file-stdin": "^0.2.1",
     "write-file-stdout": "0.0.2"
   },
