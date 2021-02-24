@@ -2,7 +2,7 @@
   "name": "css-unit-sort",
   "description": "Sort css values no matter the unit",
   "author": "John Otander",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "main": "index.js",
   "files": [
     "index.js"

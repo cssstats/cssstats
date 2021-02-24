@@ -1,15 +1,15 @@
 {
   "private": true,
   "name": "api-stats",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "scripts": {
     "start": "micro"
   },
   "dependencies": {
     "base-64": "^1.0.0",
     "cssbeautify": "^0.3.1",
-    "cssstats": "^4.0.0",
-    "get-css": "^4.0.0",
+    "cssstats": "^4.0.1",
+    "get-css": "^4.0.1",
     "get-query-param": "^2.0.3",
     "is-present": "^1.0.0",
     "is-url": "^1.2.4",
