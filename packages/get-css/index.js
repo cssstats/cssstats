@@ -18,7 +18,7 @@ var createLink = require('./utils/create-link')
 module.exports = function (url, options, html) {
   var deferred = q.defer()
   options = options || {}
-  var timeout = options.timeout || 5000
+  options.timeout = options.timeout || 5000
 
   if (typeof url !== 'string' || isBlank(url) || !isUrl(url)) {
     throw new TypeError('get-css expected a url as a string')
@@ -75,7 +75,7 @@ module.exports = function (url, options, html) {
     }
 
     result.links.forEach(function (link) {
-      getLinkContents(link.url, options, { timeout })
+      getLinkContents(link.url, options)
         .then(function (css) {
           handleCssFromLink(link, css)
         })
@@ -139,14 +139,14 @@ module.exports = function (url, options, html) {
   } else {
     var controller = new AbortController()
 
-    var options = options || {}
+    var options = Object.assign({}, options)
     options.headers = options.headers || {}
     options.headers['User-Agent'] = options.headers['User-Agent'] || ua
     options.signal = controller.signal
 
     var timeoutTimer = setTimeout(() => {
       controller.abort()
-    }, timeout)
+    }, options.timeout)
     fetch(url, options)
       .then((response) => {
         if (response && response.status != 200) {

@@ -3,7 +3,7 @@ var fetch = require('node-fetch')
 var query = require('query-string')
 var AbortController = require('abort-controller')
 
-module.exports = function getLinkContents(linkUrl, linkOptions, options) {
+module.exports = function getLinkContents(linkUrl, options) {
   var d = q.defer()
   const { url } = query.parseUrl(linkUrl)
 
@@ -12,9 +12,7 @@ module.exports = function getLinkContents(linkUrl, linkOptions, options) {
     controller.abort()
   }, options.timeout)
 
-  linkOptions.signal = controller.signal
-
-  fetch(linkUrl, linkOptions)
+  fetch(linkUrl, Object.assign({}, options, { signal: controller.signal }))
     .then((response) => {
       if (response.status !== 200) {
         d.reject(response.error)
