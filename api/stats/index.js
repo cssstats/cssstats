@@ -10,20 +10,22 @@ const cssstats = require('cssstats')
 const cssbeautify = require('cssbeautify')
 const waybackCss = require('wayback-css')
 
-const isValidUrl = url => isPresent(url) && isUrl(url)
+const isValidUrl = (url) => isPresent(url) && isUrl(url)
 
-const retrieveCss = (url, options, date) => (date ? waybackCss(url, date) : getCss(url, options))
+const retrieveCss = (url, options, date) =>
+  date ? waybackCss(url, date) : getCss(url, options)
 
 const stats = async (req, res) => {
   const url = getParam('url', req.url)
   const date = getParam('date', req.url)
+  const skipCss = getParam('skipCss', req.url)
 
   const fullUrl = url && normalizeUrl(url, { stripAuthentication: false })
 
   if (!isValidUrl(fullUrl)) {
     return send(res, 406, {
       error: 'unacceptable',
-      message: 'Url is invalid'
+      message: 'Url is invalid',
     })
   }
 
@@ -42,7 +44,7 @@ const stats = async (req, res) => {
     credentials += ':' + fullUrlParams.password
   }
 
-  if(credentials) {
+  if (credentials) {
     headers.Authorization = `Basic ${base64.encode(credentials)}`
   }
 
@@ -53,17 +55,22 @@ const stats = async (req, res) => {
     const stats = cssstats(css.css, {
       specificityGraph: true,
       repeatedSelectors: true,
-      propertyResets: true
+      propertyResets: true,
     })
 
-    css.css = cssbeautify(css.css)
+    const data = { stats }
 
-    send(res, 200, { stats, css })
+    if (!skipCss) {
+      css.css = cssbeautify(css.css)
+      data.css = css
+    }
+
+    send(res, 200, data) 
   } catch (e) {
     send(res, 500, {
       error: 'server_error',
       message: 'Something went wrong',
-      stack: e
+      stack: e,
     })
   }
 }

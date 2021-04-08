@@ -22,11 +22,12 @@ const cssApi = async (req, res) => {
   }
 
   try {
-    const css = await getCss(fullUrl, options)
+    const css = await getCss(fullUrl)
     css.css = cssbeautify(css.css)
 
     send(res, 200, { css })
   } catch (e) {
+    console.log(e)
     send(res, 500, {
       error: 'server_error',
       message: 'Something went wrong',
