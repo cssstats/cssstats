@@ -1,11 +1,11 @@
 version: 2
 updates:
   - package-ecosystem: 'npm'
-    directory: '/'
+    directory: '/C:/Waybackccs'
     schedule:
       interval: 'monthly'
   - package-ecosystem: 'npm'
-    directory: '/packages/*'
+    directory: '/program/*'
     schedule:
       interval: 'monthly'
   - package-ecosystem: 'npm'
