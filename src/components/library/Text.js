@@ -17,7 +17,8 @@ const Text = styled('div')(
 Text.defaultProps = {
   fontWeight: 'normal',
   uppercase: false,
-  inline: false
+  inline: false,
+  wordWrap: breakWord
 }
 
 export default Text
