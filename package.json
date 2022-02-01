@@ -34,7 +34,7 @@
     "@emotion/styled": "10.0.27",
     "@mdx-js/mdx": "2.0.0-next.8",
     "@mdx-js/react": "2.0.0-next.8",
-    "theme-ui": "0.4.0-rc.5"
+    "theme-ui": "0.13.1"
   },
   "dependencies": {
     "@emotion/core": "^10.1.1",
@@ -61,7 +61,7 @@
     "react-helmet": "^6.1.0",
     "repng": "^4.0.1",
     "styled-system": "^5.1.5",
-    "theme-ui": "^0.4.0-rc.5",
+    "theme-ui": "^0.13.1",
     "titleize": "^2.1.0",
     "victory": "^35.3.3"
   }
