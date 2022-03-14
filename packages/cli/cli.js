@@ -27,5 +27,4 @@ read(inputFile, (err, buffer) => {
   }
 
   write(outputFile, JSON.stringify(cssstats(String(buffer))))
-  process.exit(0)
 })
