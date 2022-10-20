@@ -7,7 +7,7 @@ import { H2, Div, Flex, GiantSlabStat } from './library'
 export default ({ classes, id, pseudoClass, pseudoElement }) => {
   return (
     <Div>
-      <H2 fontSize={2} mb={2} children="Total Selectors by Type" />
+      <h2 sx={{ fontSize: 1, mb: 0}} children="Total Selectors by Type" />
       <p sx={{ opacity: 0.7, mt: 0, mb: 0, fontSize: 1, lineHeight: 1.5 }}>
         Selectors are the part of a CSS ruleset that describes what elements in
         a document the rule will match.

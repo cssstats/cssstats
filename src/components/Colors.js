@@ -5,37 +5,42 @@ import uniq from 'lodash.uniq'
 import { Div, Flex, Color, SectionTitle } from './library'
 
 export default ({ colors = [] }) => (
-  <Div>
+  <div>
     <h2 id="colors" sx={{ fontSize: 5 }}>Colors</h2>
     <SectionTitle
       title={`${uniq(colors).length} unique colors`}
       description="Printed by declaration order in source code"
     />
-    <Flex
-      wrap="wrap"
-      mb={5}
+    <div
+      sx={{ 
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(96px, 1fr))',
+        gap: '16px',
+      }}
       children={uniq(colors).map(color => (
-        <Div key={color} mb={2} width={[2 / 5, 1 / 3, 1 / 8]}>
+        <div key={color}>
           <Color color={color} />
-        </Div>
+        </div>
       ))}
     />
     <SectionTitle
       title={`${colors.length} total color declarations`}
       description="Sorted by like values"
     />
-    <Flex
-      wrap="wrap"
+    <div
+      sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(48px, 1fr))' }}
       children={colors.sort().map((color, i) => (
-        <Div
+        <div
           key={color * i}
           children="A"
-          fontSize="32px"
-          fontWeight={900}
-          color={color}
+          sx={{ 
+            fontSize:"32px",
+            fontWeight: 900,
+            color: color,
+          }}
           title={color}
         />
       ))}
     />
-  </Div>
+  </div>
 )

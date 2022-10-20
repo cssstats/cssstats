@@ -7,13 +7,15 @@ import GroupedBarChart from './GroupedBarChart'
 
 export default ({ data }) => {
   const properties = [
+    'font',
     'font-family',
     'font-size',
+    'font-style',
     'font-weight',
+    'letter-spacing',
     'line-height',
     'text-align',
     'text-decoration',
-    'letter-spacing'
   ]
 
   const formattedData = [

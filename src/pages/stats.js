@@ -102,13 +102,13 @@ export default () => {
               }}
             >
               <dt>File size</dt>
-              <dd sx={{ fontSize: 64, fontWeight: 700, marginLeft: 0 }}>
+              <dd sx={{ fontSize: '64px', fontWeight: 900, marginLeft: 0 }}>
                 {humanizedSize}
               </dd>
             </dl>
             <dl sx={{ marginRight: 32, paddingRight: 32 }}>
               <dt>Gzipped file size</dt>
-              <dd style={{ fontSize: 64, fontWeight: 700, marginLeft: 0 }}>
+              <dd sx={{ fontSize: '64px', fontWeight: 900, marginLeft: 0 }}>
                 {humanizedGzipSize}
               </dd>
             </dl>
@@ -341,9 +341,9 @@ export default () => {
       <div
         sx={{
           mt: 4,
-          p: 4,
-          borderRadius: '7px',
-          bg: 'darkGray',
+          p: '48px',
+          borderRadius: '16px',
+          bg: 'black',
           color: 'lightGray',
         }}
       >
@@ -397,7 +397,7 @@ export default () => {
         >
           {copied ? <CheckSquare /> : <Clipboard />}
         </IconButton>
-        <H2>Raw Css</H2>
+        <H2>Raw CSS</H2>
         <Pre>{css.trim()}</Pre>
       </Div>
     </Layout>

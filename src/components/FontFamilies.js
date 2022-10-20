@@ -16,14 +16,14 @@ export default ({ fontFamilies = [] }) => (
         key={fontFamily}
         sx={{ borderBottom: '1px solid', borderColor: 'gray', py: 4 }}
       >
-        <Text mb={3} fontWeight="bold" children={fontFamily} />
-        <Div fontSize={[4, 5, 6]} fontWeight="bold" style={{ fontFamily }}>
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        <code children={fontFamily} />
+        <div style={{ fontFamily, lineHeight: 1.25, marginTop: '8px' }}>
+          <span sx={{ fontSize: [4,5,6], fontWeight: 900 }}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
           <br />
-          <span style={{ fontWeight: 400 }}>abcdefghijklmnopqrstuvwxyz</span>
+          <span sx={{ fontWeight: 400, fontSize: '32px', }}>abcdefghijklmnopqrstuvwxyz</span>
           <br />
-          <span style={{ fontWeight: 400 }}>0123456789!@#$%^&*()-+{}[];</span>
-        </Div>
+          <span sx={{ fontWeight: 400, fontSize: '24px' }}>0123456789!@#$%^&*()-+{}[];</span>
+        </div>
       </div>
     ))}
   </Div>

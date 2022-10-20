@@ -37,7 +37,63 @@ export default ({ properties }) => {
     {
       name: 'Min Height',
       value: properties['min-height'] || []
-    }
+    },
+    {
+      name: 'Aspect Ratio',
+      value: properties['aspect-ratio'] || []
+    },
+    {
+      name: 'Left',
+      value: properties['left'] || []
+    },
+    {
+      name: 'Right',
+      value: properties['right'] || []
+    },
+    {
+      name: 'Top',
+      value: properties['top'] || []
+    },
+    {
+      name: 'Bottom',
+      value: properties['bottom'] || []
+    },
+  ]
+
+  const gridMetrics = [
+    {
+      name: 'Grid',
+      value: properties['grid'] || []
+    },
+    {
+      name: 'Grid Area',
+      value: properties['grid-area'] || []
+    },
+    {
+      name: 'Grid Auto Columns',
+      value: properties['grid-auto-columns'] || []
+    },
+    {
+      name: 'Grid Auto Flow',
+      value: properties['grid-auto-flow'] || []
+    },
+    {
+      name: 'Grid Template',
+      value: properties['grid-template'] || []
+    },
+    {
+      name: 'Grid Template Areas',
+      value: properties['grid-template-areas'] || []
+    },
+    {
+      name: 'Grid Template Columns',
+      value: properties['grid-template-columns'] || []
+    },
+    {
+      name: 'Grid Template Rows',
+      value: properties['grid-template-rows'] || []
+    },
+    
   ]
 
   const spacingMetrics = [
@@ -80,10 +136,26 @@ export default ({ properties }) => {
     {
       name: 'Margin Bottom',
       value: properties['margin-bottom'] || []
+    },
+    {
+      name: 'Gap',
+      value: properties['gap'] || []
+    },
+    {
+      name: 'Column Gap',
+      value: properties['column-gap'] || []
+    },
+    {
+      name: 'Row Gap',
+      value: properties['row-gapcolumn'] || []
     }
   ]
 
   const typographyMetrics = [
+    {
+      name: 'Font',
+      value: properties['font'] || []
+    },
     {
       name: 'Font Family',
       value: properties['font-family'] || []
@@ -91,6 +163,26 @@ export default ({ properties }) => {
     {
       name: 'Font Size',
       value: properties['font-size'] || []
+    },
+    {
+      name: 'Font Style',
+      value: properties['font-style'] || []
+    },
+    {
+      name: 'Font Variant',
+      value: properties['font-style'] || []
+    },
+    {
+      name: 'Font Variant Numeric',
+      value: properties['font-variant-numeric'] || []
+    },
+    {
+      name: 'Font Variant Position',
+      value: properties['font-variant-position'] || []
+    },
+    {
+      name: 'Font Variant Settings',
+      value: properties['font-variant-settings'] || []
     },
     {
       name: 'Font Weight',
@@ -113,13 +205,49 @@ export default ({ properties }) => {
       value: properties['text-decoration'] || []
     },
     {
-      name: 'Text Transform',
-      value: properties['text-transform'] || []
+      name: 'Text Justify',
+      value: properties['text-justify'] || []
     },
     {
       name: 'Text Shadow',
       value: properties['text-shadow'] || []
-    }
+    },
+    {
+      name: 'Text Transform',
+      value: properties['text-transform'] || []
+    },
+    {
+      name: 'Text Indent',
+      value: properties['text-indent'] || []
+    },
+    {
+      name: 'Text Overflow',
+      value: properties['text-overflow'] || []
+    },
+    {
+      name: 'Text Orientation',
+      value: properties['text-orientation'] || []
+    },
+    {
+      name: 'Text Overflow',
+      value: properties['text-orientation'] || []
+    },
+    {
+      name: 'Text Rendering',
+      value: properties['text-rendering'] || []
+    },
+    {
+      name: 'White Space',
+      value: properties['white-space'] || []
+    },
+    {
+      name: 'Word Break',
+      value: properties['word-break'] || []
+    },
+    {
+      name: 'Word Spacing',
+      value: properties['word-spacing'] || []
+    },
   ]
 
   const colorMetrics = [
@@ -134,6 +262,26 @@ export default ({ properties }) => {
     {
       name: 'Border Color',
       value: properties['border-color'] || []
+    },
+    {
+      name: 'Accent Color',
+      value: properties['accent-color'] || []
+    },
+    {
+      name: 'Border Left Color',
+      value: properties['border-left-color'] || []
+    },
+    {
+      name: 'Border Right Color',
+      value: properties['border-right-color'] || []
+    },
+    {
+      name: 'Border Top Color',
+      value: properties['border-top-color'] || []
+    },
+    {
+      name: 'Border Bottom Color',
+      value: properties['border-bottom-color'] || []
     },
     {
       name: 'Box Shadow',
@@ -155,13 +303,223 @@ export default ({ properties }) => {
       value: properties['border-style'] || []
     },
     {
+      name: 'Border Left',
+      value: properties['border-left'] || []
+    },
+    {
+      name: 'Border Left Width',
+      value: properties['border-left-width'] || []
+    },
+    {
+      name: 'Border Left Style',
+      value: properties['border-left-style'] || []
+    },
+    {
+      name: 'Border Left Color',
+      value: properties['border-left-style'] || []
+    },
+    {
+      name: 'Border Right',
+      value: properties['border-right'] || []
+    },
+    {
+      name: 'Border Right Width',
+      value: properties['border-right-width'] || []
+    },
+    {
+      name: 'Border Right Style',
+      value: properties['border-right-style'] || []
+    },
+    {
+      name: 'Border Right Color',
+      value: properties['border-right-style'] || []
+    },
+    {
+      name: 'Border Top',
+      value: properties['border-top'] || []
+    },
+    {
+      name: 'Border Top Width',
+      value: properties['border-top-width'] || []
+    },
+    {
+      name: 'Border Top Style',
+      value: properties['border-top-style'] || []
+    },
+    {
+      name: 'Border Top Color',
+      value: properties['border-top-style'] || []
+    },
+    {
+      name: 'Border Bottom',
+      value: properties['border-bottom'] || []
+    },
+    {
+      name: 'Border Bottom Width',
+      value: properties['border-bottom-width'] || []
+    },
+    {
+      name: 'Border Bottom Style',
+      value: properties['border-bottom-style'] || []
+    },
+    {
+      name: 'Border Bottom Color',
+      value: properties['border-bottom-style'] || []
+    },
+    {
+      name: 'Border Collapse',
+      value: properties['border-collapse'] || []
+    },
+    {
+      name: 'Border Image',
+      value: properties['border-image'] || []
+    },
+    {
+      name: 'Border Image Outset',
+      value: properties['border-image-outset'] || []
+    },
+    {
+      name: 'Border Image Repeat',
+      value: properties['border-image-repeat'] || []
+    },
+    {
+      name: 'Border Image Slice',
+      value: properties['border-image-repeat'] || []
+    },
+    {
+      name: 'Border Image Source',
+      value: properties['border-image-source'] || []
+    },
+    {
+      name: 'Border Image Width',
+      value: properties['border-image-width'] || []
+    },
+    {
       name: 'Border Radius',
       value: properties['border-radius'] || []
     },
     {
+      name: 'Border Radius Top Left',
+      value: properties['border-radius-top-left'] || []
+    },
+    {
+      name: 'Border Radius Top Right',
+      value: properties['border-radius-top-right'] || []
+    },
+    {
+      name: 'Border Radius Bottom Left',
+      value: properties['border-radius-bottom-left'] || []
+    },
+    {
+      name: 'Border Radius Bottom Right',
+      value: properties['border-radius-bottom-right'] || []
+    },
+    {
       name: 'Box Shadow',
       value: properties['box-shadow'] || []
-    }
+    },
+  ]
+
+  const backgroundMetrics = [
+    {
+      name: 'Background',
+      value: properties['background'] || []
+    },
+    {
+      name: 'Background Attachment',
+      value: properties['background-attachment'] || []
+    },
+    {
+      name: 'Background Blend Mode',
+      value: properties['background-blend-mode'] || []
+    },
+    {
+      name: 'Background Image',
+      value: properties['background-image'] || []
+    },
+    {
+      name: 'Background Clip',
+      value: properties['background-clip'] || []
+    },
+    {
+      name: 'Background Origin',
+      value: properties['background-origin'] || []
+    },
+    {
+      name: 'Background Position',
+      value: properties['background-position'] || []
+    },
+    {
+      name: 'Background Position X',
+      value: properties['background-position-x'] || []
+    },
+    {
+      name: 'Background Position Y',
+      value: properties['background-position-y'] || []
+    },
+    {
+      name: 'Background Repeat',
+      value: properties['background-repeat'] || []
+    },
+    {
+      name: 'Background Size',
+      value: properties['background-size'] || []
+    },
+  ]
+
+  const motionMetrics = [
+    {
+      name: 'Transition',
+      value: properties['transition'] || []
+    },
+    {
+      name: 'Transition Delay',
+      value: properties['transition-delay'] || []
+    },
+    {
+      name: 'Transition Duration',
+      value: properties['transition-duration'] || []
+    },
+    {
+      name: 'Transition Timing Function',
+      value: properties['transition-timing-function'] || []
+    },
+    {
+      name: 'Animation',
+      value: properties['animation'] || []
+    },
+    {
+      name: 'Animation Delay',
+      value: properties['animation-delay'] || []
+    },
+    {
+      name: 'Animation Direction',
+      value: properties['animation-direction'] || []
+    },
+    {
+      name: 'Animation Duration',
+      value: properties['animation-duration'] || []
+    },
+    {
+      name: 'Animation Fill Mode',
+      value: properties['animation-fill-mode'] || []
+    },
+    {
+      name: 'Animation Iteration Count',
+      value: properties['animation-iteration-count'] || []
+    },
+    {
+      name: 'Animation Name',
+      value: properties['animation-name'] || []
+    },
+    {
+      name: 'Animation Play State',
+      value: properties['animation-play-state'] || []
+    },
+    {
+      name: 'Animation Timing Function',
+      value: properties['animation-timing-function'] || []
+    },
   ]
 
   return (
@@ -235,6 +593,57 @@ export default ({ properties }) => {
       />
 
       <h3
+        id="grid"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Grid
+      </h3>
+      <Flex
+        mt={0}
+        mb={4}
+        wrap="wrap"
+        children={gridMetrics.map(metric => (
+          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+            <SlabStat
+              title={metric.name}
+              stat={intComma(metric.value.length)}
+            />
+          </Flex>
+        ))}
+      />
+
+      <h3
+        id="skins"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Skins
+      </h3>
+      <Flex
+        mt={0}
+        mb={4}
+        wrap="wrap"
+        children={colorMetrics.map(metric => (
+          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+            <SlabStat
+              title={metric.name}
+              stat={intComma(metric.value.length)}
+            />
+          </Flex>
+        ))}
+      />
+      <h3
         id="skins"
         sx={{
           mt: 4,
@@ -306,6 +715,64 @@ export default ({ properties }) => {
           mt={0}
           wrap="wrap"
           children={borderMetrics.map(metric => (
+            <Flex
+              key={metric.name}
+              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+            >
+              <SlabStat
+                title={metric.name}
+                stat={intComma(metric.value.length)}
+              />
+            </Flex>
+          ))}
+        />
+      </div>
+      <h3
+        id="backgrounds"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Background
+      </h3>
+      <div sx={{}}>
+        <Flex
+          mt={0}
+          wrap="wrap"
+          children={backgroundMetrics.map(metric => (
+            <Flex
+              key={metric.name}
+              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+            >
+              <SlabStat
+                title={metric.name}
+                stat={intComma(metric.value.length)}
+              />
+            </Flex>
+          ))}
+        />
+      </div>
+      <h3
+        id="Motion"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Motion
+      </h3>
+      <div sx={{}}>
+        <Flex
+          mt={0}
+          wrap="wrap"
+          children={motionMetrics.map(metric => (
             <Flex
               key={metric.name}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
