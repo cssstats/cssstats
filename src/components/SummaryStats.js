@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { intComma } from 'humanize-plus'
 
-import { H2, Flex, GiantSlabStat } from './library'
+import { Flex, GiantSlabStat } from './library'
 
 export default ({ rules, selectors, declarations, properties }) => (
   <div>
