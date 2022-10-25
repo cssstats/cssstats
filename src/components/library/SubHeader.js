@@ -1,26 +1,14 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
-import Div from './Div'
-import Text from './Text'
-import H2 from './H2'
 
 const SubHeader = props => (
-  <Div {...props}>
-    <H2
-      color="inherit"
-      fontSize={[3, 5, 5]}
-      mt={0}
-      mb={2}
+  <div {...props}>
+    <h2
       children={props.title}
     />
-    <Text
-      color="inherit"
-      fontWeight="500"
-      fontSize={[0, 1, 1]}
-      mt={0}
-      mb={2}
-      children={props.description}
-    />
-  </Div>
+    <p children={props.description} />
+  </div>
 )
 
 export default SubHeader

@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import titleize from 'titleize'
 
-import { H2, Div, Flex, SlabStat } from './library'
+import {  SlabStat } from './library'
 
 export default ({ properties }) => {
   const spacingProperties = [
@@ -19,14 +19,13 @@ export default ({ properties }) => {
   ]
 
   return (
-    <Div py={[3, 4, 5]}>
-      <H2 mb={3} children="Spacing Resets" />
+    <div>
+      <h2 children="Spacing Resets" />
       <p sx={{ fontSize: 0, mt: 0 }}>
         Amount of times each property has been set to 0
       </p>
 
-      <Flex
-        wrap="wrap"
+      <div sx={{ display: 'flex', flexWrap: 'wrap' }}
         children={spacingProperties.map(prop => {
           const props = properties[prop] || []
           const resets = props.filter(v => v === '0')
@@ -41,6 +40,6 @@ export default ({ properties }) => {
           )
         })}
       />
-    </Div>
+    </div>
   )
 }

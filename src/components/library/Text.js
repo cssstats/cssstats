@@ -1,23 +1,14 @@
-import styled from '@emotion/styled'
-import { space, fontSize, width, color, fontWeight } from 'styled-system'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
-const Text = styled('div')(
-  [],
-  props => ({
-    textTransform: `${props.uppercase ? 'uppercase' : 'initial'}`,
-    display: `${props.inline ? 'inline-block' : 'block'}`
-  }),
-  space,
-  fontSize,
-  width,
-  color,
-  fontWeight
+const Text = props => (
+  <p sx={{
+    maxWidth: '80ch',
+    lineHeight: 1.5
+  }} {...props} />
 )
 
 Text.defaultProps = {
-  fontWeight: 'normal',
-  uppercase: false,
-  inline: false
 }
 
 export default Text
