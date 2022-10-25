@@ -5,7 +5,7 @@ import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { Styled, IconButton } from 'theme-ui'
 
-import { H2, Div, Pre, Flex, Loading, SubHeader } from '../components/library'
+import { Pre, Flex, Loading, SubHeader } from '../components/library'
 
 import { CheckSquare, Clipboard } from 'react-feather'
 import copy from 'copy-to-clipboard'
@@ -64,13 +64,13 @@ export default () => {
   if (!stats) {
     return (
       <Layout p={[4, 5, 6]} initialUrl={url}>
-        <Flex h={9 / 10} items="center">
+        <div sx={{ display: 'flex', alignItems: 'center', }}>
           <Loading />
-          <H2 my={0} pl={3}>
+          <h2>
             Downloading and analyzing CSS from{' '}
             <Styled.a href={isUrl(url) ? url : '//' + url}>{url}</Styled.a>
-          </H2>
-        </Flex>
+          </h2>
+        </div>
       </Layout>
     )
   }
@@ -364,9 +364,9 @@ export default () => {
       <Declarations properties={properties} />
       <Colors colors={colors} />
       <BackgroundColors backgroundColors={backgroundColors} />
-      <H2 id="typography" fontSize={6}>
+      <h2 id="typography">
         Typography
-      </H2>
+      </h2>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
       <SpacingResets properties={properties} />
@@ -383,11 +383,10 @@ export default () => {
       <DeclarationsChartSpacing data={declarations} />
       <DeclarationsChartSpacingMargin data={declarations} />
 
-      <Div mt={5}>
+      <div sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
         <IconButton
           role="button"
           title="Copy CSS to clipboard"
-          sx={{ float: 'right' }}
           tabindex="0"
           onClick={() => {
             setCopied(true)
@@ -397,9 +396,9 @@ export default () => {
         >
           {copied ? <CheckSquare /> : <Clipboard />}
         </IconButton>
-        <H2>Raw CSS</H2>
+        <h4 sx={{ my: 0 }}>Raw CSS</h4>
         <Pre>{css.trim()}</Pre>
-      </Div>
+      </div>
     </Layout>
   )
 }
