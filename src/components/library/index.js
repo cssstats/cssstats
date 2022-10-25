@@ -1,7 +1,6 @@
 export { default as theme } from '../../theme'
 export { default as Font } from './Font'
 export { default as H1 } from './H1'
-export { default as H2 } from './H2'
 export { default as Text } from './Text'
 export { default as SectionTitle } from './SectionTitle'
 export { default as Button } from './Button'
