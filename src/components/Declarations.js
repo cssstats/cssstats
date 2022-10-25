@@ -546,9 +546,9 @@ export default ({ properties }) => {
         Layout and Structure
       </h3>
       <div>
-        <div sx={{ display: 'flex', }}
+        <div sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' ,}} 
           children={metrics.map(metric => (
-            <div sx={{ display: 'flex', width: ['50%', '25%', '20%' ]}}
+            <div 
               key={metric.name}
             >
               <SlabStat
@@ -668,8 +668,7 @@ export default ({ properties }) => {
       <div
          sx={{ display: 'flex', flexWrap: 'wrap'}}>
         <div
-          mt={0}
-          wrap="wrap"
+         sx={{ display: 'flex', flexWrap: 'wrap', }}
           children={typographyMetrics.map(metric => (
             <div
               key={metric.name}
@@ -697,6 +696,7 @@ export default ({ properties }) => {
       </h3>
       <div>
         <div
+          sx={{ display: 'flex', flexWrap: 'wrap'}}
           children={borderMetrics.map(metric => (
             <div
               key={metric.name}
@@ -722,8 +722,9 @@ export default ({ properties }) => {
       >
         Background
       </h3>
-      <div sx={{}}>
+      <div>
         <div
+          sx={{ display: 'flex', flexWrap: 'wrap' }}
           children={backgroundMetrics.map(metric => (
             <div
               key={metric.name}

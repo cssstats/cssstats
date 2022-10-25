@@ -1,28 +1,37 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 
-import { Flex, Div, Text, Link, SectionTitle, SlabStat } from './library'
+import { Text, Link, SectionTitle, SlabStat } from './library'
 
 import LineChart from './LineChart'
 
 export default ({ data, average, max }) => (
-  <Div>
+  <div sx={{
+    py: 4,
+  }}>
     <SectionTitle title="Specificity" />
 
-    <Flex alignItems="top" my={3} wrap={['wrap', 'wrap', 'nowrap']}>
-      <SlabStat mr={5} title="Average score" stat={average} />
-      <SlabStat mr={5} title="Max score" stat={max} />
+    <div sx={{ 
+      display: 'flex',
+      alignItems: "top",
+      my:3,
+      wrap: ['wrap', 'wrap', 'nowrap'],
+      gap: '64px',
+    }}>
+      <SlabStat  title="Average score" stat={average} />
+      <SlabStat title="Max score" stat={max} />
       <Text mt={0} style={{ lineHeight: 1.5 }} width={1}>
         Base 10 specificity score for each selector by source order. Generally,
-        lower scores and flatter curves are better for maintainability.
-        <Link
-          ml={2}
+        lower scores and flatter curves are better for maintainability.  <a
+          title="Specificity Graph"
           href="https://csswizardry.com/2014/10/the-specificity-graph/"
         >
           Learn More
-        </Link>
+        </a>
       </Text>
-    </Flex>
+    </div>
 
     <LineChart data={data} />
-  </Div>
+  </div>
 )
