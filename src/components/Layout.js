@@ -47,6 +47,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             fontWeight: 'bold',
             p: [1, 2, 3],
             mb: 3,
+            boxShadow: '0 0px 0px 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)',
             '& a': {
               color: 'black',
               textDecoration: 'none',
@@ -94,14 +95,23 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                     onUrlChange(url)
                   }}
                 >
-                  <Label display="none">Url</Label>
-                  <Input
+                  <label sx={{display: 'block'}}><span sx={{ display: 'none' }}>URL</span>
+                  <input
                     placeholder="Url to extract CSS stats"
                     inputMode="url"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
-                    sx={{ color: 'text' }}
+                    sx={{ 
+                      color: 'text', 
+                      appearance: 'none', 
+                      WebkitAppearance: 'none', 
+                      border: 0, 
+                      boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)',
+                      p: 3,
+                      width: '100%',
+                    }}
                   />
+                </label>
                 </form>
               </div>
             ) : null}

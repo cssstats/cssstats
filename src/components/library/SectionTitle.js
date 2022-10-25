@@ -10,9 +10,9 @@ const SectionTitle = props => {
   const slug = slugify(withoutLeadingNumbers(props.title))
 
   return (
-    <div mb={3} {...props}>
-      <h2 id={slug} children={props.title} />
-      <Text mt={0} children={props.description} />
+    <div sx={{ mb: 4, }} {...props}>
+      <h3 sx={{ fontSize: 4, mb: 1 }} id={slug} children={props.title} />
+      <Text children={props.description} />
     </div>
   )
 }

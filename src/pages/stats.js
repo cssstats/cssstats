@@ -87,12 +87,12 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
-      <header sx={{ pt: 4, pb: 5, display: 'flex', justifyContent: 'space-between' }}>
+      <header sx={{ pt: 5, pb: 5, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
     <div>
-        <h1 children={url} sx={{ lineHeight: 1, fontSize: 6, fontWeight: 900, mt: 0, mb: 2, }} />
+        <h1 children={url} sx={{ lineHeight: 1, fontSize: 4, fontWeight: 900, mt: 0, mb: 2, }} />
         <h2 children={pageTitle} sx={{ opacity: .7, fontSize: '16px', fontWeight: 400, my: 0 }}/>
     </div>
-    <div sx={{ boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', display: 'flex', alignItems: 'center', px: 4, borderRadius: '7px', }}>
+    <div sx={{ boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', display: 'flex', alignItems: 'center', py: 3, px: 4, borderRadius: '7px', }}>
             <dl
               sx={{
                 my: 0,

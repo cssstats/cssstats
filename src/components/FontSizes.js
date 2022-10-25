@@ -13,15 +13,14 @@ export default ({ fontSizes = [] }) => (
     />
 
     {sort(uniq(fontSizes)).map(fontSize => (
-      <div sx={{ borderBottom: '1px solid', borderColor: 'gray', py: 3 }}>
-        <Text fontSize={1} mb={0} fontWeight={500}>
+      <div style={{ borderBottom: '1px solid', borderColor: 'gray', padding: '0 16px' }}>
+        <p style={{ lineHeight: 1, marginTop: 0, marginBottom: '8px' }}>
           {fontSize}
-        </Text>
-        <Text
+        </p>
+        <p
           key={fontSize}
-          fontWeight="700"
-          style={{ fontSize, whiteSpace: 'nowrap' }}
-          children="Quick brown fox jumped"
+          style={{ fontWeight: 900, margin: 0, lineHeight: 1, fontSize, whiteSpace: 'nowrap' }}
+          children="Quick brown fox jumped over the slow dog"
         />
       </div>
     ))}
@@ -36,7 +35,7 @@ export default ({ fontSizes = [] }) => (
         paddingBottom: 16
       }}
     >
-      <table cellSpacing="0" cellPadding="0">
+      <table cellSpacing="0" cellPadding="0" width= '100%'>
         <tr>
           {sort(fontSizes).map(fontSize => (
             <td
