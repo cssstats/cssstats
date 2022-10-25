@@ -87,38 +87,36 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
-      <header sx={{ pt: 4, pb: 5 }}>
-        <h1 children={url} sx={{ lineHeight: 1, fontSize: 6, fontWeight: 900, my: 0, }} />
+      <header sx={{ pt: 4, pb: 5, display: 'flex', justifyContent: 'space-between' }}>
+    <div>
+        <h1 children={url} sx={{ lineHeight: 1, fontSize: 6, fontWeight: 900, mt: 0, mb: 2, }} />
         <h2 children={pageTitle} sx={{ opacity: .7, fontSize: '16px', fontWeight: 400, my: 0 }}/>
-      </header>
-      <div sx={{ display: 'flex' }}>
-        <div
-          sx={{ bg: 'lightGray', color: 'darkGray', borderRadius: '6px', p: 4 }}
-        >
-          <div sx={{ display: 'flex', }}>
+    </div>
+    <div sx={{ boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', display: 'flex', alignItems: 'center', px: 4, borderRadius: '7px', }}>
             <dl
               sx={{
+                my: 0,
                 marginRight: 32,
                 paddingRight: 32,
-                borderRight: '1px solid',
-                borderColor: 'gray',
+                fontSize: 1,
               }}
             >
               <dt>File size</dt>
-              <dd sx={{ fontSize: '64px', fontWeight: 900, marginLeft: 0 }}>
+              <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
                 {humanizedSize}
               </dd>
             </dl>
-            <dl sx={{ marginRight: 32, paddingRight: 32 }}>
-              <dt>Gzipped file size</dt>
-              <dd sx={{ fontSize: '64px', fontWeight: 900, marginLeft: 0 }}>
+            <dl sx={{ my: 0, fontSize: 1,  }}>
+              <dt>Gzipped size</dt>
+              <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
                 {humanizedGzipSize}
               </dd>
             </dl>
-          </div>
-        </div>
+    </div>
+      </header>
+      <div sx={{ display: 'flex' }}>
         <div sx={{ width: '100%' }}>
-          <div sx={{ pl: 4, width: '100%' }}>
+          <div sx={{ pl: 4, width: '100%', display: 'none', }}>
             <table sx={{ fontSize: 1, width: '100%' }} cellSpacing="0">
               <tr>
                 <th
