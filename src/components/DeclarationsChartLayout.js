@@ -3,7 +3,7 @@ import uniq from 'lodash.uniq'
 
 import { formatNumber, intComma } from 'humanize-plus'
 
-import { Div, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -32,7 +32,7 @@ export default ({ data }) => {
   ]
 
   return (
-    <Div pt={[4, 5, 6]}>
+    <div>
       <SectionTitle
         title="Total vs Unique Declarations"
         description={
@@ -50,6 +50,6 @@ export default ({ data }) => {
       <SectionTitle title="Layout and Structure" />
 
       <GroupedBarChart data={formattedData} />
-    </Div>
+    </div>
   )
 }
