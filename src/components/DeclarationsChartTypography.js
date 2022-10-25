@@ -1,7 +1,7 @@
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { Div, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -27,10 +27,9 @@ export default ({ data }) => {
   ]
 
   return (
-    <Div mt={4}>
+    <div>
       <SectionTitle title="Typography" />
-
       <GroupedBarChart data={formattedData} />
-    </Div>
+    </div>
   )
 }

@@ -5,7 +5,7 @@ import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { Styled, IconButton } from 'theme-ui'
 
-import { Flex, Loading, SubHeader } from '../components/library'
+import { Loading, SubHeader } from '../components/library'
 
 import { CheckSquare, Clipboard } from 'react-feather'
 import copy from 'copy-to-clipboard'
@@ -87,12 +87,15 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
-      <SubHeader title={url} description={pageTitle} mb={5} />
-      <Flex>
+      <header sx={{ pt: 4, pb: 5 }}>
+        <h1 children={url} sx={{ lineHeight: 1, fontSize: 6, fontWeight: 900, my: 0, }} />
+        <h2 children={pageTitle} sx={{ opacity: .7, fontSize: '16px', fontWeight: 400, my: 0 }}/>
+      </header>
+      <div sx={{ display: 'flex' }}>
         <div
-          sx={{ bg: 'lightGray', color: 'darkGray', borderRadius: '7px', p: 4 }}
+          sx={{ bg: 'lightGray', color: 'darkGray', borderRadius: '6px', p: 4 }}
         >
-          <Flex>
+          <div sx={{ display: 'flex', }}>
             <dl
               sx={{
                 marginRight: 32,
@@ -112,7 +115,7 @@ export default () => {
                 {humanizedGzipSize}
               </dd>
             </dl>
-          </Flex>
+          </div>
         </div>
         <div sx={{ width: '100%' }}>
           <div sx={{ pl: 4, width: '100%' }}>
@@ -336,11 +339,12 @@ export default () => {
             </table>
           </div>
         </div>
-      </Flex>
+      </div>
 
       <div
         sx={{
           mt: 4,
+          mb: 5,
           p: '48px',
           borderRadius: '16px',
           bg: 'black',

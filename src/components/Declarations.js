@@ -527,8 +527,12 @@ export default ({ properties }) => {
       <h2
         id="total-declaration-counts"
         children="Total Declaration Counts"
+        sx={{
+          fontSize: 5,
+          mb: 0,
+        }}
       />
-      <p sx={{ fontSize: 1, mt: 0, opacity: 0.7, lineHeight: 1.5 }}>
+      <p sx={{ fontSize: 2, mt: 0, opacity: 0.7, lineHeight: 1.5 }}>
         A declaration represents a property value pair. e.g. display: block
         would represent 1 declaration
       </p>

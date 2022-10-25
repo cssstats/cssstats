@@ -16,7 +16,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
 
   return (
     <div>
-      <style>{`* { box-sizing: border-box; font-family: Inter,'-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', system, sans-serif; }`}</style>
+      <style>{`* { box-sizing: border-box; font-family: Inter,-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', system, sans-serif; }`}</style>
       <Helmet
         title={'CSS Stats'}
         meta={[

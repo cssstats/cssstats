@@ -3,10 +3,10 @@ import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 import sort from 'css-unit-sort'
 
-import { Div, Text, SectionTitle } from './library'
+import { Text, SectionTitle } from './library'
 
 export default ({ fontSizes = [] }) => (
-  <Div mt={5} style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+  <div sx={{ my: 5, overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
     <SectionTitle
       title="Type Scale"
       description={`${uniq(fontSizes).length} Unique font sizes`}
@@ -80,5 +80,5 @@ export default ({ fontSizes = [] }) => (
         </tr>
       </table>
     </div>
-  </Div>
+  </div>
 )

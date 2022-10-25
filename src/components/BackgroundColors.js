@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 
-import { Div, Flex, SectionTitle, BackgroundColor } from './library'
+import { Flex, SectionTitle, BackgroundColor } from './library'
 
 export default ({ backgroundColors = [] }) => (
   <div sx={{ py: [4, 5, 6] }}>
@@ -32,7 +32,7 @@ export default ({ backgroundColors = [] }) => (
       title={`${backgroundColors.length} Total Background Colors`}
       description={'Visualized by source code order'}
     />
-    <Div
+    <div
       style={{
         display: 'table',
         tableLayout: 'fixed',
@@ -50,7 +50,7 @@ export default ({ backgroundColors = [] }) => (
       ))}
     />
     <p sx={{ mt: 4 }}>Sorted by similar values</p>
-    <Div
+    <div
       style={{
         display: 'table',
         tableLayout: 'fixed',

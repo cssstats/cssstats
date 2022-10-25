@@ -2,10 +2,10 @@
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 
-import { Div, Text, SectionTitle } from './library'
+import { Text, SectionTitle } from './library'
 
 export default ({ fontFamilies = [] }) => (
-  <Div mt={5}>
+  <div>
     <SectionTitle
       title={`${uniq(fontFamilies).length} Unique Font Families`}
       description={`${fontFamilies.length} total`}
@@ -26,5 +26,5 @@ export default ({ fontFamilies = [] }) => (
         </div>
       </div>
     ))}
-  </Div>
+  </div>
 )

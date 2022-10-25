@@ -1,9 +1,11 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import uniq from 'lodash.uniq'
 
 import { intComma } from 'humanize-plus'
 
-import { Div, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -29,13 +31,13 @@ export default ({ data }) => {
   ]
 
   return (
-    <Div mt={4}>
+    <div>
       <SectionTitle
         title="Total vs Unique Declarations"
         description={`${total} total, ${unique} unique`}
       />
 
       <GroupedBarChart data={formattedData} />
-    </Div>
+    </div>
   )
 }
