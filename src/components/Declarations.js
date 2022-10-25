@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import { intComma } from 'humanize-plus'
 
-import { H2, Div, Flex, SlabStat } from './library'
+import { SlabStat } from './library'
 
 export default ({ properties }) => {
   const metrics = [
@@ -523,12 +523,9 @@ export default ({ properties }) => {
   ]
 
   return (
-    <Div py={[4, 5]}>
-      <H2
+    <div>
+      <h2
         id="total-declaration-counts"
-        mb={2}
-        fontSize={4}
-        fontWeight={900}
         children="Total Declaration Counts"
       />
       <p sx={{ fontSize: 1, mt: 0, opacity: 0.7, lineHeight: 1.5 }}>
@@ -549,20 +546,16 @@ export default ({ properties }) => {
         Layout and Structure
       </h3>
       <div>
-        <Flex
-          mt={0}
-          wrap="wrap"
+        <div sx={{ display: 'flex', }}
           children={metrics.map(metric => (
-            <Flex
-              mb={3}
+            <div sx={{ display: 'flex', width: ['50%', '25%', '20%' ]}}
               key={metric.name}
-              sx={{ width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
                 title={metric.name}
                 stat={intComma(metric.value.length)}
               />
-            </Flex>
+            </div>
           ))}
         />
       </div>
@@ -578,17 +571,15 @@ export default ({ properties }) => {
       >
         Spacing
       </h3>
-      <Flex
-        mt={0}
-        mb={4}
-        wrap="wrap"
+      <div
+        sx={{ display: 'flex', flexWrap: 'wrap' }}
         children={spacingMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+          <div key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
             />
-          </Flex>
+          </div>
         ))}
       />
 
@@ -604,43 +595,15 @@ export default ({ properties }) => {
       >
         Grid
       </h3>
-      <Flex
-        mt={0}
-        mb={4}
-        wrap="wrap"
+      <div
+        sx={{ display: 'flex', flexWrap: 'wrap', }}
         children={gridMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+          <div key={metric.name} sx={{ mb: 3, display: 'flex', width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
             />
-          </Flex>
-        ))}
-      />
-
-      <h3
-        id="skins"
-        sx={{
-          mt: 4,
-          mb: 3,
-          fontSize: 1,
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em'
-        }}
-      >
-        Skins
-      </h3>
-      <Flex
-        mt={0}
-        mb={4}
-        wrap="wrap"
-        children={colorMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
-            <SlabStat
-              title={metric.name}
-              stat={intComma(metric.value.length)}
-            />
-          </Flex>
+          </div>
         ))}
       />
       <h3
@@ -655,17 +618,38 @@ export default ({ properties }) => {
       >
         Skins
       </h3>
-      <Flex
-        mt={0}
-        mb={4}
-        wrap="wrap"
+      <div
+        sx={{ display: 'flex', flexWrap: 'wrap' }} 
         children={colorMetrics.map(metric => (
-          <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+          <div key={metric.name} sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
             />
-          </Flex>
+          </div>
+        ))}
+      />
+      <h3
+        id="skins"
+        sx={{
+          mt: 4,
+          mb: 3,
+          fontSize: 1,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Skins
+      </h3>
+      <div
+        sx={{ display: 'flex', flexWrap: 'wrap' }}
+        children={colorMetrics.map(metric => (
+          <div key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'], display: 'flex', }}>
+            <SlabStat
+              title={metric.name}
+              stat={intComma(metric.value.length)}
+            />
+          </div>
         ))}
       />
 
@@ -681,20 +665,21 @@ export default ({ properties }) => {
       >
         Typography
       </h3>
-      <div sx={{}}>
-        <Flex
+      <div
+         sx={{ display: 'flex', flexWrap: 'wrap'}}>
+        <div
           mt={0}
           wrap="wrap"
           children={typographyMetrics.map(metric => (
-            <Flex
+            <div
               key={metric.name}
-              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+              sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
                 title={metric.name}
                 stat={intComma(metric.value.length)}
               />
-            </Flex>
+            </div>
           ))}
         />
       </div>
@@ -710,12 +695,10 @@ export default ({ properties }) => {
       >
         Borders
       </h3>
-      <div sx={{}}>
-        <Flex
-          mt={0}
-          wrap="wrap"
+      <div>
+        <div
           children={borderMetrics.map(metric => (
-            <Flex
+            <div
               key={metric.name}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
             >
@@ -723,7 +706,7 @@ export default ({ properties }) => {
                 title={metric.name}
                 stat={intComma(metric.value.length)}
               />
-            </Flex>
+            </div>
           ))}
         />
       </div>
@@ -740,19 +723,17 @@ export default ({ properties }) => {
         Background
       </h3>
       <div sx={{}}>
-        <Flex
-          mt={0}
-          wrap="wrap"
+        <div
           children={backgroundMetrics.map(metric => (
-            <Flex
+            <div
               key={metric.name}
-              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+              sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
                 title={metric.name}
                 stat={intComma(metric.value.length)}
               />
-            </Flex>
+            </div>
           ))}
         />
       </div>
@@ -769,22 +750,21 @@ export default ({ properties }) => {
         Motion
       </h3>
       <div sx={{}}>
-        <Flex
-          mt={0}
-          wrap="wrap"
+        <div
+          sx={{ display: 'flex', flexWrap: 'wrap'}}
           children={motionMetrics.map(metric => (
-            <Flex
+            <div
               key={metric.name}
-              sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
+              sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
                 title={metric.name}
                 stat={intComma(metric.value.length)}
               />
-            </Flex>
+            </div>
           ))}
         />
       </div>
-    </Div>
+    </div>
   )
 }

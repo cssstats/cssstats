@@ -5,7 +5,7 @@ import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { Styled, IconButton } from 'theme-ui'
 
-import { Pre, Flex, Loading, SubHeader } from '../components/library'
+import { Flex, Loading, SubHeader } from '../components/library'
 
 import { CheckSquare, Clipboard } from 'react-feather'
 import copy from 'copy-to-clipboard'
@@ -383,7 +383,8 @@ export default () => {
       <DeclarationsChartSpacing data={declarations} />
       <DeclarationsChartSpacingMargin data={declarations} />
 
-      <div sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
+      <header sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
+        <h4 sx={{ my: 0 }}>Raw CSS</h4>
         <IconButton
           role="button"
           title="Copy CSS to clipboard"
@@ -396,9 +397,16 @@ export default () => {
         >
           {copied ? <CheckSquare /> : <Clipboard />}
         </IconButton>
-        <h4 sx={{ my: 0 }}>Raw CSS</h4>
-        <Pre>{css.trim()}</Pre>
-      </div>
+      </header>
+        
+      <pre sx={{
+        overflow: 'scroll',
+        height: '480px',
+        resize: 'all',
+        p: 4,
+        borderRadius: '6px',
+        boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)'
+      }}>{css.trim()}</pre>
     </Layout>
   )
 }
