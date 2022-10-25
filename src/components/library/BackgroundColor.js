@@ -1,9 +1,8 @@
 import React from 'react'
-import Div from './Div'
 import Text from './Text'
 
 const BackgroundColor = props => (
-  <Div>
+  <div>
     <svg
       viewBox="0 0 32 16"
       style={{
@@ -15,8 +14,8 @@ const BackgroundColor = props => (
       <rect width="32" height="16" fill={props.color} />
     </svg>
 
-    <Text fontSize={0} mt={2} children={props.color} />
-  </Div>
+    <Text children={props.color} />
+  </div>
 )
 
 export default BackgroundColor
