@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 
-import { Div, Flex, Color, SectionTitle } from './library'
+import { Color, SectionTitle } from './library'
 
 export default ({ colors = [] }) => (
   <div>
