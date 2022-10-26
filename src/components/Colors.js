@@ -8,7 +8,7 @@ export default ({ colors = [] }) => (
   <div sx={{ pb: 6 }}>
   <SectionTitle 
     title='color' 
-    description={`${uniq(colors).length} unique colors / ${colors.length} total declarations`} />
+    description={`${uniq(colors).length} Unique / ${colors.length} Total `} />
     <div sx={{ px: 4 }}> 
       <h4>Unique</h4>
     </div>
