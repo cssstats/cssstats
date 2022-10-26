@@ -2,15 +2,13 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 
-import { Text, Link, SectionTitle, SlabStat } from './library'
+import { Text, Link, GraphTitle, SlabStat } from './library'
 
 import LineChart from './LineChart'
 
-export default ({ data, average, max }) => (
-  <div sx={{
-    py: 4,
-  }}>
-    <SectionTitle title="Specificity" />
+export default ({ data, average, max, ...props }) => (
+  <div {...props}>
+    <GraphTitle title="Specificity" />
 
     <div sx={{ 
       display: 'flex',

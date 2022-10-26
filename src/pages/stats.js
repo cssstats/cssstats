@@ -64,7 +64,7 @@ export default () => {
   if (!stats) {
     return (
       <Layout p={[4, 5, 6]} initialUrl={url}>
-        <div sx={{ display: 'flex', alignItems: 'center', }}>
+        <div sx={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px' }}>
           <Loading />
           <h2>
             Downloading and analyzing CSS from{' '}
@@ -87,17 +87,22 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
-      <header sx={{ pt: 5, pb: 5, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <header sx={{ maxWidth: '96rem', mx: 'auto', px: 4, pt: 5, pb: 5, display: 'flex', gap: '32px', justifyContent: 'space-between', alignItems: 'center', flexDirection: ['column', 'row', 'row'] }}>
     <div>
         <h1 children={url} sx={{ lineHeight: 1, fontSize: 4, fontWeight: 900, mt: 0, mb: 2, }} />
         <h2 children={pageTitle} sx={{ opacity: .7, fontSize: '16px', fontWeight: 400, my: 0 }}/>
     </div>
-    <div sx={{ boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', display: 'flex', alignItems: 'center', py: 3, px: 4, borderRadius: '7px', }}>
+    <div sx={{ 
+      boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', 
+      display: 'flex', 
+      alignItems: 'center', 
+      py: 3, px: 4, 
+      borderRadius: '7px', }}>
             <dl
               sx={{
                 my: 0,
-                marginRight: 32,
-                paddingRight: 32,
+                marginRight: '32px',
+                paddingRight: '32px',
                 fontSize: 1,
               }}
             >
@@ -338,7 +343,7 @@ export default () => {
           </div>
         </div>
       </div>
-
+      <section sx={{ px: 4 }}>
       <div
         sx={{
           mt: 4,
@@ -347,6 +352,8 @@ export default () => {
           borderRadius: '16px',
           bg: 'black',
           color: 'lightGray',
+          mx: 'auto', 
+          maxWidth: '96rem',
         }}
       >
         <SummaryStats
@@ -362,53 +369,60 @@ export default () => {
           pseudoElement={selectors.pseudoElement}
         />
       </div>
-
-      <Declarations properties={properties} />
-      <Colors colors={colors} />
+      </section>
       <BackgroundColors backgroundColors={backgroundColors} />
-      <h2 id="typography">
-        Typography
-      </h2>
+      <Colors colors={colors} />
+      <header sx={{ px: 4 }}>
+        <h2 id="typography">
+          Typography
+        </h2>
+      </header>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
-      <SpacingResets properties={properties} />
-      <ZIndexes zIndexes={properties['z-index']} />
-      <SpecificityChart
-        max={selectors.specificity.max}
-        average={Math.round(selectors.specificity.average)}
-        data={selectors.specificity.graph}
-      />
-      <RulesetChart data={rules.size.graph} />
-
-      <DeclarationsChartLayout data={declarations} />
-      <DeclarationsChartTypography data={declarations} />
-      <DeclarationsChartSpacing data={declarations} />
-      <DeclarationsChartSpacingMargin data={declarations} />
-
-      <header sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
-        <h4 sx={{ my: 0 }}>Raw CSS</h4>
-        <IconButton
-          role="button"
-          title="Copy CSS to clipboard"
-          tabindex="0"
-          onClick={() => {
-            setCopied(true)
-            copy(css.trim())
-            setTimeout(() => setCopied(false), 2000)
-          }}
-        >
-          {copied ? <CheckSquare /> : <Clipboard />}
-        </IconButton>
-      </header>
-        
-      <pre sx={{
-        overflow: 'scroll',
-        height: '480px',
-        resize: 'all',
-        p: 4,
-        borderRadius: '6px',
-        boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)'
+        <ZIndexes zIndexes={properties['z-index']} />
+      <div sx={{ mt: 5 }}>
+        <Declarations properties={properties} />
+        <SpacingResets properties={properties} />
+      </div>
+      <section sx={{ px: 4, mx: 'auto', maxWidth: '64rem', mt: 5, display: 'flex', flexDirection: 'column', gap: '48px' }}>
+        <SpecificityChart
+          max={selectors.specificity.max}
+          average={Math.round(selectors.specificity.average)}
+          data={selectors.specificity.graph}
+        />
+        <RulesetChart data={rules.size.graph} />
+        <DeclarationsChartLayout data={declarations} />
+        <DeclarationsChartTypography data={declarations} />
+        <DeclarationsChartSpacing data={declarations} />
+        <DeclarationsChartSpacingMargin data={declarations} />
+      </section>
+      <section sx={{ px: 4, pb: 6 }}>        
+        <header sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
+          <h4 sx={{ my: 0 }}>Raw CSS</h4>
+          <IconButton
+            role="button"
+            title="Copy CSS to clipboard"
+            tabindex="0"
+            onClick={() => {
+              setCopied(true)
+              copy(css.trim())
+              setTimeout(() => setCopied(false), 2000)
+            }}
+          >
+            {copied ? <CheckSquare /> : <Clipboard />}
+          </IconButton>
+        </header>
+      <pre 
+        id="code"
+        sx={{
+          overflow: 'scroll',
+          height: '480px',
+          resize: 'all',
+          p: 4,
+          borderRadius: '6px',
+          boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)'
       }}>{css.trim()}</pre>
+    </section>
     </Layout>
   )
 }

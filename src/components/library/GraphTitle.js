@@ -6,15 +6,15 @@ import Text from './Text'
 
 const withoutLeadingNumbers = str => str.replace(/^[0-9]/, '')
 
-const SectionTitle = props => {
+const GraphTitle = props => {
   const slug = slugify(withoutLeadingNumbers(props.title))
 
   return (
-    <header sx={{ py: 3, mb: 4, px: 4}} {...props}>
-      <code sx={{ fontSize: 3, bg: 'highlight' }} id={slug} children={props.title} />
+    <header {...props}>
+      <h3>{props.title}</h3>
       <p sx={{ mt: 2, mb: 0 }} children={props.description} />
     </header>
   )
 }
 
-export default SectionTitle
+export default GraphTitle

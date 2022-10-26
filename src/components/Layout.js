@@ -16,7 +16,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
 
   return (
     <div>
-      <style>{`* { box-sizing: border-box; font-family: Inter,-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', system, sans-serif; }`}</style>
+      <style>{`* { box-sizing: border-box; } html, body { font-family: Inter,-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, 'Helvetica Neue', system, sans-serif; } code, pre { font-family: monospace; }`}</style>
       <Helmet
         title={'CSS Stats'}
         meta={[
@@ -69,6 +69,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                   display: 'flex',
                   width: '100%',
                   alignItems: 'center',
+                  color: 'text',
                 }}
               >
                 <Logo size={32} />
@@ -90,12 +91,13 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             {initialUrl ? (
               <div sx={{ px: 3, width: ['100%'] }}>
                 <form
+                  sx={{ width: '100%', display: 'flex', justifyContent: 'center',  }}
                   onSubmit={(e) => {
                     e.preventDefault()
                     onUrlChange(url)
                   }}
                 >
-                  <label sx={{display: 'block'}}><span sx={{ display: 'none' }}>URL</span>
+                  <label sx={{width: '100%', display: 'block'}}><span sx={{ display: 'none' }}>URL</span>
                   <input
                     placeholder="Url to extract CSS stats"
                     inputMode="url"
@@ -109,6 +111,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                       boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)',
                       p: 3,
                       width: '100%',
+                        
                     }}
                   />
                 </label>
@@ -150,7 +153,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
           </div>
         </header>
         <title children={title || 'CSS Stats'} />
-        <Container sx={{ maxWidth: '72rem', px: 4, pb: 4 }}>{children}</Container>
+        <div>{children}</div>
       </Styled.root>
     </div>
   )

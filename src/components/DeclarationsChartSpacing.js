@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { SectionTitle } from './library'
+import { GraphTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -31,7 +31,7 @@ export default ({ data }) => {
 
   return (
     <div>
-      <SectionTitle title="Padding" />
+      <GraphTitle title="Padding" />
 
       <GroupedBarChart data={formattedData} />
     </div>

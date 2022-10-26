@@ -19,7 +19,7 @@ export default ({ properties }) => {
   ]
 
   return (
-    <div>
+    <div sx={{ px: 4 }}>
       <h2 children="Spacing Resets" />
       <p sx={{ fontSize: 0, mt: 0 }}>
         Amount of times each property has been set to 0

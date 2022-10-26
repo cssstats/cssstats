@@ -523,7 +523,7 @@ export default ({ properties }) => {
   ]
 
   return (
-    <div>
+    <div sx={{ px: 4 }}>
       <h2
         id="total-declaration-counts"
         children="Total Declaration Counts"

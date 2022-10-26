@@ -12,9 +12,10 @@ export default {
     blue: '#33e',
     darkGray: '#333',
     gray: '#ccc',
-    lightGray: '#eee',
+    lightGray: '#f0f0f0',
     chart: ['#222', '#999'],
     background: '#fff',
+    highlight: '#ffff00',
     modes: {
       dark: {
         black: '#fff',
@@ -25,6 +26,7 @@ export default {
         darkGray: '#eee',
         chart: ['#666', '#eee'],
         background: '#000',
+        highlight: '#3a2e95',
       },
     },
   },

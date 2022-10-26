@@ -1,20 +1,12 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import Text from './Text'
 
 const BackgroundColor = props => (
-  <div>
-    <svg
-      viewBox="0 0 32 16"
-      style={{
-        display: 'block',
-        width: '100%',
-        height: 'auto'
-      }}
-    >
-      <rect width="32" height="16" fill={props.color} />
-    </svg>
-
-    <Text children={props.color} />
+  <div {...props}>
+    <div sx={{ backgroundColor: props.color, aspectRatio: '2 / 1', width: '100%', minHeight: '48px' }} />
+    <code children={props.color} />
   </div>
 )
 

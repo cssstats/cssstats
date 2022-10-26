@@ -1,9 +1,11 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import uniq from 'lodash.uniq'
 
 import { formatNumber, intComma } from 'humanize-plus'
 
-import { SectionTitle } from './library'
+import { GraphTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -32,24 +34,22 @@ export default ({ data }) => {
   ]
 
   return (
-    <div>
-      <SectionTitle
-        title="Total vs Unique Declarations"
-        description={
-          <span>
+    <article>
+        <header sx={{ mb: 5 }}>
+          <h2 sx={{ fontSize: '32px', fontWeight: 'bold'}}>Total vs Unique Declarations</h2>
+          <p sx={{ fontSize: '24px', lineHeight: 1.5 }}>
             Out of the <b>{total}</b> total declarations, <b>{unique}</b> have
             unique values. The ratio of unique to total declarations is <b>
             {uniqueToTotalRatio}</b>
-          </span>
-        }
-      />
-      <p>
-        The comparison charts below can help you identify which properties might
-        be the best candidates for creating abstractions.
-      </p>
-      <SectionTitle title="Layout and Structure" />
+          </p>
+          <p sx={{ maxWidth: '65ch', lineHeight: 1.5 }}>
+          The comparison charts below can help you identify which properties might
+          be the best candidates for creating abstractions.
+        </p>
+      </header>
+      <GraphTitle title="Layout and Structure" />
 
       <GroupedBarChart data={formattedData} />
-    </div>
+    </article>
   )
 }

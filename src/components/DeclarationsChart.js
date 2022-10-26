@@ -5,7 +5,7 @@ import uniq from 'lodash.uniq'
 
 import { intComma } from 'humanize-plus'
 
-import { SectionTitle } from './library'
+import { GraphTitle } from './library'
 
 import GroupedBarChart from './GroupedBarChart'
 
@@ -32,7 +32,7 @@ export default ({ data }) => {
 
   return (
     <div>
-      <SectionTitle
+      <GraphTitle
         title="Total vs Unique Declarations"
         description={`${total} total, ${unique} unique`}
       />

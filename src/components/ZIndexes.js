@@ -1,24 +1,25 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import uniq from 'lodash.uniq'
 
-import { Div, Text, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 export default ({ zIndexes = [] }) => (
-  <Div py={[4, 5, 6]}>
+  <div sx={{ my: 6 }}>
     <SectionTitle
-      title={`${uniq(zIndexes).length} Unique Z Indices`}
-      description={`${zIndexes.length} total`}
+      title='z-index'
+      description={`${uniq(zIndexes).length} Unique / ${zIndexes.length} Total`}
     />
-
-    {uniq(zIndexes).map(zIndex => (
-      <Text
-        key={zIndex}
-        mb={3}
-        mr={3}
-        inline={true}
-        fontWeight="bold"
-        children={zIndex}
-      />
-    ))}
-  </Div>
+    <div sx={{ px: 4 }}>
+      <h4>Unique</h4>
+      <ul sx={{ ml: 0, pl: 0, listStyleType: 'none', display: 'flex', gap: '32px', fontSize: 4, }}>
+        {uniq(zIndexes).map(zIndex => (
+          <li key={zIndex}>
+            {zIndex}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
 )
