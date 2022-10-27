@@ -56,7 +56,7 @@
     "react-feather": "^2.0.8",
     "react-helmet": "^6.1.0",
     "styled-system": "^5.1.5",
-    "theme-ui": "0.14.5",
+    "theme-ui": "0.14.7",
     "titleize": "^2.1.0",
     "victory": "^35.3.3"
   }
