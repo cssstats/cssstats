@@ -18,7 +18,7 @@ export default ({ showLabel = false }) => {
         <b>Input a URL </b>
         <span>e.g. nasa.gov</span>
         <input
-          inputmode="url"
+          type='url'
           value={url}
           onChange={e => setUrl(e.target.value)}
           autofocus={true}
