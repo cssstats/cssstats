@@ -388,12 +388,7 @@ export default () => {
       </header>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
-      <header sx={{ px: 4 }}>
-        <h2 id="borders">
-          Borders
-        </h2>
-      </header>
-        <ZIndexes zIndexes={properties['z-index']} />
+      <ZIndexes zIndexes={properties['z-index']} />
       <div sx={{ mt: 5 }}>
         <Declarations properties={properties} />
         <SpacingResets properties={properties} />

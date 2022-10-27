@@ -13,7 +13,7 @@ export default ({ zIndexes = [] }) => (
     />
     <div sx={{ px: 4 }}>
       <h4>Unique</h4>
-      <ul sx={{ ml: 0, pl: 0, listStyleType: 'none', display: 'flex', gap: '32px', fontSize: 4, }}>
+      <ul sx={{ ml: 0, pl: 0, listStyleType: 'none', display: 'flex', flexWrap: 'wrap', gap: '32px', fontSize: 4, }}>
         {uniq(zIndexes).map(zIndex => (
           <li key={zIndex}>
             {zIndex}
