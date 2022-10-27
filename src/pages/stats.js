@@ -5,7 +5,7 @@ import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { IconButton } from 'theme-ui'
 
-import { Loading, SubHeader } from '../components/library'
+import { Loading } from '../components/library'
 
 import { CheckSquare, Clipboard } from 'react-feather'
 import copy from 'copy-to-clipboard'
@@ -20,6 +20,8 @@ import Colors from '../components/Colors'
 import BackgroundColors from '../components/BackgroundColors'
 import BackgroundImages from '../components/BackgroundImages'
 import BorderColors from '../components/BorderColors'
+import Borders from '../components/Borders'
+import BorderRadii from '../components/BorderRadii'
 import BoxShadows from '../components/BoxShadows'
 import FontSizes from '../components/FontSizes'
 import FontFamilies from '../components/FontFamilies'
@@ -89,6 +91,8 @@ export default () => {
   const backgroundColors = properties['background-color'] || []
   const borderColors = properties['border-color'] || []
   const boxShadows = properties['box-shadow'] || []
+  const borderRadii = properties['border-radius'] || []
+  const borders = properties['border'] || []
   const colors = properties.color || []
 
   return (
@@ -386,6 +390,8 @@ export default () => {
       <BorderColors borderColors={borderColors} />
       <BackgroundImages url={url} backgroundImages={backgroundImages} />
       <BoxShadows boxShadows={boxShadows} />
+      <BorderRadii borderRadii={borderRadii} />
+      <Borders borders={borders} />
       <header sx={{ px: 4 }}>
         <h2 sx={{ fontSize: '48px'}} id="typography">
           Typography
