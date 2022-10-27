@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { Container, Styled, jsx, useColorMode } from 'theme-ui'
+import { Container, jsx, useColorMode } from 'theme-ui'
+import { Themed } from '@theme-ui/mdx'
 import { GitHub, Twitter, Moon } from 'react-feather'
 import { Helmet } from 'react-helmet'
 
@@ -41,7 +42,6 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
           { rel: 'shortcut icon', type: 'image/png', href: `${favicon64}` },
         ]}
       />
-      <Styled.root>
         <header
           sx={{
             fontWeight: 'bold',
@@ -128,7 +128,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 alignItems: 'center',
               }}
             >
-              <Styled.a
+              <a
                 sx={{
                   mr: 3,
                   cursor: 'pointer',
@@ -139,22 +139,21 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 title="Toggle color mode"
               >
                 <Moon />
-              </Styled.a>
-              <Styled.a
+              </a>
+              <a
                 sx={{ mr: 3 }}
                 href="https://mobile.twitter.com/cssstats"
               >
                 <Twitter />
-              </Styled.a>
-              <Styled.a href="https://github.com/cssstats">
+              </a>
+              <a href="https://github.com/cssstats">
                 <GitHub />
-              </Styled.a>
+              </a>
             </div>
           </div>
         </header>
         <title children={title || 'CSS Stats'} />
         <div>{children}</div>
-      </Styled.root>
     </div>
   )
 }

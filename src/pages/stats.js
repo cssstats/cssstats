@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
-import { Styled, IconButton } from 'theme-ui'
+import { IconButton } from 'theme-ui'
 
 import { Loading, SubHeader } from '../components/library'
 
@@ -68,7 +68,7 @@ export default () => {
           <Loading />
           <h2>
             Downloading and analyzing CSS from{' '}
-            <Styled.a href={isUrl(url) ? url : '//' + url}>{url}</Styled.a>
+            <a href={isUrl(url) ? url : '//' + url}>{url}</a>
           </h2>
         </div>
       </Layout>

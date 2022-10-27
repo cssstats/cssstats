@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { Link as GatsbyLink } from 'gatsby'
-import { jsx, Styled } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 export const Link = ({ href, ...props }) => (
-  <Styled.a as={GatsbyLink} to={href} {...props} />
+  <a as={GatsbyLink} to={href} {...props} />
 )
 
 export const Label = ({ display = 'block', ...props }) => (
