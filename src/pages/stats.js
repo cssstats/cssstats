@@ -376,13 +376,18 @@ export default () => {
         />
       </div>
       </section>
+      <header sx={{ px: 4 }}>
+        <h2 sx={{ fontSize: '48px'}} id="typography">
+          Color
+        </h2>
+      </header>
       <BackgroundColors backgroundColors={backgroundColors} />
       <Colors colors={colors} />
       <BorderColors borderColors={borderColors} />
       <BackgroundImages url={url} backgroundImages={backgroundImages} />
       <BoxShadows boxShadows={boxShadows} />
       <header sx={{ px: 4 }}>
-        <h2 id="typography">
+        <h2 sx={{ fontSize: '48px'}} id="typography">
           Typography
         </h2>
       </header>

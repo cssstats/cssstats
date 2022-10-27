@@ -4,8 +4,8 @@ import uniq from 'lodash.uniq'
 
 import { SectionTitle, BackgroundColor } from './library'
 
-export default ({ backgroundColors = [] }) => (
-  <div sx={{ py: [4, 5, 6] }}>
+export default ({ backgroundColors = [],...props }) => (
+  <div {...props}>
     <SectionTitle 
       title='background-color' 
       description={`${uniq(backgroundColors).length} Unique values / ${backgroundColors.length} total declarations`} />
@@ -17,15 +17,16 @@ export default ({ backgroundColors = [] }) => (
         display: 'grid',
         px: 4,
         gridTemplateColumns: [
-          'repeat(auto-fill, minmax(160px,1fr))', 
-          'repeat(auto-fill, minmax(160px,1fr))', 
-          'repeat(auto-fill, minmax(160px,1fr))', 
+          'repeat(auto-fill, minmax(192px,1fr))', 
+          'repeat(auto-fill, minmax(192px,1fr))', 
+          'repeat(auto-fill, minmax(192px,1fr))', 
         ],
           gap: '16px',
       }}
       children={uniq(backgroundColors).map(bg => (
         <div
-          key={bg} 
+          key={bg+'bbb'} 
+          title={bg}
         >
           <BackgroundColor color={bg} />
         </div>
