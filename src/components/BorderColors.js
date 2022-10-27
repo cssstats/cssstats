@@ -40,7 +40,7 @@ export default ({ borderColors = [] }) => (
         borderRadius: '6px', 
         boxShadow: '0 0 0 1px rgba(0,0,0,.15), 0 0 0 1px rgba(255,255,255,.15)'
     }}>
-    <p sx={{ mt: 0, mb: 3 }}>Sorted by similar values</p>
+    <p sx={{ mt: 0, mb: 3 }}>Source code order</p>
     <div sx={{
         color: 'lightGray',
         backgroundImage: 'repeating-linear-gradient(45deg, currentColor 0px, currentColor 2px, transparent 2px, transparent 6px)',

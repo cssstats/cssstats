@@ -42,7 +42,7 @@ export default ({ backgroundColors = [] }) => (
       }}>
       <p sx={{mt: 0 }}children={'Source code order'} />
       <div
-        style={{
+        sx={{
           display: 'table',
           tableLayout: 'fixed',
           width: '100%',
