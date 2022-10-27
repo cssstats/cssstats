@@ -5,7 +5,7 @@ import Text from './Text'
 
 const BackgroundColor = props => (
   <div {...props}>
-    <div sx={{ backgroundColor: props.color, aspectRatio: '2 / 1', width: '100%', minHeight: '48px' }} />
+    <div sx={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.1), inset 0 0 0 1px rgba(255,255,255,.1)', backgroundColor: props.color, aspectRatio: '2 / 1', width: '100%', minHeight: '48px' }} />
     <code children={props.color} />
   </div>
 )

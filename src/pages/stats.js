@@ -18,6 +18,9 @@ import Declarations from '../components/Declarations'
 import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
 import BackgroundColors from '../components/BackgroundColors'
+import BackgroundImages from '../components/BackgroundImages'
+import BorderColors from '../components/BorderColors'
+import BoxShadows from '../components/BoxShadows'
 import FontSizes from '../components/FontSizes'
 import FontFamilies from '../components/FontFamilies'
 import ZIndexes from '../components/ZIndexes'
@@ -82,7 +85,10 @@ export default () => {
 
   const properties = declarations.properties
 
+  const backgroundImages = properties['background-image'] || []
   const backgroundColors = properties['background-color'] || []
+  const borderColors = properties['border-color'] || []
+  const boxShadows = properties['box-shadow'] || []
   const colors = properties.color || []
 
   return (
@@ -372,6 +378,9 @@ export default () => {
       </section>
       <BackgroundColors backgroundColors={backgroundColors} />
       <Colors colors={colors} />
+      <BorderColors borderColors={borderColors} />
+      <BackgroundImages url={url} backgroundImages={backgroundImages} />
+      <BoxShadows boxShadows={boxShadows} />
       <header sx={{ px: 4 }}>
         <h2 id="typography">
           Typography
@@ -379,6 +388,11 @@ export default () => {
       </header>
       <FontSizes fontSizes={properties['font-size']} />
       <FontFamilies fontFamilies={properties['font-family']} />
+      <header sx={{ px: 4 }}>
+        <h2 id="borders">
+          Borders
+        </h2>
+      </header>
         <ZIndexes zIndexes={properties['z-index']} />
       <div sx={{ mt: 5 }}>
         <Declarations properties={properties} />

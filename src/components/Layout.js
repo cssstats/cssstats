@@ -63,9 +63,10 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
               flexWrap: 'nowrap',
             }}
           >
-            <Link href="/" ml={2} color="text">
+            <Link href="/" title='Goto the CSS Stats homepage'>
               <span
                 sx={{
+                  color:'text',
                   display: 'flex',
                   width: '100%',
                   alignItems: 'center',
@@ -75,9 +76,10 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 <Logo size={32} />
                 <span
                   sx={{
+                    color:'text',
                     ml: 2,
                     fontSize: 0,
-                    display: ['none', 'block'],
+                    display: 'block',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     whiteSpace: 'nowrap',
@@ -124,14 +126,24 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 ml: 'auto',
                 mr: 2,
                 width: 96,
-                display: 'flex',
+                display: ['none', 'none', 'flex' ],
+                gap: '16px',
                 alignItems: 'center',
               }}
             >
-              <a
+              <button
                 sx={{
-                  mr: 3,
+                  WebKitAppearance: 'none',
+                  appearance: 'none',
+                  bg: 'transparent',
+                  color: 'text',
+                  border: 0,
+                  padding: 0,
                   cursor: 'pointer',
+                  transition: 'color .2s ease',
+                  ':hover':{
+                    color: 'blue',
+                  }
                 }}
                 onClick={() => {
                   setColorMode(colorMode === 'light' ? 'dark' : 'light')
@@ -139,14 +151,27 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 title="Toggle color mode"
               >
                 <Moon />
-              </a>
+              </button>
               <a
-                sx={{ mr: 3 }}
+                sx={{ 
+                  transition: 'color .2s ease',
+                  ':hover':{
+                    color: 'blue',
+                  }
+                }}
                 href="https://mobile.twitter.com/cssstats"
               >
                 <Twitter />
               </a>
-              <a href="https://github.com/cssstats">
+              <a 
+    sx={{
+
+                  transition: 'color .2s ease',
+                  ':hover':{
+                    color: 'blue',
+                  }
+    }}
+    href="https://github.com/cssstats">
                 <GitHub />
               </a>
             </div>
