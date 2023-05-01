@@ -15,7 +15,7 @@
   "dependencies": {
     "abort-controller": "^3.0.0",
     "cheerio": "^0.22.0",
-    "commander": "^6.2.0",
+    "commander": "^10.0.1",
     "is-blank": "^2.1.0",
     "is-css": "^4.0.0",
     "is-present": "^1.0.0",
