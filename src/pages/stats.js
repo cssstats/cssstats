@@ -17,6 +17,7 @@ import SummaryStats from '../components/SummaryStats'
 import Declarations from '../components/Declarations'
 import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
+import Colors3D from '../components/Colors3D'
 import BackgroundColors from '../components/BackgroundColors'
 import BackgroundImages from '../components/BackgroundImages'
 import BorderColors from '../components/BorderColors'
@@ -41,6 +42,7 @@ export default () => {
   const [stats, setStats] = useState(null)
   const [url, setUrl] = useState(null)
   const [copied, setCopied] = useState(false)
+  const [colorSpace, setColorSpace] = useState('rgb');
 
   useEffect(() => {
     const linkFromQuery = getQueryParam('link', window.location.href)
@@ -387,6 +389,40 @@ export default () => {
       </header>
       <BackgroundColors backgroundColors={backgroundColors} />
       <Colors colors={colors} />
+    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center'  }}>
+      <label>
+              <input 
+                  type="radio" 
+                  value="rgb" 
+                  checked={colorSpace === 'rgb'}
+                  onChange={e => setColorSpace(e.target.value)}
+              />
+              RGB
+          </label>
+      <label>
+              <input 
+                  type="radio" 
+                  value="hsl" 
+                  checked={colorSpace === 'hsl'}
+                  onChange={e => setColorSpace(e.target.value)}
+              />
+              HSL
+          </label>
+      <label>
+              <input 
+                  type="radio" 
+                  value="lab" 
+                  checked={colorSpace === 'lab'}
+                  onChange={e => setColorSpace(e.target.value)}
+              />
+              LAB
+          </label>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Colors3D title='Colors' colors={colors} colorspace={colorSpace} />
+      <Colors3D title='Background Colors' colors={backgroundColors} colorspace={colorSpace} />
+      <Colors3D title='Border Colors' colors={borderColors} colorspace={colorSpace} />
+    </div>
       <BorderColors borderColors={borderColors} />
       <BackgroundImages url={url} backgroundImages={backgroundImages} />
       <BoxShadows boxShadows={boxShadows} />
