@@ -402,15 +402,6 @@ export default () => {
       <label>
               <input 
                   type="radio" 
-                  value="hsl" 
-                  checked={colorSpace === 'hsl'}
-                  onChange={e => setColorSpace(e.target.value)}
-              />
-              HSL
-          </label>
-      <label>
-              <input 
-                  type="radio" 
                   value="lab" 
                   checked={colorSpace === 'lab'}
                   onChange={e => setColorSpace(e.target.value)}

@@ -35,7 +35,7 @@ const convertColors = (colors, targetSpace) => {
 export default ({ colors = [], colorspace = 'rgb', title = '' }) => {
   const plotDivRef = useRef(null);  // Create a ref to get the div where the plot will be rendered
   
-  const convertedColors = convertColors(colors, colorspace);
+  const convertedColors = convertColors(uniq(colors), colorspace);
 
   useEffect(() => {
     const xValues = convertedColors.map(color => Object.values(color)[0]);
