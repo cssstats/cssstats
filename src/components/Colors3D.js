@@ -83,15 +83,15 @@ export default ({ colors = [], colorspace = 'rgb', title = '' }) => {
       width: 500,
       scene: {
         xaxis: {
-          title: Object.keys(convertedColors[0])[0].toUpperCase(),
+          title: convertedColors[0] ? Object.keys(convertedColors[0])[0].toUpperCase() : '',
           range: layoutRanges[colorspace].x
         },
         yaxis: {
-          title: Object.keys(convertedColors[0])[1].toUpperCase(),
+          title: convertedColors[0]? Object.keys(convertedColors[0])[1].toUpperCase() : '',
           range: layoutRanges[colorspace].y
         },
         zaxis: {
-          title: Object.keys(convertedColors[0])[2].toUpperCase(),
+          title: convertedColors[0]? Object.keys(convertedColors[0])[2].toUpperCase() : '',
           range: layoutRanges[colorspace].z
         }
       }
