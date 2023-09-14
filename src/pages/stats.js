@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { IconButton } from 'theme-ui'
+import Loadable from 'react-loadable'
 
 import { Loading } from '../components/library'
 
@@ -17,7 +18,6 @@ import SummaryStats from '../components/SummaryStats'
 import Declarations from '../components/Declarations'
 import Selectors from '../components/Selectors'
 import Colors from '../components/Colors'
-import Colors3D from '../components/Colors3D'
 import BackgroundColors from '../components/BackgroundColors'
 import BackgroundImages from '../components/BackgroundImages'
 import BorderColors from '../components/BorderColors'
@@ -36,13 +36,18 @@ import DeclarationsChartTypography from '../components/DeclarationsChartTypograp
 import DeclarationsChartSpacing from '../components/DeclarationsChartSpacing'
 import DeclarationsChartSpacingMargin from '../components/DeclarationsChartSpacingMargin'
 
+const Colors3D = Loadable({
+  loader: () => import('../components/Colors3D'),
+  loading: () => null,
+})
+
 const API_URL = 'https://cssstats.com/api'
 
 export default () => {
   const [stats, setStats] = useState(null)
   const [url, setUrl] = useState(null)
   const [copied, setCopied] = useState(false)
-  const [colorSpace, setColorSpace] = useState('rgb');
+  const [colorSpace, setColorSpace] = useState('rgb')
 
   useEffect(() => {
     const linkFromQuery = getQueryParam('link', window.location.href)
@@ -71,7 +76,15 @@ export default () => {
   if (!stats) {
     return (
       <Layout p={[4, 5, 6]} initialUrl={url}>
-        <div sx={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px' }}>
+        <div
+          sx={{
+            minHeight: '60vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '16px',
+          }}
+        >
           <Loading />
           <h2>
             Downloading and analyzing CSS from{' '}
@@ -99,41 +112,65 @@ export default () => {
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
-      <header sx={{ maxWidth: '96rem', mx: 'auto', px: 4, pt: 5, pb: 5, display: 'flex', gap: '32px', justifyContent: 'space-between', alignItems: 'center', flexDirection: ['column', 'row', 'row'] }}>
-    <div>
-        <h1 children={url} sx={{ lineHeight: 1, fontSize: 4, fontWeight: 900, mt: 0, mb: 2, }} />
-        <h2 children={pageTitle} sx={{ opacity: .7, fontSize: '16px', fontWeight: 400, my: 0 }}/>
-    </div>
-    <div sx={{ 
-      boxShadow: '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)', 
-      display: 'flex', 
-      alignItems: 'center', 
-      py: 3, px: 4, 
-      borderRadius: '7px', }}>
-            <dl
-              sx={{
-                my: 0,
-                marginRight: '32px',
-                paddingRight: '32px',
-                fontSize: 1,
-              }}
-            >
-              <dt>File size</dt>
-              <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
-                {humanizedSize}
-              </dd>
-            </dl>
-            <dl sx={{ my: 0, fontSize: 1,  }}>
-              <dt>Gzipped size</dt>
-              <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
-                {humanizedGzipSize}
-              </dd>
-            </dl>
-    </div>
+      <header
+        sx={{
+          maxWidth: '96rem',
+          mx: 'auto',
+          px: 4,
+          pt: 5,
+          pb: 5,
+          display: 'flex',
+          gap: '32px',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexDirection: ['column', 'row', 'row'],
+        }}
+      >
+        <div>
+          <h1
+            children={url}
+            sx={{ lineHeight: 1, fontSize: 4, fontWeight: 900, mt: 0, mb: 2 }}
+          />
+          <h2
+            children={pageTitle}
+            sx={{ opacity: 0.7, fontSize: '16px', fontWeight: 400, my: 0 }}
+          />
+        </div>
+        <div
+          sx={{
+            boxShadow:
+              '0 0 0 1px rgba(0,0,0, .2), 0 0 0 1px rgba(255,255,255,.2)',
+            display: 'flex',
+            alignItems: 'center',
+            py: 3,
+            px: 4,
+            borderRadius: '7px',
+          }}
+        >
+          <dl
+            sx={{
+              my: 0,
+              marginRight: '32px',
+              paddingRight: '32px',
+              fontSize: 1,
+            }}
+          >
+            <dt>File size</dt>
+            <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
+              {humanizedSize}
+            </dd>
+          </dl>
+          <dl sx={{ my: 0, fontSize: 1 }}>
+            <dt>Gzipped size</dt>
+            <dd sx={{ fontSize: '24px', fontWeight: 900, marginLeft: 0 }}>
+              {humanizedGzipSize}
+            </dd>
+          </dl>
+        </div>
       </header>
       <div sx={{ display: 'flex' }}>
         <div sx={{ width: '100%' }}>
-          <div sx={{ pl: 4, width: '100%', display: 'none', }}>
+          <div sx={{ pl: 4, width: '100%', display: 'none' }}>
             <table sx={{ fontSize: 1, width: '100%' }} cellSpacing="0">
               <tr>
                 <th
@@ -356,71 +393,79 @@ export default () => {
         </div>
       </div>
       <section sx={{ px: 4 }}>
-      <div
-        sx={{
-          mt: 4,
-          mb: 5,
-          p: '48px',
-          borderRadius: '16px',
-          bg: 'black',
-          color: 'lightGray',
-          mx: 'auto', 
-          maxWidth: '96rem',
-        }}
-      >
-        <SummaryStats
-          rules={rules.total}
-          selectors={selectors.total}
-          declarations={declarations.total}
-          properties={Object.keys(properties).length}
-        />
-        <Selectors
-          classes={selectors.class}
-          id={selectors.id}
-          pseudoClass={selectors.pseudoClass}
-          pseudoElement={selectors.pseudoElement}
-        />
-      </div>
+        <div
+          sx={{
+            mt: 4,
+            mb: 5,
+            p: '48px',
+            borderRadius: '16px',
+            bg: 'black',
+            color: 'lightGray',
+            mx: 'auto',
+            maxWidth: '96rem',
+          }}
+        >
+          <SummaryStats
+            rules={rules.total}
+            selectors={selectors.total}
+            declarations={declarations.total}
+            properties={Object.keys(properties).length}
+          />
+          <Selectors
+            classes={selectors.class}
+            id={selectors.id}
+            pseudoClass={selectors.pseudoClass}
+            pseudoElement={selectors.pseudoElement}
+          />
+        </div>
       </section>
       <header sx={{ px: 4 }}>
-        <h2 sx={{ fontSize: '48px'}} id="typography">
+        <h2 sx={{ fontSize: '48px' }} id="typography">
           Color
         </h2>
       </header>
       <BackgroundColors backgroundColors={backgroundColors} />
       <Colors colors={colors} />
-    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center'  }}>
-      <label>
-              <input 
-                  type="radio" 
-                  value="rgb" 
-                  checked={colorSpace === 'rgb'}
-                  onChange={e => setColorSpace(e.target.value)}
-              />
-              RGB
-          </label>
-      <label>
-              <input 
-                  type="radio" 
-                  value="lab" 
-                  checked={colorSpace === 'lab'}
-                  onChange={e => setColorSpace(e.target.value)}
-              />
-              LAB
-          </label>
-    </div>
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <Colors3D title='Colors' colors={colors} colorspace={colorSpace} />
-      <Colors3D title='Background Colors' colors={backgroundColors} colorspace={colorSpace} />
-      <Colors3D title='Border Colors' colors={borderColors} colorspace={colorSpace} />
-    </div>
+      <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+        <label>
+          <input
+            type="radio"
+            value="rgb"
+            checked={colorSpace === 'rgb'}
+            onChange={(e) => setColorSpace(e.target.value)}
+          />
+          RGB
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="lab"
+            checked={colorSpace === 'lab'}
+            onChange={(e) => setColorSpace(e.target.value)}
+          />
+          LAB
+        </label>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Colors3D title="Colors" colors={colors} colorspace={colorSpace} />
+        <Colors3D
+          title="Background Colors"
+          colors={backgroundColors}
+          colorspace={colorSpace}
+        />
+        <Colors3D
+          title="Border Colors"
+          colors={borderColors}
+          colorspace={colorSpace}
+        />
+      </div>
       <BorderColors borderColors={borderColors} />
       <BackgroundImages url={url} backgroundImages={backgroundImages} />
       <BoxShadows boxShadows={boxShadows} />
       <BorderRadii borderRadii={borderRadii} />
       <Borders borders={borders} />
       <header sx={{ px: 4 }}>
-        <h2 sx={{ fontSize: '48px'}} id="typography">
+        <h2 sx={{ fontSize: '48px' }} id="typography">
           Typography
         </h2>
       </header>
@@ -431,7 +476,17 @@ export default () => {
         <Declarations properties={properties} />
         <SpacingResets properties={properties} />
       </div>
-      <section sx={{ px: 4, mx: 'auto', maxWidth: '64rem', mt: 5, display: 'flex', flexDirection: 'column', gap: '48px' }}>
+      <section
+        sx={{
+          px: 4,
+          mx: 'auto',
+          maxWidth: '64rem',
+          mt: 5,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '48px',
+        }}
+      >
         <SpecificityChart
           max={selectors.specificity.max}
           average={Math.round(selectors.specificity.average)}
@@ -443,8 +498,14 @@ export default () => {
         <DeclarationsChartSpacing data={declarations} />
         <DeclarationsChartSpacingMargin data={declarations} />
       </section>
-      <section sx={{ px: 4, pb: 6 }}>        
-        <header sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center',}}>
+      <section sx={{ px: 4, pb: 6 }}>
+        <header
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
           <h4 sx={{ my: 0 }}>Raw CSS</h4>
           <IconButton
             role="button"
@@ -459,17 +520,21 @@ export default () => {
             {copied ? <CheckSquare /> : <Clipboard />}
           </IconButton>
         </header>
-      <pre 
-        id="code"
-        sx={{
-          overflow: 'scroll',
-          height: '480px',
-          resize: 'all',
-          p: 4,
-          borderRadius: '6px',
-          boxShadow: '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)'
-      }}>{css.trim()}</pre>
-    </section>
+        <pre
+          id="code"
+          sx={{
+            overflow: 'scroll',
+            height: '480px',
+            resize: 'all',
+            p: 4,
+            borderRadius: '6px',
+            boxShadow:
+              '0 0 0 1px rgba(0,0,0,.2), 0 0 0 1px rgba(255,255,255,.2)',
+          }}
+        >
+          {css.trim()}
+        </pre>
+      </section>
     </Layout>
   )
 }
