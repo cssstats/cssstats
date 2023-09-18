@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { useEffect, useState } from 'react'
+import uniq from 'lodash.uniq'
 import getQueryParam from 'get-query-param'
 import isUrl from 'is-url'
 import { IconButton } from 'theme-ui'
@@ -109,6 +110,7 @@ export default () => {
   const borderRadii = properties['border-radius'] || []
   const borders = properties['border'] || []
   const colors = properties.color || []
+  const palette = uniq(colors.concat(borderColors, backgroundColors))
 
   return (
     <Layout initialUrl={url} onUrlChange={(url) => setUrl(url)}>
@@ -424,6 +426,24 @@ export default () => {
           Color
         </h2>
       </header>
+<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <Colors3D
+          title="All colors"
+          colors={palette}
+          colorspace={colorSpace}
+        />
+        <Colors3D
+          title="Background Colors"
+          colors={backgroundColors}
+          colorspace={colorSpace}
+        />
+        <Colors3D title="Colors" colors={colors} colorspace={colorSpace} />
+        <Colors3D
+          title="Border Colors"
+          colors={borderColors}
+          colorspace={colorSpace}
+        />
+      </div>
       <BackgroundColors backgroundColors={backgroundColors} />
       <Colors colors={colors} />
       <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
@@ -446,19 +466,7 @@ export default () => {
           LAB
         </label>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Colors3D title="Colors" colors={colors} colorspace={colorSpace} />
-        <Colors3D
-          title="Background Colors"
-          colors={backgroundColors}
-          colorspace={colorSpace}
-        />
-        <Colors3D
-          title="Border Colors"
-          colors={borderColors}
-          colorspace={colorSpace}
-        />
-      </div>
+      
       <BorderColors borderColors={borderColors} />
       <BackgroundImages url={url} backgroundImages={backgroundImages} />
       <BoxShadows boxShadows={boxShadows} />
