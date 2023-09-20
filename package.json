@@ -39,6 +39,7 @@
     "@mdx-js/react": "^2.0.0-next.8",
     "@sindresorhus/slugify": "^1.1.0",
     "ava": "^3.13.0",
+    "uuid": "^9.0.1",
     "chroma-js": "^2.4.2",
     "copy-to-clipboard": "^3.3.1",
     "gatsby": "^2.25.1",

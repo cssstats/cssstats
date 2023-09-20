@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import titleize from 'titleize'
+import { v4 as uuidv4 } from 'uuid'
 
 import {  SlabStat } from './library'
 
@@ -32,7 +33,7 @@ export default ({ properties }) => {
 
           return (
             <SlabStat
-              key={prop}
+              key={uuidv4()}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
               title={titleize(prop.replace('-', ' '))}
               stat={resets.length}

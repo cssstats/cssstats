@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle } from './library'
 
@@ -20,7 +21,7 @@ export default ({ backgroundImages = [], url }) => (
       }}
       children={uniq(backgroundImages).map(bg => (
         <div
-          key={bg} 
+          key={uuidv4()} 
           title={bg}
         sx={{
           backgroundColor: 'lightGray',

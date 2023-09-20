@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { Text, SectionTitle } from './library'
 
@@ -16,7 +17,7 @@ export default ({ fontFamilies = [] }) => (
     ], gap: '32px', px: 4, }}>
     {uniq(fontFamilies).map(fontFamily => (
       <article
-        key={fontFamily}
+        key={uuidv4()}
         sx={{ 
           display: 'flex',
           flexDirection: 'column',

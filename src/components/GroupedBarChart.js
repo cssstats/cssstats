@@ -1,6 +1,7 @@
 import React from 'react'
 import { useThemeUI } from 'theme-ui'
 import titleize from 'titleize'
+import { v4 as uuidv4 } from 'uuid'
 
 import {
   VictoryChart,
@@ -80,7 +81,7 @@ export default ({ data }) => {
         }}
         labelComponent={<VictoryLabel y={215} dy={0} dx={-10} />}
         children={data.map((d, i) => (
-          <VictoryBar key={i} data={d} />
+          <VictoryBar key={uuidv4()} data={d} />
         ))}
       />
     </VictoryChart>

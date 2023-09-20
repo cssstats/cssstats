@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle } from './library'
 
@@ -21,7 +22,7 @@ export default ({ borders = [] }) => (
       }}
       children={uniq(borders).map(value => (
         <div
-          key={value+'ccc'} 
+          key={uuidv4()} 
           title={value}
           sx={{ p: 3, background: 'linear-gradient( #f0f0ee, #f0f0ee 50%, black 50%, black 100%)', display: 'grid', gap: '2rem'}}
         >

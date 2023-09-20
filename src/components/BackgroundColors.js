@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle, BackgroundColor } from './library'
 
@@ -25,7 +26,7 @@ export default ({ backgroundColors = [],...props }) => (
       }}
       children={uniq(backgroundColors).map(bg => (
         <div
-          key={bg+'bbb'} 
+          key={uuidv4()}
           title={bg}
         >
           <BackgroundColor color={bg} />
@@ -56,7 +57,7 @@ export default ({ backgroundColors = [],...props }) => (
         }}
         children={backgroundColors.map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           sx={{
             display: 'table-cell',
             bg: bg,
@@ -90,7 +91,7 @@ export default ({ backgroundColors = [],...props }) => (
       }}
       children={backgroundColors.sort().map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           title={bg}
           sx={{
             display: 'table-cell',

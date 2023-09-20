@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle } from './library'
 
@@ -21,7 +22,7 @@ export default ({ borderRadii = [] }) => (
       }}
       children={uniq(borderRadii).map(value => (
         <div
-          key={value+'bbb'} 
+          key={uuidv4()} 
           title={value}
           sx={{
             borderRadius: value,

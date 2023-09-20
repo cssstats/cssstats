@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { intComma } from 'humanize-plus'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SlabStat } from './library'
 
@@ -553,7 +554,7 @@ export default ({ properties }) => {
         <div sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' ,}} 
           children={metrics.map(metric => (
             <div 
-              key={metric.name}
+              key={uuidv4()}
             >
               <SlabStat
                 title={metric.name}
@@ -578,7 +579,7 @@ export default ({ properties }) => {
       <div
         sx={{ display: 'flex', flexWrap: 'wrap' }}
         children={spacingMetrics.map(metric => (
-          <div key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
+          <div key={uuidv4()} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
@@ -602,7 +603,7 @@ export default ({ properties }) => {
       <div
         sx={{ display: 'flex', flexWrap: 'wrap', }}
         children={gridMetrics.map(metric => (
-          <div key={metric.name} sx={{ mb: 3, display: 'flex', width: ['50%', '25%', '20%'] }}>
+          <div key={uuidv4()} sx={{ mb: 3, display: 'flex', width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
@@ -625,7 +626,7 @@ export default ({ properties }) => {
       <div
         sx={{ display: 'flex', flexWrap: 'wrap' }} 
         children={colorMetrics.map(metric => (
-          <div key={metric.name} sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}>
+          <div key={uuidv4()} sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
@@ -648,7 +649,7 @@ export default ({ properties }) => {
       <div
         sx={{ display: 'flex', flexWrap: 'wrap' }}
         children={colorMetrics.map(metric => (
-          <div key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'], display: 'flex', }}>
+          <div key={uuidv4()} sx={{ mb: 3, width: ['50%', '25%', '20%'], display: 'flex', }}>
             <SlabStat
               title={metric.name}
               stat={intComma(metric.value.length)}
@@ -675,7 +676,7 @@ export default ({ properties }) => {
          sx={{ display: 'flex', flexWrap: 'wrap', }}
           children={typographyMetrics.map(metric => (
             <div
-              key={metric.name}
+              key={uuidv4()}
               sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
@@ -703,11 +704,11 @@ export default ({ properties }) => {
           sx={{ display: 'flex', flexWrap: 'wrap'}}
           children={borderMetrics.map(metric => (
             <div
-              key={metric.name}
+              key={uuidv4()}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
-                title={metric.name}
+                title={uuidv4()}
                 stat={intComma(metric.value.length)}
               />
             </div>
@@ -731,11 +732,11 @@ export default ({ properties }) => {
           sx={{ display: 'flex', flexWrap: 'wrap' }}
           children={backgroundMetrics.map(metric => (
             <div
-              key={metric.name}
+              key={uuidv4()}
               sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
-                title={metric.name}
+                title={uuidv4()}
                 stat={intComma(metric.value.length)}
               />
             </div>
@@ -754,16 +755,16 @@ export default ({ properties }) => {
       >
         Motion
       </h3>
-      <div sx={{}}>
+      <div>
         <div
           sx={{ display: 'flex', flexWrap: 'wrap'}}
           children={motionMetrics.map(metric => (
             <div
-              key={metric.name}
+              key={uuidv4()}
               sx={{ display: 'flex', mb: 3, width: ['50%', '25%', '20%'] }}
             >
               <SlabStat
-                title={metric.name}
+                title={uuidv4()}
                 stat={intComma(metric.value.length)}
               />
             </div>

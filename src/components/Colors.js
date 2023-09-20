@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 import chroma from 'chroma-js'
+import { v4 as uuidv4 } from 'uuid'
 
 import { Color, SectionTitle } from './library'
 
@@ -21,7 +22,7 @@ export default ({ colors = [] }) => (
         px: 4,
       }}
       children={uniq(colors).map(color => (
-        <div key={color}>
+        <div key={uuidv4()}>
           <Color color={color} />
         </div>
       ))}
@@ -53,7 +54,7 @@ export default ({ colors = [] }) => (
       }}
       children={colors.map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           title={bg}
           sx={{
             display: 'table-cell',
@@ -89,7 +90,7 @@ export default ({ colors = [] }) => (
       }}
       children={colors.sort().map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           title={bg}
           sx={{
             display: 'table-cell',

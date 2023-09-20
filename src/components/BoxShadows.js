@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle } from './library'
 
@@ -21,7 +22,7 @@ export default ({ boxShadows = [] }) => (
       }}
       children={uniq(boxShadows).map(shadow => (
         <div
-          key={shadow+'aaa'} 
+          key={uuidv4()} 
           title={shadow}
           sx={{
             boxShadow: shadow,

@@ -174,6 +174,7 @@ export default () => {
         <div sx={{ width: '100%' }}>
           <div sx={{ pl: 4, width: '100%', display: 'none' }}>
             <table sx={{ fontSize: 1, width: '100%' }} cellSpacing="0">
+      <tbody>
               <tr>
                 <th
                   sx={{
@@ -390,6 +391,7 @@ export default () => {
                   24kb
                 </td>
               </tr>
+    </tbody>
             </table>
           </div>
         </div>
@@ -518,7 +520,7 @@ export default () => {
           <IconButton
             role="button"
             title="Copy CSS to clipboard"
-            tabindex="0"
+            tabIndex="0"
             onClick={() => {
               setCopied(true)
               copy(css.trim())

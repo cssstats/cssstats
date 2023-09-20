@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
+import { v4 as uuidv4 } from 'uuid'
 
 import { SectionTitle } from './library'
 
@@ -21,7 +22,7 @@ export default ({ borderColors = [] }) => (
       }}
       children={uniq(borderColors).map(border => (
         <div
-          key={border+'aaa'} 
+          key={uuidv4()} 
         >
           <div sx={{
             aspectRatio: '3/1',
@@ -59,7 +60,7 @@ export default ({ borderColors = [] }) => (
       }}
       children={borderColors.map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           title={bg}
           sx={{
             display: 'table-cell',
@@ -95,7 +96,7 @@ export default ({ borderColors = [] }) => (
       }}
       children={borderColors.sort().map(bg => (
         <div
-          key={bg}
+          key={uuidv4()}
           title={bg}
           sx={{
             display: 'table-cell',

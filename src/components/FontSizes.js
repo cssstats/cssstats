@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 import sort from 'css-unit-sort'
+import { v4 as uuidv4 } from 'uuid'
 
 import { Text, SectionTitle } from './library'
 
@@ -17,7 +18,7 @@ export default ({ fontSizes = [] }) => (
             {fontSize}
           </p>
           <p
-            key={fontSize}
+            key={uuidv4()}
             style={{ fontWeight: 900, margin: 0, lineHeight: 1, fontSize, whiteSpace: 'nowrap' }}
             children="Quick brown fox jumped over the slow dog"
           />
