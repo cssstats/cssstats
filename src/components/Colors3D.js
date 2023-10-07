@@ -98,7 +98,7 @@ export default ({ colors = [], colorspace = 'rgb', title = '' }) => {
     };
 
     Plotly.newPlot(plotDivRef.current, data, layout, { responsive: true, displayModeBar: false });
-  }, [colors, colorspace]);
+  }, [convertedColors, colors, colorspace]);
 
   return (
     <section style={{ padding: '32px' }}>

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import Text from './Text'
 
 const BackgroundColor = props => (
   <div {...props}>

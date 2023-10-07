@@ -2,7 +2,6 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import slugify from '@sindresorhus/slugify'
-import Text from './Text'
 
 const withoutLeadingNumbers = str => str.replace(/^[0-9]/, '')
 

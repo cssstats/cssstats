@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
-import chroma from 'chroma-js'
 import { v4 as uuidv4 } from 'uuid'
 
 import { Color, SectionTitle } from './library'

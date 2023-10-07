@@ -4,7 +4,7 @@ import uniq from 'lodash.uniq'
 import sort from 'css-unit-sort'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Text, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 export default ({ fontSizes = [] }) => (
   <div sx={{ my: 5  }}>

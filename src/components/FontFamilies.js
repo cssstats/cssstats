@@ -3,7 +3,7 @@ import { jsx } from 'theme-ui'
 import uniq from 'lodash.uniq'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Text, SectionTitle } from './library'
+import { SectionTitle } from './library'
 
 export default ({ fontFamilies = [] }) => (
   <div>
