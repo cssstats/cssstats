@@ -38,8 +38,7 @@
     "@mdx-js/mdx": "^2.0.0-next.8",
     "@mdx-js/react": "^2.0.0-next.8",
     "@sindresorhus/slugify": "^1.1.0",
-    "ava": "^3.13.0",
-    "uuid": "^9.0.1",
+    "ava": "^5.3.1",
     "chroma-js": "^2.4.2",
     "copy-to-clipboard": "^3.3.1",
     "gatsby": "^2.25.1",
@@ -62,6 +61,7 @@
     "styled-system": "^5.1.5",
     "theme-ui": "0.14.5",
     "titleize": "^2.1.0",
+    "uuid": "^9.0.1",
     "victory": "^35.3.3"
   }
 }

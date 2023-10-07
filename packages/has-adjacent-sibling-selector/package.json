@@ -7,9 +7,6 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "ava"
-  },
   "repository": "cssstats/cssstats",
   "keywords": [
     "css",
