@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 
-import { Text, Link, GraphTitle, SlabStat } from './library'
+import { Text, GraphTitle, SlabStat } from './library'
 
 import LineChart from './LineChart'
 

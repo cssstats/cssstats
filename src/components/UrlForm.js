@@ -23,7 +23,6 @@ export default ({ showLabel = false }) => {
           onChange={e => setUrl(e.target.value)}
           autoFocus={true}
           sx={{ 
-            color: 'text',
             background: 'transparent',
             boxSizing: 'border-box',
             WebkitAppearance: 'none',

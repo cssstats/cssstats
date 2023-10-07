@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { useState } from 'react'
-import { Container, jsx, useColorMode } from 'theme-ui'
-import { Themed } from '@theme-ui/mdx'
+import { jsx, useColorMode } from 'theme-ui'
 import { GitHub, Twitter, Moon } from 'react-feather'
 import { Helmet } from 'react-helmet'
 
-import { Logo, Link, Label, Input } from './ui'
+import { Logo, Link } from './ui'
 
 import favicon16 from '../images/favicon-16.png'
 import favicon32 from '../images/favicon-32.png'
@@ -66,7 +65,6 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             <Link href="/" title='Goto the CSS Stats homepage'>
               <span
                 sx={{
-                  color:'text',
                   display: 'flex',
                   width: '100%',
                   alignItems: 'center',

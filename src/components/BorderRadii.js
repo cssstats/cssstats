@@ -42,10 +42,9 @@ export default ({ borderRadii = [] }) => (
           }}></div>
           <div sx={{ display: 'flex',justifyContent: 'space-between', gap: '1rem', alignItems: 'center'}}>
             <input placeholder='Corner demo' type='text' sx={{
-              bg: 'initial',
               appearance: 'none',
               width: '100%',
-             flexGrow: 1,
+              flexGrow: 1,
               WebkitAppearance: 'none',
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
@@ -55,7 +54,7 @@ export default ({ borderRadii = [] }) => (
               color: 'gray',
               borderColor: 'currentColor',
               bg: 'transparent',
-                m: 0,
+              m: 0,
               px: 2,
               py: 2,
               '::placeholder': {
